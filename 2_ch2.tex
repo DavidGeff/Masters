@@ -1,0 +1,101 @@
+%****************************************************
+%	CHAPTER 1 - INTRODUCTION
+%****************************************************
+\chapter{Literature Review}
+\label{ch:ch2}
+%====================================================
+\section{Antarctica}
+\label{sec:ch2.section1}
+%----------------------------------------------------
+
+The Earth is a complex interconnected system something something. Without a full understanding of each part of the system, it is impossible to fully understand, model or predict it. The Antarctic Continent, the ice shelf surrounding it, the MIZ and the southern ocean are huge parts of this system that are barely understood.
+
+%----------------------------------------------------
+\subsection{Antarctica and Remote Sensing}
+
+Remote sensing has been the most common way of gathering data on the Antarctic since satellite imaging became widespread and commonplace. Remote sensing has many advantages, it allows for almost constant data collection, large areas to be surveyed, and sensing in different bands of the electromagnetic spectrum. Remote sensing has widened our knowledge of the Antarctic, it has allowed for tracking of sea ice coverage, storms and *maybe* ocean currents.
+
+Currently remote sensing falls short when attempting to identify the type of ice covering the ocean. Satellite images can only identify weather there is ice coverage and approximate the percentage of sea ice coverage. Information on the type of ice (grease, frazil, nilas, pancake, etc.) is impossible to extract from the satellite data.
+
+%----------------------------------------------------
+\subsection{Antarctic Sea Ice}
+
+Unlike the Arctic, the most common type of sea ice in the Antarctic is not sheet ice *cite sea ice bergen uni*. The Antarctic climate is far more dynamic with rough seas and cyclones common throughout the year *im guessing, must find reference*. These turbulent environmental conditions result in a wider range of sea ice being commonplace in the region. The type of ice present in or on the ocean impacts the climate of the area. Wind and wave activity travels though and is attenuated differently by the many different kinds of ice in the region.
+
+%----------------------------------------------------
+\subsection{Sea Ice-Environment Interactions}
+Sea ice interacts with its immediate environment in various different ways, with the physical structure of the ice having the largest impact on the type and extent of interactions.
+Ice both reflects and transmits light, impacts environmental temperature, can damp waves, interact with wind, and by freezing and melting can change the chemical composition of the surrounding seawater.
+
+%----------------------------------------------------
+\subsection{Marginal Ice Zone (MIZ)}
+The Marginal Ice Zone (MIZ) is widely accepted to be the area where the open ocean transitions to consolidated ice cover. There is no universally accepted definition of the MIZ, which leads to difficulties in understanding and comparing studies on the area by different authors who have different definitions of the MIZ.
+
+%====================================================
+\section{Pancake Ice}
+\label{sec:ch2.section2}
+%----------------------------------------------------
+
+Pancake Ice is the name given to roughly circular, consolidated ice floes commonly found in polar marginal ice zones where wave and wind activity is present.
+
+%----------------------------------------------------
+\subsection{Pancake Ice Formation}
+*cite 'conceptual model for pancake-ice formation'*
+Wave activity and, to a lesser degree, wind activity are necessary for the formation of pancake ice, as the continuous motion provided by the wind and waves promotes the formation of frazil and grease ice over nilas ice. This prevents continuous sheets of ice from forming over the ocean.
+
+so and so proposes a three-stage model of pancake ice formation:
+\begin{enumerate}
+    \item Grease-ice stage
+    \item Pancake formation stage
+    \item Composite pancake stage
+\end{enumerate}
+
+%----------------------------------------------------
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\textwidth]{figs/pancake_formation.png}
+    \caption{\textbf{Pancake ice formation process.} A}
+    \label{fig:pancake_formation}
+\end{figure}
+%----------------------------------------------------
+
+In the grease-ice stage, the ocean is supercooled, leading to the formation of frazil crystals. Wind and/or wave agitation causes these frazil crystals to collide and adhere to each other, forming miniature disc-like frazils. These newly formed frazils are driven together by the high-frequency components of the wave spectrum to form grease ice, which absorbs the energy of the high-frequency components.
+
+Frazils continue to form and adhere to each other beneath the grease ice layer in the pancake formation stage, leading to an increase in the buoyancy of the accumulated crystals. This increased buoyancy causes the disk-like frazils to rise, exposing them to cold air above the surface of the ocean, resulting in the formation of an ice sheet. Throughout this, the wave motion limits the pancake footprint size and floe-floe collisions result in the formation of ridged edges. The high frequency components of the wave spectrum initially dictate the size of the pancake floes, as the energy from these frequencies is consumed by interactions such as collisions and rafting, lower frequencies begin to drive floe creation and interaction. These lower frequencies result in larger pancake floes being able to form.
+
+ In the composite pancake stage, pancakes are driven together by the higher frequency wave components in the same way as the disk-like frazils were in the grease-ice stage. This leads to rafting of the pancakes and freezing between individual rafted pancakes forms composite pancake floes. The production of pancake floes and composite floes will continue until all the wave energy is consumed, leading to a sheet of composite floes. If the wave energy is too great to be absorbed by the floes, the floe size will be limited, and no ice sheet will form.
+
+%====================================================
+\section{LIDAR}
+\label{sec:ch2.section3}
+%----------------------------------------------------
+
+Light Detection and Ranging (LIDAR) is an active remote sensing technique that uses laser pulses to create a three-dimensional representation (a point cloud) of the target subject. A point cloud is a collection of discrete data points in a coordinate space. A point cloud is created by a LIDAR sensor by emitting a pulse of laser light in a specified direction towards the target. The pulse is reflected off a surface on the target and returns to the sensor. Using time of flight and the direction in which the pulse was emitted, the distance to the target and its location is calculated. This process is repeated, directing the laser pulse in different directions at the target to form a complete point cloud. *refine here*
+
+LIDAR is used over other remote sensing methods for various reasons. Being an active method is advantageous over visual method such as telephoto or stereoscopic cameras as it does not require external illumination to observe the target. Additionally, with the correct sensor selection, LIDAR is less susceptible to issues such as lens flare or overexposure to which typical cameras are prone. Certain LIDAR sensors also have the ability to penetrate vegetation, allowing mapping of ground surfaces beneath areas obscured by plant cover.\\
+Compared to radar, LIDAR typically has superior mapping precision and target resolution, allowing more accurate reproductions of the target and the surrounding environment.
+Using LIDAR is not without its disadvantages. LIDAR sensors are more expensive than more traditional remote sensing hardware. Unlike cameras, which can recover details such as colour, LIDAR is only able to recover the three-dimensional geometry of the target. Radar outperforms LIDAR in certain applications. It is capable of much larger detection ranges than LIDAR and is also unaffected by adverse environmental conditions such as smoke, rain, and fog.
+
+%----------------------------------------------------
+\subsection{LIDAR Sensors}
+
+A basic LIDAR sensor consists of three main components, a laser source, a steering mechanism to direct the laser beam, and a method of detecting the returning laser beam.
+
+(the exact wavelength of the laser depends on the application and manufacturer's intended use), Different lasers are selected for different reasons, such as penetration power, eye safety, measurement accuracy and something. The steering mechanism used determines the field of view, angular resolution and impacts the measurement accuracy of the sensor. Prisms, mirrors and something can be used to steer the laser's direction. 
+Most LIDAR sensors are only capable of creating point clouds with a limited number of predetermined scanning patterns. The most common scanning pattern is a rectangular pattern (a NxM grid of points). Sensors designed for automotive or autonomous vehicle use often have 360 degree coverage in their azimuth and a set vertical resolution, commonly using spinning mirrors or prisms to achieve this.
+
+Some LIDAR sensors are capable of measuring multiple returns from a single output pulse (arcgis). This is possible when the object hit by the laser pulse does not reflect or absorb all the output energy but allows some to pass through itself. If this occurs multiple times for a single laser pulse, and the sensor is capable of detecting all of these returns, it is possible for a sensor to record more returned points than output laser pulses.
+
+%----------------------------------------------------
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=9cm]{figs/multi_return.png}
+    \caption{\textbf{Radiation}}
+    \label{fig:multi_return}
+\end{figure}
+%----------------------------------------------------
+
+
+%****************************************************
+% END
+%****************************************************

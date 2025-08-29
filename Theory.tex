@@ -1,0 +1,379 @@
+% ----------------------------------------------------
+% Theory
+% ----------------------------------------------------
+\documentclass[class=report,11pt,crop=false]{standalone}
+\input{../Style/ChapterStyle.tex}
+\input{../FrontMatter/Glossary.tex}
+\begin{document}
+% ----------------------------------------------------
+\chapter{Theory \label{ch:theory}}
+%==================================== Adaptive Thresholding =======================================================% 
+\section{Adaptive Thresholding}
+\label{sec:adaptive_thres_theory}
+
+The Adaptive threshold function implements a simple and efficient approach to thresholding numerical data to distinguish the high energy components from background noise. The threshold is dynamically based on the mean (\(\mu\)) and standard deviation (\(\sigma\)) of each individual string of data inputted defining the threshold as:
+
+\begin{equation}
+\label{eqn:standard_deviation}
+T = \mu + k \cdot \sigma
+\end{equation}
+
+where \(k\) is a user-defined scaling factor. Any values in the range-line below this threshold are set to zero, while others retain their original values. This method uses the statistical properties of the Gaussian distribution seen in Figure \ref{fig_stadra_deviation_mean}, where most of the data (approximately 95\%, and 99.7\%) falls within two, and three \(\sigma\) from the \(\mu\), respectively \cite{b17}. This approach dynamically adjusts to the threshold to ensure that strong signals which are significantly greater than the noise within the data are retained.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Images/Standard_mean_graph.png}  
+    \caption{Diagram showing the Standard Deviation Mean Distribution. Figure courtesy of \cite{}}
+    \label{fig_stadra_deviation_mean}
+\end{figure}
+
+%==================================== FFT =======================================================% 
+\section{Fast Fourier Transform}
+\label{sec:theory_fft}
+The \gls{fft} is a tool which enables efficient transformation of signals from the time domain to the frequency domain. In radar and signal processing, FFT is prominently used for spectral analysis and fast 2D convolution in Constant False Alarm Rate (CFAR) algorithms \cite{richards2005fundamentals}.
+
+\subsection{Discrete Fourier Transform (DFT)}
+
+The Discrete Fourier Transform (DFT) converts a finite-length sequence $x[n]$ of length $N$ into its frequency-domain representation $X[k]$:
+\begin{equation}
+    X[k] = \sum_{n=0}^{N-1} x[n]\, e^{-j\frac{2\pi kn}{N}}
+\end{equation}
+The inverse DFT recovers $x[n]$ from $X[k]$:
+\begin{equation}
+    x[n] = \frac{1}{N} \sum_{k=0}^{N-1} X[k]\, e^{j\frac{2\pi kn}{N}}
+\end{equation}
+
+\subsection{Fast Fourier Transform}
+
+The FFT algorithm computes the DFT and reduces the complexity from $\mathcal{O}(N^2)$ to $\mathcal{O}(N \log N)$ as introduced in \cite{cooley1965algorithm}. This is crucial for processing large datasets, especially in signal processing. FFT can also be is implemented using Python’s \texttt{NumPy} library routines such as \texttt{np.fft.fft} and \texttt{np.fft.fft2}.
+
+\subsection{Convolution Theorem}
+
+The Convolution Theorem states that convolution in the time domain corresponds to element-wise multiplication in the frequency domain:
+\begin{equation}
+\label{eqn:convolution_1d}
+    x[n] * h[n] \xleftrightarrow{\mathcal{F}} X[k] \cdot H[k]
+\end{equation}
+In two dimensions:
+\begin{equation}
+\label{eqn:convolution_2d}
+    x[m,n] * h[m,n] \xleftrightarrow{\mathcal{F}} X[k,l] \cdot H[k,l]
+\end{equation}
+This property is critical as by transforming the time domain kernel into the frequency domain, the computationally expensive direct convolution is substituted by a quick element-wise product, improves speed and shows how efficient CFAR convolution in radar signal processing \cite{richards2005fundamentals}.
+
+\subsection{FFT-Based 2D Convolution in CFAR Processing}
+
+To compute the threshold map in the 2D CFAR algorithm, convolution with an averaging kernel is performed. This process is significantly accelerated by leveraging the Fast Fourier Transform (FFT) and the Convolution Theorem. The steps involve:
+
+\begin{enumerate}
+\item Computing 2D FFTs of radar data and the CFAR kernel with proper zero-padding using \texttt{np.fft.fft2()}.
+\item Multiplying the FFTs element-wise in the frequency domain.
+\item Applying \texttt{np.fft.ifft2()} to transform the result back to the spatial domain, yielding the convolved output (e.g., the estimated noise floor).
+\end{enumerate}
+
+This FFT-based approach decreases computation time, changing the complexity from $\mathcal{O}(N^4)$ to $\mathcal{O}(N^2 \log N)$ for a 2D $N \times N$ matrix \cite{richards2005fundamentals}, which in terms improves efficiency. The application of 2D FFT for convolution in CFAR algorithms is a well-established in scenarios requiring high-speed processing of radar echoes seen in \cite{yuan2019two}.
+
+%==================================== CFAR =======================================================% 
+\section{Constant False Alarm Rate}
+\cite{b18}
+\label{sec:cfar_theory}
+The \gls{cfar} method is utilized to detect potential targets within data by adaptively adjusting detection thresholds according to the localized noise values. This dynamic thresholding ensures that the probability of false alarms remains consistent across various conditions, improving detection in non-homogeneous environments. 
+The Cell-Averaging CFAR (CA-CFAR) estimates the noise by averaging the values in the reference cells surrounding a cell under test (CUT), excluding guard cells to prevent spectral leakage, shown in Figure \ref{fig_theory_cfar_1d}. 
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Images/1D_CFAR_Theory.png}  
+    \caption{Diagram of a CA-CFAR processor. Figure courtesy of \cite{Sambath2024Radar}\cite{Richards2008PrinciplesRadar}}
+    \label{fig_theory_cfar_1d}
+\end{figure}
+
+The threshold scaling factor, $\alpha$, is calculated as:
+\begin{equation}
+\alpha = N \left(P_{\text{fa}}^{-1/N} - 1 \right)
+\label{eq:cfar_alpha}
+\end{equation}
+where $N$ is the total number of averaging cells in the CFAR mask (excluding guard cells and the CUT), and $P_{\text{fa}}$ is the probability of false alarm, which is set manually based on requirements.
+
+While effective for detection in a single dimension, the spectrogram data is a two-dimensional structure. Thus, a two-dimensional CFAR (2D CFAR) extends the method but in both dimensions, improving effectiveness in more complex and cluttered environments.
+A 2D CFAR shown in Figure \ref{fig_theory_cfar_2d}, is defined by four parameters (Excluding the CUT):
+\begin{itemize}
+  \item \textbf{Vertical} and \textbf{Horizontal Guard Cells}: Cells immediately surrounding the CUT, excluded from noise averaging.
+  \item \textbf{Vertical} and \textbf{Horizontal Averaging Cells}: Additional cells used for noise averaging.
+\end{itemize}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Images/2D_CFAR_Theory.png}  
+    \caption{Diagram of a 2D CFAR \cite{}}
+    \label{fig_theory_cfar_2d}
+\end{figure}
+
+%==================================== Gradient and Shape =======================================================% 
+%==================================== Component Labeling =======================================================% 
+\section{Connected Component Labeling}
+\label{sec:component_labeling_theory}
+In graph theory, a connected component is a group of nodes where every node can be reached from any other node in the group, and when no other nodes can be reached ,this group is separated from the rest of the graph. In the context of images, pixels are treated as nodes, and any other nodes which touch their edges or diagonals are grouped together \cite{b19}.
+Node connectivity are defined in two ways\cite{b19}:
+
+\begin{itemize}
+\item \textbf{4-Connectivity:}Node are considered connected if they share a common edge (horizontal and vertical neighbors).
+\item \textbf{8-Connectivity:} Node are considered connected if they share either a common edge or a corner (horizontal, vertical, and diagonal neighbors)
+\end{itemize}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Images/4_con_vs_8_con.png}  
+    \caption{Figure showing the connectivity schemes: A is 4-Connectivity and B is 8-Connectivity. Figure courtesy of \cite{ashour2014method}}
+    \label{fig_8_vs_4_con}
+\end{figure}
+
+4-connectivity is more conservative in grouping pixels. This can be better in noisy environments (when noise is still present in the data) or when precision and shape separation are critical. While, 8-connectivity is more inclusive, making it better when identifying continuous or slanted shapes/structures.
+
+\subsubsection{Algorithm}
+The approach to component labeling is to scan through the image and apply the algorithm to an unlabeled pixel if that pixel is above a set threshold. This can be implemented iteratively, progressively label all connected foreground pixels belonging to the same component \cite{b19}.
+
+\begin{algorithm}[H]
+\label{alg:component_labeling}
+\caption{Connected Component Labeling in a Spectrogram}
+\KwIn{Spectrogram image $I(x, y)$, threshold $T$}
+\KwOut{Labeled image $L(x, y)$}
+
+Set label counter $L \leftarrow 1$\;
+
+\ForEach{pixel $(x, y)$ in $I$}{
+  \If{$I(x, y) > T$ and $(x, y)$ is not labeled}{
+    Label pixel $(x, y)$ with $L$\;
+    
+    Create a queue $Q$ and add $(x, y)$ to it\;
+    
+    \While{$Q$ is not empty}{
+      Remove pixel $P$ from $Q$\;
+      
+      \ForEach{8-connected neighbor $N$ of $P$}{
+        \If{$I(N) > T$ and $N$ is not labeled}{
+          Label $N$ with $L$\;
+          Add $N$ to $Q$\;
+        }
+      }
+    }
+    
+    Increase label $L \leftarrow L + 1$\;
+  }
+}
+\end{algorithm}
+
+This process results in labeled groups where each connected component is assigned a unique label. In the \textit{label()} function from the \texttt{scikit-image} Python library, which labels connected regions pixels. Operating in either 4-connectivity or 8-connectivity mode depending on the selected parameter.
+
+\begin{algorithm}[H]
+\label{alg:scikit_component_labeling}
+\caption{SciKit Labeling}
+\KwIn{Spectrogram image $I$ (intensity values), Threshold $T$}
+\KwOut{Labeled image $L$ (unique integer labels for components), Number of labels $N$}
+$B \leftarrow \text{Binary image where } B(x, y) = 1 \text{ if } I(x, y) > T \text{ else } 0$;
+$(L, N) \leftarrow \text{LabelConnectedComponents}(B, \text{connectivity}=8)$;
+\\
+\Return $L, N$;
+
+\end{algorithm}
+
+%==================================== Geometric Filtering =======================================================% 
+%\section{Geometric Filtering: Theory of Shape Descriptors and Orientation}
+
+
+%==================================== RANSAC =======================================================% 
+\section{RANdom SAmple Consensus}
+\label{sec:ransac_theory}
+
+\gls{ransac} is a non-deterministic algorithm designed to estimate model parameters from data containing a significant number of outliers \cite{b23}.
+RANSAC iteratively selects random subsets of the data to create a model, then evaluating how many other data points are consistent with this model.
+The pseudo-code below above follows the classic RANSAC structure: repeatedly selecting a minimal subset of points, fitting a line model, counting inliers within threshold \(t\), and choosing the model with the highest support \cite{b25}.
+
+
+\begin{algorithm}[H]
+\label{alg:ransac}
+\caption{RANSAC for Line Fitting in 2D}
+\KwIn{Set of 2D points $(x_i, y_i)$ from a labeled region}
+\KwOut{Best-fit line model $(m, c)$}
+
+Set minimum points $N \leftarrow 2$ (for a line)\; 
+Initialize \texttt{best\_model} $\leftarrow$ None, \texttt{max\_inliers} $\leftarrow 0$\; 
+
+\For{$i = 1$ to $k$ (max iterations)}{
+    Randomly select two distinct points $(x_1, y_1)$ and $(x_2, y_2)$\;
+    \uIf{$x_1 = x_2$}{
+     Set line as vertical: $x = x_1$\;
+     }
+     \Else{
+         Compute slope $m = \frac{y_2 - y_1}{x_2 - x_1}$\; 
+         Compute intercept $c = y_1 - m x_1$\;
+ }
+ Initialize inlier count $n \leftarrow 0$\;
+
+ \ForEach{point $(x_j, y_j)$ in the region}{
+ Compute perpendicular distance to the line: 
+ \[
+ D_j = \frac{|m x_j - y_j + c|}{\sqrt{m^2 + 1}}
+ \]
+\If{$D_j \le t$}{
+ Increment $n \leftarrow n + 1$\;
+ }
+ }
+
+ \If{$n >$ \texttt{max\_inliers}}{
+ Update \texttt{max\_inliers} $\leftarrow n$\; 
+ Update \texttt{best\_model} $\leftarrow (m, c)$\;
+ }
+}
+
+\Return \texttt{best\_model}
+\end{algorithm}
+
+The number of iterations $k$ is chosen to ensure a high probability $p$ of picking at least one outlier-free set of $N$ inliers from the data. If $w$ is the probability that any data point is an inlier, then $k$ can be estimated by:
+\begin{equation}
+k = \frac{\log(1 - p)}{\log(1 - w^N)}
+\label{eq:ransac_iterations}
+\end{equation}
+For chirp detection, $w$ can be estimated based on the expected proportion of chirp pixels vs. noise pixels within the region. \cite{b25}
+
+\textbf{Coefficient of Determination ($R^2$ Score):}
+To determine how well the RANSAC-fitted line represents the pixel data of the region, the coefficient of determination ($R^2$ score) is used. The $R^2$ score provides a statistical measure of how much of the variance in the dependent variable can be explained by the independent variable through the linear model \cite{b24}. Essentially, The $R^2$ score indicates how closely a set of data points aligns with a fitted line.
+
+For a given set of $n$ pixel coordinates $(x_i, y_i)$ and a fitted line $\hat{y}_i = \hat{m} x_i + \hat{c}$:
+\begin{itemize}
+ \item \textbf{Total Sum of Squares (SST):} Represents the total variance in the dependent variable $y_i$.
+$$ \text{SST} = \sum_{i=1}^n (y_i - \bar{y})^2 $$
+ where $\bar{y}$ is the mean of the $y_i$ values.
+ \item \textbf{Residual Sum of Squares (SSR) or Sum of Squared Errors (SSE):} Represents the variance by the model.
+ $$ \text{SSR} = \sum_{i=1}^n (y_i - \hat{y}_i)^2 $$
+\end{itemize}
+
+The $R^2$ score is then calculated as:
+\begin{equation}
+\label{eq:r^2}
+R^2 = 1 - \frac{\text{SSR}}{\text{SST}}
+\end{equation}
+
+The value of $R^2$ ranges from 0 to 1. An $R^2$ value of 1 indicates that the model perfectly explains the variance in the dependent variable (all points lie exactly on the line). An $R^2$ value of 0 suggests that the model explains none of the variance.
+
+Python's \texttt{scikit-learn} library provides an accessible to the RANSAC algorithm through \texttt{RANSACRegressor}. The library allows users to define key parameters such as the minimum number of samples, residual threshold, maximum iterations, and random state, enabling customization.
+
+%==================================== DBSCAN =======================================================% 
+\section{Density-Based Spatial Clustering of Applications with Noise}
+\label{sec:dbscan_theory}
+
+\gls{dbscan} is an unsupervised clustering algorithm that identifies clusters as dense regions separated by sparser areas and labels sparse points as noise \cite{ester1996dbscan}. It does not require prior knowledge of the number of clusters and can find clusters of arbitrary shapes.
+
+The DBSCAN depends on two main parameters critical for defining clusters and noise \cite{schubert2017dbscan}:
+
+\begin{itemize}
+    \item \textbf{Neighborhood radius \(\varepsilon\):} This specifies the maximum distance between two points for them to be considered neighbors.
+    
+    \item \textbf{Minimum points \texttt{minPts}:} This defines the minimum number of points required within a point’s neighborhood for it to be classified as a core point.
+\end{itemize}
+
+Once the two parameters are defined, points are classified into three categories:
+\begin{itemize}
+    \item \textbf{Core points:} Points with at least \texttt{minPts} neighbors within radius \(\varepsilon\).
+    \item \textbf{Border points:} Points within the neighborhood of a core point but with fewer than \texttt{minPts} neighbors.
+    \item \textbf{Noise points:} Points that are neither core nor border points.
+\end{itemize}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Images/DBSCAN_Theory.png}  
+    \caption{Figure showing DBSCAN point classifications (core, border, and noise). Figure courtesy of \cite{amini2014density}}
+    \label{fig_DBSCAN_Theory}
+\end{figure}
+
+\subsection{Algorithm Description}
+
+DBSCAN iterates through each point in the dataset. For every unvisited point, it determines the neighboring points within radius \(\varepsilon\). If the point's neighborhood contains at least \texttt{minPts} points,a core point is formed. From that core point, a new cluster is initiated, and the expanded by recursively adding all reachable points. Points that do not meet the core point criteria are initially labeled as noise. The algorithm returns the set of clusters found after processing all points \cite{ester1996dbscan}.
+
+\begin{algorithm}[H]
+\label{alg:DBSCAN}
+\caption{DBSCAN Algorithm}
+\KwIn{Dataset $D$, radius $\varepsilon$, minimum points $\texttt{minPts}$}
+\KwOut{Set of clusters}
+
+clusters $\leftarrow \emptyset$\;
+visited $\leftarrow \emptyset$\;
+
+\ForEach{point $p$ in $D$}{
+    \If{$p \notin$ visited}{
+        mark $p$ as visited\;
+        $N_\varepsilon(p) \leftarrow$ $\varepsilon$-neighborhood of $p$\;
+        
+        \If{$|N_\varepsilon(p)| \geq \texttt{minPts}$}{
+            $C \leftarrow$ new cluster\;
+            add $p$ to $C$\;
+            \texttt{expandCluster}($C$, $N_\varepsilon(p)$, $\varepsilon$, $\texttt{minPts}$, visited)\;
+            add $C$ to clusters\;
+        }
+        \Else{
+            mark $p$ as noise\;
+        }
+    }
+}
+
+\Return clusters
+
+\vspace{5pt}
+\SetKwFunction{FMain}{expandCluster}
+\SetKwProg{Fn}{Function}{:}{}
+\Fn{\FMain{$C$, $N_\varepsilon(p)$, $\varepsilon$, $\texttt{minPts}$, visited}}{
+    \ForEach{point $q$ in $N_\varepsilon(p)$}{
+        \If{$q \notin$ visited}{
+            mark $q$ as visited\;
+            $N_\varepsilon(q) \leftarrow$ $\varepsilon$-neighborhood of $q$\;
+            \If{$|N_\varepsilon(q)| \geq \texttt{minPts}$}{
+                $N_\varepsilon(p) \leftarrow N_\varepsilon(p) \cup N_\varepsilon(q)$\;
+            }
+        }
+        \If{$q$ not yet assigned to any cluster}{
+            add $q$ to cluster $C$\;
+        }
+    }
+}
+\end{algorithm}
+
+A common method to choose \(\varepsilon\) involves the \(k\)-distance graph, where \(k = \texttt{minPts} - 1\). By plotting the sorted distances to each point’s \(k\)-th nearest neighbor, an "elbow" or knee in the curve typically indicates a suitable \(\varepsilon\) value \cite{schubert2017dbscan}. The parameter \texttt{minPts} is often set based on the data dimensionality \(d\), with the heuristic \(\texttt{minPts} \geq d + 1\) recommended for robustness.
+
+DBSCAN is used in data analysis libraries, specifically the \texttt{scikit-learn} Python package, which provides DBSCAN functionality \cite{pedregosa2011scikit}. Making it an accessible and adaptable for numerous applications.
+
+%==================================== Change Point =======================================================% 
+\section{Change Point/PELT}
+
+
+%==================================== GMM =======================================================% 
+\section{Gaussian Mixture Models}
+
+\gls{gmm} are probability models representing complex data distributions as a weighted sum of Gaussian components \cite{bishop2006pattern}. The parameter estimation is performed using the Expectation-Maximization. An algorithm which iteratively refines the model parameters by alternating between estimating component probabilities and maximizing the data likelihood \cite{bishop2006pattern}, essentially a step-by-step process that guesses how likely each data point belongs to each group, then updating the model to better fit the data. GMMs are used extensively in signal processing due to their flexibility in modeling multi-modal distributions \cite{reynolds2015gaussian}.
+
+Formally, the probability density function of a GMM with \(K\) components is expressed as:
+
+\begin{equation}
+\label{eq:gmm}
+p(x) = \sum_{k=1}^{K} \pi_k \cdot \mathcal{N}(x \mid \mu_k, \Sigma_k)
+\end{equation}
+
+
+where \(\pi_k\) denotes the mixing coefficient for the \(k\)-th Gaussian component, satisfying \(\sum_{k=1}^{K} \pi_k = 1\). The term \(\mathcal{N}(x \mid \mu_k, \Sigma_k)\) represents the multivariate Gaussian distribution with mean \(\mu_k\) and covariance \(\Sigma_k\) \cite{bishop2006pattern}.
+
+Parameter estimation for GMMs is usually done using the Expectation-Maximization (EM) algorithm. This method works by repeating two main steps: first, it estimates how likely each data point belongs to each Gaussian component, and then it updates the model’s parameters—such as the weights, means, and variances of each component—to better fit the data. These two steps are repeated until the model’s fit stops improving significantly \cite{bishop2006pattern}.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.7\textwidth]{Images/GMM_Theory.png}  
+    \caption{Figure showing a Gaussian Mixture Model with multiple components. Figure courtesy of \cite{turner2017gmm}}
+    \label{fig_GMM_Theory}
+\end{figure}
+
+GMMs are used extensively in pattern recognition and image segmentation, where data often exhibit underlying structure composed of differently distributed data \cite{reynolds2015gaussian, bishop2006pattern}. The ability to model arbitrarily shaped data makes it effective for density estimation in scenarios where the data is multi-modal, data that can not well represented by a single Gaussian distribution.
+
+% ----------------------------------------------------
+\ifstandalone
+\bibliography{../Bibliography/References.bib}
+\printnoidxglossary[type=\acronymtype,nonumberlist]
+\fi
+\end{document}
+% ----------------------------------------------------

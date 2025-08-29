@@ -1,0 +1,97 @@
+%****************************************************
+%	CHAPTER 3 - THEORETICAL DEVELOPMENT
+%****************************************************
+\chapter{Theoretical Development}
+\label{ch:ch3}
+%====================================================
+\section{Robot Operating System (ROS)}
+\label{sec:ch3:section1}
+
+Robot Operating System (ROS), is a collection of open-source software tools that allows for the development of modular autonomous platforms. ROS is widely used in many environments, ranging from research and prototyping platforms to massive corporations such as Airbus and Caterpillar (cite here).
+ROS allows hardware to be easily added and removed from a platform for testing and development. The Livox Avia has manufacturer-supplied ROS drivers, hence this was the chosen method for interfacing with the device during data collection. 
+
+%====================================================
+\section{Livox Avia}
+\label{sec:ch3:section2}
+
+The sensor used to collect data for this investigation was the Livox Avia. The Livox Avia is a solid-state laser and Risley prism-based LIDAR scanner with a built-in inertial measurement unit (IMU). ***this might have to move* The sensor was set up to capture data using ROS (ROS Neotic) and the Livox ROS driver through a machine running Ubuntu 20.04. The sensor scans and creates point clouds at a rate of 10 Hz and the IMU collects data at a rate of 200 Hz. The captured data was saved and stored in the rosbag file format (.bag). These files contain all the recorded data, point cloud information (location and return intensity), IMU readings, and their associated timestamps.***
+
+%----------------------------------------------------
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{figs/avia0.jpg}
+    \caption{\textbf{Livox Avia}}
+    \label{fig:avia}
+\end{figure}
+%----------------------------------------------------
+
+The Avia has two built-in scanning patterns, a repetitive and a non-repetitive pattern. The repetitive scanning pattern scans the target area in a narrow horizontal band, providing a more uniform point density per frame when compared to the non-repetitive mode. The non-repetitive scanning pattern scans the target with a rosette-shaped pattern which rotates as it scans, covering areas not scanned in previous frames. This scanning method results in a high density of points in the centre of the target, with the number of points reducing towards the edges of the sensor's field of view (FOV). The non-repetitive scanning pattern was used for data capture as it provides a wider FOV than the non-repetitive scanning pattern and captures more unique data points.
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.33\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{figs/rep0.jpg} % first figure itself
+        %\caption{first figure}
+    \end{minipage}\hfill
+    \begin{minipage}{0.33\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{figs/rep1.jpg} % second figure itself
+        %\caption{second figure}
+    \end{minipage}
+    \begin{minipage}{0.33\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{figs/rep2.jpg} % first figure itself
+        %\caption{first figure}
+    \end{minipage}\hfill
+    \caption{fig}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.33\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{figs/norep0.jpg} % first figure itself
+        %\caption{first figure}
+    \end{minipage}\hfill
+    \begin{minipage}{0.33\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{figs/norep1.jpg} % second figure itself
+        %\caption{second figure}
+    \end{minipage}
+    \begin{minipage}{0.33\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{figs/norep2.jpg} % first figure itself
+        %\caption{first figure}
+    \end{minipage}\hfill
+    \caption{fig}
+\end{figure}
+
+
+The sensor has three return rate settings: single, double, or triple return. The Avia was used exclusively in single return mode.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{lllll}
+\cline{1-2}
+Laser Wavelength            & 905 nm                                     &  &  &  \\ \cline{1-2}
+Laser Safety                & Class 1 (Safe for eyes)                    &  &  &  \\ \cline{1-2}
+Detection Range (@ 100 klx) & \begin{tabular}[c]{@{}l@{}}190 m @ 10\% reflectivity\\ 230 m @ 20\% reflectivity\\ 320 m @ 80\% reflectivity\end{tabular} &  &  &  \\ \cline{1-2}
+Detection Range (@ 0 klx)   & \begin{tabular}[c]{@{}l@{}}190 m @ 10\% reflectivity\\ 260 m @ 20\% reflectivity\\ 450 m @ 80\% reflectivity\end{tabular} &  &  &  \\ \cline{1-2}
+FOV                         & 70.4° (H) × 77.2° (V)                      &  &  &  \\ \cline{1-2}
+Point Rate                  & 240,000 points/s                           &  &  &  \\ \cline{1-2}
+IMU                         & Bosch Sensortec BMI088                     &  &  &  \\ \cline{1-2}
+Operating Temperature Range & -20° to 65° C                              &  &  &  \\ \cline{1-2}
+IP Rating                   & IP67                                       &  &  &  \\ \cline{1-2}
+Dimensions                  & 91 x 61.2 x 64.8 mm                        &  &  &  \\ \cline{1-2}
+\end{tabular}
+\caption{\textbf{Livox Avia Specifications.} The parameters}
+\label{table:AVIA_spec}
+\end{table}
+
+%====================================================
+\section{Point Cloud Processing}
+\label{sec:ch3:section3}
+
+*need to find reference for this*
+Many common point cloud processing methods are built around the assumption that the point cloud being worked upon is in the format of a standard (MxN) grid layout. Methods such as point cloud registration (combining multiple point clouds to form a single scene), clustering and model fitting often use the assumption of a constant grid to achieve their outputs.

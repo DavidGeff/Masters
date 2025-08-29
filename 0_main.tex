@@ -1,0 +1,390 @@
+%=====================================================================
+%	UCT EEE4022F/S LaTeX REPORT TEMPLATE
+%---------------------------------------------------------------------
+%	Created by:		R.A. Verrinder
+%	Date Modified:	Dec 2021
+%---------------------------------------------------------------------
+%	Compile with:	arara 
+%=====================================================================
+%	Document properties:
+%---------------------------------------------------------------------
+%	Paper size:			A4
+%	Margins:			1 inch margins (top,bottom,left,right)
+%	Printing:			Double sided
+%	Base font size:		11pt
+%	Line spacing:		
+%	Paragraph spacing:	10pt
+%	Paragraph indent:	0pt
+%=====================================================================
+
+\documentclass[a4paper, 11pt, oneside, openright, parskip=full]{book}
+
+%---------------------------------------------------------------------
+%	PACKAGES
+%---------------------------------------------------------------------
+\usepackage[margin = 1in]{geometry}		
+\usepackage{lscape}
+\usepackage{rotating}
+\usepackage{hyphenat}
+\usepackage{setspace}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{lastpage}
+\usepackage{fancyref}
+\usepackage{fancyvrb}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{cite}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{graphicx}					% Can include graphics
+\usepackage{float}						% Can place figures at exact places in text
+\usepackage{wrapfig}					% Can wrap text around figures
+\usepackage{import}
+\usepackage{tocbasic}                   % Can modify ToC settings
+\usepackage{array}						% Can set column widths in tables
+\usepackage{mdframed}					% Can draw boxes around text etc.
+\usepackage{subcaption}					% Can place figures side by side
+\usepackage[bottom]{footmisc}           % Puts footnotes at bottom of page
+\usepackage{tikz}
+\usetikzlibrary{positioning}		
+\usetikzlibrary{shapes.geometric, arrows} % For block diagrams
+\usetikzlibrary{circuits.logic.US} 
+\usetikzlibrary{calc}
+\usepackage[siunitx]{circuitikz}		% Can draw circuits
+\usepackage{tikz-timing}				% Can draw timing diagrams
+\usepackage{enumerate}
+\usepackage{tocloft,calc}               % ToC formatting
+\usepackage{xspace}						% For box spaces
+\usepackage{caption}					% Captions and subcaptions
+\usepackage{multirow}
+\usepackage{hhline}
+\usepackage{fix-cm}						% Can set font size
+\usepackage{color}						% Can change font color
+\usepackage[scaled=0.9]{helvet}			% Helvetica font scaled \phv
+\usepackage{courier}					% Courier font \pcr
+\usepackage{amsmath, amsthm, amssymb}
+\usepackage{datetime}					% Can use dates and times
+\usepackage{textcomp, gensymb}				
+%---------------------------------------------------------------------
+% 	PAGE FORMATTING
+%---------------------------------------------------------------------
+% Include page formatting here. 
+%---------------------------------------------------------------------
+\parskip	= 10pt						% Paragraph spacing
+\parindent 	= 0pt						% No para. indent
+
+% Caption margins 80% of text
+\captionsetup{width=0.8\textwidth,font=small,labelfont=bf}	
+
+%---------------------------------------------------------------------
+% 	TOC FORMATTING
+%---------------------------------------------------------------------
+% Preamble sections have dot leaders
+\renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}}
+% Set spacing between entries
+\setlength{\cftbeforechapskip}{5pt}
+% Display "Chapter" in entries
+\renewcommand{\cftchappresnum}{\chaptername\space}
+% Display "Appendix" in entries
+\setlength{\cftchapnumwidth}{\widthof{\textbf{Appendix~999~}}}
+\makeatletter
+\g@addto@macro\appendix{%
+  \addtocontents{toc}{%
+    \protect\renewcommand{\protect\cftchappresnum}{\appendixname\space}%
+  }%
+}
+\makeatother
+%---------------------------------------------------------------------
+%	DOCUMENT PROPERTIES
+%---------------------------------------------------------------------
+% Fill in your details here. These macro commands can the be used 
+% throughout the document. Comment out what is unnecessary.
+%---------------------------------------------------------------------
+\newcommand{\auth}{David Sephton-Poultney}								% Author
+\newcommand{\studentnumber}{SPHDAV001}					% Author's student number
+\newcommand{\titl}{Report title}						% Report title
+\newcommand{\subtitle}{Subtitle}						% Report subtitle
+\newcommand{\dept}{Department of Electrical Engineering}% Department 
+\newcommand{\uni}{University of Cape Town}				% University
+\newcommand{\city}{Rondebosch, Cape Town}				% City
+\newcommand{\country}{South Africa}						% Country
+\newcommand{\ebedegree}{Bachelor of Science in Electrical Engineering Mechatronics} %degree
+\newcommand{\degreeabv}{BSc (Eng)}						% Degree abbreviation		
+\newcommand{\supervisor}{Robyn Verrinder}					        % Supervisor
+\newcommand{\course}{EEE5000W}					        % Course code
+\newcommand{\logo}										% UCT Logo
+{	
+	\includegraphics[scale = 0.3]{figs/uctLogo}
+}
+
+\newdateformat{mydate}{\monthname[\THEMONTH] \THEYEAR} % Month Year date
+\newcommand{\key}{key1; key2; key3}					   % Keywords (add logical keywords)
+
+%---------------------------------------------------------------------
+
+%---------------------------------------------------------------------
+%	MACROS
+%---------------------------------------------------------------------
+% Signature box
+%---------------------------------------------------------------------
+\newcommand*{\signature}[1]
+{
+	\par\noindent\makebox [8cm]{\hrulefill}
+	\par\noindent\makebox [8cm][1]{#1}
+}
+%---------------------------------------------------------------------
+% Macro to select font style
+% phv = helvetica (sans serif)
+% pcr = courier	  (typewritter font)
+%---------------------------------------------------------------------
+\def\nfont#1#2
+{
+	{\fontfamily{#1}\selectfont #2}
+}					
+
+%=====================================================================
+%	Start of the document
+%---------------------------------------------------------------------
+\begin{document}
+%=====================================================================
+%	TITLE PAGE
+%=====================================================================
+\begin{titlepage}
+	\centering
+	\ \\
+		\vskip 25pt	
+
+%---------------------------------------------------------------------
+% Title
+%---------------------------------------------------------------------	
+	\begin{Huge}					
+		\textbf{\titl}
+		\vskip 25pt
+	\end{Huge}
+%---------------------------------------------------------------------
+% Subtitle	(optional)
+%---------------------------------------------------------------------
+	\begin{Large}					
+		\subtitle\\*
+		\vskip 50pt
+	\end{Large}
+%---------------------------------------------------------------------
+% UCT logo
+%---------------------------------------------------------------------	
+	\logo							
+	\vskip 50pt	
+%---------------------------------------------------------------------
+% Author	
+%---------------------------------------------------------------------	
+	\begin{Large}					
+		\textbf{\auth}\\
+	\end{Large}
+	
+	\begin{normalsize}
+	    \textbf{(\studentnumber)}
+	\end{normalsize}
+	\vskip 25pt	
+%---------------------------------------------------------------------
+% Author's address	
+%---------------------------------------------------------------------		
+	\begin{normalsize}				
+		\dept\\*
+		\uni\\*
+		\city\\*
+		\country\\*
+		\vskip 25pt	
+	\end{normalsize}
+%---------------------------------------------------------------------
+% Supervisor (optional)	
+%---------------------------------------------------------------------		
+	\begin{large}					
+		\textit{Supervisor:	\supervisor\\}
+		\vskip 25pt	
+	\end{large}
+%---------------------------------------------------------------------
+% Date	
+%---------------------------------------------------------------------
+	\begin{Large}					
+		\textbf{\mydate\today}
+		\vskip 25pt	
+	\end{Large}
+%---------------------------------------------------------------------
+% Degree	
+%---------------------------------------------------------------------		
+\course{} final year project report submitted in partial fulfilment of the requirements for the degree of \textbf{\ebedegree{}} in the \dept{} at the \uni{}
+		\vskip 25pt		
+%---------------------------------------------------------------------
+% Keywords	
+%---------------------------------------------------------------------		
+	\begin{normalsize}				
+		\textit{Keywords:}
+		\key			
+	\end{normalsize}	
+\end{titlepage}
+
+%=====================================================================
+%	FRONT MATTER
+%=====================================================================
+\frontmatter
+%---------------------------------------------------------------------
+%	Declaration
+%---------------------------------------------------------------------
+\chapter{Declaration}				
+\label{ch:decl}
+% Change name
+I, \auth,  hereby:
+
+\begin{enumerate}
+	\item		grant the \uni\  free licence to reproduce the above thesis in whole or in part, for the purpose of research;
+	\item		declare that:
+	
+	\begin{enumerate}
+		\item		this thesis is my own unaided work, both in concept and execution, and apart from the normal guidance from my supervisor, I have received no assistance except as stated below:
+				% Note any exceptions
+		\item		neither the substance nor any part of the above thesis has been submitted in the past, or is being, or is to be submitted for a degree at this University or at any other university, except as stated below.
+				% Note any exceptions
+	\end{enumerate}	
+\end{enumerate}
+
+\begin{flushright}	% Signature field
+	\vskip 6cm
+	\noindent \signature{x}
+	\noindent \auth \\*
+	\vskip 2mm
+	\noindent \dept \\*
+	\noindent \uni \\*
+	\vskip 2mm
+	\noindent \today
+\end{flushright}
+
+%---------------------------------------------------------------------
+%	Abstract2. Pancake formation stage
+%---------------------------------------------------------------------
+\chapter{Abstract}				
+\label{ch:abs}
+%---------------------------------------------------------------------
+% TAKEN FROM UCT WEBSITE
+% The Doctoral Degrees Board recommends that candidates include an abstract 
+% that fits onto one page, and which includes the author's full name, thesis 
+% title and date. The text should not exceed 350 words. Candidates may also 
+% include a more substantial summary of their work, in addition to the abstract.
+% Follow the same format for an MSc. abstract.
+
+% The abstract should stand on its own. It should answer the following questions:
+%	1.	What did the author do? What ideas, notions, hypotheses, 
+%		concepts, theories or thoughts were investigated?
+%	2.	How did the author do the work? What data were generated and used? 
+%		What was the origin of the data? How were data gathered? 
+%		What tests, scales, indices, or summary measures were used? 
+%		In other words, how was the analysis and/or synthesis done?
+%	3.	What were the conclusions and what were the significant findings?
+%
+% Some studies cannot readily be summarised in this way and require more 
+% descriptive abstracts. Do not use telegraphic phrases. Do not repeat 
+% information given in the title. Do not use abbreviations. The purpose of 
+% an abstract is to enable a researcher/examiner to understand the essential 
+% hypothesis, method and findings of the research.
+%---------------------------------------------------------------------
+\begin{center}
+	\textbf{\Large \titl}\\
+			\vskip 0.2cm
+			\auth\\
+			\vskip 0.2cm
+	\textit{\footnotesize\today}
+			\vskip 1cm
+\end{center}
+%---------------------------------------------------------------------
+% Write abstract here [350 words]
+%---------------------------------------------------------------------
+%	Acknowledgements
+%---------------------------------------------------------------------
+\chapter{Acknowledgements}		
+\label{ch:ack}
+%---------------------------------------------------------------------
+% Acknowledge all people who have helped you complete this work including.
+\pagebreak
+%---------------------------------------------------------------------
+%	Dedication (optional)
+%---------------------------------------------------------------------
+%\begin{flushright}
+%	\vspace*{10cm}
+%	{\itshape dedication .....}
+%\end{flushright}
+%---------------------------------------------------------------------
+%	Table of Contents
+%---------------------------------------------------------------------
+\tableofcontents
+\addcontentsline{toc}{chapter}{Contents}
+\pagebreak
+%---------------------------------------------------------------------
+%	List of Figures
+%---------------------------------------------------------------------
+\listoffigures
+\addcontentsline{toc}{chapter}{List of Figures}
+
+\pagebreak
+%---------------------------------------------------------------------
+%	List of Tables
+%---------------------------------------------------------------------
+\listoftables
+\addcontentsline{toc}{chapter}{List of Tables}
+
+\pagebreak
+%---------------------------------------------------------------------
+%	List of Symbols/Document conventions (optional)
+%---------------------------------------------------------------------
+\chapter*{List of Symbols}
+\addcontentsline{toc}{chapter}{List of Symbols}
+
+\begin{tabular}{cp{0.6\textwidth}}
+  $x$ & position \\
+  $v$ & velocity \\
+  $a$ & acceleration \\
+  $t$ & time \\
+  $F$ & force
+\end{tabular}\\
+
+\pagebreak
+%---------------------------------------------------------------------
+%	Glossary (optional)
+%---------------------------------------------------------------------
+\chapter*{Glossary}
+\addcontentsline{toc}{chapter}{Glossary}
+
+\pagebreak
+%=====================================================================
+%	MAIN MATTER
+%=====================================================================
+% Create a separate file for each chapter. You may chose to rename these
+% chapters as needed.
+%---------------------------------------------------------------------
+\mainmatter
+
+\include{1_ch1}
+\include{2_ch2}
+\include{3_ch3}
+\include{4_ch4}
+\include{5_ch5}
+\include{6_ch6}
+
+
+\include{A_appendix}
+
+%=====================================================================
+%	BACK MATTER
+%=====================================================================
+
+\backmatter
+
+%---------------------------------------------------------------------
+%	BIBLIOGRAPHY
+%---------------------------------------------------------------------
+
+\bibliographystyle{plain}
+\bibliography{report}
+
+%---------------------------------------------------------------------
+\end{document}
+%---------------------------------------------------------------------
+%	End of the document
+%=====================================================================
