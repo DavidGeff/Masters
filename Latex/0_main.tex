@@ -34,7 +34,7 @@
 \usepackage{fancyvrb}
 \usepackage{tabularx}
 \usepackage{booktabs}
-\usepackage{cite}
+%\usepackage{cite}
 \usepackage[usenames,dvipsnames]{xcolor}
 \usepackage{graphicx}					% Can include graphics
 \usepackage{float}						% Can place figures at exact places in text
@@ -64,7 +64,9 @@
 \usepackage{courier}					% Courier font \pcr
 \usepackage{amsmath, amsthm, amssymb}
 \usepackage{datetime}					% Can use dates and times
-\usepackage{textcomp, gensymb}				
+\usepackage{textcomp, gensymb}		
+\usepackage[backend=biber,style=authoryear]{biblatex}		
+\addbibresource{report.bib}
 %---------------------------------------------------------------------
 % 	PAGE FORMATTING
 %---------------------------------------------------------------------
@@ -380,8 +382,7 @@ I, \auth,  hereby:
 %	BIBLIOGRAPHY
 %---------------------------------------------------------------------
 
-\bibliographystyle{plain}
-\bibliography{report}
+\printbibliography
 
 %---------------------------------------------------------------------
 \end{document}
