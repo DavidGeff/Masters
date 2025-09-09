@@ -1,0 +1,20 @@
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {1.1}{\ignorespaces \textbf {A simplified block diagram of a general communication system.} A communication system can be abstracted as follows: an \textit {information source} produces a message to be sent through a \textit {transmitter} which converts it to a signal which can be sent via a communication \textit {channel}. The received signal is noisy and is converted back to the message by the \textit {receiver} which is then delivered to the \textit {destination}. Taken from}}{1}{figure.caption.6}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces \textbf {Pancake ice formation process.}}}{5}{figure.caption.8}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces \textbf {Radiation}}}{6}{figure.caption.9}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces \textbf {Livox Avia}}}{8}{figure.caption.10}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces fig}}{8}{figure.caption.11}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces fig}}{8}{figure.caption.12}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces \textbf {DBScan}}}{12}{figure.caption.14}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {6.1}{\ignorespaces \textbf {boards}}}{15}{figure.caption.15}%
+\contentsline {figure}{\numberline {6.2}{\ignorespaces \textbf {angle}}}{16}{figure.caption.16}%
+\contentsline {figure}{\numberline {6.3}{\ignorespaces \textbf {Field Setup}}}{16}{figure.caption.17}%
+\addvspace {10\p@ }
