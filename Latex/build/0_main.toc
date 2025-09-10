@@ -29,14 +29,15 @@
 \contentsline {section}{\numberline {3.2}Livox Avia}{7}{section.3.2}%
 \contentsline {section}{\numberline {3.3}LIDAR Characteristics}{9}{section.3.3}%
 \contentsline {section}{\numberline {3.4}Point Cloud Processing}{9}{section.3.4}%
-\contentsline {chapter}{\numberline {4}Data Collection}{10}{chapter.4}%
-\contentsline {section}{\numberline {4.1}SCALE Winter 2022 Cruise}{10}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Aalto University Ice and Wave Tank}{10}{section.4.2}%
-\contentsline {chapter}{\numberline {5}Pipeline Design}{11}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Pipeline something}{11}{section.5.1}%
-\contentsline {chapter}{\numberline {6}Experimental Design}{14}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Validation something}{14}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Kalman Filter Experiment}{14}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Normal Estimation Experiment}{15}{section.6.3}%
+\contentsline {section}{\numberline {3.5}Clustering Algorithms}{9}{section.3.5}%
+\contentsline {chapter}{\numberline {4}Data Collection}{11}{chapter.4}%
+\contentsline {section}{\numberline {4.1}SCALE Winter 2022 Cruise}{11}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Aalto University Ice and Wave Tank}{11}{section.4.2}%
+\contentsline {chapter}{\numberline {5}Pipeline Design}{12}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Pipeline something}{12}{section.5.1}%
+\contentsline {chapter}{\numberline {6}Experimental Design}{15}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Validation something}{15}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Kalman Filter Experiment}{15}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Normal Estimation Experiment}{16}{section.6.3}%
 \renewcommand {\cftchappresnum }{Appendix }
-\contentsline {chapter}{\numberline {A}Additional information}{17}{appendix.A}%
+\contentsline {chapter}{\numberline {A}Additional information}{18}{appendix.A}%
