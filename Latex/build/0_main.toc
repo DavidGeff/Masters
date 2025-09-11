@@ -29,7 +29,7 @@
 \contentsline {section}{\numberline {3.2}Livox Avia}{7}{section.3.2}%
 \contentsline {section}{\numberline {3.3}LIDAR Characteristics}{9}{section.3.3}%
 \contentsline {section}{\numberline {3.4}Point Cloud Processing}{9}{section.3.4}%
-\contentsline {section}{\numberline {3.5}Clustering Algorithms}{9}{section.3.5}%
+\contentsline {section}{\numberline {3.5}Clustering Algorithms}{10}{section.3.5}%
 \contentsline {chapter}{\numberline {4}Data Collection}{11}{chapter.4}%
 \contentsline {section}{\numberline {4.1}SCALE Winter 2022 Cruise}{11}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Aalto University Ice and Wave Tank}{11}{section.4.2}%
