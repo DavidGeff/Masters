@@ -22,22 +22,24 @@
 \contentsline {subsection}{\numberline {2.1.4}Marginal Ice Zone (MIZ)}{4}{subsection.2.1.4}%
 \contentsline {section}{\numberline {2.2}Pancake Ice}{4}{section.2.2}%
 \contentsline {subsection}{\numberline {2.2.1}Pancake Ice Formation}{4}{subsection.2.2.1}%
-\contentsline {section}{\numberline {2.3}LIDAR}{5}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}LIDAR Sensors}{6}{subsection.2.3.1}%
-\contentsline {chapter}{\numberline {3}Theoretical Development}{7}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Robot Operating System (ROS)}{7}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Livox Avia}{7}{section.3.2}%
-\contentsline {section}{\numberline {3.3}LIDAR Characteristics}{9}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Point Cloud Processing}{9}{section.3.4}%
-\contentsline {section}{\numberline {3.5}Clustering Algorithms}{10}{section.3.5}%
-\contentsline {chapter}{\numberline {4}Data Collection}{11}{chapter.4}%
-\contentsline {section}{\numberline {4.1}SCALE Winter 2022 Cruise}{11}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Aalto University Ice and Wave Tank}{11}{section.4.2}%
-\contentsline {chapter}{\numberline {5}Pipeline Design}{12}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Pipeline something}{12}{section.5.1}%
-\contentsline {chapter}{\numberline {6}Experimental Design}{15}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Validation something}{15}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Kalman Filter Experiment}{15}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Normal Estimation Experiment}{16}{section.6.3}%
+\contentsline {section}{\numberline {2.3}Ocean Waves}{6}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Wave Formation}{6}{subsection.2.3.1}%
+\contentsline {section}{\numberline {2.4}LIDAR}{6}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}LIDAR Sensors}{6}{subsection.2.4.1}%
+\contentsline {chapter}{\numberline {3}Theoretical Development}{8}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Robot Operating System (ROS)}{8}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Livox Avia}{8}{section.3.2}%
+\contentsline {section}{\numberline {3.3}LIDAR Characteristics}{10}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Point Cloud Processing}{10}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Clustering Algorithms}{11}{section.3.5}%
+\contentsline {chapter}{\numberline {4}Data Collection}{12}{chapter.4}%
+\contentsline {section}{\numberline {4.1}SCALE Winter 2022 Cruise}{12}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Aalto University Ice and Wave Tank}{12}{section.4.2}%
+\contentsline {chapter}{\numberline {5}Pipeline Design}{13}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Pipeline something}{13}{section.5.1}%
+\contentsline {chapter}{\numberline {6}Experimental Design}{16}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Validation something}{16}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Kalman Filter Experiment}{16}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Normal Estimation Experiment}{17}{section.6.3}%
 \renewcommand {\cftchappresnum }{Appendix }
-\contentsline {chapter}{\numberline {A}Additional information}{18}{appendix.A}%
+\contentsline {chapter}{\numberline {A}Additional information}{19}{appendix.A}%
