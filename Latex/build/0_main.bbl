@@ -16,5 +16,119 @@
   {}
 \endgroup
 
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global/global}
+    \entry{vichiIndicatorSeaIce2022}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=89fba3e6e5969e08f095c08eed06948e}{%
+           family={Vichi},
+           familyi={V\bibinitperiod},
+           given={Marcello},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{89fba3e6e5969e08f095c08eed06948e}
+      \strng{fullhash}{89fba3e6e5969e08f095c08eed06948e}
+      \strng{fullhashraw}{89fba3e6e5969e08f095c08eed06948e}
+      \strng{bibnamehash}{89fba3e6e5969e08f095c08eed06948e}
+      \strng{authorbibnamehash}{89fba3e6e5969e08f095c08eed06948e}
+      \strng{authornamehash}{89fba3e6e5969e08f095c08eed06948e}
+      \strng{authorfullhash}{89fba3e6e5969e08f095c08eed06948e}
+      \strng{authorfullhashraw}{89fba3e6e5969e08f095c08eed06948e}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Abstract. Remote-sensing records over the last 40~years have revealed large year-to-year global and regional variability in Antarctic sea ice extent. Sea ice area and extent are useful climatic indicators of large-scale variability, but they do not allow the quantification of regions of distinct variability in sea ice concentration (SIC). This is particularly relevant in the marginal ice zone (MIZ), which is a transitional region between the open ocean and pack ice, where the exchanges between ocean, sea ice and atmosphere are more intense. The MIZ is circumpolar and broader in the Antarctic than in the Arctic. Its extent is inferred from satellite-derived SIC using the 15\,\%–80\,\% range, assumed to be indicative of open drift or partly closed sea ice conditions typical of the ice edge. This proxy has been proven effective in the Arctic, but it is deemed less reliable in the Southern Ocean, where sea ice type is unrelated to the concentration value, since wave penetration and free-drift conditions have been reported with 100\,\% cover. The aim of this paper is to propose an alternative indicator for detecting MIZ conditions in Antarctic sea ice, which can be used to quantify variability at the climatological scale on the ice-covered Southern Ocean over the seasons, as well as to derive maps of probability of encountering a certain degree of variability in the expected monthly SIC value. The proposed indicator is based on statistical properties of the SIC; it has been tested on the available climate data records to derive maps of the MIZ distribution over the year and compared with the threshold-based MIZ definition. The results present a revised view of the circumpolar MIZ variability and seasonal cycle, with a rapid increase in the extent and saturation in winter, as opposed to the steady increase from summer to spring reported in the literature. It also reconciles the discordant MIZ extent estimates using the SIC threshold from different algorithms. This indicator complements the use of the MIZ extent and fraction, allowing the derivation of the climatological probability of exceeding a certain threshold of SIC variability, which can be used for planning observational networks and navigation routes, as well as for detecting changes in the variability when using climatological baselines for different periods.}
+      \field{day}{10}
+      \field{issn}{1994-0424}
+      \field{journaltitle}{The Cryosphere}
+      \field{langid}{english}
+      \field{month}{10}
+      \field{number}{10}
+      \field{shortjournal}{The Cryosphere}
+      \field{title}{An Indicator of Sea Ice Variability for the {{Antarctic}} Marginal Ice Zone}
+      \field{urlday}{15}
+      \field{urlmonth}{9}
+      \field{urlyear}{2025}
+      \field{volume}{16}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{4087\bibrangedash 4106}
+      \range{pages}{20}
+      \verb{doi}
+      \verb 10.5194/tc-16-4087-2022
+      \endverb
+      \verb{file}
+      \verb /home/dspoultney/Zotero/storage/5K3ULPVC/Vichi - 2022 - An indicator of sea ice variability for the Antarctic marginal ice zone.pdf;/home/dspoultney/Zotero/storage/DSNDLSBP/Vichi - 2022 - An indicator of sea ice variability for the Antarctic marginal ice zone.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://tc.copernicus.org/articles/16/4087/2022/
+      \endverb
+      \verb{url}
+      \verb https://tc.copernicus.org/articles/16/4087/2022/
+      \endverb
+    \endentry
+    \entry{shenConceptualModelPancakeice2001}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=b3fe7a24db0e244a881e73b8c85ebd26}{%
+           family={Shen},
+           familyi={S\bibinitperiod},
+           given={Hayley\bibnamedelima H.},
+           giveni={H\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=79e22fcb11f45c70c75d75c8150337e1}{%
+           family={Ackley},
+           familyi={A\bibinitperiod},
+           given={Stephen\bibnamedelima F.},
+           giveni={S\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=c038ebccf34fda5b76b23b9b4d6dc638}{%
+           family={Hopkins},
+           familyi={H\bibinitperiod},
+           given={Mark\bibnamedelima A.},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{81a4ae3a0d463078f8e7e0aee91d3af5}
+      \strng{fullhash}{7dc153c4c944fc7c9ff77b34b226a2fc}
+      \strng{fullhashraw}{7dc153c4c944fc7c9ff77b34b226a2fc}
+      \strng{bibnamehash}{7dc153c4c944fc7c9ff77b34b226a2fc}
+      \strng{authorbibnamehash}{7dc153c4c944fc7c9ff77b34b226a2fc}
+      \strng{authornamehash}{81a4ae3a0d463078f8e7e0aee91d3af5}
+      \strng{authorfullhash}{7dc153c4c944fc7c9ff77b34b226a2fc}
+      \strng{authorfullhashraw}{7dc153c4c944fc7c9ff77b34b226a2fc}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{It is well known that waves jostle frazil-ice crystals together, providing opportunities for them to compact into floes. The shape of these consolidated floes is nearly circular, hence the name: pancakes. From field and laboratory observations, the size of these pancakes seems to depend on the wavelength. Further aggregation of these individual pancakes produces the seasonal ice cover. Pancake-ice covers prevail in the marginal ice zone of the Southern Ocean and along the edges of many polar and subpolar seas. This theoretical paper describes conceptually the formation process of a pancake-ice cover in a wave field. The mechanisms that affect the evolution of the entire ice cover are discussed. Governing equations for the time-rate change of the floe diameter, its thickness and the thickness of the ice-cover are derived based on these mechanisms. Two criteria are proposed to determine the maximum floe size under a given wave condition, one based on bending and the other on stretching. Field and laboratory observations to date are discussed in view of this theory.}
+      \field{issn}{0260-3055, 1727-5644}
+      \field{journaltitle}{Annals of Glaciology}
+      \field{langid}{english}
+      \field{month}{1}
+      \field{title}{A Conceptual Model for Pancake-Ice Formation in a Wave Field}
+      \field{urlday}{10}
+      \field{urlmonth}{6}
+      \field{urlyear}{2025}
+      \field{volume}{33}
+      \field{year}{2001}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{361\bibrangedash 367}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.3189/172756401781818239
+      \endverb
+      \verb{file}
+      \verb /home/dspoultney/Zotero/storage/JBVY7KU3/Shen et al. - 2001 - A conceptual model for pancake-ice formation in a wave field.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.cambridge.org/core/journals/annals-of-glaciology/article/conceptual-model-for-pancakeice-formation-in-a-wave-field/8B69904328C690125300DEBB34F46D95
+      \endverb
+      \verb{url}
+      \verb https://www.cambridge.org/core/journals/annals-of-glaciology/article/conceptual-model-for-pancakeice-formation-in-a-wave-field/8B69904328C690125300DEBB34F46D95
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
 \endinput
 
