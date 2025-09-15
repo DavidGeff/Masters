@@ -19,6 +19,220 @@
 
 \refsection{0}
   \datalist[entry]{none/global//global/global/global}
+    \entry{kennicuttSustainedAntarcticResearch2019}{article}{}{}
+      \name{author}{29}{}{%
+        {{hash=8016c5e8f7e806587d42a9c8f1c68918}{%
+           family={Kennicutt},
+           familyi={K\bibinitperiod},
+           given={Mahlon\bibnamedelima C.},
+           giveni={M\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=c03ce0227cecee645e777fa8562fd890}{%
+           family={Bromwich},
+           familyi={B\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=8774323f769617ea7a3f62dee24ba609}{%
+           family={Liggett},
+           familyi={L\bibinitperiod},
+           given={Daniela},
+           giveni={D\bibinitperiod}}}%
+        {{hash=466233e5b7416ee9e5793170dce1fcfb}{%
+           family={Njåstad},
+           familyi={N\bibinitperiod},
+           given={Birgit},
+           giveni={B\bibinitperiod}}}%
+        {{hash=4319149802a7bd989140429cb05d7c30}{%
+           family={Peck},
+           familyi={P\bibinitperiod},
+           given={Lloyd},
+           giveni={L\bibinitperiod}}}%
+        {{hash=5e6fccdde92ff909bc5514997b0197bf}{%
+           family={Rintoul},
+           familyi={R\bibinitperiod},
+           given={Stephen\bibnamedelima R.},
+           giveni={S\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=019bef21888e830072f3bf29d9399bb9}{%
+           family={Ritz},
+           familyi={R\bibinitperiod},
+           given={Catherine},
+           giveni={C\bibinitperiod}}}%
+        {{hash=d66346ea2885a4f34710b7b0710d1075}{%
+           family={Siegert},
+           familyi={S\bibinitperiod},
+           given={Martin\bibnamedelima J.},
+           giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=19793661597f60c400894d79a01570f2}{%
+           family={Aitken},
+           familyi={A\bibinitperiod},
+           given={Alan},
+           giveni={A\bibinitperiod}}}%
+        {{hash=a5b7d502811928431410859c99e1c0c7}{%
+           family={Brooks},
+           familyi={B\bibinitperiod},
+           given={Cassandra\bibnamedelima M.},
+           giveni={C\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=f079b2ff1e5332f7628c510fc5be5571}{%
+           family={Cassano},
+           familyi={C\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
+        {{hash=03f61d27b75f00938f8fd5fc5c6a12ac}{%
+           family={Chaturvedi},
+           familyi={C\bibinitperiod},
+           given={Sanjay},
+           giveni={S\bibinitperiod}}}%
+        {{hash=0d6a5fa96de0d371adbbc47b654d32df}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Dake},
+           giveni={D\bibinitperiod}}}%
+        {{hash=7095f736527bcfb91f55471710c29b5f}{%
+           family={Dodds},
+           familyi={D\bibinitperiod},
+           given={Klaus},
+           giveni={K\bibinitperiod}}}%
+        {{hash=6412706fb2d2b6eb4225ad53e8a8b02f}{%
+           family={Golledge},
+           familyi={G\bibinitperiod},
+           given={Nicholas\bibnamedelima R.},
+           giveni={N\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=cf80003b96a237e0c891d24364d092d6}{%
+           family={Le\bibnamedelima Bohec},
+           familyi={L\bibinitperiod\bibinitdelim B\bibinitperiod},
+           given={Céline},
+           giveni={C\bibinitperiod}}}%
+        {{hash=a5944e14c07cc9f3655a1e423c31178c}{%
+           family={Leppe},
+           familyi={L\bibinitperiod},
+           given={Marcelo},
+           giveni={M\bibinitperiod}}}%
+        {{hash=302a03e19b94bebbc6401130f4faacf2}{%
+           family={Murray},
+           familyi={M\bibinitperiod},
+           given={Alison},
+           giveni={A\bibinitperiod}}}%
+        {{hash=f7a5f678a40baa7bb233eb89a8af06b4}{%
+           family={Nath},
+           familyi={N\bibinitperiod},
+           given={P.\bibnamedelimi Chandrika},
+           giveni={P\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=a6c2fc7b4ad2eab83d6b5e4c10a13c59}{%
+           family={Raphael},
+           familyi={R\bibinitperiod},
+           given={Marilyn\bibnamedelima N.},
+           giveni={M\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+        {{hash=b3e400347576cdccaab640f72712bd37}{%
+           family={Rogan-Finnemore},
+           familyi={R\bibinithyphendelim F\bibinitperiod},
+           given={Michelle},
+           giveni={M\bibinitperiod}}}%
+        {{hash=43a334b9ecdc72754ed411a656b8c97f}{%
+           family={Schroeder},
+           familyi={S\bibinitperiod},
+           given={Dustin\bibnamedelima M.},
+           giveni={D\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=7cfb311800c6ab63021168d28e2a0fbf}{%
+           family={Talley},
+           familyi={T\bibinitperiod},
+           given={Lynne},
+           giveni={L\bibinitperiod}}}%
+        {{hash=923459ccba717391b84dd0a06f7139bc}{%
+           family={Travouillon},
+           familyi={T\bibinitperiod},
+           given={Tony},
+           giveni={T\bibinitperiod}}}%
+        {{hash=eebe1a6cd344bf1d275105bbb03a1e7f}{%
+           family={Vaughan},
+           familyi={V\bibinitperiod},
+           given={David\bibnamedelima G.},
+           giveni={D\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=00177670746010a11da41eb730d5060d}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Lifan},
+           giveni={L\bibinitperiod}}}%
+        {{hash=21bb860f16e76404aa1149766a6a5e9c}{%
+           family={Weatherwax},
+           familyi={W\bibinitperiod},
+           given={Allan\bibnamedelima T.},
+           giveni={A\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{hash=0d45726d150db4765409c97cc5a46158}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={Huigen},
+           giveni={H\bibinitperiod}}}%
+        {{hash=07b9bd261b2dd57e93d1c363a9dde5c2}{%
+           family={Chown},
+           familyi={C\bibinitperiod},
+           given={Steven\bibnamedelima L.},
+           giveni={S\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \strng{namehash}{09986c12c4a916a54fcbc265e07a7903}
+      \strng{fullhash}{90b68066a6cdd37b2cf0664332f9d72a}
+      \strng{fullhashraw}{90b68066a6cdd37b2cf0664332f9d72a}
+      \strng{bibnamehash}{09986c12c4a916a54fcbc265e07a7903}
+      \strng{authorbibnamehash}{09986c12c4a916a54fcbc265e07a7903}
+      \strng{authornamehash}{09986c12c4a916a54fcbc265e07a7903}
+      \strng{authorfullhash}{90b68066a6cdd37b2cf0664332f9d72a}
+      \strng{authorfullhashraw}{90b68066a6cdd37b2cf0664332f9d72a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{issn}{25903322}
+      \field{journaltitle}{One Earth}
+      \field{langid}{english}
+      \field{month}{9}
+      \field{number}{1}
+      \field{shortjournal}{One Earth}
+      \field{shorttitle}{Sustained {{Antarctic Research}}}
+      \field{title}{Sustained {{Antarctic Research}}: {{A}} 21st {{Century Imperative}}}
+      \field{urlday}{15}
+      \field{urlmonth}{9}
+      \field{urlyear}{2025}
+      \field{volume}{1}
+      \field{year}{2019}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{95\bibrangedash 113}
+      \range{pages}{19}
+      \verb{doi}
+      \verb 10.1016/j.oneear.2019.08.014
+      \endverb
+      \verb{file}
+      \verb /home/dspoultney/Zotero/storage/FJUG5DVL/Kennicutt et al. - 2019 - Sustained Antarctic Research A 21st Century Imperative.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/S259033221930020X
+      \endverb
+      \verb{url}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/S259033221930020X
+      \endverb
+    \endentry
+    \entry{SeaIce}{online}{}{}
+      \list{organization}{1}{%
+        {University of Bergen}%
+      }
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Sea ice forms in many varieties in the polar Oceans. The most common type of sea ice, especially in the Arctic Ocean, is "Congelation ice" a solid form of sea ice where new ice congeals onto the bottom of existing ice.}
+      \field{langid}{english}
+      \field{title}{Sea Ice}
+      \field{urlday}{10}
+      \field{urlmonth}{6}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb /home/dspoultney/Zotero/storage/NG8E5Y3L/sea-ice.html
+      \endverb
+      \verb{urlraw}
+      \verb https://www.uib.no/en/rg/fysos/55102/sea-ice
+      \endverb
+      \verb{url}
+      \verb https://www.uib.no/en/rg/fysos/55102/sea-ice
+      \endverb
+    \endentry
     \entry{vichiIndicatorSeaIce2022}{article}{}{}
       \name{author}{1}{}{%
         {{hash=89fba3e6e5969e08f095c08eed06948e}{%
@@ -35,8 +249,8 @@
       \strng{authornamehash}{89fba3e6e5969e08f095c08eed06948e}
       \strng{authorfullhash}{89fba3e6e5969e08f095c08eed06948e}
       \strng{authorfullhashraw}{89fba3e6e5969e08f095c08eed06948e}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Abstract. Remote-sensing records over the last 40~years have revealed large year-to-year global and regional variability in Antarctic sea ice extent. Sea ice area and extent are useful climatic indicators of large-scale variability, but they do not allow the quantification of regions of distinct variability in sea ice concentration (SIC). This is particularly relevant in the marginal ice zone (MIZ), which is a transitional region between the open ocean and pack ice, where the exchanges between ocean, sea ice and atmosphere are more intense. The MIZ is circumpolar and broader in the Antarctic than in the Arctic. Its extent is inferred from satellite-derived SIC using the 15\,\%–80\,\% range, assumed to be indicative of open drift or partly closed sea ice conditions typical of the ice edge. This proxy has been proven effective in the Arctic, but it is deemed less reliable in the Southern Ocean, where sea ice type is unrelated to the concentration value, since wave penetration and free-drift conditions have been reported with 100\,\% cover. The aim of this paper is to propose an alternative indicator for detecting MIZ conditions in Antarctic sea ice, which can be used to quantify variability at the climatological scale on the ice-covered Southern Ocean over the seasons, as well as to derive maps of probability of encountering a certain degree of variability in the expected monthly SIC value. The proposed indicator is based on statistical properties of the SIC; it has been tested on the available climate data records to derive maps of the MIZ distribution over the year and compared with the threshold-based MIZ definition. The results present a revised view of the circumpolar MIZ variability and seasonal cycle, with a rapid increase in the extent and saturation in winter, as opposed to the steady increase from summer to spring reported in the literature. It also reconciles the discordant MIZ extent estimates using the SIC threshold from different algorithms. This indicator complements the use of the MIZ extent and fraction, allowing the derivation of the climatological probability of exceeding a certain threshold of SIC variability, which can be used for planning observational networks and navigation routes, as well as for detecting changes in the variability when using climatological baselines for different periods.}
@@ -96,8 +310,8 @@
       \strng{authornamehash}{81a4ae3a0d463078f8e7e0aee91d3af5}
       \strng{authorfullhash}{7dc153c4c944fc7c9ff77b34b226a2fc}
       \strng{authorfullhashraw}{7dc153c4c944fc7c9ff77b34b226a2fc}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{It is well known that waves jostle frazil-ice crystals together, providing opportunities for them to compact into floes. The shape of these consolidated floes is nearly circular, hence the name: pancakes. From field and laboratory observations, the size of these pancakes seems to depend on the wavelength. Further aggregation of these individual pancakes produces the seasonal ice cover. Pancake-ice covers prevail in the marginal ice zone of the Southern Ocean and along the edges of many polar and subpolar seas. This theoretical paper describes conceptually the formation process of a pancake-ice cover in a wave field. The mechanisms that affect the evolution of the entire ice cover are discussed. Governing equations for the time-rate change of the floe diameter, its thickness and the thickness of the ice-cover are derived based on these mechanisms. Two criteria are proposed to determine the maximum floe size under a given wave condition, one based on bending and the other on stretching. Field and laboratory observations to date are discussed in view of this theory.}
@@ -126,6 +340,25 @@
       \endverb
       \verb{url}
       \verb https://www.cambridge.org/core/journals/annals-of-glaciology/article/conceptual-model-for-pancakeice-formation-in-a-wave-field/8B69904328C690125300DEBB34F46D95
+      \endverb
+    \endentry
+    \entry{WhatLidarDataArcGIS}{online}{}{}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labeltitlesource}{title}
+      \field{title}{What Is {{Lidar}} Data?—{{ArcGIS Pro}} | {{Documentation}}}
+      \field{urlday}{12}
+      \field{urlmonth}{6}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb /home/dspoultney/Zotero/storage/2VP64Q5L/what-is-lidar-.html
+      \endverb
+      \verb{urlraw}
+      \verb https://pro.arcgis.com/en/pro-app/latest/help/data/las-dataset/what-is-lidar-.htm
+      \endverb
+      \verb{url}
+      \verb https://pro.arcgis.com/en/pro-app/latest/help/data/las-dataset/what-is-lidar-.htm
       \endverb
     \endentry
   \enddatalist
