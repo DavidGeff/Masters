@@ -284,6 +284,75 @@
       \verb https://tc.copernicus.org/articles/16/4087/2022/
       \endverb
     \endentry
+    \entry{williamsWaveIceInteractions2013}{article}{}{}
+      \name{author}{5}{}{%
+        {{hash=f1054430ee0df9a51bddaa26aaa02fe7}{%
+           family={Williams},
+           familyi={W\bibinitperiod},
+           given={Timothy\bibnamedelima D.},
+           giveni={T\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=8f651bf1e45dea10a2d3b1e478e8d13e}{%
+           family={Bennetts},
+           familyi={B\bibinitperiod},
+           given={Luke\bibnamedelima G.},
+           giveni={L\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=90c9971b2160576314b2530bef37eaf7}{%
+           family={Squire},
+           familyi={S\bibinitperiod},
+           given={Vernon\bibnamedelima A.},
+           giveni={V\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=74356f1dfcf85edf541630d9d6b45f75}{%
+           family={Dumont},
+           familyi={D\bibinitperiod},
+           given={Dany},
+           giveni={D\bibinitperiod}}}%
+        {{hash=b3931638a115a2ed94c6596d34e9bfed}{%
+           family={Bertino},
+           familyi={B\bibinitperiod},
+           given={Laurent},
+           giveni={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{c004c1d6347a845c418257be30933af7}
+      \strng{fullhash}{208e150dfc20a201244351cc50bc38c8}
+      \strng{fullhashraw}{208e150dfc20a201244351cc50bc38c8}
+      \strng{bibnamehash}{208e150dfc20a201244351cc50bc38c8}
+      \strng{authorbibnamehash}{208e150dfc20a201244351cc50bc38c8}
+      \strng{authornamehash}{c004c1d6347a845c418257be30933af7}
+      \strng{authorfullhash}{208e150dfc20a201244351cc50bc38c8}
+      \strng{authorfullhashraw}{208e150dfc20a201244351cc50bc38c8}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{issn}{14635003}
+      \field{journaltitle}{Ocean Modelling}
+      \field{langid}{english}
+      \field{month}{11}
+      \field{shortjournal}{Ocean Modelling}
+      \field{shorttitle}{Wave–Ice Interactions in the Marginal Ice Zone. {{Part}} 1}
+      \field{title}{Wave–Ice Interactions in the Marginal Ice Zone. {{Part}} 1: {{Theoretical}} Foundations}
+      \field{urlday}{16}
+      \field{urlmonth}{9}
+      \field{urlyear}{2025}
+      \field{volume}{71}
+      \field{year}{2013}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{81\bibrangedash 91}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.1016/j.ocemod.2013.05.010
+      \endverb
+      \verb{file}
+      \verb /home/dspoultney/Zotero/storage/MZ3C7NML/Williams et al. - 2013 - Wave–ice interactions in the marginal ice zone. Part 1 Theoretical foundations.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/S1463500313000954
+      \endverb
+      \verb{url}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/S1463500313000954
+      \endverb
+    \endentry
     \entry{shenConceptualModelPancakeice2001}{article}{}{}
       \name{author}{3}{}{%
         {{hash=b3fe7a24db0e244a881e73b8c85ebd26}{%
@@ -310,8 +379,8 @@
       \strng{authornamehash}{81a4ae3a0d463078f8e7e0aee91d3af5}
       \strng{authorfullhash}{7dc153c4c944fc7c9ff77b34b226a2fc}
       \strng{authorfullhashraw}{7dc153c4c944fc7c9ff77b34b226a2fc}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{It is well known that waves jostle frazil-ice crystals together, providing opportunities for them to compact into floes. The shape of these consolidated floes is nearly circular, hence the name: pancakes. From field and laboratory observations, the size of these pancakes seems to depend on the wavelength. Further aggregation of these individual pancakes produces the seasonal ice cover. Pancake-ice covers prevail in the marginal ice zone of the Southern Ocean and along the edges of many polar and subpolar seas. This theoretical paper describes conceptually the formation process of a pancake-ice cover in a wave field. The mechanisms that affect the evolution of the entire ice cover are discussed. Governing equations for the time-rate change of the floe diameter, its thickness and the thickness of the ice-cover are derived based on these mechanisms. Two criteria are proposed to determine the maximum floe size under a given wave condition, one based on bending and the other on stretching. Field and laboratory observations to date are discussed in view of this theory.}
@@ -343,8 +412,8 @@
       \endverb
     \endentry
     \entry{WhatLidarDataArcGIS}{online}{}{}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labeltitlesource}{title}
       \field{title}{What Is {{Lidar}} Data?—{{ArcGIS Pro}} | {{Documentation}}}
       \field{urlday}{12}
