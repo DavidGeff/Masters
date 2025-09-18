@@ -430,6 +430,86 @@
       \verb https://pro.arcgis.com/en/pro-app/latest/help/data/las-dataset/what-is-lidar-.htm
       \endverb
     \endentry
+    \entry{huangComprehensiveSurveyPoint2021}{online}{}{}
+      \name{author}{4}{}{%
+        {{hash=575e7d102e59fbeaccf57563aa017134}{%
+           family={Huang},
+           familyi={H\bibinitperiod},
+           given={Xiaoshui},
+           giveni={X\bibinitperiod}}}%
+        {{hash=aa5378e130d892ff363e31d6c471aeab}{%
+           family={Mei},
+           familyi={M\bibinitperiod},
+           given={Guofeng},
+           giveni={G\bibinitperiod}}}%
+        {{hash=112faefb37293f52cd92c3bb36fcc08b}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Jian},
+           giveni={J\bibinitperiod}}}%
+        {{hash=d950f7ab9a6cc149b1b4e69b4e0c7fad}{%
+           family={Abbas},
+           familyi={A\bibinitperiod},
+           given={Rana},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{46a2640bcfae918d106b81b06e42deed}
+      \strng{fullhash}{c5debf65bbc35986be113ce100914590}
+      \strng{fullhashraw}{c5debf65bbc35986be113ce100914590}
+      \strng{bibnamehash}{c5debf65bbc35986be113ce100914590}
+      \strng{authorbibnamehash}{c5debf65bbc35986be113ce100914590}
+      \strng{authornamehash}{46a2640bcfae918d106b81b06e42deed}
+      \strng{authorfullhash}{c5debf65bbc35986be113ce100914590}
+      \strng{authorfullhashraw}{c5debf65bbc35986be113ce100914590}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Registration is a transformation estimation problem between two point clouds, which has a unique and critical role in numerous computer vision applications. The developments of optimization-based methods and deep learning methods have improved registration robustness and efficiency. Recently, the combinations of optimization-based and deep learning methods have further improved performance. However, the connections between optimization-based and deep learning methods are still unclear. Moreover, with the recent development of 3D sensors and 3D reconstruction techniques, a new research direction emerges to align cross-source point clouds. This survey conducts a comprehensive survey, including both same-source and cross-source registration methods, and summarize the connections between optimization-based and deep learning methods, to provide further research insight. This survey also builds a new benchmark to evaluate the state-of-the-art registration algorithms in solving cross-source challenges. Besides, this survey summarizes the benchmark data sets and discusses point cloud registration applications across various domains. Finally, this survey proposes potential research directions in this rapidly growing field.}
+      \field{pubstate}{prepublished}
+      \field{title}{A Comprehensive Survey on Point Cloud Registration}
+      \field{urlday}{18}
+      \field{urlmonth}{9}
+      \field{urlyear}{2025}
+      \field{version}{2}
+      \field{year}{2021}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.48550/ARXIV.2103.02690
+      \endverb
+      \verb{file}
+      \verb /home/dspoultney/Zotero/storage/6SX2YKS4/Huang et al. - 2021 - A comprehensive survey on point cloud registration.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2103.02690
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2103.02690
+      \endverb
+      \keyw{Computer Vision and Pattern Recognition (cs.CV),FOS: Computer and information sciences}
+    \endentry
+    \entry{3DPointCloud}{online}{}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This example shows how to combine multiple point clouds to reconstruct a 3-D scene using Iterative Closest Point (ICP) algorithm.}
+      \field{langid}{english}
+      \field{title}{3-{{D Point Cloud Registration}} and {{Stitching}} - {{MATLAB}} \& {{Simulink}}}
+      \field{urlday}{18}
+      \field{urlmonth}{9}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb /home/dspoultney/Zotero/storage/WJBRL47R/3-d-point-cloud-registration-and-stitching.html
+      \endverb
+      \verb{urlraw}
+      \verb https://www.mathworks.com/help/vision/ug/3-d-point-cloud-registration-and-stitching.html
+      \endverb
+      \verb{url}
+      \verb https://www.mathworks.com/help/vision/ug/3-d-point-cloud-registration-and-stitching.html
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

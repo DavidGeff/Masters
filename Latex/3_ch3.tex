@@ -44,7 +44,8 @@ The Avia has two built-in scanning patterns, a repetitive and a non-repetitive p
         \includegraphics[width=1\textwidth]{figs/rep2.jpg} % first figure itself
         %\caption{first figure}
     \end{minipage}\hfill
-    \caption{fig}
+    \caption{\textbf{Livox Avia Repetitive Scanning Pattern}}
+    \label{fig:rep}
 \end{figure}
 
 \begin{figure}[H]
@@ -64,7 +65,8 @@ The Avia has two built-in scanning patterns, a repetitive and a non-repetitive p
         \includegraphics[width=1\textwidth]{figs/norep2.jpg} % first figure itself
         %\caption{first figure}
     \end{minipage}\hfill
-    \caption{fig}
+    \caption{\textbf{Livox Avia Non-Repetitive Scanning Pattern}}
+    \label{fig:non_rep}
 \end{figure}
 
 
@@ -78,7 +80,8 @@ Laser Wavelength            & 905 nm                                     &  &  &
 Laser Safety                & Class 1 (Safe for eyes)                    &  &  &  \\ \cline{1-2}
 Detection Range (@ 100 klx) & \begin{tabular}[c]{@{}l@{}}190 m @ 10\% reflectivity\\ 230 m @ 20\% reflectivity\\ 320 m @ 80\% reflectivity\end{tabular} &  &  &  \\ \cline{1-2}
 Detection Range (@ 0 klx)   & \begin{tabular}[c]{@{}l@{}}190 m @ 10\% reflectivity\\ 260 m @ 20\% reflectivity\\ 450 m @ 80\% reflectivity\end{tabular} &  &  &  \\ \cline{1-2}
-FOV                         & 70.4° (H) × 77.2° (V)                      &  &  &  \\ \cline{1-2}
+FOV                         & \begin{tabular}[c]{@{}l@{}} Non-repetitive Scanning Pattern: 70.4° (H) × 77.2 (V)\\ Repetitive Scanning Pattern: 70.4° (H) × 4.5° (V)\end{tabular}          &  &  &  \\ \cline{1-2}
+Distance Random Error       & 1$\sigma$ (@ 20 m) $<$ 2 cm                         &  &  &  \\ \cline{1-2}
 Point Rate                  & 240,000 points/s                           &  &  &  \\ \cline{1-2}
 IMU                         & Bosch Sensortec BMI088                     &  &  &  \\ \cline{1-2}
 Operating Temperature Range & -20° to 65° C                              &  &  &  \\ \cline{1-2}
@@ -106,8 +109,11 @@ wavelength
 \section{Point Cloud Processing}
 \label{sec:ch3:section4}
 
-*need to find reference for this*
-Many common point cloud processing methods are built around the assumption that the point cloud being worked upon is in the format of a standard (M x N) grid layout. Methods such as point cloud registration (combining multiple point clouds to form a single scene), clustering and model fitting often use the assumption of a constant grid to achieve their outputs.
+Many common point cloud processing methods are built around the assumption that the point cloud being worked upon is in the format of a standard (M x N) grid layout. Methods such as point cloud registration (obtaining the transformation between two point clouds \cite{huangComprehensiveSurveyPoint2021}), clustering and model fitting often use the assumption of a constant grid with a constant number of points per frame to achieve their outputs. To bypass this limitation it is common for point clouds to be downsampled through a grid filter to achieve the desired format \cite{3DPointCloud}.
+
+In the Avia's repetitive scanning pattern (See Figure \ref{fig:rep}), the sensor produces a point cloud with a roughly rectangular FOV and consistant point density, which is suitable for downsampling and grid filtering. Point clouds produced by the non-repetitive scanning pattern (See Figure \ref{fig:non_rep}) are circular in shape and do not have uniform point density and are thus not ideal for downsampling and grid filtering.
+
+Many processing methods are also based on the assumption that the environment data is collected from will contain predominiantly objects made of simple geometries. For example, a scene in an urban environment will contain many objects made of rectangles, circles and triangles. The environment that data for this investigation was captured contains none of these simple shapes, with the geometry of the pankcake floes being irregular and superimposed upon complex ocean surface waves.
 
 %====================================================
 \section{Clustering Algorithms}
