@@ -103,7 +103,7 @@ Using LIDAR is not without its disadvantages. LIDAR sensors are more expensive t
 BACKSCATTER?
 REFLECTIVITY?
 ABSORPTION?
-wavelength
+Wavelength
 
 %====================================================
 \section{Point Cloud Processing}
@@ -111,12 +111,22 @@ wavelength
 
 Many common point cloud processing methods are built around the assumption that the point cloud being worked upon is in the format of a standard (M x N) grid layout. Methods such as point cloud registration (obtaining the transformation between two point clouds \cite{huangComprehensiveSurveyPoint2021}), clustering and model fitting often use the assumption of a constant grid with a constant number of points per frame to achieve their outputs. To bypass this limitation it is common for point clouds to be downsampled through a grid filter to achieve the desired format \cite{3DPointCloud}.
 
-In the Avia's repetitive scanning pattern (See Figure \ref{fig:rep}), the sensor produces a point cloud with a roughly rectangular FOV and consistant point density, which is suitable for downsampling and grid filtering. Point clouds produced by the non-repetitive scanning pattern (See Figure \ref{fig:non_rep}) are circular in shape and do not have uniform point density and are thus not ideal for downsampling and grid filtering.
+In the Avia's repetitive scanning pattern (See Figure \ref{fig:rep}), the sensor produces a point cloud with a roughly rectangular FOV and consistent point density, which is suitable for downsampling and grid filtering. Point clouds produced by the non-repetitive scanning pattern (See Figure \ref{fig:non_rep}) are circular and do not have uniform point density and are thus not ideal for downsampling and grid filtering.
 
-Many processing methods are also based on the assumption that the environment data is collected from will contain predominiantly objects made of simple geometries. For example, a scene in an urban environment will contain many objects made of rectangles, circles and triangles. The environment that data for this investigation was captured contains none of these simple shapes, with the geometry of the pankcake floes being irregular and superimposed upon complex ocean surface waves.
+Many processing methods are also based on the assumption that the environment data is collected from will contain predominantly objects made of simple geometries. For example, a scene in an urban environment will contain many objects made of rectangles, circles and triangles. The environment that data for this investigation was captured contains none of these simple shapes, with the geometry of the pancake floes being irregular and superimposed upon complex ocean surface waves.
+
+%====================================================
+\section{Kalman Filters}
+\label{sec:ch3:section5}
+A Kalman Filter is
+
+%====================================================
+\section{Plane Fitting}
+\label{sec:ch3:section6}
+
 
 %====================================================
 \section{Clustering Algorithms}
-\label{sec:ch3:section5}
+\label{sec:ch3:section7}
 
 Something about clustering algorithms. Suited for use depending on properties of the data to be clustered (properties such as data dimensions, number of data points and the relationship between individual data points), knowledge of the final classes the data will be clustered into and computational restraints. Clustering Algorithms can be categorised based on the methods by which they function, some of the most common categories are Partitional, Heirachy, Density, Model-based and Spectral-based.
