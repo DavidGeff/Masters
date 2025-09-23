@@ -118,7 +118,46 @@ Many processing methods are also based on the assumption that the environment da
 %====================================================
 \section{Kalman Filters}
 \label{sec:ch3:section5}
-A Kalman Filter is
+The Kalman Filter is a ecursive predictor-corrector algorithm used to provide optimal estimates of unknown variables of a system given various noisy measurements as inputs to the algorithm over time \cite{govaersIntroductionImplementationsKalman2019}. The method is named after Rudolph E. Kálmán, the engineer and mathematician who first described it in his now famous paper, \cite{kalmanNewApproachLinear1960}.
+
+The Kalman filter uses the state-space format of a linear dynamic system, with the assumption that the measurements and process are subject to Gaussian noise.
+
+The process model of the system over time $k-1$ to $k$ is given as:
+
+%----------------------------------------------------
+\begin{equation} \label{process}
+    x_k = Fx_{k-1} + Bu_{k-1} + w_{k-1} \quad
+\end{equation}
+%----------------------------------------------------
+
+where $F$ is the state transition matrix applied the previous state matrix ($x_{k-1}$), $B$ is the control-input matrix applied to the control input vector ($u_{k-1}$) and the vector $w_{k-1}$ represents the process noise, assumed to be zero-mean Gaussian with covariance of $Q$ such that $w_{k-1} \sim N(0, Q)$.
+
+The measurement model describes the relation between the state and measurement of the system at time $k$ and is given as:
+
+%----------------------------------------------------
+\begin{equation} \label{measure}
+    z_k = Hx_k + \nu_k \quad
+\end{equation}
+%----------------------------------------------------
+
+where $H$ relates the current state ($x_{k}$)  to the measurement ($z_{k}$) and the vector $v_{k}$ represents the measurement noise, assumed to be zero-mean Gaussian with covariance of $R$ such that $v_{k} \sim N(0, R)$.
+
+The filter consists of three states:
+
+\begin{enumerate}
+    \item Initialization
+    \item Prediction
+    \item Update
+\end{enumerate}
+
+Before beginning the main prediction loop, the filter first needs a guess of the initial state of the system:
+
+%----------------------------------------------------
+\begin{equation} \label{init_state}
+    \hat{x}_0^+ \quad
+\end{equation}
+
+
 
 %====================================================
 \section{Plane Fitting}
