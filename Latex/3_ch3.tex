@@ -3,18 +3,24 @@
 %****************************************************
 \chapter{Theoretical Development}
 \label{ch:theory}
+
+%====================================================
+\section{Optical Properties of Ice and Snow}
+\label{sec:ch3:section1}
+Ice and snow have more interactions with light than mediums typically observed by optical sensors, especially LIDAR. Not only is light reflected, but it can also pass through ice, as well as being refracted and absorbed.
+
 %====================================================
 \section{Robot Operating System (ROS)}
-\label{sec:ch3:section1}
+\label{sec:ch3:section2}
 
 Robot Operating System (ROS), is a collection of open-source software tools that allows for the development of modular autonomous platforms. ROS is widely used in many environments, ranging from research and prototyping platforms to massive corporations such as Airbus and Caterpillar (cite here).
 ROS allows hardware to be easily added and removed from a platform for testing and development. The Livox Avia has manufacturer-supplied ROS drivers, hence this was the chosen method for interfacing with the device during data collection. 
 
 %====================================================
 \section{Livox Avia}
-\label{sec:ch3:section2}
+\label{sec:ch3:section3}
 
-The sensor used to collect data for this investigation was the Livox Avia. The Livox Avia is a solid-state laser and Risley prism-based LIDAR scanner with a built-in inertial measurement unit (IMU). ***this might have to move* The sensor was set up to capture data using ROS (ROS Neotic) and the Livox ROS driver through a machine running Ubuntu 20.04. The sensor scans and creates point clouds at a rate of 10 Hz and the IMU collects data at a rate of 200 Hz. The captured data was saved and stored in the rosbag file format (.bag). These files contain all the recorded data, point cloud information (location and return intensity), IMU readings, and their associated timestamps.***
+The sensor used to collect data for this investigation was the Livox Avia. The Livox Avia is a solid-state laser and Risley prism-based LIDAR scanner with a built-in inertial measurement unit (IMU). ***this might have to move* The sensor was set up to capture data using ROS (ROS Neotic) and the Livox ROS driver through a machine running Ubuntu 20.04. The sensor scans and creates point clouds at a rate of 10 Hz and the IMU collects data at a rate of 200 Hz. The captured data was saved and stored in the rosbag file format (.bag). These files contain all the recorded data, (point cloud e here).information (location and return intensity), IMU readings, and their associated timestamps.***
 
 %----------------------------------------------------
 \begin{figure}[H]
@@ -94,7 +100,7 @@ Dimensions                  & 91 x 61.2 x 64.8 mm                        &  &  &
 
 %====================================================
 \section{LIDAR Characteristics}
-\label{sec:ch3:section3}
+\label{sec:ch3:section4}
 
 LIDAR is used over other remote sensing methods for various reasons. Being an active method is advantageous over visual method such as telephoto or stereoscopic cameras as it does not require external illumination to observe the target. Additionally, with the correct sensor selection, LIDAR is less susceptible to issues such as lens flare or overexposure to which typical cameras are prone. Certain LIDAR sensors also have the ability to penetrate vegetation, allowing mapping of ground surfaces beneath areas obscured by plant cover.\\
 Compared to radar, LIDAR typically has superior mapping precision and target resolution, allowing more accurate reproductions of the target and the surrounding environment.
@@ -107,7 +113,7 @@ Wavelength
 
 %====================================================
 \section{Point Cloud Processing}
-\label{sec:ch3:section4}
+\label{sec:ch3:section5}
 
 Many common point cloud processing methods are built around the assumption that the point cloud being worked upon is in the format of a standard (M x N) grid layout. Methods such as point cloud registration (obtaining the transformation between two point clouds \cite{huangComprehensiveSurveyPoint2021}), clustering and model fitting often use the assumption of a constant grid with a constant number of points per frame to achieve their outputs. To bypass this limitation it is common for point clouds to be downsampled through a grid filter to achieve the desired format \cite{3DPointCloud}.
 
@@ -117,8 +123,8 @@ Many processing methods are also based on the assumption that the environment da
 
 %====================================================
 \section{Kalman Filters}
-\label{sec:ch3:section5}
-The Kalman Filter is a ecursive predictor-corrector algorithm used to provide optimal estimates of unknown variables of a system given various noisy measurements as inputs to the algorithm over time \cite{govaersIntroductionImplementationsKalman2019}. The method is named after Rudolph E. Kálmán, the engineer and mathematician who first described it in his now famous paper, \cite{kalmanNewApproachLinear1960}.
+\label{sec:ch3:section6}
+The Kalman Filter is a recursive predictor-corrector algorithm used to provide optimal estimates of unknown variables of a system given various noisy measurements as inputs to the algorithm over time \cite{govaersIntroductionImplementationsKalman2019}. The method is named after Rudolph E. Kálmán, the engineer and mathematician who first described it in his now famous paper, \cite{kalmanNewApproachLinear1960}.
 
 The Kalman filter uses the state-space format of a linear dynamic system, with the assumption that the measurements and process are subject to Gaussian noise.
 
@@ -161,11 +167,17 @@ Before beginning the main prediction loop, the filter first needs a guess of the
 
 %====================================================
 \section{Plane Fitting}
-\label{sec:ch3:section6}
+\label{sec:ch3:section7}
 
 
 %====================================================
 \section{Clustering Algorithms}
-\label{sec:ch3:section7}
+\label{sec:ch3:section8}
 
-Something about clustering algorithms. Suited for use depending on properties of the data to be clustered (properties such as data dimensions, number of data points and the relationship between individual data points), knowledge of the final classes the data will be clustered into and computational restraints. Clustering Algorithms can be categorised based on the methods by which they function, some of the most common categories are Partitional, Heirachy, Density, Model-based and Spectral-based.
+As a human, organising and sorting large amounts of objects or data into groups is often a trivial task that requires minimal mental exertion but significant time to complete. Automating this process can greatly reduce the time required to process a dataset, if implemented well. Selecting an algorithm or method will determine the accuracy, time and computing costs of automating the clustering process. Different methods are suited for use depending on properties of the data to be clustered (properties such as data dimensions, number of data points and the relationship between individual data points), knowledge of the final classes the data will be clustered into and computational restraints \cite{xuComprehensiveSurveyClustering2015}.
+
+Clustering Algorithms can be categorised based on the methods by which they function, some of the most common categories are Partitional, Hierarchical, Density, Model-based and Spectral-based.
+\\Partitional methods
+\\Hierarchical methods are built upon the assumption that there is a hierarchical relationship between the data and the algorithm constructs this hierarchy, thus clustering the data.
+\\Density based algorithms group areas of data with high density as individual clusters.
+\\Model-based algorithms find the best fit of a pre-selected model to the data.

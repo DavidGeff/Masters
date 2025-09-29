@@ -668,6 +668,64 @@
       \verb https://linkinghub.elsevier.com/retrieve/pii/S1463500313000954
       \endverb
     \endentry
+    \entry{xuComprehensiveSurveyClustering2015}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=65c638c24b5b099a0f8ed86a115e4dc5}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Dongkuan},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4bce5642e77cba6ef95525f9299e4088}{%
+           family={Tian},
+           familyi={T\bibinitperiod},
+           given={Yingjie},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{540ac503f68858d7d36fc7a3b6dcd38d}
+      \strng{fullhash}{540ac503f68858d7d36fc7a3b6dcd38d}
+      \strng{fullhashraw}{540ac503f68858d7d36fc7a3b6dcd38d}
+      \strng{bibnamehash}{540ac503f68858d7d36fc7a3b6dcd38d}
+      \strng{authorbibnamehash}{540ac503f68858d7d36fc7a3b6dcd38d}
+      \strng{authornamehash}{540ac503f68858d7d36fc7a3b6dcd38d}
+      \strng{authorfullhash}{540ac503f68858d7d36fc7a3b6dcd38d}
+      \strng{authorfullhashraw}{540ac503f68858d7d36fc7a3b6dcd38d}
+      \field{sortinit}{X}
+      \field{sortinithash}{1965c258adceecf23ce3d67b05113442}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{2198-5804, 2198-5812}
+      \field{journaltitle}{Annals of Data Science}
+      \field{langid}{english}
+      \field{month}{6}
+      \field{number}{2}
+      \field{shortjournal}{Ann. Data. Sci.}
+      \field{title}{A {{Comprehensive Survey}} of {{Clustering Algorithms}}}
+      \field{urlday}{10}
+      \field{urlmonth}{9}
+      \field{urlyear}{2025}
+      \field{volume}{2}
+      \field{year}{2015}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{165\bibrangedash 193}
+      \range{pages}{29}
+      \verb{doi}
+      \verb 10.1007/s40745-015-0040-1
+      \endverb
+      \verb{file}
+      \verb /home/dspoultney/Zotero/storage/ULQJBEBC/Xu and Tian - 2015 - A Comprehensive Survey of Clustering Algorithms.pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://link.springer.com/10.1007/s40745-015-0040-1
+      \endverb
+      \verb{url}
+      \verb http://link.springer.com/10.1007/s40745-015-0040-1
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput
