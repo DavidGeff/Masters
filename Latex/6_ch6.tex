@@ -1,9 +1,13 @@
 %****************************************************
-%	CHAPTER 6 - EXPERIMENTAL DESIGN
+%	CHAPTER 6 - RESULTS
 %****************************************************
-\chapter{Experimental Design}
-\label{ch:experiment}
+\chapter{Results}
+\label{ch:results}
 %====================================================
-\section{Validation something}
+\section{Kalman}
 \label{sec:ch6.section1}
 
+Platform offset -44 deg in yaw (Z-axis) from mocap axis.
+\\matlab imu filter has whack yaw issues, false readings and crazy drift.
+\\phils lab filter way better. EKF with straight yaw integration. drift over time but way better.
+\\add reasoning for yaw being less relevant on ship
