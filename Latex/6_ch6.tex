@@ -11,3 +11,15 @@ Platform offset -44 deg in yaw (Z-axis) from mocap axis.
 \\matlab imu filter has whack yaw issues, false readings and crazy drift.
 \\phils lab filter way better. EKF with straight yaw integration. drift over time but way better.
 \\add reasoning for yaw being less relevant on ship
+
+%====================================================
+\section{Filtering/Clustering?}
+\label{sec:ch6.section2}
+
+Hard to discriminate between individual pancakes in consolidated regions/ pancakes close together
+\\filter by intens makes identification way easier
+\\how to know where to set intensity threshold? ice properties? mean intensity of frame?
+
+DBScan works so-so
+\\VDBScan best so far I rate (not sure anymore)
+\\OPTICS who tf knows
