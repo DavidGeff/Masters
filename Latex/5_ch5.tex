@@ -7,14 +7,16 @@
 \section{Data Extrction}
 \label{sec:ch5.section1}
 
-The starting point for the pipeline is the collected data. All data to be used for this investigation is a rosbag (.bag) or in the proprietary Livox file type (.lvx). The raw data has to be extracted from these file types before it can be processed or used in analysis. The Livox ROS driver includes functionality to convert .lvx files to .bag files. The file conversion retains all the point cloud data but does not save the IMU data to the created .bag file. MATLAB's ROS Toolbox contains functions that extract all data fields from .bag files and convert each field to a standard MATLAB matrix.
+The starting point for the pipeline is the collected data. All data to be used for this investigation is a rosbag (.bag) or in the proprietary Livox file type (.lvx). The raw data has to be extracted from these file types before it can be processed or used in analysis. The Livox ROS driver includes functionality to convert .lvx files to .bag files. The file conversion retains all the point cloud data but does not save the IMU data to the created .bag file. MATLAB's ROS Toolbox contains functions that can extract data fields from a .bag file and convert each field to a standard MATLAB matrix or structure.
+
+MATLAB's Lidar Toolbox has provision for a pointCloud object which was used for all data processing. This object contains fields for the point cloud's x, y and z co-ordinate data, point colours, normals and intensities. The Avia is only capable of directly measuring point intensity, so this was the only additional field extracted from the .bag files into MATLAB.
 
 %====================================================
 \section{Motion Compensation}
 \label{sec:ch5.section2}
 
 
-motion comp - Kalman filter - Using the MATLAB Sensor Fusion toolbox (and other homie's code, elaborate), a Kalman Filter that fuses accelerometer and gyroscope data from the IMU onboard the Avia was developed. The purpose of this filter is to estimate the attitude of the sensor while onboard the mobile observation platform (ship). The Kalman filter outputs estimates of pitch, roll, and yaw (yaw is just double integration cos reasons), using these estimates an inverse transform can be applied to the point cloud.
+Kalman filter - Using the MATLAB Sensor Fusion toolbox (and other homie's code, elaborate), a Kalman Filter that fuses accelerometer and gyroscope data from the IMU onboard the Avia was developed. The purpose of this filter is to estimate the attitude of the sensor while onboard the mobile observation platform (ship). The Kalman filter outputs estimates of pitch, roll, and yaw (yaw is just double integration cos reasons). Using these angle estimates an inverse transform can be applied to the point cloud to 'stabilise' the data and compensate for the motion of the observation platform (ship). As this Kalman filter only estimates attitude and not position, there will still be motion artefacts in the data due to translation of the observation platform. 
 
 %====================================================
 \section{De-Noising}
