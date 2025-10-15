@@ -15,8 +15,9 @@ MATLAB's Lidar Toolbox has provision for a pointCloud object which was used for 
 \section{Motion Compensation}
 \label{sec:ch5.section2}
 
+Two Kalman filters were created to estimate the attitude of the Avia during data collection. The filters output estimates of the sensor's roll and pitch (yaw cannot be reliably estimated from IMU data). Using these angle estimates an inverse transform can be applied to the point cloud to 'stabilise' the data and compensate for the motion of the observation platform (ship). As this Kalman filter only estimates changes in roll and pitch attitude, and not position, there will still be motion artefacts in the data due to translation and yaw of the observation platform. 
 
-Kalman filter - Using the MATLAB Sensor Fusion toolbox (and other homie's code, elaborate), a Kalman Filter that fuses accelerometer and gyroscope data from the IMU onboard the Avia was developed. The purpose of this filter is to estimate the attitude of the sensor while onboard the mobile observation platform (ship). The Kalman filter outputs estimates of pitch, roll, and yaw (yaw is just double integration cos reasons). Using these angle estimates an inverse transform can be applied to the point cloud to 'stabilise' the data and compensate for the motion of the observation platform (ship). As this Kalman filter only estimates attitude and not position, there will still be motion artefacts in the data due to translation of the observation platform. 
+The first Kalman filter was created using MATLAB's Sensor Fusion Toolbox. The second Kalman filter is an Extended Kalman Filter (EKF) which was initially developed by Phil Salmony (cite here).
 
 %====================================================
 \section{De-Noising}
