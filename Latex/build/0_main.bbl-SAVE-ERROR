@@ -42,6 +42,56 @@
       \verb https://www.mathworks.com/help/vision/ug/3-d-point-cloud-registration-and-stitching.html
       \endverb
     \endentry
+    \entry{govaersIntroductionImplementationsKalman2019}{book}{}{}
+      \name{editor}{1}{}{%
+        {{un=0,uniquepart=base,hash=93c652eae1541f988673af68fa891562}{%
+           family={Govaers},
+           familyi={G\bibinitperiod},
+           given={Felix},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {IntechOpen}%
+      }
+      \strng{namehash}{93c652eae1541f988673af68fa891562}
+      \strng{fullhash}{93c652eae1541f988673af68fa891562}
+      \strng{fullhashraw}{93c652eae1541f988673af68fa891562}
+      \strng{bibnamehash}{93c652eae1541f988673af68fa891562}
+      \strng{editorbibnamehash}{93c652eae1541f988673af68fa891562}
+      \strng{editornamehash}{93c652eae1541f988673af68fa891562}
+      \strng{editorfullhash}{93c652eae1541f988673af68fa891562}
+      \strng{editorfullhashraw}{93c652eae1541f988673af68fa891562}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{editor}
+      \field{labeltitlesource}{title}
+      \field{day}{22}
+      \field{isbn}{978-1-83880-536-4 978-1-83880-537-1}
+      \field{langid}{english}
+      \field{month}{5}
+      \field{title}{Introduction and {{Implementations}} of the {{Kalman Filter}}}
+      \field{urlday}{23}
+      \field{urlmonth}{9}
+      \field{urlyear}{2025}
+      \field{year}{2019}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.5772/intechopen.75731
+      \endverb
+      \verb{file}
+      \verb /home/dspoultney/Zotero/storage/A92R7ZEB/Govaers - 2019 - Introduction and Implementations of the Kalman Filter.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.intechopen.com/books/introduction-and-implementations-of-the-kalman-filter
+      \endverb
+      \verb{url}
+      \verb https://www.intechopen.com/books/introduction-and-implementations-of-the-kalman-filter
+      \endverb
+    \endentry
     \entry{huangComprehensiveSurveyPoint2021}{online}{}{}
       \name{author}{4}{}{%
         {{un=0,uniquepart=base,hash=575e7d102e59fbeaccf57563aa017134}{%
@@ -106,6 +156,59 @@
       \verb https://arxiv.org/abs/2103.02690
       \endverb
       \keyw{Computer Vision and Pattern Recognition (cs.CV),FOS: Computer and information sciences}
+    \endentry
+    \entry{kalmanNewApproachLinear1960}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=2bdc83bc7a4c09a9020f492d9e1b5c92}{%
+           family={Kalman},
+           familyi={K\bibinitperiod},
+           given={R.\bibnamedelimi E.},
+           giveni={R\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{2bdc83bc7a4c09a9020f492d9e1b5c92}
+      \strng{fullhash}{2bdc83bc7a4c09a9020f492d9e1b5c92}
+      \strng{fullhashraw}{2bdc83bc7a4c09a9020f492d9e1b5c92}
+      \strng{bibnamehash}{2bdc83bc7a4c09a9020f492d9e1b5c92}
+      \strng{authorbibnamehash}{2bdc83bc7a4c09a9020f492d9e1b5c92}
+      \strng{authornamehash}{2bdc83bc7a4c09a9020f492d9e1b5c92}
+      \strng{authorfullhash}{2bdc83bc7a4c09a9020f492d9e1b5c92}
+      \strng{authorfullhashraw}{2bdc83bc7a4c09a9020f492d9e1b5c92}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The classical filtering and prediction problem is re-examined using the Bode-Shannon representation of random processes and the “state-transition” method of analysis of dynamic systems. New results are: (1) The formulation and methods of solution of the problem apply without modification to stationary and nonstationary statistics and to growing-memory and infinite-memory filters. (2) A nonlinear difference (or differential) equation is derived for the covariance matrix of the optimal estimation error. From the solution of this equation the co-efficients of the difference (or differential) equation of the optimal linear filter are obtained without further calculations. (3) The filtering problem is shown to be the dual of the noise-free regulator problem. The new method developed here is applied to two well-known problems, confirming and extending earlier results. The discussion is largely self-contained and proceeds from first principles; basic concepts of the theory of random processes are reviewed in the Appendix.}
+      \field{day}{1}
+      \field{issn}{0021-9223}
+      \field{journaltitle}{Journal of Basic Engineering}
+      \field{langid}{english}
+      \field{month}{3}
+      \field{number}{1}
+      \field{title}{A {{New Approach}} to {{Linear Filtering}} and {{Prediction Problems}}}
+      \field{urlday}{23}
+      \field{urlmonth}{9}
+      \field{urlyear}{2025}
+      \field{volume}{82}
+      \field{year}{1960}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{35\bibrangedash 45}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.1115/1.3662552
+      \endverb
+      \verb{file}
+      \verb /home/dspoultney/Zotero/storage/SZUNISID/Kalman - 1960 - A New Approach to Linear Filtering and Prediction Problems.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://asmedigitalcollection.asme.org/fluidsengineering/article/82/1/35/397706/A-New-Approach-to-Linear-Filtering-and-Prediction
+      \endverb
+      \verb{url}
+      \verb https://asmedigitalcollection.asme.org/fluidsengineering/article/82/1/35/397706/A-New-Approach-to-Linear-Filtering-and-Prediction
+      \endverb
     \endentry
     \entry{kennicuttSustainedAntarcticResearch2019}{article}{}{}
       \name{author}{29}{}{%
@@ -566,6 +669,64 @@
       \endverb
       \verb{url}
       \verb https://linkinghub.elsevier.com/retrieve/pii/S1463500313000954
+      \endverb
+    \endentry
+    \entry{xuComprehensiveSurveyClustering2015}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=65c638c24b5b099a0f8ed86a115e4dc5}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Dongkuan},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4bce5642e77cba6ef95525f9299e4088}{%
+           family={Tian},
+           familyi={T\bibinitperiod},
+           given={Yingjie},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{540ac503f68858d7d36fc7a3b6dcd38d}
+      \strng{fullhash}{540ac503f68858d7d36fc7a3b6dcd38d}
+      \strng{fullhashraw}{540ac503f68858d7d36fc7a3b6dcd38d}
+      \strng{bibnamehash}{540ac503f68858d7d36fc7a3b6dcd38d}
+      \strng{authorbibnamehash}{540ac503f68858d7d36fc7a3b6dcd38d}
+      \strng{authornamehash}{540ac503f68858d7d36fc7a3b6dcd38d}
+      \strng{authorfullhash}{540ac503f68858d7d36fc7a3b6dcd38d}
+      \strng{authorfullhashraw}{540ac503f68858d7d36fc7a3b6dcd38d}
+      \field{sortinit}{X}
+      \field{sortinithash}{1965c258adceecf23ce3d67b05113442}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{2198-5804, 2198-5812}
+      \field{journaltitle}{Annals of Data Science}
+      \field{langid}{english}
+      \field{month}{6}
+      \field{number}{2}
+      \field{shortjournal}{Ann. Data. Sci.}
+      \field{title}{A {{Comprehensive Survey}} of {{Clustering Algorithms}}}
+      \field{urlday}{10}
+      \field{urlmonth}{9}
+      \field{urlyear}{2025}
+      \field{volume}{2}
+      \field{year}{2015}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{165\bibrangedash 193}
+      \range{pages}{29}
+      \verb{doi}
+      \verb 10.1007/s40745-015-0040-1
+      \endverb
+      \verb{file}
+      \verb /home/dspoultney/Zotero/storage/ULQJBEBC/Xu and Tian - 2015 - A Comprehensive Survey of Clustering Algorithms.pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://link.springer.com/10.1007/s40745-015-0040-1
+      \endverb
+      \verb{url}
+      \verb http://link.springer.com/10.1007/s40745-015-0040-1
       \endverb
     \endentry
   \enddatalist
