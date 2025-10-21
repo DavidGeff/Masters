@@ -33,6 +33,8 @@ De-noise - the Avia not only records the location of each point, it also records
 
 RANdom SAmple Consensus (RANSAC) plane fitting - RANdom SAmple Consensus is an algorithm that estimates a mathematical model from an input dataset. This method can be implemented to fit models of wave functions (sinusoidal and Stokes) to the collected data in an attempt to estimate the wave function parameters. The RANSAC algorithm estimates the model parameters by first selecting a random set of points in the dataset, either user-specified or the minimum number of points required to satisfy the model, and fits the model to these points. Using a user-selected tolerance, the algorithm then determines how many data points are inliers. This process is repeated until there are a satisfactory number of inlines or until the maximum number of iterations have been reached.  
 
+Can't compare wave estimates at discrete time points due to lack of time synced sensors. Due to this, averages and overall parameters for entire experiment compared.
+
 %====================================================
 \section{Normal Estimation}
 \label{sec:ch5.section5}

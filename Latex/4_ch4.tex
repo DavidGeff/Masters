@@ -43,9 +43,11 @@ Aalto University operates a wave and ice tank 40 m x 40 m and 2.8 m deep. The ta
 %----------------------------------------------------
 
 In November 2023 another Masters student (Anand Nair cite?) ran experiments in the tank to simulate the motion of a model of an individual pancake ice floe. In addition to the sensors selected by Anand for his experiments, data from the tests was collected using the Livox Avia.
-The Avia was mounted on a mobile gantry above the tank, angled to face down towards the ice and water. Waves were generated and briefly propagated through open water before reaching the ice. A capacitive probe in the tank recorded the wave height over time.
+The Avia was mounted on a mobile gantry above the tank, angled to face down towards the ice and water. Waves were generated and briefly propagated through open water before reaching the ice. A capacitive probe in the tank recorded the wave height over time, and was placed 5 meters in front of the wave generators.
 
 6 experiments with wave logging. Two periods, 1.6 s and 2s. Three wave heights per period, 50 mm, 75 mm and 100 mm.
+
+no time sync between wave logging and Avia scans.
 
 %====================================================
 \section{Experimental Data Collection}
@@ -58,7 +60,7 @@ With no ground truth data available for data collected from the SCALE cruise and
 \subsection{Kalman Filter Experiment}
 
 A method is required to compare the output of the Kalman filter to known motion. This was achieved through the use of the Avia, a Stewart platform, and a motion capture system. To simulate the Avia recording data from a moving platform, a Stewart platform was used, and a motion capture system recorded ground-truth motion data for comparison and validation. A Stewart platform is a device that has the ability to manipulate its target platform in 6 degrees (linear translations on the X, Y and Z axes and rotation along the X, Y, and Z axes). The Stewart platform used was designed and built by Liam Clark, a former student for his Final Year Project. This platform has been in storage since 2018 having been used occasionally over the years, and has had many repairs and parts replaced. This has resulted in the platform performing irregularly and not up to the original design specifications. The use of the motion capture system overcomes this.
-The motion capture system is manufactured by OptiTrack, who provided all sensors, software and supporting equipment. the system consists of 7 OptiTrack Prime 13 cameras, x of which are fitted with wide-angle lenses, and are all managed by a PC running OptiTrack's Motive software. The cameras both record data at a rate of 240 Hz, while the Prime 13 has a listed 3D accuracy of +/- 0.02 mm, and the Prime 13W has a listed 3D accuracy of +/- 0.03 mm.
+The motion capture system is manufactured by OptiTrack, who provided all sensors, software and supporting equipment. The system consists of 4 OptiTrack Prime 13 cameras and 3 OptiTrack Prime 13W (wide angle) cameras, and are all managed by a PC running OptiTrack's Motive software. The cameras both record data at a rate of 240 Hz, while the Prime 13 has a listed 3D accuracy of +/- 0.02 mm, and the Prime 13W has a listed 3D accuracy of +/- 0.03 mm.
 
 The cameras are sensitive only to infrared light and tracking markers that reflect infrared light. The cameras are fixed in known locations around the target area and capture video of the target, while markers placed on the target allow the cameras to track the position of the target over time. Combining the different viewpoints of the cameras, the full motion of the target can be reconstructed.
 As this experiment is only testing the attitude estimation capabilities of the Kalman filter, no translation of the platform will take place, only rotation. The Avia is attached to the Stewart Platform and rotated while recording IMU data for analysis. Motion capture markers are attached to the sensor to allow for the recording of ground-truth data.
