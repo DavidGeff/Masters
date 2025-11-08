@@ -8,10 +8,10 @@
 \label{sec:ch6.section1}
 
 Platform offset -44 deg in yaw (Z-axis) from mocap axis.
-\\matlab imu filter has whack yaw issues, false readings and crazy drift.
-\\phils lab filter way better. EKF with straight yaw integration. drift over time but way better.
+\\both perform about the same, cant do yaw. mediocre performance
 \\add reasoning for yaw being less relevant on ship
 \\talk about residuals
+\\5 deg kinda whack
 
 %====================================================
 \section{Filtering/Clustering?}
@@ -29,6 +29,13 @@ DBScan works so-so
 \\VDBScan best so far I rate (not sure any more)
 \\OPTICS who tf knows
 
+aalto data as example for how pattern makes fucked densities and centre is only reliable area
+
 %====================================================
 \section{Wave Estimation}
 \label{sec:ch6.section3}
+
+aalto data works great can estimate mag and phase fairly reliably
+\\only on sine waves
+\\phase way more reliable
+\\ice height is probably messing with amp
