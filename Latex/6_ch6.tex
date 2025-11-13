@@ -4,8 +4,16 @@
 \chapter{Results}
 \label{ch:results}
 %====================================================
+\section{Characterisation Scans}
+\label{sec:ch6.section2}
+
+lots of frames (like 6+) to resolve mid level detail
+\\few frames give very rough estimate of gross geometry
+\\bad shadowing and lidar beam divergence
+
+%====================================================
 \section{Kalman}
-\label{sec:ch6.section1}
+\label{sec:ch6.section2}
 
 Platform offset -44 deg in yaw (Z-axis) from mocap axis.
 \\both perform about the same, cant do yaw. mediocre performance
@@ -14,8 +22,20 @@ Platform offset -44 deg in yaw (Z-axis) from mocap axis.
 \\5 deg kinda whack
 
 %====================================================
+\section{Wave Estimation}
+\label{sec:ch6.section3}
+
+aalto data works great can estimate mag and phase fairly reliably
+\\only on sine waves
+\\phase way more reliable
+\\ice height is probably messing with amp
+\\needs close view, with high point density
+\\scale scans far and oblique angle make estimation hard
+\\shows how large scale environment geometry can be extracted from point clouds
+
+%====================================================
 \section{Filtering/Clustering?}
-\label{sec:ch6.section2}
+\label{sec:ch6.section4}
 
 Hard to discriminate between individual pancakes in consolidated regions/ pancakes close together
 \\filter by intens makes identification way easier
@@ -30,15 +50,3 @@ DBScan works so-so
 \\OPTICS is probably the best at the moment
 
 aalto data as example for how pattern makes fucked densities and centre is only reliable area
-
-%====================================================
-\section{Wave Estimation}
-\label{sec:ch6.section3}
-
-aalto data works great can estimate mag and phase fairly reliably
-\\only on sine waves
-\\phase way more reliable
-\\ice height is probably messing with amp
-\\needs close view, with high point density
-\\scale scans far and oblique angle make estimation hard
-\\shows how large scale environment geometry can be extracted from point clouds
