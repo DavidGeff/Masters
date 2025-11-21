@@ -19,13 +19,14 @@
 
 \refsection{0}
   \datalist[entry]{nyt/global//global/global/global}
-    \entry{3DPointCloud}{online}{}{}
+    \entry{3DPointCloud}{misc}{}{}
       \field{sortinit}{3}
       \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{url}
       \field{labeltitlesource}{title}
       \field{abstract}{This example shows how to combine multiple point clouds to reconstruct a 3-D scene using Iterative Closest Point (ICP) algorithm.}
+      \field{howpublished}{https://www.mathworks.com/help/vision/ug/3-d-point-cloud-registration-and-stitching.html}
       \field{langid}{english}
       \field{title}{3-{{D Point Cloud Registration}} and {{Stitching}} - {{MATLAB}} \& {{Simulink}}}
       \field{urlday}{18}
@@ -33,13 +34,7 @@
       \field{urlyear}{2025}
       \field{urldateera}{ce}
       \verb{file}
-      \verb /home/dspoultney/Zotero/storage/WJBRL47R/3-d-point-cloud-registration-and-stitching.html
-      \endverb
-      \verb{urlraw}
-      \verb https://www.mathworks.com/help/vision/ug/3-d-point-cloud-registration-and-stitching.html
-      \endverb
-      \verb{url}
-      \verb https://www.mathworks.com/help/vision/ug/3-d-point-cloud-registration-and-stitching.html
+      \verb C:\Users\dseph\Zotero\storage\WJBRL47R\3-d-point-cloud-registration-and-stitching.html
       \endverb
     \endentry
     \entry{govaersIntroductionImplementationsKalman2019}{book}{}{}
@@ -68,7 +63,6 @@
       \field{labeldatesource}{}
       \field{labelnamesource}{editor}
       \field{labeltitlesource}{title}
-      \field{day}{22}
       \field{isbn}{978-1-83880-536-4 978-1-83880-537-1}
       \field{langid}{english}
       \field{month}{5}
@@ -77,22 +71,15 @@
       \field{urlmonth}{9}
       \field{urlyear}{2025}
       \field{year}{2019}
-      \field{dateera}{ce}
       \field{urldateera}{ce}
       \verb{doi}
       \verb 10.5772/intechopen.75731
       \endverb
       \verb{file}
-      \verb /home/dspoultney/Zotero/storage/A92R7ZEB/Govaers - 2019 - Introduction and Implementations of the Kalman Filter.pdf
-      \endverb
-      \verb{urlraw}
-      \verb https://www.intechopen.com/books/introduction-and-implementations-of-the-kalman-filter
-      \endverb
-      \verb{url}
-      \verb https://www.intechopen.com/books/introduction-and-implementations-of-the-kalman-filter
+      \verb C:\Users\dseph\Zotero\storage\A92R7ZEB\Govaers - 2019 - Introduction and Implementations of the Kalman Filter.pdf
       \endverb
     \endentry
-    \entry{huangComprehensiveSurveyPoint2021}{online}{}{}
+    \entry{huangComprehensiveSurveyPoint2021}{misc}{}{}
       \name{author}{4}{}{%
         {{un=0,uniquepart=base,hash=575e7d102e59fbeaccf57563aa017134}{%
            family={Huang},
@@ -119,6 +106,9 @@
            giveni={R\bibinitperiod},
            givenun=0}}%
       }
+      \list{publisher}{1}{%
+        {arXiv}%
+      }
       \strng{namehash}{46a2640bcfae918d106b81b06e42deed}
       \strng{fullhash}{c5debf65bbc35986be113ce100914590}
       \strng{fullhashraw}{c5debf65bbc35986be113ce100914590}
@@ -134,28 +124,66 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Registration is a transformation estimation problem between two point clouds, which has a unique and critical role in numerous computer vision applications. The developments of optimization-based methods and deep learning methods have improved registration robustness and efficiency. Recently, the combinations of optimization-based and deep learning methods have further improved performance. However, the connections between optimization-based and deep learning methods are still unclear. Moreover, with the recent development of 3D sensors and 3D reconstruction techniques, a new research direction emerges to align cross-source point clouds. This survey conducts a comprehensive survey, including both same-source and cross-source registration methods, and summarize the connections between optimization-based and deep learning methods, to provide further research insight. This survey also builds a new benchmark to evaluate the state-of-the-art registration algorithms in solving cross-source challenges. Besides, this survey summarizes the benchmark data sets and discusses point cloud registration applications across various domains. Finally, this survey proposes potential research directions in this rapidly growing field.}
-      \field{pubstate}{prepublished}
       \field{title}{A Comprehensive Survey on Point Cloud Registration}
       \field{urlday}{18}
       \field{urlmonth}{9}
       \field{urlyear}{2025}
-      \field{version}{2}
       \field{year}{2021}
-      \field{dateera}{ce}
       \field{urldateera}{ce}
       \verb{doi}
       \verb 10.48550/ARXIV.2103.02690
       \endverb
       \verb{file}
-      \verb /home/dspoultney/Zotero/storage/6SX2YKS4/Huang et al. - 2021 - A comprehensive survey on point cloud registration.pdf
-      \endverb
-      \verb{urlraw}
-      \verb https://arxiv.org/abs/2103.02690
-      \endverb
-      \verb{url}
-      \verb https://arxiv.org/abs/2103.02690
+      \verb C:\Users\dseph\Zotero\storage\6SX2YKS4\Huang et al. - 2021 - A comprehensive survey on point cloud registration.pdf
       \endverb
       \keyw{Computer Vision and Pattern Recognition (cs.CV),FOS: Computer and information sciences}
+    \endentry
+    \entry{jelinkovaLaserCharacteristics2013}{incollection}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=ef91f21fcf1579d149a61bd723c52049}{%
+           family={Jelínková},
+           familyi={J\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=967a7b0028298d5ddb2197ccb8781f8a}{%
+           family={Šulc},
+           familyi={Š\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{5a2b31e218f73b8fe4ca6c9a540ffbc5}
+      \strng{fullhash}{5a2b31e218f73b8fe4ca6c9a540ffbc5}
+      \strng{fullhashraw}{5a2b31e218f73b8fe4ca6c9a540ffbc5}
+      \strng{bibnamehash}{5a2b31e218f73b8fe4ca6c9a540ffbc5}
+      \strng{authorbibnamehash}{5a2b31e218f73b8fe4ca6c9a540ffbc5}
+      \strng{authornamehash}{5a2b31e218f73b8fe4ca6c9a540ffbc5}
+      \strng{authorfullhash}{5a2b31e218f73b8fe4ca6c9a540ffbc5}
+      \strng{authorfullhashraw}{5a2b31e218f73b8fe4ca6c9a540ffbc5}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Lasers for {{Medical Applications}}}
+      \field{isbn}{978-0-85709-237-3}
+      \field{langid}{english}
+      \field{title}{Laser Characteristics}
+      \field{urlday}{21}
+      \field{urlmonth}{11}
+      \field{urlyear}{2025}
+      \field{year}{2013}
+      \field{urldateera}{ce}
+      \field{pages}{17\bibrangedash 46}
+      \range{pages}{30}
+      \verb{doi}
+      \verb 10.1533/9780857097545.1.17
+      \endverb
     \endentry
     \entry{kalmanNewApproachLinear1960}{article}{}{}
       \name{author}{1}{}{%
@@ -180,8 +208,7 @@
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{The classical filtering and prediction problem is re-examined using the Bode-Shannon representation of random processes and the “state-transition” method of analysis of dynamic systems. New results are: (1) The formulation and methods of solution of the problem apply without modification to stationary and nonstationary statistics and to growing-memory and infinite-memory filters. (2) A nonlinear difference (or differential) equation is derived for the covariance matrix of the optimal estimation error. From the solution of this equation the co-efficients of the difference (or differential) equation of the optimal linear filter are obtained without further calculations. (3) The filtering problem is shown to be the dual of the noise-free regulator problem. The new method developed here is applied to two well-known problems, confirming and extending earlier results. The discussion is largely self-contained and proceeds from first principles; basic concepts of the theory of random processes are reviewed in the Appendix.}
-      \field{day}{1}
+      \field{abstract}{The classical filtering and prediction problem is re-examined using the Bode-Shannon representation of random processes and the ``state-transition'' method of analysis of dynamic systems. New results are: (1) The formulation and methods of solution of the problem apply without modification to stationary and nonstationary statistics and to growing-memory and infinite-memory filters. (2) A nonlinear difference (or differential) equation is derived for the covariance matrix of the optimal estimation error. From the solution of this equation the co-efficients of the difference (or differential) equation of the optimal linear filter are obtained without further calculations. (3) The filtering problem is shown to be the dual of the noise-free regulator problem. The new method developed here is applied to two well-known problems, confirming and extending earlier results. The discussion is largely self-contained and proceeds from first principles; basic concepts of the theory of random processes are reviewed in the Appendix.}
       \field{issn}{0021-9223}
       \field{journaltitle}{Journal of Basic Engineering}
       \field{langid}{english}
@@ -193,7 +220,6 @@
       \field{urlyear}{2025}
       \field{volume}{82}
       \field{year}{1960}
-      \field{dateera}{ce}
       \field{urldateera}{ce}
       \field{pages}{35\bibrangedash 45}
       \range{pages}{11}
@@ -201,13 +227,7 @@
       \verb 10.1115/1.3662552
       \endverb
       \verb{file}
-      \verb /home/dspoultney/Zotero/storage/SZUNISID/Kalman - 1960 - A New Approach to Linear Filtering and Prediction Problems.pdf
-      \endverb
-      \verb{urlraw}
-      \verb https://asmedigitalcollection.asme.org/fluidsengineering/article/82/1/35/397706/A-New-Approach-to-Linear-Filtering-and-Prediction
-      \endverb
-      \verb{url}
-      \verb https://asmedigitalcollection.asme.org/fluidsengineering/article/82/1/35/397706/A-New-Approach-to-Linear-Filtering-and-Prediction
+      \verb C:\Users\dseph\Zotero\storage\SZUNISID\Kalman - 1960 - A New Approach to Linear Filtering and Prediction Problems.pdf
       \endverb
     \endentry
     \entry{kennicuttSustainedAntarcticResearch2019}{article}{}{}
@@ -231,7 +251,7 @@
            giveni={D\bibinitperiod},
            givenun=0}}%
         {{un=0,uniquepart=base,hash=466233e5b7416ee9e5793170dce1fcfb}{%
-           family={Njåstad},
+           family={Nj{å}stad},
            familyi={N\bibinitperiod},
            given={Birgit},
            giveni={B\bibinitperiod},
@@ -333,8 +353,8 @@
            giveni={M\bibinitperiod\bibinitdelim N\bibinitperiod},
            givenun=0}}%
         {{un=0,uniquepart=base,hash=b3e400347576cdccaab640f72712bd37}{%
-           family={Rogan-Finnemore},
-           familyi={R\bibinithyphendelim F\bibinitperiod},
+           family={{Rogan-Finnemore}},
+           familyi={R\bibinitperiod},
            given={Michelle},
            giveni={M\bibinitperiod},
            givenun=0}}%
@@ -406,7 +426,6 @@
       \field{langid}{english}
       \field{month}{9}
       \field{number}{1}
-      \field{shortjournal}{One Earth}
       \field{shorttitle}{Sustained {{Antarctic Research}}}
       \field{title}{Sustained {{Antarctic Research}}: {{A}} 21st {{Century Imperative}}}
       \field{urlday}{15}
@@ -414,7 +433,6 @@
       \field{urlyear}{2025}
       \field{volume}{1}
       \field{year}{2019}
-      \field{dateera}{ce}
       \field{urldateera}{ce}
       \field{pages}{95\bibrangedash 113}
       \range{pages}{19}
@@ -422,25 +440,50 @@
       \verb 10.1016/j.oneear.2019.08.014
       \endverb
       \verb{file}
-      \verb /home/dspoultney/Zotero/storage/FJUG5DVL/Kennicutt et al. - 2019 - Sustained Antarctic Research A 21st Century Imperative.pdf
-      \endverb
-      \verb{urlraw}
-      \verb https://linkinghub.elsevier.com/retrieve/pii/S259033221930020X
-      \endverb
-      \verb{url}
-      \verb https://linkinghub.elsevier.com/retrieve/pii/S259033221930020X
+      \verb C:\Users\dseph\Zotero\storage\FJUG5DVL\Kennicutt et al. - 2019 - Sustained Antarctic Research A 21st Century Imperative.pdf
       \endverb
     \endentry
-    \entry{SeaIce}{online}{}{}
-      \list{organization}{1}{%
-        {University of Bergen}%
+    \entry{kukkoMobileLaserScanning2013}{thesis}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=16abaaffeed28c3252e7dcd5d2ba9a09}{%
+           family={Kukko},
+           familyi={K\bibinitperiod},
+           given={Antero},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
       }
+      \strng{namehash}{16abaaffeed28c3252e7dcd5d2ba9a09}
+      \strng{fullhash}{16abaaffeed28c3252e7dcd5d2ba9a09}
+      \strng{fullhashraw}{16abaaffeed28c3252e7dcd5d2ba9a09}
+      \strng{bibnamehash}{16abaaffeed28c3252e7dcd5d2ba9a09}
+      \strng{authorbibnamehash}{16abaaffeed28c3252e7dcd5d2ba9a09}
+      \strng{authornamehash}{16abaaffeed28c3252e7dcd5d2ba9a09}
+      \strng{authorfullhash}{16abaaffeed28c3252e7dcd5d2ba9a09}
+      \strng{authorfullhashraw}{16abaaffeed28c3252e7dcd5d2ba9a09}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Laser scanning is a surveying technique used for mapping topography, vegetation, urban areas and infrastructure, ice, and other targets of interest. Its application on a terrestrial mobile platform is a promising method for effectively collecting three-dimensional data for complex environments and for producing model information for location-based services necessitating rapidly collected and up-to-date data. Development of mobile laser scanning (MLS) systems for such purposes is presented in this study. Different aspects of this technology were analyzed in laboratory experiments, simulations and field tests, in order to understand their effects on the ranging, intensity and point cloud data, especially in terms of point distribution and accuracy. In order to validate the performance of the developed ROAMER and AKHKA MLS systems, various three-dimensional mapping tasks were performed during an international benchmarking test, as well as in the field in numerous projects. The results showed that the proposed systems can reliably provide accurate data. It has also been shown that the various modalities of the systems allow data acquisition in numerous application scenarios and environments not previously possible. MLS improves the data output compared to terrestrial laser scanning (TLS) and outperforms airborne laser scanning (ALS) in ranging precision and point density. As a result, MLS is well suited to fill the gap between these two previously dominant 3D data acquisition techniques.}
+      \field{month}{12}
+      \field{title}{Mobile Laser Scanning - System Development, Performance and Applications}
+      \field{type}{phdthesis}
+      \field{year}{2013}
+      \verb{file}
+      \verb C:\Users\dseph\Zotero\storage\H48B73YG\Kukko - 2013 - Mobile laser scanning - system development, perfor.pdf
+      \endverb
+    \endentry
+    \entry{SeaIce}{misc}{}{}
       \field{sortinit}{S}
       \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{url}
       \field{labeltitlesource}{title}
       \field{abstract}{Sea ice forms in many varieties in the polar Oceans. The most common type of sea ice, especially in the Arctic Ocean, is "Congelation ice" a solid form of sea ice where new ice congeals onto the bottom of existing ice.}
+      \field{howpublished}{https://www.uib.no/en/rg/fysos/55102/sea-ice}
+      \field{journaltitle}{University of Bergen}
       \field{langid}{english}
       \field{title}{Sea Ice}
       \field{urlday}{10}
@@ -448,13 +491,7 @@
       \field{urlyear}{2025}
       \field{urldateera}{ce}
       \verb{file}
-      \verb /home/dspoultney/Zotero/storage/NG8E5Y3L/sea-ice.html
-      \endverb
-      \verb{urlraw}
-      \verb https://www.uib.no/en/rg/fysos/55102/sea-ice
-      \endverb
-      \verb{url}
-      \verb https://www.uib.no/en/rg/fysos/55102/sea-ice
+      \verb C:\Users\dseph\Zotero\storage\NG8E5Y3L\sea-ice.html
       \endverb
     \endentry
     \entry{shenConceptualModelPancakeice2001}{article}{}{}
@@ -503,7 +540,6 @@
       \field{urlyear}{2025}
       \field{volume}{33}
       \field{year}{2001}
-      \field{dateera}{ce}
       \field{urldateera}{ce}
       \field{pages}{361\bibrangedash 367}
       \range{pages}{7}
@@ -511,13 +547,7 @@
       \verb 10.3189/172756401781818239
       \endverb
       \verb{file}
-      \verb /home/dspoultney/Zotero/storage/JBVY7KU3/Shen et al. - 2001 - A conceptual model for pancake-ice formation in a wave field.pdf
-      \endverb
-      \verb{urlraw}
-      \verb https://www.cambridge.org/core/journals/annals-of-glaciology/article/conceptual-model-for-pancakeice-formation-in-a-wave-field/8B69904328C690125300DEBB34F46D95
-      \endverb
-      \verb{url}
-      \verb https://www.cambridge.org/core/journals/annals-of-glaciology/article/conceptual-model-for-pancakeice-formation-in-a-wave-field/8B69904328C690125300DEBB34F46D95
+      \verb C:\Users\dseph\Zotero\storage\JBVY7KU3\Shen et al. - 2001 - A conceptual model for pancake-ice formation in a wave field.pdf
       \endverb
     \endentry
     \entry{vichiIndicatorSeaIce2022}{article}{}{}
@@ -543,21 +573,18 @@
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{Abstract. Remote-sensing records over the last 40~years have revealed large year-to-year global and regional variability in Antarctic sea ice extent. Sea ice area and extent are useful climatic indicators of large-scale variability, but they do not allow the quantification of regions of distinct variability in sea ice concentration (SIC). This is particularly relevant in the marginal ice zone (MIZ), which is a transitional region between the open ocean and pack ice, where the exchanges between ocean, sea ice and atmosphere are more intense. The MIZ is circumpolar and broader in the Antarctic than in the Arctic. Its extent is inferred from satellite-derived SIC using the 15\,\%–80\,\% range, assumed to be indicative of open drift or partly closed sea ice conditions typical of the ice edge. This proxy has been proven effective in the Arctic, but it is deemed less reliable in the Southern Ocean, where sea ice type is unrelated to the concentration value, since wave penetration and free-drift conditions have been reported with 100\,\% cover. The aim of this paper is to propose an alternative indicator for detecting MIZ conditions in Antarctic sea ice, which can be used to quantify variability at the climatological scale on the ice-covered Southern Ocean over the seasons, as well as to derive maps of probability of encountering a certain degree of variability in the expected monthly SIC value. The proposed indicator is based on statistical properties of the SIC; it has been tested on the available climate data records to derive maps of the MIZ distribution over the year and compared with the threshold-based MIZ definition. The results present a revised view of the circumpolar MIZ variability and seasonal cycle, with a rapid increase in the extent and saturation in winter, as opposed to the steady increase from summer to spring reported in the literature. It also reconciles the discordant MIZ extent estimates using the SIC threshold from different algorithms. This indicator complements the use of the MIZ extent and fraction, allowing the derivation of the climatological probability of exceeding a certain threshold of SIC variability, which can be used for planning observational networks and navigation routes, as well as for detecting changes in the variability when using climatological baselines for different periods.}
-      \field{day}{10}
+      \field{abstract}{Abstract. Remote-sensing records over the last 40~years have revealed large year-to-year global and regional variability in Antarctic sea ice extent. Sea ice area and extent are useful climatic indicators of large-scale variability, but they do not allow the quantification of regions of distinct variability in sea ice concentration (SIC). This is particularly relevant in the marginal ice zone (MIZ), which is a transitional region between the open ocean and pack ice, where the exchanges between ocean, sea ice and atmosphere are more intense. The MIZ is circumpolar and broader in the Antarctic than in the Arctic. Its extent is inferred from satellite-derived SIC using the 15\,\%--80\,\% range, assumed to be indicative of open drift or partly closed sea ice conditions typical of the ice edge. This proxy has been proven effective in the Arctic, but it is deemed less reliable in the Southern Ocean, where sea ice type is unrelated to the concentration value, since wave penetration and free-drift conditions have been reported with 100\,\% cover. The aim of this paper is to propose an alternative indicator for detecting MIZ conditions in Antarctic sea ice, which can be used to quantify variability at the climatological scale on the ice-covered Southern Ocean over the seasons, as well as to derive maps of probability of encountering a certain degree of variability in the expected monthly SIC value. The proposed indicator is based on statistical properties of the SIC; it has been tested on the available climate data records to derive maps of the MIZ distribution over the year and compared with the threshold-based MIZ definition. The results present a revised view of the circumpolar MIZ variability and seasonal cycle, with a rapid increase in the extent and saturation in winter, as opposed to the steady increase from summer to spring reported in the literature. It also reconciles the discordant MIZ extent estimates using the SIC threshold from different algorithms. This indicator complements the use of the MIZ extent and fraction, allowing the derivation of the climatological probability of exceeding a certain threshold of SIC variability, which can be used for planning observational networks and navigation routes, as well as for detecting changes in the variability when using climatological baselines for different periods.}
       \field{issn}{1994-0424}
       \field{journaltitle}{The Cryosphere}
       \field{langid}{english}
       \field{month}{10}
       \field{number}{10}
-      \field{shortjournal}{The Cryosphere}
       \field{title}{An Indicator of Sea Ice Variability for the {{Antarctic}} Marginal Ice Zone}
       \field{urlday}{15}
       \field{urlmonth}{9}
       \field{urlyear}{2025}
       \field{volume}{16}
       \field{year}{2022}
-      \field{dateera}{ce}
       \field{urldateera}{ce}
       \field{pages}{4087\bibrangedash 4106}
       \range{pages}{20}
@@ -565,34 +592,23 @@
       \verb 10.5194/tc-16-4087-2022
       \endverb
       \verb{file}
-      \verb /home/dspoultney/Zotero/storage/5K3ULPVC/Vichi - 2022 - An indicator of sea ice variability for the Antarctic marginal ice zone.pdf;/home/dspoultney/Zotero/storage/DSNDLSBP/Vichi - 2022 - An indicator of sea ice variability for the Antarctic marginal ice zone.pdf
-      \endverb
-      \verb{urlraw}
-      \verb https://tc.copernicus.org/articles/16/4087/2022/
-      \endverb
-      \verb{url}
-      \verb https://tc.copernicus.org/articles/16/4087/2022/
+      \verb C\:\\Users\\dseph\\Zotero\\storage\\5K3ULPVC\\Vichi - 2022 - An indicator of sea ice variability for the Antarctic marginal ice zone.pdf;C\:\\Users\\dseph\\Zotero\\storage\\DSNDLSBP\\Vichi - 2022 - An indicator of sea ice variability for the Antarctic marginal ice zone.pdf
       \endverb
     \endentry
-    \entry{WhatLidarDataArcGIS}{online}{}{}
+    \entry{WhatLidarDataArcGIS}{misc}{}{}
       \field{sortinit}{W}
       \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{url}
       \field{labeltitlesource}{title}
-      \field{title}{What Is {{Lidar}} Data?—{{ArcGIS Pro}} | {{Documentation}}}
+      \field{howpublished}{https://pro.arcgis.com/en/pro-app/latest/help/data/las-dataset/what-is-lidar-.htm}
+      \field{title}{What Is {{Lidar}} Data?---{{ArcGIS Pro}} |{} {{Documentation}}}
       \field{urlday}{12}
       \field{urlmonth}{6}
       \field{urlyear}{2025}
       \field{urldateera}{ce}
       \verb{file}
-      \verb /home/dspoultney/Zotero/storage/2VP64Q5L/what-is-lidar-.html
-      \endverb
-      \verb{urlraw}
-      \verb https://pro.arcgis.com/en/pro-app/latest/help/data/las-dataset/what-is-lidar-.htm
-      \endverb
-      \verb{url}
-      \verb https://pro.arcgis.com/en/pro-app/latest/help/data/las-dataset/what-is-lidar-.htm
+      \verb C:\Users\dseph\Zotero\storage\2VP64Q5L\what-is-lidar-.html
       \endverb
     \endentry
     \entry{williamsWaveIceInteractions2013}{article}{}{}
@@ -646,15 +662,13 @@
       \field{journaltitle}{Ocean Modelling}
       \field{langid}{english}
       \field{month}{11}
-      \field{shortjournal}{Ocean Modelling}
-      \field{shorttitle}{Wave–Ice Interactions in the Marginal Ice Zone. {{Part}} 1}
-      \field{title}{Wave–Ice Interactions in the Marginal Ice Zone. {{Part}} 1: {{Theoretical}} Foundations}
+      \field{shorttitle}{Wave--Ice Interactions in the Marginal Ice Zone. {{Part}} 1}
+      \field{title}{Wave--Ice Interactions in the Marginal Ice Zone. {{Part}} 1: {{Theoretical}} Foundations}
       \field{urlday}{16}
       \field{urlmonth}{9}
       \field{urlyear}{2025}
       \field{volume}{71}
       \field{year}{2013}
-      \field{dateera}{ce}
       \field{urldateera}{ce}
       \field{pages}{81\bibrangedash 91}
       \range{pages}{11}
@@ -662,13 +676,7 @@
       \verb 10.1016/j.ocemod.2013.05.010
       \endverb
       \verb{file}
-      \verb /home/dspoultney/Zotero/storage/MZ3C7NML/Williams et al. - 2013 - Wave–ice interactions in the marginal ice zone. Part 1 Theoretical foundations.pdf
-      \endverb
-      \verb{urlraw}
-      \verb https://linkinghub.elsevier.com/retrieve/pii/S1463500313000954
-      \endverb
-      \verb{url}
-      \verb https://linkinghub.elsevier.com/retrieve/pii/S1463500313000954
+      \verb C:\Users\dseph\Zotero\storage\MZ3C7NML\Williams et al. - 2013 - Wave–ice interactions in the marginal ice zone. Part 1 Theoretical foundations.pdf
       \endverb
     \endentry
     \entry{xuComprehensiveSurveyClustering2015}{article}{}{}
@@ -705,14 +713,12 @@
       \field{langid}{english}
       \field{month}{6}
       \field{number}{2}
-      \field{shortjournal}{Ann. Data. Sci.}
       \field{title}{A {{Comprehensive Survey}} of {{Clustering Algorithms}}}
       \field{urlday}{10}
       \field{urlmonth}{9}
       \field{urlyear}{2025}
       \field{volume}{2}
       \field{year}{2015}
-      \field{dateera}{ce}
       \field{urldateera}{ce}
       \field{pages}{165\bibrangedash 193}
       \range{pages}{29}
@@ -720,13 +726,7 @@
       \verb 10.1007/s40745-015-0040-1
       \endverb
       \verb{file}
-      \verb /home/dspoultney/Zotero/storage/ULQJBEBC/Xu and Tian - 2015 - A Comprehensive Survey of Clustering Algorithms.pdf
-      \endverb
-      \verb{urlraw}
-      \verb http://link.springer.com/10.1007/s40745-015-0040-1
-      \endverb
-      \verb{url}
-      \verb http://link.springer.com/10.1007/s40745-015-0040-1
+      \verb C:\Users\dseph\Zotero\storage\ULQJBEBC\Xu and Tian - 2015 - A Comprehensive Survey of Clustering Algorithms.pdf
       \endverb
     \endentry
   \enddatalist

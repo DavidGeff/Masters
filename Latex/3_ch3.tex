@@ -90,6 +90,7 @@ Detection Range (@ 0 klx)   & \begin{tabular}[c]{@{}l@{}}190 m @ 10\% reflectivi
 FOV                         & \begin{tabular}[c]{@{}l@{}} Non-repetitive Scanning Pattern: 70.4° (H) × 77.2 (V)\\ Repetitive Scanning Pattern: 70.4° (H) × 4.5° (V)\end{tabular}          &  &  &  \\ \cline{1-2}
 Distance Random Error       & 1$\sigma$ (@ 20 m) $<$ 2 cm                         &  &  &  \\ \cline{1-2}
 Point Rate                  & 240,000 points/s                           &  &  &  \\ \cline{1-2}
+Beam Divergence             & 0.28° (Vertical) x 0.03° (Horizontal)      &  &  &  \\ \cline{1-2}
 IMU                         & Bosch Sensortec BMI088                     &  &  &  \\ \cline{1-2}
 Operating Temperature Range & -20° to 65° C                              &  &  &  \\ \cline{1-2}
 IP Rating                   & IP67                                       &  &  &  \\ \cline{1-2}
@@ -103,9 +104,20 @@ Dimensions                  & 91 x 61.2 x 64.8 mm                        &  &  &
 \section{LIDAR Characteristics}
 \label{sec:ch3:section4}
 
-LIDAR is used over other remote sensing methods for various reasons. Being an active method is advantageous over visual method such as telephoto or stereoscopic cameras as it does not require external illumination to observe the target. Additionally, with the correct sensor selection, LIDAR is less susceptible to issues such as lens flare or overexposure to which typical cameras are prone. Certain LIDAR sensors also have the ability to penetrate vegetation, allowing mapping of ground surfaces beneath areas obscured by plant cover.\\
+LIDAR is used over other remote sensing methods for various reasons. Being an active sensing method is advantageous over visual method such as telephoto or stereoscopic cameras as it does not require external illumination to observe the target. Additionally, with the correct sensor selection, LIDAR is less susceptible to issues such as lens flare or overexposure to which typical cameras are prone. Certain LIDAR sensors also have the ability to penetrate vegetation, allowing mapping of ground surfaces beneath areas obscured by plant cover.\\
 Compared to radar, LIDAR typically has superior mapping precision and target resolution, allowing more accurate reproductions of the target and the surrounding environment.
 Using LIDAR is not without its disadvantages. LIDAR sensors are more expensive than more traditional remote sensing hardware. Unlike cameras, which can recover details such as colour, LIDAR is only able to recover the three-dimensional geometry of the target. Radar outperforms LIDAR in certain applications. It is capable of much larger detection ranges than LIDAR and is also unaffected by adverse environmental conditions such as smoke, rain, and fog.
+
+LIDAR sensors suffer from beam divergence due to their use of lasers as the sensor energy emitter. Beam divergence is a measure of the angle at which photons diverge from the axis of the emitter over distance as the beam exits the laser aperture \cite{jelinkovaLaserCharacteristics2013}. The streering mechanism within LIDAR sensors (mirrors or prisms) may also impact the total beam divergence of the system. Beam divergence results in the laser beam or pulse exiting the sensor not as a single stream of photons, but rather as a cone of photons. When the beam reaches a target, the footprint of the beam will be in the shape of an ellipse with a size different to that of the beam at the aperture \cite{kukkoMobileLaserScanning2013}. Beam divergence leads to uncertainties and errors in the reported locations of targets and their associated points in the final point cloud.
+
+%----------------------------------------------------
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{figs/Beam-divergence.jpg}
+    \caption{\textbf{Beam Divergence}}
+    \label{fig:divergence}
+\end{figure}
+%----------------------------------------------------
 
 BACKSCATTER?
 REFLECTIVITY?
