@@ -107,13 +107,45 @@ Ice both reflects and transmits light, impacts environmental temperature, can da
 \label{sec:ch2.section5}
 %----------------------------------------------------
 
-Remote sensing has been the most common way of gathering data on the Antarctic since satellite sensors became widespread and a standard method for Earth observation and data collection.
-Remote sensing has many advantages, it allows for long term, consistant data collection, large areas can be surveyed without the need for a physical presence in the region of interest and it can be more cost effective than in-situ data collection.
-Remotse sensing in this region typically takes the form of Synthetic Aparture Radar (SAR) imaging, Optical imaging and laser altimetry \cite{maslanikRemoteSensingAntarctica1990}. 
+Remote sensing has been the most common method for gathering data on the Antarctic region ever since satellite observation became widespread and the standard method for Earth observation and data collection. The methods for data collection has typically taken the form of Synthetic Aparture Radar (SAR) imaging and Optical imaging (\cite{maslanikRemoteSensingAntarctica1990}). The use of lasers and LIDAR in remote sensing is a recent development that has seem limited implementation in the past two decades (\cite{pettorelliSatelliteRemoteSensing2014}).
 
-Remote sensing has widened our knowledge of the Antarctic, it has allowed for tracking of sea ice coverage, storms and *maybe* ocean currents.
+The first instance of optical imaging of the Antarctic took place in September 1964, when the Nimbus I satellite catured hundreds of greyscale images of the continent and surrounding ocean (\cite{meierNewEstimatesArctic2013}).
+The first use of SAR to collect data over the Antarctic used the RADARSAT-1 sattelite through the RADARSAT-1 Antarctic Mapping Project (RAMP), with the first phase of the project being completed in October 1997 (\cite{jezekRADARSAT1AntarcticMapping2002}).
+Laser altimetry was first implemented aboard the Ice, Cloud and land Elevation Satellite (ICESat), through the Geoscience Laser Altimeter System (GLAS). ICESat was a dedicated polar observation satellite, with the primary objective of monitoring the polar iche-sheets. The GLAS produced elevation and atmospheric progiles and was launched in 2003, with data collection commencing on February of that year (\cite{schutzOverviewICESatMission2005}).
+After the success of ICESat, ICESat-2 was launched in September of 2018, with the Advanced Topographic Laser Altimeter System (ATLAS) aboard the satellite. The ATLAS sensor marked the first time a LIDAR sensor was equiped to an observation satellite (\cite{palmICESat2AtmosphericChannel2021}).
 
-Currently, remote sensing falls short when attempting to identify the type of ice covering the ocean. Satellite images can only identify weather there is ice coverage and approximate the percentage of sea ice coverage. Information on the type of ice (grease, frazil, nilas, pancake, etc.) is impossible to extract from the satellite data.
+Remote sensing has many advantages, it allows for long term, consistant data collection, large areas can be surveyed without the need for a physical presence in the region of interest and it can be more cost effective than in-situ data collection. A brief comparison of the three main satellite-based remote sensing methods is given in Table \ref{table:sense_comparison} (\cite{agrawalCOMPARATIVEASSESSMENTREMOTE2019}).
+
+\begin{table}[H]
+\centering
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{llll} 
+\hline
+\multicolumn{1}{c}{\textbf{Variable}} & \multicolumn{1}{c}{\textbf{Optical}} & \multicolumn{1}{c}{\textbf{SAR}} & \multicolumn{1}{c}{\textbf{LIDAR}}  \\ 
+\hline
+Sensor Type                           & Passive                              & Active                           & Active                              \\ 
+\hline
+Electromagnetic Range                 & 0.4 $\mu$ m - 1 mm                   & 1 mm - 1 m                       & 250 nm to 10 $\mu$ m                \\ 
+\hline
+Weather Limitations                   & Cannot penetrate cloud cover         & Can penetrate cloud cover        & Cannot penetrate heavy cloud cover  \\ 
+\hline
+Area Coverage                         & Large                                & Large                            & Small                               \\ 
+\hline
+Data Collected                        & Spectral Radiance                    & Backscatter Amplitude  Phase     & Return Range  Intensity             \\ 
+\hline
+Data Availibility                     & Many datasets                        & Many datasets                    & Few datasets                        \\ 
+\hline
+Technique Maturity                    & High                                 & Medium                           & Low                                 \\
+\hline
+\end{tabular}
+}
+\caption{\textbf{Remote Sensing Techniques Comparison.} }
+\label{table:sense_comparison}
+\end{table}
+
+Due to their extreme locations, frequent adverse weather and polar night, SAR has become the most common method for observing both the polar regions (\cite{comisoSatelliteRemoteSensing1991}). Despite the limited resources and harsh conditions, SAR has greatly widened our knowledge of the Antarctic, allowing for tracking of sea ice coverage and extent, snow cover storms, biological activity, ice drift and iceberg calving (\cite{maslanikRemoteSensingAntarctica1990}, \cite{dirscherlRemoteSensingIce2020}, \cite{baumhoerRemoteSensingAntarctic2018}).
+
+Currently, remote sensing falls short when attempting to identify the types of ice covering the ocean. SAR imaging can estimate sea ice extent as well as sea ice concentration. Information on the specific types of ice (grease, frazil, nilas, pancake, etc.) is virtually impossible to extract from SAR data alone (\cite{zakhvatkinaSatelliteSARDatabased2019}).
 
 %----------------------------------------------------
 \subsection{Light Detection and Ranging (LIDAR)}
