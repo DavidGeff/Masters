@@ -18,8 +18,27 @@ Robot Operating System (ROS), is a collection of open-source software tools that
 ROS allows hardware to be easily added and removed from a platform for testing and development. The Livox Avia has manufacturer-supplied ROS drivers, hence this was the chosen method for interfacing with the device during data collection. 
 
 %====================================================
-\section{Livox Avia}
+\section{LIDAR Sensors}
 \label{sec:ch3:section3}
+
+A basic LIDAR sensor consists of three main components, a laser source, a steering mechanism to direct the laser beam, and a method of detecting the returning laser beam.
+
+(the exact wavelength of the laser depends on the application and manufacturer's intended use), Different lasers are selected for different reasons, such as penetration power, eye safety, measurement accuracy and something. The steering mechanism used determines the field of view, angular resolution and impacts the measurement accuracy of the sensor. Prisms, mirrors and something can be used to steer the laser's direction. 
+Most LIDAR sensors are only capable of creating point clouds with a limited number of predetermined scanning patterns. The most common scanning pattern is a rectangular pattern (an N x M grid of points). Sensors designed for automotive or autonomous vehicle use often have 360 degree coverage in their azimuth and a set vertical resolution, commonly using spinning mirrors or prisms to achieve this.
+
+Some LIDAR sensors are capable of measuring multiple returns from a single output pulse \cite{WhatLidarDataArcGIS}. This is possible when the object hit by the laser pulse does not reflect or absorb all the output energy but allows some to pass through itself. If this occurs multiple times for a single laser pulse, and the sensor is capable of detecting all of these returns, it is possible for a sensor to record more returned points than output laser pulses.
+
+%----------------------------------------------------
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=9cm]{figs/multi_return.png}
+    \caption{\textbf{Radiation}}
+    \label{fig:multi_return}
+\end{figure}
+%----------------------------------------------------
+
+%----------------------------------------------------
+\subsection{Livox Avia}
 
 The sensor used to collect data for this investigation was the Livox Avia. The Livox Avia is a solid-state laser and Risley prism-based LIDAR scanner with a built-in inertial measurement unit (IMU). ***this might have to move* The sensor was set up to capture data using ROS (ROS Neotic) and the Livox ROS driver through a machine running Ubuntu 20.04. The sensor scans and creates point clouds at a rate of 10 Hz and the IMU collects data at a rate of 200 Hz. The captured data was saved and stored in the rosbag file format (.bag). These files contain all the recorded data, (point cloud e here).information (location and return intensity), IMU readings, and their associated timestamps.***
 

@@ -84,9 +84,6 @@
       \verb{doi}
       \verb 10.5194/isprs-archives-XLII-5-W3-1-2019
       \endverb
-      \verb{file}
-      \verb C:\Users\dseph\Zotero\storage\AYYU5C7M\Agrawal and Khairnar - 2019 - A COMPARATIVE ASSESSMENT OF REMOTE SENSING IMAGING TECHNIQUES OPTICAL, SAR AND LIDAR.pdf
-      \endverb
     \endentry
     \entry{baumhoerRemoteSensingAntarctic2018}{article}{}{}
       \name{author}{4}{}{%
@@ -146,9 +143,6 @@
       \range{pages}{1}
       \verb{doi}
       \verb 10.3390/rs10091445
-      \endverb
-      \verb{file}
-      \verb C:\Users\dseph\Zotero\storage\J7CZ6G4X\Baumhoer et al. - 2018 - Remote Sensing of Antarctic Glacier and Ice-Shelf Front Dynamics—A Review.pdf
       \endverb
     \endentry
     \entry{comisoSatelliteRemoteSensing1991}{article}{}{}
@@ -249,8 +243,119 @@
       \verb{doi}
       \verb 10.1016/j.rse.2019.111595
       \endverb
-      \verb{file}
-      \verb C:\Users\dseph\Zotero\storage\DVBBQ2U9\Dirscherl et al. - 2020 - Remote sensing of ice motion in Antarctica – A review.pdf
+    \endentry
+    \entry{eayrsUnderstandingSeasonalCycle2019}{article}{}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=f215ec29de971cdb397e736c4428ebfd}{%
+           family={Eayrs},
+           familyi={E\bibinitperiod},
+           given={Clare},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e4127fc4261b28ec7ed5975ece15d81a}{%
+           family={Holland},
+           familyi={H\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=df8f92ebb117b9f9f12bd71ab77d64b2}{%
+           family={Francis},
+           familyi={F\bibinitperiod},
+           given={Diana},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a5081a4b5dc8fb294c9ae54cbeb25b03}{%
+           family={Wagner},
+           familyi={W\bibinitperiod},
+           given={Till},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5dbaee2bd1f68bfb2185d56f91e4b038}{%
+           family={Kumar},
+           familyi={K\bibinitperiod},
+           given={Rajesh},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e76eaa3c2700016e132d96b90f98d977}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Xichen},
+           giveni={X\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{b4e4809b8cf76947a037f28f55b38701}
+      \strng{fullhash}{3b618e43cf86b05f363cc5d907dceb49}
+      \strng{fullhashraw}{3b618e43cf86b05f363cc5d907dceb49}
+      \strng{bibnamehash}{b4e4809b8cf76947a037f28f55b38701}
+      \strng{authorbibnamehash}{b4e4809b8cf76947a037f28f55b38701}
+      \strng{authornamehash}{b4e4809b8cf76947a037f28f55b38701}
+      \strng{authorfullhash}{3b618e43cf86b05f363cc5d907dceb49}
+      \strng{authorfullhashraw}{3b618e43cf86b05f363cc5d907dceb49}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Abstract Over the 40-year satellite record, there has been a slight increasing trend in total annual mean Antarctic sea ice extent of approximately 1.5\% per decade that is made up of the sum of significantly larger opposing regional trends. However, record increases in total Antarctic sea ice extent were observed during 2012--2014, followed by record lows (for the satellite era) through 2018. There is still no consensus on the main drivers of these trends, but it is generally believed that the atmosphere plays a significant role and that seasonal time scales and regional scale processes are important. Despite considerable yearly and regional variability, the mean seasonal cycle of growth and melt of Antarctic sea ice is strikingly consistent, with a slow growth but fast melt season. If we are to project trends in Antarctic sea ice and understand changes on longer time scales, we need to understand the mechanisms related to the seasonal cycle separately from those that drive variability. Twice-yearly changes in the position and intensity of the zonal winds circling Antarctica are thought to drive the system by working with or against the evolving sea ice edge to slow the autumn advance and hasten the spring melt. Open water regions, created by divergence associated with the zonal winds, amplify the spring melt through increased warming of the upper ocean. Climate models fail to accurately reproduce mean Antarctic sea ice extent and overestimate its year-to-year variability, but they tend to capture the pattern and timing of the Antarctic seasonal cycle. , Plain Language Summary Antarctic sea ice extent has been observed daily from satellites over the last 40 years. Compared to the Arctic, there has been little overall change in Antarctic sea ice cover over this time. However, the slightly increasing trend masks substantial interannual and regional variability, and recent years have seen record increases (2012--2014) followed by record lows (through 2018). Despite this variability, the pattern of growth and melt of total Antarctic sea ice shows a consistent, asymmetric cycle with slow growth but rapid melt periods. The presence of many individual storms around the continent gives rise to a band of low pressure that circles the continent, and this low-pressure band marks a boundary between westerlies to the north and easterlies to the south. Twice-yearly changes in the position and intensity of these zonal winds work with or against the evolving ice edge to slow the autumn advance and hasten the spring retreat. Open water areas created in the spring lead to increased warming of the upper ocean, which also acts to speed up the spring retreat. On the whole, climate models tend to capture the pattern and timing, but not the magnitude, of the Antarctic seasonal cycle. , Key Points Antarctic sea ice has a remarkably consistent, asymmetric annual cycle, despite substantial interannual variability Zonal winds work with or against the evolving position of the ice edge, and ice-ocean albedo feedback amplifies the sea ice seasonal cycle Climate models tend to capture the pattern and timing of the Antarctic seasonal cycle but not the magnitude}
+      \field{issn}{8755-1209, 1944-9208}
+      \field{journaltitle}{Reviews of Geophysics}
+      \field{langid}{english}
+      \field{month}{9}
+      \field{number}{3}
+      \field{title}{Understanding the {{Seasonal Cycle}} of {{Antarctic Sea Ice Extent}} in the {{Context}} of {{Longer}}-{{Term Variability}}}
+      \field{urlday}{25}
+      \field{urlmonth}{11}
+      \field{urlyear}{2025}
+      \field{volume}{57}
+      \field{year}{2019}
+      \field{urldateera}{ce}
+      \field{pages}{1037\bibrangedash 1064}
+      \range{pages}{28}
+      \verb{doi}
+      \verb 10.1029/2018RG000631
+      \endverb
+    \endentry
+    \entry{gordonSeasonalitySouthernOcean1981}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=8f51bdff6e6e7efbb46f3e257e901362}{%
+           family={Gordon},
+           familyi={G\bibinitperiod},
+           given={Arnold\bibnamedelima L.},
+           giveni={A\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{8f51bdff6e6e7efbb46f3e257e901362}
+      \strng{fullhash}{8f51bdff6e6e7efbb46f3e257e901362}
+      \strng{fullhashraw}{8f51bdff6e6e7efbb46f3e257e901362}
+      \strng{bibnamehash}{8f51bdff6e6e7efbb46f3e257e901362}
+      \strng{authorbibnamehash}{8f51bdff6e6e7efbb46f3e257e901362}
+      \strng{authornamehash}{8f51bdff6e6e7efbb46f3e257e901362}
+      \strng{authorfullhash}{8f51bdff6e6e7efbb46f3e257e901362}
+      \strng{authorfullhashraw}{8f51bdff6e6e7efbb46f3e257e901362}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The sea ice cover of the Southern Ocean undergoes a rapid decrease from mid-November to mid-January. The atmosphere-to-ocean heat flux is insufficient to account for this melting, even in the presence of the high percentage of open water characteristic of the Southern Ocean sea ice. It is estimated that sea-air heat exchange in the 60{$^\circ$} to 70{$^\circ$}S zone can account for roughly 50\% of the required spring heating. The remainder must be supplied by the relatively warm deep water, residing below the Southern Ocean pycnocline. Deep-to-surface water heat flux is accomplished by upwelling of the pycnocline due to the regional Ekman divergence of the surface layer and by cross-pycnocline mixing. It is estimated that the required vertical mixing coefficient for the pycnocline is 1.5 cm 2 /s. This value is considered as realistic in view of the relatively weak pycnocline which is a consequence of low levels of fresh water input to the surface layer. It is suggested that the magnitude of fresh water input is a major factor in determining the degree of seasonality of Southern Ocean sea ice.}
+      \field{issn}{0148-0227}
+      \field{journaltitle}{Journal of Geophysical Research: Oceans}
+      \field{langid}{english}
+      \field{month}{5}
+      \field{number}{C5}
+      \field{title}{Seasonality of {{Southern Ocean}} Sea Ice}
+      \field{urlday}{25}
+      \field{urlmonth}{11}
+      \field{urlyear}{2025}
+      \field{volume}{86}
+      \field{year}{1981}
+      \field{urldateera}{ce}
+      \field{pages}{4193\bibrangedash 4197}
+      \range{pages}{5}
+      \verb{doi}
+      \verb 10.1029/JC086iC05p04193
       \endverb
     \endentry
     \entry{govaersIntroductionImplementationsKalman2019}{book}{}{}
@@ -349,9 +454,6 @@
       \verb{doi}
       \verb 10.48550/ARXIV.2103.02690
       \endverb
-      \verb{file}
-      \verb C:\Users\dseph\Zotero\storage\6SX2YKS4\Huang et al. - 2021 - A comprehensive survey on point cloud registration.pdf
-      \endverb
       \keyw{Computer Vision and Pattern Recognition (cs.CV),FOS: Computer and information sciences}
     \endentry
     \entry{jelinkovaLaserCharacteristics2013}{incollection}{}{}
@@ -440,9 +542,6 @@
       \range{pages}{6}
       \verb{doi}
       \verb 10.3189/172756402781818030
-      \endverb
-      \verb{file}
-      \verb C:\Users\dseph\Zotero\storage\V3TJVQFG\Jezek - 2002 - RADARSAT-1 Antarctic Mapping Project change-detection and surface velocity campaign.pdf
       \endverb
     \endentry
     \entry{kalmanNewApproachLinear1960}{article}{}{}
@@ -699,9 +798,6 @@
       \verb{doi}
       \verb 10.1016/j.oneear.2019.08.014
       \endverb
-      \verb{file}
-      \verb C:\Users\dseph\Zotero\storage\FJUG5DVL\Kennicutt et al. - 2019 - Sustained Antarctic Research A 21st Century Imperative.pdf
-      \endverb
     \endentry
     \entry{kukkoMobileLaserScanning2013}{thesis}{}{}
       \name{author}{1}{}{%
@@ -783,9 +879,6 @@
       \verb{doi}
       \verb 10.1017/S0954102090000141
       \endverb
-      \verb{file}
-      \verb C:\Users\dseph\Zotero\storage\YTN8CB5R\Maslanik and Barry - 1990 - Remote sensing in Antarctica and the Southern Ocean applications and developments.pdf
-      \endverb
     \endentry
     \entry{meierNewEstimatesArctic2013}{article}{}{}
       \name{author}{3}{}{%
@@ -839,9 +932,6 @@
       \range{pages}{7}
       \verb{doi}
       \verb 10.5194/tc-7-699-2013
-      \endverb
-      \verb{file}
-      \verb C:\Users\dseph\Zotero\storage\EVN64MDX\Meier et al. - 2013 - New estimates of Arctic and Antarctic sea ice extent during September 1964 from recovered Nimbus I s.pdf
       \endverb
     \endentry
     \entry{palmICESat2AtmosphericChannel2021}{article}{}{}
@@ -927,8 +1017,51 @@
       \verb{doi}
       \verb 10.1029/2020EA001470
       \endverb
+    \endentry
+    \entry{parkinsonSouthernOceanSea2004}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=b2e8aee542c7ef7e089fa56a4d13d5f3}{%
+           family={Parkinson},
+           familyi={P\bibinitperiod},
+           given={Claire\bibnamedelima L.},
+           giveni={C\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{b2e8aee542c7ef7e089fa56a4d13d5f3}
+      \strng{fullhash}{b2e8aee542c7ef7e089fa56a4d13d5f3}
+      \strng{fullhashraw}{b2e8aee542c7ef7e089fa56a4d13d5f3}
+      \strng{bibnamehash}{b2e8aee542c7ef7e089fa56a4d13d5f3}
+      \strng{authorbibnamehash}{b2e8aee542c7ef7e089fa56a4d13d5f3}
+      \strng{authornamehash}{b2e8aee542c7ef7e089fa56a4d13d5f3}
+      \strng{authorfullhash}{b2e8aee542c7ef7e089fa56a4d13d5f3}
+      \strng{authorfullhashraw}{b2e8aee542c7ef7e089fa56a4d13d5f3}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Early conceptual models and global climate model (GCM) simulations both indicated the likelihood of an enhanced sensitivity to climate change in the polar regions, derived from the positive feedbacks brought about by snow and ice. As GCMs developed, however, the expected enhanced sensitivity has been more robust in the North Polar Region than the South Polar Region. Some recent increased-CO 2 simulations, for instance, show little change in Southern Ocean sea ice extent and thickness and much less warming in the Southern Ocean region than in the sea ice regions of the Northern Hemisphere. Observations show a highly variable Southern Ocean ice cover that decreased significantly in the 1970s but, overall, has increased since the late 1970s. The increases are non-uniform, and in fact decreases occurred in the last three years of the 1979--2002 satellite record highlighted here. Regionally, the positive trends since the late 1970s are strongest in the Ross Sea, while the trends are negative in the Bellingshausen and Amundsen seas, a pattern that appears in greater spatial detail in maps of trends in the length of the sea ice season. These patterns correspond well with patterns of temperature trends, but there is a substantial way to go before they are understood (and can be modelled) in the full context of global change.}
+      \field{issn}{0954-1020, 1365-2079}
+      \field{journaltitle}{Antarctic Science}
+      \field{langid}{english}
+      \field{month}{12}
+      \field{number}{4}
+      \field{shorttitle}{Southern {{Ocean}} Sea Ice and Its Wider Linkages}
+      \field{title}{Southern {{Ocean}} Sea Ice and Its Wider Linkages: Insights Revealed from Models and Observations}
+      \field{urlday}{16}
+      \field{urlmonth}{9}
+      \field{urlyear}{2025}
+      \field{volume}{16}
+      \field{year}{2004}
+      \field{urldateera}{ce}
+      \field{pages}{387\bibrangedash 400}
+      \range{pages}{14}
+      \verb{doi}
+      \verb 10.1017/S0954102004002214
+      \endverb
       \verb{file}
-      \verb C:\Users\dseph\Zotero\storage\9FXFGSND\Palm et al. - 2021 - ICESat‐2 Atmospheric Channel Description, Data Processing and First Results.pdf
+      \verb C:\Users\dseph\Zotero\storage\C9WUBWG6\Parkinson - 2004 - Southern Ocean sea ice and its wider linkages insights revealed from models and observations.pdf
       \endverb
     \endentry
     \entry{pettorelliSatelliteRemoteSensing2014}{article}{}{}
@@ -1014,9 +1147,6 @@
       \verb{doi}
       \verb 10.1111/1365-2664.12261
       \endverb
-      \verb{file}
-      \verb C:\Users\dseph\Zotero\storage\4HYRVK9D\Pettorelli et al. - 2014 - Satellite remote sensing for applied ecologists opportunities and challenges.pdf
-      \endverb
     \endentry
     \entry{schutzOverviewICESatMission2005}{article}{}{}
       \name{author}{5}{}{%
@@ -1082,9 +1212,6 @@
       \range{pages}{-1}
       \verb{doi}
       \verb 10.1029/2005GL024009
-      \endverb
-      \verb{file}
-      \verb C:\Users\dseph\Zotero\storage\7FIQ3IQJ\Schutz et al. - 2005 - Overview of the ICESat Mission.pdf
       \endverb
     \endentry
     \entry{SeaIce}{misc}{}{}
@@ -1179,6 +1306,7 @@
       \strng{authornamehash}{89fba3e6e5969e08f095c08eed06948e}
       \strng{authorfullhash}{89fba3e6e5969e08f095c08eed06948e}
       \strng{authorfullhashraw}{89fba3e6e5969e08f095c08eed06948e}
+      \field{extraname}{1}
       \field{sortinit}{V}
       \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
       \field{extradatescope}{labelyear}
@@ -1203,8 +1331,93 @@
       \verb{doi}
       \verb 10.5194/tc-16-4087-2022
       \endverb
+    \endentry
+    \entry{vichiSCALEWIN22CruiseReport2023}{report}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=89fba3e6e5969e08f095c08eed06948e}{%
+           family={Vichi},
+           familyi={V\bibinitperiod},
+           given={Marcello},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{89fba3e6e5969e08f095c08eed06948e}
+      \strng{fullhash}{89fba3e6e5969e08f095c08eed06948e}
+      \strng{fullhashraw}{89fba3e6e5969e08f095c08eed06948e}
+      \strng{bibnamehash}{89fba3e6e5969e08f095c08eed06948e}
+      \strng{authorbibnamehash}{89fba3e6e5969e08f095c08eed06948e}
+      \strng{authornamehash}{89fba3e6e5969e08f095c08eed06948e}
+      \strng{authorfullhash}{89fba3e6e5969e08f095c08eed06948e}
+      \strng{authorfullhashraw}{89fba3e6e5969e08f095c08eed06948e}
+      \field{extraname}{2}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The SCALE winter 2022 (SCALE-WIN22) cruise was the final component of the SCALE programme (2019-2022), which was run in the framework of the South African National Antarctic Program (SANAP). The SA Agulhas II departed and returned to the Port of Cape Town on 11\textsuperscript{th} -- 31\textsuperscript{st} July 2022, following the Good Hope monitoring line. This report is composed of two documents: Cruise report Appendix (sailing document templates, SCALE code of conduct, and technical notes on the instrumentation) Please use the following guidelines when citing this report:{$<$}br{$>$} {$\bullet$} Expedition, cruise track and overall activities: Vichi M., {$<$}em{$>$}SCALE-WIN22 Cruise Report,{$<$}/em{$>$} 2023, DOI: 10.5281/zenodo.7901530{$<$}br{$>$} {$\bullet$} Specific chapters: [Authors], [Chapter title], Chapter [\#] {$<$}em{$>$}in Vichi M., SCALE-WIN22 Cruise Report, {$<$}/em{$>$}2023, DOI: 10.5281/zenodo.7901530}
+      \field{month}{4}
+      \field{title}{{{SCALE-WIN22 Cruise Report}}}
+      \field{type}{techreport}
+      \field{urlday}{11}
+      \field{urlmonth}{4}
+      \field{urlyear}{2024}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.5281/ZENODO.7901530
+      \endverb
       \verb{file}
-      \verb C\:\\Users\\dseph\\Zotero\\storage\\5K3ULPVC\\Vichi - 2022 - An indicator of sea ice variability for the Antarctic marginal ice zone.pdf;C\:\\Users\\dseph\\Zotero\\storage\\DSNDLSBP\\Vichi - 2022 - An indicator of sea ice variability for the Antarctic marginal ice zone.pdf
+      \verb C:\Users\dseph\Zotero\storage\IQLD9RAA\Vichi - 2023 - SCALE-WIN22 Cruise Report.pdf
+      \endverb
+      \keyw{SA Agulhas II,Southern Ocean}
+    \endentry
+    \entry{walshAnalysisArcticSea1979}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=c5c115cffe42656780fdd3a1db54805c}{%
+           family={Walsh},
+           familyi={W\bibinitperiod},
+           given={John\bibnamedelima E.},
+           giveni={J\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0b89d46fc803352f2ac998c7ca3bcc9a}{%
+           family={Johnson},
+           familyi={J\bibinitperiod},
+           given={Claudia\bibnamedelima M.},
+           giveni={C\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{1a56d7c451bb7fc5a6326303728da229}
+      \strng{fullhash}{1a56d7c451bb7fc5a6326303728da229}
+      \strng{fullhashraw}{1a56d7c451bb7fc5a6326303728da229}
+      \strng{bibnamehash}{1a56d7c451bb7fc5a6326303728da229}
+      \strng{authorbibnamehash}{1a56d7c451bb7fc5a6326303728da229}
+      \strng{authornamehash}{1a56d7c451bb7fc5a6326303728da229}
+      \strng{authorfullhash}{1a56d7c451bb7fc5a6326303728da229}
+      \strng{authorfullhashraw}{1a56d7c451bb7fc5a6326303728da229}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0022-3670, 1520-0485}
+      \field{journaltitle}{Journal of Physical Oceanography}
+      \field{langid}{english}
+      \field{month}{5}
+      \field{number}{3}
+      \field{title}{An {{Analysis}} of {{Arctic Sea Ice Fluctuations}}, 1953--77}
+      \field{urlday}{25}
+      \field{urlmonth}{11}
+      \field{urlyear}{2025}
+      \field{volume}{9}
+      \field{year}{1979}
+      \field{urldateera}{ce}
+      \field{pages}{580\bibrangedash 591}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1175/1520-0485(1979)009<0580:AAOASI>2.0.CO;2
       \endverb
     \endentry
     \entry{WhatLidarDataArcGIS}{misc}{}{}
@@ -1337,9 +1550,6 @@
       \verb{doi}
       \verb 10.1007/s40745-015-0040-1
       \endverb
-      \verb{file}
-      \verb C:\Users\dseph\Zotero\storage\ULQJBEBC\Xu and Tian - 2015 - A Comprehensive Survey of Clustering Algorithms.pdf
-      \endverb
     \endentry
     \entry{zakhvatkinaSatelliteSARDatabased2019}{article}{}{}
       \name{author}{3}{}{%
@@ -1394,9 +1604,6 @@
       \range{pages}{1}
       \verb{doi}
       \verb 10.3390/geosciences9040152
-      \endverb
-      \verb{file}
-      \verb C:\Users\dseph\Zotero\storage\LBBE2HKL\Zakhvatkina et al. - 2019 - Satellite SAR Data-based Sea Ice Classification An Overview.pdf
       \endverb
     \endentry
   \enddatalist
