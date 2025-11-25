@@ -1214,25 +1214,6 @@
       \verb 10.1029/2005GL024009
       \endverb
     \endentry
-    \entry{SeaIce}{misc}{}{}
-      \field{sortinit}{S}
-      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{url}
-      \field{labeltitlesource}{title}
-      \field{abstract}{Sea ice forms in many varieties in the polar Oceans. The most common type of sea ice, especially in the Arctic Ocean, is "Congelation ice" a solid form of sea ice where new ice congeals onto the bottom of existing ice.}
-      \field{howpublished}{https://www.uib.no/en/rg/fysos/55102/sea-ice}
-      \field{journaltitle}{University of Bergen}
-      \field{langid}{english}
-      \field{title}{Sea Ice}
-      \field{urlday}{10}
-      \field{urlmonth}{6}
-      \field{urlyear}{2025}
-      \field{urldateera}{ce}
-      \verb{file}
-      \verb C:\Users\dseph\Zotero\storage\NG8E5Y3L\sea-ice.html
-      \endverb
-    \endentry
     \entry{shenConceptualModelPancakeice2001}{article}{}{}
       \name{author}{3}{}{%
         {{un=0,uniquepart=base,hash=b3fe7a24db0e244a881e73b8c85ebd26}{%
