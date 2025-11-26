@@ -85,6 +85,77 @@
       \verb 10.5194/isprs-archives-XLII-5-W3-1-2019
       \endverb
     \endentry
+    \entry{alberelloPhysicalModelWave2021}{article}{}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=1f41128a44870dcaeeca940433b42242}{%
+           family={Alberello},
+           familyi={A\bibinitperiod},
+           given={Alberto},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b9c93c9553ad6e1a14f38e75bbfa3106}{%
+           family={Dolatshah},
+           familyi={D\bibinitperiod},
+           given={Azam},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8f651bf1e45dea10a2d3b1e478e8d13e}{%
+           family={Bennetts},
+           familyi={B\bibinitperiod},
+           given={Luke\bibnamedelima G.},
+           giveni={L\bibinitperiod\bibinitdelim G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bb58da8275193ce8f4e08d9bfe86ab1d}{%
+           family={Onorato},
+           familyi={O\bibinitperiod},
+           given={Miguel},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=206576fa673dc2b5ea9c34e4b146c1cc}{%
+           family={Nelli},
+           familyi={N\bibinitperiod},
+           given={Filippo},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=101bef366904fae9e18a4a5532356f13}{%
+           family={Toffoli},
+           familyi={T\bibinitperiod},
+           given={Alessandro},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{7f80649007241781f0a461df13c7732f}
+      \strng{fullhash}{9ae88085ab512b46fd780eb897f6441d}
+      \strng{fullhashraw}{9ae88085ab512b46fd780eb897f6441d}
+      \strng{bibnamehash}{7f80649007241781f0a461df13c7732f}
+      \strng{authorbibnamehash}{7f80649007241781f0a461df13c7732f}
+      \strng{authornamehash}{7f80649007241781f0a461df13c7732f}
+      \strng{authorfullhash}{9ae88085ab512b46fd780eb897f6441d}
+      \strng{authorfullhashraw}{9ae88085ab512b46fd780eb897f6441d}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{A physical model is discussed that mimics the interaction between ocean waves and a multitude of loose pancake ice floes, which form the outer edge of the Arctic and Antarctic marginal ice zones during winter sea ice formation. The pancakes were modeled by using ice cubes with different concentrations, while waves were generated mechanically. The ice cubes had a dimension of a few centimeters, which was two orders of magnitude smaller than the dominant wavelength. Experiments consisted of tracking the propagation of regular and irregular wave fields along the flume as they crossed the ice cover to measure the rate of ice-induced wave attenuation. Results indicate that wave attenuation increases with ice concentration with only 30\% of energy allowed to pass through high-density covers. Wave energy is attenuated across the entire spectral domain and is strongest at high frequencies. This results in a downshift of the spectral peak.Antarctic sea ice is exposed to intense storm waves generated all the year round in the Southern Ocean (e.g., Derkani et al., 2020; Vichi et al., 2019). These waves penetrate deep into the sea ice-covered ocean and impact the ice cover (e.g., Kohout et al., 2014, 2016; Dolatshah et al., 2017, 2018; Passerotti et al., 2020). Concomitantly, the ice cover attenuates the wave energy over distance, so that wave impacts eventually die out. (Recent field observations show a power law dependence on frequency; Meylan et al., 2018.) The region in which wave impacts remain significant is known as the marginal ice zone (MIZ).In summer, the MIZ is composed of large ice floes (with sizes ranging from tens to hundreds of meters; e.g., Toyota et al., 2011) formed by the breakup of the ice pack. During its winter expansion, on the other hand, the Antarctic MIZ is formed by millions of pancake ice floes (with sizes ranging from a few to tens of meters; Alberello, Onorato, et al., 2019), which grow from frazil ice under the continuous action of waves and thermodynamic freezing processes (Roach et al., 2019). This mixture of pancake ice floes and frazil ice (Fig. 1) extends for hundreds of kilometers (e.g., Alberello et al., 2020). Note that the general sea ice retreat in the Arctic is causing wave height growth because fetches over which winds can blow are longer (Thomson and Rogers, 2014). Such changes in the marine environment may cause pancake ice to become more common in the Arctic MIZ, too (Smith et al., 2018; Roach et al., 2019).}
+      \field{issn}{1053-5381}
+      \field{journaltitle}{International Journal of Offshore and Polar Engineering}
+      \field{month}{9}
+      \field{number}{03}
+      \field{title}{A {{Physical Model}} of {{Wave Attenuation}} in {{Pancake Ice}}}
+      \field{urlday}{24}
+      \field{urlmonth}{2}
+      \field{urlyear}{2025}
+      \field{volume}{31}
+      \field{year}{2021}
+      \field{urldateera}{ce}
+      \field{pages}{263\bibrangedash 269}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.17736/ijope.2021.ik08
+      \endverb
+    \endentry
     \entry{baumhoerRemoteSensingAntarctic2018}{article}{}{}
       \name{author}{4}{}{%
         {{un=0,uniquepart=base,hash=43087bcf34b6d93083f34137e054dfbf}{%
@@ -244,6 +315,60 @@
       \verb 10.1016/j.rse.2019.111595
       \endverb
     \endentry
+    \entry{doblePancakeIceFormation2003}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=5d82aee6671e52da3a45b432baecd23a}{%
+           family={Doble},
+           familyi={D\bibinitperiod},
+           given={Martin\bibnamedelima J.},
+           giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e53b8a6b572eef8c9f56faa3d7d59b3e}{%
+           family={Coon},
+           familyi={C\bibinitperiod},
+           given={Max\bibnamedelima D.},
+           giveni={M\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=41c2a21337a6a6c59c1f5f57e471c2e9}{%
+           family={Wadhams},
+           familyi={W\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{2ddad6e5c781facbd616ada8639b8d21}
+      \strng{fullhash}{2ddad6e5c781facbd616ada8639b8d21}
+      \strng{fullhashraw}{2ddad6e5c781facbd616ada8639b8d21}
+      \strng{bibnamehash}{2ddad6e5c781facbd616ada8639b8d21}
+      \strng{authorbibnamehash}{2ddad6e5c781facbd616ada8639b8d21}
+      \strng{authornamehash}{2ddad6e5c781facbd616ada8639b8d21}
+      \strng{authorfullhash}{2ddad6e5c781facbd616ada8639b8d21}
+      \strng{authorfullhashraw}{2ddad6e5c781facbd616ada8639b8d21}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The ice formation resulting from two low temperature events at the Weddell Sea ice edge during April 2000 is presented. Pancake and frazil ice were sampled at seven stations at varying distances from the ice edge. The ice cover was further characterized from above, using helicopter aerial photography, and from below, using a remotely operated vehicle. Previously undescribed two-layer pancake types were observed and classified. A novel pancake growth mechanism is introduced to account for these, involving the washing of frazil ice over the pancake top surface and its subsequent freezing. The process was directly observed in ice tank experiments. Layer thicknesses seen in the field were compared to the ice growth that would occur both under calm conditions and from free-surface frazil ice growth. Classical, bottom accretion, pancake growth was found to proceed at a rate similar to that of thin congelation ice. Top-layer growth was more rapid, at approximately double the congelation rate. Overall ice volume production was similar to congelation ice for the thin pancakes considered ({$\sim$}20 cm), though subsequent thickening was expected to be faster as the rapid top-layer process continued and the equivalent congelation growth slowed. It is suggested that parameterization of this new process is important for models that aim to simulate the rapid advance and thickening of wave-influenced ice covers.}
+      \field{issn}{0148-0227}
+      \field{journaltitle}{Journal of Geophysical Research: Oceans}
+      \field{langid}{english}
+      \field{month}{7}
+      \field{number}{C7}
+      \field{title}{Pancake Ice Formation in the {{Weddell Sea}}}
+      \field{urlday}{9}
+      \field{urlmonth}{4}
+      \field{urlyear}{2024}
+      \field{volume}{108}
+      \field{year}{2003}
+      \field{urldateera}{ce}
+      \field{pages}{2002JC001373}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1029/2002JC001373
+      \endverb
+    \endentry
     \entry{eayrsUnderstandingSeasonalCycle2019}{article}{}{}
       \name{author}{6}{}{%
         {{un=0,uniquepart=base,hash=f215ec29de971cdb397e736c4428ebfd}{%
@@ -398,6 +523,46 @@
       \endverb
       \verb{file}
       \verb C:\Users\dseph\Zotero\storage\A92R7ZEB\Govaers - 2019 - Introduction and Implementations of the Kalman Filter.pdf
+      \endverb
+    \endentry
+    \entry{holthuijsenWavesOceanicCoastal2007}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=fbac32e582a4f4cc56cba22d0d3248ab}{%
+           family={Holthuijsen},
+           familyi={H\bibinitperiod},
+           given={Leo\bibnamedelima H.},
+           giveni={L\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{fbac32e582a4f4cc56cba22d0d3248ab}
+      \strng{fullhash}{fbac32e582a4f4cc56cba22d0d3248ab}
+      \strng{fullhashraw}{fbac32e582a4f4cc56cba22d0d3248ab}
+      \strng{bibnamehash}{fbac32e582a4f4cc56cba22d0d3248ab}
+      \strng{authorbibnamehash}{fbac32e582a4f4cc56cba22d0d3248ab}
+      \strng{authornamehash}{fbac32e582a4f4cc56cba22d0d3248ab}
+      \strng{authorfullhash}{fbac32e582a4f4cc56cba22d0d3248ab}
+      \strng{authorfullhashraw}{fbac32e582a4f4cc56cba22d0d3248ab}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Waves in Oceanic and Coastal Waters describes the observation, analysis and prediction of wind-generated waves in the open ocean, in shelf seas, and in coastal regions with islands, channels, tidal flats and inlets, estuaries, fjords and lagoons. Most of this richly illustrated book is devoted to the physical aspects of waves. After introducing observation techniques for waves, both at sea and from space, the book defines the parameters that characterise waves. Using basic statistical and physical concepts, the author discusses the prediction of waves in oceanic and coastal waters, first in terms of generalised observations, and then in terms of the more theoretical framework of the spectral energy balance. He gives the results of established theories and also the direction in which research is developing. The book ends with a description of SWAN (Simulating Waves Nearshore), the preferred computer model of the engineering community for predicting waves in coastal waters.}
+      \field{edition}{1}
+      \field{isbn}{978-0-521-86028-4 978-0-511-61853-6 978-0-521-12995-4}
+      \field{month}{1}
+      \field{title}{Waves in {{Oceanic}} and {{Coastal Waters}}}
+      \field{urlday}{28}
+      \field{urlmonth}{2}
+      \field{urlyear}{2024}
+      \field{year}{2007}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.1017/CBO9780511618536
       \endverb
     \endentry
     \entry{huangComprehensiveSurveyPoint2021}{misc}{}{}
@@ -1270,6 +1435,49 @@
       \verb C:\Users\dseph\Zotero\storage\JBVY7KU3\Shen et al. - 2001 - A conceptual model for pancake-ice formation in a wave field.pdf
       \endverb
     \endentry
+    \entry{thomsonWavePropagationMarginal2022}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=a72b9b84115dc7135f1fdb325c6e3cf8}{%
+           family={Thomson},
+           familyi={T\bibinitperiod},
+           given={Jim},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{a72b9b84115dc7135f1fdb325c6e3cf8}
+      \strng{fullhash}{a72b9b84115dc7135f1fdb325c6e3cf8}
+      \strng{fullhashraw}{a72b9b84115dc7135f1fdb325c6e3cf8}
+      \strng{bibnamehash}{a72b9b84115dc7135f1fdb325c6e3cf8}
+      \strng{authorbibnamehash}{a72b9b84115dc7135f1fdb325c6e3cf8}
+      \strng{authornamehash}{a72b9b84115dc7135f1fdb325c6e3cf8}
+      \strng{authorfullhash}{a72b9b84115dc7135f1fdb325c6e3cf8}
+      \strng{authorfullhashraw}{a72b9b84115dc7135f1fdb325c6e3cf8}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{The propagation of ocean surface waves within the marginal ice zone (MIZ) is a defining phenomenon of this dynamic zone. Over decades of study, a variety of methods have been developed to observe and model wave propagation in the MIZ, with a common focus of determining the attenuation of waves with increasing distance into the MIZ. More recently, studies have begun to explore the consequences of wave attenuation and the coupled processes in the air--ice--ocean--land system. Understanding these coupled processes and effects is essential for accurate high-latitude forecasts. As waves attenuate, their momentum and energy are transferred to the sea ice and upper ocean. This may compact or expand the MIZ, depending on the conditions, while simultaneously modulating the wind work on the system. Wave attenuation is also a key process in coastal dynamics, where land--fast ice has historically protected both natural coasts and coastal infrastructure. With observed trends of increasing wave activity and retreating seasonal ice coverage, the propagation of waves within the MIZ is increasingly important to regional and global climate trends. This article is part of the theme issue `Theory, modelling and observations of marginal ice zone dynamics: multidisciplinary perspectives and outlooks'.}
+      \field{issn}{1364-503X, 1471-2962}
+      \field{journaltitle}{Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences}
+      \field{langid}{english}
+      \field{month}{10}
+      \field{number}{2235}
+      \field{shorttitle}{Wave Propagation in the Marginal Ice Zone}
+      \field{title}{Wave Propagation in the Marginal Ice Zone: Connections and Feedback Mechanisms within the Air--Ice--Ocean System}
+      \field{urlday}{26}
+      \field{urlmonth}{11}
+      \field{urlyear}{2025}
+      \field{volume}{380}
+      \field{year}{2022}
+      \field{urldateera}{ce}
+      \field{pages}{20210251}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1098/rsta.2021.0251
+      \endverb
+    \endentry
     \entry{vichiIndicatorSeaIce2022}{article}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=89fba3e6e5969e08f095c08eed06948e}{%
@@ -1348,9 +1556,6 @@
       \field{urldateera}{ce}
       \verb{doi}
       \verb 10.5281/ZENODO.7901530
-      \endverb
-      \verb{file}
-      \verb C:\Users\dseph\Zotero\storage\IQLD9RAA\Vichi - 2023 - SCALE-WIN22 Cruise Report.pdf
       \endverb
       \keyw{SA Agulhas II,Southern Ocean}
     \endentry
@@ -1480,9 +1685,6 @@
       \range{pages}{11}
       \verb{doi}
       \verb 10.1016/j.ocemod.2013.05.010
-      \endverb
-      \verb{file}
-      \verb C:\Users\dseph\Zotero\storage\MZ3C7NML\Williams et al. - 2013 - Wave–ice interactions in the marginal ice zone. Part 1 Theoretical foundations.pdf
       \endverb
     \endentry
     \entry{xuComprehensiveSurveyClustering2015}{article}{}{}
