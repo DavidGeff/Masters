@@ -216,6 +216,54 @@
       \verb 10.3390/rs10091445
       \endverb
     \endentry
+    \entry{cavalieriAntarcticSeaIce2008}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=8a29f103f31e76603ee056a3db044305}{%
+           family={Cavalieri},
+           familyi={C\bibinitperiod},
+           given={D.\bibnamedelimi J.},
+           giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=2,uniquepart=given,hash=386e7904f92bf05609a8e7e124b3fbcc}{%
+           family={Parkinson},
+           familyi={P\bibinitperiod},
+           given={C.\bibnamedelimi L.},
+           giveni={C\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=2}}%
+      }
+      \strng{namehash}{018e9a0f47793ae84539e7cf24a4c625}
+      \strng{fullhash}{018e9a0f47793ae84539e7cf24a4c625}
+      \strng{fullhashraw}{018e9a0f47793ae84539e7cf24a4c625}
+      \strng{bibnamehash}{018e9a0f47793ae84539e7cf24a4c625}
+      \strng{authorbibnamehash}{018e9a0f47793ae84539e7cf24a4c625}
+      \strng{authornamehash}{018e9a0f47793ae84539e7cf24a4c625}
+      \strng{authorfullhash}{018e9a0f47793ae84539e7cf24a4c625}
+      \strng{authorfullhashraw}{018e9a0f47793ae84539e7cf24a4c625}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Analyses of 28 years (1979--2006) of Antarctic sea ice extents and areas derived from satellite passive microwave radiometers are presented and placed in the context of results obtained previously for the 20-year period 1979--1998. We present monthly averaged sea ice extents and areas, monthly deviations, yearly and seasonal averages, and their trends for the Southern Hemisphere as a whole and for each of five sectors: the Weddell Sea, the Indian Ocean, the western Pacific Ocean, the Ross Sea, and the Bellingshausen/Amundsen seas. The total Antarctic sea ice extent trend increased slightly, from 0.96 \textpm{} 0.61\% decade -1 to 1.0 \textpm{} 0.4\% decade -1 , from the 20- to 28-year period, reflecting contrasting changes in the sector trends. The eight additional years resulted in smaller positive yearly trends in sea ice extent for the Weddell Sea (0.80 \textpm{} 1.4\% decade -1 ), the western Pacific Ocean (1.4 \textpm{} 1.9\% decade -1 ), and the Ross Sea (4.4 \textpm{} 1.7\% decade -1 ) sectors, a lessening of the negative trend for the Bellingshausen/Amundsen seas (-5.4 \textpm{} 1.9\% decade -1 ) sector, and a shift from a negative trend to a positive trend for the Indian Ocean (1.9 \textpm{} 1.4\% decade -1 ) sector. The trends for the Southern Hemisphere as a whole and for the Ross Sea sector are significant at the 95\% level, whereas the trend for the Bellingshausen/Amundsen seas sector is significant at the 99\% level. A similar pattern of yearly trend changes for the two periods is also apparent in the sea ice area time series.}
+      \field{issn}{0148-0227}
+      \field{journaltitle}{Journal of Geophysical Research: Oceans}
+      \field{langid}{english}
+      \field{month}{7}
+      \field{number}{C7}
+      \field{title}{Antarctic Sea Ice Variability and Trends, 1979--2006}
+      \field{urlday}{27}
+      \field{urlmonth}{11}
+      \field{urlyear}{2025}
+      \field{volume}{113}
+      \field{year}{2008}
+      \field{urldateera}{ce}
+      \field{pages}{2007JC004564}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1029/2007JC004564
+      \endverb
+    \endentry
     \entry{comisoSatelliteRemoteSensing1991}{article}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=104e89ebd1fb2aad075387e990214765}{%
@@ -1185,12 +1233,12 @@
     \endentry
     \entry{parkinsonSouthernOceanSea2004}{article}{}{}
       \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=b2e8aee542c7ef7e089fa56a4d13d5f3}{%
+        {{un=2,uniquepart=given,hash=b2e8aee542c7ef7e089fa56a4d13d5f3}{%
            family={Parkinson},
            familyi={P\bibinitperiod},
            given={Claire\bibnamedelima L.},
            giveni={C\bibinitperiod\bibinitdelim L\bibinitperiod},
-           givenun=0}}%
+           givenun=2}}%
       }
       \strng{namehash}{b2e8aee542c7ef7e089fa56a4d13d5f3}
       \strng{fullhash}{b2e8aee542c7ef7e089fa56a4d13d5f3}
@@ -1224,9 +1272,6 @@
       \range{pages}{14}
       \verb{doi}
       \verb 10.1017/S0954102004002214
-      \endverb
-      \verb{file}
-      \verb C:\Users\dseph\Zotero\storage\C9WUBWG6\Parkinson - 2004 - Southern Ocean sea ice and its wider linkages insights revealed from models and observations.pdf
       \endverb
     \endentry
     \entry{pettorelliSatelliteRemoteSensing2014}{article}{}{}
