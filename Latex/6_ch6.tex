@@ -21,6 +21,15 @@ Platform offset -44 deg in yaw (Z-axis) from mocap axis.
 \\talk about residuals
 \\5 deg kinda whack
 
+%----------------------------------------------------
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{figs/kalman.png}
+    \caption{\textbf{kalman}}
+    \label{fig:kalman}
+\end{figure}
+%----------------------------------------------------
+
 %====================================================
 \section{Wave Estimation}
 \label{sec:ch6.section3}
@@ -32,6 +41,24 @@ aalto data works great can estimate mag and phase fairly reliably
 \\needs close view, with high point density
 \\scale scans far and oblique angle make estimation hard
 \\shows how large scale environment geometry can be extracted from point clouds
+
+%----------------------------------------------------
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{figs/ransac0.png}
+    \caption{\textbf{ransac0}}
+    \label{fig:ransac0}
+\end{figure}
+%----------------------------------------------------
+
+%----------------------------------------------------
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{figs/ransac1.png}
+    \caption{\textbf{ransac1}}
+    \label{fig:ransac1}
+\end{figure}
+%----------------------------------------------------
 
 %====================================================
 \section{Filtering/Clustering?}
@@ -54,9 +81,9 @@ aalto data as example for how pattern makes fucked densities and centre is only 
 %----------------------------------------------------
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\textwidth]{figs/OPTICS.svg}
-    \caption{\textbf{frame}}
-    \label{fig:frame}
+    \includegraphics[width=0.5\textwidth]{figs/OPTICS.png}
+    \caption{\textbf{clust}}
+    \label{fig:clust0}
 \end{figure}
 %----------------------------------------------------
 
@@ -64,17 +91,17 @@ aalto data as example for how pattern makes fucked densities and centre is only 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.5\textwidth]{figs/980frame.PNG}
-    \caption{\textbf{cam}}
-    \label{fig:frame}
+    \caption{\textbf{cam0}}
+    \label{fig:com0}
 \end{figure}
 %----------------------------------------------------
 
 %----------------------------------------------------
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\textwidth]{figs/OPTICS_2.svg}
-    \caption{\textbf{frame2}}
-    \label{fig:frame}
+    \includegraphics[width=0.5\textwidth]{figs/OPTICS_2.png}
+    \caption{\textbf{clust1}}
+    \label{fig:clust1}
 \end{figure}
 %----------------------------------------------------
 
@@ -82,7 +109,7 @@ aalto data as example for how pattern makes fucked densities and centre is only 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.5\textwidth]{figs/5620.PNG}
-    \caption{\textbf{cam2}}
-    \label{fig:frame}
+    \caption{\textbf{cam1}}
+    \label{fig:cam1}
 \end{figure}
 %----------------------------------------------------
