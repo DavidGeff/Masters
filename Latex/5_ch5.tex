@@ -4,7 +4,7 @@
 \chapter{Pipeline Design}
 \label{ch:pipeline}
 %====================================================
-\section{Data Extrction}
+\section{Data Extraction}
 \label{sec:ch5.section1}
 
 The starting point for the pipeline is the collected data. All data to be used for this investigation is a rosbag (.bag) or in the proprietary Livox file type (.lvx). The raw data has to be extracted from these file types before it can be processed or used in analysis. The Livox ROS driver includes functionality to convert .lvx files to .bag files. The file conversion retains all the point cloud data but does not save the IMU data to the created .bag file. MATLAB's ROS Toolbox contains functions that can extract data fields from a .bag file and convert each field to a standard MATLAB matrix or structure.

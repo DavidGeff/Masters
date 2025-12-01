@@ -6,8 +6,17 @@
 %====================================================
 
 %====================================================
-\section{Characterisation and Calibration Data Collection}
+\section{Data Collection Apparatus}
 \label{sec:ch4.section1}
+%----------------------------------------------------
+
+All data used in this investigation was collected using the Livox Avia. Aalto data collected using a Windows laptop and Livox viewer software, proprietary .lvx file. All other data collected using Ubuntu laptop and ROS, .bag file.
+
+The sensor was set up to capture data using ROS (ROS Neotic) and the Livox ROS driver through a machine running Ubuntu 20.04. The sensor scans and creates point clouds at a rate of 10 Hz and the IMU collects data at a rate of 200 Hz. The captured data was saved and stored in the rosbag file format (.bag). These files contain all the recorded data, (point cloud e here).information (location and return intensity), IMU readings, and their associated timestamps.
+
+%====================================================
+\section{Characterisation and Calibration Data Collection}
+\label{sec:ch4.section2}
 %----------------------------------------------------
 
 With no ground truth data available for data collected from the SCALE cruise and minimal ground truth data from the Aalto dataset, methods for validating the pipeline's performance are required. Procedures for evaluating the Kalman filter and normal estimation are detailed in the following.
@@ -90,7 +99,7 @@ Two sheets of hardboard, 1220 x 1220 mm each, were used to create a concave and 
 
 %====================================================
 \section{Pre-Existing Data}
-\label{sec:ch4.section2}
+\label{sec:ch4.section3}
 %----------------------------------------------------
 
 Data for this investigation were collected from two sources, the Aalto University Ice and Wave Tank and the Southern oCean seAsonaL Experiment (SCALE) Winter 2022 Cruise.
