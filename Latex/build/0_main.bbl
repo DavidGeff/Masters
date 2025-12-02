@@ -248,6 +248,74 @@
       \verb https://www.mdpi.com/2072-4292/10/9/1445
       \endverb
     \endentry
+    \entry{brandtSurfaceAlbedoAntarctic2005}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=43b5712f64835c6b977bb4c56505183f}{%
+           family={Brandt},
+           familyi={B\bibinitperiod},
+           given={Richard\bibnamedelima E.},
+           giveni={R\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0479d7af85d73e10446468e75f86efac}{%
+           family={Warren},
+           familyi={W\bibinitperiod},
+           given={Stephen\bibnamedelima G.},
+           giveni={S\bibinitperiod\bibinitdelim G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3058df2799c48a125b1245f87b923aa2}{%
+           family={Worby},
+           familyi={W\bibinitperiod},
+           given={Anthony\bibnamedelima P.},
+           giveni={A\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a0bedc2490aa55295caf94aac2579a68}{%
+           family={Grenfell},
+           familyi={G\bibinitperiod},
+           given={Thomas\bibnamedelima C.},
+           giveni={T\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{6d315fb8e367a5a22b23b0369d7efb8a}
+      \strng{fullhash}{c6627c9139a7113bb0ee4aba3a46dc62}
+      \strng{fullhashraw}{c6627c9139a7113bb0ee4aba3a46dc62}
+      \strng{bibnamehash}{6d315fb8e367a5a22b23b0369d7efb8a}
+      \strng{authorbibnamehash}{6d315fb8e367a5a22b23b0369d7efb8a}
+      \strng{authornamehash}{6d315fb8e367a5a22b23b0369d7efb8a}
+      \strng{authorfullhash}{c6627c9139a7113bb0ee4aba3a46dc62}
+      \strng{authorfullhashraw}{c6627c9139a7113bb0ee4aba3a46dc62}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Abstract In three ship-based field experiments, spectral albedos were measured at ultraviolet, visible, and near-infrared wavelengths for open water, grease ice, nilas, young “grey” ice, young grey-white ice, and first-year ice, both with and without snow cover. From the spectral measurements, broadband albedos are computed for clear and cloudy sky, for the total solar spectrum as well as for visible and near-infrared bands used in climate models, and for Advanced Very High Resolution Radiometer (AVHRR) solar channels. The all-wave albedos vary from 0.07 for open water to 0.87 for thick snow-covered ice under cloud. The frequency distribution of ice types and snow coverage in all seasons is available from the project on Antarctic Sea Ice Processes and Climate (ASPeCt). The ASPeCt dataset contains routine hourly visual observations of sea ice from research and supply ships of several nations using a standard protocol. Ten thousand of these observations, separated by a minimum of 6 nautical miles along voyage tracks, are used together with the measured albedos for each ice type to assign an albedo to each visual observation, resulting in “ice-only” albedos as a function of latitude for each of five longitudinal sectors around Antarctica, for each of the four seasons. These ice albedos are combined with 13 yr of ice concentration estimates from satellite passive microwave measurements to obtain the geographical and seasonal variation of average surface albedo. Most of the Antarctic sea ice is snow covered, even in summer, so the main determinant of area-averaged albedo is the fraction of open water within the pack.}
+      \field{day}{1}
+      \field{issn}{1520-0442, 0894-8755}
+      \field{journaltitle}{Journal of Climate}
+      \field{langid}{english}
+      \field{month}{9}
+      \field{number}{17}
+      \field{title}{Surface {{Albedo}} of the {{Antarctic Sea Ice Zone}}}
+      \field{urlday}{2}
+      \field{urlmonth}{12}
+      \field{urlyear}{2025}
+      \field{volume}{18}
+      \field{year}{2005}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{3606\bibrangedash 3622}
+      \range{pages}{17}
+      \verb{doi}
+      \verb 10.1175/JCLI3489.1
+      \endverb
+      \verb{urlraw}
+      \verb http://journals.ametsoc.org/doi/10.1175/JCLI3489.1
+      \endverb
+      \verb{url}
+      \verb http://journals.ametsoc.org/doi/10.1175/JCLI3489.1
+      \endverb
+    \endentry
     \entry{cavalieriAntarcticSeaIce2008}{article}{}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=8a29f103f31e76603ee056a3db044305}{%
