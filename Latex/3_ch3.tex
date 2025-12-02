@@ -5,21 +5,15 @@
 \label{ch:theory}
 
 %====================================================
-\section{Optical Properties of Ice and Snow}
-\label{sec:ch3:section1}
-
-Ice and snow have more interactions with light than mediums typically observed by optical sensors, especially LIDAR which is typically used in urban environments or for terrain mapping. Not only is light reflected by ice and snow, but it can also pass through the mediums, as well as being refracted and absorbed.
-
-%====================================================
 \section{Robot Operating System (ROS)}
-\label{sec:ch3:section2}
+\label{sec:ch3:section1}
 
 Robot Operating System (ROS), is a collection of open-source software tools that allows for the development of modular autonomous platforms. ROS is widely used in many environments, ranging from research and prototyping platforms to massive corporations such as Airbus and Caterpillar (cite here).
 ROS allows hardware to be easily added and removed from a platform for testing and development. The Livox Avia has manufacturer-supplied ROS drivers, hence this was the chosen method for interfacing with the device during data collection. 
 
 %====================================================
 \section{LIDAR Sensors}
-\label{sec:ch3:section3}
+\label{sec:ch3:section2}
 
 A basic LIDAR sensor consists of three main components, a laser source, a steering mechanism to direct the laser beam, and a method of detecting the returning laser beam.
 
@@ -40,7 +34,7 @@ Some LIDAR sensors are capable of measuring multiple returns from a single outpu
 %----------------------------------------------------
 \subsection{Livox Avia}
 
-The sensor used to collect data for this investigation was the Livox Avia. The Livox Avia is a solid-state laser and Risley prism-based LIDAR scanner with a built-in inertial measurement unit (IMU). *edit here*
+The sensor used to collect data for this investigation was the Livox Avia. The Livox Avia is a solid-state laser and Risley prism-based LIDAR scanner with a built-in inertial measurement unit (IMU). The sensor makes use of a 905 nm near infrared laser *edit here*
 
 %----------------------------------------------------
 \begin{figure}[H]
@@ -121,29 +115,55 @@ Dimensions                  & 91 x 61.2 x 64.8 mm                        &  &  &
 
 %====================================================
 \section{LIDAR Characteristics}
-\label{sec:ch3:section4}
+\label{sec:ch3:section3}
 
 LIDAR is used over other remote sensing methods for various reasons. Being an active sensing method is advantageous over visual method such as telephoto or stereoscopic cameras as it does not require external illumination to observe the target. Additionally, with the correct sensor selection, LIDAR is less susceptible to issues such as lens flare or overexposure to which typical cameras are prone. Certain LIDAR sensors also have the ability to penetrate vegetation, allowing mapping of ground surfaces beneath areas obscured by plant cover.\\
 Compared to radar, LIDAR typically has superior mapping precision and target resolution, allowing more accurate reproductions of the target and the surrounding environment.
 Using LIDAR is not without its disadvantages. LIDAR sensors are more expensive than more traditional remote sensing hardware. Unlike cameras, which can recover details such as colour, LIDAR is only able to recover the three-dimensional geometry of the target. Radar outperforms LIDAR in certain applications. It is capable of much larger detection ranges than LIDAR and is also unaffected by adverse environmental conditions such as smoke, rain, and fog.
 
-LIDAR sensors suffer from beam divergence due to their use of lasers as the sensor energy emitter. Beam divergence is a measure of the angle at which photons diverge from the axis of the emitter over distance as the beam exits the laser aperture \cite{jelinkovaLaserCharacteristics2013}. The streering mechanism within LIDAR sensors (mirrors or prisms) may also impact the total beam divergence of the system. Beam divergence results in the laser beam or pulse exiting the sensor not as a single stream of photons, but rather as a cone of photons. When the beam reaches a target, the footprint of the beam will be in the shape of an ellipse with a size different to that of the beam at the aperture \cite{kukkoMobileLaserScanning2013}. Beam divergence leads to uncertainties and errors in the reported locations of targets and their associated points in the final point cloud.
+especially LIDAR which is typically used in urban environments or for terrain mapping.
 
-The Livox Avia has a listed beam divergence of 0.28° x 0.03° along its vertical and horizontal plane. This results in the emitted beam, if falling on a target perfectly perpendicular to the axis of propogation at a distance of 50 meters, having the form of an ellippse with the approximate dimentions of 244.35 x 26.18 mm. *insert fig here* 
+LIDAR sensors suffer from beam divergence due to their use of lasers as the sensor energy emitter. Beam divergence is a measure of the angle at which photons diverge from the axis of the emitter over distance as the beam exits the laser aperture \cite{jelinkovaLaserCharacteristics2013}. The steering mechanism within LIDAR sensors (mirrors or prisms) may also impact the total beam divergence of the system. Beam divergence results in the laser beam or pulse exiting the sensor not as a single stream of photons, but rather as a cone of photons. When the beam reaches a target, the footprint of the beam will be in the shape of an ellipse with a size different to that of the beam at the aperture \cite{kukkoMobileLaserScanning2013}. Beam divergence leads to uncertainties and errors in the reported locations of targets and their associated points in the final point cloud.
+
+The Livox Avia has a listed beam divergence of 0.28° x 0.03° along its vertical and horizontal plane. This results in the emitted beam, if falling on a target perfectly perpendicular to the axis of propagation at a distance of 50 meters, having the form of an ellipse with the approximate dimensions of 244.35 x 26.18 mm. *insert fig here* 
 
 %----------------------------------------------------
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.5\textwidth]{figs/Beam-divergence.jpg}
-    \caption{\textbf{Beam Divergence}}
+    \caption{\textbf{Beam Divergence} taken from \cite{kukkoMobileLaserScanning2013}}
     \label{fig:divergence}
 \end{figure}
 %----------------------------------------------------
 
 BACKSCATTER?
+
 REFLECTIVITY?
+
 ABSORPTION?
+
+Infrared Interference?
+
 Wavelength
+
+%====================================================
+\section{Optical Properties of Ocean Water, Ice and Snow}
+\label{sec:ch3:section4}
+
+Water, ice and snow have more complex interactions with electromagnetic radiation produced by the sun, when compared to other mediums typically observed by sensors capable of detecting electromagnetic radiation. Not only do these mediums reflect and absorb radiation like other observation targets, but they are capable of transmitting, scattering and refracting radiation. This section will focus on the response of these mediums to radiation of the same wavelength emitted by the Livox Avia (near infrared).
+
+%----------------------------------------------------
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{figs/water_abs.png}
+    \caption{\textbf{Water and Ice Absorption Spectra.} Absorption as the imaginary part of refraction (extinction coefficient). Taken from \cite{dozierEstimationPropertiesAlpine1989}}
+    \label{fig:absorbtion}
+\end{figure}
+%----------------------------------------------------
+
+Water is most transparent to radiation within the visible region (roughly 400 - 700 nm), outside this region radiation absorption increases rapidly (\cite{warrenOpticalPropertiesIce2019}). Near infrared radiation cannot penetrate far into water and is almost entirely absorbed. As seen in Figure \ref{fig:absorbtion}, water and ice broadly have similar absorbtion characteristics across the visual and near infrared regions of the electromagnetic spectrum.
+
+The physical structure and composition of ice varies greatly and thus so do its optical properties. 
 
 %====================================================
 \section{Point Cloud Processing}
