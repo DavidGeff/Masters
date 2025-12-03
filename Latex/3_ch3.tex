@@ -123,7 +123,7 @@ Using LIDAR is not without its disadvantages. LIDAR sensors are more expensive t
 
 especially LIDAR which is typically used in urban environments or for terrain mapping.
 
-LIDAR sensors suffer from beam divergence due to their use of lasers as the sensor energy emitter. Beam divergence is a measure of the angle at which photons diverge from the axis of the emitter over distance as the beam exits the laser aperture \cite{jelinkovaLaserCharacteristics2013}. The steering mechanism within LIDAR sensors (mirrors or prisms) may also impact the total beam divergence of the system. Beam divergence results in the laser beam or pulse exiting the sensor not as a single stream of photons, but rather as a cone of photons. When the beam reaches a target, the footprint of the beam will be in the shape of an ellipse with a size different to that of the beam at the aperture \cite{kukkoMobileLaserScanning2013}. Beam divergence leads to uncertainties and errors in the reported locations of targets and their associated points in the final point cloud.
+LIDAR sensors suffer from beam divergence due to their use of lasers as the sensor energy emitter. Beam divergence is a measure of the angle at which photons diverge from the axis of the emitter over distance as the beam exits the laser aperture (\cite{jelinkovaLaserCharacteristics2013}). The steering mechanism within LIDAR sensors (mirrors or prisms) may also impact the total beam divergence of the system. Beam divergence results in the laser beam or pulse exiting the sensor not as a single stream of photons, but rather as a cone of photons. When the beam reaches a target, the footprint of the beam will be in the shape of an ellipse with a size different to that of the beam at the aperture (\cite{kukkoMobileLaserScanning2013}). Beam divergence leads to uncertainties and errors in the reported locations of targets and their associated points in the final point cloud.
 
 The Livox Avia has a listed beam divergence of 0.28° x 0.03° along its vertical and horizontal plane. This results in the emitted beam, if falling on a target perfectly perpendicular to the axis of propagation at a distance of 50 meters, having the form of an ellipse with the approximate dimensions of 244.35 x 26.18 mm. *insert fig here* 
 
@@ -161,33 +161,38 @@ Water, ice and snow have more complex interactions with electromagnetic radiatio
 \end{figure}
 %----------------------------------------------------
 
-Water is most transparent to radiation within the visible region (roughly 400 - 700 nm), outside this region radiation absorption increases rapidly (\cite{warrenOpticalPropertiesIce2019}). Near infrared radiation cannot penetrate far into water and is almost entirely absorbed. As seen in Figure \ref{fig:water}, water and ice broadly have similar absorption characteristics across the visual and near infrared regions of the electromagnetic spectrum.
+Water is most transparent to radiation within the visible region (roughly 400 - 700 nm), outside this region radiation absorption increases rapidly. Near infrared radiation cannot penetrate far into water and is almost entirely absorbed. As seen in Figure \ref{fig:water}, water and ordinary hexagonal ice broadly have similar absorption characteristics across the visual and near infrared regions of the electromagnetic spectrum (\cite{warrenOpticalPropertiesIce2019}).
+
+As the physical structure and composition of sea ice varies greatly, so do its optical properties. When seawater freezes and forms ice crystals, bubbles of gas and pockets of brine form between the crystals, leading to increased scattering across all wavelengths and thus a lower albedo. An increase in the thickness of ice leads to increased albedo. 
 
 %----------------------------------------------------
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.5\textwidth]{figs/ice.png}
-    \caption{\textbf{Various Ice Absorption Spectra.} Absorption as the imaginary part of refraction (extinction coefficient). Taken from \cite{brandtSurfaceAlbedoAntarctic2005}}
+    \caption{\textbf{Various Ice Spectral Albedo.} Taken from \cite{brandtSurfaceAlbedoAntarctic2005}}
     \label{fig:ice}
 \end{figure}
 %----------------------------------------------------
+
+On average, snow has the highest albedo out of the three mediums. The smaller the snow crystals, the higher the albedo. The denser the snow, the lower the albedo.
 
 %----------------------------------------------------
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.5\textwidth]{figs/snow.png}
-    \caption{\textbf{Snow Absorption Spectra.} Absorption as the imaginary part of refraction (extinction coefficient). Taken from \cite{brandtSurfaceAlbedoAntarctic2005}}
+    \caption{\textbf{Snow Spectral Albedo.} Taken from \cite{brandtSurfaceAlbedoAntarctic2005}}
     \label{fig:snow}
 \end{figure}
 %----------------------------------------------------
 
-The physical structure and composition of ice varies greatly and thus so do its optical properties. 
+The above suggests that the Livox Avia is best suited to detecting low density snow, first year ice. It is potentially possible to detect ice floes of any ice type, given that they are covered with snow.
+
 
 %====================================================
 \section{Point Cloud Processing}
 \label{sec:ch3:section5}
 
-Many common point cloud processing methods are built around the assumption that the point cloud being worked upon is in the format of a standard (M x N) grid layout. Methods such as point cloud registration (obtaining the transformation between two point clouds \cite{huangComprehensiveSurveyPoint2021}), clustering and model fitting often use the assumption of a constant grid with a constant number of points per frame to achieve their outputs. To bypass this limitation it is common for point clouds to be downsampled through a grid filter to achieve the desired format \cite{3DPointCloud}.
+Many common point cloud processing methods are built around the assumption that the point cloud being worked upon is in the format of a standard (M x N) grid layout. Methods such as point cloud registration (obtaining the transformation between two point clouds (\cite{huangComprehensiveSurveyPoint2021})), clustering and model fitting often use the assumption of a constant grid with a constant number of points per frame to achieve their outputs. To bypass this limitation it is common for point clouds to be downsampled through a grid filter to achieve the desired format \cite{3DPointCloud}.
 
 In the Avia's repetitive scanning pattern (See Figure \ref{fig:rep}), the sensor produces a point cloud with a roughly rectangular FOV and consistent point density, which is suitable for downsampling and grid filtering. Point clouds produced by the non-repetitive scanning pattern (See Figure \ref{fig:non_rep}) are circular and do not have uniform point density and are thus not ideal for downsampling and grid filtering.
 
@@ -196,7 +201,7 @@ Many processing methods are also based on the assumption that the environment da
 %====================================================
 \section{Kalman Filters}
 \label{sec:ch3:section6}
-The Kalman Filter is a recursive predictor-corrector algorithm used to provide optimal estimates of unknown variables of a system given various noisy measurements as inputs to the algorithm over time \cite{govaersIntroductionImplementationsKalman2019}. The method is named after Rudolph E. Kálmán, the engineer and mathematician who first described it in his now famous paper, \cite{kalmanNewApproachLinear1960}.
+The Kalman Filter is a recursive predictor-corrector algorithm used to provide optimal estimates of unknown variables of a system given various noisy measurements as inputs to the algorithm over time (\cite{govaersIntroductionImplementationsKalman2019}). The method is named after Rudolph E. Kálmán, the engineer and mathematician who first described it in his now famous paper, (\cite{kalmanNewApproachLinear1960}).
 
 The Kalman filter uses the state-space format of a linear dynamic system, with the assumption that the measurements and process are subject to Gaussian noise.
 
