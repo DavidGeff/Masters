@@ -26,28 +26,37 @@ The first Kalman filter was created using MATLAB's Sensor Fusion Toolbox. The se
 \section{De-Noising}
 \label{sec:ch5.section3}
 
-
 De-noise - the Avia not only records the location of each point, it also records how much of the original pulse of light is reflected back at the sensor (return intensity). This information is stored as an 8-bit value (0-255) attached to each point. With these data available, a simple threshold filtering function can be constructed. This function is useful for de-noising data collected under snowy conditions. When the Avia collects data in adverse environmental conditions (such as rain, snow, and fog), the beam emitted by the sensor may interact with these weather conditions, leading to poor quality data and/or noisy data. In the case of data collected from the SCALE Winter 2022 Cruise, snowy conditions resulted in unwanted returns from snowflakes in the area immediately in front of the sensor's minimum detection range. These unwanted returns create difficulties when trying to process the data further. The threshold de-noising function performs well in removing these unwanted returns and improving the usability of the collected data.
 
 %====================================================
-\section{Surface Estimation}
+\section{Wave Parameter Estimation}
 \label{sec:ch5.section4}
 
 
-RANdom SAmple Consensus (RANSAC) plane fitting - RANdom SAmple Consensus is an algorithm that estimates a mathematical model from an input dataset. This method can be implemented to fit models of wave functions (sinusoidal and Stokes) to the collected data in an attempt to estimate the wave function parameters. The RANSAC algorithm estimates the model parameters by first selecting a random set of points in the dataset, either user-specified or the minimum number of points required to satisfy the model, and fits the model to these points. Using a user-selected tolerance, the algorithm then determines how many data points are inliers. This process is repeated until there are a satisfactory number of inlines or until the maximum number of iterations have been reached.  
+Using the MATLAB curveFitter tool, a sinusoidal model was fitted to the Aalto wave data. 
+
+%----------------------------------------------------
+\begin{equation} \label{fit_sin}
+    y = a*sin(b*x + c)
+\end{equation}
+%----------------------------------------------------
+
+RANdom SAmple Consensus (RANSAC) plane fitting - RANdom SAmple Consensus is an algorithm that estimates a mathematical model from an input dataset. This method can be implemented to fit models of wave functions (sinusoidal and Stokes) to the collected data in an attempt to estimate the wave function parameters. The RANSAC algorithm estimates the model parameters by first selecting a random set of points in the dataset, either user-specified or the minimum number of points required to satisfy the model, and fits the model to these points. Using a user-selected tolerance, the algorithm then determines how many data points are inliers. This process is repeated until there are a satisfactory number of inliers or until the maximum number of iterations have been reached.
+
+
 
 Can't compare wave estimates at discrete time points due to lack of time synced sensors. Due to this, averages and overall parameters for entire experiment compared.
 
 %====================================================
-\section{Normal Estimation}
-\label{sec:ch5.section5}
+%\section{Normal Estimation}
+%\label{sec:ch5.section5}
 
 
-normal estimation - Using the point cloud data alone, the gross morphology of a pancake can potentially be estimated, but not much information about the surface conditions of the pancake can be inferred. Additional data on the geometry of the scanned pancaked would allow for further analysis of the pancakes and improved modelling. By estimating the normal of each point in the point cloud, it may be possible to estimate the surface conditions of the pancakes. Estimated normals may be able to identify features such as ridges, valleys, corners, concave, and convex shapes on the surface of individual pancakes. Normals are estimated by using \textit{k} number of neighbouring points to infer the geometry surrounding the subject point. First, the centroid of the subject point and its neighbour points is determined, and then the covariance matrix for each point is determined. A plane is then fit to have the least variance through all the points, and finally the normal to the plane is calculated.
+%normal estimation - Using the point cloud data alone, the gross morphology of a pancake can potentially be estimated, but not much information about the surface conditions of the pancake can be inferred. Additional data on the geometry of the scanned pancaked would allow for further analysis of the pancakes and improved modelling. By estimating the normal of each point in the point cloud, it may be possible to estimate the surface conditions of the pancakes. Estimated normals may be able to identify features such as ridges, valleys, corners, concave, and convex shapes on the surface of individual pancakes. Normals are estimated by using \textit{k} number of neighbouring points to infer the geometry surrounding the subject point. First, the centroid of the subject point and its neighbour points is determined, and then the covariance matrix for each point is determined. A plane is then fit to have the least variance through all the points, and finally the normal to the plane is calculated.
 
 %====================================================
 \section{Clustering}
-\label{sec:ch5.section6}
+\label{sec:ch5.section5}
 
 
 clustering - talk through why some clustering will  or won't work, k-tree stuff needs to know how many clusters there are, hierarchies don't make sense, DBScan relies on constant density (not ideal), optics needs an explanation. 
