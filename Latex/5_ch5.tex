@@ -32,20 +32,24 @@ De-noise - the Avia not only records the location of each point, it also records
 \section{Wave Parameter Estimation}
 \label{sec:ch5.section4}
 
+As there was no time synchronisation between the Livox Avia and wave probes, instantaneous wave parameters acannot be compared. Instead,  overall wave parameters (amplitude and frequency) for the duration of the tests were modelled and compared. The strict constraints on the wave behaviours allows for the the wave models used to be greatly simplified.
 
-Using the MATLAB curveFitter tool, a sinusoidal model was fitted to the Aalto wave data. 
+Using the MATLAB curveFitter tool, a sinusoidal model (\ref{fit_sin}) was fitted to the Aalto wava data from each test. 
 
 %----------------------------------------------------
 \begin{equation} \label{fit_sin}
-    y = a*sin(b*x + c)
+    y = Asin(\omega t + c)
 \end{equation}
 %----------------------------------------------------
+
+\textit{y} is the wave height at time \textit{t}, \textit{A} is  amplitude, \textit{$\omega$} is the  anguar frequency and \textit{c} is the phase shift. For this investigation, only the wave amplitude and angular frequency (\textit{A} and \textit{$\omega$}) are of interest.
+
+
+Wave phase velocity can be converted to     
 
 RANdom SAmple Consensus (RANSAC) plane fitting - RANdom SAmple Consensus is an algorithm that estimates a mathematical model from an input dataset. This method can be implemented to fit models of wave functions (sinusoidal and Stokes) to the collected data in an attempt to estimate the wave function parameters. The RANSAC algorithm estimates the model parameters by first selecting a random set of points in the dataset, either user-specified or the minimum number of points required to satisfy the model, and fits the model to these points. Using a user-selected tolerance, the algorithm then determines how many data points are inliers. This process is repeated until there are a satisfactory number of inliers or until the maximum number of iterations have been reached.
 
 
-
-Can't compare wave estimates at discrete time points due to lack of time synced sensors. Due to this, averages and overall parameters for entire experiment compared.
 
 %====================================================
 %\section{Normal Estimation}
