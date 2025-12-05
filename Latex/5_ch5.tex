@@ -34,29 +34,37 @@ De-noise - the Avia not only records the location of each point, it also records
 
 As there was no time synchronisation between the Livox Avia and wave probes, instantaneous wave parameters acannot be compared. Instead,  overall wave parameters (amplitude and frequency) for the duration of the tests were modelled and compared. The strict constraints on the wave behaviours allows for the the wave models used to be greatly simplified.
 
-Using the MATLAB curveFitter tool, a sinusoidal model (\ref{fit_sin}) was fitted to the Aalto wava data from each test. 
+Using the MATLAB curveFitter tool, a sinusoidal model (equation \ref{probe_sin}) of wave height over time was fitted to the Aalto wave probe data from each test. 
 
 %----------------------------------------------------
-\begin{equation} \label{fit_sin}
+\begin{equation} \label{probe_sin}
     y = Asin(\omega t + c)
 \end{equation}
 %----------------------------------------------------
 
-\textit{y} is the wave height at time \textit{t}, \textit{A} is  amplitude, \textit{$\omega$} is the  anguar frequency and \textit{c} is the phase shift. For this investigation, only the wave amplitude and angular frequency (\textit{A} and \textit{$\omega$}) are of interest.
+\textit{y} is the wave height at time \textit{t}, \textit{A} is  amplitude, \textit{$\omega$} is the  anguar frequency and \textit{c} is the phase shift. For this investigation, only amplitude and angular frequency (\textit{A} and \textit{$\omega$}) are of interest.
 
+To model the waves from point cloud data a spatial sinusoidal plane model (equation \ref{avia_sin}) was fitted to each frame in the point cloud. Due to the constraints place upon the generated waves, it can be assumed the waves will propagate uniformly acroos the tank with minimal change in direction and velocity.
 
-Wave phase velocity can be converted to     
+%----------------------------------------------------
+\begin{equation} \label{avia_sin}
+    z = Asin(Bx + C) + Dx + Ey + F
+\end{equation}
+%----------------------------------------------------
+
+\textit{x}, \textit{y} and \textit{z} are co-ordinates of the wave relative to the Avia's origin. \textit{A} is the amplitude, \textit{B} is the wave number, \textit{C} is the phase shift and \textit{D} and \textit{E} are plane slopes and \textit{F} is an offset. For this investigation only aplitude and wave number (\textit{A} and \textit{B}) are of interest.
+
+Wave number (\textit{k}) is related to angular velocity (textit{$\omega$}) through the dispersion relation (\cite{dingemansWaterWavePropagation1997}) given in equation \ref{dispersion}.
+
+%----------------------------------------------------
+\begin{equation} \label{dispersion}
+    \omega = \sqrt{gk}
+\end{equation}
+%----------------------------------------------------
+
+Wave angular velocity can be converted to period through     
 
 RANdom SAmple Consensus (RANSAC) plane fitting - RANdom SAmple Consensus is an algorithm that estimates a mathematical model from an input dataset. This method can be implemented to fit models of wave functions (sinusoidal and Stokes) to the collected data in an attempt to estimate the wave function parameters. The RANSAC algorithm estimates the model parameters by first selecting a random set of points in the dataset, either user-specified or the minimum number of points required to satisfy the model, and fits the model to these points. Using a user-selected tolerance, the algorithm then determines how many data points are inliers. This process is repeated until there are a satisfactory number of inliers or until the maximum number of iterations have been reached.
-
-
-
-%====================================================
-%\section{Normal Estimation}
-%\label{sec:ch5.section5}
-
-
-%normal estimation - Using the point cloud data alone, the gross morphology of a pancake can potentially be estimated, but not much information about the surface conditions of the pancake can be inferred. Additional data on the geometry of the scanned pancaked would allow for further analysis of the pancakes and improved modelling. By estimating the normal of each point in the point cloud, it may be possible to estimate the surface conditions of the pancakes. Estimated normals may be able to identify features such as ridges, valleys, corners, concave, and convex shapes on the surface of individual pancakes. Normals are estimated by using \textit{k} number of neighbouring points to infer the geometry surrounding the subject point. First, the centroid of the subject point and its neighbour points is determined, and then the covariance matrix for each point is determined. A plane is then fit to have the least variance through all the points, and finally the normal to the plane is calculated.
 
 %====================================================
 \section{Clustering}

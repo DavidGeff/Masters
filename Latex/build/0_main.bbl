@@ -365,6 +365,42 @@
       \verb 10.1016/0924-7963(91)90044-U
       \endverb
     \endentry
+    \entry{dingemansWaterWavePropagation1997}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=501f01f77e6071897d10a430fb045e8f}{%
+           family={Dingemans},
+           familyi={D\bibinitperiod},
+           given={Maarten\bibnamedelima W.},
+           giveni={M\bibinitperiod\bibinitdelim W\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Singapore}%
+      }
+      \list{publisher}{1}{%
+        {World Scientific}%
+      }
+      \strng{namehash}{501f01f77e6071897d10a430fb045e8f}
+      \strng{fullhash}{501f01f77e6071897d10a430fb045e8f}
+      \strng{fullhashraw}{501f01f77e6071897d10a430fb045e8f}
+      \strng{bibnamehash}{501f01f77e6071897d10a430fb045e8f}
+      \strng{authorbibnamehash}{501f01f77e6071897d10a430fb045e8f}
+      \strng{authornamehash}{501f01f77e6071897d10a430fb045e8f}
+      \strng{authorfullhash}{501f01f77e6071897d10a430fb045e8f}
+      \strng{authorfullhashraw}{501f01f77e6071897d10a430fb045e8f}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-981-02-0427-3 978-981-02-0426-6}
+      \field{langid}{english}
+      \field{number}{13}
+      \field{series}{Advanced Series on Ocean Engineering}
+      \field{title}{Water Wave Propagation over Uneven Bottoms}
+      \field{year}{1997}
+    \endentry
     \entry{dirscherlRemoteSensingIce2020}{article}{}{}
       \name{author}{4}{}{%
         {{un=0,uniquepart=base,hash=1d39894c19e089674d4b7e8c785351c7}{%
