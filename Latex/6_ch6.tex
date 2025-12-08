@@ -244,29 +244,42 @@ aalto data works great can estimate mag and phase fairly reliably
 \end{figure}
 %----------------------------------------------------
 
+%----------------------------------------------------
 \begin{table}[H]
 \centering
-\caption{cuveFitter Parameter Estimations}
-\resizebox{\linewidth}{!}{%
-\begin{tabular}{|l|c|c|c|} 
+\begin{tabular}{|l|c|c|c|}
 \hline
-\textbf{Test}   & \multicolumn{1}{l|}{\textbf{Amplitude (mm)}}  & \multicolumn{1}{l|}{\textbf{Angular Frequency (rad/s)}}   & \multicolumn{1}{l|}{\textbf{R-square Score}}  \\ 
-\hline
-1               & 24.9046                                       & 3.9259                                                    & 0.98606                              \\ 
-\hline
-2               & 35.1361                                       & 3.9259                                                    & 0.97659                              \\ 
-\hline
-3               & 45.7627                                       & 3.9257                                                    & 0.96552                              \\ 
-\hline
-4               & 40.9202                                       & 3.142                                                     & 0.96427                              \\ 
-\hline
-5               & 34.1690                                       & 3.1443                                                    & 0.97534                              \\ 
-\hline
-6               & 27.8620                                       & 3.1438                                                    & 0.93052                              \\
-\hline
+\textbf{Test} & \multicolumn{1}{l|}{\textbf{Amplitude (mm)}} & \multicolumn{1}{l|}{\textbf{Angular Frequency (rad/s)}} & \multicolumn{1}{l|}{\textbf{R-square Score}} \\ \hline
+1             & 24.9046                                      & 3.9259                                                  & 0.98606                                      \\ \hline
+2             & 35.1361                                      & 3.9259                                                  & 0.97659                                      \\ \hline
+3             & 45.7627                                      & 3.9257                                                  & 0.96552                                      \\ \hline
+4             & 40.9202                                      & 3.142                                                   & 0.96427                                      \\ \hline
+5             & 34.1690                                      & 3.1443                                                  & 0.97534                                      \\ \hline
+6             & 27.8620                                      & 3.1438                                                  & 0.93052                                      \\ \hline
 \end{tabular}
-}
+\caption{curveFitter Parameter Estimations}
+\label{curveFitter}
 \end{table}
+%----------------------------------------------------
+
+%----------------------------------------------------
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|c|c|c|}
+\hline
+\textbf{Test} & \multicolumn{1}{l|}{\textbf{Mean Amplitude (mm)}} & \multicolumn{1}{l|}{\textbf{Mean Wave Number (rad/m)}} & \multicolumn{1}{l|}{\textbf{Mean Inliers}} \\ \hline
+1             & 26.0053                                           & 1.5404                                                 & 80.79 \%                                   \\ \hline
+2             & 37.3767                                           & 1.5566                                                 & 75.81 \%                                   \\ \hline
+3             & 47.8268                                           & 1.5518                                                 & 72.28 \%                                   \\ \hline
+4             & 55.3504                                           & 1.0039                                                 & 67.33 \%                                   \\ \hline
+5             & 43.2641                                           & 1.0079                                                 & 69.15 \%                                   \\ \hline
+6             & 29.3343                                           & 1.0137                                                 & 0.7207 \%                                  \\ \hline
+\end{tabular}
+\caption{RANSAC Parameter Estimations}
+\label{RANSAC}
+\end{table}
+%----------------------------------------------------
+
 
 %----------------------------------------------------
 \begin{figure}[H]
@@ -303,7 +316,7 @@ DBScan works so-so
 \\VDBScan works well but have example of how it falls apart
 \\OPTICS is probably the best at the moment
 
-aalto data as example for how pattern makes fucked densities and centre is only reliable area
+Aalto data as example for how pattern makes fucked densities and centre is only reliable area
 
 %----------------------------------------------------
 \begin{figure}[H]

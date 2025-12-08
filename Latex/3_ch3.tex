@@ -246,6 +246,7 @@ Before beginning the main prediction loop, the filter first needs a guess of the
 \section{Plane Fitting}
 \label{sec:ch3:section7}
 
+RANdom SAmple Consensus (RANSAC) plane fitting - RANdom SAmple Consensus is an algorithm that estimates a mathematical model from an input dataset. This method can be implemented to fit models of wave functions (sinusoidal and Stokes) to the collected data in an attempt to estimate the wave function parameters. The RANSAC algorithm estimates the model parameters by first selecting a random set of points in the dataset, either user-specified or the minimum number of points required to satisfy the model, and fits the model to these points. Using a user-selected tolerance, the algorithm then determines how many data points are inliers. This process is repeated until there are a satisfactory number of inliers or until the maximum number of iterations have been reached.
 
 %====================================================
 \section{Clustering Algorithms}
