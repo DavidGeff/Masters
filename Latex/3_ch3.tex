@@ -110,7 +110,7 @@ IP Rating                   & IP67                                       &  &  &
 Dimensions                  & 91 x 61.2 x 64.8 mm                        &  &  &  \\ \cline{1-2}
 \end{tabular}
 \caption{\textbf{Livox Avia Specifications.} The parameters}
-\label{table:AVIA_spec}
+\label{tab:AVIA_spec}
 \end{table}
 
 %====================================================
@@ -208,7 +208,7 @@ The Kalman filter uses the state-space format of a linear dynamic system, with t
 The process model of the system over time $k-1$ to $k$ is given as:
 
 %----------------------------------------------------
-\begin{equation} \label{process}
+\begin{equation} \label{eqn:process}
     x_k = Fx_{k-1} + Bu_{k-1} + w_{k-1} \quad
 \end{equation}
 %----------------------------------------------------
@@ -218,7 +218,7 @@ where $F$ is the state transition matrix applied the previous state matrix ($x_{
 The measurement model describes the relation between the state and measurement of the system at time $k$ and is given as:
 
 %----------------------------------------------------
-\begin{equation} \label{measure}
+\begin{equation} \label{eqn:measure}
     z_k = Hx_k + \nu_k \quad
 \end{equation}
 %----------------------------------------------------
@@ -236,7 +236,7 @@ The filter consists of three states:
 Before beginning the main prediction loop, the filter first needs a guess of the initial state of the system:
 
 %----------------------------------------------------
-\begin{equation} \label{init_state}
+\begin{equation} \label{eqn:init_state}
     \hat{x}_0^+ \quad
 \end{equation}
 

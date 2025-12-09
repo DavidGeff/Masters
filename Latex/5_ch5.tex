@@ -4,15 +4,24 @@
 \chapter{Pipeline Design}
 \label{ch:pipeline}
 
-*insert fig here*
+%----------------------------------------------------
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{figs/pipeline.png}
+    \caption{\textbf{Processing Pipeline.} Overview of the LiDAR data processing and feature extraction pipeline.}
+    \label{fig:pipeline}
+\end{figure}
+%----------------------------------------------------
 
 %====================================================
 \section{Data Extraction}
 \label{sec:ch5.section1}
 
-The starting point for the pipeline is the collected data. All data to be used for this investigation is a rosbag (.bag) or in the proprietary Livox file type (.lvx). The raw data has to be extracted from these file types before it can be processed or used in analysis. The Livox ROS driver includes functionality to convert .lvx files to .bag files. The file conversion retains all the point cloud data but does not save the IMU data to the created .bag file. MATLAB's ROS Toolbox contains functions that can extract data fields from a .bag file and convert each field to a standard MATLAB matrix or structure.
+The starting point for the pipeline is the raw Avia data. All data used in this investigation was captured as rosbag (.bag) or the proprietary Livox file type (.lvx). The raw data has to first be extracted from these file types before it can be processed or used in analysis. The Livox ROS driver includes functionality to convert .lvx files to .bag files. MATLAB's ROS Toolbox contains functions and tools for extracting data fields from a .bag file for storage and use in standard MATLAB matrices or structures.
 
-MATLAB's Lidar Toolbox has provision for a pointCloud object which was used for all data processing. This object contains fields for the point cloud's x, y and z co-ordinate data, point colours, normals and intensities. The Avia is only capable of directly measuring point intensity, so this was the only additional field extracted from the .bag files into MATLAB.
+IMU data (linear \& rotational accelerations and timestamps) captured by the Avia is extracted from the .bag files and then stored in matrices for further processing.
+
+MATLAB's Lidar Toolbox has provision for a pointCloud object which was used to store all LIDAR data for processing and analysis. This object contains fields for the point cloud's x, y and z co-ordinate data, total number of points, as well as point colours, normals and intensities. The Avia is only capable of directly measuring point intensity, so this was the only additional data field extracted from the .bag files into the pointCloud object. Frame timestamps are not stored in the pointCloud object, but in a standalone array.
 
 %====================================================
 \section{Motion Compensation}
@@ -20,7 +29,18 @@ MATLAB's Lidar Toolbox has provision for a pointCloud object which was used for 
 
 Two Kalman filters were created to estimate the attitude of the Avia during data collection. The filters output estimates of the sensor's roll and pitch (yaw cannot be reliably estimated from IMU data). Using these angle estimates an inverse transform can be applied to the point cloud to 'stabilise' the data and compensate for the motion of the observation platform (ship). As this Kalman filter only estimates changes in roll and pitch attitude, and not position, there will still be motion artefacts in the data due to translation and yaw of the observation platform. 
 
-The first Kalman filter was created using MATLAB's Sensor Fusion Toolbox. The second Kalman filter is an Extended Kalman Filter (EKF) which was initially developed by Phil Salmony (cite here).
+The first Kalman filter was created using MATLAB's Sensor Fusion Toolbox. The second Kalman filter is an Extended Kalman Filter (EKF) which was initially developed by Philip Salmony (\cite{salmonyPms67AttitudeEstimation2025}). Both filters accept the Avia IMU data as inputs and return roll and yaw estimates at the same frequency as the input data (200 Hz).
+
+Once angle estimations have been obtained, they have to be time synchronised and matched to their corresponding point cloud frames. Each angle estimation and frame has an associated timestamp that was used to match frames with angle estimations. Angle estimations are produced at 200 Hz while point cloud frames are produced 20 times slower, at 10 Hz. The list of frame timestamps was iterated through, and matched with its associated angle estimation timestamp. If no exact match was found, then the angle estimation closest in time was associated to the frame. Next, a rigid 3-D transform with no translation is created for each point cloud frame from its associated angle estimation. These transforms are then applied to each frame in the pointCloud object to complete the motion compensation.
+
+%----------------------------------------------------
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{figs/motion_comp.png}
+    \caption{\textbf{Motion Compensation Pipeline}}
+    \label{fig:motion_compensation}
+\end{figure}
+%----------------------------------------------------
 
 %====================================================
 \section{De-Noising}
@@ -38,38 +58,38 @@ As there was no time synchronisation between the Avia and wave probe, instantane
 
 The strict constraints on the wave behaviours allows for the wave models used to be greatly simplified. It can be assumed the waves will propagate uniformly across the tank with minimal change in direction and velocity.
 
-Using the MATLAB curveFitter tool, a sinusoidal model (equation \ref{probe_sin}) of wave height over time was fitted to the Aalto wave probe data from each test, producing a single amplitude and period value per test.
+Using the MATLAB curveFitter tool, a sinusoidal model (equation \ref{eqn:probe_sin}) of wave height over time was fitted to the Aalto wave probe data from each test, producing a single amplitude and period value per test.
 
 %----------------------------------------------------
-\begin{equation} \label{probe_sin}
+\begin{equation} \label{eqn:probe_sin}
     y = Asin(\omega t + c)
 \end{equation}
 %----------------------------------------------------
 
 \textit{y} is the wave height at time \textit{t}, \textit{A} is  amplitude, \textit{$\omega$} is the  angular frequency and \textit{c} is the phase shift. For this investigation, only amplitude and angular frequency (\textit{A} and \textit{$\omega$}) are of interest.
 
-To model the waves from point cloud data, a spatial sinusoidal plane model (equation \ref{avia_sin}) was fitted to each frame in the point cloud using RANSAC. Each frame fit was run for 300 iterations at an inlier tolerance of 0.02 m (2 cm).
+To model the waves from point cloud data, a spatial sinusoidal plane model (equation \ref{eqn:avia_sin}) was fitted to each frame in the point cloud using RANSAC. Each frame fit was run for 300 iterations at an inlier tolerance of 0.02 m (2 cm).
 
 %----------------------------------------------------
-\begin{equation} \label{avia_sin}
+\begin{equation} \label{eqn:avia_sin}
     z = Asin(Bx + C) + Dx + Ey + F
 \end{equation}
 %----------------------------------------------------
 
 \textit{x}, \textit{y} and \textit{z} are co-ordinates of the wave relative to the Avia's origin. \textit{A} is the amplitude, \textit{B} is the wave number, \textit{C} is the phase shift and \textit{D} and \textit{E} are plane slopes and \textit{F} is an offset. For this investigation only amplitude and wave number (\textit{A} and \textit{B}) are of interest.
 
-Wave number (\textit{k}) is related to angular velocity (\textit{$\omega$}) through the dispersion relation (\cite{dingemansWaterWavePropagation1997}) given in equation \ref{dispersion}.
+Wave number (\textit{k}) is related to angular velocity (\textit{$\omega$}) through the dispersion relation (\cite{dingemansWaterWavePropagation1997}) given in equation \ref{eqn:dispersion}.
 
 %----------------------------------------------------
-\begin{equation} \label{dispersion}
+\begin{equation} \label{eqn:dispersion}
     \omega = \sqrt{gk}
 \end{equation}
 %----------------------------------------------------
 
-Wave angular velocity (\textit{$\omega$}) can be converted to period (\textit{T}) by the relation given in equation \ref{period}.
+Wave angular velocity (\textit{$\omega$}) can be converted to period (\textit{T}) by the relation given in equation \ref{eqn:period}.
 
 %----------------------------------------------------
-\begin{equation} \label{period}
+\begin{equation} \label{eqn:period}
     T = \frac{2\pi}{\omega} 
 \end{equation}
 %----------------------------------------------------

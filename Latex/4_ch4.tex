@@ -22,6 +22,42 @@ The sensor was set up to capture data using ROS (ROS Neotic) and the Livox ROS d
 With no ground truth data available for data collected from the SCALE cruise and minimal ground truth data from the Aalto dataset, methods for validating the pipeline's performance are required. Procedures for evaluating the Kalman filter and normal estimation are detailed in the following.
 
 %----------------------------------------------------
+\subsection{Stationary Characterisation Experiment}
+
+LIDAR BEAM DIVERGENCE
+
+The following setup was devised to test the Avia's ability to resolve basic geometric shapes and their sizes.
+
+%----------------------------------------------------
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{figs/field_boards.JPG}
+    \caption{\textbf{boards}}
+    \label{fig:boards}
+\end{figure}
+%----------------------------------------------------
+
+Two sheets of hardboard, 1220 x 1220 mm each, were used to create a concave and convex surface. Holes were drilled in each corner of the board, and two pieces of string were used to deform the board and create a curved shape as shown in Figure \ref{fig:boards} above. The boards were placed on the rugby field at a distance of approximately 40 metres from the Avia, which was at a height of 10 metres (check these dimensions) above the field. The Avia was set up at an angle of depression of 16°. Two variations of the scene were collected, resulting in four variations of the target boards; concave and convex with the axis of curvature parallel to the sensor's X-axis (down the sensor line of sight) and with the board's axis of curvature parallel to the sensor's Y-axis (perpendicular to the sensor's line of sight).
+
+%----------------------------------------------------
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{figs/edited_level.png}
+    \caption{\textbf{angle}}
+    \label{fig:angle}
+\end{figure}
+%----------------------------------------------------
+
+%----------------------------------------------------
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{figs/Field_setup.JPG}
+    \caption{\textbf{Field Setup}}
+    \label{fig:field_setup}
+\end{figure}
+%----------------------------------------------------
+
+%----------------------------------------------------
 \subsection{Kalman Filter Experiment}
 
 A method is required to compare the output of the Kalman filter to known motion. This was achieved through the use of the Avia, a Stewart platform, and a motion capture system. To simulate the Avia recording data from a moving platform, a Stewart platform was used, and a motion capture system recorded ground-truth motion data for comparison and validation. A Stewart platform is a device that has the ability to manipulate its target platform in 6 degrees (linear translations on the X, Y and Z axes and rotation along the X, Y, and Z axes). The Stewart platform used was designed and built by Liam Clark, a former student for his Final Year Project. This platform has been in storage since 2018 having been used occasionally over the years, and has had many repairs and parts replaced. This has resulted in the platform performing irregularly and not up to the original design specifications. The use of the motion capture system overcomes this.
@@ -61,42 +97,7 @@ The Avia was first rotated along single axes, first along the X-axis, and then a
 
 The co-ordinate systems of the Stewart Platform and motion capture system were not aligned, the Stewart Platform was offset from the motion capture system by -44° around its Z-axis.
 
-%----------------------------------------------------
-\subsection{Stationary Characterisation Experiment}
-
-LIDAR BEAM DIVERGENCE
-
-The following setup was devised to test the Avia's ability to resolve basic geometric shapes and their sizes.
-
-%----------------------------------------------------
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.6\textwidth]{figs/field_boards.JPG}
-    \caption{\textbf{boards}}
-    \label{fig:boards}
-\end{figure}
-%----------------------------------------------------
-
-Two sheets of hardboard, 1220 x 1220 mm each, were used to create a concave and convex surface. Holes were drilled in each corner of the board, and two pieces of string were used to deform the board and create a curved shape as shown in Figure \ref{fig:boards} above. The boards were placed on the rugby field at a distance of approximately 40 metres from the Avia, which was at a height of 10 metres (check these dimensions) above the field. The Avia was set up at an angle of depression of 16°. Two variations of the scene were collected, resulting in four variations of the target boards; concave and convex with the axis of curvature parallel to the sensor's X-axis (down the sensor line of sight) and with the board's axis of curvature parallel to the sensor's Y-axis (perpendicular to the sensor's line of sight).
-
-%----------------------------------------------------
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.6\textwidth]{figs/edited_level.png}
-    \caption{\textbf{angle}}
-    \label{fig:angle}
-\end{figure}
-%----------------------------------------------------
-
-%----------------------------------------------------
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.6\textwidth]{figs/Field_setup.JPG}
-    \caption{\textbf{Field Setup}}
-    \label{fig:field_setup}
-\end{figure}
-%----------------------------------------------------
-
+\newpage
 %====================================================
 \section{Pre-Existing Data}
 \label{sec:ch4.section3}
