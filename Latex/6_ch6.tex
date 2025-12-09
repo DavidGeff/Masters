@@ -12,8 +12,10 @@ lots of frames (like 6+) to resolve mid level detail
 \\bad shadowing and lidar beam divergence
 
 %====================================================
-\section{Kalman}
+\section{De-Noising and Motion Compensation}
 \label{sec:ch6.section2}
+
+The threshold de-noising function performs well in removing these unwanted returns and improving the usability of the collected data.
 
 Platform offset -44 deg in yaw (Z-axis) from mocap axis.
 \\both perform about the same, cant do yaw, mediocre performance
@@ -318,7 +320,7 @@ aalto data works great can estimate mag and phase fairly reliably
 %----------------------------------------------------
 
 %====================================================
-\section{Clustering?}
+\section{Pancake Identification \& Clustering}
 \label{sec:ch6.section4}
 
 Hard to discriminate between individual pancakes in consolidated regions/ pancakes close together

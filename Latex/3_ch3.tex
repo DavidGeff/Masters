@@ -47,6 +47,7 @@ The sensor used to collect data for this investigation was the Livox Avia. The L
 
 The Avia has two built-in scanning patterns, a repetitive and a non-repetitive pattern. The repetitive scanning pattern scans the target area in a narrow horizontal band, providing a more uniform point density per frame when compared to the non-repetitive mode. The non-repetitive scanning pattern scans the target with a rosette-shaped pattern which rotates as it scans, covering areas not scanned in previous frames. This scanning method results in a high density of points in the centre of the target, with the number of points reducing towards the edges of the sensor's field of view (FOV). The non-repetitive scanning pattern was used for data capture as it provides a wider FOV than the non-repetitive scanning pattern and captures more unique data points.
 
+%----------------------------------------------------
 \begin{figure}[H]
     \centering
     \begin{minipage}{0.33\textwidth}
@@ -67,7 +68,9 @@ The Avia has two built-in scanning patterns, a repetitive and a non-repetitive p
     \caption{\textbf{Livox Avia Repetitive Scanning Pattern}}
     \label{fig:rep}
 \end{figure}
+%----------------------------------------------------
 
+%----------------------------------------------------
 \begin{figure}[H]
     \centering
     \begin{minipage}{0.33\textwidth}
@@ -88,9 +91,11 @@ The Avia has two built-in scanning patterns, a repetitive and a non-repetitive p
     \caption{\textbf{Livox Avia Non-Repetitive Scanning Pattern}}
     \label{fig:non_rep}
 \end{figure}
-
+%----------------------------------------------------
 
 The sensor has three return rate settings: single, double, or triple return. The Avia was used exclusively in single return mode.
+
+Return intensity stuff here. This information is stored as an 8-bit value (0-255) associated to each point.
 
 \begin{table}[H]
 \centering
