@@ -7,7 +7,7 @@
 %----------------------------------------------------
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\textwidth]{figs/pipeline.png}
+    \includegraphics[width=0.82\textwidth]{figs/pipeline.png}
     \caption{\textbf{Processing Pipeline.} Overview of the LiDAR data processing and feature extraction pipeline.}
     \label{fig:pipeline}
 \end{figure}
@@ -36,7 +36,7 @@ Once angle estimations have been obtained, they have to be time synchronised and
 %----------------------------------------------------
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\textwidth]{figs/motion_comp.png}
+    \includegraphics[width=0.82\textwidth]{figs/motion_comp.png}
     \caption{\textbf{Motion Compensation Pipeline}}
     \label{fig:motion_compensation}
 \end{figure}
@@ -55,7 +55,7 @@ The return intensity of points can be used to remove or ignore unwanted points. 
 %----------------------------------------------------
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.95\textwidth]{figs/threshold.png}
+    \includegraphics[width=0.8\textwidth]{figs/threshold.png}
     \caption{\textbf{De-noising Pipeline}}
     \label{fig:threshold}
 \end{figure}
@@ -111,12 +111,21 @@ Wave angular velocity (\textit{$\omega$}) can be converted to period (\textit{T}
 
 Once all estimations were converted to wave period, the mean period and amplitude for each test, as determined by the Avia data were computed for comparison against the wave probe ground truth data.
 
+%----------------------------------------------------
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{figs/wave_est.png}
+    \caption{\textbf{Wave Parameter Estimation Pipeline}}
+    \label{fig:wave_est}
+\end{figure}
+%----------------------------------------------------
+
 %====================================================
 \section{Pancake Identification \& Clustering}
 \label{sec:ch5.section5}
 
 
-clustering - talk through why some clustering will  or won't work, k-tree stuff needs to know how many clusters there are, hierarchies don't make sense, DBScan relies on constant density (not ideal), optics needs an explanation. 
+Talk through why some clustering will  or won't work, k-tree stuff needs to know how many clusters there are, hierarchies don't make sense, DBScan relies on constant density (not ideal), optics needs an explanation. 
 To identify the size and shape of individual pancakes, a method to associate individual points with individual pancakes is required. A method to achieve this is the use of a clustering algorithm. One such clustering algorithm is Density-Based Spatial Clustering of Applications with Noise (DBScan). DBScan identifies clusters in data based on how densely packed points are, clusters are dense regions separated by lower density areas (outliers). The function has a minimum of two input criteria; minPts, the minimum number of points required to form a cluster, and epsilon ($\epsilon$), the maximum distance allowed between points for them to be classified as being in the same neighbourhood. These parameters are used to classify points into one of three categories; core points, border points, and noise points. A core point is a point that has sufficient points, including itself (set by minPts) within a given radius (set by $\epsilon$). A border point is a point that is not a core point but is still within the neighbourhood radius ($\epsilon$) of a core point. A noise point is neither a core point nor a border point. Core points and their associated border points form an individual cluster, whereas noise points are not part of any cluster.
 
 %----------------------------------------------------
