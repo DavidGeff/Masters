@@ -203,6 +203,9 @@ In the Avia's repetitive scanning pattern (See Figure \ref{fig:rep}), the sensor
 
 Many processing methods are also based on the assumption that the environment data is collected from will contain predominantly objects made of simple geometries. For example, a scene in an urban environment will contain many objects made of rectangles, circles and triangles. The environment that data for this investigation was captured contains none of these simple shapes, with the geometry of the pancake floes being irregular and superimposed upon complex ocean surface waves.
 
+*something about normals here maybe*
+*something about return intensities here*
+
 %====================================================
 \section{Kalman Filters}
 \label{sec:ch3:section5}
@@ -250,6 +253,8 @@ Before beginning the main prediction loop, the filter first needs a guess of the
 %====================================================
 \section{Plane Fitting}
 \label{sec:ch3:section6}
+
+Plane fitting is a common method used in point cloud processing to identify and isolate planar surfaces within a point cloud dataset. Various algorithms exist to perform plane fitting, with the most common being the Least Squares Method and the \ac{RANSAC} algorithm. *refine and edit this* move onto how this could be used for wave fitting
 
 \ac{RANSAC} plane fitting - \ac{RANSAC} is an algorithm that estimates a mathematical model from an input dataset. This method can be implemented to fit models of wave functions (sinusoidal and Stokes) to the collected data in an attempt to estimate the wave function parameters. The \ac{RANSAC} algorithm estimates the model parameters by first selecting a random set of points in the dataset, either user-specified or the minimum number of points required to satisfy the model, and fits the model to these points. Using a user-selected tolerance, the algorithm then determines how many data points are inliers. This process is repeated until there are a satisfactory number of inliers or until the maximum number of iterations have been reached.
 
