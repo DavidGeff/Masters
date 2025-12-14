@@ -12,15 +12,15 @@
 %ROS allows hardware to be easily added and removed from a platform for testing and development. The Livox Avia has manufacturer-supplied ROS drivers, hence this was the chosen method for interfacing with the device during data collection. 
 
 %====================================================
-\section{LIDAR Sensors}
+\section{\ac{LiDAR} Sensors}
 \label{sec:ch3:section1}
 
-A basic LIDAR sensor consists of three main components, a laser source, a steering mechanism to direct the laser beam, and a method of detecting the returning laser beam.
+A basic \ac{LiDAR} sensor consists of three main components, a laser source, a steering mechanism to direct the laser beam, and a method of detecting the returning laser beam.
 
 (the exact wavelength of the laser depends on the application and manufacturer's intended use), Different lasers are selected for different reasons, such as penetration power, eye safety, measurement accuracy and something. The steering mechanism used determines the field of view, angular resolution and impacts the measurement accuracy of the sensor. Prisms, mirrors and something can be used to steer the laser's direction. 
-Most LIDAR sensors are only capable of creating point clouds with a limited number of predetermined scanning patterns. The most common scanning pattern is a rectangular pattern (an N x M grid of points). Sensors designed for automotive or autonomous vehicle use often have 360 degree coverage in their azimuth and a set vertical resolution, commonly using spinning mirrors or prisms to achieve this.
+Most \ac{LiDAR} sensors are only capable of creating point clouds with a limited number of predetermined scanning patterns. The most common scanning pattern is a rectangular pattern (an N x M grid of points). Sensors designed for automotive or autonomous vehicle use often have 360 degree coverage in their azimuth and a set vertical resolution, commonly using spinning mirrors or prisms to achieve this.
 
-Some LIDAR sensors are capable of measuring multiple returns from a single output pulse \cite{WhatLidarDataArcGIS}. This is possible when the object hit by the laser pulse does not reflect or absorb all the output energy but allows some to pass through itself. If this occurs multiple times for a single laser pulse, and the sensor is capable of detecting all of these returns, it is possible for a sensor to record more returned points than output laser pulses.
+Some \ac{LiDAR} sensors are capable of measuring multiple returns from a single output pulse \cite{WhatLidarDataArcGIS}. This is possible when the object hit by the laser pulse does not reflect or absorb all the output energy but allows some to pass through itself. If this occurs multiple times for a single laser pulse, and the sensor is capable of detecting all of these returns, it is possible for a sensor to record more returned points than output laser pulses.
 
 %----------------------------------------------------
 \begin{figure}[H]
@@ -34,7 +34,7 @@ Some LIDAR sensors are capable of measuring multiple returns from a single outpu
 %----------------------------------------------------
 \subsection{Livox Avia}
 
-The sensor used to collect data for this investigation was the Livox Avia. The Livox Avia is a solid-state laser and Risley prism-based LIDAR scanner with a built-in inertial measurement unit (IMU). The sensor makes use of a 905 nm near infrared laser *edit here*
+The sensor used to collect data for this investigation was the Livox Avia. The Livox Avia is a solid-state laser and Risley prism-based \ac{LiDAR} scanner with a built-in inertial measurement unit (\ac{IMU}). The sensor makes use of a 905 nm near infrared laser *edit here*
 
 %----------------------------------------------------
 \begin{figure}[H]
@@ -45,7 +45,7 @@ The sensor used to collect data for this investigation was the Livox Avia. The L
 \end{figure}
 %----------------------------------------------------
 
-The Avia has two built-in scanning patterns, a repetitive and a non-repetitive pattern. The repetitive scanning pattern scans the target area in a narrow horizontal band, providing a more uniform point density per frame when compared to the non-repetitive mode. The non-repetitive scanning pattern scans the target with a rosette-shaped pattern which rotates as it scans, covering areas not scanned in previous frames. This scanning method results in a high density of points in the centre of the target, with the number of points reducing towards the edges of the sensor's field of view (FOV). The non-repetitive scanning pattern was used for data capture as it provides a wider FOV than the non-repetitive scanning pattern and captures more unique data points.
+The Avia has two built-in scanning patterns, a repetitive and a non-repetitive pattern. The repetitive scanning pattern scans the target area in a narrow horizontal band, providing a more uniform point density per frame when compared to the non-repetitive mode. The non-repetitive scanning pattern scans the target with a rosette-shaped pattern which rotates as it scans, covering areas not scanned in previous frames. This scanning method results in a high density of points in the centre of the target, with the number of points reducing towards the edges of the sensor's field of view (\ac{FOV}). The non-repetitive scanning pattern was used for data capture as it provides a wider \ac{FOV} than the non-repetitive scanning pattern and captures more unique data points.
 
 %----------------------------------------------------
 \begin{figure}[H]
@@ -105,11 +105,11 @@ Laser Wavelength            & 905 nm                                     &  &  &
 Laser Safety                & Class 1 (Safe for eyes)                    &  &  &  \\ \cline{1-2}
 Detection Range (@ 100 klx) & \begin{tabular}[c]{@{}l@{}}190 m @ 10\% reflectivity\\ 230 m @ 20\% reflectivity\\ 320 m @ 80\% reflectivity\end{tabular} &  &  &  \\ \cline{1-2}
 Detection Range (@ 0 klx)   & \begin{tabular}[c]{@{}l@{}}190 m @ 10\% reflectivity\\ 260 m @ 20\% reflectivity\\ 450 m @ 80\% reflectivity\end{tabular} &  &  &  \\ \cline{1-2}
-FOV                         & \begin{tabular}[c]{@{}l@{}} Non-repetitive Scanning Pattern: 70.4° (H) × 77.2 (V)\\ Repetitive Scanning Pattern: 70.4° (H) × 4.5° (V)\end{tabular}          &  &  &  \\ \cline{1-2}
+\ac{FOV}                         & \begin{tabular}[c]{@{}l@{}} Non-repetitive Scanning Pattern: 70.4° (H) × 77.2 (V)\\ Repetitive Scanning Pattern: 70.4° (H) × 4.5° (V)\end{tabular}          &  &  &  \\ \cline{1-2}
 Distance Random Error       & 1$\sigma$ (@ 20 m) $<$ 2 cm                         &  &  &  \\ \cline{1-2}
 Point Rate                  & 240,000 points/s                           &  &  &  \\ \cline{1-2}
 Beam Divergence             & 0.28° (Vertical) x 0.03° (Horizontal)      &  &  &  \\ \cline{1-2}
-IMU                         & Bosch Sensortec BMI088                     &  &  &  \\ \cline{1-2}
+\ac{IMU}                         & Bosch Sensortec BMI088                     &  &  &  \\ \cline{1-2}
 Operating Temperature Range & -20° to 65° C                              &  &  &  \\ \cline{1-2}
 IP Rating                   & IP67                                       &  &  &  \\ \cline{1-2}
 Dimensions                  & 91 x 61.2 x 64.8 mm                        &  &  &  \\ \cline{1-2}
@@ -119,16 +119,16 @@ Dimensions                  & 91 x 61.2 x 64.8 mm                        &  &  &
 \end{table}
 
 %====================================================
-\section{LIDAR Characteristics}
+\section{\ac{LiDAR} Characteristics}
 \label{sec:ch3:section2}
 
-LIDAR is used over other remote sensing methods for various reasons. Being an active sensing method is advantageous over visual method such as telephoto or stereoscopic cameras as it does not require external illumination to observe the target. Additionally, with the correct sensor selection, LIDAR is less susceptible to issues such as lens flare or overexposure to which typical cameras are prone. Certain LIDAR sensors also have the ability to penetrate vegetation, allowing mapping of ground surfaces beneath areas obscured by plant cover.\\
-Compared to radar, LIDAR typically has superior mapping precision and target resolution, allowing more accurate reproductions of the target and the surrounding environment.
-Using LIDAR is not without its disadvantages. LIDAR sensors are more expensive than more traditional remote sensing hardware. Unlike cameras, which can recover details such as colour, LIDAR is only able to recover the three-dimensional geometry of the target. Radar outperforms LIDAR in certain applications. It is capable of much larger detection ranges than LIDAR and is also unaffected by adverse environmental conditions such as smoke, rain, and fog.
+\ac{LiDAR} is used over other remote sensing methods for various reasons. Being an active sensing method is advantageous over visual method such as telephoto or stereoscopic cameras as it does not require external illumination to observe the target. Additionally, with the correct sensor selection, \ac{LiDAR} is less susceptible to issues such as lens flare or overexposure to which typical cameras are prone. Certain \ac{LiDAR} sensors also have the ability to penetrate vegetation, allowing mapping of ground surfaces beneath areas obscured by plant cover.\\
+Compared to radar, \ac{LiDAR} typically has superior mapping precision and target resolution, allowing more accurate reproductions of the target and the surrounding environment.
+Using \ac{LiDAR} is not without its disadvantages. \ac{LiDAR} sensors are more expensive than more traditional remote sensing hardware. Unlike cameras, which can recover details such as colour, \ac{LiDAR} is only able to recover the three-dimensional geometry of the target. Radar outperforms \ac{LiDAR} in certain applications. It is capable of much larger detection ranges than \ac{LiDAR} and is also unaffected by adverse environmental conditions such as smoke, rain, and fog.
 
-especially LIDAR which is typically used in urban environments or for terrain mapping.
+especially \ac{LiDAR} which is typically used in urban environments or for terrain mapping.
 
-LIDAR sensors suffer from beam divergence due to their use of lasers as the sensor energy emitter. Beam divergence is a measure of the angle at which photons diverge from the axis of the emitter over distance as the beam exits the laser aperture (\cite{jelinkovaLaserCharacteristics2013}). The steering mechanism within LIDAR sensors (mirrors or prisms) may also impact the total beam divergence of the system. Beam divergence results in the laser beam or pulse exiting the sensor not as a single stream of photons, but rather as a cone of photons. When the beam reaches a target, the footprint of the beam will be in the shape of an ellipse with a size different to that of the beam at the aperture (\cite{kukkoMobileLaserScanning2013}). Beam divergence leads to uncertainties and errors in the reported locations of targets and their associated points in the final point cloud.
+\ac{LiDAR} sensors suffer from beam divergence due to their use of lasers as the sensor energy emitter. Beam divergence is a measure of the angle at which photons diverge from the axis of the emitter over distance as the beam exits the laser aperture (\cite{jelinkovaLaserCharacteristics2013}). The steering mechanism within \ac{LiDAR} sensors (mirrors or prisms) may also impact the total beam divergence of the system. Beam divergence results in the laser beam or pulse exiting the sensor not as a single stream of photons, but rather as a cone of photons. When the beam reaches a target, the footprint of the beam will be in the shape of an ellipse with a size different to that of the beam at the aperture (\cite{kukkoMobileLaserScanning2013}). Beam divergence leads to uncertainties and errors in the reported locations of targets and their associated points in the final point cloud.
 
 The Livox Avia has a listed beam divergence of 0.28° x 0.03° along its vertical and horizontal plane. This results in the emitted beam, if falling on a target perfectly perpendicular to the axis of propagation at a distance of 50 meters, having the form of an ellipse with the approximate dimensions of 244.35 x 26.18 mm. *insert fig here* 
 
@@ -199,7 +199,7 @@ The above suggests that the Livox Avia is best suited to detecting low density s
 
 Many common point cloud processing methods are built around the assumption that the point cloud being worked upon is in the format of a standard (M x N) grid layout. Methods such as point cloud registration (obtaining the transformation between two point clouds (\cite{huangComprehensiveSurveyPoint2021})), clustering and model fitting often use the assumption of a constant grid with a constant number of points per frame to achieve their outputs. To bypass this limitation it is common for point clouds to be downsampled through a grid filter to achieve the desired format \cite{3DPointCloud}.
 
-In the Avia's repetitive scanning pattern (See Figure \ref{fig:rep}), the sensor produces a point cloud with a roughly rectangular FOV and consistent point density, which is suitable for downsampling and grid filtering. Point clouds produced by the non-repetitive scanning pattern (See Figure \ref{fig:non_rep}) are circular and do not have uniform point density and are thus not ideal for downsampling and grid filtering.
+In the Avia's repetitive scanning pattern (See Figure \ref{fig:rep}), the sensor produces a point cloud with a roughly rectangular \ac{FOV} and consistent point density, which is suitable for downsampling and grid filtering. Point clouds produced by the non-repetitive scanning pattern (See Figure \ref{fig:non_rep}) are circular and do not have uniform point density and are thus not ideal for downsampling and grid filtering.
 
 Many processing methods are also based on the assumption that the environment data is collected from will contain predominantly objects made of simple geometries. For example, a scene in an urban environment will contain many objects made of rectangles, circles and triangles. The environment that data for this investigation was captured contains none of these simple shapes, with the geometry of the pancake floes being irregular and superimposed upon complex ocean surface waves.
 
@@ -251,7 +251,7 @@ Before beginning the main prediction loop, the filter first needs a guess of the
 \section{Plane Fitting}
 \label{sec:ch3:section6}
 
-RANdom SAmple Consensus (RANSAC) plane fitting - RANdom SAmple Consensus is an algorithm that estimates a mathematical model from an input dataset. This method can be implemented to fit models of wave functions (sinusoidal and Stokes) to the collected data in an attempt to estimate the wave function parameters. The RANSAC algorithm estimates the model parameters by first selecting a random set of points in the dataset, either user-specified or the minimum number of points required to satisfy the model, and fits the model to these points. Using a user-selected tolerance, the algorithm then determines how many data points are inliers. This process is repeated until there are a satisfactory number of inliers or until the maximum number of iterations have been reached.
+\ac{RANSAC} plane fitting - \ac{RANSAC} is an algorithm that estimates a mathematical model from an input dataset. This method can be implemented to fit models of wave functions (sinusoidal and Stokes) to the collected data in an attempt to estimate the wave function parameters. The \ac{RANSAC} algorithm estimates the model parameters by first selecting a random set of points in the dataset, either user-specified or the minimum number of points required to satisfy the model, and fits the model to these points. Using a user-selected tolerance, the algorithm then determines how many data points are inliers. This process is repeated until there are a satisfactory number of inliers or until the maximum number of iterations have been reached.
 
 %====================================================
 \section{Clustering Algorithms}

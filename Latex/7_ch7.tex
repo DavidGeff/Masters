@@ -10,26 +10,27 @@
 Lots of frames (like 6+) to resolve mid level detail
 \\few frames give very rough estimate of gross geometry
 \\bad shadowing and LiDAR beam divergence
+\\normals estimation not reliable enough to use
 
 %====================================================
 \section{De-noising and Motion Compensation}
 \label{sec:ch7.section2}
 
-The de-noising function performed as expected. It was able to remove unwanted returns produced by adverse environmental conditions without removing any valid points from the target scene.
+%----------------------------------------------------
+\subsection{Motion Compensation}
 
-Platform offset -44 deg in yaw (Z-axis) from mocap axis.
-\\both perform about the same, cant do yaw, mediocre performance
-\\add reasoning for yaw being less relevant on ship
-\\talk about residuals
-\\5 deg kinda whack
+Both Kalman filters produced angle estimates very similar to each other, see Figures \ref{fig:vs_roll_10}, \ref{fig:vs_pitch_10}, \ref{fig:vs_roll_5} and \ref{fig:vs_pitch_5}. Overall, The \ac{IMU} Filter produced slightly more conservative angle estimates with less variability than the \ac{EKF}. The \ac{IMU} angle estimations have a slight positive bias compared to the \ac{EKF} estimations. 
 
+both filters perform about the same, mediocre performance
+
+*probably combine boxplots*
 10 degree plots:
 
 %----------------------------------------------------
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.6\textwidth]{figs/ekf_resid_10.png}
-    \caption{\textbf{EKF residuals}}
+    \includegraphics[width=0.9\textwidth]{figs/ekf_resid_10.png}
+    \caption{\textbf{\ac{EKF} residuals}}
     \label{fig:ekf_resid_10}
 \end{figure}
 %----------------------------------------------------
@@ -37,8 +38,8 @@ Platform offset -44 deg in yaw (Z-axis) from mocap axis.
 %----------------------------------------------------
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.6\textwidth]{figs/imu_resid_10.png}
-    \caption{\textbf{IMU residuals}}
+    \includegraphics[width=0.9\textwidth]{figs/imu_resid_10.png}
+    \caption{\textbf{\ac{IMU} residuals}}
     \label{fig:imu_resid_10}
 \end{figure}
 %----------------------------------------------------
@@ -66,8 +67,8 @@ Platform offset -44 deg in yaw (Z-axis) from mocap axis.
 %----------------------------------------------------
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.6\textwidth]{figs/ekf_resid_5.png}
-    \caption{\textbf{EKF residuals}}
+    \includegraphics[width=0.9\textwidth]{figs/ekf_resid_5.png}
+    \caption{\textbf{\ac{EKF} residuals}}
     \label{fig:ekf_resid_5}
 \end{figure}
 %----------------------------------------------------
@@ -75,8 +76,8 @@ Platform offset -44 deg in yaw (Z-axis) from mocap axis.
 %----------------------------------------------------
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.6\textwidth]{figs/imu_resid_5.png}
-    \caption{\textbf{IMU residuals}}
+    \includegraphics[width=0.9\textwidth]{figs/imu_resid_5.png}
+    \caption{\textbf{\ac{IMU} residuals}}
     \label{fig:imu_resid_5}
 \end{figure}
 %----------------------------------------------------
@@ -100,26 +101,36 @@ Platform offset -44 deg in yaw (Z-axis) from mocap axis.
 %----------------------------------------------------
 
 %----------------------------------------------------
+\subsection{De-noising}
+
+The de-noising function performed as expected. It removes unwanted returns produced by adverse environmental conditions without removing many valid points from the target scene.
+
+%----------------------------------------------------
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.6\textwidth]{figs/kalman.png}
-    \caption{\textbf{Kalman}}
-    \label{fig:kalman}
+    \includegraphics[width=0.6\textwidth]{figs/no_threshold.png}
+    \caption{\textbf{Noisy Frame}}
+    \label{fig:no_thresh}
 \end{figure}
 %----------------------------------------------------
+
+%----------------------------------------------------
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{figs/threshold.png}
+    \caption{\textbf{De-noised Frame}}
+    \label{fig:thresh}
+\end{figure}
+%----------------------------------------------------
+
+As seen in Figures \ref{fig:no_thresh} and \ref{fig:thresh} above, the cone of noisy data in front of the sensor's aperture has been removed, with minimal invalid points remaining in the region. The horizontal feauture that remains is a part of the ship's deck from where the data was collected. A small number of points from the ice field have been removed by the process, as seen around Z = -20 m, X = 10 m.
 
 \newpage
 %====================================================
 \section{Wave Estimation}
 \label{sec:ch7.section3}
 
-Aalto data works great can estimate magnitude and phase fairly reliably
-\\only on sine waves
-\\phase way more reliable
-\\ice height is probably messing with amp
-\\needs close view, with high point density
-\\scale scans far and oblique angle make estimation hard
-\\shows how large scale environment geometry can be extracted from point clouds
+The mean wave magnitude and period were able to be determined with a high degree of confidence from the wave probe data using the MATLAB curveFitter tool. All tests produced R-square scores above 0.93, indicating a strong correlation between the fitted model and the raw probe data, as seen in Table \ref{tab:curveFitter}. The wave periods all closely matched the parameters set to the wave makers (1.6 s and 2 s). However, the amplitudes did not match the set values as closely, the first, second and fifth tests tracked the set values fairly well, while the third, fourth and sixth tests did not. The third and fourth tests fitted amplitudes were significantly lower than the set value of 50 mm, while the sixth test fitted amplitude was marginally higher than the set value of 27 mm.
 
 %----------------------------------------------------
 \begin{figure}[H]
@@ -142,16 +153,22 @@ Aalto data works great can estimate magnitude and phase fairly reliably
 %----------------------------------------------------
 \begin{table}[H]
 \centering
-\begin{tabular}{|l|c|c|c|}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|l|c|c|c|c|}
 \hline
-\textbf{Test} & \multicolumn{1}{l|}{\textbf{Amplitude (mm)}} & \multicolumn{1}{l|}{\textbf{Angular Frequency (rad/s)}} & \multicolumn{1}{l|}{\textbf{R-square Score}} \\ \hline
-1             & 24.9046                                      & 3.9259                                                  & 0.98606                                      \\ \hline
-2             & 35.1361                                      & 3.9259                                                  & 0.97659                                      \\ \hline
-3             & 45.7627                                      & 3.9257                                                  & 0.96552                                      \\ \hline
-4             & 40.9202                                      & 3.142                                                   & 0.96427                                      \\ \hline
-5             & 34.1690                                      & 3.1443                                                  & 0.97534                                      \\ \hline
-6             & 27.8620                                      & 3.1438                                                  & 0.93052                                      \\ \hline
-\end{tabular}
+\textbf{Test} &
+  \multicolumn{1}{l|}{\textbf{Amplitude (mm)}} &
+  \multicolumn{1}{l|}{\textbf{Angular Frequency (rad/s)}} &
+  \multicolumn{1}{l|}{\textbf{Calculated Period (s)}} &
+  \multicolumn{1}{l|}{\textbf{R-square Score}} \\ \hline
+1 & 24.9046 & 3.9259 & 1.6004 & 0.98606 \\ \hline
+2 & 35.1361 & 3.9259 & 1.6004 & 0.97659 \\ \hline
+3 & 45.7627 & 3.9257 & 1.6005 & 0.96552 \\ \hline
+4 & 40.9202 & 3.142  & 1.9997 & 0.96427 \\ \hline
+5 & 34.1690 & 3.1443 & 1.9983 & 0.97534 \\ \hline
+6 & 27.8620 & 3.1438 & 1.9986 & 0.93052 \\ \hline
+\end{tabular}%
+}
 \caption{\textbf{curveFitter Parameter Estimations}}
 \label{tab:curveFitter}
 \end{table}
@@ -160,36 +177,24 @@ Aalto data works great can estimate magnitude and phase fairly reliably
 %----------------------------------------------------
 \begin{table}[H]
 \centering
-\begin{tabular}{|l|c|c|c|}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|l|c|c|c|c|}
 \hline
-\textbf{Test} & \multicolumn{1}{l|}{\textbf{Mean Amplitude (mm)}} & \multicolumn{1}{l|}{\textbf{Mean Wave Number (rad/m)}} & \multicolumn{1}{l|}{\textbf{Mean Inliers}} \\ \hline
-1             & 26.0053                                           & 1.5404                                                 & 80.79 \%                                   \\ \hline
-2             & 37.3767                                           & 1.5566                                                 & 75.81 \%                                   \\ \hline
-3             & 47.8268                                           & 1.5518                                                 & 72.28 \%                                   \\ \hline
-4             & 55.3504                                           & 1.0039                                                 & 67.33 \%                                   \\ \hline
-5             & 43.2641                                           & 1.0079                                                 & 69.15 \%                                   \\ \hline
-6             & 29.3343                                           & 1.0137                                                 & 0.7207 \%                                  \\ \hline
-\end{tabular}
-\caption{\textbf{RANSAC Parameter Estimations}}
+\textbf{Test} &
+  \multicolumn{1}{l|}{\textbf{Mean Amplitude (mm)}} &
+  \multicolumn{1}{l|}{\textbf{Mean Wave Number (rad/m)}} &
+  \multicolumn{1}{l|}{\textbf{Calculated Mean Period (s)}} &
+  \multicolumn{1}{l|}{\textbf{Mean Inliers}} \\ \hline
+1 & 26.0053 & 1.5404 & 1.6185 & 80.79 \%  \\ \hline
+2 & 37.3767 & 1.5566 & 1.6093 & 75.81 \%  \\ \hline
+3 & 47.8268 & 1.5518 & 1.6119 & 72.28 \%  \\ \hline
+4 & 55.3504 & 1.0039 & 2.0037 & 67.33 \%  \\ \hline
+5 & 43.2641 & 1.0079 & 2.0001 & 69.15 \%  \\ \hline
+6 & 29.3343 & 1.0137 & 1.9944 & 72.06 \% \\ \hline
+\end{tabular}%
+}
+\caption{\textbf{\ac{RANSAC} Parameter Estimations}}
 \label{tab:RANSAC}
-\end{table}
-%----------------------------------------------------
-
-%----------------------------------------------------
-\begin{table}[H]
-\centering
-\begin{tabular}{|l|c|c|}
-\hline
-\textbf{Test} & \multicolumn{1}{l|}{\textbf{Probe Period (s)}} & \multicolumn{1}{l|}{\textbf{Mean Period (s)}} \\ \hline
-1             & 1.6004                                         & 1.6185                                        \\ \hline
-2             & 1.6004                                         & 1.6093                                        \\ \hline
-3             & 1.6005                                         & 1.6119                                        \\ \hline
-4             & 1.9997                                         & 2.0037                                        \\ \hline
-5             & 1.9983                                         & 2.001                                         \\ \hline
-6             & 1.9986                                         & 1.9944                                        \\ \hline
-\end{tabular}
-\caption{\textbf{Calculated Period Estimations}}
-\label{tab:periods}
 \end{table}
 %----------------------------------------------------
 
@@ -212,6 +217,11 @@ Aalto data works great can estimate magnitude and phase fairly reliably
 \end{figure}
 %----------------------------------------------------
 
+The wave parameters estimated from the \ac{LiDAR} point cloud data using the \ac{RANSAC} method, seen in Table \ref{tab:RANSAC}, provided mixed, but mostly positive results. All fitted \ac{RANSAC} models had over 65\% mean inliers and only two tests (four and five) has less than 72\% mean inliers. The calculated mean periods very closely matched the wave probe data (see Figure \ref{fig:period}), with the greatest difference being 0.0181 s in the first test. In all cases the estimated mean periods were greater than the probe data values.
+The estimated mean amplitudes matched the probe data results fairly well in the first three and last tests, with the greatest difference being 2.2406 mm in the second test. However, for the last fourth and fifth tests, the estimated mean amplitudes were significantly higher than the probe data values, with the fourth test value 14.4302 mm and fifth test value 9.0951 mm greater than their respective probe data values (see Figure \ref{fig:amp}).
+
+In every test, the higher the percentage of mean inliers in the model estimation corresponded to a closer match between the estimated \ac{RANSAC} wave parameters and the probe data wave parameters.   
+
 \newpage
 %====================================================
 \section{Pancake Identification \& Clustering}
@@ -225,7 +235,7 @@ Find average intensity of frame (excluding zeros)
 \\one std dev below mean
 \\filter all below that
 
-DBScan works so-so
+\ac{DBScan} works so-so
 \\VDBScan works well but have example of how it falls apart
 \\OPTICS is probably the best at the moment
 

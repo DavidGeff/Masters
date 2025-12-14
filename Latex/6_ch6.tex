@@ -8,7 +8,7 @@
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.82\textwidth]{figs/pipeline.png}
-    \caption{\textbf{Processing Pipeline.} Overview of the LiDAR data processing and feature extraction pipeline.}
+    \caption{\textbf{Processing Pipeline.} Overview of the \ac{LiDAR} data processing and feature extraction pipeline.}
     \label{fig:pipeline}
 \end{figure}
 %----------------------------------------------------
@@ -17,19 +17,19 @@
 \section{Data Extraction}
 \label{sec:ch6.section1}
 
-The starting point for the pipeline is the raw Avia data. All data used in this investigation was captured as rosbag (.bag) or the proprietary Livox file type (.lvx). The raw data has to first be extracted from these file types before it can be processed or used in analysis. The Livox ROS driver includes functionality to convert .lvx files to .bag files. MATLAB's ROS Toolbox contains functions and tools for extracting data fields from a .bag file for storage and use in standard MATLAB matrices or structures.
+The starting point for the pipeline is the raw Avia data. All data used in this investigation was captured as rosbag (.bag) or the proprietary Livox file type (.lvx). The raw data has to first be extracted from these file types before it can be processed or used in analysis. The Livox \ac{ROS} driver includes functionality to convert .lvx files to .bag files. MATLAB's \ac{ROS} Toolbox contains functions and tools for extracting data fields from a .bag file for storage and use in standard MATLAB matrices or structures.
 
-IMU data (linear \& rotational accelerations and timestamps) captured by the Avia is extracted from the .bag files and then stored in matrices for further processing.
+\ac{IMU} data (linear \& rotational accelerations and timestamps) captured by the Avia is extracted from the .bag files and then stored in matrices for further processing.
 
-MATLAB's Lidar Toolbox has provision for a pointCloud object which was used to store all LIDAR data for processing and analysis. This object contains fields for the point cloud's x, y and z co-ordinate data, total number of points, as well as point colours, normals and intensities. The Avia is only capable of directly measuring point intensity, so this was the only additional data field extracted from the .bag files into the pointCloud object. Frame timestamps are not stored in the pointCloud object, but in a standalone array.
+MATLAB's \ac{LiDAR} Toolbox has provision for a pointCloud object which was used to store all \ac{LiDAR} data for processing and analysis. This object contains fields for the point cloud's x, y and z co-ordinate data, total number of points, as well as point colours, normals and intensities. The Avia is only capable of directly measuring point intensity, so this was the only additional data field extracted from the .bag files into the pointCloud object. Frame timestamps are not stored in the pointCloud object, but in a standalone array.
 
 %====================================================
 \section{Motion Compensation}
 \label{sec:ch6.section2}
 
-Two Kalman filters were created to estimate the attitude of the Avia during data collection. The filters output estimates of the sensor's roll and pitch (yaw cannot be reliably estimated from IMU data). Using these angle estimates an inverse transform can be applied to the point cloud to 'stabilise' the data and compensate for the motion of the observation platform (ship). As this Kalman filter only estimates changes in roll and pitch attitude, and not position, there will still be motion artefacts in the data due to translation and yaw of the observation platform. 
+Two Kalman filters were created to estimate the attitude of the Avia during data collection. The filters output estimates of the sensor's roll and pitch (yaw cannot be reliably estimated from \ac{IMU} data). Using these angle estimates an inverse transform can be applied to the point cloud to 'stabilise' the data and compensate for the motion of the observation platform (ship). As this Kalman filter only estimates changes in roll and pitch attitude, and not position, there will still be motion artefacts in the data due to translation and yaw of the observation platform. 
 
-The first Kalman filter was created using MATLAB's Sensor Fusion Toolbox. The second Kalman filter is an Extended Kalman Filter (EKF) which was initially developed by Philip Salmony (\cite{salmonyPms67AttitudeEstimation2025}). Both filters accept the Avia IMU data as inputs and return roll and yaw estimates at the same frequency as the input data (200 Hz).
+The first Kalman filter was created using MATLAB's Sensor Fusion Toolbox. The second Kalman filter is an \ac{EKF} which was initially developed by Philip Salmony (\cite{salmonyPms67AttitudeEstimation2025}). Both filters accept the Avia \ac{IMU} data as inputs and return roll and yaw estimates at the same frequency as the input data (200 Hz).
 
 Once angle estimations have been obtained, they have to be time synchronised and matched to their corresponding point cloud frames. Each angle estimation and frame has an associated timestamp that was used to match frames with angle estimations. Angle estimations are produced at 200 Hz while point cloud frames are produced 20 times slower, at 10 Hz. The list of frame timestamps was iterated through, and matched with its associated angle estimation timestamp. If no exact match was found, then the angle estimation closest in time was associated to the frame. Next, a rigid 3-D transform with no translation is created for each point cloud frame from its associated angle estimation. These transforms are then applied to each frame in the pointCloud object to complete the motion compensation.
 
@@ -42,13 +42,16 @@ Once angle estimations have been obtained, they have to be time synchronised and
 \end{figure}
 %----------------------------------------------------
 
-To tune each filter's parameters and determine their relative performance, they were both compared to the motion capture system's ground truth angle measurements. The angle estimate residuals were used as a metric for comparison between filters.
+Angle estimate residuals (the difference between the motion capture ground truth and the filter's estimates) were computed and used as the primary metric for comparing the filters relative performance. The resduals were also used in the tuning of both filters.
+
+To tune each filter's parameters, iterative adjustments were made to the parameters until the mean residuals reached a minimum.
+ 
 
 %====================================================
 \section{De-noising}
 \label{sec:ch6.section3}
 
-When the Avia collects data in adverse environmental conditions (such as rain, snow, and fog), the beam emitted by the sensor may interact with these weather conditions, leading to poor quality and/or noisy data. Points created by interactions with adverse weather conditions almost always have a very low return intensity (less than 4 out of 255) as the targets they interact with (snow or rain) are incredibly small and far less reflective than the intended target scene. In the case of data collected from the SCALE Winter 2022 Cruise, snowy conditions resulted in unwanted returns caused by snowflakes in the area immediately in front of the sensor's minimum detection range. These unwanted returns create difficulties when trying to process the data further as well as reducing the number of usable points per frame. 
+When the Avia collects data in adverse environmental conditions (such as rain, snow, and fog), the beam emitted by the sensor may interact with these weather conditions, leading to poor quality and/or noisy data. Points created by interactions with adverse weather conditions almost always have a very low return intensity (less than 4 out of 255) as the targets they interact with (snow or rain) are incredibly small and far less reflective than the intended target scene. In the case of data collected from the \ac{SCALE} Winter 2022 Cruise, snowy conditions resulted in unwanted returns caused by snowflakes in the area immediately in front of the sensor's minimum detection range. These unwanted returns create difficulties when trying to process the data further as well as reducing the number of usable points per frame. 
 
 The return intensity of points can be used to remove or ignore unwanted points. A simple threshold filtering function can be constructed for de-noising data collected under snowy or other adverse conditions. To prevent valid points in the target scene with low return intensities from being discarded, a distance parameter was included in the threshold function.
 
@@ -61,7 +64,7 @@ The return intensity of points can be used to remove or ignore unwanted points. 
 \end{figure}
 %----------------------------------------------------
 
-The return intensity threshold was set to 2 and the distance threshold to 23 m
+The return intensity threshold was set to 1 and the distance threshold to 15 m. These values were selected to remove the maximum amount of noise points while minimizing the number of valid points removed.
 
 %====================================================
 \section{Wave Parameter Estimation}
@@ -83,7 +86,7 @@ Using the MATLAB curveFitter tool, a sinusoidal model (equation \ref{eqn:probe_s
 
 \textit{y} is the wave height at time \textit{t}, \textit{A} is  amplitude, \textit{$\omega$} is the  angular frequency and \textit{c} is the phase shift. For this investigation, only amplitude and angular frequency (\textit{A} and \textit{$\omega$}) are of interest.
 
-To model the waves from point cloud data, a spatial sinusoidal plane model (equation \ref{eqn:avia_sin}) was fitted to each frame in the point cloud using RANSAC. Each frame fit was run for 300 iterations at an inlier tolerance of 0.02 m (2 cm).
+To model the waves from point cloud data, a spatial sinusoidal plane model (equation \ref{eqn:avia_sin}) was fitted to each frame in the point cloud using \ac{RANSAC}. Each frame fit was run for 300 iterations at an inlier tolerance of 0.02 m (2 cm).
 
 %----------------------------------------------------
 \begin{equation} \label{eqn:avia_sin}
@@ -126,13 +129,13 @@ Once all estimations were converted to wave period, the mean period and amplitud
 
 
 Talk through why some clustering will  or won't work, k-tree stuff needs to know how many clusters there are, hierarchies don't make sense, DBScan relies on constant density (not ideal), optics needs an explanation. 
-To identify the size and shape of individual pancakes, a method to associate individual points with individual pancakes is required. A method to achieve this is the use of a clustering algorithm. One such clustering algorithm is Density-Based Spatial Clustering of Applications with Noise (DBScan). DBScan identifies clusters in data based on how densely packed points are, clusters are dense regions separated by lower density areas (outliers). The function has a minimum of two input criteria; minPts, the minimum number of points required to form a cluster, and epsilon ($\epsilon$), the maximum distance allowed between points for them to be classified as being in the same neighbourhood. These parameters are used to classify points into one of three categories; core points, border points, and noise points. A core point is a point that has sufficient points, including itself (set by minPts) within a given radius (set by $\epsilon$). A border point is a point that is not a core point but is still within the neighbourhood radius ($\epsilon$) of a core point. A noise point is neither a core point nor a border point. Core points and their associated border points form an individual cluster, whereas noise points are not part of any cluster.
+To identify the size and shape of individual pancakes, a method to associate individual points with individual pancakes is required. A method to achieve this is the use of a clustering algorithm. One such clustering algorithm is \ac{DBScan}. \ac{DBScan} identifies clusters in data based on how densely packed points are, clusters are dense regions separated by lower density areas (outliers). The function has a minimum of two input criteria; minPts, the minimum number of points required to form a cluster, and epsilon ($\epsilon$), the maximum distance allowed between points for them to be classified as being in the same neighbourhood. These parameters are used to classify points into one of three categories; core points, border points, and noise points. A core point is a point that has sufficient points, including itself (set by minPts) within a given radius (set by $\epsilon$). A border point is a point that is not a core point but is still within the neighbourhood radius ($\epsilon$) of a core point. A noise point is neither a core point nor a border point. Core points and their associated border points form an individual cluster, whereas noise points are not part of any cluster.
 
 %----------------------------------------------------
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.6\textwidth]{figs/dbscan.png}
-    \caption{\textbf{DBScan}}
+    \caption{\textbf{\ac{DBScan}}}
     \label{fig:dbscan}
 \end{figure}
 %----------------------------------------------------
@@ -140,4 +143,4 @@ To identify the size and shape of individual pancakes, a method to associate ind
 To group points into clusters it is necessary to determine which points are directly density-reachable, density-reachable, and density-connected. The point \textit{p} is directly density-reachable from point \textit{q}, if \textit{q} is a core point and \textit{p} is within the $\epsilon$ neighbourhood of \textit{q} (The distance between \textit{q} and \textit{p} is less than $\epsilon$). This property is symmetric for two core points, but not symmetric if one point (point \textit{p} in this example) is a border point.\\
 The point \textit{p} is density-reachable from point \textit{q} if there is a chain of points p$_{1}$, ..., p$_{n}$ where p$_{1}$ = \textit{q} and p$_{n}$ = \textit{p} such that each point is directly density-reachable from the previous point in the chain. Similarly to direct density-reachability, this property is symmetric only for core points.\\
 Points \textit{p} and \textit{q} are density-connected if there is a third point, \textit{o}, which both \textit{p} and \textit{q} are density-reachable from. This property is symmetrical for border points.\\ 
-The DBScan algorithm iterates through all points, calculating distances between each other and categorising them as core, border, or noise points. An unassigned core point is the start of a new cluster. All neighbouring core or border points are assigned to this cluster
+The \ac{DBScan} algorithm iterates through all points, calculating distances between each other and categorising them as core, border, or noise points. An unassigned core point is the start of a new cluster. All neighbouring core or border points are assigned to this cluster

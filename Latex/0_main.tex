@@ -30,6 +30,7 @@
 \usepackage{hyperref}
 \usepackage{titlesec}
 \usepackage{lastpage}
+\usepackage{fancyhdr}
 \usepackage{fancyref}
 \usepackage{fancyvrb}
 \usepackage{tabularx}
@@ -64,7 +65,10 @@
 \usepackage{courier}					% Courier font \pcr
 \usepackage{amsmath, amsthm, amssymb}
 \usepackage{datetime}					% Can use dates and times
-\usepackage{textcomp, gensymb}		
+\usepackage{textcomp, gensymb}
+\usepackage{acronym}
+\usepackage{array}
+\newcolumntype{L}{>{\centering\arraybackslash}m{3cm}}
 \usepackage[backend=biber,style=authoryear]{biblatex}		
 \addbibresource{report.bib}
 %---------------------------------------------------------------------
@@ -350,13 +354,19 @@ I, \auth,  hereby:
 %---------------------------------------------------------------------
 %	Glossary (optional)
 %---------------------------------------------------------------------
-\chapter*{List of Acronyms and Glossary}
-\addcontentsline{toc}{chapter}{Glossary}
+%\chapter*{Glossary}
+%\addcontentsline{toc}{chapter}{Glossary}
 
-\begin{tabular}{cp{0.6\textwidth}}
-	\textbf{FOV} & Field of View \\
-	\textbf{MIZ} & Marginal Ice Zone \\
-\end{tabular}\\
+%---------------------------------------------------------------------
+%	ABBREVIATIONS
+%---------------------------------------------------------------------
+%\setstretch{1.5} % Set the line spacing to 1.5, this makes the following tables easier to read
+
+\chapter*{Abbreviations}
+\addcontentsline{toc}{chapter}{Abbreviations}
+\input{acro_list}
+%\clearpage % Start a new page
+%---------------------------------------------------------------------
 
 \pagebreak
 %=====================================================================
@@ -366,6 +376,11 @@ I, \auth,  hereby:
 % chapters as needed.
 %---------------------------------------------------------------------
 \mainmatter
+
+\fancyhead[RE,LO]{}
+\fancyhead[LE]{\leftmark}
+\fancyhead[RO]{\rightmark}
+\pagestyle{fancy}
 
 \include{1_ch1}
 \include{2_ch2}

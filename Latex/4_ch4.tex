@@ -10,23 +10,23 @@
 \label{sec:ch4.section1}
 %----------------------------------------------------
 
-All data used in this investigation was collected using the Livox Avia. Aalto data collected using a Windows laptop and Livox viewer software, proprietary .lvx file. All other data collected using Ubuntu laptop and ROS, .bag file.
+All data used in this investigation was collected using the Livox Avia. Aalto data collected using a Windows laptop and Livox viewer software, proprietary .lvx file. All other data collected using Ubuntu laptop and \ac{ROS}, .bag file.
 
-The sensor was set up to capture data using ROS (ROS Neotic) and the Livox ROS driver through a machine running Ubuntu 20.04. The sensor scans and creates point clouds at a rate of 10 Hz and the IMU collects data at a rate of 200 Hz. The captured data was saved and stored in the rosbag file format (.bag). These files contain all the recorded data, (point cloud e here).information (location and return intensity), IMU readings, and their associated timestamps.
+The sensor was set up to capture data using \ac{ROS} Neotic and the Livox \ac{ROS} driver through a machine running Ubuntu 20.04. The sensor scans and creates point clouds at a rate of 10 Hz and the \ac{IMU} collects data at a rate of 200 Hz. The captured data was saved and stored in the rosbag file format (.bag). These files contain all the recorded data, (point cloud e here).information (location and return intensity), \ac{IMU} readings, and their associated timestamps.
 
 %====================================================
 \section{Characterisation and Calibration Data Collection}
 \label{sec:ch4.section2}
 %----------------------------------------------------
 
-With no ground truth data available for data collected from the SCALE cruise and minimal ground truth data from the Aalto dataset, methods for validating the pipeline's performance are required. Procedures for characterising the sensor and evaluating the Kalman filters are detailed in the following.
+With no ground truth data available for data collected from the \ac{SCALE} cruise and minimal ground truth data from the Aalto dataset, methods for validating the pipeline's performance are required. Procedures for characterising the sensor and evaluating the Kalman filters are detailed in the following.
 
 %----------------------------------------------------
 \subsection{Stationary Characterisation Experiment}
 
 LIDAR BEAM DIVERGENCE
 
-The following setup was devised to test the Avia's ability to resolve basic geometric shapes and their sizes, investigate its performance when observing targets at angles similar to those of the SCALE cruise and evaluate the impact of the sensor's beam divergence.
+The following setup was devised to test the Avia's ability to resolve basic geometric shapes and their sizes, investigate its performance when observing targets at angles similar to those of the \ac{SCALE} cruise and evaluate the impact of the sensor's beam divergence.
 
 %----------------------------------------------------
 \begin{figure}[H]
@@ -91,9 +91,9 @@ The motion capture system is manufactured by OptiTrack, who provided all sensors
 %----------------------------------------------------
 
 The cameras are sensitive only to infrared light and tracking markers that reflect infrared light. The cameras are fixed in known locations around the target area and capture video of the target, while markers placed on the target allow the cameras to track the position of the target over time. Combining the different viewpoints of the cameras, the full motion of the target can be reconstructed.
-As this experiment is only testing the attitude estimation capabilities of the Kalman filter, no translation of the platform will take place, only rotation. The Avia is attached to the Stewart Platform and rotated while recording IMU data for analysis. Motion capture markers are attached to the sensor to allow for the recording of ground-truth data.
+As this experiment is only testing the attitude estimation capabilities of the Kalman filter, no translation of the platform will take place, only rotation. The Avia is attached to the Stewart Platform and rotated while recording \ac{IMU} data for analysis. Motion capture markers are attached to the sensor to allow for the recording of ground-truth data.
 
-The Avia was first rotated along single axes, first along the X-axis, and then along the Y-axis before being rotated on both the X and Y-axes, before finally being rotated along all axes (X, Y, and Z). This routine was performed twice, first with a magnitude of 10°, then with a magnitude of 5°. The frequency was set to follow a chirp function, starting at a frequency of 0.005 Hz and ending at a frequency of 0.05 Hz. Each set of rotations occurred over 60 seconds. These amplitude and frequency parameters were obtained by inspecting IMU data from the SCALE cruise and selecting test values similar to those recorded during data collection.
+The Avia was first rotated along single axes, first along the X-axis, and then along the Y-axis before being rotated on both the X and Y-axes, before finally being rotated along all axes (X, Y, and Z). This routine was performed twice, first with a magnitude of 10°, then with a magnitude of 5°. The frequency was set to follow a chirp function, starting at a frequency of 0.005 Hz and ending at a frequency of 0.05 Hz. Each set of rotations occurred over 60 seconds. These amplitude and frequency parameters were obtained by inspecting \ac{IMU} data from the \ac{SCALE} cruise and selecting test values similar to those recorded during data collection.
 
 The co-ordinate systems of the Stewart Platform and motion capture system were not aligned, the Stewart Platform was offset from the motion capture system by -44° around its Z-axis.
 
@@ -103,12 +103,12 @@ The co-ordinate systems of the Stewart Platform and motion capture system were n
 \label{sec:ch4.section3}
 %----------------------------------------------------
 
-Data for this investigation were collected from two sources, the Aalto University Ice and Wave Tank and the Southern oCean seAsonaL Experiment (SCALE) Winter 2022 Cruise.
+Data for this investigation were collected from two sources, the Aalto University Ice and Wave Tank and the \ac{SCALE} Winter 2022 Cruise.
 
 %----------------------------------------------------
 \subsection{Aalto University Ice and Wave Tank}
 
-Aalto University operates a wave and ice tank 40 m x 40 m and 2.8 m deep. The tank is equipped with wedge-type wave generators capable of producing regular and irregular waves *pamphlet cite here*. In addition to wave generators, the tank is equipped with a cooling system and sprayers for producing model-scale ice.
+Aalto University operates a wave and ice tank 40 m x 40 m and 2.8 m deep. The tank is equipped with 16 wedge-type plunger wave generators capable of producing regular and irregular waves *pamphlet cite here*. In addition to wave generators, the tank is equipped with a cooling system and sprayers for producing model-scale ice.
 
 %----------------------------------------------------
 \begin{figure}[H]
@@ -119,17 +119,35 @@ Aalto University operates a wave and ice tank 40 m x 40 m and 2.8 m deep. The ta
 \end{figure}
 %----------------------------------------------------
 
-In November 2023 another Masters student (Anand Nair cite?) ran experiments in the tank to simulate the motion of a model of an individual pancake ice floe. In addition to the sensors selected by Anand for his experiments, data from the tests was collected using the Livox Avia.
-The Avia was mounted on a mobile gantry above the tank, angled to face down towards the ice and water. Waves were generated and briefly propagated through open water before reaching the ice. A capacitive probe in the tank recorded the wave height over time, and was placed 5 meters in front of the wave generators. The wave data was sampled at a rate of 300 Hz.
+In November 2023, a fellow Masters student (Anand Nair cite?) ran experiments in the tank to simulate the motion of an individual pancake ice floe using a scale model. In addition to the sensors selected by Anand for his experiments, data from these tests were collected using the Livox Avia.
+The Avia was mounted on a mobile gantry above the tank, angled to face down towards the ice and water, in the direction of the wave generators. Waves were generated and briefly propagated through open water before reaching the ice. A capacitive probe in the tank recorded the wave height over time, and was placed 5 meters in front of the wave generators. The wave data was sampled at a rate of 300 Hz.
 
-Six tests were conducted and the wave hight was recorded over the duration of the tests. For the tests sinusoidal waves were generated with two periods, (1.6 s and 2s), and three wave heights per period, (50 mm, 75 mm and 100 mm). During the tests there was no time synchronisation between the wave logger and Livox Avia.
-
-During the experiments, strict constraints were placed on the waves generated and their behaviours. The generated waves were all sine waves in deep water (the water depth is greater than half the largest generated wavelength, 2.8 m $>$ 2 m). The wave parameters were held constant during individual tests, and the waves were propagated straight down the tank, perpendicular to the Avia's line of sight. 
+Six tests were conducted and the wave hight was recorded over the duration of the tests. For all tests sinusoidal waves were generated at two periods, with three wave heights per period, see Table \ref{tab:tank_tests}. During these tests there was no time synchronisation between the wave probe logging and Livox Avia.
 
 %----------------------------------------------------
-\subsection{SCALE Winter 2022 Cruise}
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|c|c|}
+\hline
+\textbf{Test} & \multicolumn{1}{l|}{\textbf{Amplitude (mm)}} & \multicolumn{1}{l|}{\textbf{Period (s)}} \\ \hline
+1 & 25   & 1.6 \\ \hline
+2 & 37.5 & 1.6 \\ \hline
+3 & 50   & 1.6 \\ \hline
+4 & 25   & 2   \\ \hline
+5 & 37.5 & 2   \\ \hline
+6 & 50   & 2   \\ \hline
+\end{tabular}
+\caption{\textbf{Wave Tank Test Parameters}}
+\label{tab:tank_tests}
+\end{table}
+%----------------------------------------------------
 
-The SCALE Winter 2022 Cruise was a research cruise aboard then Research Vessel S.A. Agulhas II that took place from the 11th to the 31st of July 2022. Amongst other data collection and research activities taking place on the vessel, 31 LiDAR scans of the open ocean and ice were taken, between the 15th and the 27th of July. Of these 31 scans, 12 contained ice and the other 19 were either setup or ocean scans. All scans of ice were taken between 58° and 59°35' South.
+During the tests, strict constraints were placed on the waves generated and their behaviours. The generated waves were all sine waves in deep water (the water depth is greater than half the largest generated wavelength, 2.8 m $>$ 2 m). The wave parameters were held constant during individual tests, and the waves were propagated straight down the tank, perpendicular to the Avia's line of sight. 
+
+%----------------------------------------------------
+\subsection{\ac{SCALE} Winter 2022 Cruise}
+
+The \ac{SCALE} Winter 2022 Cruise was a research cruise aboard then Research Vessel S.A. Agulhas II that took place from the 11th to the 31st of July 2022. Amongst other data collection and research activities taking place on the vessel, 31 \ac{LiDAR} scans of the open ocean and ice were taken, between the 15th and the 27th of July. Of these 31 scans, 12 contained ice and the other 19 were either setup or ocean scans. All scans of ice were taken between 58° and 59°35' South.
 
 %----------------------------------------------------
 \begin{figure}[H]
