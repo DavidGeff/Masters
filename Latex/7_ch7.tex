@@ -12,10 +12,10 @@ Lots of frames (like 6+) to resolve mid level detail
 \\bad shadowing and LiDAR beam divergence
 
 %====================================================
-\section{De-Noising and Motion Compensation}
+\section{De-noising and Motion Compensation}
 \label{sec:ch7.section2}
 
-The threshold de-noising function performs well in removing these unwanted returns and improving the usability of the collected data.
+The de-noising function performed as expected. It was able to remove unwanted returns produced by adverse environmental conditions without removing any valid points from the target scene.
 
 Platform offset -44 deg in yaw (Z-axis) from mocap axis.
 \\both perform about the same, cant do yaw, mediocre performance
@@ -24,60 +24,6 @@ Platform offset -44 deg in yaw (Z-axis) from mocap axis.
 \\5 deg kinda whack
 
 10 degree plots:
-
-%----------------------------------------------------
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.6\textwidth]{figs/ekf_roll_10.png}
-    \caption{\textbf{EKF roll}}
-    \label{fig:ekf_roll_10}
-\end{figure}
-%----------------------------------------------------
-
-%----------------------------------------------------
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.6\textwidth]{figs/ekf_pitch_10.png}
-    \caption{\textbf{EKF pitch}}
-    \label{fig:ekf_pitch_10}
-\end{figure}
-%----------------------------------------------------
-
-%----------------------------------------------------
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.6\textwidth]{figs/imu_roll_10.png}
-    \caption{\textbf{IMU roll}}
-    \label{fig:imu_roll_10}
-\end{figure}
-%----------------------------------------------------
-
-%----------------------------------------------------
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.6\textwidth]{figs/imu_pitch_10.png}
-    \caption{\textbf{IMU pitch}}
-    \label{fig:imu_pitch_10}
-\end{figure}
-%----------------------------------------------------
-
-%----------------------------------------------------
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.6\textwidth]{figs/vs_roll_10.png}
-    \caption{\textbf{vs roll}}
-    \label{fig:vs_roll_10}
-\end{figure}
-%----------------------------------------------------
-
-%----------------------------------------------------
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.6\textwidth]{figs/vs_pitch_10.png}
-    \caption{\textbf{vs pitch}}
-    \label{fig:vs_pitch_10}
-\end{figure}
-%----------------------------------------------------
 
 %----------------------------------------------------
 \begin{figure}[H]
@@ -116,60 +62,6 @@ Platform offset -44 deg in yaw (Z-axis) from mocap axis.
 %----------------------------------------------------
 
 5 degree plots:
-
-%----------------------------------------------------
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.6\textwidth]{figs/ekf_roll_5.png}
-    \caption{\textbf{EKF roll}}
-    \label{fig:ekf_roll_5}
-\end{figure}
-%----------------------------------------------------
-
-%----------------------------------------------------
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.6\textwidth]{figs/ekf_pitch_5.png}
-    \caption{\textbf{EKF pitch}}
-    \label{fig:ekf_pitch_5}
-\end{figure}
-%----------------------------------------------------
-
-%----------------------------------------------------
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.6\textwidth]{figs/imu_roll_5.png}
-    \caption{\textbf{imu roll}}
-    \label{fig:imu_roll_5}
-\end{figure}
-%----------------------------------------------------
-
-%----------------------------------------------------
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.6\textwidth]{figs/imu_pitch_5.png}
-    \caption{\textbf{imu pitch}}
-    \label{fig:imu_pitch_5}
-\end{figure}
-%----------------------------------------------------
-
-%----------------------------------------------------
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.6\textwidth]{figs/vs_roll_5.png}
-    \caption{\textbf{vs roll}}
-    \label{fig:vs_roll_5}
-\end{figure}
-%----------------------------------------------------
-
-%----------------------------------------------------
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.6\textwidth]{figs/vs_pitch_5.png}
-    \caption{\textbf{vs pitch}}
-    \label{fig:vs_pitch_5}
-\end{figure}
-%----------------------------------------------------
 
 %----------------------------------------------------
 \begin{figure}[H]
