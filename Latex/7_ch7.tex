@@ -130,7 +130,7 @@ As seen in Figures \ref{fig:no_thresh} and \ref{fig:thresh} above, the cone of n
 \section{Wave Estimation}
 \label{sec:ch7.section3}
 
-The mean wave magnitude and period were able to be determined with a high degree of confidence from the wave probe data using the MATLAB curveFitter tool. All tests produced R-square scores above 0.93, indicating a strong correlation between the fitted model and the raw probe data, as seen in Table \ref{tab:curveFitter}. The wave periods all closely matched the parameters set to the wave makers (1.6 s and 2 s). However, the amplitudes did not match the set values as closely, the first, second and fifth tests tracked the set values fairly well, while the third, fourth and sixth tests did not. The third and fourth tests fitted amplitudes were significantly lower than the set value of 50 mm, while the sixth test fitted amplitude was marginally higher than the set value of 27 mm.
+The mean wave magnitude and period were able to be determined with a high degree of confidence from the wave probe data using the MATLAB curveFitter tool. All tests produced R-square scores above 0.93, indicating a strong correlation between the fitted model and the raw probe data, as seen in Table \ref{tab:curveFitter}. The wave periods all closely matched the parameters set to the wave makers (1.6 s and 2 s). *this needs to be correcyed* However, the amplitudes did not match the set values as closely, the first, second and fifth tests tracked the set values fairly well, while the third, fourth and sixth tests did not. The third and fourth tests fitted amplitudes were significantly lower than the set value of 50 mm, while the sixth test fitted amplitude was marginally higher than the set value of 27.5 mm.
 
 %----------------------------------------------------
 \begin{figure}[H]
@@ -220,7 +220,9 @@ The mean wave magnitude and period were able to be determined with a high degree
 The wave parameters estimated from the \ac{LiDAR} point cloud data using the \ac{RANSAC} method, seen in Table \ref{tab:RANSAC}, provided mixed, but mostly positive results. All fitted \ac{RANSAC} models had over 65\% mean inliers and only two tests (four and five) has less than 72\% mean inliers. The calculated mean periods very closely matched the wave probe data (see Figure \ref{fig:period}), with the greatest difference being 0.0181 s in the first test. In all cases the estimated mean periods were greater than the probe data values.
 The estimated mean amplitudes matched the probe data results fairly well in the first three and last tests, with the greatest difference being 2.2406 mm in the second test. However, for the last fourth and fifth tests, the estimated mean amplitudes were significantly higher than the probe data values, with the fourth test value 14.4302 mm and fifth test value 9.0951 mm greater than their respective probe data values (see Figure \ref{fig:amp}).
 
-In every test, the higher the percentage of mean inliers in the model estimation corresponded to a closer match between the estimated \ac{RANSAC} wave parameters and the probe data wave parameters.   
+In every test, the higher the percentage of mean inliers in the model estimation, the closer the match between the estimated \ac{RANSAC} wave parameters and the probe data wave parameters.
+
+Attempted to fit stokes model to scale data but failed. model not complex enough to fully represent in-situ waves.
 
 \newpage
 %====================================================
