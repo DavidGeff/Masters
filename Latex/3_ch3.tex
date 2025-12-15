@@ -12,29 +12,69 @@
 %ROS allows hardware to be easily added and removed from a platform for testing and development. The Livox Avia has manufacturer-supplied ROS drivers, hence this was the chosen method for interfacing with the device during data collection. 
 
 %====================================================
-\section{\ac{LiDAR} Sensors}
+\section{\ac{LiDAR} Characteristics}
 \label{sec:ch3:section1}
+
+\ac{LiDAR} offers several advantages over traditional remote sensing methods. As an active sensing system, it does not depend on external illumination, unlike visual methods such as telephoto or stereoscopic cameras. \ac{LiDAR} is also more robust to issues like poor focus, lens flare and overexposure that commonly affect optical cameras. Additionally, certain \ac{LiDAR} sensors can penetrate vegetation, enabling ground surface mapping beneath plant cover.
+
+Compared to \ac{Radar}, \ac{LiDAR} typically has superior mapping precision and target resolution, allowing more accurate reproductions of the target and the surrounding environment. \ac{LiDAR} sensors are also typically smaller and lighter than \ac{Radar} systems, making them easier to integrate into mobile platforms. \ac{Radar} data also often requires more complex processing and skilled individuals to extract useful information, whereas \ac{LiDAR} data is usually more straightforward to interpret.
+
+Using \ac{LiDAR} is not without its disadvantages. \ac{LiDAR} sensors are more expensive than more traditional remote sensing hardware and as it is a less established method there are fewer options available. Unlike cameras, which can recover non-geometric details such as target colour and texture, \ac{LiDAR} is only able to recover the three-dimensional geometry of the target. \ac{Radar} outperforms \ac{LiDAR} in certain applications. It is capable of much larger detection ranges than \ac{LiDAR} and is also unaffected by adverse environmental conditions such as smoke, rain, and fog.
+
+\ac{LiDAR} is frequently used in combination with other remote sensing methods to mitigate the disadvantages of each method and provide higher quality data. For example, \ac{LiDAR} point clouds are often complemeted with optical sensor data to provide colour and texture information to the geometry data, allowing for a more wholistic reprsentation of the target scene (\cite{wangEvolutionLiDARIts2020}).
+
+*find references*
+
+BACKSCATTER?
+\\REFLECTIVITY?
+\\ABSORPTION?
+\\Infrared Interference?
+\\Wavelength
+
+*point cloud section?*
+
+%====================================================
+\section{\ac{LiDAR} Sensors}
+\label{sec:ch3:section2}
 
 A basic \ac{LiDAR} sensor consists of three main components, a laser source, a steering mechanism to direct the laser beam, and a method of detecting the returning laser beam.
 
 (the exact wavelength of the laser depends on the application and manufacturer's intended use), Different lasers are selected for different reasons, such as penetration power, eye safety, measurement accuracy and something. The steering mechanism used determines the field of view, angular resolution and impacts the measurement accuracy of the sensor. Prisms, mirrors and something can be used to steer the laser's direction. 
 Most \ac{LiDAR} sensors are only capable of creating point clouds with a limited number of predetermined scanning patterns. The most common scanning pattern is a rectangular pattern (an N x M grid of points). Sensors designed for automotive or autonomous vehicle use often have 360 degree coverage in their azimuth and a set vertical resolution, commonly using spinning mirrors or prisms to achieve this.
 
-Some \ac{LiDAR} sensors are capable of measuring multiple returns from a single output pulse \cite{WhatLidarDataArcGIS}. This is possible when the object hit by the laser pulse does not reflect or absorb all the output energy but allows some to pass through itself. If this occurs multiple times for a single laser pulse, and the sensor is capable of detecting all of these returns, it is possible for a sensor to record more returned points than output laser pulses.
+\ac{LiDAR} sensors suffer from beam divergence due to their use of lasers as the sensor energy emitter. Beam divergence is a measure of the angle at which photons diverge from the axis of the emitter over distance as the beam exits the laser aperture (\cite{jelinkovaLaserCharacteristics2013}). The steering mechanism within \ac{LiDAR} sensors (mirrors or prisms) may also impact the total beam divergence of the system. Beam divergence results in the laser beam or pulse exiting the sensor not as a single stream of photons, but rather as a cone of photons. When the beam reaches a target, the footprint of the beam will be in the shape of an ellipse with a size different to that of the beam at the aperture (\cite{kukkoMobileLaserScanning2013}). Beam divergence leads to uncertainties and errors in the reported locations of targets and their associated points in the final point cloud.
+ *insert fig here* 
 
 %----------------------------------------------------
 \begin{figure}[H]
     \centering
-    \includegraphics[width=9cm]{figs/multi_return.png}
-    \caption{\textbf{Radiation}}
-    \label{fig:multi_return}
+    \includegraphics[width=0.5\textwidth]{figs/Beam-divergence.jpg}
+    \caption{\textbf{Beam Divergence} taken from \cite{kukkoMobileLaserScanning2013}}
+    \label{fig:divergence}
 \end{figure}
+%----------------------------------------------------
+
+Many \ac{LiDAR} sensors are capable of detecting how much energy is returned to the sensor from each laser pulse, this is known as the point's return intensity. The return intensity is influenced by various factors including the distance to the target, the target's reflectivity, angle of incidence and environmental conditions. This information can be useful in point cloud processing to help identify different materials or surfaces within the point cloud data (\cite{harrapOverviewLIDARCollection2010}).
+
+Some \ac{LiDAR} sensors are capable of measuring multiple returns from a single output pulse \cite{WhatLidarDataArcGIS}. This is possible when the object hit by the laser pulse does not reflect or absorb all the output energy but allows some to pass through itself. If this occurs multiple times for a single laser pulse, and the sensor is capable of detecting all of these returns, it is possible for a sensor to record more returned points than output laser pulses.
+
+Another characteristic of a point cloud that certain \ac{LiDAR} sensors can record is the point's normal. The point normal is a vector that is perpendicular to the surface at the location of the point. Normals are frequently used in point cloud processing to assist in recreating surface geometry and feature extraction (\cite{harrapOverviewLIDARCollection2010}).
+
+%----------------------------------------------------
+%\begin{figure}[H]
+%    \centering
+%    \includegraphics[width=9cm]{figs/multi_return.png}
+%    \caption{\textbf{Radiation}}
+%    \label{fig:multi_return}
+%\end{figure}
 %----------------------------------------------------
 
 %----------------------------------------------------
 \subsection{Livox Avia}
 
-The sensor used to collect data for this investigation was the Livox Avia. The Livox Avia is a solid-state laser and Risley prism-based \ac{LiDAR} scanner with a built-in inertial measurement unit (\ac{IMU}). The sensor makes use of a 905 nm near infrared laser *edit here*
+The sensor used to collect data for this investigation was the Livox Avia. The Avia is a low-cost \ac{LiDAR} sensor produced by Livox Technology, a subsidiary of DJI. The sensor is designed for use in various typical \ac{LiDAR} applications including surveying, mapping, and autonomous systems.The Avia is a solid-state laser and Risley prism-based \ac{LiDAR} sensor with a built-in inertial measurement unit (\ac{IMU}). The sensor makes use of a 905 nm near infrared laser. 
+
+The Avia has the ability to detect each point's return intensity. It records each point's return intensity as an 8-bit value ranging from 0 to 255, with 0 being the least returned energy and 255 being the most returned energy. 
 
 %----------------------------------------------------
 \begin{figure}[H]
@@ -45,7 +85,9 @@ The sensor used to collect data for this investigation was the Livox Avia. The L
 \end{figure}
 %----------------------------------------------------
 
-The Avia has two built-in scanning patterns, a repetitive and a non-repetitive pattern. The repetitive scanning pattern scans the target area in a narrow horizontal band, providing a more uniform point density per frame when compared to the non-repetitive mode. The non-repetitive scanning pattern scans the target with a rosette-shaped pattern which rotates as it scans, covering areas not scanned in previous frames. This scanning method results in a high density of points in the centre of the target, with the number of points reducing towards the edges of the sensor's field of view (\ac{FOV}). The non-repetitive scanning pattern was used for data capture as it provides a wider \ac{FOV} than the non-repetitive scanning pattern and captures more unique data points.
+The Livox Avia has a listed beam divergence of 0.28° x 0.03° along its vertical and horizontal plane. This results in the emitted beam, if falling on a target perfectly perpendicular to the axis of propagation at a distance of 50 meters, having the form of an ellipse with the approximate dimensions of 244.35 x 26.18 mm.
+
+The Avia has two built-in scanning patterns, a repetitive and a non-repetitive pattern. The repetitive scanning pattern scans the target area in a narrow horizontal band, providing a more uniform point density per frame when compared to the non-repetitive mode. The non-repetitive scanning pattern scans the target with a rosette-shaped pattern which rotates as it scans, covering areas not scanned in previous frames. This scanning method results in a non-uniform distribution of points across its \ac{FOV}. There is a high density of points in the centre of the \ac{FOV}, with the number of points reducing outwards to the edges of the sensor's \ac{FOV}. The non-repetitive scanning pattern was used for data capture as it provides a wider \ac{FOV} than the non-repetitive scanning pattern and captures more unique data points.
 
 %----------------------------------------------------
 \begin{figure}[H]
@@ -95,61 +137,44 @@ The Avia has two built-in scanning patterns, a repetitive and a non-repetitive p
 
 The sensor has three return rate settings: single, double, or triple return. The Avia was used exclusively in single return mode.
 
-Return intensity stuff here. This information is stored as an 8-bit value (0-255) associated to each point.
-
+%----------------------------------------------------
 \begin{table}[H]
 \centering
-\begin{tabular}{lllll}
+\begin{tabular}{|l|l|lll}
 \cline{1-2}
-Laser Wavelength            & 905 nm                                     &  &  &  \\ \cline{1-2}
-Laser Safety                & Class 1 (Safe for eyes)                    &  &  &  \\ \cline{1-2}
-Detection Range (@ 100 klx) & \begin{tabular}[c]{@{}l@{}}190 m @ 10\% reflectivity\\ 230 m @ 20\% reflectivity\\ 320 m @ 80\% reflectivity\end{tabular} &  &  &  \\ \cline{1-2}
-Detection Range (@ 0 klx)   & \begin{tabular}[c]{@{}l@{}}190 m @ 10\% reflectivity\\ 260 m @ 20\% reflectivity\\ 450 m @ 80\% reflectivity\end{tabular} &  &  &  \\ \cline{1-2}
-\ac{FOV}                         & \begin{tabular}[c]{@{}l@{}} Non-repetitive Scanning Pattern: 70.4° (H) × 77.2 (V)\\ Repetitive Scanning Pattern: 70.4° (H) × 4.5° (V)\end{tabular}          &  &  &  \\ \cline{1-2}
-Distance Random Error       & 1$\sigma$ (@ 20 m) $<$ 2 cm                         &  &  &  \\ \cline{1-2}
-Point Rate                  & 240,000 points/s                           &  &  &  \\ \cline{1-2}
-Beam Divergence             & 0.28° (Vertical) x 0.03° (Horizontal)      &  &  &  \\ \cline{1-2}
-\ac{IMU}                         & Bosch Sensortec BMI088                     &  &  &  \\ \cline{1-2}
-Operating Temperature Range & -20° to 65° C                              &  &  &  \\ \cline{1-2}
-IP Rating                   & IP67                                       &  &  &  \\ \cline{1-2}
-Dimensions                  & 91 x 61.2 x 64.8 mm                        &  &  &  \\ \cline{1-2}
+\textbf{Parameter}              & \textbf{Value}                        &  &  &  \\ \cline{1-2}
+Laser Wavelength                & 905 nm                                &  &  &  \\ \cline{1-2}
+Laser Safety                    & Class 1 (Safe for eyes)               &  &  &  \\ \cline{1-2}
+Detection Range (@ 100 klx)     & \begin{tabular}[c]{@{}l@{}}190 m @ 10\% reflectivity\\ 230 m @ 20\% reflectivity\\ 320 m @ 80\% reflectivity\end{tabular} &  &  &  \\ \cline{1-2}
+Detection Range (@ 0 klx)       & \begin{tabular}[c]{@{}l@{}}190 m @ 10\% reflectivity\\ 260 m @ 20\% reflectivity\\ 450 m @ 80\% reflectivity\end{tabular} &  &  &  \\ \cline{1-2}
+Repetitive Pattern \ac{FOV}     & 70.4° (H) × 4.5° (V)                  &  &  &  \\ \cline{1-2}
+Non-repetitive Pattern \ac{FOV} & 70.4° (H) × 77.2 (V)                  &  &  &  \\ \cline{1-2}
+Distance Random Error           & 1$\sigma$ (@ 20 m) $<$ 2 cm           &  &  &  \\ \cline{1-2}
+Point Rate                      & 240,000 points/s                      &  &  &  \\ \cline{1-2}
+Beam Divergence                 & 0.28° (Vertical) x 0.03° (Horizontal) &  &  &  \\ \cline{1-2}
+IMU                             & Bosch Sensortec BMI088                &  &  &  \\ \cline{1-2}
+Operating Temperature Range     & -20° to 65° C                         &  &  &  \\ \cline{1-2}
+IP Rating                       & IP67                                  &  &  &  \\ \cline{1-2}
+Dimensions                      & 91 x 61.2 x 64.8 mm                   &  &  &  \\ \cline{1-2}
 \end{tabular}
 \caption{\textbf{Livox Avia Specifications.} The parameters}
 \label{tab:AVIA_spec}
 \end{table}
+%----------------------------------------------------
+
 
 %====================================================
-\section{\ac{LiDAR} Characteristics}
-\label{sec:ch3:section2}
+\section{Point Cloud Processing}
+\label{sec:ch3:section4}
 
-\ac{LiDAR} is used over other remote sensing methods for various reasons. Being an active sensing method is advantageous over visual method such as telephoto or stereoscopic cameras as it does not require external illumination to observe the target. Additionally, with the correct sensor selection, \ac{LiDAR} is less susceptible to issues such as lens flare or overexposure to which typical cameras are prone. Certain \ac{LiDAR} sensors also have the ability to penetrate vegetation, allowing mapping of ground surfaces beneath areas obscured by plant cover.\\
-Compared to radar, \ac{LiDAR} typically has superior mapping precision and target resolution, allowing more accurate reproductions of the target and the surrounding environment.
-Using \ac{LiDAR} is not without its disadvantages. \ac{LiDAR} sensors are more expensive than more traditional remote sensing hardware. Unlike cameras, which can recover details such as colour, \ac{LiDAR} is only able to recover the three-dimensional geometry of the target. Radar outperforms \ac{LiDAR} in certain applications. It is capable of much larger detection ranges than \ac{LiDAR} and is also unaffected by adverse environmental conditions such as smoke, rain, and fog.
+Many common point cloud processing methods are built around the assumption that the point cloud being worked upon is in the format of a standard (M x N) grid layout. Methods such as point cloud registration (obtaining the transformation between two point clouds (\cite{huangComprehensiveSurveyPoint2021})), clustering and model fitting often use the assumption of a constant grid with a constant number of points per frame to achieve their outputs. To bypass this limitation it is common for point clouds to be downsampled through a grid filter to achieve the desired format \cite{3DPointCloud}.
 
-especially \ac{LiDAR} which is typically used in urban environments or for terrain mapping.
+In the Avia's repetitive scanning pattern (See Figure \ref{fig:rep}), the sensor produces a point cloud with a roughly rectangular \ac{FOV} and consistent point density, which is suitable for downsampling and grid filtering. Point clouds produced by the non-repetitive scanning pattern (See Figure \ref{fig:non_rep}) are circular and do not have uniform point density and are thus not ideal for downsampling and grid filtering.
 
-\ac{LiDAR} sensors suffer from beam divergence due to their use of lasers as the sensor energy emitter. Beam divergence is a measure of the angle at which photons diverge from the axis of the emitter over distance as the beam exits the laser aperture (\cite{jelinkovaLaserCharacteristics2013}). The steering mechanism within \ac{LiDAR} sensors (mirrors or prisms) may also impact the total beam divergence of the system. Beam divergence results in the laser beam or pulse exiting the sensor not as a single stream of photons, but rather as a cone of photons. When the beam reaches a target, the footprint of the beam will be in the shape of an ellipse with a size different to that of the beam at the aperture (\cite{kukkoMobileLaserScanning2013}). Beam divergence leads to uncertainties and errors in the reported locations of targets and their associated points in the final point cloud.
+Many processing methods are also based on the assumption that the environment data is collected from will contain predominantly objects made of simple geometries. For example, a scene in an urban environment will contain many objects made of rectangles, circles and triangles. The environment that data for this investigation was captured contains none of these simple shapes, with the geometry of the pancake floes being irregular and superimposed upon complex ocean surface waves.
 
-The Livox Avia has a listed beam divergence of 0.28° x 0.03° along its vertical and horizontal plane. This results in the emitted beam, if falling on a target perfectly perpendicular to the axis of propagation at a distance of 50 meters, having the form of an ellipse with the approximate dimensions of 244.35 x 26.18 mm. *insert fig here* 
-
-%----------------------------------------------------
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.5\textwidth]{figs/Beam-divergence.jpg}
-    \caption{\textbf{Beam Divergence} taken from \cite{kukkoMobileLaserScanning2013}}
-    \label{fig:divergence}
-\end{figure}
-%----------------------------------------------------
-
-BACKSCATTER?
-
-REFLECTIVITY?
-
-ABSORPTION?
-
-Infrared Interference?
-
-Wavelength
+*something about normals here maybe*
+*something about return intensities here*
 
 %====================================================
 \section{Optical Properties of Ocean Water, Ice and Snow}
@@ -192,19 +217,6 @@ On average, snow has the highest albedo out of the three mediums. The smaller th
 
 The above suggests that the Livox Avia is best suited to detecting low density snow, first year ice. It is potentially possible to detect ice floes of any ice type, given that they are covered with snow.
 
-
-%====================================================
-\section{Point Cloud Processing}
-\label{sec:ch3:section4}
-
-Many common point cloud processing methods are built around the assumption that the point cloud being worked upon is in the format of a standard (M x N) grid layout. Methods such as point cloud registration (obtaining the transformation between two point clouds (\cite{huangComprehensiveSurveyPoint2021})), clustering and model fitting often use the assumption of a constant grid with a constant number of points per frame to achieve their outputs. To bypass this limitation it is common for point clouds to be downsampled through a grid filter to achieve the desired format \cite{3DPointCloud}.
-
-In the Avia's repetitive scanning pattern (See Figure \ref{fig:rep}), the sensor produces a point cloud with a roughly rectangular \ac{FOV} and consistent point density, which is suitable for downsampling and grid filtering. Point clouds produced by the non-repetitive scanning pattern (See Figure \ref{fig:non_rep}) are circular and do not have uniform point density and are thus not ideal for downsampling and grid filtering.
-
-Many processing methods are also based on the assumption that the environment data is collected from will contain predominantly objects made of simple geometries. For example, a scene in an urban environment will contain many objects made of rectangles, circles and triangles. The environment that data for this investigation was captured contains none of these simple shapes, with the geometry of the pancake floes being irregular and superimposed upon complex ocean surface waves.
-
-*something about normals here maybe*
-*something about return intensities here*
 
 %====================================================
 \section{Kalman Filters}

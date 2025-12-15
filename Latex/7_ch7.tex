@@ -19,7 +19,7 @@ Lots of frames (like 6+) to resolve mid level detail
 %----------------------------------------------------
 \subsection{Motion Compensation}
 
-Both Kalman filters produced angle estimates very similar to each other, see Figures \ref{fig:vs_roll_10}, \ref{fig:vs_pitch_10}, \ref{fig:vs_roll_5} and \ref{fig:vs_pitch_5}. Overall, The \ac{IMU} Filter produced slightly more conservative angle estimates with less variability than the \ac{EKF}. The \ac{IMU} angle estimations have a slight positive bias compared to the \ac{EKF} estimations. 
+The two implemented Kalman filters both produced reasonable roll and pitch angle estimates for motion compensation of the \ac{LiDAR} point cloud data. The \ac{EKF} and \ac{IMU} filter produced angle estimates very similar to each other, see Figures \ref{fig:vs_roll_10}, \ref{fig:vs_pitch_10}, \ref{fig:vs_roll_5} and \ref{fig:vs_pitch_5}. Overall, The \ac{IMU} Filter produced slightly more conservative angle estimates with less variability than the \ac{EKF}. The \ac{IMU} angle estimations have a slight positive bias compared to the \ac{EKF} estimations. 
 
 both filters perform about the same, mediocre performance
 
@@ -123,7 +123,7 @@ The de-noising function performed as expected. It removes unwanted returns produ
 \end{figure}
 %----------------------------------------------------
 
-As seen in Figures \ref{fig:no_thresh} and \ref{fig:thresh} above, the cone of noisy data in front of the sensor's aperture has been removed, with minimal invalid points remaining in the region. The horizontal feauture that remains is a part of the ship's deck from where the data was collected. A small number of points from the ice field have been removed by the process, as seen around Z = -20 m, X = 10 m.
+As seen in Figures \ref{fig:no_thresh} and \ref{fig:thresh} above, the cone of noisy data in front of the sensor's aperture has been removed, with minimal invalid points remaining in the region. The horizontal feauture that remains is a part of the ship's deck from where the data was collected. A small number of points from the ice field have been removed by the process, as seen around Z = -20 m, X = 10 m in Figure \ref{fig:thresh}, but the vast majority of the ice field points have been preserved.
 
 \newpage
 %====================================================

@@ -45,9 +45,9 @@ Drivers of the Antarctic seasonal ice cycle have been identified, such as wind, 
 On the edge of the continually growing and shrinking ice cover lies the marginal ice zone, one the most poorly understood regions of the Antarctic.
 
 %----------------------------------------------------
-\subsection{Marginal Ice Zone (\ac{MIZ})}
+\subsection{Marginal Ice Zone}
 
-The Marginal Ice Zone (\ac{MIZ}) is widely accepted to be the transitional region where the open ocean transitions to consolidated ice cover. This region is characterized by constant interactions between ice above and below the ocean surface, the atmosphere and ocean. There is no universally accepted definition of the \ac{MIZ}, which leads to difficulties in understanding and comparing studies on the area by different authors who have varying definitions of the \ac{MIZ}. \cite{vichiIndicatorSeaIce2022} states the \ac{MIZ} is generally seen as the region where sea ice concentration (SIC) is between 15\% and 80\%, but this simple threshold based definition has proved to be a less reliable for the Antarctic, where ice drift and wave activity has been reported in areas classified as having 100\% ice cover. 
+\ac{MIZ} is widely accepted to be the transitional region where the open ocean transitions to consolidated ice cover. This region is characterized by constant interactions between ice above and below the ocean surface, the atmosphere and ocean. There is no universally accepted definition of the \ac{MIZ}, which leads to difficulties in understanding and comparing studies on the area by different authors who have varying definitions of the \ac{MIZ}. \cite{vichiIndicatorSeaIce2022} states the \ac{MIZ} is generally seen as the region where sea ice concentration (SIC) is between 15\% and 80\%, but this simple threshold based definition has proved to be a less reliable for the Antarctic, where ice drift and wave activity has been reported in areas classified as having 100\% ice cover. 
 
 Due to its location, the \ac{MIZ} is a highly dynamic region, leading to greater variability in its conditions, processes and dynamics when compared to other ice-covered regions. Various different types of ice make up the \ac{MIZ}, but the correlation between SIC and ice type (frazil, pancake, grease, etc.) have not been fully characterized (\cite{vichiIndicatorSeaIce2022}).
 
@@ -89,7 +89,7 @@ Frazils continue to form and adhere to each other beneath the grease ice layer i
 In the composite pancake stage, pancakes are driven together by the higher frequency wave components in the same way as the disk-like frazils were in the grease-ice stage. This leads to rafting of the pancakes and freezing between individual rafted pancakes forms composite pancake floes. The production of pancake floes and composite floes will continue until all the wave energy is consumed, leading to a sheet of composite floes. If the wave energy is too great to be absorbed by the floes, the floe size will be limited, and no ice sheet will form.
 
 %====================================================
-\section{Ocean Waves in the \ac{MIZ}}
+\section{Ocean Waves in the Marginal Ice Zone}
 \label{sec:ch2.section3}
 %----------------------------------------------------
 
@@ -134,6 +134,7 @@ After the success of \ac{ICESat}, ICESat-2 was launched in September 2018, with 
 
 Remote sensing has many advantages, it allows for long term, consistent data collection, large areas can be surveyed without the need for a physical presence in the region of interest, and it can be more cost-effective than in situ data collection. A brief comparison of the three main satellite-based remote sensing methods is given in Table \ref{tab:sense_comparison} (\cite{agrawalCOMPARATIVEASSESSMENTREMOTE2019}).
 
+%----------------------------------------------------
 \begin{table}[H]
 \centering
 \resizebox{\linewidth}{!}{%
@@ -160,22 +161,30 @@ Technique Maturity                    & High                                 & M
 \caption{\textbf{Remote Sensing Techniques Comparison.} }
 \label{tab:sense_comparison}
 \end{table}
+%----------------------------------------------------
 
 Due to their extreme locations, frequent adverse weather and polar night, \ac{SAR} has become the most common method for observing both the polar regions (\cite{comisoSatelliteRemoteSensing1991}). Despite the limited resources and harsh conditions, \ac{SAR} has greatly widened our knowledge of the Antarctic, allowing for tracking of sea ice coverage and extent, snow cover storms, biological activity, ice drift and iceberg calving (\cite{maslanikRemoteSensingAntarctica1990}, \cite{dirscherlRemoteSensingIce2020}, \cite{baumhoerRemoteSensingAntarctic2018}).
 
 Currently, remote sensing falls short when attempting to identify the types of ice covering the ocean. \ac{SAR} imaging can estimate sea ice extent as well as sea ice concentration. Information on the specific types of ice (grease, frazil, nilas, pancake, etc.) is virtually impossible to extract from \ac{SAR} data alone (\cite{zakhvatkinaSatelliteSARDatabased2019}).
 
 %----------------------------------------------------
-\subsection{Light Detection and Ranging (\ac{LiDAR})}
+\subsection{Light Detection and Ranging}
 
-Light Detection and Ranging (\ac{LiDAR}) is an active remote sensing technique that uses laser pulses to create a three-dimensional representation (a point cloud) of the target subject. A point cloud is a collection of discrete data points in a coordinate space. A point cloud is created by a \ac{LiDAR} sensor by emitting a pulse of laser light in a specified direction towards the target. The pulse is reflected off a surface on the target and returns to the sensor. Using time of flight and the direction in which the pulse was emitted, the distance to the target and its location is calculated. This process is repeated, directing the laser pulse in different directions at the target to form a complete point cloud. *refine here also could use phase shift instead of ToF*
 
-The development of modern \ac{LiDAR} began with the invention of lasers, which replaced previous measurement systems based on traditional lights and lamps. Once laser technology matured and reached sufficient beam criteria (shape, wavelength), power density and packaging, could the modern \ac{LiDAR} sensor be possible. 
+\ac{LiDAR} is an active remote sensing technique that uses laser pulses to build a three-dimensional point cloud. A point cloud is a set of discrete points in a coordinate space that represent the geometry of a target. A point cloud is created by the sensor sending a laser pulse toward the target, recording the returned signal, and using the time of flight (or phase shift) and the direction in which the pulse was propagated to determine target range and position (\cite{kukkoMobileLaserScanning2013}). By repeating this process rapidly across different directions, a complete point cloud of the target scene is created.
+
+The development of modern \ac{LiDAR} began with the invention of lasers, which initially led to the development of simple laser rangefinders in the 1960s. These early rangefiners were capable of measuring the distance to a single target less than 5 km away to an accuracy of 2 to 3 m and were primarily used for military applications (\cite{molebnyLaserRadarHistorical2016}). Beginning in the 1970s and through to the 1980s, airborne laser rangefinders were first used for Earth observation, with applications ranging from sea ice surface roughness, bathymetry and topographical measurements (\cite{nelsonHowDidWe2013}).
+
+Once again, military applications led the development of \ac{LiDAR} technology, with the first true \ac{LiDAR} systems capable of producing full three-dimensional point clouds being developed in the 1980s. These systems were initially heavy, large and required significant power to operate, leading to their deployment being limited to large, vehicle-mounted platforms (\cite{molebnyLaserRadarHistorical2016}).  
+
+Commercial \ac{LiDAR} systems first became available in the early 2000s, with advancements laser, processing and power delivery systems leading to smaller, lighter and more power efficient sensors at lower costs. This has resulted in \ac{LiDAR} becoming more accessible to a wider range of applications and has opened up new possibilities and potential applications (\cite{wangEvolutionLiDARIts2020}). \ac{LiDAR} has seen limited deployment in Antarctica, with \cite{sandruShipborneSeaiceField2021} being potentially the first instance of \ac{LiDAR} being used to collect sea ice data from aboard the S.A. Agulhas II.
 
 %====================================================
 \section{Summary}
 \label{sec:ch2.section6}
 %----------------------------------------------------
+
+Antarctica and the Southern Ocean are vital components of the Earth's environmental system, and while research and interest in the regions have increased significantly in recent years, many aspects of their behaviour and dynamics still poorly understood. Sea ice dynamics, particularly those of the \ac{MIZ}, are one such area where large gaps in our understanding persist. 
 
 These gaps in our understanding of the \ac{MIZ} is a clear indication that further investigation into the dynamics of the region is necessary.
 
