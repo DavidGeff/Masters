@@ -12,7 +12,7 @@
 %ROS allows hardware to be easily added and removed from a platform for testing and development. The Livox Avia has manufacturer-supplied ROS drivers, hence this was the chosen method for interfacing with the device during data collection. 
 
 %====================================================
-\section{\ac{LiDAR} Characteristics}
+\section{LiDAR Characteristics}
 \label{sec:ch3:section1}
 
 \ac{LiDAR} offers several advantages over traditional remote sensing methods. As an active sensing system, it does not depend on external illumination, unlike visual methods such as telephoto or stereoscopic cameras. \ac{LiDAR} is also more robust to issues like poor focus, lens flare and overexposure that commonly affect optical cameras. Additionally, certain \ac{LiDAR} sensors can penetrate vegetation, enabling ground surface mapping beneath plant cover.
@@ -34,7 +34,7 @@ BACKSCATTER?
 *point cloud section?*
 
 %====================================================
-\section{\ac{LiDAR} Sensors}
+\section{LiDAR Sensors}
 \label{sec:ch3:section2}
 
 A basic \ac{LiDAR} sensor consists of three main components, a laser source, a steering mechanism to direct the laser beam, and a method of detecting the returning laser beam.
@@ -85,9 +85,9 @@ The Avia has the ability to detect each point's return intensity. It records eac
 \end{figure}
 %----------------------------------------------------
 
-The Livox Avia has a listed beam divergence of 0.28° x 0.03° along its vertical and horizontal plane. This results in the emitted beam, if falling on a target perfectly perpendicular to the axis of propagation at a distance of 50 meters, having the form of an ellipse with the approximate dimensions of 244.35 x 26.18 mm.
+The Livox Avia has a listed beam divergence of 0.28° x 0.03° along its vertical and horizontal planes. This results in the emitted beam, if falling on a target perfectly perpendicular to the axis of propagation at a distance of 50 meters, having the form of an ellipse with the approximate dimensions of 244.35 x 26.18 mm.
 
-The Avia has two built-in scanning patterns, a repetitive and a non-repetitive pattern. The repetitive scanning pattern scans the target area in a narrow horizontal band, providing a more uniform point density per frame when compared to the non-repetitive mode. The non-repetitive scanning pattern scans the target with a rosette-shaped pattern which rotates as it scans, covering areas not scanned in previous frames. This scanning method results in a non-uniform distribution of points across its \ac{FOV}. There is a high density of points in the centre of the \ac{FOV}, with the number of points reducing outwards to the edges of the sensor's \ac{FOV}. The non-repetitive scanning pattern was used for data capture as it provides a wider \ac{FOV} than the non-repetitive scanning pattern and captures more unique data points.
+The Avia has two built-in scanning patterns, a repetitive and a non-repetitive pattern. The repetitive scanning pattern scans the target area in a narrow horizontal band, providing a more uniform point density per frame when compared to the non-repetitive mode, see Figure \ref{fig:rep}. The non-repetitive scanning pattern scans the target with a rosette-shaped pattern which rotates as it scans, covering areas not scanned in previous frames, see Figure \ref{fig:non_rep}. This scanning method results in a non-uniform distribution of points across its \ac{FOV}. There is a high density of points in the centre of the \ac{FOV}, with the number of points reducing outwards to the edges of the sensor's \ac{FOV}. The non-repetitive scanning pattern was used for data capture as it provides a wider \ac{FOV} than the non-repetitive scanning pattern and captures more unique data points.
 
 %----------------------------------------------------
 \begin{figure}[H]
@@ -167,14 +167,45 @@ Dimensions                      & 91 x 61.2 x 64.8 mm                   &  &  & 
 \section{Point Cloud Processing}
 \label{sec:ch3:section4}
 
+Historicaly, \ac{LiDAR} was predominantly used in airborne applications for environmental mapping and surveying. However, with the recent advancements in \ac{LiDAR} technology, it has seen increased use in urban settings and aboard mobile and autonomous platforms (\cite{brazealRigorousObservationModel2021}). This shift has led to an increased focus on point cloud processing methods developed for urban environents and autonomous navigation, with less attention paid to natural environments.
+
 Many common point cloud processing methods are built around the assumption that the point cloud being worked upon is in the format of a standard (M x N) grid layout. Methods such as point cloud registration (obtaining the transformation between two point clouds (\cite{huangComprehensiveSurveyPoint2021})), clustering and model fitting often use the assumption of a constant grid with a constant number of points per frame to achieve their outputs. To bypass this limitation it is common for point clouds to be downsampled through a grid filter to achieve the desired format \cite{3DPointCloud}.
 
-In the Avia's repetitive scanning pattern (See Figure \ref{fig:rep}), the sensor produces a point cloud with a roughly rectangular \ac{FOV} and consistent point density, which is suitable for downsampling and grid filtering. Point clouds produced by the non-repetitive scanning pattern (See Figure \ref{fig:non_rep}) are circular and do not have uniform point density and are thus not ideal for downsampling and grid filtering.
+In the Avia's repetitive scanning pattern (see Figure \ref{fig:rep}), the sensor produces a point cloud with a roughly rectangular \ac{FOV} and consistent point density, which is suitable for downsampling and grid filtering. Point clouds produced by the non-repetitive scanning pattern (see Figure \ref{fig:non_rep}) are circular and do not have uniform point density and are thus not ideal for downsampling and grid filtering.
 
 Many processing methods are also based on the assumption that the environment data is collected from will contain predominantly objects made of simple geometries. For example, a scene in an urban environment will contain many objects made of rectangles, circles and triangles. The environment that data for this investigation was captured contains none of these simple shapes, with the geometry of the pancake floes being irregular and superimposed upon complex ocean surface waves.
 
 *something about normals here maybe*
 *something about return intensities here*
+
+%----------------------------------------------------
+\subsection{Plane Fitting}
+
+Plane fitting is a common method used in point cloud processing to identify and locate planar surfaces within a point cloud. Plane fitting is commonly used to identify features such as walls, roads, and building facades in urban settings. This assists in transforming raw point cloud data into useful real-world information (\cite{lohaniAirborneLiDARTechnology2017}).
+
+One of the most common methods for plane fitting is through the application of the \ac{RANSAC} algorithm. \ac{RANSAC} is a robust statistical algorithm used to estimate the parameters of a mathematical model from a dataset that may contain noise and outliers (\cite{fischlerRandomSampleConsensus1981}). The algorithm iteratively selects random subsets of the data to fit a user-defined model and evaluates how well the model fits the entire dataset. Using a user-defined tolerance, the algorithm classifies data points as inliers or outliers based on their distance from the fitted model. The model with the highest number of inliers is selected as the best fit for the dataset.
+
+\ac{RANSAC} has been applied with great success in identifying and recontructing buildings in urban environments from airborne \ac{LiDAR} data (\cite{forlaniBuildingReconstructionVisualization2003}), but has not seen much use in natural environments. As \ac{RANSAC} is designed to fit a user-defined model to data, with a sufficiently complex model it may be possible to fit environmetal features found in the \ac{MIZ}, such as surface waves propagating through an ice field. This would require a suitable wave model to be developed, but if successful could allow for the extraction of wave parameters such as amplitude and wave period directly from point cloud data.
+
+%----------------------------------------------------
+\subsection{Point Clustering}
+
+As a human, organising and sorting large amounts of objects or data into groups is often a trivial task that requires minimal mental exertion but significant time to complete. Automating this process can greatly reduce the time required to process a dataset, if implemented well. Selecting an algorithm or method will determine the accuracy, time and computing costs of automating the clustering process. Different methods are suited for use depending on properties of the data to be clustered (properties such as data dimensions, number of data points and the relationship between individual data points), knowledge of the final classes the data will be clustered into and computational restraints (\cite{xuComprehensiveSurveyClustering2015}).
+
+Clustering algorithms can be categorised based on their underlying structure, some of the most common categories are Partitional, Hierarchical, Density, Spectral, Subspace-based and Model-based (\cite{rodriguezClusteringAlgorithmsComparative2019}).
+
+Partitional methods divide the data into a set number of clusters, optimising a cost function to achieve this (usually a distance or reachability measure). The most common partitional clustering algorithm is K-means clustering, which iteratively assigns data points to the nearest cluster centroid and updates the centroids based on the assigned points until the algorithm converges. 
+
+Hierarchical methods attempt to group data points into a tree-like structure of clusters, analogous to a dendogram. This method measures the similarity between data points and merges or splits clusters based on this similarity. An example of a hierarchical clustering algorithm is Agglomerative Clustering, a popular bottom-up approach (each data point starts as its own cluster, and clusters are merged as the algorithm progresses) and is commonly used in the biological sciences.
+
+Density based algorithms group data points based on the density of points in a given region. Areas with high point density are classified as individual clusters, while areas with low point density are classified as noise or outliers. One of the most common density-based clustering algorithms is \ac{DBScan}.
+
+Spectral-based algorithms attempt to cluster data points by converting high-dimensional data into a lower-dimensional through the use of graph theory and linear algebra. After dimensionality reduction, simpler clustering methods such as K-means can be applied to the processed data.
+
+Subspace-based algorithms are designed to identify clusters in high-dimensional data by finding subsets of dimensions where the data points are more closely related. These algorithms are particularly useful when attempting to cluster data with many dimensions and limited computational resources.
+
+Model-based algorithms find the best fit of a pre-selected model to the data. These algorithms are based on the assumption that the data is generated from a mixture of underlying probability distributions. A common model-based clustering algorithm is the expectation-maximization algorithm.
+ 
 
 %====================================================
 \section{Optical Properties of Ocean Water, Ice and Snow}
@@ -221,63 +252,20 @@ The above suggests that the Livox Avia is best suited to detecting low density s
 %====================================================
 \section{Kalman Filters}
 \label{sec:ch3:section5}
-The Kalman Filter is a recursive predictor-corrector algorithm used to provide optimal estimates of unknown variables of a system given various noisy measurements as inputs to the algorithm over time (\cite{govaersIntroductionImplementationsKalman2019}). The method is named after Rudolph E. Kálmán, the engineer and mathematician who first described it in his now famous paper, (\cite{kalmanNewApproachLinear1960}).
 
-The Kalman filter uses the state-space format of a linear dynamic system, with the assumption that the measurements and process are subject to Gaussian noise.
+The Kalman Filter has become the most widely used method for state estimation in various fields including navigation, control systems, and signal processing. It is a recursive algorithm that estimates the state of a dynamic system from a series of noisy measurements. Onve it has been initiaised, the Kalman Filter operates in two main steps: prediction and update. In the prediction step, the filter uses a mathematical model of the system to predict the next state based on the current state estimate and control inputs. In the update step, the filter makes usse of new measurements to correct the predicted state, accounting for the uncertainties in both the model and the measurements (\cite{welch1995introduction}). The method is named after Rudolph E. Kálmán, the engineer and mathematician who first described it in his now famous paper, \cite{kalmanNewApproachLinear1960}.
 
-The process model of the system over time $k-1$ to $k$ is given as:
-
-%----------------------------------------------------
-\begin{equation} \label{eqn:process}
-    x_k = Fx_{k-1} + Bu_{k-1} + w_{k-1} \quad
-\end{equation}
-%----------------------------------------------------
-
-where $F$ is the state transition matrix applied the previous state matrix ($x_{k-1}$), $B$ is the control-input matrix applied to the control input vector ($u_{k-1}$) and the vector $w_{k-1}$ represents the process noise, assumed to be zero-mean Gaussian with covariance of $Q$ such that $w_{k-1} \sim N(0, Q)$.
-
-The measurement model describes the relation between the state and measurement of the system at time $k$ and is given as:
+One of the most common applications of the Kalman filter is in navigation systems, where it can be used to estimate an object's position, velocity, or orientation based on the sensor measurements available. For example, in an inertial navigation system, a Kalman filter can combine acceleromete and gyroscope measurements to estimate the position, orientation, and velocity of a vehicle. The more sensor measurements available to the filter, the more accurate the state estimations will be. The addition of \ac{GPS} measurements to an inertial navigation system will greatly improve the accuracy of the state estimates (\cite{grewalApplicationsKalmanFiltering2010}).
 
 %----------------------------------------------------
-\begin{equation} \label{eqn:measure}
-    z_k = Hx_k + \nu_k \quad
-\end{equation}
-%----------------------------------------------------
+\subsection{Attitude Estimation using Kalman Filters}
 
-where $H$ relates the current state ($x_{k}$)  to the measurement ($z_{k}$) and the vector $v_{k}$ represents the measurement noise, assumed to be zero-mean Gaussian with covariance of $R$ such that $v_{k} \sim N(0, R)$.
+Attitude estimation is the process of determining an object's orientation in three-dimensional space. This typically involves estimating the roll, pitch, and yaw angles of the object relative to a reference frame and then representing the angles using Euler angles or quarternions. A Kalman filter is the ideal tool to achieve this due to its ability to fuse data from various sensors.
 
-The filter consists of three states:
+The \ac{IMU} integrated into the Livox Avia contains two individual sensors, an accelerometer (which measures linear acceleration in the X, Y and Z axes) and a gyroscope (which measures angular velocity around the X, Y and Z axes). With an \ac{IMU} such as this, a Kalman filter can be used to estimate the roll and pitch angles of the sensor by fusing the accelerometer and gyroscope measurements, however yaw cannot be reliably estimated using only \ac{IMU} data. This is due to the fact that the accelerometer cannot provide any information about rotation around the Z-axis (yaw) as it is perpindicular to the direction of gravity. Gyroscopes are prone to drift over time, and so cannot be solely relied upon for accurate angle estimates without correction from additional sensors. This shortcoming can be mitigated through the addition of a sensor such as a magnetometer, which can provide reliable yaw measurements to account for gyroscope drift (\cite{songEstimatingRelativeAngles2022}).
 
-\begin{enumerate}
-    \item Initialization
-    \item Prediction
-    \item Update
-\end{enumerate}
+By obtaining estimates of the Avia's roll and pitch angles during data collection, it may be possible to apply an inverse transform to the point cloud data to compensate for some of the motion induced by the observation platform (S.A. Agulhas II). If successful, this motion compensation will simplify the point cloud processing required and improve the quality of the final outputs.
 
-Before beginning the main prediction loop, the filter first needs a guess of the initial state of the system:
-
-%----------------------------------------------------
-\begin{equation} \label{eqn:init_state}
-    \hat{x}_0^+ \quad
-\end{equation}
-
-
-
-%====================================================
-\section{Plane Fitting}
-\label{sec:ch3:section6}
-
-Plane fitting is a common method used in point cloud processing to identify and isolate planar surfaces within a point cloud dataset. Various algorithms exist to perform plane fitting, with the most common being the Least Squares Method and the \ac{RANSAC} algorithm. *refine and edit this* move onto how this could be used for wave fitting
-
-\ac{RANSAC} plane fitting - \ac{RANSAC} is an algorithm that estimates a mathematical model from an input dataset. This method can be implemented to fit models of wave functions (sinusoidal and Stokes) to the collected data in an attempt to estimate the wave function parameters. The \ac{RANSAC} algorithm estimates the model parameters by first selecting a random set of points in the dataset, either user-specified or the minimum number of points required to satisfy the model, and fits the model to these points. Using a user-selected tolerance, the algorithm then determines how many data points are inliers. This process is repeated until there are a satisfactory number of inliers or until the maximum number of iterations have been reached.
-
-%====================================================
-\section{Clustering Algorithms}
-\label{sec:ch3:section7}
-
-As a human, organising and sorting large amounts of objects or data into groups is often a trivial task that requires minimal mental exertion but significant time to complete. Automating this process can greatly reduce the time required to process a dataset, if implemented well. Selecting an algorithm or method will determine the accuracy, time and computing costs of automating the clustering process. Different methods are suited for use depending on properties of the data to be clustered (properties such as data dimensions, number of data points and the relationship between individual data points), knowledge of the final classes the data will be clustered into and computational restraints \cite{xuComprehensiveSurveyClustering2015}.
-
-Clustering Algorithms can be categorised based on the methods by which they function, some of the most common categories are Partitional, Hierarchical, Density, Model-based and Spectral-based.
-\\Partitional methods
-\\Hierarchical methods are built upon the assumption that there is a hierarchical relationship between the data and the algorithm constructs this hierarchy, thus clustering the data.
-\\Density based algorithms group areas of data with high density as individual clusters.
-\\Model-based algorithms find the best fit of a pre-selected model to the data.
+%****************************************************
+% END
+%****************************************************

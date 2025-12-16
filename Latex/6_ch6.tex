@@ -27,7 +27,7 @@ MATLAB's \ac{LiDAR} Toolbox has provision for a pointCloud object which was used
 \section{Motion Compensation}
 \label{sec:ch6.section2}
 
-Two Kalman filters were created to estimate the attitude of the Avia during data collection. The filters output estimates of the sensor's roll and pitch (yaw cannot be reliably estimated from \ac{IMU} data). Using these angle estimates an inverse transform can be applied to the point cloud to 'stabilise' the data and compensate for the motion of the observation platform (ship). As this Kalman filter only estimates changes in roll and pitch attitude, and not position, there will still be motion artefacts in the data due to translation and yaw of the observation platform. 
+Two Kalman filters were created to estimate the attitude of the Avia during data collection. The filters output estimates of the sensor's roll and pitch (yaw cannot be reliably estimated from \ac{IMU} data). Using these angle estimates an inverse transform can be applied to the point cloud to 'stabilise' the data and compensate for the motion of the observation platform (ship). As these Kalman filters only estimate changes in roll and pitch attitude, and not position, there will still be motion artefacts in the data due to translation and yaw of the observation platform. 
 
 The first Kalman filter was created using MATLAB's Sensor Fusion Toolbox. The second Kalman filter is an \ac{EKF} which was initially developed by Philip Salmony (\cite{salmonyPms67AttitudeEstimation2025}). Both filters accept the Avia \ac{IMU} data as inputs and return roll and yaw estimates at the same frequency as the input data (200 Hz).
 
@@ -42,7 +42,7 @@ Once angle estimations have been obtained, they have to be time synchronised and
 \end{figure}
 %----------------------------------------------------
 
-Angle estimate residuals (the difference between the motion capture ground truth and the filter's estimates) were computed for the two test cases and used as the primary metric for comparing the filters relative performance. The resduals were also used in the tuning of both filters. To tune each filter's parameters, iterative adjustments were made to the parameters until the mean residuals reached a minimum.
+Angle estimate residuals (the difference between the motion capture ground truth and the filter's estimates) were computed for the two test cases and used as the primary metric for comparing the filters relative performance. The resduals were also used in the tuning of both filters. To tune each filter's parameters, iterative adjustments were made to the parameters, and the angle estimates observed until the mean residuals reached a minimum, as recommended by \cite{grewalApplicationsKalmanFiltering2010}.
  
 
 %====================================================
@@ -142,3 +142,7 @@ To group points into clusters it is necessary to determine which points are dire
 The point \textit{p} is density-reachable from point \textit{q} if there is a chain of points p$_{1}$, ..., p$_{n}$ where p$_{1}$ = \textit{q} and p$_{n}$ = \textit{p} such that each point is directly density-reachable from the previous point in the chain. Similarly to direct density-reachability, this property is symmetric only for core points.\\
 Points \textit{p} and \textit{q} are density-connected if there is a third point, \textit{o}, which both \textit{p} and \textit{q} are density-reachable from. This property is symmetrical for border points.\\ 
 The \ac{DBScan} algorithm iterates through all points, calculating distances between each other and categorising them as core, border, or noise points. An unassigned core point is the start of a new cluster. All neighbouring core or border points are assigned to this cluster
+
+%****************************************************
+% END
+%****************************************************

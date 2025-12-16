@@ -667,46 +667,50 @@
       \verb 10.1029/JC086iC05p04193
       \endverb
     \endentry
-    \entry{govaersIntroductionImplementationsKalman2019}{book}{}{}
-      \name{editor}{1}{}{%
-        {{un=0,uniquepart=base,hash=93c652eae1541f988673af68fa891562}{%
-           family={Govaers},
+    \entry{grewalApplicationsKalmanFiltering2010}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=b7bb0e75239a95ecea244be0e26ec0b4}{%
+           family={Grewal},
            familyi={G\bibinitperiod},
-           given={Felix},
-           giveni={F\bibinitperiod},
+           given={Mohinder\bibnamedelima S.},
+           giveni={M\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3063f566cda79c6172b5fa17bc4a8499}{%
+           family={Andrews},
+           familyi={A\bibinitperiod},
+           given={Angus\bibnamedelima P.},
+           giveni={A\bibinitperiod\bibinitdelim P\bibinitperiod},
            givenun=0}}%
       }
-      \list{publisher}{1}{%
-        {IntechOpen}%
-      }
-      \strng{namehash}{93c652eae1541f988673af68fa891562}
-      \strng{fullhash}{93c652eae1541f988673af68fa891562}
-      \strng{fullhashraw}{93c652eae1541f988673af68fa891562}
-      \strng{bibnamehash}{93c652eae1541f988673af68fa891562}
-      \strng{editorbibnamehash}{93c652eae1541f988673af68fa891562}
-      \strng{editornamehash}{93c652eae1541f988673af68fa891562}
-      \strng{editorfullhash}{93c652eae1541f988673af68fa891562}
-      \strng{editorfullhashraw}{93c652eae1541f988673af68fa891562}
+      \strng{namehash}{b749df92a51a36b3a99b5449cb080832}
+      \strng{fullhash}{b749df92a51a36b3a99b5449cb080832}
+      \strng{fullhashraw}{b749df92a51a36b3a99b5449cb080832}
+      \strng{bibnamehash}{b749df92a51a36b3a99b5449cb080832}
+      \strng{authorbibnamehash}{b749df92a51a36b3a99b5449cb080832}
+      \strng{authornamehash}{b749df92a51a36b3a99b5449cb080832}
+      \strng{authorfullhash}{b749df92a51a36b3a99b5449cb080832}
+      \strng{authorfullhashraw}{b749df92a51a36b3a99b5449cb080832}
       \field{sortinit}{G}
       \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
-      \field{labelnamesource}{editor}
+      \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{isbn}{978-1-83880-536-4 978-1-83880-537-1}
-      \field{langid}{english}
-      \field{month}{5}
-      \field{title}{Introduction and {{Implementations}} of the {{Kalman Filter}}}
-      \field{urlday}{23}
-      \field{urlmonth}{9}
+      \field{issn}{1066-033X, 1941-000X}
+      \field{journaltitle}{IEEE Control Systems}
+      \field{month}{6}
+      \field{number}{3}
+      \field{title}{Applications of {{Kalman Filtering}} in {{Aerospace}} 1960 to the {{Present}} [{{Historical Perspectives}}]}
+      \field{urlday}{16}
+      \field{urlmonth}{12}
       \field{urlyear}{2025}
-      \field{year}{2019}
+      \field{volume}{30}
+      \field{year}{2010}
       \field{urldateera}{ce}
+      \field{pages}{69\bibrangedash 78}
+      \range{pages}{10}
       \verb{doi}
-      \verb 10.5772/intechopen.75731
-      \endverb
-      \verb{file}
-      \verb C:\Users\dseph\Zotero\storage\A92R7ZEB\Govaers - 2019 - Introduction and Implementations of the Kalman Filter.pdf
+      \verb 10.1109/MCS.2010.936465
       \endverb
     \endentry
     \entry{harrapOverviewLIDARCollection2010}{article}{}{}
@@ -2127,6 +2131,43 @@
       \verb{doi}
       \verb 10.1098/rsta.2018.0161
       \endverb
+    \endentry
+    \entry{welch1995introduction}{article}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=19eb8ef0f1cf49ad4375a0a4acc3a385}{%
+           family={Welch},
+           familyi={W\bibinitperiod},
+           given={Greg},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e4f38e96180c309ad00c07afe4fbac50}{%
+           family={Bishop},
+           familyi={B\bibinitperiod},
+           given={Gary},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Chapel Hill, NC, USA}%
+      }
+      \strng{namehash}{fe3c6ebaf76b23d9b8700cefbbeac101}
+      \strng{fullhash}{fe3c6ebaf76b23d9b8700cefbbeac101}
+      \strng{fullhashraw}{fe3c6ebaf76b23d9b8700cefbbeac101}
+      \strng{bibnamehash}{fe3c6ebaf76b23d9b8700cefbbeac101}
+      \strng{authorbibnamehash}{fe3c6ebaf76b23d9b8700cefbbeac101}
+      \strng{authornamehash}{fe3c6ebaf76b23d9b8700cefbbeac101}
+      \strng{authorfullhash}{fe3c6ebaf76b23d9b8700cefbbeac101}
+      \strng{authorfullhashraw}{fe3c6ebaf76b23d9b8700cefbbeac101}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{An Introduction to the {{Kalman}} Filter}
+      \field{year}{1995}
     \endentry
     \entry{WhatLidarDataArcGIS}{misc}{}{}
       \field{sortinit}{W}
