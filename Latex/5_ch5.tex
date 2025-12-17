@@ -12,9 +12,9 @@
 
 Before designing the data processing pipeline, it is important to understand the characteristics and limitations of the Livox Avia sensor. This section details the investigations carried out to determine the strengths and weaknesses of the Avia in the context of observing sea ice in the \ac{MIZ} from a moving platform.
 
-The Avia was designed primarily for use in urban environents for mapping, navigation and surveying applications (\cite{AviaLiDARSensor}). This means that the sensor has been optimised for capturing static scenes from a stable observation platform, aimed perpendicular to the target scene. This is almost the exact opposite of the observation conditions in the \ac{MIZ}, where the target scene (sea ice field) is highly dynamic, the observation platform is never fully stable and the sensor is mounted at an angle to the target scene. Therefore, it is important to understand how these differences in observation conditions affect the quality of the captured data.
+The Avia was designed primarily for use in urban environments for mapping, navigation and surveying applications (\cite{AviaLiDARSensor}). This means that the sensor has been optimised for capturing static scenes from a stable observation platform, aimed perpendicular to the target scene. This is almost the exact opposite of the observation conditions in the \ac{MIZ}, where the target scene (sea ice field) is highly dynamic, the observation platform is never fully stable, and the sensor is mounted at an angle to the target scene. Therefore, it is important to understand how these differences in observation conditions affect the quality of the captured data.
 
-The primary areas of investigation were the effects of motion distortion due to the moving platform, the accuracy of the captured scene when the sensor is not perpendicular to the target scene leading to shadowing and decresed point density, the minimum number of frames required to obtain accurate recreations of the target scene and the impact of the sensor's beam divergence. The outcomes of these investigations informed the final design of the data processing pipeline.
+The primary areas of investigation were the effects of motion distortion due to the moving platform, the accuracy of the captured scene when the sensor is not perpendicular to the target scene leading to shadowing and decreased point density, the minimum number of frames required to obtain accurate recreations of the target scene and the impact of the sensor's beam divergence. The outcomes of these investigations informed the final design of the data processing pipeline.
 
 Something about trying normals estimation and it not working so discarded from final pipeline
 
@@ -23,7 +23,7 @@ Something about trying normals estimation and it not working so discarded from f
 \label{sec:ch5.section2}
 %----------------------------------------------------
 
-Before any point cloud processing can take place, the raw Avia data must be pre-processed to ensrure it is in a suitable format and condition before being fed into the main processing pipeline. This pre-processing varies depending on the source of the data, but generally involves synchronising and aligning the Avia data with any ground truth data, as well as cropping and filtering the data to focus on the areas of interest and remove unwanted points produced during experimental setup.
+Before any point cloud processing can take place, the raw Avia data must be pre-processed to ensure it is in a suitable format and condition before being fed into the main processing pipeline. This pre-processing varies depending on the source of the data, but generally involves synchronising and aligning the Avia data with any ground truth data, as well as cropping and filtering the data to focus on the areas of interest and remove unwanted points produced during experimental setup.
 
 Fixing up Kalman experiment data to match mocap outputs and make comparable.
 \\-44 degree yaw from mocap axis
@@ -58,7 +58,7 @@ custom RANSAC to fit wave model to point cloud data and extract wave parameters.
 %----------------------------------------------------
 \subsection{Pancake Identification}
 
-Talk through why some clustering algortithms will or won't work, k-tree stuff needs to know how many clusters there are, hierarchies don't make sense, DBScan relies on constant density (not ideal), optics needs an explanation.
+Talk through why some clustering algorithms will or won't work, k-tree stuff needs to know how many clusters there are, hierarchies don't make sense, DBScan relies on constant density (not ideal), optics needs an explanation.
 
 %****************************************************
 % END
