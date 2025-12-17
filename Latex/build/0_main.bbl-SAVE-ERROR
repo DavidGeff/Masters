@@ -156,6 +156,22 @@
       \verb 10.17736/ijope.2021.ik08
       \endverb
     \endentry
+    \entry{AviaLiDARSensor}{misc}{}{}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{https://www.livoxtech.com/avia}
+      \field{title}{Avia {{LiDAR}} Sensor - {{Livox}}}
+      \field{urlday}{19}
+      \field{urlmonth}{8}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb C:\Users\dseph\Zotero\storage\RU8LB76J\avia.html
+      \endverb
+    \endentry
     \entry{baumhoerRemoteSensingAntarctic2018}{article}{}{}
       \name{author}{4}{}{%
         {{un=0,uniquepart=base,hash=43087bcf34b6d93083f34137e054dfbf}{%
@@ -275,6 +291,67 @@
       \verb{doi}
       \verb 10.1175/JCLI3489.1
       \endverb
+    \endentry
+    \entry{brazealRigorousObservationModel2021}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=cbeb5b59acfad79a1b43febe67b40932}{%
+           family={Brazeal},
+           familyi={B\bibinitperiod},
+           given={Ryan\bibnamedelima G.},
+           giveni={R\bibinitperiod\bibinitdelim G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c77bd25c5949380fadd0c8ce04313c2a}{%
+           family={Wilkinson},
+           familyi={W\bibinitperiod},
+           given={Benjamin\bibnamedelima E.},
+           giveni={B\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ecf2efd6be6ff62d7055652417d60fa7}{%
+           family={Hochmair},
+           familyi={H\bibinitperiod},
+           given={Hartwig\bibnamedelima H.},
+           giveni={H\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Multidisciplinary Digital Publishing Institute}%
+      }
+      \strng{namehash}{36c91c8347e8d51f5f79ae717b2574f1}
+      \strng{fullhash}{36c91c8347e8d51f5f79ae717b2574f1}
+      \strng{fullhashraw}{36c91c8347e8d51f5f79ae717b2574f1}
+      \strng{bibnamehash}{36c91c8347e8d51f5f79ae717b2574f1}
+      \strng{authorbibnamehash}{36c91c8347e8d51f5f79ae717b2574f1}
+      \strng{authornamehash}{36c91c8347e8d51f5f79ae717b2574f1}
+      \strng{authorfullhash}{36c91c8347e8d51f5f79ae717b2574f1}
+      \strng{authorfullhashraw}{36c91c8347e8d51f5f79ae717b2574f1}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Modern lidar sensors are continuing to decrease in size, weight, and cost, but the demand for fast, abundant, and high-accuracy lidar observations is only increasing. The Livox Mid-40 lidar sensor was designed for use within sense-and-avoid navigation systems for autonomous vehicles, but has also found adoption within aerial mapping systems. In order to characterize the overall quality of the point clouds from the Mid-40 sensor and enable sensor calibration, a rigorous model of the sensor's raw observations is needed. This paper presents the development of an angular observation model for the Mid-40 sensor, and its application within an extended Kalman filter that uses the sensor's data to estimate the model's operating parameters, systematic errors, and the instantaneous prism rotation angles for the Risley prism optical steering mechanism. The analysis suggests that the Mid-40's angular observations are more accurate than the specifications provided by the manufacturer. Additionally, it is shown that the prism rotation angles can be used within a planar constrained least-squares adjustment to theoretically improve the accuracy of the angular observations of the Mid-40 sensor.}
+      \field{issn}{1424-8220}
+      \field{journaltitle}{Sensors}
+      \field{langid}{english}
+      \field{month}{1}
+      \field{number}{14}
+      \field{title}{A {{Rigorous Observation Model}} for the {{Risley Prism-Based Livox Mid-40 Lidar Sensor}}}
+      \field{urlday}{6}
+      \field{urlmonth}{11}
+      \field{urlyear}{2024}
+      \field{volume}{21}
+      \field{year}{2021}
+      \field{urldateera}{ce}
+      \field{pages}{4722}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.3390/s21144722
+      \endverb
+      \verb{file}
+      \verb C:\Users\dseph\Zotero\storage\SI49NFXR\Brazeal et al. - 2021 - A Rigorous Observation Model for the Risley Prism-Based Livox Mid-40 Lidar Sensor.pdf
+      \endverb
+      \keyw{calibration,drones,laser scanning,lidar,Risley prism,UAS}
     \endentry
     \entry{cavalieriAntarcticSeaIce2008}{article}{}{}
       \name{author}{2}{}{%
@@ -624,6 +701,108 @@
       \verb{doi}
       \verb 10.1029/2018RG000631
       \endverb
+    \endentry
+    \entry{fischlerRandomSampleConsensus1981}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=53af7a5ea8715d6c3922933be034062f}{%
+           family={Fischler},
+           familyi={F\bibinitperiod},
+           given={Martin\bibnamedelima A.},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=40bae40d0cc01a890e3631288dd8ffa2}{%
+           family={Bolles},
+           familyi={B\bibinitperiod},
+           given={Robert\bibnamedelima C.},
+           giveni={R\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{fd6cd035a6e3f6ec978ad866925826c7}
+      \strng{fullhash}{fd6cd035a6e3f6ec978ad866925826c7}
+      \strng{fullhashraw}{fd6cd035a6e3f6ec978ad866925826c7}
+      \strng{bibnamehash}{fd6cd035a6e3f6ec978ad866925826c7}
+      \strng{authorbibnamehash}{fd6cd035a6e3f6ec978ad866925826c7}
+      \strng{authornamehash}{fd6cd035a6e3f6ec978ad866925826c7}
+      \strng{authorfullhash}{fd6cd035a6e3f6ec978ad866925826c7}
+      \strng{authorfullhashraw}{fd6cd035a6e3f6ec978ad866925826c7}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{A new paradigm, Random Sample Consensus (RANSAC), for fitting a model to experimental data is introduced. RANSAC is capable of interpreting/smoothing data containing a significant percentage of gross errors, and is thus ideally suited for applications in automated image analysis where interpretation is based on the data provided by error-prone feature detectors. A major portion of this paper describes the application of RANSAC to the Location Determination Problem (LDP): Given an image depicting a set of landmarks with known locations, determine that point in space from which the image was obtained. In response to a RANSAC requirement, new results are derived on the minimum number of landmarks needed to obtain a solution, and algorithms are presented for computing these minimum-landmark solutions in closed form. These results provide the basis for an automatic system that can solve the LDP under difficult viewing}
+      \field{issn}{0001-0782, 1557-7317}
+      \field{journaltitle}{Communications of the ACM}
+      \field{langid}{english}
+      \field{month}{6}
+      \field{number}{6}
+      \field{shorttitle}{Random Sample Consensus}
+      \field{title}{Random Sample Consensus: A Paradigm for Model Fitting with Applications to Image Analysis and Automated Cartography}
+      \field{urlday}{16}
+      \field{urlmonth}{12}
+      \field{urlyear}{2025}
+      \field{volume}{24}
+      \field{year}{1981}
+      \field{urldateera}{ce}
+      \field{pages}{381\bibrangedash 395}
+      \range{pages}{15}
+      \verb{doi}
+      \verb 10.1145/358669.358692
+      \endverb
+    \endentry
+    \entry{forlaniBuildingReconstructionVisualization2003}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=62329fbadfb5e07913470f1aeb05c8cc}{%
+           family={Forlani},
+           familyi={F\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=edc69987c91b22a8dc162a08ac00e11d}{%
+           family={Nardinocchi},
+           familyi={N\bibinitperiod},
+           given={Carla},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=14d1271b36f453bfc0a88983d63c0aa3}{%
+           family={Scaioni},
+           familyi={S\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bcc4123253a0891ed13ce97a557d77b1}{%
+           family={Zingaretti},
+           familyi={Z\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {NATURAL RESOURCES CANADA}%
+      }
+      \strng{namehash}{f8c13c9907333ce19910b403595028e1}
+      \strng{fullhash}{fe28b993ab0908678a632f416fc9abd1}
+      \strng{fullhashraw}{fe28b993ab0908678a632f416fc9abd1}
+      \strng{bibnamehash}{f8c13c9907333ce19910b403595028e1}
+      \strng{authorbibnamehash}{f8c13c9907333ce19910b403595028e1}
+      \strng{authornamehash}{f8c13c9907333ce19910b403595028e1}
+      \strng{authorfullhash}{fe28b993ab0908678a632f416fc9abd1}
+      \strng{authorfullhashraw}{fe28b993ab0908678a632f416fc9abd1}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{1682-1750}
+      \field{journaltitle}{International Archives Of Photogrammetry Remote Sensing And Spatial Information Sciences}
+      \field{number}{5/W12}
+      \field{title}{Building Reconstruction and Visualization from Lidar Data}
+      \field{volume}{34}
+      \field{year}{2003}
+      \field{pages}{151\bibrangedash 156}
+      \range{pages}{6}
     \endentry
     \entry{gordonSeasonalitySouthernOcean1981}{article}{}{}
       \name{author}{1}{}{%
@@ -1217,6 +1396,54 @@
       \field{type}{phdthesis}
       \field{year}{2013}
     \endentry
+    \entry{lohaniAirborneLiDARTechnology2017}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=9aabd46a635337e93b06c5d613c8a56d}{%
+           family={Lohani},
+           familyi={L\bibinitperiod},
+           given={Bharat},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fcf1c6889a1e3bd25e1add6a8d4e04d6}{%
+           family={Ghosh},
+           familyi={G\bibinitperiod},
+           given={Suddhasheel},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{5fb26d097d33e7b906d84ed2902fe1d7}
+      \strng{fullhash}{5fb26d097d33e7b906d84ed2902fe1d7}
+      \strng{fullhashraw}{5fb26d097d33e7b906d84ed2902fe1d7}
+      \strng{bibnamehash}{5fb26d097d33e7b906d84ed2902fe1d7}
+      \strng{authorbibnamehash}{5fb26d097d33e7b906d84ed2902fe1d7}
+      \strng{authornamehash}{5fb26d097d33e7b906d84ed2902fe1d7}
+      \strng{authorfullhash}{5fb26d097d33e7b906d84ed2902fe1d7}
+      \strng{authorfullhashraw}{5fb26d097d33e7b906d84ed2902fe1d7}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{issn}{0369-8203, 2250-1762}
+      \field{journaltitle}{Proceedings of the National Academy of Sciences, India Section A: Physical Sciences}
+      \field{langid}{english}
+      \field{month}{12}
+      \field{number}{4}
+      \field{shorttitle}{Airborne {{LiDAR Technology}}}
+      \field{title}{Airborne {{LiDAR Technology}}: {{A Review}} of {{Data Collection}} and {{Processing Systems}}}
+      \field{urlday}{16}
+      \field{urlmonth}{12}
+      \field{urlyear}{2025}
+      \field{volume}{87}
+      \field{year}{2017}
+      \field{urldateera}{ce}
+      \field{pages}{567\bibrangedash 579}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.1007/s40010-017-0435-9
+      \endverb
+    \endentry
     \entry{maslanikRemoteSensingAntarctica1990}{article}{}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=ffc80a3503d713b51161a5a8996eda05}{%
@@ -1639,6 +1866,95 @@
       \verb 10.1111/1365-2664.12261
       \endverb
     \endentry
+    \entry{rodriguezClusteringAlgorithmsComparative2019}{article}{}{}
+      \name{author}{7}{}{%
+        {{un=0,uniquepart=base,hash=9afe12c58ba9e688d5c655448f10cf53}{%
+           family={Rodriguez},
+           familyi={R\bibinitperiod},
+           given={Mayra\bibnamedelima Z.},
+           giveni={M\bibinitperiod\bibinitdelim Z\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2b3b5a9264027baed28e12e0800df759}{%
+           family={Comin},
+           familyi={C\bibinitperiod},
+           given={Cesar\bibnamedelima H.},
+           giveni={C\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b371ab20d58397ba36f100da59b98fa8}{%
+           family={Casanova},
+           familyi={C\bibinitperiod},
+           given={Dalcimar},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8703de219f3feb36ed04081f11b978e7}{%
+           family={Bruno},
+           familyi={B\bibinitperiod},
+           given={Odemir\bibnamedelima M.},
+           giveni={O\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=328a093ac51e7337bfa1602e81021cfe}{%
+           family={Amancio},
+           familyi={A\bibinitperiod},
+           given={Diego\bibnamedelima R.},
+           giveni={D\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f7a1deec4c7889addd4b22be83b17f26}{%
+           family={Costa},
+           familyi={C\bibinitperiod},
+           given={Luciano\bibnamedelimb Da\bibnamedelima F.},
+           giveni={L\bibinitperiod\bibinitdelim D\bibinitperiod\bibinitdelim F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=31b19ec014cd07b06333e4143b90861d}{%
+           family={Rodrigues},
+           familyi={R\bibinitperiod},
+           given={Francisco\bibnamedelima A.},
+           giveni={F\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=5285b151f93f701fe74bf2372738a168}{%
+           family={Kestler},
+           familyi={K\bibinitperiod},
+           given={Hans\bibnamedelima A},
+           giveni={H\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{420e08c59963e902bd11cbbdcc627ade}
+      \strng{fullhash}{5a937be2c11f25a488b932dfb23d0293}
+      \strng{fullhashraw}{5a937be2c11f25a488b932dfb23d0293}
+      \strng{bibnamehash}{420e08c59963e902bd11cbbdcc627ade}
+      \strng{authorbibnamehash}{420e08c59963e902bd11cbbdcc627ade}
+      \strng{authornamehash}{420e08c59963e902bd11cbbdcc627ade}
+      \strng{authorfullhash}{5a937be2c11f25a488b932dfb23d0293}
+      \strng{authorfullhashraw}{5a937be2c11f25a488b932dfb23d0293}
+      \strng{editorbibnamehash}{5285b151f93f701fe74bf2372738a168}
+      \strng{editornamehash}{5285b151f93f701fe74bf2372738a168}
+      \strng{editorfullhash}{5285b151f93f701fe74bf2372738a168}
+      \strng{editorfullhashraw}{5285b151f93f701fe74bf2372738a168}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{issn}{1932-6203}
+      \field{journaltitle}{PLOS ONE}
+      \field{langid}{english}
+      \field{month}{1}
+      \field{number}{1}
+      \field{shorttitle}{Clustering Algorithms}
+      \field{title}{Clustering Algorithms: {{A}} Comparative Approach}
+      \field{urlday}{10}
+      \field{urlmonth}{9}
+      \field{urlyear}{2025}
+      \field{volume}{14}
+      \field{year}{2019}
+      \field{urldateera}{ce}
+      \field{pages}{e0210236}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1371/journal.pone.0210236
+      \endverb
+    \endentry
     \entry{salmonyPms67AttitudeEstimation2025}{misc}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=497c9f89206cecd0d8bcafd2064ae874}{%
@@ -1854,6 +2170,58 @@
       \verb C:\Users\dseph\Zotero\storage\JBVY7KU3\Shen et al. - 2001 - A conceptual model for pancake-ice formation in a wave field.pdf
       \endverb
     \endentry
+    \entry{songEstimatingRelativeAngles2022}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=a4431f4aad13590bae4830c417c6a1c4}{%
+           family={Song},
+           familyi={S\bibinitperiod},
+           given={Seung\bibnamedelima Yun},
+           giveni={S\bibinitperiod\bibinitdelim Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6558f4004aa5d822c9097a44e6f1e41a}{%
+           family={Pei},
+           familyi={P\bibinitperiod},
+           given={Yinan},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d9d1c44423eb82cb58f7bb8090fcef12}{%
+           family={{Hsiao-Wecksler}},
+           familyi={H\bibinitperiod},
+           given={Elizabeth\bibnamedelima T.},
+           giveni={E\bibinitperiod\bibinitdelim T\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{aa4f7861ec469661c9c09e1fe8a1b6c2}
+      \strng{fullhash}{aa4f7861ec469661c9c09e1fe8a1b6c2}
+      \strng{fullhashraw}{aa4f7861ec469661c9c09e1fe8a1b6c2}
+      \strng{bibnamehash}{aa4f7861ec469661c9c09e1fe8a1b6c2}
+      \strng{authorbibnamehash}{aa4f7861ec469661c9c09e1fe8a1b6c2}
+      \strng{authornamehash}{aa4f7861ec469661c9c09e1fe8a1b6c2}
+      \strng{authorfullhash}{aa4f7861ec469661c9c09e1fe8a1b6c2}
+      \strng{authorfullhashraw}{aa4f7861ec469661c9c09e1fe8a1b6c2}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1530-437X, 1558-1748, 2379-9153}
+      \field{journaltitle}{IEEE Sensors Journal}
+      \field{month}{10}
+      \field{number}{20}
+      \field{title}{Estimating {{Relative Angles Using Two Inertial Measurement Units Without Magnetometers}}}
+      \field{urlday}{16}
+      \field{urlmonth}{12}
+      \field{urlyear}{2025}
+      \field{volume}{22}
+      \field{year}{2022}
+      \field{urldateera}{ce}
+      \field{pages}{19688\bibrangedash 19699}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1109/JSEN.2022.3203346
+      \endverb
+    \endentry
     \entry{thomsonWavePropagationMarginal2022}{article}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=a72b9b84115dc7135f1fdb325c6e3cf8}{%
@@ -1895,6 +2263,9 @@
       \range{pages}{1}
       \verb{doi}
       \verb 10.1098/rsta.2021.0251
+      \endverb
+      \verb{file}
+      \verb C:\Users\dseph\Zotero\storage\BN7ZZ73Y\Thomson - 2022 - Wave propagation in the marginal ice zone connections and feedback mechanisms within the air–ice–oc.pdf
       \endverb
     \endentry
     \entry{vichiIndicatorSeaIce2022}{article}{}{}

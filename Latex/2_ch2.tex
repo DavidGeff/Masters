@@ -137,26 +137,24 @@ Remote sensing has many advantages, it allows for long term, consistent data col
 %----------------------------------------------------
 \begin{table}[H]
 \centering
-\resizebox{\linewidth}{!}{%
-\begin{tabular}{llll} 
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|l|l|l|l|}
 \hline
-\multicolumn{1}{c}{\textbf{Variable}} & \multicolumn{1}{c}{\textbf{Optical}} & \multicolumn{1}{c}{\textbf{\ac{SAR}}} & \multicolumn{1}{c}{\textbf{\ac{LiDAR}}}  \\ 
-\hline
-Sensor Type                           & Passive                              & Active                           & Active                              \\ 
-\hline
-Electromagnetic Range                 & 0.4 $\mu$ m - 1 mm                   & 1 mm - 1 m                       & 250 nm to 10 $\mu$ m                \\ 
-\hline
-Weather Limitations                   & Cannot penetrate cloud cover         & Can penetrate cloud cover        & Cannot penetrate heavy cloud cover  \\ 
-\hline
-Area Coverage                         & Large                                & Large                            & Small                               \\ 
-\hline
-Data Collected                        & Spectral Radiance                    & Backscatter Amplitude  Phase     & Return Range  Intensity             \\ 
-\hline
-Data Availability                     & Many datasets                        & Many datasets                    & Few datasets                        \\ 
-\hline
-Technique Maturity                    & High                                 & Medium                           & Low                                 \\
-\hline
-\end{tabular}
+\multicolumn{1}{|c|}{\textbf{Variable}} &
+  \multicolumn{1}{c|}{\textbf{Optical}} &
+  \multicolumn{1}{c|}{\textbf{\textbackslash{}acSAR}} &
+  \multicolumn{1}{c|}{\textbf{\textbackslash{}acLiDAR}} \\ \hline
+Sensor Type           & Passive            & Active                         & Active                 \\ \hline
+Electromagnetic Range & 0.4 $\mu$ m - 1 mm & 1 mm - 1 m                     & 250 nm to 10 $\mu$ m   \\ \hline
+Weather Limitations &
+  Cannot penetrate cloud cover &
+  Can penetrate cloud cover &
+  Cannot penetrate heavy cloud cover \\ \hline
+Area Coverage         & Large              & Large                          & Small                  \\ \hline
+Data Collected        & Spectral Radiance  & Backscatter Amplitude \& Phase & Return Range Intensity \\ \hline
+Data Availability     & Many datasets      & Many datasets                  & Few datasets           \\ \hline
+Technique Maturity    & High               & Medium                         & Low                    \\ \hline
+\end{tabular}%
 }
 \caption{\textbf{Remote Sensing Techniques Comparison.} }
 \label{tab:sense_comparison}
@@ -187,6 +185,8 @@ Commercial \ac{LiDAR} systems first became available in the early 2000s, with ad
 Antarctica and the Southern Ocean are vital components of the Earth's environmental system, and while research and interest in the regions have increased significantly in recent years, many aspects of their behaviour and dynamics still poorly understood. Sea ice dynamics, particularly those of the \ac{MIZ}, are one such area where large gaps in our understanding persist. 
 
 These gaps in our understanding of the \ac{MIZ} is a clear indication that further investigation into the dynamics of the region is necessary.
+
+*fix this conclusion up a bit*
 
 %****************************************************
 % END
