@@ -187,6 +187,8 @@ One of the most common methods for plane fitting is through the application of t
 
 \ac{RANSAC} has been applied with great success in identifying and recontructing buildings in urban environments from airborne \ac{LiDAR} data (\cite{forlaniBuildingReconstructionVisualization2003}), but has not seen much use in natural environments. As \ac{RANSAC} is designed to fit a user-defined model to data, with a sufficiently complex model it may be possible to fit environmetal features found in the \ac{MIZ}, such as surface waves propagating through an ice field. This would require a suitable wave model to be developed, but if successful could allow for the extraction of wave parameters such as amplitude and wave period directly from point cloud data.
 
+*move application of RANSAC to later chapter?*
+
 %----------------------------------------------------
 \subsection{Point Clustering}
 
@@ -265,6 +267,8 @@ Attitude estimation is the process of determining an object's orientation in thr
 The \ac{IMU} integrated into the Livox Avia contains two individual sensors, an accelerometer (which measures linear acceleration in the X, Y and Z axes) and a gyroscope (which measures angular velocity around the X, Y and Z axes). With an \ac{IMU} such as this, a Kalman filter can be used to estimate the roll and pitch angles of the sensor by fusing the accelerometer and gyroscope measurements, however yaw cannot be reliably estimated using only \ac{IMU} data. This is due to the fact that the accelerometer cannot provide any information about rotation around the Z-axis (yaw) as it is perpindicular to the direction of gravity. Gyroscopes are prone to drift over time, and so cannot be solely relied upon for accurate angle estimates without correction from additional sensors. This shortcoming can be mitigated through the addition of a sensor such as a magnetometer, which can provide reliable yaw measurements to account for gyroscope drift (\cite{songEstimatingRelativeAngles2022}).
 
 By obtaining estimates of the Avia's roll and pitch angles during data collection, it may be possible to apply an inverse transform to the point cloud data to compensate for some of the motion induced by the observation platform (S.A. Agulhas II). If successful, this motion compensation will simplify the point cloud processing required and improve the quality of the final outputs.
+
+*move Kalman filter application to later chapter?*
 
 %****************************************************
 % END

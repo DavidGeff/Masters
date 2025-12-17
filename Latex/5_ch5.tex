@@ -1,27 +1,29 @@
 %****************************************************
-%	CHAPTER 5 - SENSOR CHARACTER & DATA PREPROCESS
+%	CHAPTER 5 - SENSOR CHARACTER & PIPELINE DESIGN
 %****************************************************
-\chapter{Sensor Characterisation \& Data Preprocessing}
-\label{ch:characterisation_preprocess}
+\chapter{Sensor Characterisation \& Pipeline Design}
+\label{ch:characterisation_design}
 %====================================================
-
-*change name, something about pipeline design*
-
-talk about why density clustering was chosen
 
 %====================================================
 \section{Sensor Characterisation}
 \label{sec:ch5.section1}
 %----------------------------------------------------
 
-To investigate the adverse affects (if any) of collecting data with the Avia not perpendicular to the target scene, the accuracy of the captured scene was investigated. The amount of shadowing (maybe explain here), distortion due to beam divergence and the minimum number of frames required to obtain accurate recreations of the targets were determined.
+Before designing the data processing pipeline, it is important to understand the characteristics and limitations of the Livox Avia sensor. This section details the investigations carried out to determine the strengths and weaknesses of the Avia in the context of observing sea ice in the \ac{MIZ} from a moving platform.
+
+The Avia was designed primarily for use in urban environents for mapping, navigation and surveying applications (\cite{AviaLiDARSensor}). This means that the sensor has been optimised for capturing static scenes from a stable observation platform, aimed perpendicular to the target scene. This is almost the exact opposite of the observation conditions in the \ac{MIZ}, where the target scene (sea ice field) is highly dynamic, the observation platform is never fully stable and the sensor is mounted at an angle to the target scene. Therefore, it is important to understand how these differences in observation conditions affect the quality of the captured data.
+
+The primary areas of investigation were the effects of motion distortion due to the moving platform, the accuracy of the captured scene when the sensor is not perpendicular to the target scene leading to shadowing and decresed point density, the minimum number of frames required to obtain accurate recreations of the target scene and the impact of the sensor's beam divergence. The outcomes of these investigations informed the final design of the data processing pipeline.
 
 Something about trying normals estimation and it not working so discarded from final pipeline
 
 %====================================================
-\section{Data Preprocessing}
+\section{Data Pre-Processing}
 \label{sec:ch5.section2}
 %----------------------------------------------------
+
+Before any point cloud processing can take place, the raw Avia data must be pre-processed to ensrure it is in a suitable format and condition before being fed into the main processing pipeline. This pre-processing varies depending on the source of the data, but generally involves synchronising and aligning the Avia data with any ground truth data, as well as cropping and filtering the data to focus on the areas of interest and remove unwanted points produced during experimental setup.
 
 Fixing up Kalman experiment data to match mocap outputs and make comparable.
 \\-44 degree yaw from mocap axis
@@ -29,6 +31,34 @@ Fixing up Kalman experiment data to match mocap outputs and make comparable.
 \\remove first few seconds before waves reach equilibrium
 
 Make Aalto datasets flat and crop scene.
+
+%====================================================
+\section{Pipeline Design}
+\label{sec:ch5.section2}
+%----------------------------------------------------
+
+Why these steps were chosen and not others, brief overview of each step and why it's needed.
+
+%----------------------------------------------------
+\subsection{Motion Compensation}
+
+reduce motion distortion effects by using IMU data to estimate roll and pitch and apply inverse transform to point cloud data.
+
+%----------------------------------------------------
+\subsection{De-noising}
+
+
+When the Avia collects data in adverse environmental conditions (such as rain, snow, and fog), the beam emitted by the sensor may interact with these weather conditions, leading to poor quality and/or noisy data. Points created by interactions with adverse weather conditions almost always have a very low return intensity (less than 4 out of 255) as the targets they interact with (snow or rain) are incredibly small and far less reflective than the intended target scene. In the case of data collected from the \ac{SCALE} Winter 2022 Cruise, snowy conditions resulted in unwanted returns caused by snowflakes in the area immediately in front of the sensor's minimum detection range. These unwanted returns create difficulties when trying to process the data further as well as reducing the number of usable points per frame.
+
+%----------------------------------------------------
+\subsection{Wave Parameter Estimation}
+
+custom RANSAC to fit wave model to point cloud data and extract wave parameters. talk about SCALE data issues here too.
+
+%----------------------------------------------------
+\subsection{Pancake Identification}
+
+Talk through why some clustering algortithms will or won't work, k-tree stuff needs to know how many clusters there are, hierarchies don't make sense, DBScan relies on constant density (not ideal), optics needs an explanation.
 
 %****************************************************
 % END

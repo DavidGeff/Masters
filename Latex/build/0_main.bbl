@@ -156,6 +156,22 @@
       \verb 10.17736/ijope.2021.ik08
       \endverb
     \endentry
+    \entry{AviaLiDARSensor}{misc}{}{}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{https://www.livoxtech.com/avia}
+      \field{title}{Avia {{LiDAR}} Sensor - {{Livox}}}
+      \field{urlday}{19}
+      \field{urlmonth}{8}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb C:\Users\dseph\Zotero\storage\RU8LB76J\avia.html
+      \endverb
+    \endentry
     \entry{baumhoerRemoteSensingAntarctic2018}{article}{}{}
       \name{author}{4}{}{%
         {{un=0,uniquepart=base,hash=43087bcf34b6d93083f34137e054dfbf}{%
