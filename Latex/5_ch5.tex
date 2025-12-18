@@ -5,9 +5,53 @@
 \label{ch:characterisation_design}
 %====================================================
 
+%----------------------------------------------------
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{figs/avia_axes.png}
+    \caption{\textbf{Avia Coordinate System} taken from \cite{AviaLiDARSensor}.}
+    \label{fig:avia_axes}
+\end{figure}
+%----------------------------------------------------
+
+%====================================================
+\section{Data Pre-Processing}
+\label{sec:ch5.section1}
+%----------------------------------------------------
+
+Before any point cloud processing can take place, the raw Avia data must be pre-processed to ensure it is in a suitable format and condition before being fed into the main processing pipeline. This pre-processing varies depending on the source of the data, but generally involves synchronising and aligning the Avia data with any ground truth data, as well as cropping and filtering the data to focus on the areas of interest and remove unwanted points produced during experimental setup.
+
+%----------------------------------------------------
+\subsection{Stationary Characterisation Data}
+
+For the data collected during the stationary characterisation experiments, a minimal amount of pre-processing was required. The Avia was stationary during data collection, so no motion compensation was necessary. The point cloud data was rotated around the sensor's x-axis to align the data with the world frame, as the sensor was mounted at an angle of declination of approximately 16° to the horizontal during data collection. For this dataset there were no additional sensors, so no time synchronisation was required. Finally, the point cloud data was cropped to focus on the targets of interest (the boards).
+
+%----------------------------------------------------
+\subsection{Simulated Motion Data}
+
+The simulated motion data collected using the Stewart platform and motion capture system required more extensive pre-processing to ensure the Avia point cloud data was aligned and synchronised with the motion capture ground truth data. During both tests, the Stewart platform was not aligned perfectly with the motion capture system's world frame. As the Avia and motion capture system were operated independently, there was no time synchronisation between the two systems. To align the two datasets, an offset was applied to the Avia timestamps to align the start of the motion capture data with the start of the Avia data. The offsets were determined manually by inspecting the data, and identifying the point at which motion began in both datasets. For the first test (10° sweeps) the offset was determined to be -938.01 seconds, and for the second test (5° sweeps) the offset was determined to -2068.20 seconds.
+
+During the tests, the Stewart platform was rotated around the vertical axis (Avia z-axis) relative to the motion capture system. As this test was focused on attitude estimation and was not concerned with translational motion, the Stewart platform's offset from the motion capture system's origin was inconsequential. This misalignment was corrected by applying an Euler angle rotation to the motion capture data to align it with the Avia's \ac{IMU} data. The rotation angles were determined by manually inspecting the motion capture data, and identifying the angle of rotation required to minimize the off-axis motion (motion in the roll axis when the Stewart platform was pitching and vice versa). This process was carried out for both tests, and for the first test (10° sweeps) the rotation was determined to be -42° and for the second test (5° sweeps) the rotation was determined to be -39°.
+
+For this experiment, the point cloud data was not used and thus no pre-processing was required.
+
+%----------------------------------------------------
+\subsection{Aalto Data}
+
+The data collected from the Aalto University wave and ice tank was the only point cloud data used in this investigation that was not collected using \ac{ROS}. The data was instead collected using the Livox SDK, which stores the point cloud data in the proprietary Livox .lvx format. Livox provides tools to convert .lvx files into .bag files (\cite{livoxLivoxSDKLivox_ros_driver2025}), allowing the data to be processed using the same tools developed for the other datasets. Once the point cloud data was imported into MATLAB, it was rotated about the sensor's x-axis, similarly to the stationary characterisation data, as the sensor was mounted at an angle of declination ofapproximately 30° to the horizontal during data collection. Next, the point cloud data was cropped to remove unwanted points created during experimental setup, such as those from the tank walls and wave makers.
+
+At the beginning of each test, there was a period of time where the waves were still settling into their steady state, and had not yet reached the set amplitude and frequency. To ensure that only steady state wave data was processed, both the point cloud data and wave probe data were trimmed to exclude this initial settling period.
+
+The wave probe and Avia were not time synchronised during this experiment and due to the nature of the experimental setup and data collected, it was not possible to synchronise the data from the two sensors.
+
+%----------------------------------------------------
+\subsection{SCALE Data}
+
+Almost all of the data collected during the \ac{SCALE} Winter 2022 Cruise required no pre-processing before being fed into the main processing pipeline. There were no additional sensors used during data collection, so no time synchronisation was required. Minimal unwanted points were created during experimental setup, so no cropping was necessary. The noise and motion artefacts present in the data were dealt with during the main processing pipeline, thus the only pre-processing required was to trim the data to only include the periods when the Avia was actively collecting data and exclude idle and setup periods.
+
 %====================================================
 \section{Sensor Characterisation}
-\label{sec:ch5.section1}
+\label{sec:ch5.section2}
 %----------------------------------------------------
 
 Before designing the data processing pipeline, it is important to understand the characteristics and limitations of the Livox Avia sensor. This section details the investigations carried out to determine the strengths and weaknesses of the Avia in the context of observing sea ice in the \ac{MIZ} from a moving platform.
@@ -19,22 +63,8 @@ The primary areas of investigation were the effects of motion distortion due to 
 Something about trying normals estimation and it not working so discarded from final pipeline
 
 %====================================================
-\section{Data Pre-Processing}
-\label{sec:ch5.section2}
-%----------------------------------------------------
-
-Before any point cloud processing can take place, the raw Avia data must be pre-processed to ensure it is in a suitable format and condition before being fed into the main processing pipeline. This pre-processing varies depending on the source of the data, but generally involves synchronising and aligning the Avia data with any ground truth data, as well as cropping and filtering the data to focus on the areas of interest and remove unwanted points produced during experimental setup.
-
-Fixing up Kalman experiment data to match mocap outputs and make comparable.
-\\-44 degree yaw from mocap axis
-\\manually time sync
-\\remove first few seconds before waves reach equilibrium
-
-Make Aalto datasets flat and crop scene.
-
-%====================================================
 \section{Pipeline Design}
-\label{sec:ch5.section2}
+\label{sec:ch5.section3}
 %----------------------------------------------------
 
 Why these steps were chosen and not others, brief overview of each step and why it's needed.
@@ -42,11 +72,12 @@ Why these steps were chosen and not others, brief overview of each step and why 
 %----------------------------------------------------
 \subsection{Motion Compensation}
 
-reduce motion distortion effects by using IMU data to estimate roll and pitch and apply inverse transform to point cloud data.
+Observing a moving target scene (sea ice in the \ac{MIZ}) from a moving platform (S.A. Agulhas II) introduces motion distortion into the captured point cloud data and increses the level of complexity required in the data processing pipeline. The motion of the observation platform causes the sensor to change position and orientation between capturing frames, reducing the accuracy of concatonated frames and making it more difficult to identify and track features in the scene, such was individual ice floes and wave parameters.
+
+A solution to this complication is to apply motion compensation to the point cloud data before further processing. A Kalman filter can be used to estimate the roll and pitch angles (yaw estimations will not be accurate enough to be of use) of the observation platform during data collection. With these angle estimates, it may be possible to apply an inverse transform to the point cloud data to compensate for some motion induced by the observation platform. If successful, this motion compensation will simplify the point cloud processing required and improve the quality of the final outputs.
 
 %----------------------------------------------------
 \subsection{De-noising}
-
 
 When the Avia collects data in adverse environmental conditions (such as rain, snow, and fog), the beam emitted by the sensor may interact with these weather conditions, leading to poor quality and/or noisy data. Points created by interactions with adverse weather conditions almost always have a very low return intensity (less than 4 out of 255) as the targets they interact with (snow or rain) are incredibly small and far less reflective than the intended target scene. In the case of data collected from the \ac{SCALE} Winter 2022 Cruise, snowy conditions resulted in unwanted returns caused by snowflakes in the area immediately in front of the sensor's minimum detection range. These unwanted returns create difficulties when trying to process the data further as well as reducing the number of usable points per frame.
 
@@ -54,6 +85,13 @@ When the Avia collects data in adverse environmental conditions (such as rain, s
 \subsection{Wave Parameter Estimation}
 
 custom RANSAC to fit wave model to point cloud data and extract wave parameters. talk about SCALE data issues here too.
+
+\ac{RANSAC} has been applied with great success in identifying and recontructing buildings in urban environments from airborne \ac{LiDAR} data (\cite{forlaniBuildingReconstructionVisualization2003}), but has not seen much use in natural environments. As \ac{RANSAC} is designed to fit a user-defined model to data, with a sufficiently complex model it may be possible to fit environmetal features found in the \ac{MIZ}, such as surface waves propagating through an ice field. This would require a suitable wave model to be developed, but if successful could allow for the extraction of wave parameters such as amplitude and wave period directly from point cloud data.
+
+For the data collected at Aalto University, a simple sinusoidal wave model may be sufficient to capture the wave characteristics, as the waves were generated using a wave maker and were relatively uniform and constrained to limit complexity. 
+%However, for data collected from the \ac{SCALE} Cruise, a more complex wave model will be required. This is due to the more complex and irregular nature of waves in the \ac{MIZ}, which are driven by various environmental factors and may also interact with the vessel itself.
+
+*must decide how to talk about scale wave fitting issues*
 
 %----------------------------------------------------
 \subsection{Pancake Identification}

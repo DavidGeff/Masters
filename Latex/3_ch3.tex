@@ -185,30 +185,35 @@ Plane fitting is a common method used in point cloud processing to identify and 
 
 One of the most common methods for plane fitting is through the application of the \ac{RANSAC} algorithm. \ac{RANSAC} is a robust statistical algorithm used to estimate the parameters of a mathematical model from a dataset that may contain noise and outliers (\cite{fischlerRandomSampleConsensus1981}). The algorithm iteratively selects random subsets of the data to fit a user-defined model and evaluates how well the model fits the entire dataset. Using a user-defined tolerance, the algorithm classifies data points as inliers or outliers based on their distance from the fitted model. The model with the highest number of inliers is selected as the best fit for the dataset.
 
-\ac{RANSAC} has been applied with great success in identifying and recontructing buildings in urban environments from airborne \ac{LiDAR} data (\cite{forlaniBuildingReconstructionVisualization2003}), but has not seen much use in natural environments. As \ac{RANSAC} is designed to fit a user-defined model to data, with a sufficiently complex model it may be possible to fit environmetal features found in the \ac{MIZ}, such as surface waves propagating through an ice field. This would require a suitable wave model to be developed, but if successful could allow for the extraction of wave parameters such as amplitude and wave period directly from point cloud data.
-
-*move application of RANSAC to later chapter?*
-
 %----------------------------------------------------
 \subsection{Point Clustering}
 
 As a human, organising and sorting large amounts of objects or data into groups is often a trivial task that requires minimal mental exertion but significant time to complete. Automating this process can greatly reduce the time required to process a dataset, if implemented well. Selecting an algorithm or method will determine the accuracy, time and computing costs of automating the clustering process. Different methods are suited for use depending on properties of the data to be clustered (properties such as data dimensions, number of data points and the relationship between individual data points), knowledge of the final classes the data will be clustered into and computational restraints (\cite{xuComprehensiveSurveyClustering2015}).
 
-Clustering algorithms can be categorised based on their underlying structure, some of the most common categories are Partitional, Hierarchical, Density, Spectral, Subspace-based and Model-based (\cite{rodriguezClusteringAlgorithmsComparative2019}).
+Clustering algorithms can be categorised based on their underlying structure, some of the most common categories are \emph{Partitional}, \emph{Hierarchical}, \emph{Density-based}, \emph{Spectral}, \emph{Subspace-based} and \emph{Model-based} (\cite{rodriguezClusteringAlgorithmsComparative2019}).
 
-Partitional methods divide the data into a set number of clusters, optimising a cost function to achieve this (usually a distance or reachability measure). The most common partitional clustering algorithm is K-means clustering, which iteratively assigns data points to the nearest cluster centroid and updates the centroids based on the assigned points until the algorithm converges. 
+\begin{description}
 
-Hierarchical methods attempt to group data points into a tree-like structure of clusters, analogous to a dendogram. This method measures the similarity between data points and merges or splits clusters based on this similarity. An example of a hierarchical clustering algorithm is Agglomerative Clustering, a popular bottom-up approach (each data point starts as its own cluster, and clusters are merged as the algorithm progresses) and is commonly used in the biological sciences.
+    \item[Partitional]
+    \emph{Partitional} methods divide the data into a set number of clusters, optimising a cost function to achieve this (usually a distance or reachability measure). The most common partitional clustering algorithm is K-means clustering, which iteratively assigns data points to the nearest cluster centroid and updates the centroids based on the assigned points until the algorithm converges. 
 
-Density based algorithms group data points based on the density of points in a given region. Areas with high point density are classified as individual clusters, while areas with low point density are classified as noise or outliers. One of the most common density-based clustering algorithms is \ac{DBScan}.
+    \item[Hierarchical]
+    \emph{Hierarchical} methods attempt to group data points into a tree-like structure of clusters, analogous to a dendogram. This method measures the similarity between data points and merges or splits clusters based on this similarity. An example of a hierarchical clustering algorithm is Agglomerative Clustering, a popular bottom-up approach (each data point starts as its own cluster, and clusters are merged as the algorithm progresses) and is commonly used in the biological sciences.
 
-Spectral-based algorithms attempt to cluster data points by converting high-dimensional data into a lower-dimensional through the use of graph theory and linear algebra. After dimensionality reduction, simpler clustering methods such as K-means can be applied to the processed data.
+    \item[Density-based]
+    \emph{Density-based} algorithms group data points based on the density of points in a given region. Areas with high point density are classified as individual clusters, while areas with low point density are classified as noise or outliers. One of the most common density-based clustering algorithms is \ac{DBScan}.
 
-Subspace-based algorithms are designed to identify clusters in high-dimensional data by finding subsets of dimensions where the data points are more closely related. These algorithms are particularly useful when attempting to cluster data with many dimensions and limited computational resources.
+    \item[Spectral]
+    \emph{Spectral} algorithms attempt to cluster data points by converting high-dimensional data into a lower-dimensional through the use of graph theory and linear algebra. After dimensionality reduction, simpler clustering methods such as K-means can be applied to the processed data.
 
-Model-based algorithms find the best fit of a pre-selected model to the data. These algorithms are based on the assumption that the data is generated from a mixture of underlying probability distributions. A common model-based clustering algorithm is the expectation-maximization algorithm.
+    \item[Subspace-based]
+    \emph{Subspace-based} algorithms are designed to identify clusters in high-dimensional data by finding subsets of dimensions where the data points are more closely related. These algorithms are particularly useful when attempting to cluster data with many dimensions and limited computational resources.
+
+    \item[Model-based]
+    \emph{Model-based} algorithms find the best fit of a pre-selected model to the data. These algorithms are based on the assumption that the data is generated from a mixture of underlying probability distributions. A common model-based clustering algorithm is the expectation-maximization algorithm.
+    
+\end{description}
  
-
 %====================================================
 \section{Optical Properties of Ocean Water, Ice and Snow}
 \label{sec:ch3:section3}
@@ -266,9 +271,6 @@ Attitude estimation is the process of determining an object's orientation in thr
 
 The \ac{IMU} integrated into the Livox Avia contains two individual sensors, an accelerometer (which measures linear acceleration in the X, Y and Z axes) and a gyroscope (which measures angular velocity around the X, Y and Z axes). With an \ac{IMU} such as this, a Kalman filter can be used to estimate the roll and pitch angles of the sensor by fusing the accelerometer and gyroscope measurements, however yaw cannot be reliably estimated using only \ac{IMU} data. This is due to the fact that the accelerometer cannot provide any information about rotation around the Z-axis (yaw) as it is perpendicular to the direction of gravity. Gyroscopes are prone to drift over time, and so cannot be solely relied upon for accurate angle estimates without correction from additional sensors. This shortcoming can be mitigated through the addition of a sensor such as a magnetometer, which can provide reliable yaw measurements to account for gyroscope drift (\cite{songEstimatingRelativeAngles2022}).
 
-By obtaining estimates of the Avia's roll and pitch angles during data collection, it may be possible to apply an inverse transform to the point cloud data to compensate for some motion induced by the observation platform (S.A. Agulhas II). If successful, this motion compensation will simplify the point cloud processing required and improve the quality of the final outputs.
-
-*move Kalman filter application to later chapter?*
 
 %****************************************************
 % END

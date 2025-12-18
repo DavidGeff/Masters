@@ -1396,6 +1396,36 @@
       \field{type}{phdthesis}
       \field{year}{2013}
     \endentry
+    \entry{livoxLivoxSDKLivox_ros_driver2025}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=a48d0a625c75b596b5d5cda61f0a2f4f}{%
+           family={{livox}},
+           familyi={l\bibinitperiod}}}%
+      }
+      \strng{namehash}{a48d0a625c75b596b5d5cda61f0a2f4f}
+      \strng{fullhash}{a48d0a625c75b596b5d5cda61f0a2f4f}
+      \strng{fullhashraw}{a48d0a625c75b596b5d5cda61f0a2f4f}
+      \strng{bibnamehash}{a48d0a625c75b596b5d5cda61f0a2f4f}
+      \strng{authorbibnamehash}{a48d0a625c75b596b5d5cda61f0a2f4f}
+      \strng{authornamehash}{a48d0a625c75b596b5d5cda61f0a2f4f}
+      \strng{authorfullhash}{a48d0a625c75b596b5d5cda61f0a2f4f}
+      \strng{authorfullhashraw}{a48d0a625c75b596b5d5cda61f0a2f4f}
+      \field{sortinit}{l}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Livox device driver under ros, support Lidar Mid-40, Mid-70, Tele-15, Horizon, Avia.}
+      \field{month}{12}
+      \field{title}{Livox-{{SDK}}/Livox\_ros\_driver}
+      \field{urlday}{18}
+      \field{urlmonth}{12}
+      \field{urlyear}{2025}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+      \keyw{livoxtech}
+    \endentry
     \entry{lohaniAirborneLiDARTechnology2017}{article}{}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=9aabd46a635337e93b06c5d613c8a56d}{%

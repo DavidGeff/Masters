@@ -19,6 +19,9 @@ Lots of frames (like 6+) to resolve mid level detail
 %----------------------------------------------------
 \subsection{Motion Compensation}
 
+The motion capture system provided attitude data starting from initial angles of (0, 0, 0) for roll, pitch and yaw respectively, not taking into account the initial orientation of the Stewart platform and the Avia mounted to it. However, the Avia's \ac{IMU} provided data relative to its initial orientation at the start of data collection. This results in an offset between the two datasets, but does not impact the results and analysis of the experiment, as the relative motion is the focus of the experiment. To account for this offset, the initial roll and pitch angle offsets were removed from the angle estimations produced by both Kalman filters. For the first test (10° sweeps), the initial roll and pitch offsets were determined to be -1.6° and -2.075° respectively for both filters. For the second test (5° sweeps), the initial roll and pitch offsets were determined to be -1.625° and -1.95° for the Klaman filter and -1.585° and -2.175° for the \ac{IMU} filter. 
+\\*moved this paragraph from \ref{sec:ch5.section1}, still not 100\% sure*
+
 The two implemented Kalman filters both produced reasonable roll and pitch angle estimates for motion compensation of the \ac{LiDAR} point cloud data. The \ac{EKF} and \ac{IMU} filter produced angle estimates very similar to each other, see Figures \ref{fig:vs_roll_10}, \ref{fig:vs_pitch_10}, \ref{fig:vs_roll_5} and \ref{fig:vs_pitch_5}. Overall, The \ac{IMU} Filter produced slightly more conservative angle estimates with less variability than the \ac{EKF}. The \ac{IMU} angle estimations have a slight positive bias compared to the \ac{EKF} estimations. 
 
 both filters perform about the same, mediocre performance

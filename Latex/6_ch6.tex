@@ -51,6 +51,8 @@ Angle estimate residuals (the difference between the motion capture ground truth
 
 The return intensity of points can be used to remove or ignore unwanted points. A simple threshold filtering function can be constructed for de-noising data collected under snowy or other adverse conditions. To prevent valid points in the target scene with low return intensities from being discarded, a distance parameter was included in the threshold function.
 
+*this needs to be redone*
+
 %----------------------------------------------------
 \begin{figure}[H]
     \centering
@@ -138,6 +140,8 @@ To group points into clusters it is necessary to determine which points are dire
 The point \textit{p} is density-reachable from point \textit{q} if there is a chain of points p$_{1}$, ..., p$_{n}$ where p$_{1}$ = \textit{q} and p$_{n}$ = \textit{p} such that each point is directly density-reachable from the previous point in the chain. Similarly to direct density-reachability, this property is symmetric only for core points.\\
 Points \textit{p} and \textit{q} are density-connected if there is a third point, \textit{o}, which both \textit{p} and \textit{q} are density-reachable from. This property is symmetrical for border points.\\ 
 The \ac{DBScan} algorithm iterates through all points, calculating distances between each other and categorising them as core, border, or noise points. An unassigned core point is the start of a new cluster. All neighbouring core or border points are assigned to this cluster
+
+*this section needs to be redone*
 
 %****************************************************
 % END
