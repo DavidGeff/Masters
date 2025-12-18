@@ -23,11 +23,13 @@ Before any point cloud processing can take place, the raw Avia data must be pre-
 
 %----------------------------------------------------
 \subsection{Stationary Characterisation Data}
+\label{subsec:ch5.section1.subsec1}
 
 For the data collected during the stationary characterisation experiments, a minimal amount of pre-processing was required. The Avia was stationary during data collection, so no motion compensation was necessary. The point cloud data was rotated around the sensor's x-axis to align the data with the world frame, as the sensor was mounted at an angle of declination of approximately 16° to the horizontal during data collection. For this dataset there were no additional sensors, so no time synchronisation was required. Finally, the point cloud data was cropped to focus on the targets of interest (the boards).
 
 %----------------------------------------------------
 \subsection{Simulated Motion Data}
+\label{subsec:ch5.section1.subsec2}
 
 The simulated motion data collected using the Stewart platform and motion capture system required more extensive pre-processing to ensure the Avia point cloud data was aligned and synchronised with the motion capture ground truth data. During both tests, the Stewart platform was not aligned perfectly with the motion capture system's world frame. As the Avia and motion capture system were operated independently, there was no time synchronisation between the two systems. To align the two datasets, an offset was applied to the Avia timestamps to align the start of the motion capture data with the start of the Avia data. The offsets were determined manually by inspecting the data, and identifying the point at which motion began in both datasets. For the first test (10° sweeps) the offset was determined to be -938.01 seconds, and for the second test (5° sweeps) the offset was determined to -2068.20 seconds.
 
@@ -37,6 +39,7 @@ For this experiment, the point cloud data was not used and thus no pre-processin
 
 %----------------------------------------------------
 \subsection{Aalto Data}
+\label{subsec:ch5.section1.subsec3}
 
 The data collected from the Aalto University wave and ice tank was the only point cloud data used in this investigation that was not collected using \ac{ROS}. The data was instead collected using the Livox SDK, which stores the point cloud data in the proprietary Livox .lvx format. Livox provides tools to convert .lvx files into .bag files (\cite{livoxLivoxSDKLivox_ros_driver2025}), allowing the data to be processed using the same tools developed for the other datasets. Once the point cloud data was imported into MATLAB, it was rotated about the sensor's x-axis, similarly to the stationary characterisation data, as the sensor was mounted at an angle of declination ofapproximately 30° to the horizontal during data collection. Next, the point cloud data was cropped to remove unwanted points created during experimental setup, such as those from the tank walls and wave makers.
 
@@ -46,6 +49,7 @@ The wave probe and Avia were not time synchronised during this experiment and du
 
 %----------------------------------------------------
 \subsection{SCALE Data}
+\label{subsec:ch5.section1.subsec4}
 
 Almost all of the data collected during the \ac{SCALE} Winter 2022 Cruise required no pre-processing before being fed into the main processing pipeline. There were no additional sensors used during data collection, so no time synchronisation was required. Minimal unwanted points were created during experimental setup, so no cropping was necessary. The noise and motion artefacts present in the data were dealt with during the main processing pipeline, thus the only pre-processing required was to trim the data to only include the periods when the Avia was actively collecting data and exclude idle and setup periods.
 
@@ -71,6 +75,7 @@ Why these steps were chosen and not others, brief overview of each step and why 
 
 %----------------------------------------------------
 \subsection{Motion Compensation}
+\label{subsec:ch5.section3.subsec1}
 
 Observing a moving target scene (sea ice in the \ac{MIZ}) from a moving platform (S.A. Agulhas II) introduces motion distortion into the captured point cloud data and increses the level of complexity required in the data processing pipeline. The motion of the observation platform causes the sensor to change position and orientation between capturing frames, reducing the accuracy of concatonated frames and making it more difficult to identify and track features in the scene, such was individual ice floes and wave parameters.
 
@@ -78,11 +83,13 @@ A solution to this complication is to apply motion compensation to the point clo
 
 %----------------------------------------------------
 \subsection{De-noising}
+\label{subsec:ch5.section3.subsec2}
 
 When the Avia collects data in adverse environmental conditions (such as rain, snow, and fog), the beam emitted by the sensor may interact with these weather conditions, leading to poor quality and/or noisy data. Points created by interactions with adverse weather conditions almost always have a very low return intensity (less than 4 out of 255) as the targets they interact with (snow or rain) are incredibly small and far less reflective than the intended target scene. In the case of data collected from the \ac{SCALE} Winter 2022 Cruise, snowy conditions resulted in unwanted returns caused by snowflakes in the area immediately in front of the sensor's minimum detection range. These unwanted returns create difficulties when trying to process the data further as well as reducing the number of usable points per frame.
 
 %----------------------------------------------------
 \subsection{Wave Parameter Estimation}
+\label{subsec:ch5.section3.subsec3}
 
 custom RANSAC to fit wave model to point cloud data and extract wave parameters. talk about SCALE data issues here too.
 
@@ -95,6 +102,7 @@ For the data collected at Aalto University, a simple sinusoidal wave model may b
 
 %----------------------------------------------------
 \subsection{Pancake Identification}
+\label{subsec:ch5.section3.subsec4}
 
 Talk through why some clustering algorithms will or won't work, k-tree stuff needs to know how many clusters there are, hierarchies don't make sense, DBScan relies on constant density (not ideal), optics needs an explanation.
 
