@@ -12,6 +12,8 @@ Lots of frames (like 6+) to resolve mid level detail
 \\bad shadowing and LiDAR beam divergence
 \\normals estimation not reliable enough to use
 
+*maybe move this to ch5*
+
 %====================================================
 \section{De-noising and Motion Compensation}
 \label{sec:ch7.section2}
@@ -239,14 +241,6 @@ Attempted to fit stokes model to scale data but failed. model not complex enough
 Hard to discriminate between individual pancakes in consolidated regions/ pancakes close together
 \\filter by intensity makes identification way easier
 \\how to know where to set intensity threshold? ice properties? mean intensity of frame?
-
-Find average intensity of frame (excluding zeros)
-\\one std dev below mean
-\\filter all below that
-
-\ac{DBScan} works so-so
-\\VDBScan works well but have example of how it falls apart
-\\OPTICS is probably the best at the moment
 
 Aalto data as example for how pattern makes fucked densities and centre is only reliable area
 

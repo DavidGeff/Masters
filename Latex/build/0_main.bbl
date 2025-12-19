@@ -156,6 +156,70 @@
       \verb 10.17736/ijope.2021.ik08
       \endverb
     \endentry
+    \entry{ankerstOPTICSOrderingPoints1999}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=30218301c8db6744d898cf2fbef485e7}{%
+           family={Ankerst},
+           familyi={A\bibinitperiod},
+           given={Mihael},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=346772f472393316fd22dd8a300d2e7d}{%
+           family={Breunig},
+           familyi={B\bibinitperiod},
+           given={Markus\bibnamedelima M.},
+           giveni={M\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9559fe65ed2c0877cf14a66fe1f8e9b3}{%
+           family={Kriegel},
+           familyi={K\bibinitperiod},
+           given={Hans-Peter},
+           giveni={H\bibinithyphendelim P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=802157026f850823b2027c2100cb359a}{%
+           family={Sander},
+           familyi={S\bibinitperiod},
+           given={Jörg},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{353216c878e06e428094c446e94c76c7}
+      \strng{fullhash}{290606bde793f0e777a1762cbed5719f}
+      \strng{fullhashraw}{290606bde793f0e777a1762cbed5719f}
+      \strng{bibnamehash}{353216c878e06e428094c446e94c76c7}
+      \strng{authorbibnamehash}{353216c878e06e428094c446e94c76c7}
+      \strng{authornamehash}{353216c878e06e428094c446e94c76c7}
+      \strng{authorfullhash}{290606bde793f0e777a1762cbed5719f}
+      \strng{authorfullhashraw}{290606bde793f0e777a1762cbed5719f}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Cluster analysis is a primary method for database mining. It is either used as a stand-alone tool to get insight into the distribution of a data set, e.g. to focus further analysis and data processing, or as a preprocessing step for other algorithms operating on the detected clusters. Almost all of the well-known clustering algorithms require input parameters which are hard to determine but have a significant influence on the clustering result. Furthermore, for many real-data sets there does not even exist a global parameter setting for which the result of the clustering algorithm describes the intrinsic clustering structure accurately. We introduce a new algorithm for the purpose of cluster analysis which does not produce a clustering of a data set explicitly; but instead creates an augmented ordering of the database representing its density-based clustering structure. This cluster-ordering contains information which is equivalent to the density-based clusterings corresponding to a broad range of parameter settings. It is a versatile basis for both automatic and interactive cluster analysis. We show how to automatically and efficiently extract not only 'traditional' clustering information (e.g. representative points, arbitrary shaped clusters), but also the intrinsic clustering structure. For medium sized data sets, the cluster-ordering can be represented graphically and for very large data sets, we introduce an appropriate visualization technique. Both are suitable for interactive exploration of the intrinsic clustering structure offering additional insights into the distribution and correlation of the data.}
+      \field{issn}{0163-5808}
+      \field{journaltitle}{ACM SIGMOD Record}
+      \field{langid}{english}
+      \field{month}{6}
+      \field{number}{2}
+      \field{shorttitle}{{{OPTICS}}}
+      \field{title}{{{OPTICS}}: Ordering Points to Identify the Clustering Structure}
+      \field{urlday}{19}
+      \field{urlmonth}{12}
+      \field{urlyear}{2025}
+      \field{volume}{28}
+      \field{year}{1999}
+      \field{urldateera}{ce}
+      \field{pages}{49\bibrangedash 60}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1145/304181.304187
+      \endverb
+      \verb{file}
+      \verb C:\Users\dseph\Zotero\storage\VYD9P8CD\Ankerst et al. - 1999 - OPTICS ordering points to identify the clustering structure.pdf
+      \endverb
+    \endentry
     \entry{AviaLiDARSensor}{misc}{}{}
       \field{sortinit}{A}
       \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
@@ -701,6 +765,64 @@
       \verb{doi}
       \verb 10.1029/2018RG000631
       \endverb
+    \endentry
+    \entry{esterDensityBasedAlgorithmDiscovering1996}{inproceedings}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=2c062e64ed26aacc08a62155e7944f04}{%
+           family={Ester},
+           familyi={E\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9559fe65ed2c0877cf14a66fe1f8e9b3}{%
+           family={Kriegel},
+           familyi={K\bibinitperiod},
+           given={Hans-Peter},
+           giveni={H\bibinithyphendelim P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=802157026f850823b2027c2100cb359a}{%
+           family={Sander},
+           familyi={S\bibinitperiod},
+           given={Jörg},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2dda16c0a5d50fc830d0d4a3787937fa}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Xiaowei},
+           giveni={X\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{9158a41d23cb4e154e78366d59c05728}
+      \strng{fullhash}{3270dfaa31e8210b3bd04b1bcf4a29a3}
+      \strng{fullhashraw}{3270dfaa31e8210b3bd04b1bcf4a29a3}
+      \strng{bibnamehash}{9158a41d23cb4e154e78366d59c05728}
+      \strng{authorbibnamehash}{9158a41d23cb4e154e78366d59c05728}
+      \strng{authornamehash}{9158a41d23cb4e154e78366d59c05728}
+      \strng{authorfullhash}{3270dfaa31e8210b3bd04b1bcf4a29a3}
+      \strng{authorfullhashraw}{3270dfaa31e8210b3bd04b1bcf4a29a3}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Clustering algorithms are attractive for the task of class identification in spatial databases. However, the application to large spatial databases rises the following requirements for clustering algorithms: minimal requirements of domain knowledge to determine the input parameters, discovery of clusters with arbitrary shape and good efficiency on large databases. The well-known clustering algorithms offer no solution to the combination of these requirements. In this paper, we present the new clustering algorithm DBSCAN relying on a density-based notion of clusters which is designed to discover clusters of arbitrary shape. DBSCAN requires only one input parameter and supports the user in determining an appropriate value for it. We performed an experimental evaluation of the effectiveness and efficiency of DBSCAN using synthetic data and real data of the SEQUOIA 2000 benchmark. The results of our experiments demonstrate that (1) DBSCAN is significantly more effective in discovering clusters of arbitrary shape than the well-known algorithm CLAR-ANS, and that (2) DBSCAN outperforms CLARANS by a factor of more than 100 in terms of efficiency.}
+      \field{annotation}{ADS Bibcode: 1996kddm.conf..226E}
+      \field{booktitle}{Second {{International Conference}} on {{Knowledge Discovery}} and {{Data Mining}} ({{KDD}}'96). {{Proceedings}} of a Conference Held {{August}} 2-4}
+      \field{month}{1}
+      \field{title}{A {{Density-Based Algorithm}} for {{Discovering Clusters}} in {{Large Spatial Databases}} with {{Noise}}}
+      \field{urlday}{1}
+      \field{urlmonth}{8}
+      \field{urlyear}{2025}
+      \field{year}{1996}
+      \field{urldateera}{ce}
+      \field{pages}{226\bibrangedash 331}
+      \range{pages}{106}
+      \verb{file}
+      \verb C:\Users\dseph\Zotero\storage\5AKCS2VI\Ester et al. - 1996 - A Density-Based Algorithm for Discovering Clusters in Large Spatial Databases with Noise.pdf
+      \endverb
+      \keyw{Arbitrary Shape of Clusters,Clustering Algorithms,Efficiency on Large Spatial Databases,Handling Noise}
     \endentry
     \entry{fischlerRandomSampleConsensus1981}{article}{}{}
       \name{author}{2}{}{%
@@ -1395,6 +1517,66 @@
       \field{title}{Mobile Laser Scanning - System Development, Performance and Applications}
       \field{type}{phdthesis}
       \field{year}{2013}
+    \endentry
+    \entry{liuVDBSCANVariedDensity2007}{inproceedings}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=2c112d9d43345185672db278b5111bc4}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Peng},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=43f6178e119fece71bb0b091b608c545}{%
+           family={Zhou},
+           familyi={Z\bibinitperiod},
+           given={Dong},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d4e3fb8460557907d1180bf5e4307a6b}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Naijun},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Changdu, China}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{abc148b868ae6a034e91ce48ce7c526f}
+      \strng{fullhash}{abc148b868ae6a034e91ce48ce7c526f}
+      \strng{fullhashraw}{abc148b868ae6a034e91ce48ce7c526f}
+      \strng{bibnamehash}{abc148b868ae6a034e91ce48ce7c526f}
+      \strng{authorbibnamehash}{abc148b868ae6a034e91ce48ce7c526f}
+      \strng{authornamehash}{abc148b868ae6a034e91ce48ce7c526f}
+      \strng{authorfullhash}{abc148b868ae6a034e91ce48ce7c526f}
+      \strng{authorfullhashraw}{abc148b868ae6a034e91ce48ce7c526f}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{booktitle}{2007 {{International Conference}} on {{Service Systems}} and {{Service Management}}}
+      \field{isbn}{978-1-4244-0884-9 978-1-4244-0885-6}
+      \field{month}{6}
+      \field{shorttitle}{{{VDBSCAN}}}
+      \field{title}{{{VDBSCAN}}: {{Varied Density Based Spatial Clustering}} of {{Applications}} with {{Noise}}}
+      \field{urlday}{19}
+      \field{urlmonth}{12}
+      \field{urlyear}{2025}
+      \field{year}{2007}
+      \field{urldateera}{ce}
+      \field{pages}{1\bibrangedash 4}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.1109/ICSSSM.2007.4280175
+      \endverb
+      \verb{file}
+      \verb C:\Users\dseph\Zotero\storage\ATP655IJ\Liu et al. - 2007 - VDBSCAN Varied Density Based Spatial Clustering of Applications with Noise.pdf
+      \endverb
     \endentry
     \entry{livoxLivoxSDKLivox_ros_driver2025}{misc}{}{}
       \name{author}{1}{}{%

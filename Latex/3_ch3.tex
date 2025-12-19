@@ -73,6 +73,8 @@ Another characteristic of a point cloud that certain \ac{LiDAR} sensors can reco
 \subsection{Livox Avia}
 \label{subsec:ch3.section2.subsec1}
 
+*move talking about individual settings to ch4*
+
 The sensor used to collect data for this investigation was the Livox Avia. The Avia is a low-cost \ac{LiDAR} sensor produced by Livox Technology, a subsidiary of DJI. The sensor is designed for use in various typical \ac{LiDAR} applications including surveying, mapping, and autonomous systems. The Avia is a solid-state laser and Risley prism-based \ac{LiDAR} sensor with a built-in inertial measurement unit (\ac{IMU}). The sensor makes use of a 905 nm near infrared laser. 
 
 The Avia has the ability to detect each point's return intensity. It records each point's return intensity as an 8-bit value ranging from 0 to 255, with 0 being the least returned energy and 255 being the most returned energy. 
@@ -88,7 +90,7 @@ The Avia has the ability to detect each point's return intensity. It records eac
 
 The Livox Avia has a listed beam divergence of 0.28° x 0.03° along its vertical and horizontal planes. This results in the emitted beam, if falling on a target perfectly perpendicular to the axis of propagation at a distance of 50 meters, having the form of an ellipse with the approximate dimensions of 244.35 x 26.18 mm.
 
-The Avia has two built-in scanning patterns, a repetitive and a non-repetitive pattern. The repetitive scanning pattern scans the target area in a narrow horizontal band, providing a more uniform point density per frame when compared to the non-repetitive mode, see Figure \ref{fig:rep}. The non-repetitive scanning pattern scans the target with a rosette-shaped pattern which rotates as it scans, covering areas not scanned in previous frames, see Figure \ref{fig:non_rep}. This scanning method results in a non-uniform distribution of points across its \ac{FOV}. There is a high density of points in the centre of the \ac{FOV}, with the number of points reducing outwards to the edges of the sensor's \ac{FOV}. The non-repetitive scanning pattern was used for data capture as it provides a wider \ac{FOV} than the non-repetitive scanning pattern and captures more unique data points.
+The Avia has two built-in scanning patterns, a repetitive and a non-repetitive pattern. The repetitive scanning pattern scans the target area in a narrow horizontal band, providing a more uniform point density per frame when compared to the non-repetitive mode, see Figure \ref{fig:rep}. The non-repetitive scanning pattern scans the target with a rosette-shaped pattern which rotates as it scans, covering areas not scanned in previous frames, see Figure \ref{fig:non_rep}. This scanning method results in a non-uniform distribution of points across its \ac{FOV}. There is a high density of points in the centre of the \ac{FOV}, with the number of points reducing outwards to the edges of the sensor's \ac{FOV}.
 
 %----------------------------------------------------
 \begin{figure}[H]
@@ -136,7 +138,7 @@ The Avia has two built-in scanning patterns, a repetitive and a non-repetitive p
 \end{figure}
 %----------------------------------------------------
 
-The sensor has three return rate settings: single, double, or triple return. The Avia was used exclusively in single return mode.
+The sensor has three return rate settings: single, double, or triple return. 
 
 %----------------------------------------------------
 \begin{table}[H]
@@ -178,6 +180,7 @@ Many processing methods are also based on the assumption that the environment da
 
 *something about normals here maybe*
 *something about return intensities here*
+*something about concatonating frames here*
 
 %----------------------------------------------------
 \subsection{Plane Fitting}
@@ -204,16 +207,16 @@ Clustering algorithms can be categorised based on their underlying structure, so
     \emph{Hierarchical} methods attempt to group data points into a tree-like structure of clusters, analogous to a dendogram. This method measures the similarity between data points and merges or splits clusters based on this similarity. An example of a hierarchical clustering algorithm is Agglomerative Clustering, a popular bottom-up approach (each data point starts as its own cluster, and clusters are merged as the algorithm progresses) and is commonly used in the biological sciences.
 
     \item[Density-based]
-    \emph{Density-based} algorithms group data points based on the density of points in a given region. Areas with high point density are classified as individual clusters, while areas with low point density are classified as noise or outliers. One of the most common density-based clustering algorithms is \ac{DBScan}.
+    \emph{Density-based} methods group data points based on the density of points in a given region. Areas with high point density are classified as individual clusters, while areas with low point density are classified as noise or outliers. One of the most common density-based clustering algorithms is \ac{DBScan}.
 
     \item[Spectral]
-    \emph{Spectral} algorithms attempt to cluster data points by converting high-dimensional data into a lower-dimensional through the use of graph theory and linear algebra. After dimensionality reduction, simpler clustering methods such as K-means can be applied to the processed data.
+    \emph{Spectral} methods attempt to cluster data points by converting high-dimensional data into a lower-dimensional through the use of graph theory and linear algebra. After dimensionality reduction, simpler clustering methods such as K-means can be applied to the processed data.
 
     \item[Subspace-based]
-    \emph{Subspace-based} algorithms are designed to identify clusters in high-dimensional data by finding subsets of dimensions where the data points are more closely related. These algorithms are particularly useful when attempting to cluster data with many dimensions and limited computational resources.
+    \emph{Subspace-based} methods are designed to identify clusters in high-dimensional data by finding subsets of dimensions where the data points are more closely related. These algorithms are particularly useful when attempting to cluster data with many dimensions and limited computational resources.
 
     \item[Model-based]
-    \emph{Model-based} algorithms find the best fit of a pre-selected model to the data. These algorithms are based on the assumption that the data is generated from a mixture of underlying probability distributions. A common model-based clustering algorithm is the expectation-maximization algorithm.
+    \emph{Model-based} methods find the best fit of a pre-selected model to the data. These algorithms are based on the assumption that the data is generated from a mixture of underlying probability distributions. A common model-based clustering algorithm is the expectation-maximization algorithm.
     
 \end{description}
  

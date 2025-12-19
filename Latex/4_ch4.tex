@@ -10,9 +10,9 @@
 \label{sec:ch4.section1}
 %----------------------------------------------------
 
-All data used in this investigation was collected using the Livox Avia. Aalto data collected using a Windows laptop and Livox viewer software, proprietary .lvx file. All other data collected using Ubuntu laptop and \ac{ROS}, .bag file.
+For all \ac{LiDAR} data collected for this investigation, one of two apparatus was used. For the data collected from the Aalto University Ice and Wave Tank, The Livox Avia and a laptop running Windows 11 and the Livox SDK were used. For every other dataset, The Livox Avia and a laptop running Ubuntu 20.04 and \ac{ROS} Noetic were used.
 
-The sensor was set up to capture data using \ac{ROS} Neotic and the Livox \ac{ROS} driver through a machine running Ubuntu 20.04. The sensor scans and creates point clouds at a rate of 10 Hz and the \ac{IMU} collects data at a rate of 200 Hz. The captured data was saved and stored in the rosbag file format (.bag). These files contain all the recorded data, (point cloud e here).information (location and return intensity), \ac{IMU} readings, and their associated timestamps.
+In each case, the Avia's non-repetitive scanning pattern was used for data capture as it provides a wider \ac{FOV} than the non-repetitive scanning pattern and captures more unique data points. The sensor was configured to operate exclusively in single return mode, as the target environment is not expected to produce useful multiple returns. Data was captured at the sensor's default rate of 10 Hz for the point cloud frames and 200 Hz for the \ac{IMU} data.
 
 %====================================================
 \section{Characterisation and Calibration Data Collection}
