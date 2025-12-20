@@ -132,14 +132,14 @@ The de-noising function performed as expected. It removes unwanted returns produ
 \end{figure}
 %----------------------------------------------------
 
-As seen in Figures \ref{fig:no_thresh} and \ref{fig:thresh} above, the cone of noisy data in front of the sensor's aperture has been removed, with minimal invalid points remaining in the region. The horizontal feauture that remains is a part of the ship's deck from where the data was collected. A small number of points from the ice field have been removed by the process, as seen around Z = -20 m, X = 10 m in Figure \ref{fig:thresh}, but the vast majority of the ice field points have been preserved.
+As seen in Figures \ref{fig:no_thresh} and \ref{fig:thresh} above, the cone of noisy data in front of the sensor's aperture has been removed, with minimal invalid points remaining in the region. The horizontal feature that remains is a part of the ship's deck from where the data was collected. A few points from the ice field have been removed by the process, as seen around Z = -20 m, X = 10 m in Figure \ref{fig:thresh}, but the vast majority of the ice field points have been preserved.
 
 \newpage
 %====================================================
 \section{Wave Estimation}
 \label{sec:ch7.section3}
 
-The mean wave magnitude and period were able to be determined with a high degree of confidence from the wave probe data using the MATLAB curveFitter tool. All tests produced R-square scores above 0.93, indicating a strong correlation between the fitted model and the raw probe data, as seen in Table \ref{tab:curveFitter}. The wave periods all closely matched the parameters set to the wave makers (1.6 s and 2 s). *this needs to be correcyed* However, the amplitudes did not match the set values as closely, the first, second and fifth tests tracked the set values fairly well, while the third, fourth and sixth tests did not. The third and fourth tests fitted amplitudes were significantly lower than the set value of 50 mm, while the sixth test fitted amplitude was marginally higher than the set value of 27.5 mm.
+The mean wave magnitude and period were able to be determined with a high degree of confidence from the wave probe data using the MATLAB curveFitter tool. All tests produced R-square scores above 0.93, indicating a strong correlation between the fitted model and the raw probe data, as seen in Table \ref{tab:curveFitter}. The wave periods all closely matched the parameters set to the wave makers (1.6 s and 2 s). *this needs to be corrected* However, the amplitudes did not match the set values as closely, the first, second and fifth tests tracked the set values fairly well, while the third, fourth and sixth tests did not. The third and fourth tests fitted amplitudes were significantly lower than the set value of 50 mm, while the sixth test fitted amplitude was marginally higher than the set value of 27.5 mm.
 
 %----------------------------------------------------
 \begin{figure}[H]
