@@ -156,6 +156,70 @@
       \verb 10.17736/ijope.2021.ik08
       \endverb
     \endentry
+    \entry{ankerstOPTICSOrderingPoints1999}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=30218301c8db6744d898cf2fbef485e7}{%
+           family={Ankerst},
+           familyi={A\bibinitperiod},
+           given={Mihael},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=346772f472393316fd22dd8a300d2e7d}{%
+           family={Breunig},
+           familyi={B\bibinitperiod},
+           given={Markus\bibnamedelima M.},
+           giveni={M\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9559fe65ed2c0877cf14a66fe1f8e9b3}{%
+           family={Kriegel},
+           familyi={K\bibinitperiod},
+           given={Hans-Peter},
+           giveni={H\bibinithyphendelim P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=802157026f850823b2027c2100cb359a}{%
+           family={Sander},
+           familyi={S\bibinitperiod},
+           given={Jörg},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{353216c878e06e428094c446e94c76c7}
+      \strng{fullhash}{290606bde793f0e777a1762cbed5719f}
+      \strng{fullhashraw}{290606bde793f0e777a1762cbed5719f}
+      \strng{bibnamehash}{353216c878e06e428094c446e94c76c7}
+      \strng{authorbibnamehash}{353216c878e06e428094c446e94c76c7}
+      \strng{authornamehash}{353216c878e06e428094c446e94c76c7}
+      \strng{authorfullhash}{290606bde793f0e777a1762cbed5719f}
+      \strng{authorfullhashraw}{290606bde793f0e777a1762cbed5719f}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Cluster analysis is a primary method for database mining. It is either used as a stand-alone tool to get insight into the distribution of a data set, e.g. to focus further analysis and data processing, or as a preprocessing step for other algorithms operating on the detected clusters. Almost all of the well-known clustering algorithms require input parameters which are hard to determine but have a significant influence on the clustering result. Furthermore, for many real-data sets there does not even exist a global parameter setting for which the result of the clustering algorithm describes the intrinsic clustering structure accurately. We introduce a new algorithm for the purpose of cluster analysis which does not produce a clustering of a data set explicitly; but instead creates an augmented ordering of the database representing its density-based clustering structure. This cluster-ordering contains information which is equivalent to the density-based clusterings corresponding to a broad range of parameter settings. It is a versatile basis for both automatic and interactive cluster analysis. We show how to automatically and efficiently extract not only 'traditional' clustering information (e.g. representative points, arbitrary shaped clusters), but also the intrinsic clustering structure. For medium sized data sets, the cluster-ordering can be represented graphically and for very large data sets, we introduce an appropriate visualization technique. Both are suitable for interactive exploration of the intrinsic clustering structure offering additional insights into the distribution and correlation of the data.}
+      \field{issn}{0163-5808}
+      \field{journaltitle}{ACM SIGMOD Record}
+      \field{langid}{english}
+      \field{month}{6}
+      \field{number}{2}
+      \field{shorttitle}{{{OPTICS}}}
+      \field{title}{{{OPTICS}}: Ordering Points to Identify the Clustering Structure}
+      \field{urlday}{19}
+      \field{urlmonth}{12}
+      \field{urlyear}{2025}
+      \field{volume}{28}
+      \field{year}{1999}
+      \field{urldateera}{ce}
+      \field{pages}{49\bibrangedash 60}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1145/304181.304187
+      \endverb
+      \verb{file}
+      \verb C:\Users\dseph\Zotero\storage\VYD9P8CD\Ankerst et al. - 1999 - OPTICS ordering points to identify the clustering structure.pdf
+      \endverb
+    \endentry
     \entry{AviaLiDARSensor}{misc}{}{}
       \field{sortinit}{A}
       \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
@@ -701,6 +765,64 @@
       \verb{doi}
       \verb 10.1029/2018RG000631
       \endverb
+    \endentry
+    \entry{esterDensityBasedAlgorithmDiscovering1996}{inproceedings}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=2c062e64ed26aacc08a62155e7944f04}{%
+           family={Ester},
+           familyi={E\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9559fe65ed2c0877cf14a66fe1f8e9b3}{%
+           family={Kriegel},
+           familyi={K\bibinitperiod},
+           given={Hans-Peter},
+           giveni={H\bibinithyphendelim P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=802157026f850823b2027c2100cb359a}{%
+           family={Sander},
+           familyi={S\bibinitperiod},
+           given={Jörg},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2dda16c0a5d50fc830d0d4a3787937fa}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Xiaowei},
+           giveni={X\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{9158a41d23cb4e154e78366d59c05728}
+      \strng{fullhash}{3270dfaa31e8210b3bd04b1bcf4a29a3}
+      \strng{fullhashraw}{3270dfaa31e8210b3bd04b1bcf4a29a3}
+      \strng{bibnamehash}{9158a41d23cb4e154e78366d59c05728}
+      \strng{authorbibnamehash}{9158a41d23cb4e154e78366d59c05728}
+      \strng{authornamehash}{9158a41d23cb4e154e78366d59c05728}
+      \strng{authorfullhash}{3270dfaa31e8210b3bd04b1bcf4a29a3}
+      \strng{authorfullhashraw}{3270dfaa31e8210b3bd04b1bcf4a29a3}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Clustering algorithms are attractive for the task of class identification in spatial databases. However, the application to large spatial databases rises the following requirements for clustering algorithms: minimal requirements of domain knowledge to determine the input parameters, discovery of clusters with arbitrary shape and good efficiency on large databases. The well-known clustering algorithms offer no solution to the combination of these requirements. In this paper, we present the new clustering algorithm DBSCAN relying on a density-based notion of clusters which is designed to discover clusters of arbitrary shape. DBSCAN requires only one input parameter and supports the user in determining an appropriate value for it. We performed an experimental evaluation of the effectiveness and efficiency of DBSCAN using synthetic data and real data of the SEQUOIA 2000 benchmark. The results of our experiments demonstrate that (1) DBSCAN is significantly more effective in discovering clusters of arbitrary shape than the well-known algorithm CLAR-ANS, and that (2) DBSCAN outperforms CLARANS by a factor of more than 100 in terms of efficiency.}
+      \field{annotation}{ADS Bibcode: 1996kddm.conf..226E}
+      \field{booktitle}{Second {{International Conference}} on {{Knowledge Discovery}} and {{Data Mining}} ({{KDD}}'96). {{Proceedings}} of a Conference Held {{August}} 2-4}
+      \field{month}{1}
+      \field{title}{A {{Density-Based Algorithm}} for {{Discovering Clusters}} in {{Large Spatial Databases}} with {{Noise}}}
+      \field{urlday}{1}
+      \field{urlmonth}{8}
+      \field{urlyear}{2025}
+      \field{year}{1996}
+      \field{urldateera}{ce}
+      \field{pages}{226\bibrangedash 331}
+      \range{pages}{106}
+      \verb{file}
+      \verb C:\Users\dseph\Zotero\storage\5AKCS2VI\Ester et al. - 1996 - A Density-Based Algorithm for Discovering Clusters in Large Spatial Databases with Noise.pdf
+      \endverb
+      \keyw{Arbitrary Shape of Clusters,Clustering Algorithms,Efficiency on Large Spatial Databases,Handling Noise}
     \endentry
     \entry{fischlerRandomSampleConsensus1981}{article}{}{}
       \name{author}{2}{}{%
@@ -1396,6 +1518,67 @@
       \field{type}{phdthesis}
       \field{year}{2013}
     \endentry
+    \entry{liuVDBSCANVariedDensity2007}{inproceedings}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=2c112d9d43345185672db278b5111bc4}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Peng},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=43f6178e119fece71bb0b091b608c545}{%
+           family={Zhou},
+           familyi={Z\bibinitperiod},
+           given={Dong},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d4e3fb8460557907d1180bf5e4307a6b}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Naijun},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Changdu, China}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{abc148b868ae6a034e91ce48ce7c526f}
+      \strng{fullhash}{abc148b868ae6a034e91ce48ce7c526f}
+      \strng{fullhashraw}{abc148b868ae6a034e91ce48ce7c526f}
+      \strng{bibnamehash}{abc148b868ae6a034e91ce48ce7c526f}
+      \strng{authorbibnamehash}{abc148b868ae6a034e91ce48ce7c526f}
+      \strng{authornamehash}{abc148b868ae6a034e91ce48ce7c526f}
+      \strng{authorfullhash}{abc148b868ae6a034e91ce48ce7c526f}
+      \strng{authorfullhashraw}{abc148b868ae6a034e91ce48ce7c526f}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{booktitle}{2007 {{International Conference}} on {{Service Systems}} and {{Service Management}}}
+      \field{isbn}{978-1-4244-0884-9 978-1-4244-0885-6}
+      \field{month}{6}
+      \field{shorttitle}{{{VDBSCAN}}}
+      \field{title}{{{VDBSCAN}}: {{Varied Density Based Spatial Clustering}} of {{Applications}} with {{Noise}}}
+      \field{urlday}{19}
+      \field{urlmonth}{12}
+      \field{urlyear}{2025}
+      \field{year}{2007}
+      \field{urldateera}{ce}
+      \field{pages}{1\bibrangedash 4}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.1109/ICSSSM.2007.4280175
+      \endverb
+      \verb{file}
+      \verb C:\Users\dseph\Zotero\storage\ATP655IJ\Liu et al. - 2007 - VDBSCAN Varied Density Based Spatial Clustering of Applications with Noise.pdf
+      \endverb
+      \keyw{Algorithm design and analysis,Clustering algorithms,Clustering methods,Data analysis,data mining,Data mining,DBSCAN,density-based clustering,Information management,Optical noise,Partitioning algorithms,Shape,Spatial databases,VDBSCAN}
+    \endentry
     \entry{livoxLivoxSDKLivox_ros_driver2025}{misc}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=a48d0a625c75b596b5d5cda61f0a2f4f}{%
@@ -1894,6 +2077,75 @@
       \range{pages}{10}
       \verb{doi}
       \verb 10.1111/1365-2664.12261
+      \endverb
+    \endentry
+    \entry{rajSurveyLiDARScanning2020}{article}{}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=2d743fc1c9fabbdc8ab2497840632b76}{%
+           family={Raj},
+           familyi={R\bibinitperiod},
+           given={Thinal},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5c7a69a232239c1448fd694b21a21817}{%
+           family={Hashim},
+           familyi={H\bibinitperiod},
+           given={Fazida\bibnamedelima Hanim},
+           giveni={F\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9ce94f29bfc818a65f61e8d3c4c8ed02}{%
+           family={Huddin},
+           familyi={H\bibinitperiod},
+           given={Aqilah\bibnamedelima Baseri},
+           giveni={A\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=30d9870347e63df8fac201d93449dfa2}{%
+           family={Ibrahim},
+           familyi={I\bibinitperiod},
+           given={Mohd\bibnamedelima Faisal},
+           giveni={M\bibinitperiod\bibinitdelim F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=04402abfffa2c5d64a926a18f41e3641}{%
+           family={Hussain},
+           familyi={H\bibinitperiod},
+           given={Aini},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{e17e9666c22f8cc0ee7e9a1764a72e74}
+      \strng{fullhash}{916b25a54b3afaf4080b557212ffb375}
+      \strng{fullhashraw}{916b25a54b3afaf4080b557212ffb375}
+      \strng{bibnamehash}{e17e9666c22f8cc0ee7e9a1764a72e74}
+      \strng{authorbibnamehash}{e17e9666c22f8cc0ee7e9a1764a72e74}
+      \strng{authornamehash}{e17e9666c22f8cc0ee7e9a1764a72e74}
+      \strng{authorfullhash}{916b25a54b3afaf4080b557212ffb375}
+      \strng{authorfullhashraw}{916b25a54b3afaf4080b557212ffb375}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In recent years, light detection and ranging (LiDAR) technology has gained huge popularity in various applications such as navigation, robotics, remote sensing, and advanced driving assistance systems (ADAS). This popularity is mainly due to the improvements in LiDAR performance in terms of range detection, accuracy, power consumption, as well as physical features such as dimension and weight. Although a number of literatures on LiDAR technology have been published earlier, not many has been reported on the state-of-the-art LiDAR scanning mechanisms. The aim of this article is to review the scanning mechanisms employed in LiDAR technology from past research works to the current commercial products. The review highlights four commonly used mechanisms in LiDAR systems: Opto-mechanical, electromechanical, micro-electromechanical systems (MEMS), and solid-state scanning. The study reveals that electro-mechanical scanning is the most prominent technology in use today. The commercially available 1D time of flight (TOF) LiDAR instrument is currently the most attractive option for conversion from 1D to 3D LiDAR system, provided that low scanning rate is not an issue. As for applications with low size, weight, and power (SWaP) requirements, MEMS scanning is found to be the better alternative. MEMS scanning is by far the more matured technology compared to solid-state scanning and is currently given great emphasis to increase its robustness for fulfilling the requirements of ADAS applications. Finally, solid-state LiDAR systems are expected to fill in the gap in ADAS applications despite the low technology readiness in comparison to MEMS scanners. However, since solid-state scanning is believed to have superior robustness, field of view (FOV), and scanning rate potential, great efforts are given by both academics and industries to further develop this technology.}
+      \field{issn}{2079-9292}
+      \field{journaltitle}{Electronics}
+      \field{langid}{english}
+      \field{month}{4}
+      \field{number}{5}
+      \field{title}{A {{Survey}} on {{LiDAR Scanning Mechanisms}}}
+      \field{urlday}{31}
+      \field{urlmonth}{1}
+      \field{urlyear}{2025}
+      \field{volume}{9}
+      \field{year}{2020}
+      \field{urldateera}{ce}
+      \field{pages}{741}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.3390/electronics9050741
+      \endverb
+      \verb{file}
+      \verb C:\Users\dseph\Zotero\storage\NISAYDQS\Raj et al. - 2020 - A Survey on LiDAR Scanning Mechanisms.pdf
       \endverb
     \endentry
     \entry{rodriguezClusteringAlgorithmsComparative2019}{article}{}{}
@@ -2428,12 +2680,12 @@
     \endentry
     \entry{wangEvolutionLiDARIts2020}{article}{}{}
       \name{author}{5}{}{%
-        {{un=0,uniquepart=base,hash=03d3e23852937fa39b0e34246c4ecd1d}{%
+        {{un=1,uniquepart=given,hash=03d3e23852937fa39b0e34246c4ecd1d}{%
            family={Wang},
            familyi={W\bibinitperiod},
            given={Xin},
            giveni={X\bibinitperiod},
-           givenun=0}}%
+           givenun=1}}%
         {{un=0,uniquepart=base,hash=28011dfca17462ae27f4925d60229d0a}{%
            family={Pan},
            familyi={P\bibinitperiod},
@@ -2489,6 +2741,54 @@
       \range{pages}{1}
       \verb{doi}
       \verb 10.1088/1755-1315/502/1/012008
+      \endverb
+    \endentry
+    \entry{wangChallengesOpportunitiesLidar2021}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=1,uniquepart=given,hash=ad1ad9f4a553c837d8b7039ce868c392}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Zhien},
+           giveni={Z\bibinitperiod},
+           givenun=1}}%
+        {{un=0,uniquepart=base,hash=3c52cc8e640325293e8aa0c64726bad1}{%
+           family={Menenti},
+           familyi={M\bibinitperiod},
+           given={Massimo},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{4748efa4b26088113892a4aecfceeae1}
+      \strng{fullhash}{4748efa4b26088113892a4aecfceeae1}
+      \strng{fullhashraw}{4748efa4b26088113892a4aecfceeae1}
+      \strng{bibnamehash}{4748efa4b26088113892a4aecfceeae1}
+      \strng{authorbibnamehash}{4748efa4b26088113892a4aecfceeae1}
+      \strng{authornamehash}{4748efa4b26088113892a4aecfceeae1}
+      \strng{authorfullhash}{4748efa4b26088113892a4aecfceeae1}
+      \strng{authorfullhashraw}{4748efa4b26088113892a4aecfceeae1}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{2673-6187}
+      \field{journaltitle}{Frontiers in Remote Sensing}
+      \field{month}{3}
+      \field{title}{Challenges and {{Opportunities}} in {{Lidar Remote Sensing}}}
+      \field{urlday}{20}
+      \field{urlmonth}{12}
+      \field{urlyear}{2025}
+      \field{volume}{2}
+      \field{year}{2021}
+      \field{urldateera}{ce}
+      \field{pages}{641723}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.3389/frsen.2021.641723
+      \endverb
+      \verb{file}
+      \verb C:\Users\dseph\Zotero\storage\SF5NWTJX\Wang and Menenti - 2021 - Challenges and Opportunities in Lidar Remote Sensing.pdf
       \endverb
     \endentry
     \entry{warrenOpticalPropertiesIce2019}{article}{}{}

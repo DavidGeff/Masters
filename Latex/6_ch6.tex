@@ -17,15 +17,17 @@
 \section{Data Extraction}
 \label{sec:ch6.section1}
 
-The starting point for the pipeline is the raw Avia point cloud data. All data used in this investigation was captured as rosbag (.bag) or the proprietary Livox file type (.lvx). The raw data has to first be extracted from these file types before it can be processed or used in analysis. The Livox \ac{ROS} driver includes functionality to convert .lvx files to .bag files. MATLAB's \ac{ROS} Toolbox contains functions and tools for extracting data fields from a .bag file for storage and use in standard MATLAB matrices or structures.
+The starting point for the pipeline is the raw Avia point cloud data. All data used in this investigation was captured as rosbag (\emph{.bag}) or the proprietary Livox file type (\emph{.lvx}). The raw data has to first be extracted from these file types before it can be processed or used in analysis. The Livox \ac{ROS} driver includes functionality to convert \emph{.lvx} files to \emph{.bag} files. MATLAB's \ac{ROS} Toolbox contains functions and tools for extracting data fields from a \emph{.bag} file for storage and use in standard MATLAB matrices or structures.
 
 \ac{IMU} data (linear \& rotational accelerations and timestamps) captured by the Avia is extracted from the .bag files and then stored in matrices for further processing.
 
-MATLAB's \ac{LiDAR} Toolbox has provision for a pointCloud object which was used to store all \ac{LiDAR} data for processing and analysis. This object contains fields for the point cloud's x, y and z co-ordinate data, total number of points, as well as point colours, normals and intensities. The Avia is only capable of directly measuring point intensity, so this was the only additional data field extracted from the .bag files into the pointCloud object. Frame timestamps are not stored in the pointCloud object, but in a standalone array.
+MATLAB's \ac{LiDAR} Toolbox has provision for a \emph{pointCloud} object which was used to store all \ac{LiDAR} data for processing and analysis. This object contains fields for the point cloud's x, y and z co-ordinate data, total number of points, as well as point colours, normals and intensities. The Avia is only capable of directly measuring point intensity, so this was the only additional data field extracted from the .bag files into the \emph{pointCloud} object. Frame timestamps are not stored in the pointCloud object, but in a standalone array.
 
 %====================================================
 \section{Motion Compensation}
 \label{sec:ch6.section2}
+
+*fix kalman stuff here*
 
 Two Kalman filters were created to estimate the attitude of the Avia during data collection. The filters output estimates of the sensor's roll and pitch (yaw cannot be reliably estimated from \ac{IMU} data). Using these angle estimates an inverse transform can be applied to the point cloud to 'stabilise' the data and compensate for the motion of the observation platform (ship). As these Kalman filters only estimate changes in roll and pitch attitude, and not position, there will still be motion artefacts in the data due to translation and yaw of the observation platform. 
 
@@ -74,7 +76,7 @@ As there was no time synchronisation between the Avia and wave probe, instantane
 
 The strict constraints on the wave behaviours allows for the wave models used to be greatly simplified. It can be assumed the waves will propagate uniformly across the tank with minimal change in direction and velocity.
 
-Using the MATLAB curveFitter tool, a sinusoidal model (equation \ref{eqn:probe_sin}) of wave height over time was fitted to the Aalto wave probe data from each test, producing a single amplitude and period value per test.
+Using the MATLAB \emph{curveFitter} tool, a sinusoidal model (equation \ref{eqn:probe_sin}) of wave height over time was fitted to the Aalto wave probe data from each test, producing a single amplitude and period value per test.
 
 %----------------------------------------------------
 \begin{equation} \label{eqn:probe_sin}
@@ -83,6 +85,8 @@ Using the MATLAB curveFitter tool, a sinusoidal model (equation \ref{eqn:probe_s
 %----------------------------------------------------
 
 \textit{y} is the wave height at time \textit{t}, \textit{A} is  amplitude, \textit{$\omega$} is the  angular frequency and \textit{c} is the phase shift. For this investigation, only amplitude and angular frequency (\textit{A} and \textit{$\omega$}) are of interest.
+
+*talk more about how RANSAC was built*
 
 To model the waves from point cloud data, a spatial sinusoidal plane model (equation \ref{eqn:avia_sin}) was fitted to each frame in the point cloud using \ac{RANSAC}. Each frame fit was run for 300 iterations at an inlier tolerance of 0.02 m (2 cm).
 
@@ -134,6 +138,8 @@ To identify the shape and size of individual pancakes in the point cloud data, t
 Each of these algorithms accept a point cloud frame as input and return a list, where each entry in the list corresponds to a point in the input point cloud frame. Each entry contains a cluster identification number, indicating which cluster the point belongs to. Points that are classified as noise or outliers are given a cluster ID of -1. This list can then be used to visualise the clusters by assigning each cluster a unique colour, or to calculate the size and shape of individual pancakes by grouping points with the same cluster ID.
 
 As no ground truth data was available for pancake size and shape, the performance of each clustering algorithm was evaluated qualitatively by visual inspection of the clustering results.
+
+*talk about how each algorithm was implemented and parameter tuning*
 
 %To identify the size and shape of individual pancakes, a method to associate individual points with individual pancakes is required. A method to achieve this is the use of a clustering algorithm. One such clustering algorithm is \ac{DBScan}. \ac{DBScan} identifies clusters in data based on how densely packed points are, clusters are dense regions separated by lower density areas (outliers). The function has a minimum of two input criteria; minPts, the minimum number of points required to form a cluster, and epsilon ($\epsilon$), the maximum distance allowed between points for them to be classified as being in the same neighbourhood. These parameters are used to classify points into one of three categories; core points, border points, and noise points. A core point is a point that has sufficient points, including itself (set by minPts) within a given radius (set by $\epsilon$). A border point is a point that is not a core point but is still within the neighbourhood radius ($\epsilon$) of a core point. A noise point is neither a core point nor a border point. Core points and their associated border points form an individual cluster, whereas noise points are not part of any cluster.
 

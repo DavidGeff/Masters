@@ -506,6 +506,63 @@
       \verb 10.1016/0924-7963(91)90044-U
       \endverb
     \endentry
+    \entry{deemsLidarMeasurementSnow2013}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=06b3758bde04fdcf53f6363fa0b1e33a}{%
+           family={Deems},
+           familyi={D\bibinitperiod},
+           given={Jeffrey\bibnamedelima S.},
+           giveni={J\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e932f1eaf2b2e3756c182b61aa90e692}{%
+           family={Painter},
+           familyi={P\bibinitperiod},
+           given={Thomas\bibnamedelima H.},
+           giveni={T\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6729c5296c54a8c68539b75d71798b09}{%
+           family={Finnegan},
+           familyi={F\bibinitperiod},
+           given={David\bibnamedelima C.},
+           giveni={D\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{01fac5adecfb7b0930fca878682d7db5}
+      \strng{fullhash}{01fac5adecfb7b0930fca878682d7db5}
+      \strng{fullhashraw}{01fac5adecfb7b0930fca878682d7db5}
+      \strng{bibnamehash}{01fac5adecfb7b0930fca878682d7db5}
+      \strng{authorbibnamehash}{01fac5adecfb7b0930fca878682d7db5}
+      \strng{authornamehash}{01fac5adecfb7b0930fca878682d7db5}
+      \strng{authorfullhash}{01fac5adecfb7b0930fca878682d7db5}
+      \strng{authorfullhashraw}{01fac5adecfb7b0930fca878682d7db5}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Abstract Laser altimetry (lidar) is a remote-sensing technology that holds tremendous promise for mapping snow depth in snow hydrology and avalanche applications. Recently lidar has seen a dramatic widening of applications in the natural sciences, resulting in technological improvements and an increase in the availability of both airborne and ground-based sensors. Modern sensors allow mapping of vegetation heights and snow or ground surface elevations below forest canopies. Typical vertical accuracies for airborne datasets are decimeter-scale with order 1 m point spacings. Ground-based systems typically provide millimeter-scale range accuracy and sub-meter point spacing over 1 m to several kilometers. Many system parameters, such as scan angle, pulse rate and shot geometry relative to terrain gradients, require specification to achieve specific point coverage densities in forested and/or complex terrain. Additionally, snow has a significant volumetric scattering component, requiring different considerations for error estimation than for other Earth surface materials. We use published estimates of light penetration depth by wavelength to estimate radiative transfer error contributions. This paper presents a review of lidar mapping procedures and error sources, potential errors unique to snow surface remote sensing in the near-infrared and visible wavelengths, and recommendations for projects using lidar for snow-depth mapping.}
+      \field{issn}{0022-1430, 1727-5652}
+      \field{journaltitle}{Journal of Glaciology}
+      \field{langid}{english}
+      \field{number}{215}
+      \field{shorttitle}{Lidar Measurement of Snow Depth}
+      \field{title}{Lidar Measurement of Snow Depth: A Review}
+      \field{urlday}{9}
+      \field{urlmonth}{9}
+      \field{urlyear}{2025}
+      \field{volume}{59}
+      \field{year}{2013}
+      \field{urldateera}{ce}
+      \field{pages}{467\bibrangedash 479}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.3189/2013JoG12J154
+      \endverb
+      \verb{file}
+      \verb C:\Users\dseph\Zotero\storage\S92942J2\Deems et al. - 2013 - Lidar measurement of snow depth a review.pdf
+      \endverb
+    \endentry
     \entry{dingemansWaterWavePropagation1997}{book}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=501f01f77e6071897d10a430fb045e8f}{%
@@ -1518,6 +1575,64 @@
       \field{type}{phdthesis}
       \field{year}{2013}
     \endentry
+    \entry{lefskyLidarRemoteSensing2002}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=b4d4f6e4032adbe2696428a2eca25905}{%
+           family={Lefsky},
+           familyi={L\bibinitperiod},
+           given={Michael\bibnamedelima A.},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=935760492f1b79e59e79e3372c11f3a3}{%
+           family={Cohen},
+           familyi={C\bibinitperiod},
+           given={Warren\bibnamedelima B.},
+           giveni={W\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=278549b33d4374b9a559d8f513e1cd58}{%
+           family={Parker},
+           familyi={P\bibinitperiod},
+           given={Geoffrey\bibnamedelima G.},
+           giveni={G\bibinitperiod\bibinitdelim G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e60885d857ae3120a1182437da51362f}{%
+           family={Harding},
+           familyi={H\bibinitperiod},
+           given={David\bibnamedelima J.},
+           giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{68c162b1ec37523f9528f316ec106e31}
+      \strng{fullhash}{0fff85b2da6b3401b441c902f1f86773}
+      \strng{fullhashraw}{0fff85b2da6b3401b441c902f1f86773}
+      \strng{bibnamehash}{68c162b1ec37523f9528f316ec106e31}
+      \strng{authorbibnamehash}{68c162b1ec37523f9528f316ec106e31}
+      \strng{authornamehash}{68c162b1ec37523f9528f316ec106e31}
+      \strng{authorfullhash}{0fff85b2da6b3401b441c902f1f86773}
+      \strng{authorfullhashraw}{0fff85b2da6b3401b441c902f1f86773}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0006-3568}
+      \field{journaltitle}{BioScience}
+      \field{langid}{english}
+      \field{number}{1}
+      \field{title}{Lidar {{Remote Sensing}} for {{Ecosystem Studies}}}
+      \field{urlday}{20}
+      \field{urlmonth}{12}
+      \field{urlyear}{2025}
+      \field{volume}{52}
+      \field{year}{2002}
+      \field{urldateera}{ce}
+      \field{pages}{19}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1641/0006-3568(2002)052[0019:LRSFES]2.0.CO;2
+      \endverb
+    \endentry
     \entry{liuVDBSCANVariedDensity2007}{inproceedings}{}{}
       \name{author}{3}{}{%
         {{un=0,uniquepart=base,hash=2c112d9d43345185672db278b5111bc4}{%
@@ -1577,6 +1692,7 @@
       \verb{file}
       \verb C:\Users\dseph\Zotero\storage\ATP655IJ\Liu et al. - 2007 - VDBSCAN Varied Density Based Spatial Clustering of Applications with Noise.pdf
       \endverb
+      \keyw{Algorithm design and analysis,Clustering algorithms,Clustering methods,Data analysis,data mining,Data mining,DBSCAN,density-based clustering,Information management,Optical noise,Partitioning algorithms,Shape,Spatial databases,VDBSCAN}
     \endentry
     \entry{livoxLivoxSDKLivox_ros_driver2025}{misc}{}{}
       \name{author}{1}{}{%
@@ -2076,6 +2192,75 @@
       \range{pages}{10}
       \verb{doi}
       \verb 10.1111/1365-2664.12261
+      \endverb
+    \endentry
+    \entry{rajSurveyLiDARScanning2020}{article}{}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=2d743fc1c9fabbdc8ab2497840632b76}{%
+           family={Raj},
+           familyi={R\bibinitperiod},
+           given={Thinal},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5c7a69a232239c1448fd694b21a21817}{%
+           family={Hashim},
+           familyi={H\bibinitperiod},
+           given={Fazida\bibnamedelima Hanim},
+           giveni={F\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9ce94f29bfc818a65f61e8d3c4c8ed02}{%
+           family={Huddin},
+           familyi={H\bibinitperiod},
+           given={Aqilah\bibnamedelima Baseri},
+           giveni={A\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=30d9870347e63df8fac201d93449dfa2}{%
+           family={Ibrahim},
+           familyi={I\bibinitperiod},
+           given={Mohd\bibnamedelima Faisal},
+           giveni={M\bibinitperiod\bibinitdelim F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=04402abfffa2c5d64a926a18f41e3641}{%
+           family={Hussain},
+           familyi={H\bibinitperiod},
+           given={Aini},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{e17e9666c22f8cc0ee7e9a1764a72e74}
+      \strng{fullhash}{916b25a54b3afaf4080b557212ffb375}
+      \strng{fullhashraw}{916b25a54b3afaf4080b557212ffb375}
+      \strng{bibnamehash}{e17e9666c22f8cc0ee7e9a1764a72e74}
+      \strng{authorbibnamehash}{e17e9666c22f8cc0ee7e9a1764a72e74}
+      \strng{authornamehash}{e17e9666c22f8cc0ee7e9a1764a72e74}
+      \strng{authorfullhash}{916b25a54b3afaf4080b557212ffb375}
+      \strng{authorfullhashraw}{916b25a54b3afaf4080b557212ffb375}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In recent years, light detection and ranging (LiDAR) technology has gained huge popularity in various applications such as navigation, robotics, remote sensing, and advanced driving assistance systems (ADAS). This popularity is mainly due to the improvements in LiDAR performance in terms of range detection, accuracy, power consumption, as well as physical features such as dimension and weight. Although a number of literatures on LiDAR technology have been published earlier, not many has been reported on the state-of-the-art LiDAR scanning mechanisms. The aim of this article is to review the scanning mechanisms employed in LiDAR technology from past research works to the current commercial products. The review highlights four commonly used mechanisms in LiDAR systems: Opto-mechanical, electromechanical, micro-electromechanical systems (MEMS), and solid-state scanning. The study reveals that electro-mechanical scanning is the most prominent technology in use today. The commercially available 1D time of flight (TOF) LiDAR instrument is currently the most attractive option for conversion from 1D to 3D LiDAR system, provided that low scanning rate is not an issue. As for applications with low size, weight, and power (SWaP) requirements, MEMS scanning is found to be the better alternative. MEMS scanning is by far the more matured technology compared to solid-state scanning and is currently given great emphasis to increase its robustness for fulfilling the requirements of ADAS applications. Finally, solid-state LiDAR systems are expected to fill in the gap in ADAS applications despite the low technology readiness in comparison to MEMS scanners. However, since solid-state scanning is believed to have superior robustness, field of view (FOV), and scanning rate potential, great efforts are given by both academics and industries to further develop this technology.}
+      \field{issn}{2079-9292}
+      \field{journaltitle}{Electronics}
+      \field{langid}{english}
+      \field{month}{4}
+      \field{number}{5}
+      \field{title}{A {{Survey}} on {{LiDAR Scanning Mechanisms}}}
+      \field{urlday}{31}
+      \field{urlmonth}{1}
+      \field{urlyear}{2025}
+      \field{volume}{9}
+      \field{year}{2020}
+      \field{urldateera}{ce}
+      \field{pages}{741}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.3390/electronics9050741
+      \endverb
+      \verb{file}
+      \verb C:\Users\dseph\Zotero\storage\NISAYDQS\Raj et al. - 2020 - A Survey on LiDAR Scanning Mechanisms.pdf
       \endverb
     \endentry
     \entry{rodriguezClusteringAlgorithmsComparative2019}{article}{}{}
@@ -2610,12 +2795,12 @@
     \endentry
     \entry{wangEvolutionLiDARIts2020}{article}{}{}
       \name{author}{5}{}{%
-        {{un=0,uniquepart=base,hash=03d3e23852937fa39b0e34246c4ecd1d}{%
+        {{un=1,uniquepart=given,hash=03d3e23852937fa39b0e34246c4ecd1d}{%
            family={Wang},
            familyi={W\bibinitperiod},
            given={Xin},
            giveni={X\bibinitperiod},
-           givenun=0}}%
+           givenun=1}}%
         {{un=0,uniquepart=base,hash=28011dfca17462ae27f4925d60229d0a}{%
            family={Pan},
            familyi={P\bibinitperiod},
@@ -2671,6 +2856,54 @@
       \range{pages}{1}
       \verb{doi}
       \verb 10.1088/1755-1315/502/1/012008
+      \endverb
+    \endentry
+    \entry{wangChallengesOpportunitiesLidar2021}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=1,uniquepart=given,hash=ad1ad9f4a553c837d8b7039ce868c392}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Zhien},
+           giveni={Z\bibinitperiod},
+           givenun=1}}%
+        {{un=0,uniquepart=base,hash=3c52cc8e640325293e8aa0c64726bad1}{%
+           family={Menenti},
+           familyi={M\bibinitperiod},
+           given={Massimo},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{4748efa4b26088113892a4aecfceeae1}
+      \strng{fullhash}{4748efa4b26088113892a4aecfceeae1}
+      \strng{fullhashraw}{4748efa4b26088113892a4aecfceeae1}
+      \strng{bibnamehash}{4748efa4b26088113892a4aecfceeae1}
+      \strng{authorbibnamehash}{4748efa4b26088113892a4aecfceeae1}
+      \strng{authornamehash}{4748efa4b26088113892a4aecfceeae1}
+      \strng{authorfullhash}{4748efa4b26088113892a4aecfceeae1}
+      \strng{authorfullhashraw}{4748efa4b26088113892a4aecfceeae1}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{2673-6187}
+      \field{journaltitle}{Frontiers in Remote Sensing}
+      \field{month}{3}
+      \field{title}{Challenges and {{Opportunities}} in {{Lidar Remote Sensing}}}
+      \field{urlday}{20}
+      \field{urlmonth}{12}
+      \field{urlyear}{2025}
+      \field{volume}{2}
+      \field{year}{2021}
+      \field{urldateera}{ce}
+      \field{pages}{641723}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.3389/frsen.2021.641723
+      \endverb
+      \verb{file}
+      \verb C:\Users\dseph\Zotero\storage\SF5NWTJX\Wang and Menenti - 2021 - Challenges and Opportunities in Lidar Remote Sensing.pdf
       \endverb
     \endentry
     \entry{warrenOpticalPropertiesIce2019}{article}{}{}
@@ -2751,22 +2984,6 @@
       \field{labeltitlesource}{title}
       \field{title}{An Introduction to the {{Kalman}} Filter}
       \field{year}{1995}
-    \endentry
-    \entry{WhatLidarDataArcGIS}{misc}{}{}
-      \field{sortinit}{W}
-      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{url}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{https://pro.arcgis.com/en/pro-app/latest/help/data/las-dataset/what-is-lidar-.htm}
-      \field{title}{What Is {{Lidar}} Data?---{{ArcGIS Pro}} |{} {{Documentation}}}
-      \field{urlday}{12}
-      \field{urlmonth}{6}
-      \field{urlyear}{2025}
-      \field{urldateera}{ce}
-      \verb{file}
-      \verb C:\Users\dseph\Zotero\storage\2VP64Q5L\what-is-lidar-.html
-      \endverb
     \endentry
     \entry{williamsWaveIceInteractions2013}{article}{}{}
       \name{author}{5}{}{%

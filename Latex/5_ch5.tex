@@ -21,6 +21,8 @@
 
 Before any point cloud processing can take place, the raw Avia data must be pre-processed to ensure it is in a suitable format and condition before being fed into the main processing pipeline. This pre-processing varies depending on the source of the data, but generally involves synchronising and aligning the Avia data with any ground truth data, as well as cropping and filtering the data to focus on the areas of interest and remove unwanted points produced during experimental setup.
 
+*talk about why matlab was chosen*
+
 %----------------------------------------------------
 \subsection{Stationary Characterisation Data}
 \label{subsec:ch5.section1.subsec1}
@@ -41,7 +43,7 @@ For this experiment, the point cloud data was not used and thus no pre-processin
 \subsection{Aalto Data}
 \label{subsec:ch5.section1.subsec3}
 
-The data collected from the Aalto University wave and ice tank was the only point cloud data used in this investigation that was not collected using \ac{ROS}. The data was instead collected using the Livox SDK, which stores the point cloud data in the proprietary Livox .lvx format. Livox provides tools to convert .lvx files into .bag files (\cite{livoxLivoxSDKLivox_ros_driver2025}), allowing the data to be processed using the same tools developed for the other datasets. Once the point cloud data was imported into MATLAB, it was rotated about the sensor's x-axis, similarly to the stationary characterisation data, as the sensor was mounted at an angle of declination ofapproximately 30° to the horizontal during data collection. Next, the point cloud data was cropped to remove unwanted points created during experimental setup, such as those from the tank walls and wave makers.
+The data collected from the Aalto University wave and ice tank was the only point cloud data used in this investigation that was not collected using \ac{ROS}. The data was instead collected using the Livox SDK, which stores the point cloud data in the proprietary Livox \emph{.lvx} format. Livox provides tools to convert \emph{.lvx} files into \emph{.bag} files (\cite{livoxLivoxSDKLivox_ros_driver2025}), allowing the data to be processed using the same tools developed for the other datasets. Once the point cloud data was imported into MATLAB, it was rotated about the sensor's x-axis, similarly to the stationary characterisation data, as the sensor was mounted at an angle of declination ofapproximately 30° to the horizontal during data collection. Next, the point cloud data was cropped to remove unwanted points created during experimental setup, such as those from the tank walls and wave makers.
 
 At the beginning of each test, there was a period of time where the waves were still settling into their steady state, and had not yet reached the set amplitude and frequency. To ensure that only steady state wave data was processed, both the point cloud data and wave probe data were trimmed to exclude this initial settling period.
 
@@ -62,9 +64,23 @@ Before designing the data processing pipeline, it is important to understand the
 
 The Avia was designed primarily for use in urban environments for mapping, navigation and surveying applications (\cite{AviaLiDARSensor}). This means that the sensor has been optimised for capturing static scenes from a stable observation platform, aimed perpendicular to the target scene. This is almost the exact opposite of the observation conditions in the \ac{MIZ}, where the target scene (sea ice field) is highly dynamic, the observation platform is never fully stable, and the sensor is mounted at an angle to the target scene. Therefore, it is important to understand how these differences in observation conditions affect the quality of the captured data.
 
-The primary areas of investigation were the effects of motion distortion due to the moving platform, the accuracy of the captured scene when the sensor is not perpendicular to the target scene leading to shadowing and decreased point density, the minimum number of frames required to obtain accurate recreations of the target scene and the impact of the sensor's beam divergence. The outcomes of these investigations informed the final design of the data processing pipeline.
+The primary areas of investigation were the accuracy of the captured scene when the sensor is not perpendicular to the target scene, leading to shadowing and decreased point density, the minimum number of frames required to obtain accurate recreations of the target scene and the impact of the sensor's beam divergence. The outcomes of these investigations informed the final design of the data processing pipeline.
 
-Something about trying normals estimation and it not working so discarded from final pipeline
+%----------------------------------------------------
+\subsection{Target Scene Reconstruction}
+\label{subsec:ch5.section2.subsec1}
+
+To evaluate the Avia's ability to accurately reconstruct a target scene, the data collected during the stationary characterisation experiments was analysed. The point cloud data collected from the four board configurations were compared to the known geometry of the boards to determine the accuracy of the reconstructed scene and identify the impact of the sensor's angle of incidence, shadowing effects, beam divergence, and point density on the quality of the reconstructed scene.
+
+This was achieved by comparing a single frame of point cloud data to the known geometry of the boards, and any deviations from the expected geometry were noted. Consecutive frames were then concatonated to the initial frame, and the reconstruction quality was re-evaluated. This process was repeated, with no more than 50 frames (corresponding to 5 seconds) being concatonated at a time. This process was applied to all four board configurations, and the minimum number of frames required to achieve an accurate reconstruction of the target scene noted.
+
+%----------------------------------------------------
+\subsection{Target Normals Estimation}
+\label{subsec:ch5.section2.subsec2}
+
+To further evaluate weather valuable information about the target scene can be extracted from the Avia point cloud data, the quality of estimated point normals was investigated. MATLAB's \emph{pcnormals} function was used to estimate the normals of points in the point cloud data, and the estimated normals were compared to the known geometry of the boards to determine their accuracy.
+
+
 
 %====================================================
 \section{Pipeline Design}
@@ -90,8 +106,6 @@ When the Avia collects data in adverse environmental conditions (such as rain, s
 %----------------------------------------------------
 \subsection{Wave Parameter Estimation}
 \label{subsec:ch5.section3.subsec3}
-
-custom RANSAC to fit wave model to point cloud data and extract wave parameters. talk about SCALE data issues here too.
 
 \ac{RANSAC} has been applied with great success in identifying and recontructing buildings in urban environments from airborne \ac{LiDAR} data (\cite{forlaniBuildingReconstructionVisualization2003}), but has not seen much use in natural environments. As \ac{RANSAC} is designed to fit a user-defined model to data, with a sufficiently complex model it may be possible to fit environmetal features found in the \ac{MIZ}, such as surface waves propagating through an ice field. This would require a suitable wave model to be developed, but if successful could allow for the extraction of wave parameters such as amplitude and wave period directly from point cloud data.
 

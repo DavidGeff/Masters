@@ -5,45 +5,40 @@
 \label{ch:theory}
 
 %====================================================
-%\section{Robot Operating System (ROS)}
-%\label{sec:ch3:section1}
-
-%Robot Operating System (ROS), is a collection of open-source software tools that allows for the development of modular autonomous platforms. ROS is widely used in many environments, ranging from research and prototyping platforms to massive corporations such as Airbus and Caterpillar (cite here).
-%ROS allows hardware to be easily added and removed from a platform for testing and development. The Livox Avia has manufacturer-supplied ROS drivers, hence this was the chosen method for interfacing with the device during data collection. 
-
-%====================================================
-\section{LiDAR Characteristics}
+\section{LiDAR Characteristics and Sensors}
 \label{sec:ch3:section1}
 
-\ac{LiDAR} offers several advantages over traditional remote sensing methods. As an active sensing system, it does not depend on external illumination, unlike visual methods such as telephoto or stereoscopic cameras. \ac{LiDAR} is also more robust to issues like poor focus, lens flare and overexposure that commonly affect optical cameras. Additionally, certain \ac{LiDAR} sensors can penetrate vegetation, enabling ground surface mapping beneath plant cover.
+\ac{LiDAR} is a relatively new remote sensing method, but its use across many fields has increased rapidly in recent years. \ac{LiDAR} offers several advantages over traditional remote sensing methods. As an active sensing system, it does not depend on external illumination, unlike visual methods such as telephoto or stereoscopic cameras. \ac{LiDAR} is also more robust to issues like poor focus, lens flare and overexposure that commonly affect optical cameras. Additionally, certain \ac{LiDAR} sensors can penetrate vegetation, enabling ground surface mapping beneath plant cover (\cite{wangChallengesOpportunitiesLidar2021}).
 
-Compared to \ac{Radar}, \ac{LiDAR} typically has superior mapping precision and target resolution, allowing more accurate reproductions of the target and the surrounding environment. \ac{LiDAR} sensors are also typically smaller and lighter than \ac{Radar} systems, making them easier to integrate into mobile platforms. \ac{Radar} data also often requires more complex processing and skilled individuals to extract useful information, whereas \ac{LiDAR} data is usually more straightforward to interpret.
+Compared to \ac{Radar}, \ac{LiDAR} typically has superior mapping precision and target resolution, allowing more accurate reproductions of the target and the surrounding environment. \ac{LiDAR} sensors are also typically smaller and lighter than \ac{Radar} systems, making them easier to integrate into mobile platforms. \ac{Radar} data also often requires more complex processing and skilled individuals to extract useful information, whereas \ac{LiDAR} data is usually more straightforward to interpret (\cite{agrawalCOMPARATIVEASSESSMENTREMOTE2019}).
 
-Using \ac{LiDAR} is not without its disadvantages. \ac{LiDAR} sensors are more expensive than more traditional remote sensing hardware and as it is a less established method there are fewer options available. Unlike cameras, which can recover non-geometric details such as target colour and texture, \ac{LiDAR} is only able to recover the three-dimensional geometry of the target. \ac{Radar} outperforms \ac{LiDAR} in certain applications. It is capable of much larger detection ranges than \ac{LiDAR} and is also unaffected by adverse environmental conditions such as smoke, rain, and fog.
+Using \ac{LiDAR} is not without its disadvantages. \ac{LiDAR} sensors are often more expensive than other traditional remote sensing hardware and as it is a less established method there are fewer options available. Unlike cameras, which can recover non-geometric details such as target colour and texture, \ac{LiDAR} is only able to recover the three-dimensional geometry of the target. \ac{Radar} outperforms \ac{LiDAR} in certain applications. It is capable of much larger detection ranges than \ac{LiDAR} and is also unaffected by adverse environmental conditions such as smoke, rain, and fog .
 
 \ac{LiDAR} is frequently used in combination with other remote sensing methods to mitigate the disadvantages of each method and provide higher quality data. For example, \ac{LiDAR} point clouds are often complemented with optical sensor data to provide colour and texture information to the geometry data, allowing for a more wholistic representation of the target scene (\cite{wangEvolutionLiDARIts2020}).
 
-*find references*
-
-BACKSCATTER?
-\\REFLECTIVITY?
-\\ABSORPTION?
-\\Infrared Interference?
-\\Wavelength
-
 *point cloud section?*
 
-%====================================================
-\section{LiDAR Sensors}
-\label{sec:ch3:section2}
+%----------------------------------------------------
+\subsection{LiDAR Sensors}
+\label{subsec:ch3.section1.subsec1}
 
-A basic \ac{LiDAR} sensor consists of three main components, a laser source, a steering mechanism to direct the laser beam, and a method of detecting the returning laser beam.
+A basic \ac{LiDAR} sensor consists of four main components, a laser source, a steering mechanism to direct the laser beam, a method of detecting the returning laser pulse and a controller or processor to manage the sensor's operation and process the collected data. Various different configurations of these components exist, leading to a wide variety of \ac{LiDAR} sensor types designed for different applications (\cite{rajSurveyLiDARScanning2020}). 
 
-(the exact wavelength of the laser depends on the application and manufacturer's intended use), Different lasers are selected for different reasons, such as penetration power, eye safety, measurement accuracy and something. The steering mechanism used determines the field of view, angular resolution and impacts the measurement accuracy of the sensor. Prisms, mirrors and something can be used to steer the laser's direction. 
-Most \ac{LiDAR} sensors are only capable of creating point clouds with a limited number of predetermined scanning patterns. The most common scanning pattern is a rectangular pattern (an N x M grid of points). Sensors designed for automotive or autonomous vehicle use often have 360 degree coverage in their azimuth and a set vertical resolution, commonly using spinning mirrors or prisms to achieve this.
+Most commercial \ac{LiDAR} sensors make use of near-infrared lasers (approximately 800 - 2 500 nm) as this wavelength range is classified as eye-safe and many lasers in this range are available commercially (\cite{molebnyLaserRadarHistorical2016}). It is not uncommon for \ac{LiDAR} sensors to make use of many trancievers (laser source and detector pairs) to increase their point output rate and improve their spatial resolution.
+In order to create a 3D point cloud, a \ac{LiDAR} sensor must be capable of steering the laser beam to cover the target area. The steering mechanism used determines the \ac{FOV}, angular resolution and may impact the measurement accuracy of the sensor. Early and low-cost sensors frequently make use of optical components such as actuated mirrors or prisms to direct the laser beam across the target area. More advanced sensors make use of solid-state components such as \ac{MEMS} mirrors or phased arrays (using beam steering) to direct the laser beam without any moving parts. \ac{LiDAR} sensors that contain multiple fixed trancievers often make use of rotating platforms to achieve 360-degree coverage (\cite{rajSurveyLiDARScanning2020}). 
 
-\ac{LiDAR} sensors suffer from beam divergence due to their use of lasers as the sensor energy emitter. Beam divergence is a measure of the angle at which photons diverge from the axis of the emitter over distance as the beam exits the laser aperture (\cite{jelinkovaLaserCharacteristics2013}). The steering mechanism within \ac{LiDAR} sensors (mirrors or prisms) may also impact the total beam divergence of the system. Beam divergence results in the laser beam or pulse exiting the sensor not as a single stream of photons, but rather as a cone of photons. When the beam reaches a target, the footprint of the beam will be in the shape of an ellipse with a size different to that of the beam at the aperture (\cite{kukkoMobileLaserScanning2013}). Beam divergence leads to uncertainties and errors in the reported locations of targets and their associated points in the final point cloud.
- *insert fig here* 
+The most common scanning pattern created by a \ac{LiDAR} sensor is a rectangular grid pattern (N x M grid of points). Sensors that make use of rotating platforms often create circular or cylindrical scanning patterns with a set vertical resolution (usually determined by the number of trancievers) and 360-degree azimuth coverage. A less common scanning pattern is a non-repetitive rosette or flower-shaped pattern, which covers areas not scanned in previous frames. This scanning method results in a non-uniform distribution of points across its \ac{FOV}, with a high density of points in the centre of the \ac{FOV} and the number of points reducing outwards to the edges of the sensor's \ac{FOV}. To create this scanning pattern, a Risley prism is commonly used as the steering mechanism. A Risley prism consists of two dequential wedge-shaped prism that rotate independently to steer the laser beam. By varying the speed of rotation and direction of each prism, various scanning patterns can be created (\cite{brazealRigorousObservationModel2021}).
+
+%----------------------------------------------------
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{figs/risley.png}
+    \caption{\textbf{Risley Prism.} Taken from \cite{brazealRigorousObservationModel2021}}
+    \label{fig:risley}
+\end{figure}
+%----------------------------------------------------
+
+All \ac{LiDAR} sensors suffer from beam divergence due to their use of lasers as the sensor emitter. Beam divergence is a measure of the angle at which photons diverge from the axis of the emitter over distance as the beam exits the laser aperture (\cite{jelinkovaLaserCharacteristics2013}). The steering mechanism within \ac{LiDAR} sensors (mirrors or prisms) may also impact the total beam divergence of the system. Beam divergence results in the laser beam or pulse exiting the sensor not as a single stream of photons, but rather as a cone of photons. When the beam reaches a target, the footprint of the beam will be in the shape of an ellipse with a size different to that of the beam at the aperture (\cite{kukkoMobileLaserScanning2013}). Beam divergence leads to uncertainties and errors in the reported locations of targets and their associated points in the final point cloud.
 
 %----------------------------------------------------
 \begin{figure}[H]
@@ -54,24 +49,24 @@ Most \ac{LiDAR} sensors are only capable of creating point clouds with a limited
 \end{figure}
 %----------------------------------------------------
 
-Many \ac{LiDAR} sensors are capable of detecting how much energy is returned to the sensor from each laser pulse, this is known as the point's return intensity. The return intensity is influenced by various factors including the distance to the target, the target's reflectivity, angle of incidence and environmental conditions. This information can be useful in point cloud processing to help identify different materials or surfaces within the point cloud data (\cite{harrapOverviewLIDARCollection2010}).
+Many \ac{LiDAR} sensors are capable of detecting how much energy is returned to the sensor from each emitted laser pulse, known as the point's return intensity. The return intensity is influenced by various factors including the distance to the target, the target's reflectivity, angle of incidence and environmental conditions. This information can be useful in point cloud processing to help identify different materials or surfaces within the point cloud data (\cite{harrapOverviewLIDARCollection2010}).
 
-Some \ac{LiDAR} sensors are capable of measuring multiple returns from a single output pulse \cite{WhatLidarDataArcGIS}. This is possible when the object hit by the laser pulse does not reflect or absorb all the output energy but allows some to pass through itself. If this occurs multiple times for a single laser pulse, and the sensor is capable of detecting all of these returns, it is possible for a sensor to record more returned points than output laser pulses.
+Some \ac{LiDAR} sensors are capable of measuring multiple returns from a single output pulse \cite{deemsLidarMeasurementSnow2013}. This is possible when the object hit by the laser pulse does not reflect or absorb all the output energy but allows some to pass through itself. This is common when the laser pulse hits semi-transparent objects such as vegetation or water. If this occurs multiple times for a single laser pulse, and the sensor is capable of detecting all of these returns, it is possible for a sensor to record more returned points than output laser pulses. These multiple returns can provide additional information about the target scene, such as the height of vegetation relative to the ground surface.
+
+%----------------------------------------------------
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{figs/multi_return.png}
+    \caption{\textbf{Multiple Returns from a Single Pulse.} A single laser pulse emitted from a sensor can produce multiple returns if the pulse hits semi-transparent objects. Taken from \cite{lefskyLidarRemoteSensing2002}}
+    \label{fig:multi_return}
+\end{figure}
+%----------------------------------------------------
 
 Another characteristic of a point cloud that certain \ac{LiDAR} sensors can record is the point's normal. The point normal is a vector that is perpendicular to the surface at the location of the point. Normals are frequently used in point cloud processing to assist in recreating surface geometry and feature extraction (\cite{harrapOverviewLIDARCollection2010}).
 
-%----------------------------------------------------
-%\begin{figure}[H]
-%    \centering
-%    \includegraphics[width=9cm]{figs/multi_return.png}
-%    \caption{\textbf{Radiation}}
-%    \label{fig:multi_return}
-%\end{figure}
-%----------------------------------------------------
-
-%----------------------------------------------------
-\subsection{Livox Avia}
-\label{subsec:ch3.section2.subsec1}
+%====================================================
+\section{Livox Avia}
+\label{sec:ch3:section2}
 
 *move talking about individual settings to ch4*
 
@@ -90,6 +85,8 @@ The Avia has the ability to detect each point's return intensity. It records eac
 
 The Livox Avia has a listed beam divergence of 0.28° x 0.03° along its vertical and horizontal planes. This results in the emitted beam, if falling on a target perfectly perpendicular to the axis of propagation at a distance of 50 meters, having the form of an ellipse with the approximate dimensions of 244.35 x 26.18 mm.
 
+
+*edit this a bit*
 The Avia has two built-in scanning patterns, a repetitive and a non-repetitive pattern. The repetitive scanning pattern scans the target area in a narrow horizontal band, providing a more uniform point density per frame when compared to the non-repetitive mode, see Figure \ref{fig:rep}. The non-repetitive scanning pattern scans the target with a rosette-shaped pattern which rotates as it scans, covering areas not scanned in previous frames, see Figure \ref{fig:non_rep}. This scanning method results in a non-uniform distribution of points across its \ac{FOV}. There is a high density of points in the centre of the \ac{FOV}, with the number of points reducing outwards to the edges of the sensor's \ac{FOV}.
 
 %----------------------------------------------------
