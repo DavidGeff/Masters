@@ -7,13 +7,170 @@
 \section{Sensor Characterisation}
 \label{sec:ch7.section1}
 
-Lots of frames (like 6+) to resolve mid level detail
-\\few frames give very rough estimate of gross geometry
+few frames give very rough estimate of gross geometry
 \\bad shadowing and LiDAR beam divergence
 \\normals estimation not reliable enough to use
 
 *maybe move this to ch5*
 
+%----------------------------------------------------
+\subsection{Target Scene Reconstruction}
+\label{subsec:ch7.section1.subsec1}
+
+Target A:
+1 frame - H = 150 mm, L = 1119 mm, W = NA
+\\vey low point density, hard to identify shape
+\\lots of shadowing makes identifying W almost impossible
+
+4 frames - H = 153 mm, L = 1179 mm, W = NA
+\\low point density, curved shape facing sensor identifiable
+\\still lots of shadowing, W still unmeasurable
+\\shadowing/beam divergence creates long 'tail' on far side of target
+
+10 frames - H = 153 mm, L = 1206 mm, W = NA
+\\moderate point density, marginally better shape identification
+\\only L improved
+\\very similar to 4 frame result, just more points
+
+%----------------------------------------------------
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|r|r|r|}
+\hline
+\multicolumn{1}{|c|}{\textbf{No. Frames}} &
+  \multicolumn{1}{c|}{\textbf{Height (mm)}} &
+  \multicolumn{1}{c|}{\textbf{Length (mm)}} &
+  \multicolumn{1}{c|}{\textbf{Width (mm)}} \\ \hline
+1  & 150 & 1119 & NaN \\ \hline
+4  & 153 & 1179 & NaN \\ \hline
+10 & 153 & 1206 & NaN \\ \hline
+\end{tabular}
+\caption{Target A Reconstruction Dimensions}
+\label{tab:target_a}
+\end{table}
+%----------------------------------------------------
+
+Target B:
+1 frame - H = NA, L = NA, W = NA
+\\very low point density, shape unidentifiable
+
+8 frames - H = 138 mm, L = 1008 mm, W = NA
+\\low point density, shape still unidentifiable
+\\lots of shadowing, W still unmeasurable
+\\only L marginally estimable
+\\H tricky to make out because of geometry
+\\trough shape facing sensor almost impossible to resolve
+
+15 frames - H = 138 mm, L = 1130 mm, W = 1163 mm
+\\moderate point density, shape does not resemble target very well
+\\W finally estimable, but with low confidence due to shadowing - larger than actual value
+\\H same as 8 frames, L improved significantly due to increased point density
+\\ trough shape facing sensor still very difficult to resolve
+
+%----------------------------------------------------
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|r|r|r|}
+\hline
+\multicolumn{1}{|c|}{\textbf{No. Frames}} &
+  \multicolumn{1}{c|}{\textbf{Height (mm)}} &
+  \multicolumn{1}{c|}{\textbf{Length (mm)}} &
+  \multicolumn{1}{c|}{\textbf{Width (mm)}} \\ \hline
+1  & NaN & NaN  & NaN \\ \hline
+8  & 138 & 1008 & NaN \\ \hline
+15 & 138 & 1130 & 1163\\ \hline
+\end{tabular}
+\caption{Target B Reconstruction Dimensions}
+\label{tab:target_b}
+\end{table}
+%----------------------------------------------------
+
+Target C:
+1 frame - H = 161 mm, L = NA, W = NA
+\\incredibly low point density, shape unidentifiable
+\\only H estimable, and with low confidence
+
+8 frames - H = 200 mm, L = NA mm, W = 1032 mm
+\\moderate point density, curvature facing sensor identifiable, but distorted
+\\H larger than actual value
+\\shape unidentifiable
+\\W estimable, l still unmeasurable due to shadowing
+\\sloping shape down target axis
+
+15 frames - H = 200 mm, L = NA, W = 1105 mm
+\\high point density, curvature facing sensor identifiable, but distorted
+\\H larger than actual value
+\\shape unidentifiable
+\\W improved, L still unmeasurable due to shadowing
+\\sloping shape down target axis
+
+%----------------------------------------------------
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|r|r|r|}
+\hline
+\multicolumn{1}{|c|}{\textbf{No. Frames}} &
+  \multicolumn{1}{c|}{\textbf{Height (mm)}} &
+  \multicolumn{1}{c|}{\textbf{Length (mm)}} &
+  \multicolumn{1}{c|}{\textbf{Width (mm)}} \\ \hline
+1  & 161 & NaN & NaN  \\ \hline
+8  & 200 & NaN & 1032 \\ \hline
+15 & 200 & NaN & 1105 \\ \hline
+\end{tabular}
+\caption{Target C Reconstruction Dimensions}
+\label{tab:target_c}
+\end{table}
+%----------------------------------------------------
+
+Target D:
+1 frame - H = 154 mm, L = NA, W = 1085 mm
+\\very low point density, goemetry unidentifiable
+\\only H and W estimable, L unmeasurable
+\\curve facing sensor just about identifiable
+
+4 frames - H = 154 mm, L = NA, W = 1105 mm
+\\low point density, geometry still unidentifiable
+\\H same as 1 frame, L still unmeasurable, W marginally improved
+\\curve facing sensor identifiable
+
+10 frames - H = 160 mm, L = NA, W = 1112 mm
+\\moderate point density, rough geometry identifiable
+\\H improved slightly, L still unmeasurable, W marginally improved
+\\curve facing sensor identifiable
+
+%----------------------------------------------------
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|r|r|r|}
+\hline
+\multicolumn{1}{|c|}{\textbf{No. Frames}} &
+  \multicolumn{1}{c|}{\textbf{Height (mm)}} &
+  \multicolumn{1}{c|}{\textbf{Length (mm)}} &
+  \multicolumn{1}{c|}{\textbf{Width (mm)}} \\ \hline
+1  & 154 & NaN & 1085 \\ \hline
+4  & 154 & NaN & 1105 \\ \hline
+10 & 160 & NaN & 1112 \\ \hline
+\end{tabular}
+\caption{Target D Reconstruction Dimensions}
+\label{tab:target_d}
+\end{table}
+%----------------------------------------------------
+
+*add mesh figures*
+
+%----------------------------------------------------
+\subsection{Normals Estimation}
+\label{subsec:ch7.section1.subsec2}
+
+Target A:
+
+Target B:
+
+Target C:
+
+Target D:
+
+\newpage
 %====================================================
 \section{De-noising and Motion Compensation}
 \label{sec:ch7.section2}
@@ -230,6 +387,8 @@ The wave parameters estimated from the \ac{LiDAR} point cloud data using the \ac
 The estimated mean amplitudes matched the probe data results fairly well in the first three and last tests, with the greatest difference being 2.2406 mm in the second test. However, for the last fourth and fifth tests, the estimated mean amplitudes were significantly higher than the probe data values, with the fourth test value 14.4302 mm and fifth test value 9.0951 mm greater than their respective probe data values (see Figure \ref{fig:amp}).
 
 In every test, the higher the percentage of mean inliers in the model estimation, the closer the match between the estimated \ac{RANSAC} wave parameters and the probe data wave parameters.
+
+*talk about how many frames per test*
 
 Attempted to fit stokes model to scale data but failed. model not complex enough to fully represent in-situ waves.
 
