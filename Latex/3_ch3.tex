@@ -49,6 +49,8 @@ All \ac{LiDAR} sensors suffer from beam divergence due to their use of lasers as
 \end{figure}
 %----------------------------------------------------
 
+*section on shadowing here*
+
 Many \ac{LiDAR} sensors are capable of detecting how much energy is returned to the sensor from each emitted laser pulse, known as the point's return intensity. The return intensity is influenced by various factors including the distance to the target, the target's reflectivity, angle of incidence and environmental conditions. This information can be useful in point cloud processing to help identify different materials or surfaces within the point cloud data (\cite{harrapOverviewLIDARCollection2010}).
 
 Some \ac{LiDAR} sensors are capable of measuring multiple returns from a single output pulse \cite{deemsLidarMeasurementSnow2013}. This is possible when the object hit by the laser pulse does not reflect or absorb all the output energy but allows some to pass through itself. This is common when the laser pulse hits semi-transparent objects such as vegetation or water. If this occurs multiple times for a single laser pulse, and the sensor is capable of detecting all of these returns, it is possible for a sensor to record more returned points than output laser pulses. These multiple returns can provide additional information about the target scene, such as the height of vegetation relative to the ground surface.
