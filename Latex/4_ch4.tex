@@ -19,7 +19,7 @@ In each case, the Avia's non-repetitive scanning pattern was used for data captu
 \label{sec:ch4.section2}
 %----------------------------------------------------
 
-The following sections detail experiments conducted to characterise the Livox Avia sensor's behaviours under controlled conditions that simulate some of the conditions expected during in-situ data collection.
+The following sections detail experiments conducted to characterise the Livox Avia sensor's behaviours under controlled conditions that simulate some conditions expected during in-situ data collection.
 
 The first experiment detailed in Section \ref{subsec:ch4.section2.subsec1} investigates the sensor's ability to resolve known geometric shapes at known distances and angles, from a stationary platform. 
 
@@ -76,7 +76,7 @@ Two sheets of hardboard, 1220 x 1220 mm each, were used to create the target sur
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.9\textwidth]{figs/field_boards.JPG}
-    \caption{\textbf{boards.} Target A on the left, target B on the right.}
+    \caption{\textbf{Boards.} Target A on the left, target B on the right.}
     \label{fig:boards}
 \end{figure}
 %----------------------------------------------------
@@ -107,7 +107,7 @@ The Avia collected a minimum of 75 point cloud frames of each target.
 
 To investigate the feasibility of using the Avia's \ac{IMU} data to compensate for the motion of a moving observation platform, an experiment was conducted to collect \ac{IMU} data from the Avia while it was subjected to known motion.
 
-To apply known motion to the Avia, a Stewart platform was used to manipulate the sensor. A Stewart platform is a device that has the ability to manipulate its target platform in 6 degrees, namely linear translations along its X, Y and Z axes and rotation around its the X, Y, and Z axes \cite{stewartPlatformSixDegrees1965}. The Stewart platform used for this experiment was designed and built by Liam Clark, a former student ffrom th eUniversity of Cape Town (cite here?). The platform had been used sporadically since its construction in 2018, and had undergone many repairs and part replacements, resulting in irregular performance that did not meet the original design specifications. To overcome this limitation, a motion capture system was employed to record ground-truth motion data for comparison and validation.
+To apply known motion to the Avia, a Stewart platform was used to manipulate the sensor. A Stewart platform is a device that has the ability to manipulate its target platform in 6 degrees, namely linear translations along its X, Y and Z axes and rotation around its the X, Y, and Z axes \cite{stewartPlatformSixDegrees1965}. The Stewart platform used for this experiment was designed and built by Liam Clark, a former student from the University of Cape Town (cite here?). The platform had been used sporadically since its construction in 2018, and had undergone many repairs and part replacements, resulting in irregular performance that did not meet the original design specifications. To overcome this limitation, a motion capture system was employed to record ground-truth motion data for comparison and validation.
 
 The motion capture system used in this experiment was manufactured by OptiTrack, who provided all sensors, software and supporting equipment. The system consists of 4 OptiTrack Prime 13 cameras and 3 OptiTrack Prime 13W (wide angle) cameras, all managed by a PC running OptiTrack's Motive software. Both camera types record data at a rate of 240 Hz, with the Prime 13 having a listed 3D accuracy of +/- 0.02 mm, and the Prime 13W having a listed 3D accuracy of +/- 0.03 mm (cite here?). The system makes use of passive infrared-reflective markers to track the position of the target over time. The data collected by the motion capture system was not time-synchronised with the Avia's \ac{IMU} data.
 
@@ -215,7 +215,7 @@ Aalto University operates a wave and ice tank 40 m x 40 m and 2.8 m deep. The ta
 In November 2023, a fellow Masters student (Anand Nair cite?) ran experiments in the tank to simulate the motion of an individual pancake ice floe using a scale model. In addition to the sensors selected by Anand for his experiments, point cloud data from these tests were collected using the Avia.
 The Avia was mounted on a mobile gantry above the tank, angled to face down towards the ice and water, in the direction of the wave generators. Waves were generated and briefly propagated through open water before reaching the ice.  A capacitive probe in the tank recorded the wave height over time, and was placed 5 meters in front of the wave generators. The wave data was sampled at a rate of 300 Hz.
 
-A uniform sheet of ice was created in the tank before the tests (any idea of ice tickness?). Throughout the experiment, the ice sheet progressively broke up into individual ice floes due to the generated wave action. No addition ice was created during the experiment.
+A uniform sheet of ice was created in the tank before the tests (any idea of ice thickness?). Throughout the experiment, the ice sheet progressively broke up into individual ice floes due to the generated wave action. No addition ice was created during the experiment.
 
 Six individual tests were carried out during the experiment, with varying wave heights and periods. For all tests, sinusoidal waves were generated at two periods, with three wave heights per period, see Table \ref{tab:tank_tests}. During these tests there was no time synchronisation between the wave probe logging and Livox Avia.
 

@@ -26,7 +26,7 @@ All \ac{LiDAR} sensors suffer from beam divergence due to their use of lasers as
 \end{figure}
 %----------------------------------------------------
 
-Like any observation method that relies om line of sight, \ac{LiDAR} is susceptible to occlusion. If an object is blocking the line of sight between the sensor and the target, no data will be collected for that target. Self-shadowing is a phenomenon that occurs when parts of a target occlude other parts of the same target from the sensor's line of sight, see Figure \ref{fig:shadow}. This is common when the target under observation has a complex surface geometry with many protrusions and recesses or when the sensor is positioned at an oblique angle to the target. A combination of both complex target geometry and oblique sensor positioning can lead to significant portions of the target being unobserved, leading to incomplete point cloud data (\cite{landyNumericalExperimentalEvaluation2015}).
+Like any observation method that relies on line of sight, \ac{LiDAR} is susceptible to occlusion. If an object is blocking the line of sight between the sensor and the target, no data will be collected for that target. Self-shadowing is a phenomenon that occurs when parts of a target occlude other parts of the same target from the sensor's line of sight, see Figure \ref{fig:shadow}. This is common when the target under observation has a complex surface geometry with many protrusions and recesses or when the sensor is positioned at an oblique angle to the target. A combination of both complex target geometry and oblique sensor positioning can lead to significant portions of the target being unobserved, leading to incomplete point cloud data (\cite{landyNumericalExperimentalEvaluation2015}).
 
 %----------------------------------------------------
 \begin{figure}[H]
@@ -180,7 +180,7 @@ Many common point cloud processing methods are built around the assumption that 
 
 In the Avia's repetitive scanning pattern (see Figure \ref{fig:rep}), the sensor produces a point cloud with a roughly rectangular \ac{FOV} and consistent point density, which is suitable for downsampling and grid filtering. Point clouds produced by the non-repetitive scanning pattern (see Figure \ref{fig:non_rep}) are circular and do not have uniform point density and are thus not ideal for downsampling and grid filtering.
 
-Many processing methods are also based on the assumption that the environment data is collected from will contain predominantly objects made of simple geometries. For example, a scene in an urban environment will contain many objects consisting of planar surfaces and cuboids such as roads, buildings and automobiles. The environment that data for this investigation was captured contains none of these simple shapes, with the geometry of the pancake floes being irregular and superimposed upon complex ocean surface waves.
+Many processing methods are also based on the assumption that the environment data is collected from will contain predominantly objects made of simple geometries. For example, a scene in an urban environment will contain many objects consisting of planar surfaces and cuboid shapes such as roads, buildings and vehicles. The environment that data for this investigation was captured contains none of these simple shapes, with the geometry of the pancake floes being irregular and superimposed upon complex ocean surface waves.
 
 *fix this section up a bit*
 
