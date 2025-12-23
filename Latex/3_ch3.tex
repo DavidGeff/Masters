@@ -12,11 +12,32 @@
 
 Compared to \ac{Radar}, \ac{LiDAR} typically has superior mapping precision and target resolution, allowing more accurate reproductions of the target and the surrounding environment. \ac{LiDAR} sensors are also typically smaller and lighter than \ac{Radar} systems, making them easier to integrate into mobile platforms. \ac{Radar} data also often requires more complex processing and skilled individuals to extract useful information, whereas \ac{LiDAR} data is usually more straightforward to interpret (\cite{agrawalCOMPARATIVEASSESSMENTREMOTE2019}).
 
-Using \ac{LiDAR} is not without its disadvantages. \ac{LiDAR} sensors are often more expensive than other traditional remote sensing hardware and as it is a less established method there are fewer options available. Unlike cameras, which can recover non-geometric details such as target colour and texture, \ac{LiDAR} is only able to recover the three-dimensional geometry of the target. \ac{Radar} outperforms \ac{LiDAR} in certain applications. It is capable of much larger detection ranges than \ac{LiDAR} and is also unaffected by adverse environmental conditions such as smoke, rain, and fog .
+Using \ac{LiDAR} is not without its disadvantages. \ac{LiDAR} sensors are often more expensive than other traditional remote sensing hardware and as it is a less established method there are fewer options available. Unlike cameras, which can recover non-geometric details such as target colour and texture, \ac{LiDAR} is only able to recover the three-dimensional geometry of the target. \ac{Radar} outperforms \ac{LiDAR} in certain applications. It is capable of much larger detection ranges than \ac{LiDAR} and is also unaffected by adverse environmental conditions such as smoke, rain, and fog.
+
+
+All \ac{LiDAR} sensors suffer from beam divergence due to their use of lasers as the sensor emitter. Beam divergence is a measure of the angle at which photons diverge from the axis of the emitter over distance as the beam exits the laser aperture (\cite{jelinkovaLaserCharacteristics2013}). The steering mechanism within \ac{LiDAR} sensors may also impact the total beam divergence of the system. Beam divergence results in the laser beam or pulse exiting the sensor not as a single stream of photons, but rather as a cone of photons as shown in Figure \ref{fig:divergence}. When the beam reaches a target, the footprint of the beam will be in the shape of an ellipse with a size different to that of the beam at the aperture (\cite{kukkoMobileLaserScanning2013}). Beam divergence leads to uncertainties and errors in the reported locations of targets and their associated points in the final point cloud.
+
+%----------------------------------------------------
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{figs/Beam-divergence.jpg}
+    \caption{\textbf{Beam Divergence} taken from \cite{kukkoMobileLaserScanning2013}}
+    \label{fig:divergence}
+\end{figure}
+%----------------------------------------------------
+
+Like any observation method that relies om line of sight, \ac{LiDAR} is susceptible to occlusion. If an object is blocking the line of sight between the sensor and the target, no data will be collected for that target. Self-shadowing is a phenomenon that occurs when parts of a target occlude other parts of the same target from the sensor's line of sight, see Figure \ref{fig:shadow}. This is common when the target under observation has a complex surface geometry with many protrusions and recesses or when the sensor is positioned at an oblique angle to the target. A combination of both complex target geometry and oblique sensor positioning can lead to significant portions of the target being unobserved, leading to incomplete point cloud data (\cite{landyNumericalExperimentalEvaluation2015}).
+
+%----------------------------------------------------
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{figs/shadowing.png}
+    \caption{\textbf{Self-shadowing} taken from \cite{landyNumericalExperimentalEvaluation2015}}
+    \label{fig:shadow}
+\end{figure}
+%----------------------------------------------------
 
 \ac{LiDAR} is frequently used in combination with other remote sensing methods to mitigate the disadvantages of each method and provide higher quality data. For example, \ac{LiDAR} point clouds are often complemented with optical sensor data to provide colour and texture information to the geometry data, allowing for a more wholistic representation of the target scene (\cite{wangEvolutionLiDARIts2020}).
-
-*point cloud section?*
 
 %----------------------------------------------------
 \subsection{LiDAR Sensors}
@@ -38,22 +59,9 @@ The most common scanning pattern created by a \ac{LiDAR} sensor is a rectangular
 \end{figure}
 %----------------------------------------------------
 
-All \ac{LiDAR} sensors suffer from beam divergence due to their use of lasers as the sensor emitter. Beam divergence is a measure of the angle at which photons diverge from the axis of the emitter over distance as the beam exits the laser aperture (\cite{jelinkovaLaserCharacteristics2013}). The steering mechanism within \ac{LiDAR} sensors (mirrors or prisms) may also impact the total beam divergence of the system. Beam divergence results in the laser beam or pulse exiting the sensor not as a single stream of photons, but rather as a cone of photons. When the beam reaches a target, the footprint of the beam will be in the shape of an ellipse with a size different to that of the beam at the aperture (\cite{kukkoMobileLaserScanning2013}). Beam divergence leads to uncertainties and errors in the reported locations of targets and their associated points in the final point cloud.
-
-%----------------------------------------------------
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.6\textwidth]{figs/Beam-divergence.jpg}
-    \caption{\textbf{Beam Divergence} taken from \cite{kukkoMobileLaserScanning2013}}
-    \label{fig:divergence}
-\end{figure}
-%----------------------------------------------------
-
-*section on shadowing here*
-
 Many \ac{LiDAR} sensors are capable of detecting how much energy is returned to the sensor from each emitted laser pulse, known as the point's return intensity. The return intensity is influenced by various factors including the distance to the target, the target's reflectivity, angle of incidence and environmental conditions. This information can be useful in point cloud processing to help identify different materials or surfaces within the point cloud data (\cite{harrapOverviewLIDARCollection2010}).
 
-Some \ac{LiDAR} sensors are capable of measuring multiple returns from a single output pulse \cite{deemsLidarMeasurementSnow2013}. This is possible when the object hit by the laser pulse does not reflect or absorb all the output energy but allows some to pass through itself. This is common when the laser pulse hits semi-transparent objects such as vegetation or water. If this occurs multiple times for a single laser pulse, and the sensor is capable of detecting all of these returns, it is possible for a sensor to record more returned points than output laser pulses. These multiple returns can provide additional information about the target scene, such as the height of vegetation relative to the ground surface.
+Some \ac{LiDAR} sensors are capable of measuring multiple returns from a single output pulse (\cite{deemsLidarMeasurementSnow2013}). This is possible when the object hit by the laser pulse does not reflect or absorb all the output energy but allows some to pass through itself. This is common when the laser pulse hits semi-transparent objects such as vegetation or water. If this occurs multiple times for a single laser pulse, and the sensor is capable of detecting all of these returns, it is possible for a sensor to record more returned points than output laser pulses. These multiple returns can provide additional information about the target scene, such as the height of vegetation relative to the ground surface.
 
 %----------------------------------------------------
 \begin{figure}[H]
@@ -63,8 +71,6 @@ Some \ac{LiDAR} sensors are capable of measuring multiple returns from a single 
     \label{fig:multi_return}
 \end{figure}
 %----------------------------------------------------
-
-Another characteristic of a point cloud that certain \ac{LiDAR} sensors can record is the point's normal. The point normal is a vector that is perpendicular to the surface at the location of the point. Normals are frequently used in point cloud processing to assist in recreating surface geometry and feature extraction (\cite{harrapOverviewLIDARCollection2010}).
 
 %====================================================
 \section{Livox Avia}
@@ -164,7 +170,6 @@ Dimensions                      & 91 x 61.2 x 64.8 mm                   &  &  & 
 \end{table}
 %----------------------------------------------------
 
-
 %====================================================
 \section{Point Cloud Processing}
 \label{sec:ch3:section4}
@@ -175,11 +180,9 @@ Many common point cloud processing methods are built around the assumption that 
 
 In the Avia's repetitive scanning pattern (see Figure \ref{fig:rep}), the sensor produces a point cloud with a roughly rectangular \ac{FOV} and consistent point density, which is suitable for downsampling and grid filtering. Point clouds produced by the non-repetitive scanning pattern (see Figure \ref{fig:non_rep}) are circular and do not have uniform point density and are thus not ideal for downsampling and grid filtering.
 
-Many processing methods are also based on the assumption that the environment data is collected from will contain predominantly objects made of simple geometries. For example, a scene in an urban environment will contain many objects made of rectangles, circles and triangles. The environment that data for this investigation was captured contains none of these simple shapes, with the geometry of the pancake floes being irregular and superimposed upon complex ocean surface waves.
+Many processing methods are also based on the assumption that the environment data is collected from will contain predominantly objects made of simple geometries. For example, a scene in an urban environment will contain many objects consisting of planar surfaces and cuboids such as roads, buildings and automobiles. The environment that data for this investigation was captured contains none of these simple shapes, with the geometry of the pancake floes being irregular and superimposed upon complex ocean surface waves.
 
-*something about normals here maybe*
-\\*something about return intensities here*
-\\*something about concatenating frames here*
+*fix this section up a bit*
 
 %----------------------------------------------------
 \subsection{Plane Fitting}
@@ -218,6 +221,20 @@ Clustering algorithms can be categorised based on their underlying structure, so
     \emph{Model-based} methods find the best fit of a pre-selected model to the data. These algorithms are based on the assumption that the data is generated from a mixture of underlying probability distributions. A common model-based clustering algorithm is the expectation-maximization algorithm.
     
 \end{description}
+
+%----------------------------------------------------
+\subsection{Point Normals}
+\label{subsec:ch3.section3.subsec3}
+
+The normal vector at a point in a point cloud is a vector that is perpendicular to the surface at that point. The point normal, as it is commonly referred to, can be used in various point cloud processing methods such as surface reconstruction, feature extraction and segmentation (\cite{harrapOverviewLIDARCollection2010}).
+
+Point normals cannot be directly measured by \ac{LiDAR} sensors and must be estimated from the point cloud data. one of the most common methods for estimating point normals is to fit a plane to the local neighbourhood of points surrounding the point of interest. The normal vector of the fitted plane can then be used as the estimated normal vector for the point (\cite{bogoslavskyiFastRobustNormal2024}).
+
+%----------------------------------------------------
+\subsection{Point Cloud Concatenation}
+\label{subsec:ch3.section3.subsec4}
+
+When creating an accurate 3D model of a target using point clouds, a common method to increase the density and coverage of the final model is to concatenate multiple point clouds together. This is especially useful when the target is large or complex, and a single point cloud does not provide sufficient detail or coverage (\cite{kedzierskiMethodsLaserScanning2015}). This method requires that the individual point clouds to be concatenated are captured from the same location or that the relative positions and orientations of the sensors used to capture the point clouds are known. Additionally, the target must remain static during the data collection process to ensure correct alignment of the individual point cloud frames.
  
 %====================================================
 \section{Optical Properties of Ocean Water, Ice and Snow}

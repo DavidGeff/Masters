@@ -8,7 +8,7 @@
 %----------------------------------------------------
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.7\textwidth]{figs/avia_axes.png}
+    \includegraphics[width=0.8\textwidth]{figs/avia_axes.png}
     \caption{\textbf{Avia Coordinate System} taken from \cite{AviaLiDARSensor}.}
     \label{fig:avia_axes}
 \end{figure}
@@ -21,13 +21,11 @@
 
 Before any point cloud processing can take place, the raw Avia data must be pre-processed to ensure it is in a suitable format and condition before being fed into the main processing pipeline. This pre-processing varies depending on the source of the data, but generally involves synchronising and aligning the Avia data with any ground truth data, as well as cropping and filtering the data to focus on the areas of interest and remove unwanted points produced during experimental setup.
 
-*talk about why matlab was chosen*
-
 %----------------------------------------------------
 \subsection{Stationary Characterisation Data}
 \label{subsec:ch5.section1.subsec1}
 
-For the data collected during the stationary characterisation experiments, a minimal amount of pre-processing was required. The Avia was stationary during data collection, so no motion compensation was necessary. The point cloud data was rotated around the sensor's x-axis to align the data with the world frame, as the sensor was mounted at an angle of declination of approximately 16° to the horizontal during data collection. For this dataset there were no additional sensors, so no time synchronisation was required. Finally, the point cloud data was cropped to focus on the targets of interest (the boards).
+For the data collected during the stationary characterisation experiments, a minimal amount of pre-processing was required. The Avia was stationary during data collection, so no motion compensation was necessary. The point cloud data was rotated around the sensor's x-axis to align the data with the world frame, as the sensor was mounted at an angle of declination of approximately 16° to the horizontal during data collection. For this dataset there were no additional sensors, so no time synchronisation was required. Finally, the point cloud frames were cropped to focus on the region containing the targets, with dimensions of 3 m (length) x 2 m (width).
 
 %----------------------------------------------------
 \subsection{Simulated Motion Data}
@@ -78,9 +76,9 @@ This was achieved by comparing a single frame of point cloud data to the known g
 \subsection{Target Normals Estimation}
 \label{subsec:ch5.section2.subsec2}
 
-To further evaluate weather valuable information about the target scene can be extracted from the Avia point cloud data, the quality of estimated point normals was investigated. MATLAB's \emph{pcnormals} function was used to estimate the normals of points in the point cloud data, and the estimated normals were compared to the known geometry of the boards to determine their accuracy.
+To further evaluate weather valuable information about the target scene can be extracted from the Avia point cloud data, the quality of estimated point normals was investigated. MATLAB's \emph{pcnormals} function was used to estimate the point normals from the final concatenated point clouds created during the target scene reconstruction investigation. The \emph{pcnormals} function estimates point normals by fitting a plane to the \emph{k} nearest neighbours of each point in the point cloud, and using the normal vector of the fitted plane as the estimated normal vector for the point (\cite{PcnormalsEstimateNormals}). \emph{k} was set to 5 for this investigation, as it is expected that there will be a low density of points in the final point cloud frame, and a small \emph{k} value will allow for more accurate normal estimations, while a larger \emph{k} value may lead to over-smoothing of the normals.
 
-
+The estimated normals are compared to the known geometry of the boards and to the reconstructed scene to determine their accuracy and usefulness in inferring target geometry.
 
 %====================================================
 \section{Pipeline Design}

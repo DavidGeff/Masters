@@ -35,15 +35,16 @@ Target A:
 %----------------------------------------------------
 \begin{table}[H]
 \centering
-\begin{tabular}{|l|r|r|r|}
+\begin{tabular}{|l|r|r|c|r|}
 \hline
 \multicolumn{1}{|c|}{\textbf{No. Frames}} &
   \multicolumn{1}{c|}{\textbf{Height (mm)}} &
   \multicolumn{1}{c|}{\textbf{Length (mm)}} &
-  \multicolumn{1}{c|}{\textbf{Width (mm)}} \\ \hline
-1  & 150 & 1119 & NaN \\ \hline
-4  & 153 & 1179 & NaN \\ \hline
-10 & 153 & 1206 & NaN \\ \hline
+  \multicolumn{1}{c|}{\textbf{Width (mm)}} &
+  \multicolumn{1}{c|}{\textbf{No. Points}} \\ \hline
+1  & 150 & 1119 & NaN & 37  \\ \hline
+4  & 153 & 1179 & NaN & 157 \\ \hline
+10 & 153 & 1206 & NaN & 389 \\ \hline
 \end{tabular}
 \caption{Target A Reconstruction Dimensions}
 \label{tab:target_a}
@@ -70,15 +71,12 @@ Target B:
 %----------------------------------------------------
 \begin{table}[H]
 \centering
-\begin{tabular}{|l|r|r|r|}
+\begin{tabular}{|l|c|c|c|r|}
 \hline
-\multicolumn{1}{|c|}{\textbf{No. Frames}} &
-  \multicolumn{1}{c|}{\textbf{Height (mm)}} &
-  \multicolumn{1}{c|}{\textbf{Length (mm)}} &
-  \multicolumn{1}{c|}{\textbf{Width (mm)}} \\ \hline
-1  & NaN & NaN  & NaN \\ \hline
-8  & 138 & 1008 & NaN \\ \hline
-15 & 138 & 1130 & 1163\\ \hline
+\multicolumn{1}{|c|}{\textbf{No. Frames}} & \textbf{Height (mm)} & \textbf{Length (mm)} & \textbf{Width (mm)} & \multicolumn{1}{l|}{\textbf{No. Points}} \\ \hline
+1  & NaN                      & NaN                       & NaN                       & 47  \\ \hline
+8  & \multicolumn{1}{r|}{138} & \multicolumn{1}{r|}{1008} & NaN                       & 348 \\ \hline
+15 & \multicolumn{1}{r|}{138} & \multicolumn{1}{r|}{1130} & \multicolumn{1}{r|}{1163} & 627 \\ \hline
 \end{tabular}
 \caption{Target B Reconstruction Dimensions}
 \label{tab:target_b}
@@ -107,15 +105,16 @@ Target C:
 %----------------------------------------------------
 \begin{table}[H]
 \centering
-\begin{tabular}{|l|r|r|r|}
+\begin{tabular}{|l|r|c|c|r|}
 \hline
 \multicolumn{1}{|c|}{\textbf{No. Frames}} &
   \multicolumn{1}{c|}{\textbf{Height (mm)}} &
-  \multicolumn{1}{c|}{\textbf{Length (mm)}} &
-  \multicolumn{1}{c|}{\textbf{Width (mm)}} \\ \hline
-1  & 161 & NaN & NaN  \\ \hline
-8  & 200 & NaN & 1032 \\ \hline
-15 & 200 & NaN & 1105 \\ \hline
+  \textbf{Length (mm)} &
+  \textbf{Width (mm)} &
+  \multicolumn{1}{l|}{\textbf{No. Points}} \\ \hline
+1  & 161 & NaN & NaN                       & 38  \\ \hline
+8  & 200 & NaN & \multicolumn{1}{r|}{1032} & 328 \\ \hline
+15 & 200 & NaN & \multicolumn{1}{r|}{1105} & 603 \\ \hline
 \end{tabular}
 \caption{Target C Reconstruction Dimensions}
 \label{tab:target_c}
@@ -141,15 +140,16 @@ Target D:
 %----------------------------------------------------
 \begin{table}[H]
 \centering
-\begin{tabular}{|l|r|r|r|}
+\begin{tabular}{|l|r|c|r|r|}
 \hline
 \multicolumn{1}{|c|}{\textbf{No. Frames}} &
   \multicolumn{1}{c|}{\textbf{Height (mm)}} &
-  \multicolumn{1}{c|}{\textbf{Length (mm)}} &
-  \multicolumn{1}{c|}{\textbf{Width (mm)}} \\ \hline
-1  & 154 & NaN & 1085 \\ \hline
-4  & 154 & NaN & 1105 \\ \hline
-10 & 160 & NaN & 1112 \\ \hline
+  \multicolumn{1}{r|}{\textbf{Length (mm)}} &
+  \multicolumn{1}{c|}{\textbf{Width (mm)}} &
+  \multicolumn{1}{l|}{\textbf{No. Points}} \\ \hline
+1  & 154 & NaN & 1085 & 46  \\ \hline
+4  & 154 & NaN & 1105 & 168 \\ \hline
+10 & 160 & NaN & 1112 & 423 \\ \hline
 \end{tabular}
 \caption{Target D Reconstruction Dimensions}
 \label{tab:target_d}
@@ -210,18 +210,9 @@ both filters perform about the same, mediocre performance
 %----------------------------------------------------
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.6\textwidth]{figs/vs_roll_resids_10.png}
-    \caption{\textbf{roll residuals}}
-    \label{fig:roll_resid_10}
-\end{figure}
-%----------------------------------------------------
-
-%----------------------------------------------------
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.6\textwidth]{figs/vs_pitch_resids_10.png}
-    \caption{\textbf{pitch residuals}}
-    \label{fig:pitch_resid_10}
+    \includegraphics[width=0.6\textwidth]{figs/vs_resids_10.png}
+    \caption{\textbf{residuals}}
+    \label{fig:resid_10}
 \end{figure}
 %----------------------------------------------------
 
@@ -248,18 +239,9 @@ both filters perform about the same, mediocre performance
 %----------------------------------------------------
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.6\textwidth]{figs/vs_roll_resids_5.png}
-    \caption{\textbf{roll residuals}}
-    \label{fig:roll_resid_5}
-\end{figure}
-%----------------------------------------------------
-
-%----------------------------------------------------
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.6\textwidth]{figs/vs_pitch_resids_5.png}
-    \caption{\textbf{pitch residuals}}
-    \label{fig:pitch_resid_5}
+    \includegraphics[width=0.6\textwidth]{figs/vs_resids_5.png}
+    \caption{\textbf{residuals}}
+    \label{fig:resid_5}
 \end{figure}
 %----------------------------------------------------
 

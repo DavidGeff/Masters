@@ -142,6 +142,22 @@
   file = {C:\Users\dseph\Zotero\storage\8G8EY828\1-s2.0-S0034425716300591-main.pdf}
 }
 
+@misc{bogoslavskyiFastRobustNormal2024,
+  title = {Fast and {{Robust Normal Estimation}} for {{Sparse LiDAR Scans}}},
+  author = {Bogoslavskyi, Igor and Zampogiannis, Konstantinos and Phan, Raymond},
+  year = 2024,
+  month = apr,
+  number = {arXiv:2404.14281},
+  eprint = {2404.14281},
+  primaryclass = {cs},
+  publisher = {arXiv},
+  doi = {10.48550/arXiv.2404.14281},
+  urldate = {2025-12-23},
+  abstract = {Light Detection and Ranging (LiDAR) technology has proven to be an important part of many robotics systems. Surface normals estimated from LiDAR data are commonly used for a variety of tasks in such systems. As most of the today's mechanical LiDAR sensors produce sparse data, estimating normals from a single scan in a robust manner poses difficulties. In this paper, we address the problem of estimating normals for sparse LiDAR data avoiding the typical issues of smoothing out the normals in high curvature areas. Mechanical LiDARs rotate a set of rigidly mounted lasers. One firing of such a set of lasers produces an array of points where each point's neighbor is known due to the known firing pattern of the scanner. We use this knowledge to connect these points to their neighbors and label them using the angles of the lines connecting them. When estimating normals at these points, we only consider points with the same label as neighbors. This allows us to avoid estimating normals in high curvature areas. We evaluate our approach on various data, both self-recorded and publicly available, acquired using various sparse LiDAR sensors. We show that using our method for normal estimation leads to normals that are more robust in areas with high curvature which leads to maps of higher quality. We also show that our method only incurs a constant factor runtime overhead with respect to a lightweight baseline normal estimation procedure and is therefore suited for operation in computationally demanding environments.},
+  archiveprefix = {arXiv},
+  keywords = {Computer Science - Computer Vision and Pattern Recognition,Computer Science - Robotics}
+}
+
 @article{brandtSurfaceAlbedoAntarctic2005,
   title = {Surface {{Albedo}} of the {{Antarctic Sea Ice Zone}}},
   author = {Brandt, Richard E. and Warren, Stephen G. and Worby, Anthony P. and Grenfell, Thomas C.},
@@ -374,8 +390,7 @@
   issn = {1947-5705, 1947-5713},
   doi = {10.1080/19475705.2021.1964617},
   urldate = {2025-12-20},
-  langid = {english},
-  file = {C:\Users\dseph\Zotero\storage\STV653PG\Di Stefano et al. - 2021 - Mobile 3D scan LiDAR a literature review.pdf}
+  langid = {english}
 }
 
 @article{doblePancakeIceFormation2003,
@@ -768,6 +783,20 @@
   file = {C:\Users\dseph\Zotero\storage\SZUNISID\Kalman - 1960 - A New Approach to Linear Filtering and Prediction Problems.pdf}
 }
 
+@article{kedzierskiMethodsLaserScanning2015,
+  title = {Methods of Laser Scanning Point Clouds Integration in Precise {{3D}} Building Modelling},
+  author = {Kedzierski, Michal and Fryskowska, Anna},
+  year = 2015,
+  month = oct,
+  journal = {Measurement},
+  volume = {74},
+  pages = {221--232},
+  issn = {02632241},
+  doi = {10.1016/j.measurement.2015.07.015},
+  urldate = {2025-12-23},
+  langid = {english}
+}
+
 @article{kellyAccuracyAssessmentLowCost2022,
   title = {Accuracy {{Assessment}} of {{Low-Cost Lidar Scanners}}: {{An Analysis}} of the {{Velodyne HDL}}--{{32E}} and {{Livox Mid}}--40's {{Temporal Stability}}},
   shorttitle = {Accuracy {{Assessment}} of {{Low-Cost Lidar Scanners}}},
@@ -1093,6 +1122,15 @@
   urldate = {2025-11-26},
   abstract = {Frazil ice, consisting of loose disc-shaped ice crystals, is the first ice that forms in the annual cycle in the marginal ice zone (MIZ) of the Antarctic. A sufficient number of frazil ice crystals form the surface ``grease ice'' layer, playing a fundamental role in the freezing processes in the MIZ. As soon as the ocean waves are sufficiently damped by a frazil ice cover, a closed ice cover can form. In this article, we investigate the rheological properties of frazil ice, which has a crucial influence on the growth of sea ice in the MIZ. An in situ test setup for measuring temperature and rheological properties was developed. Frazil ice shows shear thinning flow behavior. The presented measurements enable real-data-founded modelling of the annual ice cycle in the MIZ.},
   langid = {english}
+}
+
+@misc{PcnormalsEstimateNormals,
+  title = {Pcnormals - {{Estimate}} Normals for Point Cloud - {{MATLAB}}},
+  urldate = {2025-12-23},
+  abstract = {This MATLAB function returns a matrix that stores a normal for each point in the input ptCloud.},
+  howpublished = {https://www.mathworks.com/help/releases/R2024b/vision/ref/pcnormals.html},
+  langid = {english},
+  file = {C:\Users\dseph\Zotero\storage\XVZ3KKR9\pcnormals.html}
 }
 
 @article{perovichOpticalPropertiesSea,

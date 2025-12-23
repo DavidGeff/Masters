@@ -316,6 +316,63 @@
       \verb 10.3390/rs10091445
       \endverb
     \endentry
+    \entry{bogoslavskyiFastRobustNormal2024}{misc}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=1472525a7ae4346d60c0f0369b320a1a}{%
+           family={Bogoslavskyi},
+           familyi={B\bibinitperiod},
+           given={Igor},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9e14ef7ab10d6b1b77b9b2cd0385adc2}{%
+           family={Zampogiannis},
+           familyi={Z\bibinitperiod},
+           given={Konstantinos},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5c0ac7a22ce09da8447c8a425c1b73c7}{%
+           family={Phan},
+           familyi={P\bibinitperiod},
+           given={Raymond},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {arXiv}%
+      }
+      \strng{namehash}{329765798d1fee67c8b473c95e4dc6f0}
+      \strng{fullhash}{329765798d1fee67c8b473c95e4dc6f0}
+      \strng{fullhashraw}{329765798d1fee67c8b473c95e4dc6f0}
+      \strng{bibnamehash}{329765798d1fee67c8b473c95e4dc6f0}
+      \strng{authorbibnamehash}{329765798d1fee67c8b473c95e4dc6f0}
+      \strng{authornamehash}{329765798d1fee67c8b473c95e4dc6f0}
+      \strng{authorfullhash}{329765798d1fee67c8b473c95e4dc6f0}
+      \strng{authorfullhashraw}{329765798d1fee67c8b473c95e4dc6f0}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Light Detection and Ranging (LiDAR) technology has proven to be an important part of many robotics systems. Surface normals estimated from LiDAR data are commonly used for a variety of tasks in such systems. As most of the today's mechanical LiDAR sensors produce sparse data, estimating normals from a single scan in a robust manner poses difficulties. In this paper, we address the problem of estimating normals for sparse LiDAR data avoiding the typical issues of smoothing out the normals in high curvature areas. Mechanical LiDARs rotate a set of rigidly mounted lasers. One firing of such a set of lasers produces an array of points where each point's neighbor is known due to the known firing pattern of the scanner. We use this knowledge to connect these points to their neighbors and label them using the angles of the lines connecting them. When estimating normals at these points, we only consider points with the same label as neighbors. This allows us to avoid estimating normals in high curvature areas. We evaluate our approach on various data, both self-recorded and publicly available, acquired using various sparse LiDAR sensors. We show that using our method for normal estimation leads to normals that are more robust in areas with high curvature which leads to maps of higher quality. We also show that our method only incurs a constant factor runtime overhead with respect to a lightweight baseline normal estimation procedure and is therefore suited for operation in computationally demanding environments.}
+      \field{eprintclass}{cs}
+      \field{eprinttype}{arXiv}
+      \field{month}{4}
+      \field{number}{arXiv:2404.14281}
+      \field{title}{Fast and {{Robust Normal Estimation}} for {{Sparse LiDAR Scans}}}
+      \field{urlday}{23}
+      \field{urlmonth}{12}
+      \field{urlyear}{2025}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.48550/arXiv.2404.14281
+      \endverb
+      \verb{eprint}
+      \verb 2404.14281
+      \endverb
+      \keyw{Computer Science - Computer Vision and Pattern Recognition,Computer Science - Robotics}
+    \endentry
     \entry{brandtSurfaceAlbedoAntarctic2005}{article}{}{}
       \name{author}{4}{}{%
         {{un=0,uniquepart=base,hash=43b5712f64835c6b977bb4c56505183f}{%
@@ -1356,6 +1413,52 @@
       \verb C:\Users\dseph\Zotero\storage\SZUNISID\Kalman - 1960 - A New Approach to Linear Filtering and Prediction Problems.pdf
       \endverb
     \endentry
+    \entry{kedzierskiMethodsLaserScanning2015}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=f2919f88787ac87c2a2b368e00cff13d}{%
+           family={Kedzierski},
+           familyi={K\bibinitperiod},
+           given={Michal},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9fa7388a77f88b5b8b7fc81e91d03f62}{%
+           family={Fryskowska},
+           familyi={F\bibinitperiod},
+           given={Anna},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{4fe8b3da52b78e135696c2f6ac3ca817}
+      \strng{fullhash}{4fe8b3da52b78e135696c2f6ac3ca817}
+      \strng{fullhashraw}{4fe8b3da52b78e135696c2f6ac3ca817}
+      \strng{bibnamehash}{4fe8b3da52b78e135696c2f6ac3ca817}
+      \strng{authorbibnamehash}{4fe8b3da52b78e135696c2f6ac3ca817}
+      \strng{authornamehash}{4fe8b3da52b78e135696c2f6ac3ca817}
+      \strng{authorfullhash}{4fe8b3da52b78e135696c2f6ac3ca817}
+      \strng{authorfullhashraw}{4fe8b3da52b78e135696c2f6ac3ca817}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{02632241}
+      \field{journaltitle}{Measurement}
+      \field{langid}{english}
+      \field{month}{10}
+      \field{title}{Methods of Laser Scanning Point Clouds Integration in Precise {{3D}} Building Modelling}
+      \field{urlday}{23}
+      \field{urlmonth}{12}
+      \field{urlyear}{2025}
+      \field{volume}{74}
+      \field{year}{2015}
+      \field{urldateera}{ce}
+      \field{pages}{221\bibrangedash 232}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1016/j.measurement.2015.07.015
+      \endverb
+    \endentry
     \entry{kennicuttSustainedAntarcticResearch2019}{article}{}{}
       \name{author}{29}{}{%
         {{un=0,uniquepart=base,hash=8016c5e8f7e806587d42a9c8f1c68918}{%
@@ -1594,6 +1697,61 @@
       \field{title}{Mobile Laser Scanning - System Development, Performance and Applications}
       \field{type}{phdthesis}
       \field{year}{2013}
+    \endentry
+    \entry{landyNumericalExperimentalEvaluation2015}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=0c8feb9248b2837421ab81adc48db49a}{%
+           family={Landy},
+           familyi={L\bibinitperiod},
+           given={Jack\bibnamedelima C.},
+           giveni={J\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8c69dd7c3eaa527184b48523f913cf9b}{%
+           family={Komarov},
+           familyi={K\bibinitperiod},
+           given={Alexander\bibnamedelima S.},
+           giveni={A\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c566ba753cb6fa95269c3ad119891690}{%
+           family={Barber},
+           familyi={B\bibinitperiod},
+           given={David\bibnamedelima G.},
+           giveni={D\bibinitperiod\bibinitdelim G\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{751f98c8dcba7723ca99534aaa48d025}
+      \strng{fullhash}{751f98c8dcba7723ca99534aaa48d025}
+      \strng{fullhashraw}{751f98c8dcba7723ca99534aaa48d025}
+      \strng{bibnamehash}{751f98c8dcba7723ca99534aaa48d025}
+      \strng{authorbibnamehash}{751f98c8dcba7723ca99534aaa48d025}
+      \strng{authornamehash}{751f98c8dcba7723ca99534aaa48d025}
+      \strng{authorfullhash}{751f98c8dcba7723ca99534aaa48d025}
+      \strng{authorfullhashraw}{751f98c8dcba7723ca99534aaa48d025}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0196-2892, 1558-0644}
+      \field{journaltitle}{IEEE Transactions on Geoscience and Remote Sensing}
+      \field{month}{9}
+      \field{number}{9}
+      \field{title}{Numerical and {{Experimental Evaluation}} of {{Terrestrial LiDAR}} for {{Parameterizing Centimeter-Scale Sea Ice Surface Roughness}}}
+      \field{urlday}{15}
+      \field{urlmonth}{8}
+      \field{urlyear}{2025}
+      \field{volume}{53}
+      \field{year}{2015}
+      \field{urldateera}{ce}
+      \field{pages}{4887\bibrangedash 4898}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1109/TGRS.2015.2412034
+      \endverb
+      \verb{file}
+      \verb C:\Users\dseph\Zotero\storage\FJR2LDQG\Landy et al. - 2015 - Numerical and Experimental Evaluation of Terrestrial LiDAR for Parameterizing Centimeter-Scale Sea I.pdf
+      \endverb
     \endentry
     \entry{lefskyLidarRemoteSensing2002}{article}{}{}
       \name{author}{4}{}{%
@@ -2128,6 +2286,24 @@
       \range{pages}{14}
       \verb{doi}
       \verb 10.1017/S0954102004002214
+      \endverb
+    \endentry
+    \entry{PcnormalsEstimateNormals}{misc}{}{}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This MATLAB function returns a matrix that stores a normal for each point in the input ptCloud.}
+      \field{howpublished}{https://www.mathworks.com/help/releases/R2024b/vision/ref/pcnormals.html}
+      \field{langid}{english}
+      \field{title}{Pcnormals - {{Estimate}} Normals for Point Cloud - {{MATLAB}}}
+      \field{urlday}{23}
+      \field{urlmonth}{12}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb C:\Users\dseph\Zotero\storage\XVZ3KKR9\pcnormals.html
       \endverb
     \endentry
     \entry{pettorelliSatelliteRemoteSensing2014}{article}{}{}
