@@ -78,7 +78,7 @@ This was achieved by comparing a single frame of point cloud data to the known g
 
 To further evaluate weather valuable information about the target scene can be extracted from the Avia point cloud data, the quality of estimated point normals was investigated. MATLAB's \emph{pcnormals} function was used to estimate the point normals from the final concatenated point clouds created during the target scene reconstruction investigation. The \emph{pcnormals} function estimates point normals by fitting a plane to the \emph{k} nearest neighbours of each point in the point cloud, and using the normal vector of the fitted plane as the estimated normal vector for the point (\cite{PcnormalsEstimateNormals}). \emph{k} was set to 5 for this investigation, as it is expected that there will be a low density of points in the final point cloud frame, and a small \emph{k} value will allow for more accurate normal estimations, while a larger \emph{k} value may lead to over-smoothing of the normals.
 
-The estimated normals are compared to the known geometry of the boards and to the reconstructed scene to determine their accuracy and usefulness in inferring target geometry.
+The estimated normals are compared to the known geometry of the boards and to the reconstructed scene to determine their accuracy and usefulness in inferring target geometry. *something about maybe being able to see curvatures on targets - pancake surface features?*
 
 %====================================================
 \section{Pipeline Design}
