@@ -139,23 +139,27 @@ Each of these algorithms accept a point cloud frame as input and return a list, 
 
 As no ground truth data was available for pancake size and shape, the performance of each clustering algorithm was evaluated qualitatively by visual inspection of the clustering results.
 
-*talk about how each algorithm was implemented and parameter tuning*
-
-%To identify the size and shape of individual pancakes, a method to associate individual points with individual pancakes is required. A method to achieve this is the use of a clustering algorithm. One such clustering algorithm is \ac{DBScan}. \ac{DBScan} identifies clusters in data based on how densely packed points are, clusters are dense regions separated by lower density areas (outliers). The function has a minimum of two input criteria; minPts, the minimum number of points required to form a cluster, and epsilon ($\epsilon$), the maximum distance allowed between points for them to be classified as being in the same neighbourhood. These parameters are used to classify points into one of three categories; core points, border points, and noise points. A core point is a point that has sufficient points, including itself (set by minPts) within a given radius (set by $\epsilon$). A border point is a point that is not a core point but is still within the neighbourhood radius ($\epsilon$) of a core point. A noise point is neither a core point nor a border point. Core points and their associated border points form an individual cluster, whereas noise points are not part of any cluster.
+To tune the parameters of each algorithm, multiple clustering runs were performed on the same point cloud frame with different parameter combinations. The results of each run were visually inspected and compared to determine which parameter combination produced the best clustering result (most coherent pancake shapes with least over- or under-inclusion of points).
 
 %----------------------------------------------------
-%\begin{figure}[H]
-%    \centering
-%    \includegraphics[width=0.6\textwidth]{figs/dbscan.png}
-%    \caption{\textbf{DBScan}}
-%    \label{fig:dbscan}
-%\end{figure}
-%----------------------------------------------------
+\subsection{DBScan}
+\label{subsec:ch6.section5.subsec1}
 
-%To group points into clusters it is necessary to determine which points are directly density-reachable, density-reachable, and density-connected. The point \textit{p} is directly density-reachable from point \textit{q}, if \textit{q} is a core point and \textit{p} is within the $\epsilon$ neighbourhood of \textit{q} (The distance between \textit{q} and \textit{p} is less than $\epsilon$). This property is symmetric for two core points, but not symmetric if one point (point \textit{p} in this example) is a border point.\\
-%The point \textit{p} is density-reachable from point \textit{q} if there is a chain of points p$_{1}$, ..., p$_{n}$ where p$_{1}$ = \textit{q} and p$_{n}$ = \textit{p} such that each point is directly density-reachable from the previous point in the chain. Similarly to direct density-reachability, this property is symmetric only for core points.\\
-%Points \textit{p} and \textit{q} are density-connected if there is a third point, \textit{o}, which both \textit{p} and \textit{q} are density-reachable from. This property is symmetrical for border points.\\ 
-%The \ac{DBScan} algorithm iterates through all points, calculating distances between each other and categorising them as core, border, or noise points. An unassigned core point is the start of a new cluster. All neighbouring core or border points are assigned to this cluster
+The \ac{DBScan} algorithm was implemented using MATLAB's built-in \emph{dbscan} function, and is an unmodified version of the original algorithm.
+
+%----------------------------------------------------
+\subsection{VDBScan}
+\label{subsec:ch6.section5.subsec2}
+
+The \ac{VDBScan} algorithm implemented was adapted from MATLAB’s \emph{dbscan} function, with modifications to incorporate variable-density clustering as described by \cite{liuVDBSCANVariedDensity2007}. In contrast to the original \ac{VDBScan} approach, which assigns an individual \textbf{$\epsilon$} value to each point, this implementation estimates a set of candidate \textbf{$\epsilon$} values for the entire point cloud using the selected \textbf{k}-nearest neighbor distances. Traditional \ac{DBScan} clustering is then applied iteratively for each \textbf{$\epsilon$} value. The resulting cluster assignments from all runs are combined on a point-by-point basis, where the most frequently occurring cluster ID across all \textbf{$\epsilon$} values is chosen as the final label for that point.
+
+The decision to use a modified \ac{VDBScan} implementation was made due to computational restraints. The original \ac{VDBScan} algorithm requires the calculation and storage of an individual \textbf{$\epsilon$} value for each point in the point cloud, which requires significant memory resources for large point clouds. Every attempt to run the original \ac{VDBScan} algorithm on the PC used for this investigation (equipped with 32 GB of RAM) resulted in out-of-memory errors. 
+
+%----------------------------------------------------
+\subsection{OPTICS}
+\label{subsec:ch6.section5.subsec3}
+
+The \ac{OPTICS} algorithm used was provided by \cite{daszykowskiMatlabCodeOPTICS2002}, and is an implementation with minor modifications for use in MATLAB.
 
 %****************************************************
 % END

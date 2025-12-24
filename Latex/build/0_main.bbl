@@ -583,6 +583,44 @@
       \verb 10.1016/0924-7963(91)90044-U
       \endverb
     \endentry
+    \entry{daszykowskiMatlabCodeOPTICS2002}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=f9f587e329811632f7b36be4c4da63b0}{%
+           family={Daszykowski},
+           familyi={D\bibinitperiod},
+           given={Michal},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Unpublished}%
+      }
+      \strng{namehash}{f9f587e329811632f7b36be4c4da63b0}
+      \strng{fullhash}{f9f587e329811632f7b36be4c4da63b0}
+      \strng{fullhashraw}{f9f587e329811632f7b36be4c4da63b0}
+      \strng{bibnamehash}{f9f587e329811632f7b36be4c4da63b0}
+      \strng{authorbibnamehash}{f9f587e329811632f7b36be4c4da63b0}
+      \strng{authornamehash}{f9f587e329811632f7b36be4c4da63b0}
+      \strng{authorfullhash}{f9f587e329811632f7b36be4c4da63b0}
+      \strng{authorfullhashraw}{f9f587e329811632f7b36be4c4da63b0}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{Unpublished}
+      \field{langid}{english}
+      \field{title}{Matlab Code for {{OPTICS}}}
+      \field{urlday}{19}
+      \field{urlmonth}{12}
+      \field{urlyear}{2025}
+      \field{year}{2002}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.13140/RG.2.1.3998.3843
+      \endverb
+    \endentry
     \entry{deemsLidarMeasurementSnow2013}{article}{}{}
       \name{author}{3}{}{%
         {{un=0,uniquepart=base,hash=06b3758bde04fdcf53f6363fa0b1e33a}{%
