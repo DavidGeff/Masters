@@ -19,7 +19,7 @@ few frames give very rough estimate of gross geometry
 
 Target A:
 1 frame - H = 150 mm, L = 1119 mm, W = NA
-\\vey low point density, hard to identify shape
+\\very low point density, hard to identify shape
 \\lots of shadowing makes identifying W almost impossible
 
 4 frames - H = 153 mm, L = 1179 mm, W = NA
@@ -49,6 +49,15 @@ Target A:
 \caption{Target A Reconstruction Dimensions}
 \label{tab:target_a}
 \end{table}
+%----------------------------------------------------
+
+%----------------------------------------------------
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{figs/A10.png}
+    \caption{\textbf{Target A Reconstruction - 10 Frames}}
+    \label{fig:A10Mesh}
+\end{figure}
 %----------------------------------------------------
 
 Target B:
@@ -81,6 +90,15 @@ Target B:
 \caption{Target B Reconstruction Dimensions}
 \label{tab:target_b}
 \end{table}
+%----------------------------------------------------
+
+%----------------------------------------------------
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{figs/B15.png}
+    \caption{\textbf{Target B Reconstruction - 15 Frames}}
+    \label{fig:B15Mesh}
+\end{figure}
 %----------------------------------------------------
 
 Target C:
@@ -121,6 +139,15 @@ Target C:
 \end{table}
 %----------------------------------------------------
 
+%----------------------------------------------------
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{figs/C15.png}
+    \caption{\textbf{Target C Reconstruction - 15 Frames}}
+    \label{fig:C15Mesh}
+\end{figure}
+%----------------------------------------------------
+
 Target D:
 1 frame - H = 154 mm, L = NA, W = 1085 mm
 \\very low point density, geometry unidentifiable
@@ -156,23 +183,68 @@ Target D:
 \end{table}
 %----------------------------------------------------
 
-*add mesh figures*
+%----------------------------------------------------
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{figs/D10.png}
+    \caption{\textbf{Target D Reconstruction - 10 Frames}}
+    \label{fig:D10Mesh}
+\end{figure}
+%----------------------------------------------------
 
 %----------------------------------------------------
 \subsection{Normals Estimation}
 \label{subsec:ch7.section1.subsec2}
 
+Every fifth point normal displayed for clarity.
+
 Target A:
 \\vaguely see curvature on near side of target with 10 frames, but not reliable enough to use
+
+%----------------------------------------------------
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{figs/aNorm.png}
+    \caption{\textbf{Target A Normals Estimation - 10 Frames}}
+    \label{fig:A10Norm}
+\end{figure}
+%----------------------------------------------------
 
 Target B:
 \\can't really see anything reliable even with 15 frames
 
+%----------------------------------------------------
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{figs/bNorm.png}
+    \caption{\textbf{Target B Normals Estimation - 15 Frames}}
+    \label{fig:B15Norm}
+\end{figure}
+%----------------------------------------------------
+
 Target C:
 \\can't see anything coherent
 
+%----------------------------------------------------
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{figs/cNorm.png}
+    \caption{\textbf{Target C Normals Estimation - 15 Frames}}
+    \label{fig:C15Norm}
+\end{figure}
+%----------------------------------------------------
+
 Target D:
 \\vaguely see curved shape
+
+%----------------------------------------------------
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{figs/dNorm.png}
+    \caption{\textbf{Target D Normals Estimation - 10 Frames}}
+    \label{fig:D10Norm}
+\end{figure}
+%----------------------------------------------------
 
 \newpage
 %====================================================
@@ -183,14 +255,13 @@ Target D:
 \subsection{Motion Compensation}
 \label{subsec:ch7.section2.subsec1}
 
-The motion capture system provided attitude data starting from initial angles of (0, 0, 0) for roll, pitch and yaw respectively, not taking into account the initial orientation of the Stewart platform and the Avia mounted to it. However, the Avia's \ac{IMU} provided data relative to its initial orientation at the start of data collection. This results in an offset between the two datasets, but does not impact the results and analysis of the experiment, as the relative motion is the focus of the experiment. To account for this offset, the initial roll and pitch angle offsets were removed from the angle estimations produced by both Kalman filters. For the first test (10° sweeps), the initial roll and pitch offsets were determined to be -1.6° and -2.075° respectively for both filters. For the second test (5° sweeps), the initial roll and pitch offsets were determined to be -1.625° and -1.95° for the Klaman filter and -1.585° and -2.175° for the \ac{IMU} filter. 
+The motion capture system provided attitude data starting from initial angles of (0, 0, 0) for roll, pitch and yaw respectively, not taking into account the initial orientation of the Stewart platform and the Avia mounted to it. However, the Avia's \ac{IMU} provided data relative to its initial orientation at the start of data collection. This results in an offset between the two datasets, but does not impact the results and analysis of the experiment, as the relative motion is the focus of the experiment. To account for this offset, the initial roll and pitch angle offsets were removed from the angle estimations produced by both Kalman filters. For the first test (10° sweeps), the initial roll and pitch offsets were determined to be -1.6° and -2.075° respectively for both filters. For the second test (5° sweeps), the initial roll and pitch offsets were determined to be -1.625° and -1.95° for the Kalman filter and -1.585° and -2.175° for the \ac{IMU} filter. 
 \\*moved this paragraph from \ref{sec:ch5.section1}, still not 100\% sure*
 
 The two implemented Kalman filters both produced reasonable roll and pitch angle estimates for motion compensation of the \ac{LiDAR} point cloud data. The \ac{EKF} and \ac{IMU} filter produced angle estimates very similar to each other, see Figures \ref{fig:vs_roll_10}, \ref{fig:vs_pitch_10}, \ref{fig:vs_roll_5} and \ref{fig:vs_pitch_5}. Overall, The \ac{IMU} Filter produced slightly more conservative angle estimates with less variability than the \ac{EKF}. The \ac{IMU} angle estimations have a slight positive bias compared to the \ac{EKF} estimations. 
 
 both filters perform about the same, mediocre performance
 
-*probably combine boxplots*
 10 degree plots:
 
 %----------------------------------------------------
@@ -383,16 +454,31 @@ Attempted to fit stokes model to scale data but failed. model not complex enough
 \section{Pancake Identification \& Clustering}
 \label{sec:ch7.section4}
 
-Hard to discriminate between individual pancakes in consolidated regions/ pancakes close together
-\\filter by intensity makes identification way easier
-\\how to know where to set intensity threshold? ice properties? mean intensity of frame?
+Hard to discriminate between individual pancakes in consolidated regions/ pancakes close together.
 
-Aalto data as example for how pattern makes fucked densities and centre is only reliable area
+Aalto data as example for how pattern makes fucked densities and centre is only reliable area.
+\\*add which cluster is which and talk about shapes here*
+
+%----------------------------------------------------
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|l|r|r|r|}
+\hline
+\textbf{No Frames} & \textbf{Cluster} & \multicolumn{1}{l|}{\textbf{DBScan}} & \multicolumn{1}{l|}{\textbf{VDBScan}} & \multicolumn{1}{l|}{\textbf{OPTICS}} \\ \hline
+\multirow{2}{*}{1} & A                & 198                                  & 189                                   & 189                                  \\ \cline{2-5} 
+                   & B                & 147                                  & 125                                   & 153                                  \\ \hline
+\multirow{2}{*}{2} & A                & 302                                  & 324                                   & 335                                  \\ \cline{2-5} 
+                   & B                & 244                                  & 303                                   & 280                                  \\ \hline
+\end{tabular}
+\caption{No. of Points per Cluster}
+\label{tab:980Clust}
+\end{table}
+%----------------------------------------------------
 
 %----------------------------------------------------
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\textwidth]{figs/980_DB}
+    \includegraphics[width=0.5\textwidth]{figs/980_DB.png}
     \caption{\textbf{clust}}
     \label{fig:clust980DB}
 \end{figure}
@@ -401,7 +487,7 @@ Aalto data as example for how pattern makes fucked densities and centre is only 
 %----------------------------------------------------
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\textwidth]{figs/980_VDB}
+    \includegraphics[width=0.5\textwidth]{figs/980_VDB.png}
     \caption{\textbf{clust}}
     \label{fig:clust980VDB}
 \end{figure}
@@ -410,7 +496,7 @@ Aalto data as example for how pattern makes fucked densities and centre is only 
 %----------------------------------------------------
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\textwidth]{figs/980_OPT}
+    \includegraphics[width=0.5\textwidth]{figs/980_OPT.png}
     \caption{\textbf{clust}}
     \label{fig:clust980OPT}
 \end{figure}
@@ -419,7 +505,7 @@ Aalto data as example for how pattern makes fucked densities and centre is only 
 %----------------------------------------------------
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\textwidth]{figs/980_981_DB}
+    \includegraphics[width=0.5\textwidth]{figs/980_981_DB.png}
     \caption{\textbf{clust}}
     \label{fig:clust981DB}
 \end{figure}
@@ -428,7 +514,7 @@ Aalto data as example for how pattern makes fucked densities and centre is only 
 %----------------------------------------------------
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\textwidth]{figs/980_981_VDB}
+    \includegraphics[width=0.5\textwidth]{figs/980_981_VDB.png}
     \caption{\textbf{clust}}
     \label{fig:clust981VDB}
 \end{figure}
@@ -437,7 +523,7 @@ Aalto data as example for how pattern makes fucked densities and centre is only 
 %----------------------------------------------------
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\textwidth]{figs/980_981_OPT}
+    \includegraphics[width=0.5\textwidth]{figs/980_981_OPT.png}
     \caption{\textbf{clust}}
     \label{fig:clust981OPT}
 \end{figure}
@@ -453,9 +539,25 @@ Aalto data as example for how pattern makes fucked densities and centre is only 
 %----------------------------------------------------
 
 %----------------------------------------------------
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|l|r|r|r|}
+\hline
+\textbf{No Frames} & \textbf{Cluster} & \multicolumn{1}{l|}{\textbf{DBScan}} & \multicolumn{1}{l|}{\textbf{VDBScan}} & \multicolumn{1}{l|}{\textbf{OPTICS}} \\ \hline
+\multirow{2}{*}{1} & A                & 268                                  & 296                                   & 271                                  \\ \cline{2-5} 
+                   & B                & 146                                  & 151                                   & 125 + 22                             \\ \hline
+\multirow{2}{*}{2} & A                & 487                                  & 422                                   & 262                                  \\ \cline{2-5} 
+                   & B                & 248 + 49                             & 195 + 45 + 12                         & 166 + 22                             \\ \hline
+\end{tabular}
+\caption{No. of Points per Cluster}
+\label{tab:5620Clust}
+\end{table}
+%----------------------------------------------------
+
+%----------------------------------------------------
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\textwidth]{figs/5620_DB}
+    \includegraphics[width=0.5\textwidth]{figs/5620_DB.png}
     \caption{\textbf{clust}}
     \label{fig:clust5620DB}
 \end{figure}
@@ -464,7 +566,7 @@ Aalto data as example for how pattern makes fucked densities and centre is only 
 %----------------------------------------------------
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\textwidth]{figs/5620_VDB}
+    \includegraphics[width=0.5\textwidth]{figs/5620_VDB.png}
     \caption{\textbf{clust}}
     \label{fig:clust5620VDB}
 \end{figure}
@@ -473,7 +575,7 @@ Aalto data as example for how pattern makes fucked densities and centre is only 
 %----------------------------------------------------
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\textwidth]{figs/5620_OPT}
+    \includegraphics[width=0.5\textwidth]{figs/5620_OPT.png}
     \caption{\textbf{clust}}
     \label{fig:clust5620OPT}
 \end{figure}
@@ -482,7 +584,7 @@ Aalto data as example for how pattern makes fucked densities and centre is only 
 %----------------------------------------------------
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\textwidth]{figs/5620_5621_DB}
+    \includegraphics[width=0.5\textwidth]{figs/5620_5621_DB.png}
     \caption{\textbf{clust}}
     \label{fig:clust5621DB}
 \end{figure}
@@ -491,7 +593,7 @@ Aalto data as example for how pattern makes fucked densities and centre is only 
 %----------------------------------------------------
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\textwidth]{figs/5620_5621_VDB}
+    \includegraphics[width=0.5\textwidth]{figs/5620_5621_VDB.png}
     \caption{\textbf{clust}}
     \label{fig:clust5621VDB}
 \end{figure}
@@ -500,7 +602,7 @@ Aalto data as example for how pattern makes fucked densities and centre is only 
 %----------------------------------------------------
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\textwidth]{figs/5620_5621_OPT}
+    \includegraphics[width=0.5\textwidth]{figs/5620_5621_OPT.png}
     \caption{\textbf{clust}}
     \label{fig:clust5621OPT}
 \end{figure}
@@ -525,9 +627,25 @@ Aalto data as example for how pattern makes fucked densities and centre is only 
 %----------------------------------------------------
 
 %----------------------------------------------------
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|l|r|c|r|}
+\hline
+\textbf{No Frames} & \textbf{Cluster} & \multicolumn{1}{l|}{\textbf{DBScan}} & \multicolumn{1}{l|}{\textbf{VDBScan}} & \multicolumn{1}{l|}{\textbf{OPTICS}} \\ \hline
+\multirow{2}{*}{1} & A                & 188                                  & NaN                                   & 181                                  \\ \cline{2-5} 
+                   & B                & 194                                  & NaN                                   & 178                                  \\ \hline
+\multirow{2}{*}{2} & A                & 351                                  & NaN                                   & 347                                  \\ \cline{2-5} 
+                   & B                & 363                                  & NaN                                   & 385                                  \\ \hline
+\end{tabular}
+\caption{No. of Points per Cluster}
+\label{tab:660Clust}
+\end{table}
+%----------------------------------------------------
+
+%----------------------------------------------------
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\textwidth]{figs/660_DB}
+    \includegraphics[width=0.5\textwidth]{figs/660_DB.png}
     \caption{\textbf{clust}}
     \label{fig:clust660DB}
 \end{figure}
@@ -536,7 +654,7 @@ Aalto data as example for how pattern makes fucked densities and centre is only 
 %----------------------------------------------------
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\textwidth]{figs/660_VDB}
+    \includegraphics[width=0.5\textwidth]{figs/660_VDB.png}
     \caption{\textbf{clust}}
     \label{fig:clust660VDB}
 \end{figure}
@@ -545,7 +663,7 @@ Aalto data as example for how pattern makes fucked densities and centre is only 
 %----------------------------------------------------
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\textwidth]{figs/660_OPT}
+    \includegraphics[width=0.5\textwidth]{figs/660_OPT.png}
     \caption{\textbf{clust}}
     \label{fig:clust660OPT}
 \end{figure}
@@ -554,7 +672,7 @@ Aalto data as example for how pattern makes fucked densities and centre is only 
 %----------------------------------------------------
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\textwidth]{figs/660_661_DB}
+    \includegraphics[width=0.5\textwidth]{figs/660_661_DB.png}
     \caption{\textbf{clust}}
     \label{fig:clust661DB}
 \end{figure}
@@ -563,7 +681,7 @@ Aalto data as example for how pattern makes fucked densities and centre is only 
 %----------------------------------------------------
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\textwidth]{figs/660_661_VDB}
+    \includegraphics[width=0.5\textwidth]{figs/660_661_VDB.png}
     \caption{\textbf{clust}}
     \label{fig:clust661VDB}
 \end{figure}
@@ -572,7 +690,7 @@ Aalto data as example for how pattern makes fucked densities and centre is only 
 %----------------------------------------------------
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\textwidth]{figs/660_661_OPT}
+    \includegraphics[width=0.5\textwidth]{figs/660_661_OPT.png}
     \caption{\textbf{clust}}
     \label{fig:clust661OPT}
 \end{figure}
@@ -586,7 +704,6 @@ Aalto data as example for how pattern makes fucked densities and centre is only 
     \label{fig:660}
 \end{figure}
 %----------------------------------------------------
-
 
 %****************************************************
 % END
