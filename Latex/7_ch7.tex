@@ -17,6 +17,8 @@ few frames give very rough estimate of gross geometry
 \subsection{Target Scene Reconstruction}
 \label{subsec:ch7.section1.subsec1}
 
+*Add expected dimensions of targets*
+
 Target A:
 1 frame - H = 150 mm, L = 1119 mm, W = NA
 \\very low point density, hard to identify shape
@@ -260,7 +262,7 @@ The motion capture system provided attitude data starting from initial angles of
 
 The two implemented Kalman filters both produced reasonable roll and pitch angle estimates for motion compensation of the \ac{LiDAR} point cloud data. The \ac{EKF} and \ac{IMU} filter produced angle estimates very similar to each other, see Figures \ref{fig:vs_roll_10}, \ref{fig:vs_pitch_10}, \ref{fig:vs_roll_5} and \ref{fig:vs_pitch_5}. Overall, The \ac{IMU} Filter produced slightly more conservative angle estimates with less variability than the \ac{EKF}. The \ac{IMU} angle estimations have a slight positive bias compared to the \ac{EKF} estimations. 
 
-both filters perform about the same, mediocre performance
+Both filters perform about the same, mediocre performance
 
 10 degree plots:
 
@@ -359,7 +361,7 @@ The mean wave magnitude and period were able to be determined with a high degree
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.6\textwidth]{figs/ransac0.png}
-    \caption{\textbf{ransac0}}
+    \caption{\textbf{Ransac0}}
     \label{fig:ransac0}
 \end{figure}
 %----------------------------------------------------
@@ -368,7 +370,7 @@ The mean wave magnitude and period were able to be determined with a high degree
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.6\textwidth]{figs/ransac1.png}
-    \caption{\textbf{ransac1}}
+    \caption{\textbf{Ransac1}}
     \label{fig:ransac1}
 \end{figure}
 %----------------------------------------------------
@@ -447,7 +449,7 @@ In every test, the higher the percentage of mean inliers in the model estimation
 
 *talk about how many frames per test, try small subset of frames for parameter est*
 
-Attempted to fit stokes model to scale data but failed. model not complex enough to fully represent in-situ waves.
+Attempted to fit stokes model to scale data but failed. Model not complex enough to fully represent in-situ waves.
 
 \newpage
 %====================================================
@@ -478,6 +480,15 @@ Aalto data as example for how pattern makes fucked densities and centre is only 
 %----------------------------------------------------
 \begin{figure}[H]
     \centering
+    \includegraphics[width=0.5\textwidth]{figs/980frame.png}
+    \caption{\textbf{Target}}
+    \label{fig:980Frame}
+\end{figure}
+%----------------------------------------------------
+
+%----------------------------------------------------
+\begin{figure}[H]
+    \centering
     \includegraphics[width=0.5\textwidth]{figs/980_DB.png}
     \caption{\textbf{clust}}
     \label{fig:clust980DB}
@@ -499,6 +510,15 @@ Aalto data as example for how pattern makes fucked densities and centre is only 
     \includegraphics[width=0.5\textwidth]{figs/980_OPT.png}
     \caption{\textbf{clust}}
     \label{fig:clust980OPT}
+\end{figure}
+%----------------------------------------------------
+
+%----------------------------------------------------
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{figs/981frame.png}
+    \caption{\textbf{Target}}
+    \label{fig:981Frame}
 \end{figure}
 %----------------------------------------------------
 
@@ -532,7 +552,7 @@ Aalto data as example for how pattern makes fucked densities and centre is only 
 %----------------------------------------------------
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\textwidth]{figs/980frame.PNG}
+    \includegraphics[width=0.5\textwidth]{figs/980cam.PNG}
     \caption{\textbf{cam}}
     \label{fig:980}
 \end{figure}
@@ -552,6 +572,15 @@ Aalto data as example for how pattern makes fucked densities and centre is only 
 \caption{No. of Points per Cluster}
 \label{tab:5620Clust}
 \end{table}
+%----------------------------------------------------
+
+%----------------------------------------------------
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{figs/5620frame.png}
+    \caption{\textbf{Target}}
+    \label{fig:5620Frame}
+\end{figure}
 %----------------------------------------------------
 
 %----------------------------------------------------
@@ -578,6 +607,15 @@ Aalto data as example for how pattern makes fucked densities and centre is only 
     \includegraphics[width=0.5\textwidth]{figs/5620_OPT.png}
     \caption{\textbf{clust}}
     \label{fig:clust5620OPT}
+\end{figure}
+%----------------------------------------------------
+
+%----------------------------------------------------
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{figs/5621frame.png}
+    \caption{\textbf{Target}}
+    \label{fig:5621Frame}
 \end{figure}
 %----------------------------------------------------
 
@@ -611,7 +649,7 @@ Aalto data as example for how pattern makes fucked densities and centre is only 
 %----------------------------------------------------
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\textwidth]{figs/5620frame.PNG}
+    \includegraphics[width=0.5\textwidth]{figs/5620cam.PNG}
     \caption{\textbf{cam1}}
     \label{fig:5620}
 \end{figure}
@@ -620,7 +658,16 @@ Aalto data as example for how pattern makes fucked densities and centre is only 
 %----------------------------------------------------
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\textwidth]{figs/2290frame.PNG}
+    \includegraphics[width=0.5\textwidth]{figs/2290frame.png}
+    \caption{\textbf{Target}}
+    \label{fig:2290Frame}
+\end{figure}
+%----------------------------------------------------
+
+%----------------------------------------------------
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{figs/2290cam.PNG}
     \caption{\textbf{cam1}}
     \label{fig:2290}
 \end{figure}
@@ -640,6 +687,15 @@ Aalto data as example for how pattern makes fucked densities and centre is only 
 \caption{No. of Points per Cluster}
 \label{tab:660Clust}
 \end{table}
+%----------------------------------------------------
+
+%----------------------------------------------------
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{figs/660frame.png}
+    \caption{\textbf{Target}}
+    \label{fig:660Frame}
+\end{figure}
 %----------------------------------------------------
 
 %----------------------------------------------------
@@ -666,6 +722,15 @@ Aalto data as example for how pattern makes fucked densities and centre is only 
     \includegraphics[width=0.5\textwidth]{figs/660_OPT.png}
     \caption{\textbf{clust}}
     \label{fig:clust660OPT}
+\end{figure}
+%----------------------------------------------------
+
+%----------------------------------------------------
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{figs/661frame.png}
+    \caption{\textbf{Target}}
+    \label{fig:661Frame}
 \end{figure}
 %----------------------------------------------------
 
@@ -699,7 +764,7 @@ Aalto data as example for how pattern makes fucked densities and centre is only 
 %----------------------------------------------------
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\textwidth]{figs/660frame.PNG}
+    \includegraphics[width=0.5\textwidth]{figs/660cam.PNG}
     \caption{\textbf{cam1}}
     \label{fig:660}
 \end{figure}
