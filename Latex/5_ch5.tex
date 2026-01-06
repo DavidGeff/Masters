@@ -119,6 +119,26 @@ To identify the size and shape of individual pancakes, a method to associate ind
 
 The input data for the clustering algorithm will be the point cloud data's three-dimensional coordinates (x, y, z). The return intensity of each point was not considered as an input feature for clustering, not enough is known about how the return intensity varies across individual pancakes, and it is hypothesised that the return intensity values obtained are influenced by environmental factors such as angle of incidence rather than physical characteristics of the pancakes themselves. The desired output of the clustering algorithm is a set of clusters, where each cluster represents an individual pancake. Each point in the point cloud data should be assigned to a cluster, with points that do not belong to any pancake being classified as noise or outliers.
 
+Frames to be clustered were selected by visual inspection of the raw point cloud data and video footage from a camera mounted several decks above the Avia, to identify frames with clear pancake formations, high point densities and minimal motion artefacts. Scenes with consolidated ice floes were avoided as the clustering algorithms are designed to identify discrete clusters of points, and scenes with consolidated ice floes do not contain clear boundaries between individual pancake floes. Once a frame was selected, the clustering algorithms were applied to it as well as a frame composed of a concatenation of the initial frame and the following frame. This was done to investigate if increasing point density improved clustering performance. No more than two frames were concatenated as the target scenes were dynamic, and concatenating more frames risked introducing motion artefacts, which could lead to erroneous clustering results.
+
+After inspecting both the point cloud and video data, four scenes from three datasets were selected for clustering analysis, see Table \ref{tab:clust_scene}.
+
+%----------------------------------------------------
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|r|r|r|}
+\hline
+\multicolumn{1}{|c|}{\textbf{Scene}} & \multicolumn{1}{c|}{\textbf{Date}} & \multicolumn{1}{c|}{\textbf{Time}} & \multicolumn{1}{c|}{\textbf{Frame No.}} \\ \hline
+1 & 2022-07-19 & 11:01:40 & 2290 \\ \hline
+2 & 2022-07-23 & 14:25:09 & 660  \\ \hline
+3 & 2022-07-24 & 14:18:05 & 980  \\ \hline
+4 & 2022-07-24 & 14:25:49 & 5620 \\ \hline
+\end{tabular}
+\caption{Clustering Target Scenes}
+\label{tab:clust_scene}
+\end{table}
+%----------------------------------------------------
+
 Partitional clustering methods were not considered for this application, as they require the number of clusters to be specified beforehand. As the number of pancakes present in the scene is unknown and variable, partitional clustering methods such as K-means or K-medoids are not suitable for this application.
 
 Hierarchical clustering methods were also not considered as their tree-like structure of clusters does not make sense in the context of identifying individual pancakes. Each pancake is a distinct entity, and there is no inherent hierarchy or relationship between pancakes that would be captured by a hierarchical clustering algorithm.

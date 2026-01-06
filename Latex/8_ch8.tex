@@ -38,22 +38,33 @@ The large angle of incidence between the Avia and the targets led to low point d
 In all cases, the point normals estimation produced poor results. The estimated normals (Figures \ref{fig:A10Norm} to \ref{fig:D10Norm}) closely matched the geometry of the reconstructed targets, see Figures \ref{fig:A10Mesh}, to \ref{fig:D10Mesh}, but this did not add any additional useful information about the targets. The low point density and distorted geometry of the target point clouds meant that the estimated normals provided no more insight than what could already be visually observed from the target reconstructions.
 
 %====================================================
-\section{De-noising and Motion Compensation}
+\section{Motion Compensation and De-noising}
 \label{sec:ch8.section2}
 
+%----------------------------------------------------
+\subsection{Motion Compensation}
+\label{subsec:ch8.section2.subsec1}
 
-Add reasoning for yaw being less relevant on ship
-\\talk about residuals
+The inability to estimate yaw angles from the Avia's \ac{IMU} data is a limiting factor in the motion compensation process. However, due to the nature of ship motion, yaw is generally less significant than roll and pitch, meaning that its omission does not drastically impact the overall effectiveness of the motion compensation. The roll and pitch angles account for the majority of the ship's motion, and thus compensating for these angles significantly improves the quality of the point cloud data. A larger source of error in the motion compensation process is its inability to account for translational motion of the ship. This cab lead to distortion in the reconstructed point cloud scenes and produce the illusion of drifting floes or motion in the scene when in fact, the observation platform is moving, not the scene itself. Future work could focus on integrating additional sensors or data sources to estimate and compensate for translational motion, further improving the accuracy of the motion compensation process.
+
+talk about residuals
+\\recommend which filters to use
+
+%----------------------------------------------------
+\subsection{De-noising}
+\label{subsec:ch8.section2.subsec2}
+
+The de-noising process effectively removed a significant portion of the noise present in the raw point cloud data, resulting in cleaner and more coherent representations of the target scenes. The filter was observed removing points corresponding to ice floes near the edges of the framce, close to the sensor. This is due to the points close proximity to the sensor aperture, however as these points are at the edges of the frame, in areas of low point density, their removal does not significantly impact the overall scene representation. Despite this, care must be taken when making use of the de-noising filter, as overly aggressive filtering parameters can lead to the removal of valid scene points, potentially distorting the scene representation. Thus it is recommended to only make use of this de-noising process in scenarios where the point cloud data is particularly noisy to prevent the unintended loss of valid scene information.
 
 %====================================================
-\section{Wave Estimation}
+\section{Wave Parameter Estimation}
 \label{sec:ch8.section3}
 
-Phase way more reliable
-\\ice height is probably messing with amp
-\\needs close view, with high point density
-\\scale scans far, and oblique angle make estimation hard
-\\shows how large scale environment geometry can be extracted from point clouds
+The wave parameter estimation process produced mostly accurate results. The wave period estimations closely matched the wave probe ground truth data, with all tests producing period estimations within 0.02 s of the probe ground truth values. The amplitude estimations were less consistently accurate, with 4 of the 6 estimations closely matching the probe ground truth values, while 2 tests (tests 4 and 5) produced amplitude estimations greater than the probe ground truth values. The inconsistencies in the amplitude estimations are likely due to a combination of the Avia's poor beam divergence and the profile of the created ice floes. The beam divergence can lead to inaccuracies in the reported point locations, which can distort the wave profile. Additionally, the observed surface ice floes created in the wave tank does not correspond perfectly to the underlying water surface profile, leading to discrepancies between the actual wave amplitude recorded by the probe and the wave amplitude inferred from the point cloud data.
+
+These results indicate that while the wave period can be accurately estimated from the Avia point cloud data, the amplitude estimations are more susceptible to errors due to sensor limitations and environmental factors, but can still provide reasonable approximations of the wave amplitude in most cases. Additionally, this indicates that despite the Avia's limitations in accurately capturing detailed geometries at oblique angles and longer ranges, resulting in lower point densities, it is still capable of extracting useful large-scale environmental geometrey, such as wave parameters from the point cloud data. It is important to note that these tests were conducted in a controlled wave tank environment, with relatively simple wave profiles. In real-world ocean environments, the presence of additional factors such as wind, currents, and complex wave interactions will likely introduce further challenges in accurately estimating wave parameters from point cloud data, as the method employed in this investigation relies on having a known model of the wave profile to fit to the observed data. 
+
+Shows how large scale environment geometry can be extracted from point clouds
 \\talk about how many frames needed to accurately estimate waves
 
 %====================================================
