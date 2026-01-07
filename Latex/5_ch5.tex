@@ -85,7 +85,7 @@ The estimated normals are compared to the known geometry of the boards and to th
 \label{sec:ch5.section3}
 %----------------------------------------------------
 
-Why these steps were chosen and not others, brief overview of each step and why it's needed.
+Based on the nature of the data collected, the \ac{LiDAR} processing tools available in MATLAB, and the objectives of this investigation, the following processing steps were selected to be evaluated as part of the proposed data processing pipeline: motion compensation, de-noising, wave parameter estimation, and pancake identification. 
 
 %----------------------------------------------------
 \subsection{Motion Compensation}
@@ -105,11 +105,11 @@ When the Avia collects data in adverse environmental conditions (such as rain, s
 \subsection{Wave Parameter Estimation}
 \label{subsec:ch5.section3.subsec3}
 
-\ac{RANSAC} has been applied with great success in identifying and reconstructing buildings in urban environments from airborne \ac{LiDAR} data (\cite{forlaniBuildingReconstructionVisualization2003}), but has not seen much use in natural environments. As \ac{RANSAC} is designed to fit a user-defined model to data, with a sufficiently complex model it may be possible to fit environmental features found in the \ac{MIZ}, such as surface waves propagating through an ice field. This would require a suitable wave model to be developed, but if successful could allow for the extraction of wave parameters such as amplitude and wave period directly from point cloud data.
+\ac{RANSAC} has been applied with great success in identifying and reconstructing buildings in urban environments from airborne \ac{LiDAR} data (\cite{forlaniBuildingReconstructionVisualization2003}), but has seen limited use in natural environments. Because \ac{RANSAC} fits a user-defined model to data, a sufficiently complex wave model could allow for the identification of features in the \ac{MIZ}, such as surface waves propagating through an ice field. This would require a suitable wave model to be developed, but if successful could allow for the extraction of wave parameters such as amplitude and wave period directly from point cloud data.
 
-For the data collected at Aalto University, a simple sinusoidal wave model may be sufficient to capture the wave characteristics, as the waves were generated using a wave maker and were relatively uniform and constrained to limit complexity. However, for data collected from the \ac{SCALE} Cruise, a more complex wave model will be required. This is due to increased dynamics and irregular nature of waves in the \ac{MIZ}, which are driven by various environmental factors and may also interact with the vessel itself. A Stokes II wave model may be suitable for this application.
+For the Aalto University data, a simple sinusoidal wave model should be sufficient, as the wave makers generated relatively uniform waves and constrained their complexity. In contrast, data from the \ac{SCALE} Cruise will require a more complex model to account for the increased dynamics and irregular wave behaviour in the \ac{MIZ}, which is driven by multiple environmental factors and interaction with the vessel itself.
 
-*must decide how to talk about scale wave fitting issues*
+Due to the complexity of wave behaviour in the \ac{MIZ}, and modelling challenges associated with it, as well as the lack of ground truth data, this investigation will focus primarily on the Aalto University data for wave parameter estimation.
 
 %----------------------------------------------------
 \subsection{Pancake Identification}
@@ -119,7 +119,7 @@ To identify the size and shape of individual pancakes, a method to associate ind
 
 The input data for the clustering algorithm will be the point cloud data's three-dimensional coordinates (x, y, z). The return intensity of each point was not considered as an input feature for clustering, not enough is known about how the return intensity varies across individual pancakes, and it is hypothesised that the return intensity values obtained are influenced by environmental factors such as angle of incidence rather than physical characteristics of the pancakes themselves. The desired output of the clustering algorithm is a set of clusters, where each cluster represents an individual pancake. Each point in the point cloud data should be assigned to a cluster, with points that do not belong to any pancake being classified as noise or outliers.
 
-Frames to be clustered were selected by visual inspection of the raw point cloud data and video footage from a camera mounted several decks above the Avia, to identify frames with clear pancake formations, high point densities and minimal motion artefacts. Scenes with consolidated ice floes were avoided as the clustering algorithms are designed to identify discrete clusters of points, and scenes with consolidated ice floes do not contain clear boundaries between individual pancake floes. Once a frame was selected, the clustering algorithms were applied to it as well as a frame composed of a concatenation of the initial frame and the following frame. This was done to investigate if increasing point density improved clustering performance. No more than two frames were concatenated as the target scenes were dynamic, and concatenating more frames risked introducing motion artefacts, which could lead to erroneous clustering results.
+Frames to be clustered were selected by visual inspection of the raw point cloud data and video footage from the camera mounted several decks above the Avia, to identify frames with clear pancake formations, high point densities and minimal motion artefacts. Scenes with consolidated ice floes were avoided as the clustering algorithms are designed to identify discrete clusters of points, and scenes with consolidated ice floes do not contain clear boundaries between individual pancake floes. Once a frame was selected, the clustering algorithms were applied to it as well as a frame composed of a concatenation of the initial frame and the following frame. This was done to investigate if increasing point density improved clustering performance. No more than two frames were concatenated as the target scenes were dynamic, and concatenating more frames risked introducing motion artefacts, which could lead to erroneous clustering results.
 
 After inspecting both the point cloud and video data, four scenes from three datasets were selected for clustering analysis, see Table \ref{tab:clust_scene}.
 
@@ -137,6 +137,15 @@ After inspecting both the point cloud and video data, four scenes from three dat
 \caption{Clustering Target Scenes}
 \label{tab:clust_scene}
 \end{table}
+%----------------------------------------------------
+
+%----------------------------------------------------
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{figs/scenes.png}
+    \caption{\textbf{Selected Scene Locations.} Scene 1 is indicated by marker OD-1, Scene 2 by marker SB06 and Scenes 3 and 4 by marker SB05.}
+    \label{fig:scenes}
+\end{figure}
 %----------------------------------------------------
 
 Partitional clustering methods were not considered for this application, as they require the number of clusters to be specified beforehand. As the number of pancakes present in the scene is unknown and variable, partitional clustering methods such as K-means or K-medoids are not suitable for this application.
