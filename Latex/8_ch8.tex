@@ -37,6 +37,12 @@ The large angle of incidence between the Avia and the targets led to low point d
 
 In all cases, the point normals estimation produced poor results. The estimated normals (Figures \ref{fig:A10Norm} to \ref{fig:D10Norm}) closely matched the geometry of the reconstructed targets, see Figures \ref{fig:A10Mesh}, to \ref{fig:D10Mesh}, but this did not add any additional useful information about the targets. The low point density and distorted geometry of the target point clouds meant that the estimated normals provided no more insight than what could already be visually observed from the target reconstructions.
 
+%----------------------------------------------------
+\subsection{Characterisation Summary}
+\label{subsec:ch8.section1.subsec3}
+
+*Talk about how increasing number of frames helps, but not viable in dynamic scenes. Also talk about irregular point density making it hard to resolve geometry, highest density in centre of frame, making edges of point cloud not very useful.*
+
 %====================================================
 \section{Motion Compensation and De-noising}
 \label{sec:ch8.section2}
@@ -62,19 +68,24 @@ The de-noising process effectively removed a significant portion of the noise pr
 
 The wave parameter estimation process produced mostly accurate results. The wave period estimations closely matched the wave probe ground truth data, with all tests producing period estimations within 0.02 s of the probe ground truth values. The amplitude estimations were less consistently accurate, with 4 of the 6 estimations closely matching the probe ground truth values, while 2 tests (tests 4 and 5) produced amplitude estimations greater than the probe ground truth values. The inconsistencies in the amplitude estimations are likely due to a combination of the Avia's poor beam divergence and the profile of the created ice floes. The beam divergence can lead to inaccuracies in the reported point locations, which can distort the wave profile. Additionally, the observed surface ice floes created in the wave tank does not correspond perfectly to the underlying water surface profile, leading to discrepancies between the actual wave amplitude recorded by the probe and the wave amplitude inferred from the point cloud data.
 
+The results shown in Figures \ref{fig:rand_amp} and \ref{fig:rand_period} demonstrate that even with a relatively low number of point cloud frames, accurate estimations of wave parameters can be achieved. The trends observed in the mean estimated amplitudes (Figure \ref{fig:amp}) were present when using limited numbers of frames, further indicating that the method employed is robust to limited data availability.
+
 These results indicate that while the wave period can be accurately estimated from the Avia point cloud data, the amplitude estimations are more susceptible to errors due to sensor limitations and environmental factors, but can still provide reasonable approximations of the wave amplitude in most cases. Additionally, this indicates that despite the Avia's limitations in accurately capturing detailed geometries at oblique angles and longer ranges, resulting in lower point densities, it is still capable of extracting useful large-scale environmental geometry, such as wave parameters from the point cloud data. It is important to note that these tests were conducted in a controlled wave tank environment, with relatively simple wave profiles. In real-world ocean environments, the presence of additional factors such as wind, currents, and complex wave interactions will likely introduce further challenges in accurately estimating wave parameters from point cloud data, as the method employed in this investigation relies on having a known model of the wave profile to fit to the observed data. 
 
-more inliers > better estimation. this makes sense as better model fit = better estimation
+more inliers \> better estimation. this makes sense as better model fit = better estimation
 
 Shows how large scale environment geometry can be extracted from point clouds
-\\talk about how many frames needed to accurately estimate waves
 
 %====================================================
 \section{Pancake Identification \& Clustering}
 \label{sec:ch8.section4}
 
+Attempts to cluster points and identify pancake floes in scene 1 were unsuccessful. Despite the visible pancake floes in the video footage and relatively consistent point density in the point cloud data, all three algorithms failed to produce meaningful clustering results. This was due to the point density in the scene being too low to clearly resolve individual pancakes, leading to the algorithms being unable to distinguish between separate pancake floes. Additionally, the pancake floes in this scene were closely packed together, creating a lack of clear boundaries between individual floes for the algorithms to identify. This result demonstrates a limitation of the approach taken in this investigation, as the success of the clustering algorithms is heavily dependent on the quality and density of the point cloud data as well as the conditions of the observed scene.
+
+In scene 2, \ac{DBScan} and \ac{OPTICS} were able to identify individual pancake floes in the point cloud data, while \ac{VDBScan} failed outright. Upon further investigation it is hypothesised that \ac{VDBScan} failed to produce results due to its implementation structure. The \ac{VDBScan} implementation used in this investigation uses a set of \textbf{$\epsilon$} values to perform multiple clustering passes over the data, which are then combined to produce the final clustering result. This approach is not well suited to scenes with less varied point densities, and scenes with gradual transitions between dense and sparse regions, as during the cluster combination stage, this can lead to all points being classified as noise or the same cluster. It is likely that a combination of these two factors led tothe failure of \ac{VDBScan} in this scene.
+\ac{DBScan} and \ac{OPTICS} both produced reasonable clustering results, with \ac{DBScan} performing slightly better on the single frame target, while \ac{OPTICS} performed better on the two frame concatenated target. Both algorithms tended to successfuly identify the edges of pancake floes, but struggled to extend this identification to the interior regions of the pancakes, often leaving large portions of the pancakes unclustered. This is likely due to the higher point densities at the pancake floe edges, caused by the ridges and surface geometries present at the pancake boundaries, which made it easier for the algorithms to identify these regions as distinct clusters. The lower point densities in the interior regions of the pancakes made it more difficult for the algorithms to identify these areas as part of the same cluster, leading to under-inclusion of points in the clustering results.
+
 \ac{DBScan} works so-so
-\\VDBScan works well but have example of how it falls apart
 \\maybe better VDBScan implementation could work
 \\OPTICS is probably the best at the moment
 
