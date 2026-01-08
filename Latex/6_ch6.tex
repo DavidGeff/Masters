@@ -139,7 +139,7 @@ To identify the shape and size of individual pancakes in the point cloud data, t
 
 Each of these algorithms accept a point cloud frame as input and return a list, where each entry in the list corresponds to a point in the input point cloud frame. Each entry contains a cluster identification number, indicating which cluster the point belongs to. Points that are classified as noise or outliers are given a cluster ID of -1. This list can then be used to visualise the clusters by assigning each cluster a unique colour, or to calculate the size and shape of individual pancakes by grouping points with the same cluster ID. 
 
-As no ground truth data was available for pancake size and shape, the performance of each clustering algorithm was evaluated qualitatively by visual inspection of the clustering results.
+As no ground truth data was available for pancake size and shape, the performance of each clustering algorithm was evaluated qualitatively by visual inspection of the clustering results and comparing the number of points assigned to each cluster.
 
 To tune the parameters of each algorithm, multiple clustering runs were performed on the same point cloud frame with different parameter combinations. The results of each run were visually inspected and compared to determine which parameter combination produced the best clustering result (most coherent pancake shapes with least over- or under-inclusion of points).
 

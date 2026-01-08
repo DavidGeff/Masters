@@ -78,6 +78,12 @@ Shows how large scale environment geometry can be extracted from point clouds
 \\maybe better VDBScan implementation could work
 \\OPTICS is probably the best at the moment
 
+
+Hard to discriminate between individual pancakes in consolidated regions/ pancakes close together.
+\\point intensities are useful for identifying pancakes, but not used in these algorithms. change in intensities at pancake edges could be used to help identify pancakes and likely are produced by ridges on pancake edges and other surface geometries.
+
+DBScan performs better with sparse data, OPTICS better with dense data.
+
 %****************************************************
 % END
 %****************************************************

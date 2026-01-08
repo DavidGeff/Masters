@@ -11,8 +11,6 @@ few frames give very rough estimate of gross geometry
 \\bad shadowing and LiDAR beam divergence
 \\normals estimation not reliable enough to use
 
-*maybe move this to ch5*
-
 %----------------------------------------------------
 \subsection{Target Scene Reconstruction}
 \label{subsec:ch7.section1.subsec1}
@@ -496,21 +494,38 @@ The mean wave magnitude and period were able to be determined with a high degree
 %----------------------------------------------------
 
 %----------------------------------------------------
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.6\textwidth]{figs/ransac_amp_truth.png}
-    \caption{\textbf{Amplitude Estimated}}
-    \label{fig:amp}
-\end{figure}
+%\begin{figure}[H]
+%    \centering
+%    \includegraphics[width=0.6\textwidth]{figs/ransac_amp_truth.png}
+%    \caption{\textbf{Amplitude Estimated}}
+%    \label{fig:amp}
+%\end{figure}
+%----------------------------------------------------
+
+%----------------------------------------------------
+%\begin{figure}[H]
+%    \centering
+%    \includegraphics[width=0.6\textwidth]{figs/ransac_period_truth.png}
+%    \caption{\textbf{Period Estimated}}
+%    \label{fig:period}
+%\end{figure}
 %----------------------------------------------------
 
 %----------------------------------------------------
 \begin{figure}[H]
-    \centering
-    \includegraphics[width=0.6\textwidth]{figs/ransac_period_truth.png}
-    \caption{\textbf{Period Estimated}}
-    \label{fig:period}
-    
+\centering
+\begin{minipage}{.5\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{figs/ransac_amp_truth.png}
+  \caption{\textbf{Estimated Amplitude}}
+  \label{fig:amp}
+\end{minipage}%
+\begin{minipage}{.5\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{figs/ransac_period_truth.png}
+  \caption{\textbf{Estimated Period}}
+  \label{fig:period}
+\end{minipage}
 \end{figure}
 %----------------------------------------------------
 
@@ -519,24 +534,38 @@ The estimated mean amplitudes matched the probe data results fairly well in the 
 
 In every test, the higher the percentage of mean inliers in the model estimation, the closer the match between the estimated \ac{RANSAC} wave parameters and the probe data wave parameters.
 
-*talk about how many frames per test, try small subset of frames for parameter est* 5 random samples results match ebtire set well.
+%----------------------------------------------------
+\begin{figure}[H]
+\centering
+\begin{minipage}{.5\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{figs/rand_amp.png}
+  \caption{\textbf{Estimated Amplitude, 5 Samples}}
+  \label{fig:rand_amp}
+\end{minipage}%
+\begin{minipage}{.5\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{figs/rand_per.png}
+  \caption{\textbf{Estimated Period, 5 Samples}}
+  \label{fig:rand_period}
+\end{minipage}
+\end{figure}
+%----------------------------------------------------
 
+To investigate the accuracy of the \ac{RANSAC} wave parameter estimations from limited data samples, five random samples of the estimated amplitude and period from each test were taken, as seen in Figures \ref{fig:rand_amp} and \ref{fig:rand_period}. The results show that even with a limited number of samples, the estimated wave parameters closely match the overall estimated values from Table \ref{tab:RANSAC}.
 
 \newpage
 %====================================================
 \section{Pancake Identification \& Clustering}
 \label{sec:ch7.section4}
 
-Hard to discriminate between individual pancakes in consolidated regions/ pancakes close together.
-
-*add which cluster is which and talk about shapes here*
-\\need better way of referring to datasets - 980, 981, 5620, 5621, etc
+In each scene, the three clustering algorithms were applied to both the single frame and two frame concatenated point cloud targets. The results were then visually inspected to determine if any distinct pancake clusters were identified by each algorithm. The number of points in the two largest or most distinct clusters identified by each algorithm in each scene were recorded for comparison. Any major differences in cluster shapes or distributions were also noted.
 
 %----------------------------------------------------
 \subsection{Scene 1 - 19 July 2022}
 \label{subsec:ch7.section4.subsec1}
 
-When visually inspecting the point cloud data and video data from this day, it was hypothesised that it would be an ideal candidate for clustering due to the visible pancake floes in the video footage and relatively high point density in the point cloud data. However, all three algorithms failed to identify distinct pancake clusters in either the single frame or two frame concatenated data.
+When visually inspecting the point cloud data and video data from this day, it was hypothesised that it would be an ideal candidate for clustering due to the visible pancake floes in the video footage and relatively high and consistent point density in the point cloud data. However, all three algorithms failed to identify distinct pancake clusters in either the single frame or two frame concatenated targets.
 
 %----------------------------------------------------
 %\begin{figure}[H]
@@ -562,13 +591,13 @@ When visually inspecting the point cloud data and video data from this day, it w
 \begin{minipage}{.5\textwidth}
   \centering
   \includegraphics[width=\linewidth]{figs/2290frame.png}
-  \caption{\textbf{1 Frame Target}}
+  \caption{\textbf{Scene 1, 1 Frame}}
   \label{fig:2290Frame}
 \end{minipage}%
 \begin{minipage}{.5\textwidth}
   \centering
   \includegraphics[width=\linewidth]{figs/2291frame.png}
-  \caption{\textbf{2 Frame Target}}
+  \caption{\textbf{Scene 1, 2 Frames}}
   \label{fig:2291Frame}
 \end{minipage}
 \end{figure}
@@ -578,7 +607,7 @@ When visually inspecting the point cloud data and video data from this day, it w
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.75\textwidth]{figs/2290cam.PNG}
-    \caption{\textbf{Cam}}
+    \caption{\textbf{Scene 1 Video Still}}
     \label{fig:2290}
 \end{figure}
 %----------------------------------------------------
@@ -587,7 +616,7 @@ When visually inspecting the point cloud data and video data from this day, it w
 \subsection{Scene 2 - 23 July 2022}
 \label{subsec:ch7.section4.subsec2}
 
-Cluster A is the teal group above the centre and cluster B is the orange group below group A in Figure \ref{fig:clust660DB}. These two clusters were identified by \ac{DBScan} and \ac{OPTICS} in both single frame and two frame concatenated data. \ac{VDBScan} failed to identify any clusters in either target.
+Cluster A is the teal group above the centre and cluster B is the orange group below group A in Figure \ref{fig:clust660DB}. These two clusters were identified by \ac{DBScan} and \ac{OPTICS} in both single frame and two frame concatenated targets. \ac{VDBScan} failed to identify any clusters in either target.
 
 %----------------------------------------------------
 \begin{table}[H]
@@ -629,7 +658,7 @@ Cluster A is the teal group above the centre and cluster B is the orange group b
 \begin{minipage}{.5\textwidth}
   \centering
   \includegraphics[width=\linewidth]{figs/660frame.png}
-  \caption{\textbf{1 Frame Target}}
+  \caption{\textbf{Scene 2, 1 Frame}}
   \label{fig:660Frame}
 \end{minipage}%
 \begin{minipage}{.5\textwidth}
@@ -677,6 +706,8 @@ Cluster A is the teal group above the centre and cluster B is the orange group b
 \end{figure}
 %----------------------------------------------------
 
+In the single frame target (Figure \ref{fig:660Frame}), \ac{DBScan} and \ac{OPTICS} performed similarly, identifying both clusters A and B with similar shapes and distributions, with \ac{DBScan} assigning slightly more points to each cluster. both algorithms predominantly identified points on the edges of the pancake floes, with few points assigned to the interior regions of the clusters.
+
 %----------------------------------------------------
 %\begin{figure}[H]
 %    \centering
@@ -701,7 +732,7 @@ Cluster A is the teal group above the centre and cluster B is the orange group b
 \begin{minipage}{.5\textwidth}
   \centering
   \includegraphics[width=\linewidth]{figs/661frame.png}
-  \caption{\textbf{2 Frame Target}}
+  \caption{\textbf{Scene 2, 2 Frames}}
   \label{fig:661Frame}
 \end{minipage}%
 \begin{minipage}{.5\textwidth}
@@ -749,11 +780,13 @@ Cluster A is the teal group above the centre and cluster B is the orange group b
 \end{figure}
 %----------------------------------------------------
 
+In the two frame target (Figure \ref{fig:661Frame}), \ac{DBScan} and \ac{OPTICS} again performed similarly, identifying both clusters A and B with similar shapes and distributions. However, both algorithms assigned points to cluster A, in the region of  x = 51 m, y = -1  m, that are most likely not part of the identified pancake floe, but rather the edge of an adjacent pancake floe as visible in the raw point cloud data, see Figure \ref{fig:661Frame}. Additionally, \ac{OPTICS} assigned more points to cluster B than \ac{DBScan}, predominantly in the interior (left edge of the cluster) of the identified pancake floe.
+
 %----------------------------------------------------
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.75\textwidth]{figs/660cam.PNG}
-    \caption{\textbf{Cam}}
+    \caption{\textbf{Scene 2 Video Still}}
     \label{fig:660}
 \end{figure}
 %----------------------------------------------------
@@ -762,7 +795,7 @@ Cluster A is the teal group above the centre and cluster B is the orange group b
 \subsection{Scene 3 - 24 July 2022}
 \label{subsec:ch7.section4.subsec3}
 
-Cluster A is the central orange group and cluster B is the lime group below group A in Figure \ref{fig:clust980DB}. These two clusters were identified by all three algorithms in both single frame and two frame concatenated data.
+Cluster A is the central orange group and cluster B is the lime green group below group A in Figure \ref{fig:clust980DB}. These two clusters were identified by all three algorithms in both single frame and two frame concatenated targets.
 
 %----------------------------------------------------
 \begin{table}[H]
@@ -804,7 +837,7 @@ Cluster A is the central orange group and cluster B is the lime group below grou
 \begin{minipage}{.5\textwidth}
   \centering
   \includegraphics[width=\linewidth]{figs/980frame.png}
-  \caption{\textbf{1 Frame Target}}
+  \caption{\textbf{Scene 3, 1 Frame}}
   \label{fig:980Frame}
 \end{minipage}%
 \begin{minipage}{.5\textwidth}
@@ -852,6 +885,8 @@ Cluster A is the central orange group and cluster B is the lime group below grou
 \end{figure}
 %----------------------------------------------------
 
+In the single frame target (Figure \ref{fig:980Frame}), all three algorithms performed very similarly in their identification of cluster A, with nearly identical shapes and distributions. The algorithms varied more in their identification of cluster B, with \ac{DBScan} and \ac{OPTICS} producing similar shapes and distributions, including points in the region of x = 39 m, y = 1 m that are likely not part of the identified pancake floe when compared to the raw point cloud data, as seen in Figure \ref{fig:980Frame}. \ac{VDBScan} produced a more compact cluster B, excluding these points.
+
 %----------------------------------------------------
 %\begin{figure}[H]
 %    \centering
@@ -876,7 +911,7 @@ Cluster A is the central orange group and cluster B is the lime group below grou
 \begin{minipage}{.5\textwidth}
   \centering
   \includegraphics[width=\linewidth]{figs/981frame.png}
-  \caption{\textbf{2 Frame Target}}
+  \caption{\textbf{Scene 3, 2 Frames}}
   \label{fig:981Frame}
 \end{minipage}%
 \begin{minipage}{.5\textwidth}
@@ -924,11 +959,13 @@ Cluster A is the central orange group and cluster B is the lime group below grou
 \end{figure}
 %----------------------------------------------------
 
+In the two frame target (Figure \ref{fig:981Frame}), \ac{DBScan} consistently assigned the least points to both clusters A and B, excluding points that are likely to be part of the identified pancake floes. \ac{VDBScan} and \ac{OPTICS} produced very similar shapes and distributions for cluster A, with \ac{OPTICS} assigning slightly more points. For cluster B, \ac{VDBScan} assigned more points to the edges of the cluster than \ac{OPTICS}, in the regions of x = 38 m, y = -1 m, which are likely part of the identified pancake floe, and x =  39 m, y = 1 m, which are likely not part of the identified pancake floe when compared to the raw point cloud data, see Figure \ref{fig:981Frame}.
+
 %----------------------------------------------------
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.75\textwidth]{figs/980cam.PNG}
-    \caption{\textbf{Cam}}
+    \caption{\textbf{Scene 3 Video Still}}
     \label{fig:980}
 \end{figure}
 %----------------------------------------------------
@@ -937,7 +974,7 @@ Cluster A is the central orange group and cluster B is the lime group below grou
 \subsection{Scene 4 - 24 July 2022}
 \label{subsec:ch7.section4.subsec4}
 
-Cluster A is the central maroon group and cluster B is the dark blue below group A in Figure \ref{fig:clust5620DB}. These two clusters were identified by all three algorithms in both single frame and two frame concatenated data. \ac{OPTICS} separated cluster B into two sub-clusters in the single frame data, and all algorithms separated cluster B into multiple sub-clusters in the two frame concatenated data, with \ac{VDBScan} separating it into three sub-clusters.
+Cluster A is the central maroon group and cluster B is the dark blue group below cluster A in Figure \ref{fig:clust5620DB}. These two clusters were identified by all three algorithms in both single frame and two frame concatenated targets. \ac{OPTICS} separated cluster B into two sub-clusters in the single frame target, and all algorithms separated cluster B into multiple sub-clusters in the two frame concatenated target, with \ac{VDBScan} separating it into three sub-clusters.
 
 %----------------------------------------------------
 \begin{table}[H]
@@ -946,9 +983,9 @@ Cluster A is the central maroon group and cluster B is the dark blue below group
 \hline
 \textbf{No Frames} & \textbf{Cluster} & \multicolumn{1}{l|}{\textbf{DBScan}} & \multicolumn{1}{l|}{\textbf{VDBScan}} & \multicolumn{1}{l|}{\textbf{OPTICS}} \\ \hline
 \multirow{2}{*}{1} & A                & 268                                  & 296                                   & 271                                  \\ \cline{2-5} 
-                   & B                & 146                                  & 151                                   & 125 + 22                             \\ \hline
+                   & B                & 146                                  & 151                                   & 125 + 22 (147)                       \\ \hline
 \multirow{2}{*}{2} & A                & 487                                  & 422                                   & 262                                  \\ \cline{2-5} 
-                   & B                & 248 + 49                             & 195 + 45 + 12                         & 166 + 22                             \\ \hline
+                   & B                & 248 + 49 (297)                       & 195 + 45 + 12 (252)                   & 166 + 22 (188)                        \\ \hline
 \end{tabular}
 \caption{Scene 4 Points per Cluster}
 \label{tab:5620Clust}
@@ -979,7 +1016,7 @@ Cluster A is the central maroon group and cluster B is the dark blue below group
 \begin{minipage}{.5\textwidth}
   \centering
   \includegraphics[width=\linewidth]{figs/5620frame.png}
-  \caption{\textbf{1 Frame Target}}
+  \caption{\textbf{Scene 4, 1 Frame}}
   \label{fig:5620Frame}
 \end{minipage}%
 \begin{minipage}{.5\textwidth}
@@ -1027,6 +1064,8 @@ Cluster A is the central maroon group and cluster B is the dark blue below group
 \end{figure}
 %----------------------------------------------------
 
+In the single frame target (Figure \ref{fig:5620Frame}), all three algorithms performed similarly in their identification of cluster A, with nearly identical shapes and distributions. All algorithms included points in the region of x = 38 m, y = 0 m, that are likely not part of the identified pancake floe, when compared to the raw point cloud data, as seen in Figure \ref{fig:5620Frame}. For cluster B, besides the sub-clustering by \ac{OPTICS}, all algorithms produced similar shapes and distributions. 
+
 %----------------------------------------------------
 %\begin{figure}[H]
 %    \centering
@@ -1051,7 +1090,7 @@ Cluster A is the central maroon group and cluster B is the dark blue below group
 \begin{minipage}{.5\textwidth}
   \centering
   \includegraphics[width=\linewidth]{figs/5621frame.png}
-  \caption{\textbf{2 Frame Target}}
+  \caption{\textbf{Scene 4, 2 Frames}}
   \label{fig:5621Frame}
 \end{minipage}%
 \begin{minipage}{.5\textwidth}
@@ -1099,11 +1138,13 @@ Cluster A is the central maroon group and cluster B is the dark blue below group
 \end{figure}
 %----------------------------------------------------
 
+In the two frame target (Figure \ref{fig:5621Frame}), \ac{OPTICS} was the only algorithm that exluded points in the region of x = 38 m, y = 0 m. These points are likely not part of the identified pancake floe but rather the edge of an adjacent pancake floe, or a region of frazil ice. This is corroborated by the raw point cloud data, as seen in Figure \ref{fig:5621Frame} and the ice structure seen in the video still, Figure \ref{fig:5620}. For cluster B, \ac{OPTICS} assigned the least points to the cluster, while \ac{DBScan} assigned the most points and \ac{VDBScan} produced a shape and distribution between the other two algorithms. The result produced by \ac{DBScan} is likely the most accurate representation of the pancake floe when compared to the raw point cloud data in Figure \ref{fig:5621Frame}.
+
 %----------------------------------------------------
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.75\textwidth]{figs/5620cam.PNG}
-    \caption{\textbf{Cam}}
+    \caption{\textbf{Scene 4 Video Still}}
     \label{fig:5620}
 \end{figure}
 %----------------------------------------------------
