@@ -559,7 +559,7 @@ To investigate the accuracy of the \ac{RANSAC} wave parameter estimations from l
 \section{Pancake Identification \& Clustering}
 \label{sec:ch7.section4}
 
-In each scene, the three clustering algorithms were applied to both the single frame and two frame concatenated point cloud targets. The results were then visually inspected to determine if any distinct pancake clusters were identified by each algorithm. The number of points in the two largest or most distinct clusters identified by each algorithm in each scene were recorded for comparison. Any major differences in cluster shapes or distributions were also noted.
+In each scene, the three clustering algorithms were applied to both the single frame and two frames concatenated point cloud targets. The results were then visually inspected to determine if any distinct pancake clusters were identified by each algorithm. The number of points in the two largest or most distinct clusters identified by each algorithm in each scene were recorded for comparison. Any major differences in cluster shapes or distributions were also noted.
 
 %----------------------------------------------------
 \subsection{Scene 1 - 19 July 2022}
@@ -706,7 +706,7 @@ Cluster A is the teal group above the centre and cluster B is the orange group b
 \end{figure}
 %----------------------------------------------------
 
-In the single frame target (Figure \ref{fig:660Frame}), \ac{DBScan} and \ac{OPTICS} performed similarly, identifying both clusters A and B with similar shapes and distributions, with \ac{DBScan} assigning slightly more points to each cluster. both algorithms predominantly identified points on the edges of the pancake floes, with few points assigned to the interior regions of the clusters.
+In the single frame target (Figure \ref{fig:660Frame}), \ac{DBScan} and \ac{OPTICS} performed similarly, identifying both clusters A and B with similar shapes and distributions, with \ac{DBScan} assigning slightly more points to each cluster. Both algorithms predominantly identified points on the edges of the pancake floes, with few points assigned to the interior regions of the clusters.
 
 %----------------------------------------------------
 %\begin{figure}[H]
@@ -1138,7 +1138,7 @@ In the single frame target (Figure \ref{fig:5620Frame}), all three algorithms pe
 \end{figure}
 %----------------------------------------------------
 
-In the two frame target (Figure \ref{fig:5621Frame}), \ac{OPTICS} was the only algorithm that exluded points in the region of x = 38 m, y = 0 m. These points are likely not part of the identified pancake floe but rather the edge of an adjacent pancake floe, or a region of frazil ice. This is corroborated by the raw point cloud data, as seen in Figure \ref{fig:5621Frame} and the ice structure seen in the video still, Figure \ref{fig:5620}. For cluster B, \ac{OPTICS} assigned the least points to the cluster, while \ac{DBScan} assigned the most points and \ac{VDBScan} produced a shape and distribution between the other two algorithms. The result produced by \ac{DBScan} is likely the most accurate representation of the pancake floe when compared to the raw point cloud data in Figure \ref{fig:5621Frame}.
+In the two frame target (Figure \ref{fig:5621Frame}), \ac{OPTICS} was the only algorithm that excluded points in the region of x = 38 m, y = 0 m. These points are likely not part of the identified pancake floe but rather the edge of an adjacent pancake floe, or a region of frazil ice. This is corroborated by the raw point cloud data, as seen in Figure \ref{fig:5621Frame} and the ice structure seen in the video still, Figure \ref{fig:5620}. For cluster B, \ac{OPTICS} assigned the least points to the cluster, while \ac{DBScan} assigned the most points and \ac{VDBScan} produced a shape and distribution between the other two algorithms. The result produced by \ac{DBScan} is likely the most accurate representation of the pancake floe when compared to the raw point cloud data in Figure \ref{fig:5621Frame}.
 
 %----------------------------------------------------
 \begin{figure}[H]
