@@ -8,29 +8,23 @@
 \label{sec:ch7.section1}
 
 few frames give very rough estimate of gross geometry
-\\bad shadowing and LiDAR beam divergence
-\\normals estimation not reliable enough to use
+
+*add single and intermediate frame reconstructions to appendix?*
 
 %----------------------------------------------------
 \subsection{Target Scene Reconstruction}
 \label{subsec:ch7.section1.subsec1}
 
-*Add expected dimensions of targets*
+For each target, a single frame was inspected and the dimensions of the target were estimated where possible. This was achieved by visually identifying individual points that represented the extremities of the target in each axis, and measuring the distances between these points. The number of points in the frame, the overall accuracy of the target reconstruction and presence of undesirable artifacts such as shadowing and beam divergence effects were also noted. Subsequently, multiple frames were concatenated to create a denser point cloud of the target, and the dimensions were re-estimated. This process was repeated for a higher number of concatenated frames to observe the effect of increasing point density on the accuracy of the target reconstruction. The results for each target are detailed below. The target dimensions, as shown in Figure \ref{fig:target_dim}, were Height (H) = 180 mm, Length (L) = 1220 mm and Width (W) = 1130 mm. 
 
-Target A:
-1 frame - H = 150 mm, L = 1119 mm, W = NA
-\\very low point density, hard to identify shape
-\\lots of shadowing makes identifying W almost impossible
-
-4 frames - H = 153 mm, L = 1179 mm, W = NA
-\\low point density, curved shape facing sensor identifiable
-\\still lots of shadowing, W still unmeasurable
-\\shadowing/beam divergence creates long 'tail' on far side of target
-
-10 frames - H = 153 mm, L = 1206 mm, W = NA
-\\moderate point density, marginally better shape identification
-\\only L improved
-\\very similar to 4 frame result, just more points
+%----------------------------------------------------
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\textwidth]{figs/target_dim.png}
+    \caption{\textbf{Target Dimensions.}}
+    \label{fig:target_dim}
+\end{figure}
+%----------------------------------------------------
 
 %----------------------------------------------------
 \begin{table}[H]
@@ -51,31 +45,7 @@ Target A:
 \end{table}
 %----------------------------------------------------
 
-%----------------------------------------------------
-%\begin{figure}[H]
-%    \centering
-%    \includegraphics[width=0.5\textwidth]{figs/A10.png}
-%    \caption{\textbf{Target A Reconstruction - 10 Frames}}
-%    \label{fig:A10Mesh}
-%\end{figure}
-%----------------------------------------------------
-
-Target B:
-1 frame - H = NA, L = NA, W = NA
-\\very low point density, shape unidentifiable
-
-8 frames - H = 138 mm, L = 1008 mm, W = NA
-\\low point density, shape still unidentifiable
-\\lots of shadowing, W still unmeasurable
-\\only L marginally estimable
-\\H tricky to make out because of geometry
-\\trough shape facing sensor almost impossible to resolve
-
-15 frames - H = 138 mm, L = 1130 mm, W = 1163 mm
-\\moderate point density, shape does not resemble target very well
-\\W finally estimable, but with low confidence due to shadowing - larger than actual value
-\\H same as 8 frames, L improved significantly due to increased point density
-\\ trough shape facing sensor still very difficult to resolve
+In the single frame reconstruction, it was difficult to identify the curved shape of the target facing the sensor due to the low point density present. The high level of self-shadowing on the far side of the target also made it impossible to estimate the width of the target. As more frames were concatenated, the point density increased, allowing for a better identification of the curved shape facing the sensor and an improved length estimation. However, the width remained unmeasurable due to persistent shadowing effects. The estimated height of the target remained relatively consistent across all frame counts, with the length estimation improving with increased point density. Four concatenated frrames allowed for the general geometry to be identified, while ten frames provided a moderate point density that marginally improved shape and dimension identification. In all cases, a combination of shadowing and bean divergence effects created a distortion on the far side of the target, resulting in a long 'tail' of points extending away from the target, as seen in Figure \ref{fig:A10Mesh}.
 
 %----------------------------------------------------
 \begin{table}[H]
@@ -92,33 +62,7 @@ Target B:
 \end{table}
 %----------------------------------------------------
 
-%----------------------------------------------------
-%\begin{figure}[H]
-%    \centering
-%    \includegraphics[width=0.5\textwidth]{figs/B15.png}
-%    \caption{\textbf{Target B Reconstruction - 15 Frames}}
-%    \label{fig:B15Mesh}
-%\end{figure}
-%----------------------------------------------------
-
-Target C:
-1 frame - H = 161 mm, L = NA, W = NA
-\\incredibly low point density, shape unidentifiable
-\\only H estimable, and with low confidence
-
-8 frames - H = 200 mm, L = NA mm, W = 1032 mm
-\\moderate point density, curvature facing sensor identifiable, but distorted
-\\H larger than actual value
-\\shape unidentifiable
-\\W estimable, l still unmeasurable due to shadowing
-\\sloping shape down target axis
-
-15 frames - H = 200 mm, L = NA, W = 1105 mm
-\\high point density, curvature facing sensor identifiable, but distorted
-\\H larger than actual value
-\\shape unidentifiable
-\\W improved, L still unmeasurable due to shadowing
-\\sloping shape down target axis
+Target B proved to be the most challenging to reconstruct due to its geometry, which featured a trough-like shape perpendicular to the sensor's line of sight that created significant self-shadowing effects. In the single frame reconstruction it was not possible to estimate any dimensions or identify the shape of the target. Concatenating eigth frames allowed for an estimation of the height and length with very low confidence, but the width remained unmeasurable due to persistent self-shadowing. Increasing to fifteen concatenated frames improved the point density sufficiently to allow for a width estimation to be made, resulting in a value larger than the actual width. The geometry of the target remained difficult to resolve, particularly the trough-like shape. The reconstruction in Figure \ref{fig:B15Mesh} shows the distortion presesnt, causing the target to appear more rectangular than its concave shape. 
 
 %----------------------------------------------------
 \begin{table}[H]
@@ -138,31 +82,7 @@ Target C:
 \label{tab:target_c}
 \end{table}
 %----------------------------------------------------
-
-%----------------------------------------------------
-%\begin{figure}[H]
-%    \centering
-%    \includegraphics[width=0.5\textwidth]{figs/C15.png}
-%    \caption{\textbf{Target C Reconstruction - 15 Frames}}
-%    \label{fig:C15Mesh}
-%\end{figure}
-%----------------------------------------------------
-
-Target D:
-1 frame - H = 154 mm, L = NA, W = 1085 mm
-\\very low point density, geometry unidentifiable
-\\only H and W estimable, L unmeasurable
-\\curve facing sensor just about identifiable
-
-4 frames - H = 154 mm, L = NA, W = 1105 mm
-\\low point density, geometry still unidentifiable
-\\H same as 1 frame, L still unmeasurable, W marginally improved
-\\curve facing sensor identifiable
-
-10 frames - H = 160 mm, L = NA, W = 1112 mm
-\\moderate point density, rough geometry identifiable
-\\H improved slightly, L still unmeasurable, W marginally improved
-\\curve facing sensor identifiable
+In the single frame reconstruction of Target C, only the height was estimable. Once eight frames were concatenated, the width became estimable and the curved edge facing the sensor was identifiable, albeit distorted. The height estimation increased significantly, to a value larger than the actual height of the target. Increasing to fifteen concatenated frames marginally improved the width estimation, but the length remained unmeasurable and full geometry of the target unidentifiable due to self-shadowing effects. The reconstruction in Figure \ref{fig:C15Mesh} clearly shows the curved edge facing the sensor, as well as distortion effects on the far side of the target, similar to the elongated 'tail' seen in Target A.
 
 %----------------------------------------------------
 \begin{table}[H]
@@ -183,14 +103,7 @@ Target D:
 \end{table}
 %----------------------------------------------------
 
-%----------------------------------------------------
-%\begin{figure}[H]
-%    \centering
-%    \includegraphics[width=0.5\textwidth]{figs/D10.png}
-%    \caption{\textbf{Target D Reconstruction - 10 Frames}}
-%    \label{fig:D10Mesh}
-%\end{figure}
-%----------------------------------------------------
+Target D's single frame reconstruction allowed for estimations of its height and width, with length remaining unmeasurable throughout all reconstructions, due to the front and rear edges of the target not being clearly resolvable. Concatenating four frames allowed for the straight edges along the length of the target to be identified, improving the width estimation marginally. Increasing to ten concatenated frames further improved the point density, allowing for a slight improvement in height and width estimations, as well as the identification of the target's trough-like shape. The reconstruction in Figure \ref{fig:D10Mesh} clearly shows the trough-like geometry and the lack of distinct front and rear edges in the target.
 
 %----------------------------------------------------
 \begin{figure}[H]
@@ -232,55 +145,9 @@ Target D:
 \subsection{Normals Estimation}
 \label{subsec:ch7.section1.subsec2}
 
-Every fifth point normal displayed for clarity.
+The normals estimation process made use of the reconstructed targets from the previous section with the highest point density available to allow for the most accurate normals estimation possible. For ease of visualisation, every fifth point's normal vector is displayed in the following figures.
 
-Target A:
-\\vaguely see curvature on near side of target with 10 frames, but not reliable enough to use
-
-%----------------------------------------------------
-%\begin{figure}[H]
-%    \centering
-%    \includegraphics[width=0.5\textwidth]{figs/aNorm.png}
-%    \caption{\textbf{Target A Normals Estimation - 10 Frames}}
-%    \label{fig:A10Norm}
-%\end{figure}
-%----------------------------------------------------
-
-Target B:
-\\can't really see anything reliable even with 15 frames
-
-%----------------------------------------------------
-%\begin{figure}[H]
-%    \centering
-%    \includegraphics[width=0.5\textwidth]{figs/bNorm.png}
-%    \caption{\textbf{Target B Normals Estimation - 15 Frames}}
-%    \label{fig:B15Norm}
-%\end{figure}
-%----------------------------------------------------
-
-Target C:
-\\can't see anything coherent
-
-%----------------------------------------------------
-%\begin{figure}[H]
-%    \centering
-%    \includegraphics[width=0.5\textwidth]{figs/cNorm.png}
-%    \caption{\textbf{Target C Normals Estimation - 15 Frames}}
-%    \label{fig:C15Norm}
-%\end{figure}
-%----------------------------------------------------
-
-Target D:
-\\vaguely see curved shape
-
-%----------------------------------------------------
-%\begin{figure}[H]
-%    \centering
-%    \includegraphics[width=0.5\textwidth]{figs/dNorm.png}
-%    \caption{\textbf{Target D Normals Estimation - 10 Frames}}
-%    \label{fig:D10Norm}
-%\end{figure}
-%----------------------------------------------------
+The normals estimation process successfully calculated normal vectors for each point in the four reconstructed targets. The normal vectors generally point outwards from the surfaces of the targets, as expected. Besides a few inverted normals, their orientations were consistent with the overall reconstructions of the targets, as seen in the preceding section.
 
 %----------------------------------------------------
 \begin{figure}[H]

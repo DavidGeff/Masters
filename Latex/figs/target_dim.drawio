@@ -1,0 +1,49 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:146.0) Gecko/20100101 Firefox/146.0" version="28.2.9">
+  <diagram name="Page-1" id="536h4pMurTDV76XQCSBs">
+    <mxGraphModel dx="719" dy="388" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="FvcZaSCFm38yeXmepvIK-1" value="" style="shape=dataStorage;whiteSpace=wrap;html=1;fixedSize=1;rotation=-45;" vertex="1" parent="1">
+          <mxGeometry x="262.07" y="137.43" width="170" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="FvcZaSCFm38yeXmepvIK-3" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="359" y="310" as="sourcePoint" />
+            <mxPoint x="469" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FvcZaSCFm38yeXmepvIK-7" value="&lt;b&gt;L&lt;/b&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="FvcZaSCFm38yeXmepvIK-3">
+          <mxGeometry x="0.176" y="-1" relative="1" as="geometry">
+            <mxPoint x="3" y="15" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FvcZaSCFm38yeXmepvIK-4" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="367" y="90" as="sourcePoint" />
+            <mxPoint x="461" y="180" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FvcZaSCFm38yeXmepvIK-8" value="&lt;b&gt;W&lt;/b&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="FvcZaSCFm38yeXmepvIK-4">
+          <mxGeometry x="-0.0103" y="2" relative="1" as="geometry">
+            <mxPoint x="5" y="-13" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FvcZaSCFm38yeXmepvIK-6" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="290" y="267.43" as="sourcePoint" />
+            <mxPoint x="290" y="237.43" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="290" y="237.43" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FvcZaSCFm38yeXmepvIK-9" value="&lt;b&gt;H&lt;/b&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="FvcZaSCFm38yeXmepvIK-6">
+          <mxGeometry x="0.0015" relative="1" as="geometry">
+            <mxPoint x="12" y="-5" as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
