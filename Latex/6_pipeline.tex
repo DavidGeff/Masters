@@ -8,7 +8,7 @@
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.82\textwidth]{figs/pipeline.png}
-    \caption{\textbf{Processing Pipeline.} Overview of the LiDAR data processing and feature extraction pipeline.}
+    \caption{\textbf{Processing Pipeline.} Overview of the \ac{LiDAR} data processing and feature extraction pipeline.}
     \label{fig:pipeline}
 \end{figure}
 %----------------------------------------------------
@@ -17,11 +17,11 @@
 \section{Data Extraction}
 \label{sec:ch6.section1}
 
-The starting point for the pipeline is the raw Avia point cloud data. All data used in this investigation was captured as rosbag (\emph{.bag}) or the proprietary Livox file type (\emph{.lvx}). The raw data has to first be extracted from these file types before it can be processed or used in analysis. The Livox \gls{ros} driver includes functionality to convert \emph{.lvx} files to \emph{.bag} files. MATLAB's \gls{ros} Toolbox contains functions and tools for extracting data fields from a \emph{.bag} file for storage and use in standard MATLAB matrices or structures.
+The starting point for the pipeline is the raw Avia point cloud data. All data used in this investigation was captured as rosbag (\emph{.bag}) or the proprietary Livox file type (\emph{.lvx}). The raw data has to first be extracted from these file types before it can be processed or used in analysis. The Livox \ac{ROS} driver includes functionality to convert \emph{.lvx} files to \emph{.bag} files. MATLAB's \ac{ROS} Toolbox contains functions and tools for extracting data fields from a \emph{.bag} file for storage and use in standard MATLAB matrices or structures.
 
-\gls{imu} data (linear \& rotational accelerations and timestamps) captured by the Avia is extracted from the .bag files and then stored in matrices for further processing.
+\ac{IMU} data (linear \& rotational accelerations and timestamps) captured by the Avia is extracted from the .bag files and then stored in matrices for further processing.
 
-MATLAB's \gls{lidar} Toolbox has provision for a \emph{pointCloud} object which was used to store all \gls{lidar} data for processing and analysis. This object contains fields for the point cloud's x, y and z co-ordinate data, total number of points, as well as point colours, normals and intensities. The Avia is only capable of directly measuring point intensity, so this was the only additional data field extracted from the .bag files into the \emph{pointCloud} object. Frame timestamps are not stored in the pointCloud object, but in a standalone array.
+MATLAB's \ac{LiDAR} Toolbox has provision for a \emph{pointCloud} object which was used to store all \ac{LiDAR} data for processing and analysis. This object contains fields for the point cloud's x, y and z co-ordinate data, total number of points, as well as point colours, normals and intensities. The Avia is only capable of directly measuring point intensity, so this was the only additional data field extracted from the .bag files into the \emph{pointCloud} object. Frame timestamps are not stored in the pointCloud object, but in a standalone array.
 
 %====================================================
 \section{Motion Compensation}
@@ -29,13 +29,13 @@ MATLAB's \gls{lidar} Toolbox has provision for a \emph{pointCloud} object which 
 
 *fix kalman stuff here*
 
-Two Kalman filters were created to estimate the attitude of the Avia during data collection. The filters output estimates of the sensor's roll and pitch (yaw cannot be reliably estimated from \gls{imu} data). Using these angle estimates an inverse transform can be applied to the point cloud to 'stabilise' the data and compensate for the motion of the observation platform (ship). As these Kalman filters only estimate changes in roll and pitch attitude, and not position, there will still be motion artefacts in the data due to translation and yaw of the observation platform. 
+Two Kalman filters were created to estimate the attitude of the Avia during data collection. The filters output estimates of the sensor's roll and pitch (yaw cannot be reliably estimated from \ac{IMU} data). Using these angle estimates an inverse transform can be applied to the point cloud to 'stabilise' the data and compensate for the motion of the observation platform (ship). As these Kalman filters only estimate changes in roll and pitch attitude, and not position, there will still be motion artefacts in the data due to translation and yaw of the observation platform. 
 
 
 
 The first Kalman filter was created using MATLAB's Sensor Fusion Toolbox. This filter implements an error-state Kalman filter structure, 
 
-The second Kalman filter is an \gls{ekf} which was initially developed by Philip Salmony (\cite{salmonyPms67AttitudeEstimation2025}). Both filters accept the Avia \gls{imu} data as inputs and return roll and yaw estimates at the same frequency as the input data (200 Hz).
+The second Kalman filter is an \ac{EKF} which was initially developed by Philip Salmony (\cite{salmonyPms67AttitudeEstimation2025}). Both filters accept the Avia \ac{IMU} data as inputs and return roll and yaw estimates at the same frequency as the input data (200 Hz).
 
 Once angle estimations have been obtained, they have to be time synchronised and matched to their corresponding point cloud frames. Each angle estimation and frame has an associated timestamp that was used to match frames with angle estimations. Angle estimations are produced at 200 Hz while point cloud frames are produced 20 times slower, at 10 Hz. The list of frame timestamps was iterated through, and matched with its associated angle estimation timestamp. If no exact match was found, then the angle estimation closest in time was associated to the frame. Next, a rigid 3-D transform with no translation is created for each point cloud frame from its associated angle estimation. These transforms are then applied to each frame in the pointCloud object to complete the motion compensation.
 
@@ -92,7 +92,7 @@ Using the MATLAB \emph{curveFitter} tool, a sinusoidal model (equation \ref{eqn:
 
 *talk more about how RANSAC was built*
 
-To model the waves from point cloud data, a spatial sinusoidal plane model (equation \ref{eqn:avia_sin}) was fitted to each frame in the point cloud using \gls{ransac}. Each frame fit was run for 300 iterations at an inlier tolerance of 0.02 m (2 cm).
+To model the waves from point cloud data, a spatial sinusoidal plane model (equation \ref{eqn:avia_sin}) was fitted to each frame in the point cloud using \ac{RANSAC}. Each frame fit was run for 300 iterations at an inlier tolerance of 0.02 m (2 cm).
 
 %----------------------------------------------------
 \begin{equation} \label{eqn:avia_sin}
@@ -135,7 +135,7 @@ Once all estimations were converted to wave period, the mean period and amplitud
 
 *this has to be redone*
 
-To identify the shape and size of individual pancakes in the point cloud data, three density-based clustering algorithms were investigated; \gls{dbscan}, \gls{vdbscan} and \gls{optics}. 
+To identify the shape and size of individual pancakes in the point cloud data, three density-based clustering algorithms were investigated; \ac{DBScan}, \ac{VDBScan} and \ac{OPTICS}. 
 
 Each of these algorithms accept a point cloud frame as input and return a list, where each entry in the list corresponds to a point in the input point cloud frame. Each entry contains a cluster identification number, indicating which cluster the point belongs to. Points that are classified as noise or outliers are given a cluster ID of -1. This list can then be used to visualise the clusters by assigning each cluster a unique colour, or to calculate the size and shape of individual pancakes by grouping points with the same cluster ID. 
 
@@ -147,21 +147,21 @@ To tune the parameters of each algorithm, multiple clustering runs were performe
 \subsection{DBScan}
 \label{subsec:ch6.section5.subsec1}
 
-The \gls{dbscan} algorithm was implemented using MATLAB's built-in \emph{dbscan} function, and is an unmodified version of the original algorithm.
+The \ac{DBScan} algorithm was implemented using MATLAB's built-in \emph{dbscan} function, and is an unmodified version of the original algorithm.
 
 %----------------------------------------------------
 \subsection{VDBScan}
 \label{subsec:ch6.section5.subsec2}
 
-The \gls{vdbscan} algorithm implemented was adapted from MATLAB’s \emph{dbscan} function, with modifications to incorporate variable-density clustering as described by \cite{liuVDBSCANVariedDensity2007}. In contrast to the original \gls{vdbscan} approach, which assigns an individual \textbf{$\epsilon$} value to each point, this implementation estimates a set of candidate \textbf{$\epsilon$} values for the entire point cloud using the selected \textbf{k}-nearest neighbour distances. Traditional \gls{dbscan} clustering is then applied iteratively for each \textbf{$\epsilon$} value. The resulting cluster assignments from all runs are combined on a point-by-point basis, where the most frequently occurring cluster ID across all \textbf{$\epsilon$} values is chosen as the final label for that point.
+The \ac{VDBScan} algorithm implemented was adapted from MATLAB’s \emph{dbscan} function, with modifications to incorporate variable-density clustering as described by \cite{liuVDBSCANVariedDensity2007}. In contrast to the original \ac{VDBScan} approach, which assigns an individual \textbf{$\epsilon$} value to each point, this implementation estimates a set of candidate \textbf{$\epsilon$} values for the entire point cloud using the selected \textbf{k}-nearest neighbour distances. Traditional \ac{DBScan} clustering is then applied iteratively for each \textbf{$\epsilon$} value. The resulting cluster assignments from all runs are combined on a point-by-point basis, where the most frequently occurring cluster ID across all \textbf{$\epsilon$} values is chosen as the final label for that point.
 
-The decision to use a modified \gls{vdbscan} implementation was made due to computational restraints. The original \gls{vdbscan} algorithm requires the calculation and storage of an individual \textbf{$\epsilon$} value for each point in the point cloud, which requires significant memory resources for large point clouds. Every attempt to run the original \gls{vdbscan} algorithm on the PC used for this investigation (equipped with 32 GB of RAM) resulted in out-of-memory errors. 
+The decision to use a modified \ac{VDBScan} implementation was made due to computational restraints. The original \ac{VDBScan} algorithm requires the calculation and storage of an individual \textbf{$\epsilon$} value for each point in the point cloud, which requires significant memory resources for large point clouds. Every attempt to run the original \ac{VDBScan} algorithm on the PC used for this investigation (equipped with 32 GB of RAM) resulted in out-of-memory errors. 
 
 %----------------------------------------------------
 \subsection{OPTICS}
 \label{subsec:ch6.section5.subsec3}
 
-The \gls{optics} algorithm used was provided by \cite{daszykowskiMatlabCodeOPTICS2002}, and is an implementation with minor modifications for use in MATLAB.
+The \ac{OPTICS} algorithm used was provided by \cite{daszykowskiMatlabCodeOPTICS2002}, and is an implementation with minor modifications for use in MATLAB.
 
 %****************************************************
 % END

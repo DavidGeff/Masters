@@ -192,10 +192,10 @@ The normals estimation process successfully calculated normal vectors for each p
 
 *fix ekf stuff and redo this section, add detail*
 
-The motion capture system provided attitude data starting from initial angles of (0, 0, 0) for roll, pitch and yaw respectively, not taking into account the initial orientation of the Stewart platform and the Avia mounted to it. However, the Avia's \gls{imu} provided data relative to its initial orientation at the start of data collection. This results in an offset between the two datasets, but does not impact the results and analysis of the experiment, as the relative motion is the focus of the experiment. To account for this offset, the initial roll and pitch angle offsets were removed from the angle estimations produced by both Kalman filters. For the first test (10° sweeps), the initial roll and pitch offsets were determined to be -1.6° and -2.075° respectively for both filters. For the second test (5° sweeps), the initial roll and pitch offsets were determined to be -1.625° and -1.95° for the Kalman filter and -1.585° and -2.175° for the \gls{imu} filter. 
+The motion capture system provided attitude data starting from initial angles of (0, 0, 0) for roll, pitch and yaw respectively, not taking into account the initial orientation of the Stewart platform and the Avia mounted to it. However, the Avia's \ac{IMU} provided data relative to its initial orientation at the start of data collection. This results in an offset between the two datasets, but does not impact the results and analysis of the experiment, as the relative motion is the focus of the experiment. To account for this offset, the initial roll and pitch angle offsets were removed from the angle estimations produced by both Kalman filters. For the first test (10° sweeps), the initial roll and pitch offsets were determined to be -1.6° and -2.075° respectively for both filters. For the second test (5° sweeps), the initial roll and pitch offsets were determined to be -1.625° and -1.95° for the Kalman filter and -1.585° and -2.175° for the \ac{IMU} filter. 
 \\*moved this paragraph from \ref{sec:ch5.section1}, still not 100\% sure*
 
-The two implemented Kalman filters both produced reasonable roll and pitch angle estimates for motion compensation of the \gls{lidar} point cloud data. The \gls{ekf} and \gls{imu} filter produced angle estimates very similar to each other, see Figures \ref{fig:vs_roll_10}, \ref{fig:vs_pitch_10}, \ref{fig:vs_roll_5} and \ref{fig:vs_pitch_5}. Overall, The \gls{imu} Filter produced slightly more conservative angle estimates with less variability than the \gls{ekf}. The \gls{imu} angle estimations have a slight positive bias compared to the \gls{ekf} estimations. 
+The two implemented Kalman filters both produced reasonable roll and pitch angle estimates for motion compensation of the \ac{LiDAR} point cloud data. The \ac{EKF} and \ac{IMU} filter produced angle estimates very similar to each other, see Figures \ref{fig:vs_roll_10}, \ref{fig:vs_pitch_10}, \ref{fig:vs_roll_5} and \ref{fig:vs_pitch_5}. Overall, The \ac{IMU} Filter produced slightly more conservative angle estimates with less variability than the \ac{EKF}. The \ac{IMU} angle estimations have a slight positive bias compared to the \ac{EKF} estimations. 
 
 10 degree plots:
 
@@ -203,7 +203,7 @@ The two implemented Kalman filters both produced reasonable roll and pitch angle
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.9\textwidth]{figs/ekf_resid_10.png}
-    \caption{\textbf{EKF residuals}}
+    \caption{\textbf{\ac{EKF} residuals}}
     \label{fig:ekf_resid_10}
 \end{figure}
 %----------------------------------------------------
@@ -212,7 +212,7 @@ The two implemented Kalman filters both produced reasonable roll and pitch angle
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.9\textwidth]{figs/imu_resid_10.png}
-    \caption{\textbf{IMU residuals}}
+    \caption{\textbf{\ac{IMU} residuals}}
     \label{fig:imu_resid_10}
 \end{figure}
 %----------------------------------------------------
@@ -232,7 +232,7 @@ The two implemented Kalman filters both produced reasonable roll and pitch angle
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.9\textwidth]{figs/ekf_resid_5.png}
-    \caption{\textbf{EKF residuals}}
+    \caption{\textbf{\ac{EKF} residuals}}
     \label{fig:ekf_resid_5}
 \end{figure}
 %----------------------------------------------------
@@ -241,7 +241,7 @@ The two implemented Kalman filters both produced reasonable roll and pitch angle
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.9\textwidth]{figs/imu_resid_5.png}
-    \caption{\textbf{IMU residuals}}
+    \caption{\textbf{\ac{IMU} residuals}}
     \label{fig:imu_resid_5}
 \end{figure}
 %----------------------------------------------------
@@ -351,7 +351,7 @@ The mean wave magnitude and period were able to be determined with a high degree
 6 & 29.3343 & 1.0137 & 1.9944 & 72.06 \% \\ \hline
 \end{tabular}%
 }
-\caption{RANSAC Parameter Estimations}
+\caption{\ac{RANSAC} Parameter Estimations}
 \label{tab:RANSAC}
 \end{table}
 %----------------------------------------------------
@@ -392,10 +392,10 @@ The mean wave magnitude and period were able to be determined with a high degree
 \end{figure}
 %----------------------------------------------------
 
-The wave parameters estimated from the \gls{lidar} point cloud data using the \gls{ransac} method, seen in Table \ref{tab:RANSAC}, provided mixed, but mostly positive results. All fitted \gls{ransac} models had over 65\% mean inliers and only two tests (four and five) has less than 72\% mean inliers. The calculated mean periods very closely matched the wave probe data (see Figure \ref{fig:period}), with the greatest difference being 0.0181 s in the first test. In all cases the estimated mean periods were greater than the probe data values.
+The wave parameters estimated from the \ac{LiDAR} point cloud data using the \ac{RANSAC} method, seen in Table \ref{tab:RANSAC}, provided mixed, but mostly positive results. All fitted \ac{RANSAC} models had over 65\% mean inliers and only two tests (four and five) has less than 72\% mean inliers. The calculated mean periods very closely matched the wave probe data (see Figure \ref{fig:period}), with the greatest difference being 0.0181 s in the first test. In all cases the estimated mean periods were greater than the probe data values.
 The estimated mean amplitudes matched the probe data results fairly well in the first three and last tests, with the greatest difference being 2.2406 mm in the second test. However, for the last fourth and fifth tests, the estimated mean amplitudes were significantly higher than the probe data values, with the fourth test value 14.4302 mm and fifth test value 9.0951 mm greater than their respective probe data values (see Figure \ref{fig:amp}).
 
-In every test, the higher the percentage of mean inliers in the model estimation, the closer the match between the estimated \gls{ransac} wave parameters and the probe data wave parameters.
+In every test, the higher the percentage of mean inliers in the model estimation, the closer the match between the estimated \ac{RANSAC} wave parameters and the probe data wave parameters.
 
 %----------------------------------------------------
 \begin{figure}[H]
@@ -415,7 +415,7 @@ In every test, the higher the percentage of mean inliers in the model estimation
 \end{figure}
 %----------------------------------------------------
 
-To investigate the accuracy of the \gls{ransac} wave parameter estimations from limited data samples, five random samples of the estimated amplitude and period from each test were taken, as seen in Figures \ref{fig:rand_amp} and \ref{fig:rand_period}. The results show that even with a limited number of samples, the estimated wave parameters closely match the overall estimated values from Table \ref{tab:RANSAC}.
+To investigate the accuracy of the \ac{RANSAC} wave parameter estimations from limited data samples, five random samples of the estimated amplitude and period from each test were taken, as seen in Figures \ref{fig:rand_amp} and \ref{fig:rand_period}. The results show that even with a limited number of samples, the estimated wave parameters closely match the overall estimated values from Table \ref{tab:RANSAC}.
 
 \newpage
 %====================================================
@@ -479,7 +479,7 @@ When visually inspecting the point cloud data and video data from this scene, it
 \subsection{Scene 2 - 23 July 2022}
 \label{subsec:ch7.section4.subsec2}
 
-Cluster A is the teal group above the centre and cluster B is the orange group below group A in Figure \ref{fig:clust660DB}. These two clusters were identified by \gls{dbscan} and \gls{optics} in both single frame and two frame concatenated targets. \gls{vdbscan} failed to identify any clusters in either target.
+Cluster A is the teal group above the centre and cluster B is the orange group below group A in Figure \ref{fig:clust660DB}. These two clusters were identified by \ac{DBScan} and \ac{OPTICS} in both single frame and two frame concatenated targets. \ac{VDBScan} failed to identify any clusters in either target.
 
 %----------------------------------------------------
 \begin{table}[H]
@@ -569,7 +569,7 @@ Cluster A is the teal group above the centre and cluster B is the orange group b
 \end{figure}
 %----------------------------------------------------
 
-In the single frame target (Figure \ref{fig:660Frame}), \gls{dbscan} and \gls{optics} performed similarly, identifying both clusters A and B with similar shapes and distributions, with \gls{dbscan} assigning slightly more points to each cluster. Both algorithms predominantly identified points on the edges of the pancake floes, with few points assigned to the interior regions of the clusters.
+In the single frame target (Figure \ref{fig:660Frame}), \ac{DBScan} and \ac{OPTICS} performed similarly, identifying both clusters A and B with similar shapes and distributions, with \ac{DBScan} assigning slightly more points to each cluster. Both algorithms predominantly identified points on the edges of the pancake floes, with few points assigned to the interior regions of the clusters.
 
 %----------------------------------------------------
 %\begin{figure}[H]
@@ -643,7 +643,7 @@ In the single frame target (Figure \ref{fig:660Frame}), \gls{dbscan} and \gls{op
 \end{figure}
 %----------------------------------------------------
 
-In the two frame target (Figure \ref{fig:661Frame}), \gls{dbscan} and \gls{optics} again performed similarly, identifying both clusters A and B with similar shapes and distributions. However, both algorithms assigned points to cluster A, in the region of  x = 51 m, y = -1  m, that are most likely not part of the identified pancake floe, but rather the edge of an adjacent pancake floe as visible in the raw point cloud data, see Figure \ref{fig:661Frame}. Additionally, \gls{optics} assigned more points to cluster B than \gls{dbscan}, predominantly in the interior (left edge of the cluster) of the identified pancake floe.
+In the two frame target (Figure \ref{fig:661Frame}), \ac{DBScan} and \ac{OPTICS} again performed similarly, identifying both clusters A and B with similar shapes and distributions. However, both algorithms assigned points to cluster A, in the region of  x = 51 m, y = -1  m, that are most likely not part of the identified pancake floe, but rather the edge of an adjacent pancake floe as visible in the raw point cloud data, see Figure \ref{fig:661Frame}. Additionally, \ac{OPTICS} assigned more points to cluster B than \ac{DBScan}, predominantly in the interior (left edge of the cluster) of the identified pancake floe.
 
 %----------------------------------------------------
 \begin{figure}[H]
@@ -748,7 +748,7 @@ Cluster A is the central orange group and cluster B is the lime green group belo
 \end{figure}
 %----------------------------------------------------
 
-In the single frame target (Figure \ref{fig:980Frame}), all three algorithms performed very similarly in their identification of cluster A, with nearly identical shapes and distributions. The algorithms varied more in their identification of cluster B, with \gls{dbscan} and \gls{optics} producing similar shapes and distributions, including points in the region of x = 39 m, y = 1 m that are likely not part of the identified pancake floe when compared to the raw point cloud data, as seen in Figure \ref{fig:980Frame}. \gls{vdbscan} produced a more compact cluster B, excluding these points.
+In the single frame target (Figure \ref{fig:980Frame}), all three algorithms performed very similarly in their identification of cluster A, with nearly identical shapes and distributions. The algorithms varied more in their identification of cluster B, with \ac{DBScan} and \ac{OPTICS} producing similar shapes and distributions, including points in the region of x = 39 m, y = 1 m that are likely not part of the identified pancake floe when compared to the raw point cloud data, as seen in Figure \ref{fig:980Frame}. \ac{VDBScan} produced a more compact cluster B, excluding these points.
 
 %----------------------------------------------------
 %\begin{figure}[H]
@@ -822,7 +822,7 @@ In the single frame target (Figure \ref{fig:980Frame}), all three algorithms per
 \end{figure}
 %----------------------------------------------------
 
-In the two frame target (Figure \ref{fig:981Frame}), \gls{dbscan} consistently assigned the least points to both clusters A and B, excluding points that are likely to be part of the identified pancake floes. \gls{vdbscan} and \gls{optics} produced very similar shapes and distributions for cluster A, with \gls{optics} assigning slightly more points. For cluster B, \gls{vdbscan} assigned more points to the edges of the cluster than \gls{optics}, in the regions of x = 38 m, y = -1 m, which are likely part of the identified pancake floe, and x =  39 m, y = 1 m, which are likely not part of the identified pancake floe when compared to the raw point cloud data, see Figure \ref{fig:981Frame}.
+In the two frame target (Figure \ref{fig:981Frame}), \ac{DBScan} consistently assigned the least points to both clusters A and B, excluding points that are likely to be part of the identified pancake floes. \ac{VDBScan} and \ac{OPTICS} produced very similar shapes and distributions for cluster A, with \ac{OPTICS} assigning slightly more points. For cluster B, \ac{VDBScan} assigned more points to the edges of the cluster than \ac{OPTICS}, in the regions of x = 38 m, y = -1 m, which are likely part of the identified pancake floe, and x =  39 m, y = 1 m, which are likely not part of the identified pancake floe when compared to the raw point cloud data, see Figure \ref{fig:981Frame}.
 
 %----------------------------------------------------
 \begin{figure}[H]
@@ -837,7 +837,7 @@ In the two frame target (Figure \ref{fig:981Frame}), \gls{dbscan} consistently a
 \subsection{Scene 4 - 24 July 2022}
 \label{subsec:ch7.section4.subsec4}
 
-Cluster A is the central maroon group and cluster B is the dark blue group below cluster A in Figure \ref{fig:clust5620DB}. These two clusters were identified by all three algorithms in both single frame and two frame concatenated targets. \gls{optics} separated cluster B into two sub-clusters in the single frame target, and all algorithms separated cluster B into multiple sub-clusters in the two frame concatenated target, with \gls{vdbscan} separating it into three sub-clusters.
+Cluster A is the central maroon group and cluster B is the dark blue group below cluster A in Figure \ref{fig:clust5620DB}. These two clusters were identified by all three algorithms in both single frame and two frame concatenated targets. \ac{OPTICS} separated cluster B into two sub-clusters in the single frame target, and all algorithms separated cluster B into multiple sub-clusters in the two frame concatenated target, with \ac{VDBScan} separating it into three sub-clusters.
 
 %----------------------------------------------------
 \begin{table}[H]
@@ -927,7 +927,7 @@ Cluster A is the central maroon group and cluster B is the dark blue group below
 \end{figure}
 %----------------------------------------------------
 
-In the single frame target (Figure \ref{fig:5620Frame}), all three algorithms performed similarly in their identification of cluster A, with nearly identical shapes and distributions. All algorithms included points in the region of x = 38 m, y = 0 m, that are likely not part of the identified pancake floe, when compared to the raw point cloud data, as seen in Figure \ref{fig:5620Frame}. For cluster B, besides the sub-clustering by \gls{optics}, all algorithms produced similar shapes and distributions. 
+In the single frame target (Figure \ref{fig:5620Frame}), all three algorithms performed similarly in their identification of cluster A, with nearly identical shapes and distributions. All algorithms included points in the region of x = 38 m, y = 0 m, that are likely not part of the identified pancake floe, when compared to the raw point cloud data, as seen in Figure \ref{fig:5620Frame}. For cluster B, besides the sub-clustering by \ac{OPTICS}, all algorithms produced similar shapes and distributions. 
 
 %----------------------------------------------------
 %\begin{figure}[H]
@@ -1001,7 +1001,7 @@ In the single frame target (Figure \ref{fig:5620Frame}), all three algorithms pe
 \end{figure}
 %----------------------------------------------------
 
-In the two frame target (Figure \ref{fig:5621Frame}), \gls{optics} was the only algorithm that excluded points in the region of x = 38 m, y = 0 m. These points are likely not part of the identified pancake floe but rather the edge of an adjacent pancake floe, or a region of frazil ice. This is corroborated by the raw point cloud data, as seen in Figure \ref{fig:5621Frame} and the ice structure seen in the video still, Figure \ref{fig:5620}. For cluster B, \gls{optics} assigned the least points to the cluster, while \gls{dbscan} assigned the most points and \gls{vdbscan} produced a shape and distribution between the other two algorithms. The result produced by \gls{dbscan} is likely the most accurate representation of the pancake floe when compared to the raw point cloud data in Figure \ref{fig:5621Frame}.
+In the two frame target (Figure \ref{fig:5621Frame}), \ac{OPTICS} was the only algorithm that excluded points in the region of x = 38 m, y = 0 m. These points are likely not part of the identified pancake floe but rather the edge of an adjacent pancake floe, or a region of frazil ice. This is corroborated by the raw point cloud data, as seen in Figure \ref{fig:5621Frame} and the ice structure seen in the video still, Figure \ref{fig:5620}. For cluster B, \ac{OPTICS} assigned the least points to the cluster, while \ac{DBScan} assigned the most points and \ac{VDBScan} produced a shape and distribution between the other two algorithms. The result produced by \ac{DBScan} is likely the most accurate representation of the pancake floe when compared to the raw point cloud data in Figure \ref{fig:5621Frame}.
 
 %----------------------------------------------------
 \begin{figure}[H]

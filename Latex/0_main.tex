@@ -107,6 +107,7 @@
 \usepackage{hyperref}                % Hyperlinks in PDF
 \usepackage{fancyref}                % Enhanced references
 \usepackage{url}                     % URL formatting
+\usepackage{acronym}                 % Acronym management
 %\usepackage{natbib}                  % Author-year citation style
 \usepackage[backend=biber, style=authoryear]{biblatex}
 \addbibresource{report.bib}
@@ -194,12 +195,15 @@
 %---------------------------------------------------------------------
 %	List of Symbols/Document conventions (optional)
 %---------------------------------------------------------------------
-\include{iv_listofsymbols}
+%\include{iv_listofsymbols}
 
 %---------------------------------------------------------------------
-%	Glossary (optional)
+%	ABBREVIATIONS
 %---------------------------------------------------------------------
-\include{v_glossary}
+
+\chapter*{Abbreviations}
+\addcontentsline{toc}{chapter}{Abbreviations}
+\input{acro_list}
 
 %-------------------------------------------------------
 %	MAIN MATTER
