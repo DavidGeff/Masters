@@ -7,13 +7,24 @@
 \section{Conclusion}
 \label{sec:ch9.section1}
 
+all scenes useable - max ice coverage for wave estimation, less coverage for clustering
+
+return intensities underutilised, could provide useful insights.
+
 %====================================================
 \section{Recommendations for Future Work}
 \label{sec:ch9.section2}
 
-Emerging field so lots of scope for future work.
+Both Antarctic research, particularly observation of the \ac{MIZ} and the use of \ac{LiDAR} as a remote sensing tool are emerging fields with lots of scope for future work. Some recommendations for future work building on this project include:
 
-Use intensities in clustering
-\\investigate intensities for ice type classification or surface type/parameters
-\\addition of thermal cam will assist in clustering + video/stereo cam will help identify ice types
-\\more advanced wave estimation methods
+A detailed analysis of the Livox Avia's beam divergence and its scene reconstruction accuracy under both ideal targets and simulated environmental conditions. Conducting a thorough characterization of the sensor's performance in controlled settings, replicating expected deployment temperatures and using simple targets at a 0° angle of incidence, could provide further insight into the sensor's capabilities and limitations for Antarctic deployments.
+
+The addition of additional motion sensors synced to the Avia, such as a magnotometer or \ac{GPS} unit, to assist in more thorough motion compensation of the \ac{LiDAR} point cloud data. This would assist in further reducing motion artefacts in the data induced by yaw and translation of the observation platform.
+
+An investigation into more advanced wave models that may better capture the behaviour of surface waves propagating through ice-covered waters. This could allow for the estimation of wave parameters from more complex wave fields found in the \ac{MIZ}, such as those observed during the \ac{SCALE} cruise.
+
+An investigation into the performance of custom or modified clustering algorithms for improved pancake ice floe identification. This could include the development of clustering algorithms that incorporate additional features beyond spatial coordinates, such as intensity values. An analysis of the density and distribution of floes present in the point cloud data could also be conducted to better inform algorithm parameter tuning and design.
+
+A deeper analysis into the \ac{LiDAR} point return intensities and their relationship to different ice types or surface parameters. The variation in point return intensities present in the data collected during this investigation suggests that there may be useful information not yet extracted from the data. A study into how these intensities vary across different ice types (frazil, nilas, pack, etc.) or surface parameters (roughness, geometry, angle of incidence, etc.) are likely to be of value. Insights from such a study could inform future clustering algorithm designs, ice type classification efforts or surface parameter estimation.
+
+The use of multiple optical sensors to complement the \ac{LiDAR} data collection. The addition of sensors such as thermal cameras or video/stereo cameras to form a multi-sensor suite would provide additional data streams to enhance observations of the \ac{MIZ}. Specifically in the identification and estimation of ice floe geometry abd dimensions, thermal sensors could assist in distinguishing between individual floes or ice types based on temperature differences, while video or stereo cameras could provide visual context to the \ac{LiDAR} data, aiding in ice type classification and surface feature identification.

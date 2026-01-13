@@ -27,15 +27,9 @@ MATLAB's \ac{LiDAR} Toolbox has provision for a \emph{pointCloud} object which w
 \section{Motion Compensation}
 \label{sec:ch6.section2}
 
-*fix kalman stuff here*
+Two Kalman filters were implemented to estimate the attitude of the Avia during data collection. The filters output estimates of the sensor's roll and pitch (yaw cannot be reliably estimated from \ac{IMU} data). Using these angle estimates an inverse transform can be applied to the point cloud to 'stabilise' the data and compensate for the motion of the observation platform. As these Kalman filters only estimate changes in roll and pitch attitude, and not position, there will still be motion artefacts in the data due to translation and yaw of the observation platform. 
 
-Two Kalman filters were created to estimate the attitude of the Avia during data collection. The filters output estimates of the sensor's roll and pitch (yaw cannot be reliably estimated from \ac{IMU} data). Using these angle estimates an inverse transform can be applied to the point cloud to 'stabilise' the data and compensate for the motion of the observation platform (ship). As these Kalman filters only estimate changes in roll and pitch attitude, and not position, there will still be motion artefacts in the data due to translation and yaw of the observation platform. 
-
-
-
-The first Kalman filter was created using MATLAB's Sensor Fusion Toolbox. This filter implements an error-state Kalman filter structure, 
-
-The second Kalman filter is an \ac{EKF} which was initially developed by Philip Salmony (\cite{salmonyPms67AttitudeEstimation2025}). Both filters accept the Avia \ac{IMU} data as inputs and return roll and yaw estimates at the same frequency as the input data (200 Hz).
+The first Kalman filter was implemented using MATLAB's Sensor Fusion Toolbox. This filter implements an \ac{ESKF}, a variation of the traditional Kalman filter designed specifically for attitude estimation from \ac{IMU} data. This filter, instead of estimating the full state of the system, estimates only the error in the state, which allows for better handling of non-linearities and noise in the measurements (\cite{vitaliRobustErrorStateKalman2021}). The second Kalman filter implemented was a traditional \ac{KF}, which was initially developed by Philip Salmony (\cite{salmonyPms67AttitudeEstimation2025}). Both filters accept the Avia \ac{IMU} data as inputs and return roll and yaw estimates at the same frequency as the input data (200 Hz).
 
 Once angle estimations have been obtained, they have to be time synchronised and matched to their corresponding point cloud frames. Each angle estimation and frame has an associated timestamp that was used to match frames with angle estimations. Angle estimations are produced at 200 Hz while point cloud frames are produced 20 times slower, at 10 Hz. The list of frame timestamps was iterated through, and matched with its associated angle estimation timestamp. If no exact match was found, then the angle estimation closest in time was associated to the frame. Next, a rigid 3-D transform with no translation is created for each point cloud frame from its associated angle estimation. These transforms are then applied to each frame in the pointCloud object to complete the motion compensation.
 
@@ -132,8 +126,6 @@ Once all estimations were converted to wave period, the mean period and amplitud
 %====================================================
 \section{Pancake Identification}
 \label{sec:ch6.section5}
-
-*this has to be redone*
 
 To identify the shape and size of individual pancakes in the point cloud data, three density-based clustering algorithms were investigated; \ac{DBScan}, \ac{VDBScan} and \ac{OPTICS}. 
 
