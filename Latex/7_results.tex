@@ -107,13 +107,13 @@ Target D's single frame reconstruction allowed for estimations of its height and
 \begin{minipage}{.5\textwidth}
   \centering
   \includegraphics[width=\linewidth]{figs/A10.png}
-  \caption{\textbf{Target A Reconstruction}}
+  \caption{\textbf{Target A Reconstruction, 10 Frames}}
   \label{fig:A10Mesh}
 \end{minipage}%
 \begin{minipage}{.5\textwidth}
   \centering
   \includegraphics[width=\linewidth]{figs/B15.png}
-  \caption{\textbf{Target B Reconstruction}}
+  \caption{\textbf{Target B Reconstruction, 15 Frames}}
   \label{fig:B15Mesh}
 \end{minipage}
 \end{figure}
@@ -125,13 +125,13 @@ Target D's single frame reconstruction allowed for estimations of its height and
 \begin{minipage}{.5\textwidth}
   \centering
   \includegraphics[width=\linewidth]{figs/C15.png}
-  \caption{\textbf{Target C Reconstruction}}
+  \caption{\textbf{Target C Reconstruction, 15 Frames}}
   \label{fig:C15Mesh}
 \end{minipage}%
 \begin{minipage}{.5\textwidth}
   \centering
   \includegraphics[width=\linewidth]{figs/D10.png}
-  \caption{\textbf{Target D Reconstruction}}
+  \caption{\textbf{Target D Reconstruction, 10 Frames}}
   \label{fig:D10Mesh}
 \end{minipage}
 \end{figure}
@@ -202,7 +202,7 @@ When the angle estimates from both filters were used to motion compensate the \a
 %----------------------------------------------------
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.9\textwidth]{figs/ekf_resid_10.png}
+    \includegraphics[width=0.85\textwidth]{figs/kf_resid_10.png}
     \caption{\textbf{KF residuals}}
     \label{fig:kf_resid_10}
 \end{figure}
@@ -211,7 +211,7 @@ When the angle estimates from both filters were used to motion compensate the \a
 %----------------------------------------------------
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.9\textwidth]{figs/imu_resid_10.png}
+    \includegraphics[width=0.85\textwidth]{figs/eskf_resid_10.png}
     \caption{\textbf{ESKF residuals}}
     \label{fig:eskf_resid_10}
 \end{figure}
@@ -220,18 +220,19 @@ When the angle estimates from both filters were used to motion compensate the \a
 %----------------------------------------------------
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.6\textwidth]{figs/vs_resids_10.png}
+    \includegraphics[width=0.85\textwidth]{figs/vs_resids_10.png}
     \caption{\textbf{residuals}}
     \label{fig:resid_10}
 \end{figure}
 %----------------------------------------------------
 
+\newpage
 \textbf{5° Sweep Test:}
 
 %----------------------------------------------------
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.9\textwidth]{figs/ekf_resid_5.png}
+    \includegraphics[width=0.85\textwidth]{figs/kf_resid_5.png}
     \caption{\textbf{KF residuals}}
     \label{fig:kf_resid_5}
 \end{figure}
@@ -240,7 +241,7 @@ When the angle estimates from both filters were used to motion compensate the \a
 %----------------------------------------------------
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.9\textwidth]{figs/imu_resid_5.png}
+    \includegraphics[width=0.85\textwidth]{figs/eskf_resid_5.png}
     \caption{\textbf{ESKF residuals}}
     \label{fig:eskf_resid_5}
 \end{figure}
@@ -249,13 +250,22 @@ When the angle estimates from both filters were used to motion compensate the \a
 %----------------------------------------------------
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.6\textwidth]{figs/vs_resids_5.png}
+    \includegraphics[width=0.85\textwidth]{figs/vs_resids_5.png}
     \caption{\textbf{residuals}}
     \label{fig:resid_5}
 \end{figure}
 %----------------------------------------------------
 
-*add figure of estimated scale pitch and roll*
+%----------------------------------------------------
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{figs/scale_attitude.png}
+    \caption{\textbf{Attitude Estimation.} Avia attitude estimation made by ESKF during SCALE cruise, 24 July 2022.}
+    \label{fig:scale_attitude}
+\end{figure}
+%----------------------------------------------------
+
+\newpage
 
 %----------------------------------------------------
 \subsection{De-noising}

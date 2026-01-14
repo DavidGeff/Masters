@@ -19,14 +19,13 @@
 
 \refsection{0}
   \datalist[entry]{nyt/global//global/global/global}
-    \entry{3DPointCloud}{misc}{}{}
+    \entry{3DPointCloud}{online}{}{}
       \field{sortinit}{3}
       \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{url}
       \field{labeltitlesource}{title}
       \field{abstract}{This example shows how to combine multiple point clouds to reconstruct a 3-D scene using Iterative Closest Point (ICP) algorithm.}
-      \field{howpublished}{https://www.mathworks.com/help/vision/ug/3-d-point-cloud-registration-and-stitching.html}
       \field{langid}{english}
       \field{title}{3-{{D Point Cloud Registration}} and {{Stitching}} - {{MATLAB}} \& {{Simulink}}}
       \field{urlday}{18}
@@ -34,27 +33,40 @@
       \field{urlyear}{2025}
       \field{urldateera}{ce}
       \verb{file}
-      \verb C:\Users\dseph\Zotero\storage\WJBRL47R\3-d-point-cloud-registration-and-stitching.html
+      \verb /home/dspoultney/Zotero/storage/WJBRL47R/3-d-point-cloud-registration-and-stitching.html
+      \endverb
+      \verb{urlraw}
+      \verb https://www.mathworks.com/help/vision/ug/3-d-point-cloud-registration-and-stitching.html
+      \endverb
+      \verb{url}
+      \verb https://www.mathworks.com/help/vision/ug/3-d-point-cloud-registration-and-stitching.html
       \endverb
     \endentry
-    \entry{AaltoIceWave2024}{misc}{}{}
+    \entry{AaltoIceWave2024}{online}{}{}
       \field{sortinit}{A}
       \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labeltitlesource}{title}
       \field{abstract}{Aalto Ice and Wave Tank is a multipurpose basin ideally suited for testing ships and other maritime structures in ice conditions.}
-      \field{howpublished}{https://www.aalto.fi/en/iwt}
+      \field{day}{4}
       \field{langid}{english}
       \field{month}{12}
-      \field{title}{Aalto {{Ice}} and {{Wave Tank}} |{} {{Aalto University}}}
+      \field{title}{Aalto {{Ice}} and {{Wave Tank}} | {{Aalto University}}}
       \field{urlday}{5}
       \field{urlmonth}{6}
       \field{urlyear}{2025}
       \field{year}{2024}
+      \field{dateera}{ce}
       \field{urldateera}{ce}
       \verb{file}
-      \verb C:\Users\dseph\Zotero\storage\VH7XEHST\iwt.html
+      \verb /home/dspoultney/Zotero/storage/VH7XEHST/iwt.html
+      \endverb
+      \verb{urlraw}
+      \verb https://www.aalto.fi/en/iwt
+      \endverb
+      \verb{url}
+      \verb https://www.aalto.fi/en/iwt
       \endverb
     \endentry
     \entry{agrawalCOMPARATIVEASSESSMENTREMOTE2019}{article}{}{}
@@ -87,10 +99,12 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{abstract}{Abstract. Remote sensing is a popular technique that is using in the mapping and monitoring of earth features. Early remote sensing was predominantly passive, i.e. it depends upon the sun for energy. Till the last decade, optical imaging is mainly used in remote sensing works. Over the time, significant innovations and improvements have been made in the active remote sensing which resulted in the form of sophisticated imaging techniques like Synthetic Aperture RADAR (SAR) and Light Detection And Ranging (LiDAR). These advancements promoted the use of multi-sensor and multi-source data in remote sensing projects. This highlights the need to review these imaging techniques. Therefore, this review work is carried out. In this review, different imaging techniques are discussed and compared. Optical, SAR and LiDAR techniques are first summarized and then they are compared on the basis of technical specification and working. Finally, an in-depth assessment is made on the applicability of these imaging techniques in different fields.}
+      \field{day}{5}
       \field{issn}{2194-9034}
       \field{journaltitle}{The International Archives of the Photogrammetry, Remote Sensing and Spatial Information Sciences}
       \field{langid}{english}
       \field{month}{12}
+      \field{shortjournal}{Int. Arch. Photogramm. Remote Sens. Spatial Inf. Sci.}
       \field{shorttitle}{A {{COMPARATIVE ASSESSMENT OF REMOTE SENSING IMAGING TECHNIQUES}}}
       \field{title}{A {{COMPARATIVE ASSESSMENT OF REMOTE SENSING IMAGING TECHNIQUES}}: {{OPTICAL}}, {{SAR AND LIDAR}}}
       \field{urlday}{24}
@@ -98,11 +112,18 @@
       \field{urlyear}{2025}
       \field{volume}{XLII-5/W3}
       \field{year}{2019}
+      \field{dateera}{ce}
       \field{urldateera}{ce}
       \field{pages}{1\bibrangedash 6}
       \range{pages}{6}
       \verb{doi}
       \verb 10.5194/isprs-archives-XLII-5-W3-1-2019
+      \endverb
+      \verb{urlraw}
+      \verb https://isprs-archives.copernicus.org/articles/XLII-5-W3/1/2019/
+      \endverb
+      \verb{url}
+      \verb https://isprs-archives.copernicus.org/articles/XLII-5-W3/1/2019/
       \endverb
     \endentry
     \entry{alberelloPhysicalModelWave2021}{article}{}{}
@@ -159,21 +180,30 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{A physical model is discussed that mimics the interaction between ocean waves and a multitude of loose pancake ice floes, which form the outer edge of the Arctic and Antarctic marginal ice zones during winter sea ice formation. The pancakes were modeled by using ice cubes with different concentrations, while waves were generated mechanically. The ice cubes had a dimension of a few centimeters, which was two orders of magnitude smaller than the dominant wavelength. Experiments consisted of tracking the propagation of regular and irregular wave fields along the flume as they crossed the ice cover to measure the rate of ice-induced wave attenuation. Results indicate that wave attenuation increases with ice concentration with only 30\% of energy allowed to pass through high-density covers. Wave energy is attenuated across the entire spectral domain and is strongest at high frequencies. This results in a downshift of the spectral peak.Antarctic sea ice is exposed to intense storm waves generated all the year round in the Southern Ocean (e.g., Derkani et al., 2020; Vichi et al., 2019). These waves penetrate deep into the sea ice-covered ocean and impact the ice cover (e.g., Kohout et al., 2014, 2016; Dolatshah et al., 2017, 2018; Passerotti et al., 2020). Concomitantly, the ice cover attenuates the wave energy over distance, so that wave impacts eventually die out. (Recent field observations show a power law dependence on frequency; Meylan et al., 2018.) The region in which wave impacts remain significant is known as the marginal ice zone (MIZ).In summer, the MIZ is composed of large ice floes (with sizes ranging from tens to hundreds of meters; e.g., Toyota et al., 2011) formed by the breakup of the ice pack. During its winter expansion, on the other hand, the Antarctic MIZ is formed by millions of pancake ice floes (with sizes ranging from a few to tens of meters; Alberello, Onorato, et al., 2019), which grow from frazil ice under the continuous action of waves and thermodynamic freezing processes (Roach et al., 2019). This mixture of pancake ice floes and frazil ice (Fig. 1) extends for hundreds of kilometers (e.g., Alberello et al., 2020). Note that the general sea ice retreat in the Arctic is causing wave height growth because fetches over which winds can blow are longer (Thomson and Rogers, 2014). Such changes in the marine environment may cause pancake ice to become more common in the Arctic MIZ, too (Smith et al., 2018; Roach et al., 2019).}
+      \field{day}{1}
       \field{issn}{1053-5381}
       \field{journaltitle}{International Journal of Offshore and Polar Engineering}
       \field{month}{9}
       \field{number}{03}
+      \field{shortjournal}{International Journal of Offshore and Polar Engineering}
       \field{title}{A {{Physical Model}} of {{Wave Attenuation}} in {{Pancake Ice}}}
       \field{urlday}{24}
       \field{urlmonth}{2}
       \field{urlyear}{2025}
       \field{volume}{31}
       \field{year}{2021}
+      \field{dateera}{ce}
       \field{urldateera}{ce}
       \field{pages}{263\bibrangedash 269}
       \range{pages}{7}
       \verb{doi}
       \verb 10.17736/ijope.2021.ik08
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.17736/ijope.2021.ik08
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.17736/ijope.2021.ik08
       \endverb
     \endentry
     \entry{ankerstOPTICSOrderingPoints1999}{article}{}{}
@@ -223,6 +253,7 @@
       \field{langid}{english}
       \field{month}{6}
       \field{number}{2}
+      \field{shortjournal}{SIGMOD Rec.}
       \field{shorttitle}{{{OPTICS}}}
       \field{title}{{{OPTICS}}: Ordering Points to Identify the Clustering Structure}
       \field{urlday}{19}
@@ -230,6 +261,7 @@
       \field{urlyear}{2025}
       \field{volume}{28}
       \field{year}{1999}
+      \field{dateera}{ce}
       \field{urldateera}{ce}
       \field{pages}{49\bibrangedash 60}
       \range{pages}{12}
@@ -237,23 +269,34 @@
       \verb 10.1145/304181.304187
       \endverb
       \verb{file}
-      \verb C:\Users\dseph\Zotero\storage\VYD9P8CD\Ankerst et al. - 1999 - OPTICS ordering points to identify the clustering structure.pdf
+      \verb /home/dspoultney/Zotero/storage/VYD9P8CD/Ankerst et al. - 1999 - OPTICS ordering points to identify the clustering structure.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://dl.acm.org/doi/10.1145/304181.304187
+      \endverb
+      \verb{url}
+      \verb https://dl.acm.org/doi/10.1145/304181.304187
       \endverb
     \endentry
-    \entry{AviaLiDARSensor}{misc}{}{}
+    \entry{AviaLiDARSensor}{online}{}{}
       \field{sortinit}{A}
       \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{url}
       \field{labeltitlesource}{title}
-      \field{howpublished}{https://www.livoxtech.com/avia}
       \field{title}{Avia {{LiDAR}} Sensor - {{Livox}}}
       \field{urlday}{19}
       \field{urlmonth}{8}
       \field{urlyear}{2025}
       \field{urldateera}{ce}
       \verb{file}
-      \verb C:\Users\dseph\Zotero\storage\RU8LB76J\avia.html
+      \verb /home/dspoultney/Zotero/storage/RU8LB76J/avia.html
+      \endverb
+      \verb{urlraw}
+      \verb https://www.livoxtech.com/avia
+      \endverb
+      \verb{url}
+      \verb https://www.livoxtech.com/avia
       \endverb
     \endentry
     \entry{baumhoerRemoteSensingAntarctic2018}{article}{}{}
@@ -297,26 +340,35 @@
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{The contribution of Antarctica's ice sheet to global sea-level rise depends on the very dynamic behavior of glaciers and ice shelves. One important parameter of ice-sheet dynamics is the location of glacier and ice-shelf fronts. Numerous remote sensing studies on Antarctic glacier and ice-shelf front positions exist, but no long-term record on circum-Antarctic front dynamics has been established so far. The article outlines the potential of remote sensing to map, extract, and measure calving front dynamics. Furthermore, this review provides an overview of the spatial and temporal availability of Antarctic calving front observations for the first time. Single measurements are compiled to a circum-Antarctic record of glacier and ice shelf retreat/advance. We find sufficient frontal records for the Antarctic Peninsula and Victoria Land, whereas on the West Antarctic Ice Sheet (WAIS), measurements only concentrate on specific glaciers and ice sheets. Frontal records for the East Antarctic Ice Sheet exist since the 1970s. Studies agree on the general retreat of calving fronts along the Antarctic Peninsula. East Antarctic calving fronts also showed retreating tendencies between 1970s until the early 1990s, but have advanced since the 2000s. Exceptions of this general trend are Victoria Land, Wilkes Land, and the northernmost Dronning Maud Land. For the WAIS, no clear trend in long-term front fluctuations could be identified, as observations of different studies vary in space and time, and fronts highly fluctuate. For further calving front analysis, regular mapping intervals as well as glacier morphology should be included. We propose to exploit current and future developments in Earth observations to create frequent standardized measurements for circum-Antarctic assessments of glacier and ice-shelf front dynamics in regard to ice-sheet mass balance and climate forcing.}
+      \field{abstract}{The contribution of Antarctica’s ice sheet to global sea-level rise depends on the very dynamic behavior of glaciers and ice shelves. One important parameter of ice-sheet dynamics is the location of glacier and ice-shelf fronts. Numerous remote sensing studies on Antarctic glacier and ice-shelf front positions exist, but no long-term record on circum-Antarctic front dynamics has been established so far. The article outlines the potential of remote sensing to map, extract, and measure calving front dynamics. Furthermore, this review provides an overview of the spatial and temporal availability of Antarctic calving front observations for the first time. Single measurements are compiled to a circum-Antarctic record of glacier and ice shelf retreat/advance. We find sufficient frontal records for the Antarctic Peninsula and Victoria Land, whereas on the West Antarctic Ice Sheet (WAIS), measurements only concentrate on specific glaciers and ice sheets. Frontal records for the East Antarctic Ice Sheet exist since the 1970s. Studies agree on the general retreat of calving fronts along the Antarctic Peninsula. East Antarctic calving fronts also showed retreating tendencies between 1970s until the early 1990s, but have advanced since the 2000s. Exceptions of this general trend are Victoria Land, Wilkes Land, and the northernmost Dronning Maud Land. For the WAIS, no clear trend in long-term front fluctuations could be identified, as observations of different studies vary in space and time, and fronts highly fluctuate. For further calving front analysis, regular mapping intervals as well as glacier morphology should be included. We propose to exploit current and future developments in Earth observations to create frequent standardized measurements for circum-Antarctic assessments of glacier and ice-shelf front dynamics in regard to ice-sheet mass balance and climate forcing.}
+      \field{day}{10}
       \field{issn}{2072-4292}
       \field{journaltitle}{Remote Sensing}
       \field{langid}{english}
       \field{month}{9}
       \field{number}{9}
-      \field{title}{Remote {{Sensing}} of {{Antarctic Glacier}} and {{Ice-Shelf Front Dynamics}}---{{A Review}}}
+      \field{shortjournal}{Remote Sensing}
+      \field{title}{Remote {{Sensing}} of {{Antarctic Glacier}} and {{Ice-Shelf Front Dynamics}}—{{A Review}}}
       \field{urlday}{23}
       \field{urlmonth}{11}
       \field{urlyear}{2025}
       \field{volume}{10}
       \field{year}{2018}
+      \field{dateera}{ce}
       \field{urldateera}{ce}
       \field{pages}{1445}
       \range{pages}{1}
       \verb{doi}
       \verb 10.3390/rs10091445
       \endverb
+      \verb{urlraw}
+      \verb https://www.mdpi.com/2072-4292/10/9/1445
+      \endverb
+      \verb{url}
+      \verb https://www.mdpi.com/2072-4292/10/9/1445
+      \endverb
     \endentry
-    \entry{bogoslavskyiFastRobustNormal2024}{misc}{}{}
+    \entry{bogoslavskyiFastRobustNormal2024}{online}{}{}
       \name{author}{3}{}{%
         {{un=0,uniquepart=base,hash=1472525a7ae4346d60c0f0369b320a1a}{%
            family={Bogoslavskyi},
@@ -337,9 +389,6 @@
            giveni={R\bibinitperiod},
            givenun=0}}%
       }
-      \list{publisher}{1}{%
-        {arXiv}%
-      }
       \strng{namehash}{329765798d1fee67c8b473c95e4dc6f0}
       \strng{fullhash}{329765798d1fee67c8b473c95e4dc6f0}
       \strng{fullhashraw}{329765798d1fee67c8b473c95e4dc6f0}
@@ -355,21 +404,29 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Light Detection and Ranging (LiDAR) technology has proven to be an important part of many robotics systems. Surface normals estimated from LiDAR data are commonly used for a variety of tasks in such systems. As most of the today's mechanical LiDAR sensors produce sparse data, estimating normals from a single scan in a robust manner poses difficulties. In this paper, we address the problem of estimating normals for sparse LiDAR data avoiding the typical issues of smoothing out the normals in high curvature areas. Mechanical LiDARs rotate a set of rigidly mounted lasers. One firing of such a set of lasers produces an array of points where each point's neighbor is known due to the known firing pattern of the scanner. We use this knowledge to connect these points to their neighbors and label them using the angles of the lines connecting them. When estimating normals at these points, we only consider points with the same label as neighbors. This allows us to avoid estimating normals in high curvature areas. We evaluate our approach on various data, both self-recorded and publicly available, acquired using various sparse LiDAR sensors. We show that using our method for normal estimation leads to normals that are more robust in areas with high curvature which leads to maps of higher quality. We also show that our method only incurs a constant factor runtime overhead with respect to a lightweight baseline normal estimation procedure and is therefore suited for operation in computationally demanding environments.}
+      \field{day}{22}
       \field{eprintclass}{cs}
       \field{eprinttype}{arXiv}
       \field{month}{4}
-      \field{number}{arXiv:2404.14281}
+      \field{pubstate}{prepublished}
       \field{title}{Fast and {{Robust Normal Estimation}} for {{Sparse LiDAR Scans}}}
       \field{urlday}{23}
       \field{urlmonth}{12}
       \field{urlyear}{2025}
       \field{year}{2024}
+      \field{dateera}{ce}
       \field{urldateera}{ce}
       \verb{doi}
       \verb 10.48550/arXiv.2404.14281
       \endverb
       \verb{eprint}
       \verb 2404.14281
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/2404.14281
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/2404.14281
       \endverb
       \keyw{Computer Science - Computer Vision and Pattern Recognition,Computer Science - Robotics}
     \endentry
@@ -414,7 +471,8 @@
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{Abstract In three ship-based field experiments, spectral albedos were measured at ultraviolet, visible, and near-infrared wavelengths for open water, grease ice, nilas, young ``grey'' ice, young grey-white ice, and first-year ice, both with and without snow cover. From the spectral measurements, broadband albedos are computed for clear and cloudy sky, for the total solar spectrum as well as for visible and near-infrared bands used in climate models, and for Advanced Very High Resolution Radiometer (AVHRR) solar channels. The all-wave albedos vary from 0.07 for open water to 0.87 for thick snow-covered ice under cloud. The frequency distribution of ice types and snow coverage in all seasons is available from the project on Antarctic Sea Ice Processes and Climate (ASPeCt). The ASPeCt dataset contains routine hourly visual observations of sea ice from research and supply ships of several nations using a standard protocol. Ten thousand of these observations, separated by a minimum of 6 nautical miles along voyage tracks, are used together with the measured albedos for each ice type to assign an albedo to each visual observation, resulting in ``ice-only'' albedos as a function of latitude for each of five longitudinal sectors around Antarctica, for each of the four seasons. These ice albedos are combined with 13 yr of ice concentration estimates from satellite passive microwave measurements to obtain the geographical and seasonal variation of average surface albedo. Most of the Antarctic sea ice is snow covered, even in summer, so the main determinant of area-averaged albedo is the fraction of open water within the pack.}
+      \field{abstract}{Abstract In three ship-based field experiments, spectral albedos were measured at ultraviolet, visible, and near-infrared wavelengths for open water, grease ice, nilas, young “grey” ice, young grey-white ice, and first-year ice, both with and without snow cover. From the spectral measurements, broadband albedos are computed for clear and cloudy sky, for the total solar spectrum as well as for visible and near-infrared bands used in climate models, and for Advanced Very High Resolution Radiometer (AVHRR) solar channels. The all-wave albedos vary from 0.07 for open water to 0.87 for thick snow-covered ice under cloud. The frequency distribution of ice types and snow coverage in all seasons is available from the project on Antarctic Sea Ice Processes and Climate (ASPeCt). The ASPeCt dataset contains routine hourly visual observations of sea ice from research and supply ships of several nations using a standard protocol. Ten thousand of these observations, separated by a minimum of 6 nautical miles along voyage tracks, are used together with the measured albedos for each ice type to assign an albedo to each visual observation, resulting in “ice-only” albedos as a function of latitude for each of five longitudinal sectors around Antarctica, for each of the four seasons. These ice albedos are combined with 13 yr of ice concentration estimates from satellite passive microwave measurements to obtain the geographical and seasonal variation of average surface albedo. Most of the Antarctic sea ice is snow covered, even in summer, so the main determinant of area-averaged albedo is the fraction of open water within the pack.}
+      \field{day}{1}
       \field{issn}{1520-0442, 0894-8755}
       \field{journaltitle}{Journal of Climate}
       \field{langid}{english}
@@ -426,11 +484,18 @@
       \field{urlyear}{2025}
       \field{volume}{18}
       \field{year}{2005}
+      \field{dateera}{ce}
       \field{urldateera}{ce}
       \field{pages}{3606\bibrangedash 3622}
       \range{pages}{17}
       \verb{doi}
       \verb 10.1175/JCLI3489.1
+      \endverb
+      \verb{urlraw}
+      \verb http://journals.ametsoc.org/doi/10.1175/JCLI3489.1
+      \endverb
+      \verb{url}
+      \verb http://journals.ametsoc.org/doi/10.1175/JCLI3489.1
       \endverb
     \endentry
     \entry{brazealRigorousObservationModel2021}{article}{}{}
@@ -471,8 +536,9 @@
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{Modern lidar sensors are continuing to decrease in size, weight, and cost, but the demand for fast, abundant, and high-accuracy lidar observations is only increasing. The Livox Mid-40 lidar sensor was designed for use within sense-and-avoid navigation systems for autonomous vehicles, but has also found adoption within aerial mapping systems. In order to characterize the overall quality of the point clouds from the Mid-40 sensor and enable sensor calibration, a rigorous model of the sensor's raw observations is needed. This paper presents the development of an angular observation model for the Mid-40 sensor, and its application within an extended Kalman filter that uses the sensor's data to estimate the model's operating parameters, systematic errors, and the instantaneous prism rotation angles for the Risley prism optical steering mechanism. The analysis suggests that the Mid-40's angular observations are more accurate than the specifications provided by the manufacturer. Additionally, it is shown that the prism rotation angles can be used within a planar constrained least-squares adjustment to theoretically improve the accuracy of the angular observations of the Mid-40 sensor.}
+      \field{abstract}{Modern lidar sensors are continuing to decrease in size, weight, and cost, but the demand for fast, abundant, and high-accuracy lidar observations is only increasing. The Livox Mid-40 lidar sensor was designed for use within sense-and-avoid navigation systems for autonomous vehicles, but has also found adoption within aerial mapping systems. In order to characterize the overall quality of the point clouds from the Mid-40 sensor and enable sensor calibration, a rigorous model of the sensor’s raw observations is needed. This paper presents the development of an angular observation model for the Mid-40 sensor, and its application within an extended Kalman filter that uses the sensor’s data to estimate the model’s operating parameters, systematic errors, and the instantaneous prism rotation angles for the Risley prism optical steering mechanism. The analysis suggests that the Mid-40’s angular observations are more accurate than the specifications provided by the manufacturer. Additionally, it is shown that the prism rotation angles can be used within a planar constrained least-squares adjustment to theoretically improve the accuracy of the angular observations of the Mid-40 sensor.}
       \field{issn}{1424-8220}
+      \field{issue}{14}
       \field{journaltitle}{Sensors}
       \field{langid}{english}
       \field{month}{1}
@@ -483,6 +549,7 @@
       \field{urlyear}{2024}
       \field{volume}{21}
       \field{year}{2021}
+      \field{dateera}{ce}
       \field{urldateera}{ce}
       \field{pages}{4722}
       \range{pages}{1}
@@ -490,7 +557,13 @@
       \verb 10.3390/s21144722
       \endverb
       \verb{file}
-      \verb C:\Users\dseph\Zotero\storage\SI49NFXR\Brazeal et al. - 2021 - A Rigorous Observation Model for the Risley Prism-Based Livox Mid-40 Lidar Sensor.pdf
+      \verb /home/dspoultney/Zotero/storage/SI49NFXR/Brazeal et al. - 2021 - A Rigorous Observation Model for the Risley Prism-Based Livox Mid-40 Lidar Sensor.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.mdpi.com/1424-8220/21/14/4722
+      \endverb
+      \verb{url}
+      \verb https://www.mdpi.com/1424-8220/21/14/4722
       \endverb
       \keyw{calibration,drones,laser scanning,lidar,Risley prism,UAS}
     \endentry
@@ -523,23 +596,31 @@
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{Analyses of 28 years (1979--2006) of Antarctic sea ice extents and areas derived from satellite passive microwave radiometers are presented and placed in the context of results obtained previously for the 20-year period 1979--1998. We present monthly averaged sea ice extents and areas, monthly deviations, yearly and seasonal averages, and their trends for the Southern Hemisphere as a whole and for each of five sectors: the Weddell Sea, the Indian Ocean, the western Pacific Ocean, the Ross Sea, and the Bellingshausen/Amundsen seas. The total Antarctic sea ice extent trend increased slightly, from 0.96 \textpm{} 0.61\% decade -1 to 1.0 \textpm{} 0.4\% decade -1 , from the 20- to 28-year period, reflecting contrasting changes in the sector trends. The eight additional years resulted in smaller positive yearly trends in sea ice extent for the Weddell Sea (0.80 \textpm{} 1.4\% decade -1 ), the western Pacific Ocean (1.4 \textpm{} 1.9\% decade -1 ), and the Ross Sea (4.4 \textpm{} 1.7\% decade -1 ) sectors, a lessening of the negative trend for the Bellingshausen/Amundsen seas (-5.4 \textpm{} 1.9\% decade -1 ) sector, and a shift from a negative trend to a positive trend for the Indian Ocean (1.9 \textpm{} 1.4\% decade -1 ) sector. The trends for the Southern Hemisphere as a whole and for the Ross Sea sector are significant at the 95\% level, whereas the trend for the Bellingshausen/Amundsen seas sector is significant at the 99\% level. A similar pattern of yearly trend changes for the two periods is also apparent in the sea ice area time series.}
+      \field{abstract}{Analyses of 28 years (1979–2006) of Antarctic sea ice extents and areas derived from satellite passive microwave radiometers are presented and placed in the context of results obtained previously for the 20‐year period 1979–1998. We present monthly averaged sea ice extents and areas, monthly deviations, yearly and seasonal averages, and their trends for the Southern Hemisphere as a whole and for each of five sectors: the Weddell Sea, the Indian Ocean, the western Pacific Ocean, the Ross Sea, and the Bellingshausen/Amundsen seas. The total Antarctic sea ice extent trend increased slightly, from 0.96 ± 0.61\% decade −1 to 1.0 ± 0.4\% decade −1 , from the 20‐ to 28‐year period, reflecting contrasting changes in the sector trends. The eight additional years resulted in smaller positive yearly trends in sea ice extent for the Weddell Sea (0.80 ± 1.4\% decade −1 ), the western Pacific Ocean (1.4 ± 1.9\% decade −1 ), and the Ross Sea (4.4 ± 1.7\% decade −1 ) sectors, a lessening of the negative trend for the Bellingshausen/Amundsen seas (−5.4 ± 1.9\% decade −1 ) sector, and a shift from a negative trend to a positive trend for the Indian Ocean (1.9 ± 1.4\% decade −1 ) sector. The trends for the Southern Hemisphere as a whole and for the Ross Sea sector are significant at the 95\% level, whereas the trend for the Bellingshausen/Amundsen seas sector is significant at the 99\% level. A similar pattern of yearly trend changes for the two periods is also apparent in the sea ice area time series.}
       \field{issn}{0148-0227}
       \field{journaltitle}{Journal of Geophysical Research: Oceans}
       \field{langid}{english}
       \field{month}{7}
       \field{number}{C7}
-      \field{title}{Antarctic Sea Ice Variability and Trends, 1979--2006}
+      \field{shortjournal}{J. Geophys. Res.}
+      \field{title}{Antarctic Sea Ice Variability and Trends, 1979–2006}
       \field{urlday}{27}
       \field{urlmonth}{11}
       \field{urlyear}{2025}
       \field{volume}{113}
       \field{year}{2008}
+      \field{dateera}{ce}
       \field{urldateera}{ce}
       \field{pages}{2007JC004564}
       \range{pages}{-1}
       \verb{doi}
       \verb 10.1029/2007JC004564
+      \endverb
+      \verb{urlraw}
+      \verb https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2007JC004564
+      \endverb
+      \verb{url}
+      \verb https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2007JC004564
       \endverb
     \endentry
     \entry{comisoSatelliteRemoteSensing1991}{article}{}{}
@@ -569,21 +650,29 @@
       \field{journaltitle}{Journal of Marine Systems}
       \field{langid}{english}
       \field{month}{8}
-      \field{number}{3-4}
+      \field{number}{3--4}
+      \field{shortjournal}{Journal of Marine Systems}
       \field{title}{Satellite Remote Sensing of the {{Polar Oceans}}}
       \field{urlday}{24}
       \field{urlmonth}{11}
       \field{urlyear}{2025}
       \field{volume}{2}
       \field{year}{1991}
+      \field{dateera}{ce}
       \field{urldateera}{ce}
       \field{pages}{395\bibrangedash 434}
       \range{pages}{40}
       \verb{doi}
       \verb 10.1016/0924-7963(91)90044-U
       \endverb
+      \verb{urlraw}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/092479639190044U
+      \endverb
+      \verb{url}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/092479639190044U
+      \endverb
     \endentry
-    \entry{daszykowskiMatlabCodeOPTICS2002}{misc}{}{}
+    \entry{daszykowskiMatlabCodeOPTICS2002}{online}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=f9f587e329811632f7b36be4c4da63b0}{%
            family={Daszykowski},
@@ -591,9 +680,6 @@
            given={Michal},
            giveni={M\bibinitperiod},
            givenun=0}}%
-      }
-      \list{publisher}{1}{%
-        {Unpublished}%
       }
       \strng{namehash}{f9f587e329811632f7b36be4c4da63b0}
       \strng{fullhash}{f9f587e329811632f7b36be4c4da63b0}
@@ -611,14 +697,22 @@
       \field{labeltitlesource}{title}
       \field{eprinttype}{Unpublished}
       \field{langid}{english}
+      \field{pubstate}{prepublished}
       \field{title}{Matlab Code for {{OPTICS}}}
       \field{urlday}{19}
       \field{urlmonth}{12}
       \field{urlyear}{2025}
       \field{year}{2002}
+      \field{dateera}{ce}
       \field{urldateera}{ce}
       \verb{doi}
       \verb 10.13140/RG.2.1.3998.3843
+      \endverb
+      \verb{urlraw}
+      \verb https://www.researchgate.net/doi/10.13140/RG.2.1.3998.3843
+      \endverb
+      \verb{url}
+      \verb https://www.researchgate.net/doi/10.13140/RG.2.1.3998.3843
       \endverb
     \endentry
     \entry{deemsLidarMeasurementSnow2013}{article}{}{}
@@ -661,6 +755,7 @@
       \field{journaltitle}{Journal of Glaciology}
       \field{langid}{english}
       \field{number}{215}
+      \field{shortjournal}{J. Glaciol.}
       \field{shorttitle}{Lidar Measurement of Snow Depth}
       \field{title}{Lidar Measurement of Snow Depth: A Review}
       \field{urlday}{9}
@@ -668,6 +763,7 @@
       \field{urlyear}{2025}
       \field{volume}{59}
       \field{year}{2013}
+      \field{dateera}{ce}
       \field{urldateera}{ce}
       \field{pages}{467\bibrangedash 479}
       \range{pages}{13}
@@ -675,7 +771,13 @@
       \verb 10.3189/2013JoG12J154
       \endverb
       \verb{file}
-      \verb C:\Users\dseph\Zotero\storage\S92942J2\Deems et al. - 2013 - Lidar measurement of snow depth a review.pdf
+      \verb /home/dspoultney/Zotero/storage/S92942J2/Deems et al. - 2013 - Lidar measurement of snow depth a review.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.cambridge.org/core/product/identifier/S0022143000204462/type/journal_article
+      \endverb
+      \verb{url}
+      \verb https://www.cambridge.org/core/product/identifier/S0022143000204462/type/journal_article
       \endverb
     \endentry
     \entry{dingemansWaterWavePropagation1997}{book}{}{}
@@ -713,6 +815,7 @@
       \field{series}{Advanced Series on Ocean Engineering}
       \field{title}{Water Wave Propagation over Uneven Bottoms}
       \field{year}{1997}
+      \field{dateera}{ce}
     \endentry
     \entry{dirscherlRemoteSensingIce2020}{article}{}{}
       \name{author}{4}{}{%
@@ -759,17 +862,25 @@
       \field{journaltitle}{Remote Sensing of Environment}
       \field{langid}{english}
       \field{month}{2}
-      \field{title}{Remote Sensing of Ice Motion in {{Antarctica}} -- {{A}} Review}
+      \field{shortjournal}{Remote Sensing of Environment}
+      \field{title}{Remote Sensing of Ice Motion in {{Antarctica}} – {{A}} Review}
       \field{urlday}{23}
       \field{urlmonth}{11}
       \field{urlyear}{2025}
       \field{volume}{237}
       \field{year}{2020}
+      \field{dateera}{ce}
       \field{urldateera}{ce}
       \field{pages}{111595}
       \range{pages}{1}
       \verb{doi}
       \verb 10.1016/j.rse.2019.111595
+      \endverb
+      \verb{urlraw}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/S0034425719306157
+      \endverb
+      \verb{url}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/S0034425719306157
       \endverb
     \endentry
     \entry{doblePancakeIceFormation2003}{article}{}{}
@@ -807,23 +918,31 @@
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{The ice formation resulting from two low temperature events at the Weddell Sea ice edge during April 2000 is presented. Pancake and frazil ice were sampled at seven stations at varying distances from the ice edge. The ice cover was further characterized from above, using helicopter aerial photography, and from below, using a remotely operated vehicle. Previously undescribed two-layer pancake types were observed and classified. A novel pancake growth mechanism is introduced to account for these, involving the washing of frazil ice over the pancake top surface and its subsequent freezing. The process was directly observed in ice tank experiments. Layer thicknesses seen in the field were compared to the ice growth that would occur both under calm conditions and from free-surface frazil ice growth. Classical, bottom accretion, pancake growth was found to proceed at a rate similar to that of thin congelation ice. Top-layer growth was more rapid, at approximately double the congelation rate. Overall ice volume production was similar to congelation ice for the thin pancakes considered ({$\sim$}20 cm), though subsequent thickening was expected to be faster as the rapid top-layer process continued and the equivalent congelation growth slowed. It is suggested that parameterization of this new process is important for models that aim to simulate the rapid advance and thickening of wave-influenced ice covers.}
+      \field{abstract}{The ice formation resulting from two low temperature events at the Weddell Sea ice edge during April 2000 is presented. Pancake and frazil ice were sampled at seven stations at varying distances from the ice edge. The ice cover was further characterized from above, using helicopter aerial photography, and from below, using a remotely operated vehicle. Previously undescribed two‐layer pancake types were observed and classified. A novel pancake growth mechanism is introduced to account for these, involving the washing of frazil ice over the pancake top surface and its subsequent freezing. The process was directly observed in ice tank experiments. Layer thicknesses seen in the field were compared to the ice growth that would occur both under calm conditions and from free‐surface frazil ice growth. Classical, bottom accretion, pancake growth was found to proceed at a rate similar to that of thin congelation ice. Top‐layer growth was more rapid, at approximately double the congelation rate. Overall ice volume production was similar to congelation ice for the thin pancakes considered (∼20 cm), though subsequent thickening was expected to be faster as the rapid top‐layer process continued and the equivalent congelation growth slowed. It is suggested that parameterization of this new process is important for models that aim to simulate the rapid advance and thickening of wave‐influenced ice covers.}
       \field{issn}{0148-0227}
       \field{journaltitle}{Journal of Geophysical Research: Oceans}
       \field{langid}{english}
       \field{month}{7}
       \field{number}{C7}
+      \field{shortjournal}{J. Geophys. Res.}
       \field{title}{Pancake Ice Formation in the {{Weddell Sea}}}
       \field{urlday}{9}
       \field{urlmonth}{4}
       \field{urlyear}{2024}
       \field{volume}{108}
       \field{year}{2003}
+      \field{dateera}{ce}
       \field{urldateera}{ce}
       \field{pages}{2002JC001373}
       \range{pages}{-1}
       \verb{doi}
       \verb 10.1029/2002JC001373
+      \endverb
+      \verb{urlraw}
+      \verb https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2002JC001373
+      \endverb
+      \verb{url}
+      \verb https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2002JC001373
       \endverb
     \endentry
     \entry{dozierEstimationPropertiesAlpine1989}{article}{}{}
@@ -853,17 +972,25 @@
       \field{journaltitle}{Advances in Space Research}
       \field{langid}{english}
       \field{number}{1}
+      \field{shortjournal}{Advances in Space Research}
       \field{title}{Estimation of Properties of Alpine Snow from Landsat Thematic Mapper}
       \field{urlday}{2}
       \field{urlmonth}{12}
       \field{urlyear}{2025}
       \field{volume}{9}
       \field{year}{1989}
+      \field{dateera}{ce}
       \field{urldateera}{ce}
       \field{pages}{207\bibrangedash 215}
       \range{pages}{9}
       \verb{doi}
       \verb 10.1016/0273-1177(89)90487-0
+      \endverb
+      \verb{urlraw}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/0273117789904870
+      \endverb
+      \verb{url}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/0273117789904870
       \endverb
     \endentry
     \entry{eayrsUnderstandingSeasonalCycle2019}{article}{}{}
@@ -919,23 +1046,31 @@
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{Abstract Over the 40-year satellite record, there has been a slight increasing trend in total annual mean Antarctic sea ice extent of approximately 1.5\% per decade that is made up of the sum of significantly larger opposing regional trends. However, record increases in total Antarctic sea ice extent were observed during 2012--2014, followed by record lows (for the satellite era) through 2018. There is still no consensus on the main drivers of these trends, but it is generally believed that the atmosphere plays a significant role and that seasonal time scales and regional scale processes are important. Despite considerable yearly and regional variability, the mean seasonal cycle of growth and melt of Antarctic sea ice is strikingly consistent, with a slow growth but fast melt season. If we are to project trends in Antarctic sea ice and understand changes on longer time scales, we need to understand the mechanisms related to the seasonal cycle separately from those that drive variability. Twice-yearly changes in the position and intensity of the zonal winds circling Antarctica are thought to drive the system by working with or against the evolving sea ice edge to slow the autumn advance and hasten the spring melt. Open water regions, created by divergence associated with the zonal winds, amplify the spring melt through increased warming of the upper ocean. Climate models fail to accurately reproduce mean Antarctic sea ice extent and overestimate its year-to-year variability, but they tend to capture the pattern and timing of the Antarctic seasonal cycle. , Plain Language Summary Antarctic sea ice extent has been observed daily from satellites over the last 40 years. Compared to the Arctic, there has been little overall change in Antarctic sea ice cover over this time. However, the slightly increasing trend masks substantial interannual and regional variability, and recent years have seen record increases (2012--2014) followed by record lows (through 2018). Despite this variability, the pattern of growth and melt of total Antarctic sea ice shows a consistent, asymmetric cycle with slow growth but rapid melt periods. The presence of many individual storms around the continent gives rise to a band of low pressure that circles the continent, and this low-pressure band marks a boundary between westerlies to the north and easterlies to the south. Twice-yearly changes in the position and intensity of these zonal winds work with or against the evolving ice edge to slow the autumn advance and hasten the spring retreat. Open water areas created in the spring lead to increased warming of the upper ocean, which also acts to speed up the spring retreat. On the whole, climate models tend to capture the pattern and timing, but not the magnitude, of the Antarctic seasonal cycle. , Key Points Antarctic sea ice has a remarkably consistent, asymmetric annual cycle, despite substantial interannual variability Zonal winds work with or against the evolving position of the ice edge, and ice-ocean albedo feedback amplifies the sea ice seasonal cycle Climate models tend to capture the pattern and timing of the Antarctic seasonal cycle but not the magnitude}
+      \field{abstract}{Abstract Over the 40‐year satellite record, there has been a slight increasing trend in total annual mean Antarctic sea ice extent of approximately 1.5\% per decade that is made up of the sum of significantly larger opposing regional trends. However, record increases in total Antarctic sea ice extent were observed during 2012–2014, followed by record lows (for the satellite era) through 2018. There is still no consensus on the main drivers of these trends, but it is generally believed that the atmosphere plays a significant role and that seasonal time scales and regional scale processes are important. Despite considerable yearly and regional variability, the mean seasonal cycle of growth and melt of Antarctic sea ice is strikingly consistent, with a slow growth but fast melt season. If we are to project trends in Antarctic sea ice and understand changes on longer time scales, we need to understand the mechanisms related to the seasonal cycle separately from those that drive variability. Twice‐yearly changes in the position and intensity of the zonal winds circling Antarctica are thought to drive the system by working with or against the evolving sea ice edge to slow the autumn advance and hasten the spring melt. Open water regions, created by divergence associated with the zonal winds, amplify the spring melt through increased warming of the upper ocean. Climate models fail to accurately reproduce mean Antarctic sea ice extent and overestimate its year‐to‐year variability, but they tend to capture the pattern and timing of the Antarctic seasonal cycle. , Plain Language Summary Antarctic sea ice extent has been observed daily from satellites over the last 40 years. Compared to the Arctic, there has been little overall change in Antarctic sea ice cover over this time. However, the slightly increasing trend masks substantial interannual and regional variability, and recent years have seen record increases (2012–2014) followed by record lows (through 2018). Despite this variability, the pattern of growth and melt of total Antarctic sea ice shows a consistent, asymmetric cycle with slow growth but rapid melt periods. The presence of many individual storms around the continent gives rise to a band of low pressure that circles the continent, and this low‐pressure band marks a boundary between westerlies to the north and easterlies to the south. Twice‐yearly changes in the position and intensity of these zonal winds work with or against the evolving ice edge to slow the autumn advance and hasten the spring retreat. Open water areas created in the spring lead to increased warming of the upper ocean, which also acts to speed up the spring retreat. On the whole, climate models tend to capture the pattern and timing, but not the magnitude, of the Antarctic seasonal cycle. , Key Points Antarctic sea ice has a remarkably consistent, asymmetric annual cycle, despite substantial interannual variability Zonal winds work with or against the evolving position of the ice edge, and ice‐ocean albedo feedback amplifies the sea ice seasonal cycle Climate models tend to capture the pattern and timing of the Antarctic seasonal cycle but not the magnitude}
       \field{issn}{8755-1209, 1944-9208}
       \field{journaltitle}{Reviews of Geophysics}
       \field{langid}{english}
       \field{month}{9}
       \field{number}{3}
-      \field{title}{Understanding the {{Seasonal Cycle}} of {{Antarctic Sea Ice Extent}} in the {{Context}} of {{Longer}}-{{Term Variability}}}
+      \field{shortjournal}{Reviews of Geophysics}
+      \field{title}{Understanding the {{Seasonal Cycle}} of {{Antarctic Sea Ice Extent}} in the {{Context}} of {{Longer}}‐{{Term Variability}}}
       \field{urlday}{25}
       \field{urlmonth}{11}
       \field{urlyear}{2025}
       \field{volume}{57}
       \field{year}{2019}
+      \field{dateera}{ce}
       \field{urldateera}{ce}
       \field{pages}{1037\bibrangedash 1064}
       \range{pages}{28}
       \verb{doi}
       \verb 10.1029/2018RG000631
+      \endverb
+      \verb{urlraw}
+      \verb https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2018RG000631
+      \endverb
+      \verb{url}
+      \verb https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2018RG000631
       \endverb
     \endentry
     \entry{esterDensityBasedAlgorithmDiscovering1996}{inproceedings}{}{}
@@ -981,18 +1116,26 @@
       \field{labeltitlesource}{title}
       \field{abstract}{Clustering algorithms are attractive for the task of class identification in spatial databases. However, the application to large spatial databases rises the following requirements for clustering algorithms: minimal requirements of domain knowledge to determine the input parameters, discovery of clusters with arbitrary shape and good efficiency on large databases. The well-known clustering algorithms offer no solution to the combination of these requirements. In this paper, we present the new clustering algorithm DBSCAN relying on a density-based notion of clusters which is designed to discover clusters of arbitrary shape. DBSCAN requires only one input parameter and supports the user in determining an appropriate value for it. We performed an experimental evaluation of the effectiveness and efficiency of DBSCAN using synthetic data and real data of the SEQUOIA 2000 benchmark. The results of our experiments demonstrate that (1) DBSCAN is significantly more effective in discovering clusters of arbitrary shape than the well-known algorithm CLAR-ANS, and that (2) DBSCAN outperforms CLARANS by a factor of more than 100 in terms of efficiency.}
       \field{annotation}{ADS Bibcode: 1996kddm.conf..226E}
-      \field{booktitle}{Second {{International Conference}} on {{Knowledge Discovery}} and {{Data Mining}} ({{KDD}}'96). {{Proceedings}} of a Conference Held {{August}} 2-4}
+      \field{day}{1}
+      \field{eventtitle}{Second {{International Conference}} on {{Knowledge Discovery}} and {{Data Mining}} ({{KDD}}'96). {{Proceedings}} of a Conference Held {{August}} 2-4}
       \field{month}{1}
       \field{title}{A {{Density-Based Algorithm}} for {{Discovering Clusters}} in {{Large Spatial Databases}} with {{Noise}}}
       \field{urlday}{1}
       \field{urlmonth}{8}
       \field{urlyear}{2025}
       \field{year}{1996}
+      \field{dateera}{ce}
       \field{urldateera}{ce}
       \field{pages}{226\bibrangedash 331}
       \range{pages}{106}
       \verb{file}
-      \verb C:\Users\dseph\Zotero\storage\5AKCS2VI\Ester et al. - 1996 - A Density-Based Algorithm for Discovering Clusters in Large Spatial Databases with Noise.pdf
+      \verb /home/dspoultney/Zotero/storage/5AKCS2VI/Ester et al. - 1996 - A Density-Based Algorithm for Discovering Clusters in Large Spatial Databases with Noise.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://ui.adsabs.harvard.edu/abs/1996kddm.conf..226E
+      \endverb
+      \verb{url}
+      \verb https://ui.adsabs.harvard.edu/abs/1996kddm.conf..226E
       \endverb
       \keyw{Arbitrary Shape of Clusters,Clustering Algorithms,Efficiency on Large Spatial Databases,Handling Noise}
     \endentry
@@ -1031,6 +1174,7 @@
       \field{langid}{english}
       \field{month}{6}
       \field{number}{6}
+      \field{shortjournal}{Commun. ACM}
       \field{shorttitle}{Random Sample Consensus}
       \field{title}{Random Sample Consensus: A Paradigm for Model Fitting with Applications to Image Analysis and Automated Cartography}
       \field{urlday}{16}
@@ -1038,11 +1182,18 @@
       \field{urlyear}{2025}
       \field{volume}{24}
       \field{year}{1981}
+      \field{dateera}{ce}
       \field{urldateera}{ce}
       \field{pages}{381\bibrangedash 395}
       \range{pages}{15}
       \verb{doi}
       \verb 10.1145/358669.358692
+      \endverb
+      \verb{urlraw}
+      \verb https://dl.acm.org/doi/10.1145/358669.358692
+      \endverb
+      \verb{url}
+      \verb https://dl.acm.org/doi/10.1145/358669.358692
       \endverb
     \endentry
     \entry{forlaniBuildingReconstructionVisualization2003}{article}{}{}
@@ -1095,6 +1246,7 @@
       \field{title}{Building Reconstruction and Visualization from Lidar Data}
       \field{volume}{34}
       \field{year}{2003}
+      \field{dateera}{ce}
       \field{pages}{151\bibrangedash 156}
       \range{pages}{6}
     \endentry
@@ -1121,23 +1273,32 @@
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{The sea ice cover of the Southern Ocean undergoes a rapid decrease from mid-November to mid-January. The atmosphere-to-ocean heat flux is insufficient to account for this melting, even in the presence of the high percentage of open water characteristic of the Southern Ocean sea ice. It is estimated that sea-air heat exchange in the 60{$^\circ$} to 70{$^\circ$}S zone can account for roughly 50\% of the required spring heating. The remainder must be supplied by the relatively warm deep water, residing below the Southern Ocean pycnocline. Deep-to-surface water heat flux is accomplished by upwelling of the pycnocline due to the regional Ekman divergence of the surface layer and by cross-pycnocline mixing. It is estimated that the required vertical mixing coefficient for the pycnocline is 1.5 cm 2 /s. This value is considered as realistic in view of the relatively weak pycnocline which is a consequence of low levels of fresh water input to the surface layer. It is suggested that the magnitude of fresh water input is a major factor in determining the degree of seasonality of Southern Ocean sea ice.}
+      \field{abstract}{The sea ice cover of the Southern Ocean undergoes a rapid decrease from mid‐November to mid‐January. The atmosphere‐to‐ocean heat flux is insufficient to account for this melting, even in the presence of the high percentage of open water characteristic of the Southern Ocean sea ice. It is estimated that sea‐air heat exchange in the 60° to 70°S zone can account for roughly 50\% of the required spring heating. The remainder must be supplied by the relatively warm deep water, residing below the Southern Ocean pycnocline. Deep‐to‐surface water heat flux is accomplished by upwelling of the pycnocline due to the regional Ekman divergence of the surface layer and by cross‐pycnocline mixing. It is estimated that the required vertical mixing coefficient for the pycnocline is 1.5 cm 2 /s. This value is considered as realistic in view of the relatively weak pycnocline which is a consequence of low levels of fresh water input to the surface layer. It is suggested that the magnitude of fresh water input is a major factor in determining the degree of seasonality of Southern Ocean sea ice.}
+      \field{day}{20}
       \field{issn}{0148-0227}
       \field{journaltitle}{Journal of Geophysical Research: Oceans}
       \field{langid}{english}
       \field{month}{5}
       \field{number}{C5}
+      \field{shortjournal}{J. Geophys. Res.}
       \field{title}{Seasonality of {{Southern Ocean}} Sea Ice}
       \field{urlday}{25}
       \field{urlmonth}{11}
       \field{urlyear}{2025}
       \field{volume}{86}
       \field{year}{1981}
+      \field{dateera}{ce}
       \field{urldateera}{ce}
       \field{pages}{4193\bibrangedash 4197}
       \range{pages}{5}
       \verb{doi}
       \verb 10.1029/JC086iC05p04193
+      \endverb
+      \verb{urlraw}
+      \verb https://agupubs.onlinelibrary.wiley.com/doi/10.1029/JC086iC05p04193
+      \endverb
+      \verb{url}
+      \verb https://agupubs.onlinelibrary.wiley.com/doi/10.1029/JC086iC05p04193
       \endverb
     \endentry
     \entry{grewalApplicationsKalmanFiltering2010}{article}{}{}
@@ -1173,17 +1334,25 @@
       \field{journaltitle}{IEEE Control Systems}
       \field{month}{6}
       \field{number}{3}
+      \field{shortjournal}{IEEE Control Syst.}
       \field{title}{Applications of {{Kalman Filtering}} in {{Aerospace}} 1960 to the {{Present}} [{{Historical Perspectives}}]}
       \field{urlday}{16}
       \field{urlmonth}{12}
       \field{urlyear}{2025}
       \field{volume}{30}
       \field{year}{2010}
+      \field{dateera}{ce}
       \field{urldateera}{ce}
       \field{pages}{69\bibrangedash 78}
       \range{pages}{10}
       \verb{doi}
       \verb 10.1109/MCS.2010.936465
+      \endverb
+      \verb{urlraw}
+      \verb https://ieeexplore.ieee.org/document/5466132/
+      \endverb
+      \verb{url}
+      \verb https://ieeexplore.ieee.org/document/5466132/
       \endverb
     \endentry
     \entry{harrapOverviewLIDARCollection2010}{article}{}{}
@@ -1219,6 +1388,7 @@
       \field{title}{An Overview of {{LIDAR}}: Collection to Application}
       \field{volume}{2}
       \field{year}{2010}
+      \field{dateera}{ce}
       \field{pages}{1\bibrangedash 9}
       \range{pages}{9}
     \endentry
@@ -1249,6 +1419,7 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Waves in Oceanic and Coastal Waters describes the observation, analysis and prediction of wind-generated waves in the open ocean, in shelf seas, and in coastal regions with islands, channels, tidal flats and inlets, estuaries, fjords and lagoons. Most of this richly illustrated book is devoted to the physical aspects of waves. After introducing observation techniques for waves, both at sea and from space, the book defines the parameters that characterise waves. Using basic statistical and physical concepts, the author discusses the prediction of waves in oceanic and coastal waters, first in terms of generalised observations, and then in terms of the more theoretical framework of the spectral energy balance. He gives the results of established theories and also the direction in which research is developing. The book ends with a description of SWAN (Simulating Waves Nearshore), the preferred computer model of the engineering community for predicting waves in coastal waters.}
+      \field{day}{25}
       \field{edition}{1}
       \field{isbn}{978-0-521-86028-4 978-0-511-61853-6 978-0-521-12995-4}
       \field{month}{1}
@@ -1257,12 +1428,19 @@
       \field{urlmonth}{2}
       \field{urlyear}{2024}
       \field{year}{2007}
+      \field{dateera}{ce}
       \field{urldateera}{ce}
       \verb{doi}
       \verb 10.1017/CBO9780511618536
       \endverb
+      \verb{urlraw}
+      \verb https://www.cambridge.org/core/product/identifier/9780511618536/type/book
+      \endverb
+      \verb{url}
+      \verb https://www.cambridge.org/core/product/identifier/9780511618536/type/book
+      \endverb
     \endentry
-    \entry{huangComprehensiveSurveyPoint2021}{misc}{}{}
+    \entry{huangComprehensiveSurveyPoint2021}{online}{}{}
       \name{author}{4}{}{%
         {{un=0,uniquepart=base,hash=575e7d102e59fbeaccf57563aa017134}{%
            family={Huang},
@@ -1289,9 +1467,6 @@
            giveni={R\bibinitperiod},
            givenun=0}}%
       }
-      \list{publisher}{1}{%
-        {arXiv}%
-      }
       \strng{namehash}{46a2640bcfae918d106b81b06e42deed}
       \strng{fullhash}{c5debf65bbc35986be113ce100914590}
       \strng{fullhashraw}{c5debf65bbc35986be113ce100914590}
@@ -1307,14 +1482,23 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Registration is a transformation estimation problem between two point clouds, which has a unique and critical role in numerous computer vision applications. The developments of optimization-based methods and deep learning methods have improved registration robustness and efficiency. Recently, the combinations of optimization-based and deep learning methods have further improved performance. However, the connections between optimization-based and deep learning methods are still unclear. Moreover, with the recent development of 3D sensors and 3D reconstruction techniques, a new research direction emerges to align cross-source point clouds. This survey conducts a comprehensive survey, including both same-source and cross-source registration methods, and summarize the connections between optimization-based and deep learning methods, to provide further research insight. This survey also builds a new benchmark to evaluate the state-of-the-art registration algorithms in solving cross-source challenges. Besides, this survey summarizes the benchmark data sets and discusses point cloud registration applications across various domains. Finally, this survey proposes potential research directions in this rapidly growing field.}
+      \field{pubstate}{prepublished}
       \field{title}{A Comprehensive Survey on Point Cloud Registration}
       \field{urlday}{18}
       \field{urlmonth}{9}
       \field{urlyear}{2025}
+      \field{version}{2}
       \field{year}{2021}
+      \field{dateera}{ce}
       \field{urldateera}{ce}
       \verb{doi}
       \verb 10.48550/ARXIV.2103.02690
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2103.02690
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2103.02690
       \endverb
       \keyw{Computer Vision and Pattern Recognition (cs.CV),FOS: Computer and information sciences}
     \endentry
@@ -1358,11 +1542,18 @@
       \field{urlmonth}{11}
       \field{urlyear}{2025}
       \field{year}{2013}
+      \field{dateera}{ce}
       \field{urldateera}{ce}
       \field{pages}{17\bibrangedash 46}
       \range{pages}{30}
       \verb{doi}
       \verb 10.1533/9780857097545.1.17
+      \endverb
+      \verb{urlraw}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/B9780857092373500023
+      \endverb
+      \verb{url}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/B9780857092373500023
       \endverb
     \endentry
     \entry{jezekRADARSAT1AntarcticMapping2002}{article}{}{}
@@ -1388,10 +1579,11 @@
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
-      \field{abstract}{Abstract The RADARSAT-1 Antarctic Mapping Project (RAMP) is a collaboration between NASA and the Canadian Space Agency to map Antarctica using synthetic aperture radar (SAR). The first Antarctic Mapping Mission (AMM-1) was successfully completed in October 1997. Data from the acquisition phase of the 1997 campaign have been used to achieve the primary goal of producing the first high-resolution SAR image map of Antarctica. The Modified Antarctic Mapping Mission (MAMM) occurred during the fall of 2000. The acquisition strategy concentrated on collecting highest- resolution RADARSAT-1 data of Antarctica's fast glaciers for change detection and feature-retracking estimates of surface velocity. Additionally, extensive data were acquired for interferometric analysis over the entire viewable region, which extends north of 80.1̊ S latitude. This paper summarizes the goals and strategy behind MAMM. It goes on to discuss ice-sheet margin changes observed on several ice shelves around the continent. Margin changes are documented by comparing AMM-1 and MAMM data with earlier datasets including European Remote-sensing Satellite-1 SAR imagery, Landsat imagery, the Antarctic Digital Database (version 1) coastline and Declassified Intelligence Satellite Photography. Analysis reveals a complex pattern of ice-margin advance and retreat without indicating any systematic behavior in ice-sheet extent about the ice-sheet perimeter.}
+      \field{abstract}{Abstract The RADARSAT-1 Antarctic Mapping Project (RAMP) is a collaboration between NASA and the Canadian Space Agency to map Antarctica using synthetic aperture radar (SAR). The first Antarctic Mapping Mission (AMM-1) was successfully completed in October 1997. Data from the acquisition phase of the 1997 campaign have been used to achieve the primary goal of producing the first high-resolution SAR image map of Antarctica. The Modified Antarctic Mapping Mission (MAMM) occurred during the fall of 2000. The acquisition strategy concentrated on collecting highest- resolution RADARSAT-1 data of Antarctica’s fast glaciers for change detection and feature-retracking estimates of surface velocity. Additionally, extensive data were acquired for interferometric analysis over the entire viewable region, which extends north of 80.1˚ S latitude. This paper summarizes the goals and strategy behind MAMM. It goes on to discuss ice-sheet margin changes observed on several ice shelves around the continent. Margin changes are documented by comparing AMM-1 and MAMM data with earlier datasets including European Remote-sensing Satellite-1 SAR imagery, Landsat imagery, the Antarctic Digital Database (version 1) coastline and Declassified Intelligence Satellite Photography. Analysis reveals a complex pattern of ice-margin advance and retreat without indicating any systematic behavior in ice-sheet extent about the ice-sheet perimeter.}
       \field{issn}{0260-3055, 1727-5644}
       \field{journaltitle}{Annals of Glaciology}
       \field{langid}{english}
+      \field{shortjournal}{Ann. Glaciol.}
       \field{shorttitle}{{{RADARSAT-1 Antarctic Mapping Project}}}
       \field{title}{{{RADARSAT-1 Antarctic Mapping Project}}: Change-Detection and Surface Velocity Campaign}
       \field{urlday}{24}
@@ -1399,11 +1591,18 @@
       \field{urlyear}{2025}
       \field{volume}{34}
       \field{year}{2002}
+      \field{dateera}{ce}
       \field{urldateera}{ce}
       \field{pages}{263\bibrangedash 268}
       \range{pages}{6}
       \verb{doi}
       \verb 10.3189/172756402781818030
+      \endverb
+      \verb{urlraw}
+      \verb https://www.cambridge.org/core/product/identifier/S0260305500256887/type/journal_article
+      \endverb
+      \verb{url}
+      \verb https://www.cambridge.org/core/product/identifier/S0260305500256887/type/journal_article
       \endverb
     \endentry
     \entry{kalmanNewApproachLinear1960}{article}{}{}
@@ -1429,7 +1628,8 @@
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{The classical filtering and prediction problem is re-examined using the Bode-Shannon representation of random processes and the ``state-transition'' method of analysis of dynamic systems. New results are: (1) The formulation and methods of solution of the problem apply without modification to stationary and nonstationary statistics and to growing-memory and infinite-memory filters. (2) A nonlinear difference (or differential) equation is derived for the covariance matrix of the optimal estimation error. From the solution of this equation the co-efficients of the difference (or differential) equation of the optimal linear filter are obtained without further calculations. (3) The filtering problem is shown to be the dual of the noise-free regulator problem. The new method developed here is applied to two well-known problems, confirming and extending earlier results. The discussion is largely self-contained and proceeds from first principles; basic concepts of the theory of random processes are reviewed in the Appendix.}
+      \field{abstract}{The classical filtering and prediction problem is re-examined using the Bode-Shannon representation of random processes and the “state-transition” method of analysis of dynamic systems. New results are: (1) The formulation and methods of solution of the problem apply without modification to stationary and nonstationary statistics and to growing-memory and infinite-memory filters. (2) A nonlinear difference (or differential) equation is derived for the covariance matrix of the optimal estimation error. From the solution of this equation the co-efficients of the difference (or differential) equation of the optimal linear filter are obtained without further calculations. (3) The filtering problem is shown to be the dual of the noise-free regulator problem. The new method developed here is applied to two well-known problems, confirming and extending earlier results. The discussion is largely self-contained and proceeds from first principles; basic concepts of the theory of random processes are reviewed in the Appendix.}
+      \field{day}{1}
       \field{issn}{0021-9223}
       \field{journaltitle}{Journal of Basic Engineering}
       \field{langid}{english}
@@ -1441,6 +1641,7 @@
       \field{urlyear}{2025}
       \field{volume}{82}
       \field{year}{1960}
+      \field{dateera}{ce}
       \field{urldateera}{ce}
       \field{pages}{35\bibrangedash 45}
       \range{pages}{11}
@@ -1448,7 +1649,13 @@
       \verb 10.1115/1.3662552
       \endverb
       \verb{file}
-      \verb C:\Users\dseph\Zotero\storage\SZUNISID\Kalman - 1960 - A New Approach to Linear Filtering and Prediction Problems.pdf
+      \verb /home/dspoultney/Zotero/storage/SZUNISID/Kalman - 1960 - A New Approach to Linear Filtering and Prediction Problems.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://asmedigitalcollection.asme.org/fluidsengineering/article/82/1/35/397706/A-New-Approach-to-Linear-Filtering-and-Prediction
+      \endverb
+      \verb{url}
+      \verb https://asmedigitalcollection.asme.org/fluidsengineering/article/82/1/35/397706/A-New-Approach-to-Linear-Filtering-and-Prediction
       \endverb
     \endentry
     \entry{kedzierskiMethodsLaserScanning2015}{article}{}{}
@@ -1484,17 +1691,25 @@
       \field{journaltitle}{Measurement}
       \field{langid}{english}
       \field{month}{10}
+      \field{shortjournal}{Measurement}
       \field{title}{Methods of Laser Scanning Point Clouds Integration in Precise {{3D}} Building Modelling}
       \field{urlday}{23}
       \field{urlmonth}{12}
       \field{urlyear}{2025}
       \field{volume}{74}
       \field{year}{2015}
+      \field{dateera}{ce}
       \field{urldateera}{ce}
       \field{pages}{221\bibrangedash 232}
       \range{pages}{12}
       \verb{doi}
       \verb 10.1016/j.measurement.2015.07.015
+      \endverb
+      \verb{urlraw}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/S0263224115003504
+      \endverb
+      \verb{url}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/S0263224115003504
       \endverb
     \endentry
     \entry{kennicuttSustainedAntarcticResearch2019}{article}{}{}
@@ -1518,7 +1733,7 @@
            giveni={D\bibinitperiod},
            givenun=0}}%
         {{un=0,uniquepart=base,hash=466233e5b7416ee9e5793170dce1fcfb}{%
-           family={Nj{å}stad},
+           family={Njåstad},
            familyi={N\bibinitperiod},
            given={Birgit},
            giveni={B\bibinitperiod},
@@ -1620,8 +1835,8 @@
            giveni={M\bibinitperiod\bibinitdelim N\bibinitperiod},
            givenun=0}}%
         {{un=0,uniquepart=base,hash=b3e400347576cdccaab640f72712bd37}{%
-           family={{Rogan-Finnemore}},
-           familyi={R\bibinitperiod},
+           family={Rogan-Finnemore},
+           familyi={R\bibinithyphendelim F\bibinitperiod},
            given={Michelle},
            giveni={M\bibinitperiod},
            givenun=0}}%
@@ -1693,6 +1908,7 @@
       \field{langid}{english}
       \field{month}{9}
       \field{number}{1}
+      \field{shortjournal}{One Earth}
       \field{shorttitle}{Sustained {{Antarctic Research}}}
       \field{title}{Sustained {{Antarctic Research}}: {{A}} 21st {{Century Imperative}}}
       \field{urlday}{15}
@@ -1700,11 +1916,18 @@
       \field{urlyear}{2025}
       \field{volume}{1}
       \field{year}{2019}
+      \field{dateera}{ce}
       \field{urldateera}{ce}
       \field{pages}{95\bibrangedash 113}
       \range{pages}{19}
       \verb{doi}
       \verb 10.1016/j.oneear.2019.08.014
+      \endverb
+      \verb{urlraw}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/S259033221930020X
+      \endverb
+      \verb{url}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/S259033221930020X
       \endverb
     \endentry
     \entry{kukkoMobileLaserScanning2013}{thesis}{}{}
@@ -1731,10 +1954,11 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Laser scanning is a surveying technique used for mapping topography, vegetation, urban areas and infrastructure, ice, and other targets of interest. Its application on a terrestrial mobile platform is a promising method for effectively collecting three-dimensional data for complex environments and for producing model information for location-based services necessitating rapidly collected and up-to-date data. Development of mobile laser scanning (MLS) systems for such purposes is presented in this study. Different aspects of this technology were analyzed in laboratory experiments, simulations and field tests, in order to understand their effects on the ranging, intensity and point cloud data, especially in terms of point distribution and accuracy. In order to validate the performance of the developed ROAMER and AKHKA MLS systems, various three-dimensional mapping tasks were performed during an international benchmarking test, as well as in the field in numerous projects. The results showed that the proposed systems can reliably provide accurate data. It has also been shown that the various modalities of the systems allow data acquisition in numerous application scenarios and environments not previously possible. MLS improves the data output compared to terrestrial laser scanning (TLS) and outperforms airborne laser scanning (ALS) in ranging precision and point density. As a result, MLS is well suited to fill the gap between these two previously dominant 3D data acquisition techniques.}
+      \field{day}{21}
       \field{month}{12}
       \field{title}{Mobile Laser Scanning - System Development, Performance and Applications}
-      \field{type}{phdthesis}
       \field{year}{2013}
+      \field{dateera}{ce}
     \endentry
     \entry{landyNumericalExperimentalEvaluation2015}{article}{}{}
       \name{author}{3}{}{%
@@ -1775,12 +1999,14 @@
       \field{journaltitle}{IEEE Transactions on Geoscience and Remote Sensing}
       \field{month}{9}
       \field{number}{9}
+      \field{shortjournal}{IEEE Trans. Geosci. Remote Sensing}
       \field{title}{Numerical and {{Experimental Evaluation}} of {{Terrestrial LiDAR}} for {{Parameterizing Centimeter-Scale Sea Ice Surface Roughness}}}
       \field{urlday}{15}
       \field{urlmonth}{8}
       \field{urlyear}{2025}
       \field{volume}{53}
       \field{year}{2015}
+      \field{dateera}{ce}
       \field{urldateera}{ce}
       \field{pages}{4887\bibrangedash 4898}
       \range{pages}{12}
@@ -1788,7 +2014,13 @@
       \verb 10.1109/TGRS.2015.2412034
       \endverb
       \verb{file}
-      \verb C:\Users\dseph\Zotero\storage\FJR2LDQG\Landy et al. - 2015 - Numerical and Experimental Evaluation of Terrestrial LiDAR for Parameterizing Centimeter-Scale Sea I.pdf
+      \verb /home/dspoultney/Zotero/storage/FJR2LDQG/Landy et al. - 2015 - Numerical and Experimental Evaluation of Terrestrial LiDAR for Parameterizing Centimeter-Scale Sea I.pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://ieeexplore.ieee.org/document/7069263/
+      \endverb
+      \verb{url}
+      \verb http://ieeexplore.ieee.org/document/7069263/
       \endverb
     \endentry
     \entry{lefskyLidarRemoteSensing2002}{article}{}{}
@@ -1836,17 +2068,25 @@
       \field{journaltitle}{BioScience}
       \field{langid}{english}
       \field{number}{1}
+      \field{shortjournal}{BioScience}
       \field{title}{Lidar {{Remote Sensing}} for {{Ecosystem Studies}}}
       \field{urlday}{20}
       \field{urlmonth}{12}
       \field{urlyear}{2025}
       \field{volume}{52}
       \field{year}{2002}
+      \field{dateera}{ce}
       \field{urldateera}{ce}
       \field{pages}{19}
       \range{pages}{1}
       \verb{doi}
       \verb 10.1641/0006-3568(2002)052[0019:LRSFES]2.0.CO;2
+      \endverb
+      \verb{urlraw}
+      \verb https://academic.oup.com/bioscience/article/52/1/19-30/291259
+      \endverb
+      \verb{url}
+      \verb https://academic.oup.com/bioscience/article/52/1/19-30/291259
       \endverb
     \endentry
     \entry{liuVDBSCANVariedDensity2007}{inproceedings}{}{}
@@ -1891,6 +2131,7 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{booktitle}{2007 {{International Conference}} on {{Service Systems}} and {{Service Management}}}
+      \field{eventtitle}{2007 {{International Conference}} on {{Service Systems}} and {{Service Management}}}
       \field{isbn}{978-1-4244-0884-9 978-1-4244-0885-6}
       \field{month}{6}
       \field{shorttitle}{{{VDBSCAN}}}
@@ -1899,6 +2140,7 @@
       \field{urlmonth}{12}
       \field{urlyear}{2025}
       \field{year}{2007}
+      \field{dateera}{ce}
       \field{urldateera}{ce}
       \field{pages}{1\bibrangedash 4}
       \range{pages}{4}
@@ -1906,11 +2148,17 @@
       \verb 10.1109/ICSSSM.2007.4280175
       \endverb
       \verb{file}
-      \verb C:\Users\dseph\Zotero\storage\ATP655IJ\Liu et al. - 2007 - VDBSCAN Varied Density Based Spatial Clustering of Applications with Noise.pdf
+      \verb /home/dspoultney/Zotero/storage/ATP655IJ/Liu et al. - 2007 - VDBSCAN Varied Density Based Spatial Clustering of Applications with Noise.pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://ieeexplore.ieee.org/document/4280175/
+      \endverb
+      \verb{url}
+      \verb http://ieeexplore.ieee.org/document/4280175/
       \endverb
       \keyw{Algorithm design and analysis,Clustering algorithms,Clustering methods,Data analysis,data mining,Data mining,DBSCAN,density-based clustering,Information management,Optical noise,Partitioning algorithms,Shape,Spatial databases,VDBSCAN}
     \endentry
-    \entry{livoxLivoxSDKLivox_ros_driver2025}{misc}{}{}
+    \entry{livoxLivoxSDKLivox_ros_driver2025}{software}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=a48d0a625c75b596b5d5cda61f0a2f4f}{%
            family={{livox}},
@@ -1931,13 +2179,33 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Livox device driver under ros, support Lidar Mid-40, Mid-70, Tele-15, Horizon, Avia.}
+      \field{day}{15}
+      \field{hour}{8}
+      \field{minute}{46}
       \field{month}{12}
+      \field{origday}{8}
+      \field{orighour}{1}
+      \field{origminute}{33}
+      \field{origmonth}{4}
+      \field{origsecond}{49}
+      \field{origtimezone}{Z}
+      \field{origyear}{2019}
+      \field{second}{43}
+      \field{timezone}{Z}
       \field{title}{Livox-{{SDK}}/Livox\_ros\_driver}
       \field{urlday}{18}
       \field{urlmonth}{12}
       \field{urlyear}{2025}
       \field{year}{2025}
+      \field{dateera}{ce}
+      \field{origdateera}{ce}
       \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://github.com/Livox-SDK/livox_ros_driver
+      \endverb
+      \verb{url}
+      \verb https://github.com/Livox-SDK/livox_ros_driver
+      \endverb
       \keyw{livoxtech}
     \endentry
     \entry{lohaniAirborneLiDARTechnology2017}{article}{}{}
@@ -1974,6 +2242,7 @@
       \field{langid}{english}
       \field{month}{12}
       \field{number}{4}
+      \field{shortjournal}{Proc. Natl. Acad. Sci., India, Sect. A Phys. Sci.}
       \field{shorttitle}{Airborne {{LiDAR Technology}}}
       \field{title}{Airborne {{LiDAR Technology}}: {{A Review}} of {{Data Collection}} and {{Processing Systems}}}
       \field{urlday}{16}
@@ -1981,11 +2250,18 @@
       \field{urlyear}{2025}
       \field{volume}{87}
       \field{year}{2017}
+      \field{dateera}{ce}
       \field{urldateera}{ce}
       \field{pages}{567\bibrangedash 579}
       \range{pages}{13}
       \verb{doi}
       \verb 10.1007/s40010-017-0435-9
+      \endverb
+      \verb{urlraw}
+      \verb http://link.springer.com/10.1007/s40010-017-0435-9
+      \endverb
+      \verb{url}
+      \verb http://link.springer.com/10.1007/s40010-017-0435-9
       \endverb
     \endentry
     \entry{maslanikRemoteSensingAntarctica1990}{article}{}{}
@@ -2023,6 +2299,7 @@
       \field{langid}{english}
       \field{month}{6}
       \field{number}{2}
+      \field{shortjournal}{Antartic science}
       \field{shorttitle}{Remote Sensing in {{Antarctica}} and the {{Southern Ocean}}}
       \field{title}{Remote Sensing in {{Antarctica}} and the {{Southern Ocean}}: Applications and Developments}
       \field{urlday}{23}
@@ -2030,11 +2307,18 @@
       \field{urlyear}{2025}
       \field{volume}{2}
       \field{year}{1990}
+      \field{dateera}{ce}
       \field{urldateera}{ce}
       \field{pages}{105\bibrangedash 121}
       \range{pages}{17}
       \verb{doi}
       \verb 10.1017/S0954102090000141
+      \endverb
+      \verb{urlraw}
+      \verb https://www.cambridge.org/core/product/identifier/S0954102090000141/type/journal_article
+      \endverb
+      \verb{url}
+      \verb https://www.cambridge.org/core/product/identifier/S0954102090000141/type/journal_article
       \endverb
     \endentry
     \entry{meierNewEstimatesArctic2013}{article}{}{}
@@ -2072,23 +2356,32 @@
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{Abstract. Visible satellite imagery from the 1964 Nimbus I satellite has been recovered, digitized, and processed to estimate Arctic and Antarctic sea ice extent for September 1964. September is the month when the Arctic sea ice reaches its minimum annual extent and the Antarctic sea ice reaches its maximum. Images from a three-week period were manually analyzed to estimate the location of the ice edge and then composited to obtain a hemispheric estimate. Uncertainties were based on limitations in the image analysis and the variation of the ice cover over the three-week period. The 1964 Antarctic extent is higher than estimates from the 1979--present passive microwave record, but is in accord with previous indications of higher extents during the 1960s. The Arctic 1964 extent is near the 1979--2000 average from the passive microwave record, suggesting relatively stable summer extents during the 1960s and 1970s preceding the downward trend since 1979 and particularly the large decrease in the last decade. These early satellite data put the recently observed record into a longer-term context.}
+      \field{abstract}{Abstract. Visible satellite imagery from the 1964 Nimbus I satellite has been recovered, digitized, and processed to estimate Arctic and Antarctic sea ice extent for September 1964. September is the month when the Arctic sea ice reaches its minimum annual extent and the Antarctic sea ice reaches its maximum. Images from a three-week period were manually analyzed to estimate the location of the ice edge and then composited to obtain a hemispheric estimate. Uncertainties were based on limitations in the image analysis and the variation of the ice cover over the three-week period. The 1964 Antarctic extent is higher than estimates from the 1979–present passive microwave record, but is in accord with previous indications of higher extents during the 1960s. The Arctic 1964 extent is near the 1979–2000 average from the passive microwave record, suggesting relatively stable summer extents during the 1960s and 1970s preceding the downward trend since 1979 and particularly the large decrease in the last decade. These early satellite data put the recently observed record into a longer-term context.}
+      \field{day}{23}
       \field{issn}{1994-0424}
       \field{journaltitle}{The Cryosphere}
       \field{langid}{english}
       \field{month}{4}
       \field{number}{2}
+      \field{shortjournal}{The Cryosphere}
       \field{title}{New Estimates of {{Arctic}} and {{Antarctic}} Sea Ice Extent during {{September}} 1964 from Recovered {{Nimbus I}} Satellite Imagery}
       \field{urlday}{24}
       \field{urlmonth}{11}
       \field{urlyear}{2025}
       \field{volume}{7}
       \field{year}{2013}
+      \field{dateera}{ce}
       \field{urldateera}{ce}
       \field{pages}{699\bibrangedash 705}
       \range{pages}{7}
       \verb{doi}
       \verb 10.5194/tc-7-699-2013
+      \endverb
+      \verb{urlraw}
+      \verb https://tc.copernicus.org/articles/7/699/2013/
+      \endverb
+      \verb{url}
+      \verb https://tc.copernicus.org/articles/7/699/2013/
       \endverb
     \endentry
     \entry{molebnyLaserRadarHistorical2016}{article}{}{}
@@ -2138,23 +2431,32 @@
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
+      \field{day}{28}
       \field{issn}{0091-3286}
       \field{journaltitle}{Optical Engineering}
       \field{langid}{english}
       \field{month}{12}
       \field{number}{3}
+      \field{shortjournal}{Opt. Eng}
       \field{shorttitle}{Laser Radar}
-      \field{title}{Laser Radar: Historical Prospective---from the {{East}} to the {{West}}}
+      \field{title}{Laser Radar: Historical Prospective—from the {{East}} to the {{West}}}
       \field{urlday}{15}
       \field{urlmonth}{12}
       \field{urlyear}{2025}
       \field{volume}{56}
       \field{year}{2016}
+      \field{dateera}{ce}
       \field{urldateera}{ce}
       \field{pages}{031220}
       \range{pages}{1}
       \verb{doi}
       \verb 10.1117/1.OE.56.3.031220
+      \endverb
+      \verb{urlraw}
+      \verb http://opticalengineering.spiedigitallibrary.org/article.aspx?doi=10.1117/1.OE.56.3.031220
+      \endverb
+      \verb{url}
+      \verb http://opticalengineering.spiedigitallibrary.org/article.aspx?doi=10.1117/1.OE.56.3.031220
       \endverb
     \endentry
     \entry{nelsonHowDidWe2013}{article}{}{}
@@ -2180,11 +2482,13 @@
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
+      \field{day}{7}
       \field{issn}{0703-8992, 1712-7971}
+      \field{issue}{sup1}
       \field{journaltitle}{Canadian Journal of Remote Sensing}
       \field{langid}{english}
       \field{month}{6}
-      \field{number}{sup1}
+      \field{shortjournal}{Canadian Journal of Remote Sensing}
       \field{shorttitle}{How Did We Get Here?}
       \field{title}{How Did We Get Here? {{An}} Early History of Forestry Lidar{\textsuperscript{1}}}
       \field{urlday}{9}
@@ -2192,11 +2496,18 @@
       \field{urlyear}{2025}
       \field{volume}{39}
       \field{year}{2013}
+      \field{dateera}{ce}
       \field{urldateera}{ce}
       \field{pages}{S6\bibrangedash S17}
       \range{pages}{-1}
       \verb{doi}
       \verb 10.5589/m13-011
+      \endverb
+      \verb{urlraw}
+      \verb http://www.tandfonline.com/doi/abs/10.5589/m13-011
+      \endverb
+      \verb{url}
+      \verb http://www.tandfonline.com/doi/abs/10.5589/m13-011
       \endverb
     \endentry
     \entry{palmICESat2AtmosphericChannel2021}{article}{}{}
@@ -2264,23 +2575,31 @@
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{Abstract The Advanced Topographic Laser Altimeter System (ATLAS) was launched aboard the Ice Cloud and land-Elevation Satellite-2 (ICESat-2) satellite in September 2018. ATLAS is a single wavelength (532~nm) lidar system designed to acquire high resolution measurements of the earth's surface while also obtaining atmospheric backscatter from molecules, clouds, and aerosols. Because ATLAS is optimized for altimetry, the atmospheric data acquired is unique in many respects and requires non-standard analysis techniques. For example, the high repetition rate laser limits the vertical extent of the profiles to just 14~km and causes atmospheric scattering from above 15~km to be added to the scattering in the lower 0--14~km profile. In addition, the limited vertical range of the acquired profiles renders it difficult to compute the magnitude of the solar background and hinders the application of standard calibration techniques. Despite these limitations, methods have been developed to successfully produce data products that have value to the atmospheric community for cloud and aerosol research and are currently available at the National Snow and Ice Data Center (NSIDC). In this paper we describe the ICESat-2 atmospheric channel and the methods used to process the ATLAS raw photon count data to obtain calibrated backscatter and higher level products such as layer heights and type, blowing snow, column optical depth and apparent surface reflectance. , Plain Language Summary ICESat-2 is a polar orbiting satellite equipped with a high repetition rate laser that fires green pulses of light to earth 10,000 times per second. The main objective of ICESat-2 is the high-resolution measurement of the height of the earth's surface, with emphasis on the change in elevation of ice sheets that cover most of Greenland and Antarctica. In addition to surface elevation, ICESat-2 also obtains information on the vertical structure of the atmosphere including the height and thickness of clouds and aerosols. The atmospheric measurements are important for climate studies and because they extend the data record begun by other earth-orbiting satellite lidars like Cloud-Aerosol Lidar and Infrared Pathfinder Satellite Observations (CALIPSO) which has been acquiring atmospheric data since 2006 and is nearing the end of its life. The creation of a long record of cloud and aerosol observations is very important for detecting changes that may be occurring due to humanity's influence on the climate system. , Key Points ICESat-2 is a satellite lidar that acquires atmospheric backscatter profiles from 0 to 14~km every 280~m along the satellite track The high repetition rate laser creates unusual problems for processing the raw data to higher level data products Products such as calibrated backscatter, cloud and aerosol layer heights, column optical depth and blowing snow are described and shown}
+      \field{abstract}{Abstract The Advanced Topographic Laser Altimeter System (ATLAS) was launched aboard the Ice Cloud and land‐Elevation Satellite‐2 (ICESat‐2) satellite in September 2018. ATLAS is a single wavelength (532~nm) lidar system designed to acquire high resolution measurements of the earth's surface while also obtaining atmospheric backscatter from molecules, clouds, and aerosols. Because ATLAS is optimized for altimetry, the atmospheric data acquired is unique in many respects and requires non‐standard analysis techniques. For example, the high repetition rate laser limits the vertical extent of the profiles to just 14~km and causes atmospheric scattering from above 15~km to be added to the scattering in the lower 0–14~km profile. In addition, the limited vertical range of the acquired profiles renders it difficult to compute the magnitude of the solar background and hinders the application of standard calibration techniques. Despite these limitations, methods have been developed to successfully produce data products that have value to the atmospheric community for cloud and aerosol research and are currently available at the National Snow and Ice Data Center (NSIDC). In this paper we describe the ICESat‐2 atmospheric channel and the methods used to process the ATLAS raw photon count data to obtain calibrated backscatter and higher level products such as layer heights and type, blowing snow, column optical depth and apparent surface reflectance. , Plain Language Summary ICESat‐2 is a polar orbiting satellite equipped with a high repetition rate laser that fires green pulses of light to earth 10,000 times per second. The main objective of ICESat‐2 is the high‐resolution measurement of the height of the earth's surface, with emphasis on the change in elevation of ice sheets that cover most of Greenland and Antarctica. In addition to surface elevation, ICESat‐2 also obtains information on the vertical structure of the atmosphere including the height and thickness of clouds and aerosols. The atmospheric measurements are important for climate studies and because they extend the data record begun by other earth‐orbiting satellite lidars like Cloud‐Aerosol Lidar and Infrared Pathfinder Satellite Observations (CALIPSO) which has been acquiring atmospheric data since 2006 and is nearing the end of its life. The creation of a long record of cloud and aerosol observations is very important for detecting changes that may be occurring due to humanity's influence on the climate system. , Key Points ICESat‐2 is a satellite lidar that acquires atmospheric backscatter profiles from 0 to 14~km every 280~m along the satellite track The high repetition rate laser creates unusual problems for processing the raw data to higher level data products Products such as calibrated backscatter, cloud and aerosol layer heights, column optical depth and blowing snow are described and shown}
       \field{issn}{2333-5084, 2333-5084}
       \field{journaltitle}{Earth and Space Science}
       \field{langid}{english}
       \field{month}{8}
       \field{number}{8}
-      \field{title}{{{ICESat}}-2 {{Atmospheric Channel Description}}, {{Data Processing}} and {{First Results}}}
+      \field{shortjournal}{Earth and Space Science}
+      \field{title}{{{ICESat}}‐2 {{Atmospheric Channel Description}}, {{Data Processing}} and {{First Results}}}
       \field{urlday}{24}
       \field{urlmonth}{11}
       \field{urlyear}{2025}
       \field{volume}{8}
       \field{year}{2021}
+      \field{dateera}{ce}
       \field{urldateera}{ce}
       \field{pages}{e2020EA001470}
       \range{pages}{-1}
       \verb{doi}
       \verb 10.1029/2020EA001470
+      \endverb
+      \verb{urlraw}
+      \verb https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2020EA001470
+      \endverb
+      \verb{url}
+      \verb https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2020EA001470
       \endverb
     \endentry
     \entry{parkinsonSouthernOceanSea2004}{article}{}{}
@@ -2306,12 +2625,13 @@
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
-      \field{abstract}{Early conceptual models and global climate model (GCM) simulations both indicated the likelihood of an enhanced sensitivity to climate change in the polar regions, derived from the positive feedbacks brought about by snow and ice. As GCMs developed, however, the expected enhanced sensitivity has been more robust in the North Polar Region than the South Polar Region. Some recent increased-CO 2 simulations, for instance, show little change in Southern Ocean sea ice extent and thickness and much less warming in the Southern Ocean region than in the sea ice regions of the Northern Hemisphere. Observations show a highly variable Southern Ocean ice cover that decreased significantly in the 1970s but, overall, has increased since the late 1970s. The increases are non-uniform, and in fact decreases occurred in the last three years of the 1979--2002 satellite record highlighted here. Regionally, the positive trends since the late 1970s are strongest in the Ross Sea, while the trends are negative in the Bellingshausen and Amundsen seas, a pattern that appears in greater spatial detail in maps of trends in the length of the sea ice season. These patterns correspond well with patterns of temperature trends, but there is a substantial way to go before they are understood (and can be modelled) in the full context of global change.}
+      \field{abstract}{Early conceptual models and global climate model (GCM) simulations both indicated the likelihood of an enhanced sensitivity to climate change in the polar regions, derived from the positive feedbacks brought about by snow and ice. As GCMs developed, however, the expected enhanced sensitivity has been more robust in the North Polar Region than the South Polar Region. Some recent increased-CO 2 simulations, for instance, show little change in Southern Ocean sea ice extent and thickness and much less warming in the Southern Ocean region than in the sea ice regions of the Northern Hemisphere. Observations show a highly variable Southern Ocean ice cover that decreased significantly in the 1970s but, overall, has increased since the late 1970s. The increases are non-uniform, and in fact decreases occurred in the last three years of the 1979–2002 satellite record highlighted here. Regionally, the positive trends since the late 1970s are strongest in the Ross Sea, while the trends are negative in the Bellingshausen and Amundsen seas, a pattern that appears in greater spatial detail in maps of trends in the length of the sea ice season. These patterns correspond well with patterns of temperature trends, but there is a substantial way to go before they are understood (and can be modelled) in the full context of global change.}
       \field{issn}{0954-1020, 1365-2079}
       \field{journaltitle}{Antarctic Science}
       \field{langid}{english}
       \field{month}{12}
       \field{number}{4}
+      \field{shortjournal}{Antartic science}
       \field{shorttitle}{Southern {{Ocean}} Sea Ice and Its Wider Linkages}
       \field{title}{Southern {{Ocean}} Sea Ice and Its Wider Linkages: Insights Revealed from Models and Observations}
       \field{urlday}{16}
@@ -2319,21 +2639,27 @@
       \field{urlyear}{2025}
       \field{volume}{16}
       \field{year}{2004}
+      \field{dateera}{ce}
       \field{urldateera}{ce}
       \field{pages}{387\bibrangedash 400}
       \range{pages}{14}
       \verb{doi}
       \verb 10.1017/S0954102004002214
       \endverb
+      \verb{urlraw}
+      \verb https://www.cambridge.org/core/product/identifier/S0954102004002214/type/journal_article
+      \endverb
+      \verb{url}
+      \verb https://www.cambridge.org/core/product/identifier/S0954102004002214/type/journal_article
+      \endverb
     \endentry
-    \entry{PcnormalsEstimateNormals}{misc}{}{}
+    \entry{PcnormalsEstimateNormals}{online}{}{}
       \field{sortinit}{P}
       \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{url}
       \field{labeltitlesource}{title}
       \field{abstract}{This MATLAB function returns a matrix that stores a normal for each point in the input ptCloud.}
-      \field{howpublished}{https://www.mathworks.com/help/releases/R2024b/vision/ref/pcnormals.html}
       \field{langid}{english}
       \field{title}{Pcnormals - {{Estimate}} Normals for Point Cloud - {{MATLAB}}}
       \field{urlday}{23}
@@ -2341,7 +2667,13 @@
       \field{urlyear}{2025}
       \field{urldateera}{ce}
       \verb{file}
-      \verb C:\Users\dseph\Zotero\storage\XVZ3KKR9\pcnormals.html
+      \verb /home/dspoultney/Zotero/storage/XVZ3KKR9/pcnormals.html
+      \endverb
+      \verb{urlraw}
+      \verb https://www.mathworks.com/help/releases/R2024b/vision/ref/pcnormals.html
+      \endverb
+      \verb{url}
+      \verb https://www.mathworks.com/help/releases/R2024b/vision/ref/pcnormals.html
       \endverb
     \endentry
     \entry{pettorelliSatelliteRemoteSensing2014}{article}{}{}
@@ -2384,8 +2716,8 @@
            givenun=0}}%
       }
       \name{editor}{1}{}{%
-        {{hash=7524839a252fed7b6df7cd22c0d7edd9}{%
-           family={Milner-Gulland},
+        {{hash=acbf58b28a97af682441c7f31d52db5d}{%
+           family={Milner‐Gulland},
            familyi={M\bibinithyphendelim G\bibinitperiod},
            given={E.J.},
            giveni={E\bibinitperiod}}}%
@@ -2398,22 +2730,23 @@
       \strng{authornamehash}{84eb9693a454255366e254df583f90fb}
       \strng{authorfullhash}{75a627a0cb241d841d5ead246e0b031b}
       \strng{authorfullhashraw}{75a627a0cb241d841d5ead246e0b031b}
-      \strng{editorbibnamehash}{7524839a252fed7b6df7cd22c0d7edd9}
-      \strng{editornamehash}{7524839a252fed7b6df7cd22c0d7edd9}
-      \strng{editorfullhash}{7524839a252fed7b6df7cd22c0d7edd9}
-      \strng{editorfullhashraw}{7524839a252fed7b6df7cd22c0d7edd9}
+      \strng{editorbibnamehash}{acbf58b28a97af682441c7f31d52db5d}
+      \strng{editornamehash}{acbf58b28a97af682441c7f31d52db5d}
+      \strng{editorfullhash}{acbf58b28a97af682441c7f31d52db5d}
+      \strng{editorfullhashraw}{acbf58b28a97af682441c7f31d52db5d}
       \field{sortinit}{P}
       \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
-      \field{abstract}{Summary Habitat loss and degradation, overexploitation, climate change and the spread of invasive species are drastically depleting the Earth's biological diversity, leading to detrimental impacts on ecosystem services and human well-being. Our ability to monitor the state of biodiversity and the impacts of global environmental change on this natural capital is fundamental to designing effective adaptation and mitigation strategies for preventing further loss of biological diversity. This requires the scientific community to assess spatio-temporal changes in the distribution of abiotic conditions (e.g. temperature, rainfall) and in the distribution, structure, composition and functioning of ecosystems. The potential for satellite remote sensing ( SRS ) to provide key data has been highlighted by many researchers, with SRS offering repeatable, standardized and verifiable information on long-term trends in biodiversity indicators. SRS permits one to address questions on scales inaccessible to ground-based methods alone, facilitating the development of an integrated approach to natural resource management, where biodiversity, pressures to biodiversity and consequences of management decisions can all be monitored. Synthesis and applications . Here, we provide an interdisciplinary perspective on the prospects of satellite remote sensing ( SRS ) for ecological applications, reviewing established avenues and highlighting new research and technological developments that have a high potential to make a difference in environmental management. We also discuss current barriers to the ecological application of SRS -based approaches and identify possible ways to overcome some of these limitations. , Here, we provide an interdisciplinary perspective on the prospects of satellite remote sensing ( SRS ) for ecological applications, reviewing established avenues and highlighting new research and technological developments that have a high potential to make a difference in environmental management. We also discuss current barriers to the ecological application of SRS -based approaches and identify possible ways to overcome some of these limitations.}
+      \field{abstract}{Summary Habitat loss and degradation, overexploitation, climate change and the spread of invasive species are drastically depleting the Earth's biological diversity, leading to detrimental impacts on ecosystem services and human well‐being. Our ability to monitor the state of biodiversity and the impacts of global environmental change on this natural capital is fundamental to designing effective adaptation and mitigation strategies for preventing further loss of biological diversity. This requires the scientific community to assess spatio‐temporal changes in the distribution of abiotic conditions (e.g. temperature, rainfall) and in the distribution, structure, composition and functioning of ecosystems. The potential for satellite remote sensing ( SRS ) to provide key data has been highlighted by many researchers, with SRS offering repeatable, standardized and verifiable information on long‐term trends in biodiversity indicators. SRS permits one to address questions on scales inaccessible to ground‐based methods alone, facilitating the development of an integrated approach to natural resource management, where biodiversity, pressures to biodiversity and consequences of management decisions can all be monitored. Synthesis and applications . Here, we provide an interdisciplinary perspective on the prospects of satellite remote sensing ( SRS ) for ecological applications, reviewing established avenues and highlighting new research and technological developments that have a high potential to make a difference in environmental management. We also discuss current barriers to the ecological application of SRS ‐based approaches and identify possible ways to overcome some of these limitations. , Here, we provide an interdisciplinary perspective on the prospects of satellite remote sensing ( SRS ) for ecological applications, reviewing established avenues and highlighting new research and technological developments that have a high potential to make a difference in environmental management. We also discuss current barriers to the ecological application of SRS ‐based approaches and identify possible ways to overcome some of these limitations.}
       \field{issn}{0021-8901, 1365-2664}
       \field{journaltitle}{Journal of Applied Ecology}
       \field{langid}{english}
       \field{month}{8}
       \field{number}{4}
+      \field{shortjournal}{Journal of Applied Ecology}
       \field{shorttitle}{Satellite Remote Sensing for Applied Ecologists}
       \field{title}{Satellite Remote Sensing for Applied Ecologists: Opportunities and Challenges}
       \field{urlday}{24}
@@ -2421,11 +2754,18 @@
       \field{urlyear}{2025}
       \field{volume}{51}
       \field{year}{2014}
+      \field{dateera}{ce}
       \field{urldateera}{ce}
       \field{pages}{839\bibrangedash 848}
       \range{pages}{10}
       \verb{doi}
       \verb 10.1111/1365-2664.12261
+      \endverb
+      \verb{urlraw}
+      \verb https://besjournals.onlinelibrary.wiley.com/doi/10.1111/1365-2664.12261
+      \endverb
+      \verb{url}
+      \verb https://besjournals.onlinelibrary.wiley.com/doi/10.1111/1365-2664.12261
       \endverb
     \endentry
     \entry{rajSurveyLiDARScanning2020}{article}{}{}
@@ -2476,17 +2816,20 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{In recent years, light detection and ranging (LiDAR) technology has gained huge popularity in various applications such as navigation, robotics, remote sensing, and advanced driving assistance systems (ADAS). This popularity is mainly due to the improvements in LiDAR performance in terms of range detection, accuracy, power consumption, as well as physical features such as dimension and weight. Although a number of literatures on LiDAR technology have been published earlier, not many has been reported on the state-of-the-art LiDAR scanning mechanisms. The aim of this article is to review the scanning mechanisms employed in LiDAR technology from past research works to the current commercial products. The review highlights four commonly used mechanisms in LiDAR systems: Opto-mechanical, electromechanical, micro-electromechanical systems (MEMS), and solid-state scanning. The study reveals that electro-mechanical scanning is the most prominent technology in use today. The commercially available 1D time of flight (TOF) LiDAR instrument is currently the most attractive option for conversion from 1D to 3D LiDAR system, provided that low scanning rate is not an issue. As for applications with low size, weight, and power (SWaP) requirements, MEMS scanning is found to be the better alternative. MEMS scanning is by far the more matured technology compared to solid-state scanning and is currently given great emphasis to increase its robustness for fulfilling the requirements of ADAS applications. Finally, solid-state LiDAR systems are expected to fill in the gap in ADAS applications despite the low technology readiness in comparison to MEMS scanners. However, since solid-state scanning is believed to have superior robustness, field of view (FOV), and scanning rate potential, great efforts are given by both academics and industries to further develop this technology.}
+      \field{day}{30}
       \field{issn}{2079-9292}
       \field{journaltitle}{Electronics}
       \field{langid}{english}
       \field{month}{4}
       \field{number}{5}
+      \field{shortjournal}{Electronics}
       \field{title}{A {{Survey}} on {{LiDAR Scanning Mechanisms}}}
       \field{urlday}{31}
       \field{urlmonth}{1}
       \field{urlyear}{2025}
       \field{volume}{9}
       \field{year}{2020}
+      \field{dateera}{ce}
       \field{urldateera}{ce}
       \field{pages}{741}
       \range{pages}{1}
@@ -2494,7 +2837,13 @@
       \verb 10.3390/electronics9050741
       \endverb
       \verb{file}
-      \verb C:\Users\dseph\Zotero\storage\NISAYDQS\Raj et al. - 2020 - A Survey on LiDAR Scanning Mechanisms.pdf
+      \verb /home/dspoultney/Zotero/storage/NISAYDQS/Raj et al. - 2020 - A Survey on LiDAR Scanning Mechanisms.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.mdpi.com/2079-9292/9/5/741
+      \endverb
+      \verb{url}
+      \verb https://www.mdpi.com/2079-9292/9/5/741
       \endverb
     \endentry
     \entry{rodriguezClusteringAlgorithmsComparative2019}{article}{}{}
@@ -2567,11 +2916,13 @@
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
+      \field{day}{15}
       \field{issn}{1932-6203}
       \field{journaltitle}{PLOS ONE}
       \field{langid}{english}
       \field{month}{1}
       \field{number}{1}
+      \field{shortjournal}{PLoS ONE}
       \field{shorttitle}{Clustering Algorithms}
       \field{title}{Clustering Algorithms: {{A}} Comparative Approach}
       \field{urlday}{10}
@@ -2579,14 +2930,21 @@
       \field{urlyear}{2025}
       \field{volume}{14}
       \field{year}{2019}
+      \field{dateera}{ce}
       \field{urldateera}{ce}
       \field{pages}{e0210236}
       \range{pages}{-1}
       \verb{doi}
       \verb 10.1371/journal.pone.0210236
       \endverb
+      \verb{urlraw}
+      \verb https://dx.plos.org/10.1371/journal.pone.0210236
+      \endverb
+      \verb{url}
+      \verb https://dx.plos.org/10.1371/journal.pone.0210236
+      \endverb
     \endentry
-    \entry{salmonyPms67AttitudeEstimation2025}{misc}{}{}
+    \entry{salmonyPms67AttitudeEstimation2025}{software}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=497c9f89206cecd0d8bcafd2064ae874}{%
            family={Salmony},
@@ -2610,13 +2968,33 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{MatLAB and Python implementations for 6-DOF IMU attitude estimation using Kalman Filters, Complementary Filters, etc.}
+      \field{day}{14}
+      \field{hour}{8}
+      \field{minute}{36}
       \field{month}{11}
+      \field{origday}{3}
+      \field{orighour}{12}
+      \field{origminute}{45}
+      \field{origmonth}{8}
+      \field{origsecond}{12}
+      \field{origtimezone}{Z}
+      \field{origyear}{2018}
+      \field{second}{6}
+      \field{timezone}{Z}
       \field{title}{Pms67/{{Attitude-Estimation}}}
       \field{urlday}{9}
       \field{urlmonth}{12}
       \field{urlyear}{2025}
       \field{year}{2025}
+      \field{dateera}{ce}
+      \field{origdateera}{ce}
       \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://github.com/pms67/Attitude-Estimation
+      \endverb
+      \verb{url}
+      \verb https://github.com/pms67/Attitude-Estimation
+      \endverb
     \endentry
     \entry{sandruShipborneSeaiceField2021}{inproceedings}{}{}
       \name{author}{3}{}{%
@@ -2661,6 +3039,8 @@
       \field{labeltitlesource}{title}
       \field{abstract}{The increasing interest for autonomous ships has motivated research in numerous areas. One such area is the safe navigation through ice infested waters, for which a sensor instrumentation and automated process are proposed for nearfield, sea-ice 3D scanning and mapping using a ship mounted LiDAR, with attitude compensation from inertial and satellite positioning sensors. Data were collected both at the Aalto Ice Tank laboratory and on board the icebreaker S.A. Agulhas II during its voyage to the Antarctic waters. The implemented process enables automated acquisition of detailed 3D point cloud maps, containing highly valuable information for icy waters going ships currently operated by a human crew and, in the near future, supporting the development of autonomous ships. Compared to other methods using satellite, aerial or underwater data, the proposed method is a more cost-effective and easy to integrate solution into current and future icy waters going ships, thus enabling a higher level of situational awareness.}
       \field{booktitle}{2021 {{IEEE}}/{{RSJ International Conference}} on {{Intelligent Robots}} and {{Systems}} ({{IROS}})}
+      \field{day}{27}
+      \field{eventtitle}{2021 {{IEEE}}/{{RSJ International Conference}} on {{Intelligent Robots}} and {{Systems}} ({{IROS}})}
       \field{isbn}{978-1-6654-1714-3}
       \field{langid}{english}
       \field{month}{9}
@@ -2669,6 +3049,7 @@
       \field{urlmonth}{3}
       \field{urlyear}{2024}
       \field{year}{2021}
+      \field{dateera}{ce}
       \field{urldateera}{ce}
       \field{pages}{4350\bibrangedash 4357}
       \range{pages}{8}
@@ -2676,7 +3057,13 @@
       \verb 10.1109/IROS51168.2021.9636275
       \endverb
       \verb{file}
-      \verb C:\Users\dseph\Zotero\storage\YJ67HT8E\Sandru et al. - 2021 - Shipborne sea-ice field mapping using a LiDAR.pdf
+      \verb /home/dspoultney/Zotero/storage/YJ67HT8E/Sandru et al. - 2021 - Shipborne sea-ice field mapping using a LiDAR.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://ieeexplore.ieee.org/document/9636275/
+      \endverb
+      \verb{url}
+      \verb https://ieeexplore.ieee.org/document/9636275/
       \endverb
     \endentry
     \entry{schutzOverviewICESatMission2005}{article}{}{}
@@ -2726,23 +3113,31 @@
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{The Geoscience Laser Altimeter System (GLAS) on the NASA Ice, Cloud and land Elevation Satellite (ICESat) has provided a view of the Earth in three dimensions with unprecedented accuracy. Although the primary objectives focus on polar ice sheet mass balance, the GLAS measurements, distributed in 15 science data products, have interdisciplinary application to land topography, hydrology, vegetation canopy heights, cloud heights and atmospheric aerosol distributions. Early laser life issues have been mitigated with the adoption of 33-day operation periods, three times per year, designed to document intra- and inter-annual polar ice changes in accordance with mission requirements. A variety of calibration/validation experiments have been executed which show that the elevation products, when fully calibrated, have an accuracy that meets the science requirements. The series of papers in this special ICESat issue demonstrate the utility and quality of the ICESat data.}
+      \field{abstract}{The Geoscience Laser Altimeter System (GLAS) on the NASA Ice, Cloud and land Elevation Satellite (ICESat) has provided a view of the Earth in three dimensions with unprecedented accuracy. Although the primary objectives focus on polar ice sheet mass balance, the GLAS measurements, distributed in 15 science data products, have interdisciplinary application to land topography, hydrology, vegetation canopy heights, cloud heights and atmospheric aerosol distributions. Early laser life issues have been mitigated with the adoption of 33‐day operation periods, three times per year, designed to document intra‐ and inter‐annual polar ice changes in accordance with mission requirements. A variety of calibration/validation experiments have been executed which show that the elevation products, when fully calibrated, have an accuracy that meets the science requirements. The series of papers in this special ICESat issue demonstrate the utility and quality of the ICESat data.}
       \field{issn}{0094-8276, 1944-8007}
       \field{journaltitle}{Geophysical Research Letters}
       \field{langid}{english}
       \field{month}{11}
       \field{number}{21}
+      \field{shortjournal}{Geophysical Research Letters}
       \field{title}{Overview of the {{ICESat Mission}}}
       \field{urlday}{24}
       \field{urlmonth}{11}
       \field{urlyear}{2025}
       \field{volume}{32}
       \field{year}{2005}
+      \field{dateera}{ce}
       \field{urldateera}{ce}
       \field{pages}{2005GL024009}
       \range{pages}{-1}
       \verb{doi}
       \verb 10.1029/2005GL024009
+      \endverb
+      \verb{urlraw}
+      \verb https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2005GL024009
+      \endverb
+      \verb{url}
+      \verb https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2005GL024009
       \endverb
     \endentry
     \entry{shenConceptualModelPancakeice2001}{article}{}{}
@@ -2791,6 +3186,7 @@
       \field{urlyear}{2025}
       \field{volume}{33}
       \field{year}{2001}
+      \field{dateera}{ce}
       \field{urldateera}{ce}
       \field{pages}{361\bibrangedash 367}
       \range{pages}{7}
@@ -2798,7 +3194,13 @@
       \verb 10.3189/172756401781818239
       \endverb
       \verb{file}
-      \verb C:\Users\dseph\Zotero\storage\JBVY7KU3\Shen et al. - 2001 - A conceptual model for pancake-ice formation in a wave field.pdf
+      \verb /home/dspoultney/Zotero/storage/JBVY7KU3/Shen et al. - 2001 - A conceptual model for pancake-ice formation in a wave field.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.cambridge.org/core/journals/annals-of-glaciology/article/conceptual-model-for-pancakeice-formation-in-a-wave-field/8B69904328C690125300DEBB34F46D95
+      \endverb
+      \verb{url}
+      \verb https://www.cambridge.org/core/journals/annals-of-glaciology/article/conceptual-model-for-pancakeice-formation-in-a-wave-field/8B69904328C690125300DEBB34F46D95
       \endverb
     \endentry
     \entry{songEstimatingRelativeAngles2022}{article}{}{}
@@ -2816,8 +3218,8 @@
            giveni={Y\bibinitperiod},
            givenun=0}}%
         {{un=0,uniquepart=base,hash=d9d1c44423eb82cb58f7bb8090fcef12}{%
-           family={{Hsiao-Wecksler}},
-           familyi={H\bibinitperiod},
+           family={Hsiao-Wecksler},
+           familyi={H\bibinithyphendelim W\bibinitperiod},
            given={Elizabeth\bibnamedelima T.},
            giveni={E\bibinitperiod\bibinitdelim T\bibinitperiod},
            givenun=0}}%
@@ -2836,21 +3238,30 @@
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{day}{15}
       \field{issn}{1530-437X, 1558-1748, 2379-9153}
       \field{journaltitle}{IEEE Sensors Journal}
       \field{month}{10}
       \field{number}{20}
+      \field{shortjournal}{IEEE Sensors J.}
       \field{title}{Estimating {{Relative Angles Using Two Inertial Measurement Units Without Magnetometers}}}
       \field{urlday}{16}
       \field{urlmonth}{12}
       \field{urlyear}{2025}
       \field{volume}{22}
       \field{year}{2022}
+      \field{dateera}{ce}
       \field{urldateera}{ce}
       \field{pages}{19688\bibrangedash 19699}
       \range{pages}{12}
       \verb{doi}
       \verb 10.1109/JSEN.2022.3203346
+      \endverb
+      \verb{urlraw}
+      \verb https://ieeexplore.ieee.org/document/9888780/
+      \endverb
+      \verb{url}
+      \verb https://ieeexplore.ieee.org/document/9888780/
       \endverb
     \endentry
     \entry{stewartPlatformSixDegrees1965}{article}{}{}
@@ -2882,17 +3293,25 @@
       \field{langid}{english}
       \field{month}{6}
       \field{number}{1}
+      \field{shortjournal}{Proceedings of the Institution of Mechanical Engineers}
       \field{title}{A {{Platform}} with {{Six Degrees}} of {{Freedom}}}
       \field{urlday}{21}
       \field{urlmonth}{12}
       \field{urlyear}{2025}
       \field{volume}{180}
       \field{year}{1965}
+      \field{dateera}{ce}
       \field{urldateera}{ce}
       \field{pages}{371\bibrangedash 386}
       \range{pages}{16}
       \verb{doi}
       \verb 10.1243/PIME_PROC_1965_180_029_02
+      \endverb
+      \verb{urlraw}
+      \verb https://journals.sagepub.com/doi/10.1243/PIME_PROC_1965_180_029_02
+      \endverb
+      \verb{url}
+      \verb https://journals.sagepub.com/doi/10.1243/PIME_PROC_1965_180_029_02
       \endverb
     \endentry
     \entry{thomsonWavePropagationMarginal2022}{article}{}{}
@@ -2918,19 +3337,22 @@
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
-      \field{abstract}{The propagation of ocean surface waves within the marginal ice zone (MIZ) is a defining phenomenon of this dynamic zone. Over decades of study, a variety of methods have been developed to observe and model wave propagation in the MIZ, with a common focus of determining the attenuation of waves with increasing distance into the MIZ. More recently, studies have begun to explore the consequences of wave attenuation and the coupled processes in the air--ice--ocean--land system. Understanding these coupled processes and effects is essential for accurate high-latitude forecasts. As waves attenuate, their momentum and energy are transferred to the sea ice and upper ocean. This may compact or expand the MIZ, depending on the conditions, while simultaneously modulating the wind work on the system. Wave attenuation is also a key process in coastal dynamics, where land--fast ice has historically protected both natural coasts and coastal infrastructure. With observed trends of increasing wave activity and retreating seasonal ice coverage, the propagation of waves within the MIZ is increasingly important to regional and global climate trends. This article is part of the theme issue `Theory, modelling and observations of marginal ice zone dynamics: multidisciplinary perspectives and outlooks'.}
+      \field{abstract}{The propagation of ocean surface waves within the marginal ice zone (MIZ) is a defining phenomenon of this dynamic zone. Over decades of study, a variety of methods have been developed to observe and model wave propagation in the MIZ, with a common focus of determining the attenuation of waves with increasing distance into the MIZ. More recently, studies have begun to explore the consequences of wave attenuation and the coupled processes in the air–ice–ocean–land system. Understanding these coupled processes and effects is essential for accurate high-latitude forecasts. As waves attenuate, their momentum and energy are transferred to the sea ice and upper ocean. This may compact or expand the MIZ, depending on the conditions, while simultaneously modulating the wind work on the system. Wave attenuation is also a key process in coastal dynamics, where land–fast ice has historically protected both natural coasts and coastal infrastructure. With observed trends of increasing wave activity and retreating seasonal ice coverage, the propagation of waves within the MIZ is increasingly important to regional and global climate trends. This article is part of the theme issue ‘Theory, modelling and observations of marginal ice zone dynamics: multidisciplinary perspectives and outlooks’.}
+      \field{day}{31}
       \field{issn}{1364-503X, 1471-2962}
       \field{journaltitle}{Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences}
       \field{langid}{english}
       \field{month}{10}
       \field{number}{2235}
+      \field{shortjournal}{Phil. Trans. R. Soc. A.}
       \field{shorttitle}{Wave Propagation in the Marginal Ice Zone}
-      \field{title}{Wave Propagation in the Marginal Ice Zone: Connections and Feedback Mechanisms within the Air--Ice--Ocean System}
+      \field{title}{Wave Propagation in the Marginal Ice Zone: Connections and Feedback Mechanisms within the Air–Ice–Ocean System}
       \field{urlday}{26}
       \field{urlmonth}{11}
       \field{urlyear}{2025}
       \field{volume}{380}
       \field{year}{2022}
+      \field{dateera}{ce}
       \field{urldateera}{ce}
       \field{pages}{20210251}
       \range{pages}{1}
@@ -2938,7 +3360,13 @@
       \verb 10.1098/rsta.2021.0251
       \endverb
       \verb{file}
-      \verb C:\Users\dseph\Zotero\storage\BN7ZZ73Y\Thomson - 2022 - Wave propagation in the marginal ice zone connections and feedback mechanisms within the air–ice–oc.pdf
+      \verb /home/dspoultney/Zotero/storage/BN7ZZ73Y/Thomson - 2022 - Wave propagation in the marginal ice zone connections and feedback mechanisms within the air–ice–oc.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://royalsocietypublishing.org/doi/10.1098/rsta.2021.0251
+      \endverb
+      \verb{url}
+      \verb https://royalsocietypublishing.org/doi/10.1098/rsta.2021.0251
       \endverb
     \endentry
     \entry{vichiIndicatorSeaIce2022}{article}{}{}
@@ -2965,23 +3393,32 @@
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{Abstract. Remote-sensing records over the last 40~years have revealed large year-to-year global and regional variability in Antarctic sea ice extent. Sea ice area and extent are useful climatic indicators of large-scale variability, but they do not allow the quantification of regions of distinct variability in sea ice concentration (SIC). This is particularly relevant in the marginal ice zone (MIZ), which is a transitional region between the open ocean and pack ice, where the exchanges between ocean, sea ice and atmosphere are more intense. The MIZ is circumpolar and broader in the Antarctic than in the Arctic. Its extent is inferred from satellite-derived SIC using the 15\,\%--80\,\% range, assumed to be indicative of open drift or partly closed sea ice conditions typical of the ice edge. This proxy has been proven effective in the Arctic, but it is deemed less reliable in the Southern Ocean, where sea ice type is unrelated to the concentration value, since wave penetration and free-drift conditions have been reported with 100\,\% cover. The aim of this paper is to propose an alternative indicator for detecting MIZ conditions in Antarctic sea ice, which can be used to quantify variability at the climatological scale on the ice-covered Southern Ocean over the seasons, as well as to derive maps of probability of encountering a certain degree of variability in the expected monthly SIC value. The proposed indicator is based on statistical properties of the SIC; it has been tested on the available climate data records to derive maps of the MIZ distribution over the year and compared with the threshold-based MIZ definition. The results present a revised view of the circumpolar MIZ variability and seasonal cycle, with a rapid increase in the extent and saturation in winter, as opposed to the steady increase from summer to spring reported in the literature. It also reconciles the discordant MIZ extent estimates using the SIC threshold from different algorithms. This indicator complements the use of the MIZ extent and fraction, allowing the derivation of the climatological probability of exceeding a certain threshold of SIC variability, which can be used for planning observational networks and navigation routes, as well as for detecting changes in the variability when using climatological baselines for different periods.}
+      \field{abstract}{Abstract. Remote-sensing records over the last 40~years have revealed large year-to-year global and regional variability in Antarctic sea ice extent. Sea ice area and extent are useful climatic indicators of large-scale variability, but they do not allow the quantification of regions of distinct variability in sea ice concentration (SIC). This is particularly relevant in the marginal ice zone (MIZ), which is a transitional region between the open ocean and pack ice, where the exchanges between ocean, sea ice and atmosphere are more intense. The MIZ is circumpolar and broader in the Antarctic than in the Arctic. Its extent is inferred from satellite-derived SIC using the 15\,\%–80\,\% range, assumed to be indicative of open drift or partly closed sea ice conditions typical of the ice edge. This proxy has been proven effective in the Arctic, but it is deemed less reliable in the Southern Ocean, where sea ice type is unrelated to the concentration value, since wave penetration and free-drift conditions have been reported with 100\,\% cover. The aim of this paper is to propose an alternative indicator for detecting MIZ conditions in Antarctic sea ice, which can be used to quantify variability at the climatological scale on the ice-covered Southern Ocean over the seasons, as well as to derive maps of probability of encountering a certain degree of variability in the expected monthly SIC value. The proposed indicator is based on statistical properties of the SIC; it has been tested on the available climate data records to derive maps of the MIZ distribution over the year and compared with the threshold-based MIZ definition. The results present a revised view of the circumpolar MIZ variability and seasonal cycle, with a rapid increase in the extent and saturation in winter, as opposed to the steady increase from summer to spring reported in the literature. It also reconciles the discordant MIZ extent estimates using the SIC threshold from different algorithms. This indicator complements the use of the MIZ extent and fraction, allowing the derivation of the climatological probability of exceeding a certain threshold of SIC variability, which can be used for planning observational networks and navigation routes, as well as for detecting changes in the variability when using climatological baselines for different periods.}
+      \field{day}{10}
       \field{issn}{1994-0424}
       \field{journaltitle}{The Cryosphere}
       \field{langid}{english}
       \field{month}{10}
       \field{number}{10}
+      \field{shortjournal}{The Cryosphere}
       \field{title}{An Indicator of Sea Ice Variability for the {{Antarctic}} Marginal Ice Zone}
       \field{urlday}{15}
       \field{urlmonth}{9}
       \field{urlyear}{2025}
       \field{volume}{16}
       \field{year}{2022}
+      \field{dateera}{ce}
       \field{urldateera}{ce}
       \field{pages}{4087\bibrangedash 4106}
       \range{pages}{20}
       \verb{doi}
       \verb 10.5194/tc-16-4087-2022
+      \endverb
+      \verb{urlraw}
+      \verb https://tc.copernicus.org/articles/16/4087/2022/
+      \endverb
+      \verb{url}
+      \verb https://tc.copernicus.org/articles/16/4087/2022/
       \endverb
     \endentry
     \entry{vichiSCALEWIN22CruiseReport2023}{report}{}{}
@@ -3008,17 +3445,24 @@
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{The SCALE winter 2022 (SCALE-WIN22) cruise was the final component of the SCALE programme (2019-2022), which was run in the framework of the South African National Antarctic Program (SANAP). The SA Agulhas II departed and returned to the Port of Cape Town on 11\textsuperscript{th} -- 31\textsuperscript{st} July 2022, following the Good Hope monitoring line. This report is composed of two documents: Cruise report Appendix (sailing document templates, SCALE code of conduct, and technical notes on the instrumentation) Please use the following guidelines when citing this report:{$<$}br{$>$} {$\bullet$} Expedition, cruise track and overall activities: Vichi M., {$<$}em{$>$}SCALE-WIN22 Cruise Report,{$<$}/em{$>$} 2023, DOI: 10.5281/zenodo.7901530{$<$}br{$>$} {$\bullet$} Specific chapters: [Authors], [Chapter title], Chapter [\#] {$<$}em{$>$}in Vichi M., SCALE-WIN22 Cruise Report, {$<$}/em{$>$}2023, DOI: 10.5281/zenodo.7901530}
+      \field{abstract}{The SCALE winter 2022 (SCALE-WIN22) cruise was the final component of the SCALE programme (2019-2022), which was run in the framework of the South African National Antarctic Program (SANAP). The SA Agulhas II departed and returned to the Port of Cape Town on 11\textsuperscript{th} – 31\textsuperscript{st} July 2022, following the Good Hope monitoring line. This report is composed of two documents: Cruise report Appendix (sailing document templates, SCALE code of conduct, and technical notes on the instrumentation) Please use the following guidelines when citing this report:{$<$}br{$>$} • Expedition, cruise track and overall activities: Vichi M., {$<$}em{$>$}SCALE-WIN22 Cruise Report,{$<$}/em{$>$} 2023, DOI: 10.5281/zenodo.7901530{$<$}br{$>$} • Specific chapters: [Authors], [Chapter title], Chapter [\#] {$<$}em{$>$}in Vichi M., SCALE-WIN22 Cruise Report, {$<$}/em{$>$}2023, DOI: 10.5281/zenodo.7901530}
+      \field{day}{6}
       \field{month}{4}
       \field{title}{{{SCALE-WIN22 Cruise Report}}}
-      \field{type}{techreport}
       \field{urlday}{11}
       \field{urlmonth}{4}
       \field{urlyear}{2024}
       \field{year}{2023}
+      \field{dateera}{ce}
       \field{urldateera}{ce}
       \verb{doi}
       \verb 10.5281/ZENODO.7901530
+      \endverb
+      \verb{urlraw}
+      \verb https://zenodo.org/records/7902557
+      \endverb
+      \verb{url}
+      \verb https://zenodo.org/records/7902557
       \endverb
       \keyw{SA Agulhas II,Southern Ocean}
     \endentry
@@ -3057,21 +3501,30 @@
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{day}{1}
       \field{issn}{1530-437X, 1558-1748, 2379-9153}
       \field{journaltitle}{IEEE Sensors Journal}
       \field{month}{2}
       \field{number}{3}
+      \field{shortjournal}{IEEE Sensors J.}
       \field{title}{Robust {{Error-State Kalman Filter}} for {{Estimating IMU Orientation}}}
       \field{urlday}{13}
       \field{urlmonth}{1}
       \field{urlyear}{2026}
       \field{volume}{21}
       \field{year}{2021}
+      \field{dateera}{ce}
       \field{urldateera}{ce}
       \field{pages}{3561\bibrangedash 3569}
       \range{pages}{9}
       \verb{doi}
       \verb 10.1109/JSEN.2020.3026895
+      \endverb
+      \verb{urlraw}
+      \verb https://ieeexplore.ieee.org/document/9206131/
+      \endverb
+      \verb{url}
+      \verb https://ieeexplore.ieee.org/document/9206131/
       \endverb
     \endentry
     \entry{walshAnalysisArcticSea1979}{article}{}{}
@@ -3108,17 +3561,25 @@
       \field{langid}{english}
       \field{month}{5}
       \field{number}{3}
-      \field{title}{An {{Analysis}} of {{Arctic Sea Ice Fluctuations}}, 1953--77}
+      \field{shortjournal}{J. Phys. Oceanogr.}
+      \field{title}{An {{Analysis}} of {{Arctic Sea Ice Fluctuations}}, 1953–77}
       \field{urlday}{25}
       \field{urlmonth}{11}
       \field{urlyear}{2025}
       \field{volume}{9}
       \field{year}{1979}
+      \field{dateera}{ce}
       \field{urldateera}{ce}
       \field{pages}{580\bibrangedash 591}
       \range{pages}{12}
       \verb{doi}
       \verb 10.1175/1520-0485(1979)009<0580:AAOASI>2.0.CO;2
+      \endverb
+      \verb{urlraw}
+      \verb http://journals.ametsoc.org/doi/10.1175/1520-0485(1979)009<0580:AAOASI>2.0.CO;2
+      \endverb
+      \verb{url}
+      \verb http://journals.ametsoc.org/doi/10.1175/1520-0485(1979)009%3C0580:AAOASI%3E2.0.CO;2
       \endverb
     \endentry
     \entry{wangEvolutionLiDARIts2020}{article}{}{}
@@ -3169,21 +3630,30 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Abstract LiDAR is one of the backbones of the remote sensing methods that acquiring high-density and high-accuracy geo-referenced data about the shape of the Earth and its surface characteristics. This paper elaborated the the evolution of LiDAR technology, the main enterprises and their representative products, by listing the research emphasis and application cases where LiDAR technology is being used nowadays, we can find the characteristics and funtions of LiDAR.the future development of LiDAR will mainly focus on new source of radiation, the integration of multi-sensor system and data fusion, the exploration of new mechanism of LiDAR, some suggestions are also made in domestic development directions of high precision LiDAR system.}
+      \field{day}{1}
       \field{issn}{1755-1307, 1755-1315}
       \field{journaltitle}{IOP Conference Series: Earth and Environmental Science}
       \field{month}{5}
       \field{number}{1}
+      \field{shortjournal}{IOP Conf. Ser.: Earth Environ. Sci.}
       \field{title}{The Evolution of {{LiDAR}} and Its Application in High Precision Measurement}
       \field{urlday}{15}
       \field{urlmonth}{12}
       \field{urlyear}{2025}
       \field{volume}{502}
       \field{year}{2020}
+      \field{dateera}{ce}
       \field{urldateera}{ce}
       \field{pages}{012008}
       \range{pages}{1}
       \verb{doi}
       \verb 10.1088/1755-1315/502/1/012008
+      \endverb
+      \verb{urlraw}
+      \verb https://iopscience.iop.org/article/10.1088/1755-1315/502/1/012008
+      \endverb
+      \verb{url}
+      \verb https://iopscience.iop.org/article/10.1088/1755-1315/502/1/012008
       \endverb
     \endentry
     \entry{wangChallengesOpportunitiesLidar2021}{article}{}{}
@@ -3215,15 +3685,18 @@
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{day}{4}
       \field{issn}{2673-6187}
       \field{journaltitle}{Frontiers in Remote Sensing}
       \field{month}{3}
+      \field{shortjournal}{Front. Remote Sens.}
       \field{title}{Challenges and {{Opportunities}} in {{Lidar Remote Sensing}}}
       \field{urlday}{20}
       \field{urlmonth}{12}
       \field{urlyear}{2025}
       \field{volume}{2}
       \field{year}{2021}
+      \field{dateera}{ce}
       \field{urldateera}{ce}
       \field{pages}{641723}
       \range{pages}{1}
@@ -3231,7 +3704,13 @@
       \verb 10.3389/frsen.2021.641723
       \endverb
       \verb{file}
-      \verb C:\Users\dseph\Zotero\storage\SF5NWTJX\Wang and Menenti - 2021 - Challenges and Opportunities in Lidar Remote Sensing.pdf
+      \verb /home/dspoultney/Zotero/storage/SF5NWTJX/Wang and Menenti - 2021 - Challenges and Opportunities in Lidar Remote Sensing.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.frontiersin.org/articles/10.3389/frsen.2021.641723/full
+      \endverb
+      \verb{url}
+      \verb https://www.frontiersin.org/articles/10.3389/frsen.2021.641723/full
       \endverb
     \endentry
     \entry{warrenOpticalPropertiesIce2019}{article}{}{}
@@ -3257,23 +3736,32 @@
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{The interactions of electromagnetic radiation with ice, and with ice-containing media such as snow and clouds, are determined by the refractive index and absorption coefficient (the `optical constants') of pure ice as functions of wavelength. Bulk reflectance, absorptance and transmittance are further influenced by grain size (for snow), bubbles (for glacier ice and lake ice) and brine inclusions (for sea ice). Radiative transfer models for clouds can also be applied to snow; the important differences in their radiative properties are that clouds are optically thinner and contain smaller ice crystals than snow. Absorption of visible and near-ultraviolet radiation by ice is so weak that absorption of sunlight at these wavelengths in natural snow is dominated by trace amounts of light-absorbing impurities such as dust and soot. In the thermal infrared, ice is moderately absorptive, so snow is nearly a blackbody, with emissivity 98--99\%. The absorption spectrum of liquid water resembles that of ice from the ultraviolet to the mid-infrared. At longer wavelengths they diverge, so microwave emission can be used to detect snowmelt on ice sheets, and to discriminate between sea ice and open water, by remote sensing. Snow and ice are transparent to radio waves, so radar can be used to infer ice-sheet thickness. This article is part of the theme issue `The physics and chemistry of ice: scaffolding across scales, from the viability of life to the formation of planets'.}
+      \field{abstract}{The interactions of electromagnetic radiation with ice, and with ice-containing media such as snow and clouds, are determined by the refractive index and absorption coefficient (the ‘optical constants’) of pure ice as functions of wavelength. Bulk reflectance, absorptance and transmittance are further influenced by grain size (for snow), bubbles (for glacier ice and lake ice) and brine inclusions (for sea ice). Radiative transfer models for clouds can also be applied to snow; the important differences in their radiative properties are that clouds are optically thinner and contain smaller ice crystals than snow. Absorption of visible and near-ultraviolet radiation by ice is so weak that absorption of sunlight at these wavelengths in natural snow is dominated by trace amounts of light-absorbing impurities such as dust and soot. In the thermal infrared, ice is moderately absorptive, so snow is nearly a blackbody, with emissivity 98–99\%. The absorption spectrum of liquid water resembles that of ice from the ultraviolet to the mid-infrared. At longer wavelengths they diverge, so microwave emission can be used to detect snowmelt on ice sheets, and to discriminate between sea ice and open water, by remote sensing. Snow and ice are transparent to radio waves, so radar can be used to infer ice-sheet thickness. This article is part of the theme issue ‘The physics and chemistry of ice: scaffolding across scales, from the viability of life to the formation of planets’.}
+      \field{day}{3}
       \field{issn}{1364-503X, 1471-2962}
       \field{journaltitle}{Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences}
       \field{langid}{english}
       \field{month}{6}
       \field{number}{2146}
+      \field{shortjournal}{Phil. Trans. R. Soc. A.}
       \field{title}{Optical Properties of Ice and Snow}
       \field{urlday}{2}
       \field{urlmonth}{12}
       \field{urlyear}{2025}
       \field{volume}{377}
       \field{year}{2019}
+      \field{dateera}{ce}
       \field{urldateera}{ce}
       \field{pages}{20180161}
       \range{pages}{1}
       \verb{doi}
       \verb 10.1098/rsta.2018.0161
+      \endverb
+      \verb{urlraw}
+      \verb https://royalsocietypublishing.org/doi/10.1098/rsta.2018.0161
+      \endverb
+      \verb{url}
+      \verb https://royalsocietypublishing.org/doi/10.1098/rsta.2018.0161
       \endverb
     \endentry
     \entry{welch1995introduction}{article}{}{}
@@ -3312,6 +3800,7 @@
       \field{labeltitlesource}{title}
       \field{title}{An Introduction to the {{Kalman}} Filter}
       \field{year}{1995}
+      \field{dateera}{ce}
     \endentry
     \entry{williamsWaveIceInteractions2013}{article}{}{}
       \name{author}{5}{}{%
@@ -3364,18 +3853,26 @@
       \field{journaltitle}{Ocean Modelling}
       \field{langid}{english}
       \field{month}{11}
-      \field{shorttitle}{Wave--Ice Interactions in the Marginal Ice Zone. {{Part}} 1}
-      \field{title}{Wave--Ice Interactions in the Marginal Ice Zone. {{Part}} 1: {{Theoretical}} Foundations}
+      \field{shortjournal}{Ocean Modelling}
+      \field{shorttitle}{Wave–Ice Interactions in the Marginal Ice Zone. {{Part}} 1}
+      \field{title}{Wave–Ice Interactions in the Marginal Ice Zone. {{Part}} 1: {{Theoretical}} Foundations}
       \field{urlday}{16}
       \field{urlmonth}{9}
       \field{urlyear}{2025}
       \field{volume}{71}
       \field{year}{2013}
+      \field{dateera}{ce}
       \field{urldateera}{ce}
       \field{pages}{81\bibrangedash 91}
       \range{pages}{11}
       \verb{doi}
       \verb 10.1016/j.ocemod.2013.05.010
+      \endverb
+      \verb{urlraw}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/S1463500313000954
+      \endverb
+      \verb{url}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/S1463500313000954
       \endverb
     \endentry
     \entry{xuComprehensiveSurveyClustering2015}{article}{}{}
@@ -3412,17 +3909,25 @@
       \field{langid}{english}
       \field{month}{6}
       \field{number}{2}
+      \field{shortjournal}{Ann. Data. Sci.}
       \field{title}{A {{Comprehensive Survey}} of {{Clustering Algorithms}}}
       \field{urlday}{10}
       \field{urlmonth}{9}
       \field{urlyear}{2025}
       \field{volume}{2}
       \field{year}{2015}
+      \field{dateera}{ce}
       \field{urldateera}{ce}
       \field{pages}{165\bibrangedash 193}
       \range{pages}{29}
       \verb{doi}
       \verb 10.1007/s40745-015-0040-1
+      \endverb
+      \verb{urlraw}
+      \verb http://link.springer.com/10.1007/s40745-015-0040-1
+      \endverb
+      \verb{url}
+      \verb http://link.springer.com/10.1007/s40745-015-0040-1
       \endverb
     \endentry
     \entry{zakhvatkinaSatelliteSARDatabased2019}{article}{}{}
@@ -3461,11 +3966,13 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{abstract}{A review of the main approaches developed for sea ice classification using satellite imagery is presented. Satellite data are the main and very often only information source for sea ice classification and charting in the remote arctic regions. The main techniques used for ice classification and ice charting in several national ice services are considered. Advantages and disadvantages of various SAR data-based methods for ice classification are analyzed. It is shown that an increase of SAR technical abilities contributes to the enhancement of sea ice classification reliability. The possible further development of satellite data-based methods for ice classification is discussed.}
+      \field{day}{31}
       \field{issn}{2076-3263}
       \field{journaltitle}{Geosciences}
       \field{langid}{english}
       \field{month}{3}
       \field{number}{4}
+      \field{shortjournal}{Geosciences}
       \field{shorttitle}{Satellite {{SAR Data-based Sea Ice Classification}}}
       \field{title}{Satellite {{SAR Data-based Sea Ice Classification}}: {{An Overview}}}
       \field{urlday}{24}
@@ -3473,11 +3980,18 @@
       \field{urlyear}{2025}
       \field{volume}{9}
       \field{year}{2019}
+      \field{dateera}{ce}
       \field{urldateera}{ce}
       \field{pages}{152}
       \range{pages}{1}
       \verb{doi}
       \verb 10.3390/geosciences9040152
+      \endverb
+      \verb{urlraw}
+      \verb https://www.mdpi.com/2076-3263/9/4/152
+      \endverb
+      \verb{url}
+      \verb https://www.mdpi.com/2076-3263/9/4/152
       \endverb
     \endentry
   \enddatalist

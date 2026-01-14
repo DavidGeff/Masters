@@ -7,27 +7,25 @@
 \label{ch:appendix}
 
 %====================================================
-\section{De-Noising and Motion Compensation}
+\section{Sensor Characterisation}
 \label{sec:chA.section1}
 
-\textbf{10° Sweep Test:}
-
 %----------------------------------------------------
-%\begin{figure}[H]
-%    \centering
-%    \includegraphics[width=0.6\textwidth]{figs/ekf_roll_10.png}
-%    \caption{\textbf{EKF roll}}
-%    \label{fig:ekf_roll_10}
-%\end{figure}
-%----------------------------------------------------
-
-%----------------------------------------------------
-%\begin{figure}[H]
-%    \centering
-%    \includegraphics[width=0.6\textwidth]{figs/ekf_pitch_10.png}
-%    \caption{\textbf{EKF pitch}}
-%    \label{fig:ekf_pitch_10}
-%\end{figure}
+\begin{figure}[H]
+\centering
+\begin{minipage}{.5\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{figs/A1.png}
+  \caption{\textbf{Target A Reconstruction, 1 Frame}}
+  \label{fig:A10Mesh}
+\end{minipage}%
+\begin{minipage}{.5\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{figs/B1.png}
+  \caption{\textbf{Target B Reconstruction, 1 Frame}}
+  \label{fig:B15Mesh}
+\end{minipage}
+\end{figure}
 %----------------------------------------------------
 
 %----------------------------------------------------
@@ -35,13 +33,38 @@
 \centering
 \begin{minipage}{.5\textwidth}
   \centering
-  \includegraphics[width=\linewidth]{figs/ekf_roll_10.png}
+  \includegraphics[width=\linewidth]{figs/C1.png}
+  \caption{\textbf{Target C Reconstruction, 1 Frame}}
+  \label{fig:C15Mesh}
+\end{minipage}%
+\begin{minipage}{.5\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{figs/D1.png}
+  \caption{\textbf{Target D Reconstruction, 1 Frame}}
+  \label{fig:D10Mesh}
+\end{minipage}
+\end{figure}
+%----------------------------------------------------
+
+%====================================================
+\section{De-Noising and Motion Compensation}
+\label{sec:chA.section2}
+
+\textbf{10° Sweep Test:}
+
+
+%----------------------------------------------------
+\begin{figure}[H]
+\centering
+\begin{minipage}{.5\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{figs/kf_roll_10.png}
   \caption{\textbf{KF roll}}
   \label{fig:kf_roll_10}
 \end{minipage}%
 \begin{minipage}{.5\textwidth}
   \centering
-  \includegraphics[width=\linewidth]{figs/ekf_pitch_10.png}
+  \includegraphics[width=\linewidth]{figs/kf_pitch_10.png}
   \caption{\textbf{KF pitch}}
   \label{fig:kf_pitch_10}
 \end{minipage}
@@ -49,57 +72,21 @@
 %----------------------------------------------------
 
 %----------------------------------------------------
-%\begin{figure}[H]
-%    \centering
-%    \includegraphics[width=0.6\textwidth]{figs/imu_roll_10.png}
-%    \caption{\textbf{IMU roll}}
-%    \label{fig:imu_roll_10}
-%\end{figure}
-%----------------------------------------------------
-
-%----------------------------------------------------
-%\begin{figure}[H]
-%    \centering
-%    \includegraphics[width=0.6\textwidth]{figs/imu_pitch_10.png}
-%    \caption{\textbf{IMU pitch}}
-%    \label{fig:imu_pitch_10}
-%\end{figure}
-%----------------------------------------------------
-
-%----------------------------------------------------
 \begin{figure}[H]
 \centering
 \begin{minipage}{.5\textwidth}
   \centering
-  \includegraphics[width=\linewidth]{figs/imu_roll_10.png}
+  \includegraphics[width=\linewidth]{figs/eskf_roll_10.png}
   \caption{\textbf{ESKF roll}}
   \label{fig:eskf_roll_10}
 \end{minipage}%
 \begin{minipage}{.5\textwidth}
   \centering
-  \includegraphics[width=\linewidth]{figs/imu_pitch_10.png}
+  \includegraphics[width=\linewidth]{figs/eskf_pitch_10.png}
   \caption{\textbf{ESKF pitch}}
   \label{fig:eskf_pitch_10}
 \end{minipage}
 \end{figure}
-%----------------------------------------------------
-
-%----------------------------------------------------
-%\begin{figure}[H]
-%    \centering
-%    \includegraphics[width=0.6\textwidth]{figs/vs_roll_10.png}
-%    \caption{\textbf{vs roll}}
-%    \label{fig:vs_roll_10}
-%\end{figure}
-%----------------------------------------------------
-
-%----------------------------------------------------
-%\begin{figure}[H]
-%    \centering
-%    \includegraphics[width=0.6\textwidth]{figs/vs_pitch_10.png}
-%    \caption{\textbf{vs pitch}}
-%    \label{fig:vs_pitch_10}
-%\end{figure}
 %----------------------------------------------------
 
 %----------------------------------------------------
@@ -123,35 +110,17 @@
 \textbf{5° Sweep Test:}
 
 %----------------------------------------------------
-%\begin{figure}[H]
-%    \centering
-%    \includegraphics[width=0.6\textwidth]{figs/ekf_roll_5.png}
-%    \caption{\textbf{EKF roll}}
-%    \label{fig:ekf_roll_5}
-%\end{figure}
-%----------------------------------------------------
-
-%----------------------------------------------------
-%\begin{figure}[H]
-%    \centering
-%    \includegraphics[width=0.6\textwidth]{figs/ekf_pitch_5.png}
-%    \caption{\textbf{EKF pitch}}
-%    \label{fig:ekf_pitch_5}
-%\end{figure}
-%----------------------------------------------------
-
-%----------------------------------------------------
 \begin{figure}[H]
 \centering
 \begin{minipage}{.5\textwidth}
   \centering
-  \includegraphics[width=\linewidth]{figs/ekf_roll_5.png}
+  \includegraphics[width=\linewidth]{figs/kf_roll_5.png}
   \caption{\textbf{KF roll}}
   \label{fig:kf_roll_5}
 \end{minipage}%
 \begin{minipage}{.5\textwidth}
   \centering
-  \includegraphics[width=\linewidth]{figs/ekf_pitch_5.png}
+  \includegraphics[width=\linewidth]{figs/kf_pitch_5.png}
   \caption{\textbf{KF pitch}}
   \label{fig:kf_pitch_5}
 \end{minipage}
@@ -159,57 +128,21 @@
 %----------------------------------------------------
 
 %----------------------------------------------------
-%\begin{figure}[H]
-%    \centering
-%    \includegraphics[width=0.6\textwidth]{figs/imu_roll_5.png}
-%    \caption{\textbf{imu roll}}
-%    \label{fig:imu_roll_5}
-%\end{figure}
-%----------------------------------------------------
-
-%----------------------------------------------------
-%\begin{figure}[H]
-%    \centering
-%    \includegraphics[width=0.6\textwidth]{figs/imu_pitch_5.png}
-%    \caption{\textbf{imu pitch}}
-%    \label{fig:imu_pitch_5}
-%\end{figure}
-%----------------------------------------------------
-
-%----------------------------------------------------
 \begin{figure}[H]
 \centering
 \begin{minipage}{.5\textwidth}
   \centering
-  \includegraphics[width=\linewidth]{figs/imu_roll_5.png}
-  \caption{\textbf{IMU roll}}
-  \label{fig:imu_roll_5}
+  \includegraphics[width=\linewidth]{figs/eskf_roll_5.png}
+  \caption{\textbf{ESKF roll}}
+  \label{fig:eskf_roll_5}
 \end{minipage}%
 \begin{minipage}{.5\textwidth}
   \centering
-  \includegraphics[width=\linewidth]{figs/imu_pitch_5.png}
-  \caption{\textbf{IMU pitch}}
-  \label{fig:imu_pitch_5}
+  \includegraphics[width=\linewidth]{figs/eskf_pitch_5.png}
+  \caption{\textbf{ESKF pitch}}
+  \label{fig:eskf_pitch_5}
 \end{minipage}
 \end{figure}
-%----------------------------------------------------
-
-%----------------------------------------------------
-%\begin{figure}[H]
-%    \centering
-%    \includegraphics[width=0.6\textwidth]{figs/vs_roll_5.png}
-%    \caption{\textbf{vs roll}}
-%    \label{fig:vs_roll_5}
-%\end{figure}
-%----------------------------------------------------
-
-%----------------------------------------------------
-%\begin{figure}[H]
-%    \centering
-%    \includegraphics[width=0.6\textwidth]{figs/vs_pitch_5.png}
-%    \caption{\textbf{vs pitch}}
-%    \label{fig:vs_pitch_5}
-%\end{figure}
 %----------------------------------------------------
 
 %----------------------------------------------------
