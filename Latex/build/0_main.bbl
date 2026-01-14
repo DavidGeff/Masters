@@ -1930,6 +1930,74 @@
       \verb https://linkinghub.elsevier.com/retrieve/pii/S259033221930020X
       \endverb
     \endentry
+    \entry{kimIntroductionKalmanFilter2019}{incollection}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=e0fbaf66e5bb058a7b2161fe0faa2871}{%
+           family={Kim},
+           familyi={K\bibinitperiod},
+           given={Youngjoo},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=01f5cb1ac2762c1cf73c25a8ec0d7742}{%
+           family={Bang},
+           familyi={B\bibinitperiod},
+           given={Hyochoong},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=93c652eae1541f988673af68fa891562}{%
+           family={Govaers},
+           familyi={G\bibinitperiod},
+           given={Felix},
+           giveni={F\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IntechOpen}%
+      }
+      \strng{namehash}{a498e77405cb26618a2e13d1157ab1a5}
+      \strng{fullhash}{a498e77405cb26618a2e13d1157ab1a5}
+      \strng{fullhashraw}{a498e77405cb26618a2e13d1157ab1a5}
+      \strng{bibnamehash}{a498e77405cb26618a2e13d1157ab1a5}
+      \strng{authorbibnamehash}{a498e77405cb26618a2e13d1157ab1a5}
+      \strng{authornamehash}{a498e77405cb26618a2e13d1157ab1a5}
+      \strng{authorfullhash}{a498e77405cb26618a2e13d1157ab1a5}
+      \strng{authorfullhashraw}{a498e77405cb26618a2e13d1157ab1a5}
+      \strng{editorbibnamehash}{93c652eae1541f988673af68fa891562}
+      \strng{editornamehash}{93c652eae1541f988673af68fa891562}
+      \strng{editorfullhash}{93c652eae1541f988673af68fa891562}
+      \strng{editorfullhashraw}{93c652eae1541f988673af68fa891562}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Introduction and {{Implementations}} of the {{Kalman Filter}}}
+      \field{day}{22}
+      \field{isbn}{978-1-83880-536-4 978-1-83880-537-1}
+      \field{langid}{english}
+      \field{month}{5}
+      \field{title}{Introduction to {{Kalman Filter}} and {{Its Applications}}}
+      \field{urlday}{14}
+      \field{urlmonth}{1}
+      \field{urlyear}{2026}
+      \field{year}{2019}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.5772/intechopen.80600
+      \endverb
+      \verb{file}
+      \verb /home/dspoultney/Zotero/storage/C4J9AT8D/Kim and Bang - 2019 - Introduction to Kalman Filter and Its Applications.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.intechopen.com/books/introduction-and-implementations-of-the-kalman-filter/introduction-to-kalman-filter-and-its-applications
+      \endverb
+      \verb{url}
+      \verb https://www.intechopen.com/books/introduction-and-implementations-of-the-kalman-filter/introduction-to-kalman-filter-and-its-applications
+      \endverb
+    \endentry
     \entry{kukkoMobileLaserScanning2013}{thesis}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=16abaaffeed28c3252e7dcd5d2ba9a09}{%
@@ -3763,42 +3831,6 @@
       \verb{url}
       \verb https://royalsocietypublishing.org/doi/10.1098/rsta.2018.0161
       \endverb
-    \endentry
-    \entry{welchIntroductionKalmanFilter1995}{article}{}{}
-      \name{author}{2}{}{%
-        {{un=0,uniquepart=base,hash=19eb8ef0f1cf49ad4375a0a4acc3a385}{%
-           family={Welch},
-           familyi={W\bibinitperiod},
-           given={Greg},
-           giveni={G\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=e4f38e96180c309ad00c07afe4fbac50}{%
-           family={Bishop},
-           familyi={B\bibinitperiod},
-           given={Gary},
-           giveni={G\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{publisher}{1}{%
-        {Chapel Hill, NC, USA}%
-      }
-      \strng{namehash}{124b6b88ade76463f9b17a4f14042fca}
-      \strng{fullhash}{124b6b88ade76463f9b17a4f14042fca}
-      \strng{fullhashraw}{124b6b88ade76463f9b17a4f14042fca}
-      \strng{bibnamehash}{124b6b88ade76463f9b17a4f14042fca}
-      \strng{authorbibnamehash}{124b6b88ade76463f9b17a4f14042fca}
-      \strng{authornamehash}{124b6b88ade76463f9b17a4f14042fca}
-      \strng{authorfullhash}{124b6b88ade76463f9b17a4f14042fca}
-      \strng{authorfullhashraw}{124b6b88ade76463f9b17a4f14042fca}
-      \field{sortinit}{W}
-      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{An Introduction to the {{Kalman}} Filter}
-      \field{year}{1995}
-      \field{dateera}{ce}
     \endentry
     \entry{williamsWaveIceInteractions2013}{article}{}{}
       \name{author}{5}{}{%
