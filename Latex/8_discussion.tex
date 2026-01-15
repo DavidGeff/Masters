@@ -6,6 +6,7 @@
 %====================================================
 \section{Sensor Characterisation}
 \label{sec:ch8.section1}
+%----------------------------------------------------
 
 %----------------------------------------------------
 \subsection{Target Scene Reconstruction}
@@ -38,6 +39,7 @@ The Livox Avia was designed for deployment on stable platforms to directly obser
 %====================================================
 \section{Motion Compensation and De-noising}
 \label{sec:ch8.section2}
+%----------------------------------------------------
 
 %----------------------------------------------------
 \subsection{Motion Compensation}
@@ -56,6 +58,7 @@ The de-noising process effectively removed a significant portion of the noise pr
 %====================================================
 \section{Wave Parameter Estimation}
 \label{sec:ch8.section3}
+%----------------------------------------------------
 
 The wave parameter estimation process produced mostly accurate results. The wave period estimations closely matched the wave probe ground truth data, with all tests producing period estimations within 0.02 s of the probe ground truth values. The amplitude estimations were less consistently accurate, with 4 of the 6 estimations closely matching the probe ground truth values, while 2 tests (tests 4 and 5) produced amplitude estimations greater than the probe ground truth values. The discrepancies in the wave probe amplitude fittings and the set wave maker parameters are likely due to the complex interactions of the generated waves with the ice in the tank and the tank boundaries, leading to deviations from the ideal wave profiles set by the wave makers. However, the wave probe data is still considered the ground truth for this investigation, as it directly measures the water surface elevation at a fixed point in the tank. The inconsistencies in the amplitude estimations are likely due to a combination of the Avia's poor beam divergence and the profile of the created ice floes. The beam divergence can lead to inaccuracies in the reported point locations, which can distort the wave profile. Additionally, the observed surface ice floes created in the wave tank does not correspond perfectly to the underlying water surface profile, leading to discrepancies between the actual wave amplitude recorded by the probe and the wave amplitude inferred from the point cloud data.
 
@@ -66,6 +69,7 @@ These results indicate that while the wave period can be accurately estimated fr
 %====================================================
 \section{Pancake Identification \& Clustering}
 \label{sec:ch8.section4}
+%----------------------------------------------------
 
 Attempts to cluster points and identify pancake floes in scene 1 were unsuccessful. Despite the visible pancake floes in the video footage and relatively consistent point density in the point cloud data, all three algorithms failed to produce meaningful clustering results. This was due to the point density in the scene being too low to clearly resolve individual pancakes, leading to the algorithms being unable to distinguish between separate pancake floes. Additionally, the pancake floes in this scene were closely packed together, creating a lack of clear boundaries between individual floes for the algorithms to identify. This result demonstrates a limitation of the approach taken in this investigation, as the success of the clustering algorithms is heavily dependent on the quality and density of the point cloud data as well as the conditions of the observed scene.
 
@@ -80,9 +84,12 @@ Overall, all three clustering algorithms struggled to consistently identify enti
 
 The point intensities, visible in Figures \ref{fig:660Frame}, \ref{fig:661Frame}, \ref{fig:980Frame}, \ref{fig:981Frame}, \ref{fig:5620Frame} and \ref{fig:5621Frame}, were useful for visually identifying pancake floes in the scenes. The edges of the pancake floes often exhibited higher point intensities, likely due to the ridges and surface geometries present at the pancake boundaries, which reflected more of the \ac{LiDAR} signal back to the sensor. However, these intensity variations were not utilised by any of the clustering algorithms employed in this investigation, which solely relied on spatial point distributions for cluster identification. Incorporating point intensity information into the clustering process could potentially improve pancake floe identification, particularly in regions where a pancake is closely packed with other floes or other ice features.
 
+*mention how non-repetitive scanning pattern leads to irregular density*
+
 %====================================================
 \section{Pipeline/processing recommendations?}
 \label{sec:ch8.section5}
+%----------------------------------------------------
 
 All stages of the processing pipeline developed in this investigation are recommended for future use and development. The motion compensation process effectively reduced large amounts of motion-induced distortions in the \ac{LiDAR} point cloud data, significantly improving the quality of the data for subsequent processing stages. The de-noising process further enhanced the point cloud data by removing noise points, resulting in cleaner and more coherent scene representations. This stage is not recommended for use in all scenarios, as overly aggressive filtering can lead to the removal of valid scene points. The wave parameter estimation process successfully extracted useful wave information from the point cloud data, demonstrating the potential of \ac{LiDAR} sensors for oceanographic applications. However, further validation in more complex and realistic ocean environments is recommended before deployment in real-world scenarios. The pancake identification and clustering stage showed promise, particularly with the \ac{OPTICS} algorithm. However, further refinement and testing are needed to improve the consistency and accuracy of pancake floe identification.
 

@@ -6,6 +6,7 @@
 %====================================================
 \section{Sensor Characterisation}
 \label{sec:ch7.section1}
+%----------------------------------------------------
 
 %----------------------------------------------------
 \subsection{Target Scene Reconstruction}
@@ -185,6 +186,7 @@ The normals estimation process successfully calculated normal vectors for each p
 %====================================================
 \section{Motion Compensation and de-noising}
 \label{sec:ch7.section2}
+%----------------------------------------------------
 
 %----------------------------------------------------
 \subsection{Motion Compensation}
@@ -197,7 +199,9 @@ The two implemented Kalman filters, both produced reasonable roll and pitch angl
 
 When the angle estimates from both filters were used to motion compensate the \ac{LiDAR} point cloud data, both filters produced similar results in terms of reducing motion-induced distortions. Visual inspection of the compensated point clouds indicated that both filters were effective at reducing distortions, with no significant differences in the overall quality of the compensated point clouds. Artefacts and distortions induced by yaw motion, translation and high-frequency vibrations were not addressed by either filter, as expected.
 
-\textbf{10° Sweep Test:}
+%----------------------------------------------------
+\subsubsection{10° Sweep Test}
+\label{subsec:ch7.section2.subsec1.subsubsec1}
 
 %----------------------------------------------------
 \begin{figure}[H]
@@ -227,7 +231,10 @@ When the angle estimates from both filters were used to motion compensate the \a
 %----------------------------------------------------
 
 \newpage
-\textbf{5° Sweep Test:}
+
+%----------------------------------------------------
+\subsubsection{5° Sweep Test}
+\label{subsec:ch7.section2.subsec1.subsubsec2}
 
 %----------------------------------------------------
 \begin{figure}[H]
@@ -297,6 +304,7 @@ As seen in Figures \ref{fig:no_thresh} and \ref{fig:thresh} above, the cone of n
 %====================================================
 \section{Wave Parameter Estimation}
 \label{sec:ch7.section3}
+%----------------------------------------------------
 
 The mean wave magnitude and period were able to be determined with a high degree of confidence from the wave probe data using the MATLAB \emph{curveFitter} tool. All tests produced R-square scores above 0.93, indicating a strong correlation between the fitted model and the raw probe data, as seen in Table \ref{tab:curveFitter}. The wave periods all closely matched the parameters set to the wave makers (1.6 s and 2 s). *this needs to be corrected* However, the amplitudes did not match the set values as closely, the first, second and fifth tests tracked the set values fairly well, while the third, fourth and sixth tests did not. The third and fourth tests fitted amplitudes were significantly lower than the set value of 50 mm, while the sixth test fitted amplitude was marginally higher than the set value of 27.5 mm.
 
@@ -367,24 +375,6 @@ The mean wave magnitude and period were able to be determined with a high degree
 %----------------------------------------------------
 
 %----------------------------------------------------
-%\begin{figure}[H]
-%    \centering
-%    \includegraphics[width=0.6\textwidth]{figs/ransac_amp_truth.png}
-%    \caption{\textbf{Amplitude Estimated}}
-%    \label{fig:amp}
-%\end{figure}
-%----------------------------------------------------
-
-%----------------------------------------------------
-%\begin{figure}[H]
-%    \centering
-%    \includegraphics[width=0.6\textwidth]{figs/ransac_period_truth.png}
-%    \caption{\textbf{Period Estimated}}
-%    \label{fig:period}
-%\end{figure}
-%----------------------------------------------------
-
-%----------------------------------------------------
 \begin{figure}[H]
 \centering
 \begin{minipage}{.5\textwidth}
@@ -431,6 +421,7 @@ To investigate the accuracy of the \ac{RANSAC} wave parameter estimations from l
 %====================================================
 \section{Pancake Identification \& Clustering}
 \label{sec:ch7.section4}
+%----------------------------------------------------
 
 In each scene, the three clustering algorithms were applied to both the single frame and two frames concatenated point cloud targets. The results were then visually inspected to determine if any distinct pancake clusters were identified by each algorithm. The number of points in the two largest or most distinct clusters identified by each algorithm in each scene were recorded for comparison. Any major differences in cluster shapes or distributions were also noted.
 
@@ -439,24 +430,6 @@ In each scene, the three clustering algorithms were applied to both the single f
 \label{subsec:ch7.section4.subsec1}
 
 When visually inspecting the point cloud data and video data from this scene, it was hypothesised that it would be an ideal candidate for clustering due to the visible pancake floes in the video footage and relatively consistent point density in the point cloud data. However, all three algorithms failed to identify distinct pancake clusters in either the single frame or two frame concatenated targets.
-
-%----------------------------------------------------
-%\begin{figure}[H]
-%    \centering
-%    \includegraphics[width=0.5\textwidth]{figs/2290frame.png}
-%    \caption{\textbf{1 Frame Target}}
-%    \label{fig:2290Frame}
-%\end{figure}
-%----------------------------------------------------
-
-%----------------------------------------------------
-%\begin{figure}[H]
-%    \centering
-%    \includegraphics[width=0.5\textwidth]{figs/2291frame.png}
-%    \caption{\textbf{2 Frame Target}}
-%    \label{fig:2291Frame}
-%\end{figure}
-%%----------------------------------------------------
 
 %----------------------------------------------------
 \begin{figure}[H]
@@ -508,24 +481,6 @@ Cluster A is the teal group above the centre and cluster B is the orange group b
 %----------------------------------------------------
 
 %----------------------------------------------------
-%\begin{figure}[H]
-%    \centering
-%    \includegraphics[width=0.5\textwidth]{figs/660frame.png}
-%    \caption{\textbf{1 Frame Target}}
-%    \label{fig:660Frame}
-%\end{figure}
-%----------------------------------------------------
-
-%----------------------------------------------------
-%\begin{figure}[H]
-%    \centering
-%    \includegraphics[width=0.5\textwidth]{figs/660_DB.png}
-%    \caption{\textbf{DBScan}}
-%    \label{fig:clust660DB}
-%\end{figure}
-%----------------------------------------------------
-
-%----------------------------------------------------
 \begin{figure}[H]
 \centering
 \begin{minipage}{.5\textwidth}
@@ -541,24 +496,6 @@ Cluster A is the teal group above the centre and cluster B is the orange group b
   \label{fig:clust660DB}
 \end{minipage}
 \end{figure}
-%----------------------------------------------------
-
-%----------------------------------------------------
-%\begin{figure}[H]
-%    \centering
-%    \includegraphics[width=0.5\textwidth]{figs/660_VDB.png}
-%    \caption{\textbf{VDBScan}}
-%    \label{fig:clust660VDB}
-%\end{figure}
-%----------------------------------------------------
-
-%----------------------------------------------------
-%\begin{figure}[H]
-%    \centering
-%    \includegraphics[width=0.5\textwidth]{figs/660_OPT.png}
-%    \caption{\textbf{OPTICS}}
-%    \label{fig:clust660OPT}
-%\end{figure}
 %----------------------------------------------------
 
 %----------------------------------------------------
@@ -582,24 +519,6 @@ Cluster A is the teal group above the centre and cluster B is the orange group b
 In the single frame target (Figure \ref{fig:660Frame}), \ac{DBScan} and \ac{OPTICS} performed similarly, identifying both clusters A and B with similar shapes and distributions, with \ac{DBScan} assigning slightly more points to each cluster. Both algorithms predominantly identified points on the edges of the pancake floes, with few points assigned to the interior regions of the clusters.
 
 %----------------------------------------------------
-%\begin{figure}[H]
-%    \centering
-%    \includegraphics[width=0.75\textwidth]{figs/661frame.png}
-%    \caption{\textbf{2 Frame Target}}
-%    \label{fig:661Frame}
-%\end{figure}
-%----------------------------------------------------
-
-%----------------------------------------------------
-%\begin{figure}[H]
-%    \centering
-%    \includegraphics[width=0.5\textwidth]{figs/660_661_DB.png}
-%    \caption{\textbf{DBScan}}
-%    \label{fig:clust661DB}
-%\end{figure}
-%----------------------------------------------------
-
-%----------------------------------------------------
 \begin{figure}[H]
 \centering
 \begin{minipage}{.5\textwidth}
@@ -615,24 +534,6 @@ In the single frame target (Figure \ref{fig:660Frame}), \ac{DBScan} and \ac{OPTI
   \label{fig:clust661DB}
 \end{minipage}
 \end{figure}
-%----------------------------------------------------
-
-%----------------------------------------------------
-%\begin{figure}[H]
-%    \centering
-%    \includegraphics[width=0.5\textwidth]{figs/660_661_VDB.png}
-%    \caption{\textbf{VDBScan}}
-%    \label{fig:clust661VDB}
-%\end{figure}
-%----------------------------------------------------
-
-%----------------------------------------------------
-%\begin{figure}[H]
-%    \centering
-%    \includegraphics[width=0.5\textwidth]{figs/660_661_OPT.png}
-%    \caption{\textbf{OPTICS}}
-%    \label{fig:clust661OPT}
-%\end{figure}
 %----------------------------------------------------
 
 %----------------------------------------------------
@@ -687,24 +588,6 @@ Cluster A is the central orange group and cluster B is the lime green group belo
 %----------------------------------------------------
 
 %----------------------------------------------------
-%\begin{figure}[H]
-%    \centering
-%    \includegraphics[width=0.5\textwidth]{figs/980frame.png}
-%    \caption{\textbf{1 Frame Target}}
-%    \label{fig:980Frame}
-%\end{figure}
-%----------------------------------------------------
-
-%----------------------------------------------------
-%\begin{figure}[H]
-%    \centering
-%    \includegraphics[width=0.5\textwidth]{figs/980_DB.png}
-%    \caption{\textbf{DBScan}}
-%    \label{fig:clust980DB}
-%\end{figure}
-%----------------------------------------------------
-
-%----------------------------------------------------
 \begin{figure}[H]
 \centering
 \begin{minipage}{.5\textwidth}
@@ -720,24 +603,6 @@ Cluster A is the central orange group and cluster B is the lime green group belo
   \label{fig:clust980DB}
 \end{minipage}
 \end{figure}
-%----------------------------------------------------
-
-%----------------------------------------------------
-%\begin{figure}[H]
-%    \centering
-%    \includegraphics[width=0.5\textwidth]{figs/980_VDB.png}
-%    \caption{\textbf{VDBScan}}
-%    \label{fig:clust980VDB}
-%\end{figure}
-%----------------------------------------------------
-
-%----------------------------------------------------
-%\begin{figure}[H]
-%    \centering
-%    \includegraphics[width=0.5\textwidth]{figs/980_OPT.png}
-%    \caption{\textbf{OPTICS}}
-%    \label{fig:clust980OPT}
-%\end{figure}
 %----------------------------------------------------
 
 %----------------------------------------------------
@@ -761,24 +626,6 @@ Cluster A is the central orange group and cluster B is the lime green group belo
 In the single frame target (Figure \ref{fig:980Frame}), all three algorithms performed very similarly in their identification of cluster A, with nearly identical shapes and distributions. The algorithms varied more in their identification of cluster B, with \ac{DBScan} and \ac{OPTICS} producing similar shapes and distributions, including points in the region of x = 39 m, y = 1 m that are likely not part of the identified pancake floe when compared to the raw point cloud data, as seen in Figure \ref{fig:980Frame}. \ac{VDBScan} produced a more compact cluster B, excluding these points.
 
 %----------------------------------------------------
-%\begin{figure}[H]
-%    \centering
-%    \includegraphics[width=0.5\textwidth]{figs/981frame.png}
-%    \caption{\textbf{2 Frame Target}}
-%    \label{fig:981Frame}
-%\end{figure}
-%----------------------------------------------------
-
-%----------------------------------------------------
-%\begin{figure}[H]
-%    \centering
-%    \includegraphics[width=0.5\textwidth]{figs/980_981_DB.png}
-%    \caption{\textbf{DBScan}}
-%    \label{fig:clust981DB}
-%\end{figure}
-%----------------------------------------------------
-
-%----------------------------------------------------
 \begin{figure}[H]
 \centering
 \begin{minipage}{.5\textwidth}
@@ -794,24 +641,6 @@ In the single frame target (Figure \ref{fig:980Frame}), all three algorithms per
   \label{fig:clust981DB}
 \end{minipage}
 \end{figure}
-%----------------------------------------------------
-
-%----------------------------------------------------
-%\begin{figure}[H]
-%    \centering
-%    \includegraphics[width=0.5\textwidth]{figs/980_981_VDB.png}
-%    \caption{\textbf{VDBScan}}
-%    \label{fig:clust981VDB}
-%\end{figure}
-%----------------------------------------------------
-
-%----------------------------------------------------
-%\begin{figure}[H]
-%    \centering
-%    \includegraphics[width=0.5\textwidth]{figs/980_981_OPT.png}
-%    \caption{\textbf{OPTICS}}
-%    \label{fig:clust981OPT}
-%\end{figure}
 %----------------------------------------------------
 
 %----------------------------------------------------
@@ -866,24 +695,6 @@ Cluster A is the central maroon group and cluster B is the dark blue group below
 %----------------------------------------------------
 
 %----------------------------------------------------
-%\begin{figure}[H]
-%    \centering
-%    \includegraphics[width=0.5\textwidth]{figs/5620frame.png}
-%    \caption{\textbf{1 Frame Target}}
-%    \label{fig:5620Frame}
-%\end{figure}
-%----------------------------------------------------
-
-%----------------------------------------------------
-%\begin{figure}[H]
-%    \centering
-%    \includegraphics[width=0.5\textwidth]{figs/5620_DB.png}
-%    \caption{\textbf{DBScan}}
-%    \label{fig:clust5620DB}
-%\end{figure}
-%----------------------------------------------------
-
-%----------------------------------------------------
 \begin{figure}[H]
 \centering
 \begin{minipage}{.5\textwidth}
@@ -899,24 +710,6 @@ Cluster A is the central maroon group and cluster B is the dark blue group below
   \label{fig:clust5620DB}
 \end{minipage}
 \end{figure}
-%----------------------------------------------------
-
-%----------------------------------------------------
-%\begin{figure}[H]
-%    \centering
-%    \includegraphics[width=0.5\textwidth]{figs/5620_VDB.png}
-%    \caption{\textbf{VDBScan}}
-%    \label{fig:clust5620VDB}
-%\end{figure}
-%----------------------------------------------------
-
-%----------------------------------------------------
-%\begin{figure}[H]
-%    \centering
-%    \includegraphics[width=0.5\textwidth]{figs/5620_OPT.png}
-%    \caption{\textbf{OPTICS}}
-%    \label{fig:clust5620OPT}
-%\end{figure}
 %----------------------------------------------------
 
 %----------------------------------------------------
@@ -940,24 +733,6 @@ Cluster A is the central maroon group and cluster B is the dark blue group below
 In the single frame target (Figure \ref{fig:5620Frame}), all three algorithms performed similarly in their identification of cluster A, with nearly identical shapes and distributions. All algorithms included points in the region of x = 38 m, y = 0 m, that are likely not part of the identified pancake floe, when compared to the raw point cloud data, as seen in Figure \ref{fig:5620Frame}. For cluster B, besides the sub-clustering by \ac{OPTICS}, all algorithms produced similar shapes and distributions. 
 
 %----------------------------------------------------
-%\begin{figure}[H]
-%    \centering
-%    \includegraphics[width=0.5\textwidth]{figs/5621frame.png}
-%    \caption{\textbf{2 Frame Target}}
-%    \label{fig:5621Frame}
-%\end{figure}
-%----------------------------------------------------
-
-%----------------------------------------------------
-%\begin{figure}[H]
-%    \centering
-%    \includegraphics[width=0.5\textwidth]{figs/5620_5621_DB.png}
-%    \caption{\textbf{DBScan}}
-%    \label{fig:clust5621DB}
-%\end{figure}
-%----------------------------------------------------
-
-%----------------------------------------------------
 \begin{figure}[H]
 \centering
 \begin{minipage}{.5\textwidth}
@@ -973,24 +748,6 @@ In the single frame target (Figure \ref{fig:5620Frame}), all three algorithms pe
   \label{fig:clust5621DB}
 \end{minipage}
 \end{figure}
-%----------------------------------------------------
-
-%----------------------------------------------------
-%\begin{figure}[H]
-%    \centering
-%    \includegraphics[width=0.5\textwidth]{figs/5620_5621_VDB.png}
-%    \caption{\textbf{VDBScan}}
-%    \label{fig:clust5621VDB}
-%\end{figure}
-%----------------------------------------------------
-
-%----------------------------------------------------
-%\begin{figure}[H]
-%    \centering
-%    \includegraphics[width=0.5\textwidth]{figs/5620_5621_OPT.png}
-%    \caption{\textbf{OPTICS}}
-%    \label{fig:clust5621OPT}
-%\end{figure}
 %----------------------------------------------------
 
 %----------------------------------------------------
