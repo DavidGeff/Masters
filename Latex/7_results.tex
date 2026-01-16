@@ -26,6 +26,7 @@ For each target, a single frame was inspected and the dimensions of the target w
 %----------------------------------------------------
 \begin{table}[H]
 \centering
+\caption{Target A Reconstruction Dimensions.}
 \begin{tabular}{|l|r|r|c|r|}
 \hline
 \multicolumn{1}{|c|}{\textbf{No. Frames}} &
@@ -37,7 +38,6 @@ For each target, a single frame was inspected and the dimensions of the target w
 4  & 153 & 1179 & NaN & 157 \\ \hline
 10 & 153 & 1206 & NaN & 389 \\ \hline
 \end{tabular}
-\caption{Target A Reconstruction Dimensions}
 \label{tab:target_a}
 \end{table}
 %----------------------------------------------------
@@ -47,6 +47,7 @@ In the single frame reconstruction, it was difficult to identify the curved shap
 %----------------------------------------------------
 \begin{table}[H]
 \centering
+\caption{Target B Reconstruction Dimensions.}
 \begin{tabular}{|l|c|c|c|r|}
 \hline
 \multicolumn{1}{|c|}{\textbf{No. Frames}} & \textbf{Height (mm)} & \textbf{Length (mm)} & \textbf{Width (mm)} & \multicolumn{1}{l|}{\textbf{No. Points}} \\ \hline
@@ -54,7 +55,6 @@ In the single frame reconstruction, it was difficult to identify the curved shap
 8  & \multicolumn{1}{r|}{138} & \multicolumn{1}{r|}{1008} & NaN                       & 348 \\ \hline
 15 & \multicolumn{1}{r|}{138} & \multicolumn{1}{r|}{1130} & \multicolumn{1}{r|}{1163} & 627 \\ \hline
 \end{tabular}
-\caption{Target B Reconstruction Dimensions}
 \label{tab:target_b}
 \end{table}
 %----------------------------------------------------
@@ -64,6 +64,7 @@ Target B proved to be the most challenging to reconstruct due to its geometry, w
 %----------------------------------------------------
 \begin{table}[H]
 \centering
+\caption{Target C Reconstruction Dimensions.}
 \begin{tabular}{|l|r|c|c|r|}
 \hline
 \multicolumn{1}{|c|}{\textbf{No. Frames}} &
@@ -75,7 +76,6 @@ Target B proved to be the most challenging to reconstruct due to its geometry, w
 8  & 200 & NaN & \multicolumn{1}{r|}{1032} & 328 \\ \hline
 15 & 200 & NaN & \multicolumn{1}{r|}{1105} & 603 \\ \hline
 \end{tabular}
-\caption{Target C Reconstruction Dimensions}
 \label{tab:target_c}
 \end{table}
 %----------------------------------------------------
@@ -84,6 +84,7 @@ In the single frame reconstruction of Target C, only the height was estimable. O
 %----------------------------------------------------
 \begin{table}[H]
 \centering
+\caption{Target D Reconstruction Dimensions.}
 \begin{tabular}{|l|r|c|r|r|}
 \hline
 \multicolumn{1}{|c|}{\textbf{No. Frames}} &
@@ -95,7 +96,6 @@ In the single frame reconstruction of Target C, only the height was estimable. O
 4  & 154 & NaN & 1105 & 168 \\ \hline
 10 & 160 & NaN & 1112 & 423 \\ \hline
 \end{tabular}
-\caption{Target D Reconstruction Dimensions}
 \label{tab:target_d}
 \end{table}
 %----------------------------------------------------
@@ -108,13 +108,13 @@ Target D's single frame reconstruction allowed for estimations of its height and
 \begin{minipage}{.5\textwidth}
   \centering
   \includegraphics[width=\linewidth]{figs/A10.png}
-  \caption{\textbf{Target A Reconstruction, 10 Frames}}
+  \caption{\textbf{Target A Reconstruction, 10 Frames.}}
   \label{fig:A10Mesh}
 \end{minipage}%
 \begin{minipage}{.5\textwidth}
   \centering
   \includegraphics[width=\linewidth]{figs/B15.png}
-  \caption{\textbf{Target B Reconstruction, 15 Frames}}
+  \caption{\textbf{Target B Reconstruction, 15 Frames.}}
   \label{fig:B15Mesh}
 \end{minipage}
 \end{figure}
@@ -126,13 +126,13 @@ Target D's single frame reconstruction allowed for estimations of its height and
 \begin{minipage}{.5\textwidth}
   \centering
   \includegraphics[width=\linewidth]{figs/C15.png}
-  \caption{\textbf{Target C Reconstruction, 15 Frames}}
+  \caption{\textbf{Target C Reconstruction, 15 Frames.}}
   \label{fig:C15Mesh}
 \end{minipage}%
 \begin{minipage}{.5\textwidth}
   \centering
   \includegraphics[width=\linewidth]{figs/D10.png}
-  \caption{\textbf{Target D Reconstruction, 10 Frames}}
+  \caption{\textbf{Target D Reconstruction, 10 Frames.}}
   \label{fig:D10Mesh}
 \end{minipage}
 \end{figure}
@@ -152,13 +152,13 @@ The normals estimation process successfully calculated normal vectors for each p
 \begin{minipage}{.5\textwidth}
   \centering
   \includegraphics[width=0.95\linewidth]{figs/aNorm.png}
-  \caption{\textbf{Target A}}
+  \caption{\textbf{Target A Estimated Normals.}}
   \label{fig:A10Norm}
 \end{minipage}%
 \begin{minipage}{.5\textwidth}
   \centering
   \includegraphics[width=0.95\linewidth]{figs/bNorm.png}
-  \caption{\textbf{Target B}}
+  \caption{\textbf{Target B Estimated Normals.}}
   \label{fig:B15Norm}
 \end{minipage}
 \end{figure}
@@ -170,13 +170,13 @@ The normals estimation process successfully calculated normal vectors for each p
 \begin{minipage}{.5\textwidth}
   \centering
   \includegraphics[width=0.95\linewidth]{figs/cNorm.png}
-  \caption{\textbf{Target C}}
+  \caption{\textbf{Target C Estimated Normals.}}
   \label{fig:C15Norm}
 \end{minipage}%
 \begin{minipage}{.5\textwidth}
   \centering
   \includegraphics[width=0.95\linewidth]{figs/dNorm.png}
-  \caption{\textbf{Target D}}
+  \caption{\textbf{Target D Estimated Normals.}}
   \label{fig:D10Norm}
 \end{minipage}
 \end{figure}
@@ -206,8 +206,8 @@ When the angle estimates from both filters were used to motion compensate the \a
 %----------------------------------------------------
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.85\textwidth]{figs/kf_resid_10.png}
-    \caption{\textbf{KF residuals}}
+    \includegraphics[width=0.6\textwidth]{figs/kf_resid_10.png}
+    \caption{\textbf{KF residuals.}}
     \label{fig:kf_resid_10}
 \end{figure}
 %----------------------------------------------------
@@ -215,8 +215,8 @@ When the angle estimates from both filters were used to motion compensate the \a
 %----------------------------------------------------
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.85\textwidth]{figs/eskf_resid_10.png}
-    \caption{\textbf{ESKF residuals}}
+    \includegraphics[width=0.6\textwidth]{figs/eskf_resid_10.png}
+    \caption{\textbf{ESKF residuals.}}
     \label{fig:eskf_resid_10}
 \end{figure}
 %----------------------------------------------------
@@ -224,8 +224,8 @@ When the angle estimates from both filters were used to motion compensate the \a
 %----------------------------------------------------
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.85\textwidth]{figs/vs_resids_10.png}
-    \caption{\textbf{residuals}}
+    \includegraphics[width=0.6\textwidth]{figs/vs_resids_10.png}
+    \caption{\textbf{Residuals.}}
     \label{fig:resid_10}
 \end{figure}
 %----------------------------------------------------
@@ -239,8 +239,8 @@ When the angle estimates from both filters were used to motion compensate the \a
 %----------------------------------------------------
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.85\textwidth]{figs/kf_resid_5.png}
-    \caption{\textbf{KF residuals}}
+    \includegraphics[width=0.6\textwidth]{figs/kf_resid_5.png}
+    \caption{\textbf{KF residuals.}}
     \label{fig:kf_resid_5}
 \end{figure}
 %----------------------------------------------------
@@ -248,8 +248,8 @@ When the angle estimates from both filters were used to motion compensate the \a
 %----------------------------------------------------
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.85\textwidth]{figs/eskf_resid_5.png}
-    \caption{\textbf{ESKF residuals}}
+    \includegraphics[width=0.6\textwidth]{figs/eskf_resid_5.png}
+    \caption{\textbf{ESKF residuals.}}
     \label{fig:eskf_resid_5}
 \end{figure}
 %----------------------------------------------------
@@ -257,8 +257,8 @@ When the angle estimates from both filters were used to motion compensate the \a
 %----------------------------------------------------
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.85\textwidth]{figs/vs_resids_5.png}
-    \caption{\textbf{residuals}}
+    \includegraphics[width=0.6\textwidth]{figs/vs_resids_5.png}
+    \caption{\textbf{Residuals.}}
     \label{fig:resid_5}
 \end{figure}
 %----------------------------------------------------
@@ -284,7 +284,7 @@ The de-noising function performed as expected. It removes unwanted returns produ
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.9\textwidth]{figs/no_threshold.png}
-    \caption{\textbf{Noisy Frame}}
+    \caption{\textbf{Noisy Frame.}}
     \label{fig:no_thresh}
 \end{figure}
 %----------------------------------------------------
@@ -293,7 +293,7 @@ The de-noising function performed as expected. It removes unwanted returns produ
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.9\textwidth]{figs/threshold.png}
-    \caption{\textbf{De-noised Frame}}
+    \caption{\textbf{De-noised Frame.}}
     \label{fig:thresh}
 \end{figure}
 %----------------------------------------------------
@@ -311,8 +311,8 @@ The mean wave magnitude and period were able to be determined with a high degree
 %----------------------------------------------------
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.6\textwidth]{figs/fit_view.png}
-    \caption{\textbf{Fitted Wave Model}}
+    \includegraphics[width=0.7\textwidth]{figs/fit_view.png}
+    \caption{\textbf{Fitted Wave Model.}}
     \label{fig:fit_view}
 \end{figure}
 %----------------------------------------------------
@@ -321,7 +321,7 @@ The mean wave magnitude and period were able to be determined with a high degree
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{figs/fit_profile.png}
-    \caption{\textbf{Fitted Wave Model}}
+    \caption{\textbf{Fitted Wave Model.}}
     \label{fig:fit_profile}
 \end{figure}
 %----------------------------------------------------
@@ -329,6 +329,7 @@ The mean wave magnitude and period were able to be determined with a high degree
 %----------------------------------------------------
 \begin{table}[H]
 \centering
+\caption{curveFitter Parameter Estimations.}
 \resizebox{\textwidth}{!}{%
 \begin{tabular}{|l|c|c|c|c|}
 \hline
@@ -345,7 +346,6 @@ The mean wave magnitude and period were able to be determined with a high degree
 6 & 27.8620 & 3.1438 & 1.9986 & 0.93052 \\ \hline
 \end{tabular}%
 }
-\caption{curveFitter Parameter Estimations}
 \label{tab:curveFitter}
 \end{table}
 %----------------------------------------------------
@@ -353,6 +353,7 @@ The mean wave magnitude and period were able to be determined with a high degree
 %----------------------------------------------------
 \begin{table}[H]
 \centering
+\caption{\ac{RANSAC} Parameter Estimations.}
 \resizebox{\textwidth}{!}{%
 \begin{tabular}{|l|c|c|c|c|}
 \hline
@@ -369,7 +370,6 @@ The mean wave magnitude and period were able to be determined with a high degree
 6 & 29.3343 & 1.0137 & 1.9944 & 72.06 \% \\ \hline
 \end{tabular}%
 }
-\caption{\ac{RANSAC} Parameter Estimations}
 \label{tab:RANSAC}
 \end{table}
 %----------------------------------------------------
@@ -379,14 +379,14 @@ The mean wave magnitude and period were able to be determined with a high degree
 \centering
 \begin{minipage}{.5\textwidth}
   \centering
-  \includegraphics[width=\linewidth]{figs/ransac_amp_truth.png}
-  \caption{\textbf{Estimated Amplitude}}
+  \includegraphics[width=0.95\linewidth]{figs/ransac_amp_truth.png}
+  \caption{\textbf{Estimated Amplitude.}}
   \label{fig:amp}
 \end{minipage}%
 \begin{minipage}{.5\textwidth}
   \centering
-  \includegraphics[width=\linewidth]{figs/ransac_period_truth.png}
-  \caption{\textbf{Estimated Period}}
+  \includegraphics[width=0.95\linewidth]{figs/ransac_period_truth.png}
+  \caption{\textbf{Estimated Period.}}
   \label{fig:period}
 \end{minipage}
 \end{figure}
@@ -402,14 +402,14 @@ In every test, the higher the percentage of mean inliers in the model estimation
 \centering
 \begin{minipage}{.5\textwidth}
   \centering
-  \includegraphics[width=\linewidth]{figs/rand_amp.png}
-  \caption{\textbf{Estimated Amplitude, 5 Samples}}
+  \includegraphics[width=0.95\linewidth]{figs/rand_amp.png}
+  \caption{\textbf{Estimated Amplitude, 5 Samples.}}
   \label{fig:rand_amp}
 \end{minipage}%
 \begin{minipage}{.5\textwidth}
   \centering
-  \includegraphics[width=\linewidth]{figs/rand_per.png}
-  \caption{\textbf{Estimated Period, 5 Samples}}
+  \includegraphics[width=0.95\linewidth]{figs/rand_per.png}
+  \caption{\textbf{Estimated Period, 5 Samples.}}
   \label{fig:rand_period}
 \end{minipage}
 \end{figure}
@@ -436,14 +436,14 @@ When visually inspecting the point cloud data and video data from this scene, it
 \centering
 \begin{minipage}{.5\textwidth}
   \centering
-  \includegraphics[width=0.95\linewidth]{figs/2290frame.png}
-  \caption{\textbf{Scene 1, 1 Frame}}
+  \includegraphics[width=0.9\linewidth]{figs/2290frame.png}
+  \caption{\textbf{Scene 1, 1 Frame.}}
   \label{fig:2290Frame}
 \end{minipage}%
 \begin{minipage}{.5\textwidth}
   \centering
-  \includegraphics[width=0.95\linewidth]{figs/2291frame.png}
-  \caption{\textbf{Scene 1, 2 Frames}}
+  \includegraphics[width=0.9\linewidth]{figs/2291frame.png}
+  \caption{\textbf{Scene 1, 2 Frames.}}
   \label{fig:2291Frame}
 \end{minipage}
 \end{figure}
@@ -453,7 +453,7 @@ When visually inspecting the point cloud data and video data from this scene, it
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{figs/2290cam.PNG}
-    \caption{\textbf{Scene 1 Video Still}}
+    \caption{\textbf{Scene 1 Video Still.}}
     \label{fig:2290}
 \end{figure}
 %----------------------------------------------------
@@ -467,6 +467,7 @@ Cluster A is the teal group above the centre and cluster B is the orange group b
 %----------------------------------------------------
 \begin{table}[H]
 \centering
+\caption{Scene 2 Points per Cluster.}
 \begin{tabular}{|l|l|r|c|r|}
 \hline
 \textbf{No Frames} & \textbf{Cluster} & \multicolumn{1}{l|}{\textbf{DBScan}} & \multicolumn{1}{l|}{\textbf{VDBScan}} & \multicolumn{1}{l|}{\textbf{OPTICS}} \\ \hline
@@ -475,7 +476,6 @@ Cluster A is the teal group above the centre and cluster B is the orange group b
 \multirow{2}{*}{2} & A                & 351                                  & NaN                                   & 347                                  \\ \cline{2-5} 
                    & B                & 363                                  & NaN                                   & 385                                  \\ \hline
 \end{tabular}
-\caption{Scene 1 Points per Cluster}
 \label{tab:660Clust}
 \end{table}
 %----------------------------------------------------
@@ -485,14 +485,14 @@ Cluster A is the teal group above the centre and cluster B is the orange group b
 \centering
 \begin{minipage}{.5\textwidth}
   \centering
-  \includegraphics[width=0.95\linewidth]{figs/660frame.png}
-  \caption{\textbf{Scene 2, 1 Frame}}
+  \includegraphics[width=0.9\linewidth]{figs/660frame.png}
+  \caption{\textbf{Scene 2, 1 Frame.}}
   \label{fig:660Frame}
 \end{minipage}%
 \begin{minipage}{.5\textwidth}
   \centering
-  \includegraphics[width=0.95\linewidth]{figs/660_DB.png}
-  \caption{\textbf{DBScan}}
+  \includegraphics[width=0.9\linewidth]{figs/660_DB.png}
+  \caption{\textbf{DBScan.}}
   \label{fig:clust660DB}
 \end{minipage}
 \end{figure}
@@ -503,14 +503,14 @@ Cluster A is the teal group above the centre and cluster B is the orange group b
 \centering
 \begin{minipage}{.5\textwidth}
   \centering
-  \includegraphics[width=0.95\linewidth]{figs/660_VDB.png}
-  \caption{\textbf{VDBScan}}
+  \includegraphics[width=0.9\linewidth]{figs/660_VDB.png}
+  \caption{\textbf{VDBScan.}}
   \label{fig:clust660VDB}
 \end{minipage}%
 \begin{minipage}{.5\textwidth}
   \centering
-  \includegraphics[width=0.95\linewidth]{figs/660_OPT.png}
-  \caption{\textbf{OPTICS}}
+  \includegraphics[width=0.9\linewidth]{figs/660_OPT.png}
+  \caption{\textbf{OPTICS.}}
   \label{fig:clust660OPT}
 \end{minipage}
 \end{figure}
@@ -523,14 +523,14 @@ In the single frame target (Figure \ref{fig:660Frame}), \ac{DBScan} and \ac{OPTI
 \centering
 \begin{minipage}{.5\textwidth}
   \centering
-  \includegraphics[width=0.95\linewidth]{figs/661frame.png}
-  \caption{\textbf{Scene 2, 2 Frames}}
+  \includegraphics[width=0.9\linewidth]{figs/661frame.png}
+  \caption{\textbf{Scene 2, 2 Frames.}}
   \label{fig:661Frame}
 \end{minipage}%
 \begin{minipage}{.5\textwidth}
   \centering
-  \includegraphics[width=0.95\linewidth]{figs/660_661_DB.png}
-  \caption{\textbf{DBScan}}
+  \includegraphics[width=0.9\linewidth]{figs/660_661_DB.png}
+  \caption{\textbf{DBScan.}}
   \label{fig:clust661DB}
 \end{minipage}
 \end{figure}
@@ -541,14 +541,14 @@ In the single frame target (Figure \ref{fig:660Frame}), \ac{DBScan} and \ac{OPTI
 \centering
 \begin{minipage}{.5\textwidth}
   \centering
-  \includegraphics[width=0.95\linewidth]{figs/660_661_VDB.png}
-  \caption{\textbf{VDBScan}}
+  \includegraphics[width=0.9\linewidth]{figs/660_661_VDB.png}
+  \caption{\textbf{VDBScan.}}
   \label{fig:clust661VDB}
 \end{minipage}%
 \begin{minipage}{.5\textwidth}
   \centering
-  \includegraphics[width=0.95\linewidth]{figs/660_661_OPT.png}
-  \caption{\textbf{OPTICS}}
+  \includegraphics[width=0.9\linewidth]{figs/660_661_OPT.png}
+  \caption{\textbf{OPTICS.}}
   \label{fig:clust661OPT}
 \end{minipage}
 \end{figure}
@@ -560,7 +560,7 @@ In the two frame target (Figure \ref{fig:661Frame}), \ac{DBScan} and \ac{OPTICS}
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{figs/660cam.PNG}
-    \caption{\textbf{Scene 2 Video Still}}
+    \caption{\textbf{Scene 2 Video Still.}}
     \label{fig:660}
 \end{figure}
 %----------------------------------------------------
@@ -574,6 +574,7 @@ Cluster A is the central orange group and cluster B is the lime green group belo
 %----------------------------------------------------
 \begin{table}[H]
 \centering
+\caption{Scene 3 Points per Cluster.}
 \begin{tabular}{|l|l|r|r|r|}
 \hline
 \textbf{No Frames} & \textbf{Cluster} & \multicolumn{1}{l|}{\textbf{DBScan}} & \multicolumn{1}{l|}{\textbf{VDBScan}} & \multicolumn{1}{l|}{\textbf{OPTICS}} \\ \hline
@@ -582,7 +583,6 @@ Cluster A is the central orange group and cluster B is the lime green group belo
 \multirow{2}{*}{2} & A                & 302                                  & 324                                   & 335                                  \\ \cline{2-5} 
                    & B                & 244                                  & 303                                   & 280                                  \\ \hline
 \end{tabular}
-\caption{Scene 2 Points per Cluster}
 \label{tab:980Clust}
 \end{table}
 %----------------------------------------------------
@@ -592,14 +592,14 @@ Cluster A is the central orange group and cluster B is the lime green group belo
 \centering
 \begin{minipage}{.5\textwidth}
   \centering
-  \includegraphics[width=0.95\linewidth]{figs/980frame.png}
-  \caption{\textbf{Scene 3, 1 Frame}}
+  \includegraphics[width=0.9\linewidth]{figs/980frame.png}
+  \caption{\textbf{Scene 3, 1 Frame.}}
   \label{fig:980Frame}
 \end{minipage}%
 \begin{minipage}{.5\textwidth}
   \centering
-  \includegraphics[width=0.95\linewidth]{figs/980_DB.png}
-  \caption{\textbf{DBScan}}
+  \includegraphics[width=0.9\linewidth]{figs/980_DB.png}
+  \caption{\textbf{DBScan.}}
   \label{fig:clust980DB}
 \end{minipage}
 \end{figure}
@@ -610,14 +610,14 @@ Cluster A is the central orange group and cluster B is the lime green group belo
 \centering
 \begin{minipage}{.5\textwidth}
   \centering
-  \includegraphics[width=0.95\linewidth]{figs/980_VDB.png}
-  \caption{\textbf{VDBScan}}
+  \includegraphics[width=0.9\linewidth]{figs/980_VDB.png}
+  \caption{\textbf{VDBScan.}}
   \label{fig:clust980VDB}
 \end{minipage}%
 \begin{minipage}{.5\textwidth}
   \centering
-  \includegraphics[width=0.95\linewidth]{figs/980_OPT.png}
-  \caption{\textbf{OPTICS}}
+  \includegraphics[width=0.9\linewidth]{figs/980_OPT.png}
+  \caption{\textbf{OPTICS.}}
   \label{fig:clust980OPT}
 \end{minipage}
 \end{figure}
@@ -630,14 +630,14 @@ In the single frame target (Figure \ref{fig:980Frame}), all three algorithms per
 \centering
 \begin{minipage}{.5\textwidth}
   \centering
-  \includegraphics[width=0.95\linewidth]{figs/981frame.png}
-  \caption{\textbf{Scene 3, 2 Frames}}
+  \includegraphics[width=0.9\linewidth]{figs/981frame.png}
+  \caption{\textbf{Scene 3, 2 Frames.}}
   \label{fig:981Frame}
 \end{minipage}%
 \begin{minipage}{.5\textwidth}
   \centering
-  \includegraphics[width=0.95\linewidth]{figs/980_981_DB.png}
-  \caption{\textbf{DBScan}}
+  \includegraphics[width=0.9\linewidth]{figs/980_981_DB.png}
+  \caption{\textbf{DBScan.}}
   \label{fig:clust981DB}
 \end{minipage}
 \end{figure}
@@ -648,14 +648,14 @@ In the single frame target (Figure \ref{fig:980Frame}), all three algorithms per
 \centering
 \begin{minipage}{.5\textwidth}
   \centering
-  \includegraphics[width=0.95\linewidth]{figs/980_981_VDB.png}
-  \caption{\textbf{VDBScan}}
+  \includegraphics[width=0.9\linewidth]{figs/980_981_VDB.png}
+  \caption{\textbf{VDBScan.}}
   \label{fig:clust981VDB}
 \end{minipage}%
 \begin{minipage}{.5\textwidth}
   \centering
-  \includegraphics[width=0.95\linewidth]{figs/980_981_OPT.png}
-  \caption{\textbf{OPTICS}}
+  \includegraphics[width=0.9\linewidth]{figs/980_981_OPT.png}
+  \caption{\textbf{OPTICS.}}
   \label{fig:clust981OPT}
 \end{minipage}
 \end{figure}
@@ -667,7 +667,7 @@ In the two frame target (Figure \ref{fig:981Frame}), \ac{DBScan} consistently as
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{figs/980cam.PNG}
-    \caption{\textbf{Scene 3 Video Still}}
+    \caption{\textbf{Scene 3 Video Still.}}
     \label{fig:980}
 \end{figure}
 %----------------------------------------------------
@@ -681,6 +681,7 @@ Cluster A is the central maroon group and cluster B is the dark blue group below
 %----------------------------------------------------
 \begin{table}[H]
 \centering
+\caption{Scene 4 Points per Cluster.}
 \begin{tabular}{|l|l|r|r|r|}
 \hline
 \textbf{No Frames} & \textbf{Cluster} & \multicolumn{1}{l|}{\textbf{DBScan}} & \multicolumn{1}{l|}{\textbf{VDBScan}} & \multicolumn{1}{l|}{\textbf{OPTICS}} \\ \hline
@@ -689,7 +690,6 @@ Cluster A is the central maroon group and cluster B is the dark blue group below
 \multirow{2}{*}{2} & A                & 487                                  & 422                                   & 262                                  \\ \cline{2-5} 
                    & B                & 248 + 49 (297)                       & 195 + 45 + 12 (252)                   & 166 + 22 (188)                        \\ \hline
 \end{tabular}
-\caption{Scene 4 Points per Cluster}
 \label{tab:5620Clust}
 \end{table}
 %----------------------------------------------------
@@ -699,14 +699,14 @@ Cluster A is the central maroon group and cluster B is the dark blue group below
 \centering
 \begin{minipage}{.5\textwidth}
   \centering
-  \includegraphics[width=0.95\linewidth]{figs/5620frame.png}
-  \caption{\textbf{Scene 4, 1 Frame}}
+  \includegraphics[width=0.9\linewidth]{figs/5620frame.png}
+  \caption{\textbf{Scene 4, 1 Frame.}}
   \label{fig:5620Frame}
 \end{minipage}%
 \begin{minipage}{.5\textwidth}
   \centering
-  \includegraphics[width=0.95\linewidth]{figs/5620_DB.png}
-  \caption{\textbf{DBScan}}
+  \includegraphics[width=0.9\linewidth]{figs/5620_DB.png}
+  \caption{\textbf{DBScan.}}
   \label{fig:clust5620DB}
 \end{minipage}
 \end{figure}
@@ -717,14 +717,14 @@ Cluster A is the central maroon group and cluster B is the dark blue group below
 \centering
 \begin{minipage}{.5\textwidth}
   \centering
-  \includegraphics[width=0.95\linewidth]{figs/5620_VDB.png}
-  \caption{\textbf{VDBScan}}
+  \includegraphics[width=0.9\linewidth]{figs/5620_VDB.png}
+  \caption{\textbf{VDBScan.}}
   \label{fig:clust5620VDB}
 \end{minipage}%
 \begin{minipage}{.5\textwidth}
   \centering
-  \includegraphics[width=0.95\linewidth]{figs/5620_OPT.png}
-  \caption{\textbf{OPTICS}}
+  \includegraphics[width=0.9\linewidth]{figs/5620_OPT.png}
+  \caption{\textbf{OPTICS.}}
   \label{fig:clust5620OPT}
 \end{minipage}
 \end{figure}
@@ -737,14 +737,14 @@ In the single frame target (Figure \ref{fig:5620Frame}), all three algorithms pe
 \centering
 \begin{minipage}{.5\textwidth}
   \centering
-  \includegraphics[width=0.95\linewidth]{figs/5621frame.png}
-  \caption{\textbf{Scene 4, 2 Frames}}
+  \includegraphics[width=0.9\linewidth]{figs/5621frame.png}
+  \caption{\textbf{Scene 4, 2 Frames.}}
   \label{fig:5621Frame}
 \end{minipage}%
 \begin{minipage}{.5\textwidth}
   \centering
-  \includegraphics[width=0.95\linewidth]{figs/5620_5621_DB.png}
-  \caption{\textbf{DBScan}}
+  \includegraphics[width=0.9\linewidth]{figs/5620_5621_DB.png}
+  \caption{\textbf{DBScan.}}
   \label{fig:clust5621DB}
 \end{minipage}
 \end{figure}
@@ -755,14 +755,14 @@ In the single frame target (Figure \ref{fig:5620Frame}), all three algorithms pe
 \centering
 \begin{minipage}{.5\textwidth}
   \centering
-  \includegraphics[width=0.95\linewidth]{figs/5620_5621_VDB.png}
-  \caption{\textbf{VDBScan}}
+  \includegraphics[width=0.9\linewidth]{figs/5620_5621_VDB.png}
+  \caption{\textbf{VDBScan.}}
   \label{fig:clust5621VDB}
 \end{minipage}%
 \begin{minipage}{.5\textwidth}
   \centering
-  \includegraphics[width=0.95\linewidth]{figs/5620_5621_OPT.png}
-  \caption{\textbf{OPTICS}}
+  \includegraphics[width=0.9\linewidth]{figs/5620_5621_OPT.png}
+  \caption{\textbf{OPTICS.}}
   \label{fig:clust5621OPT}
 \end{minipage}
 \end{figure}
@@ -774,7 +774,7 @@ In the two frame target (Figure \ref{fig:5621Frame}), \ac{OPTICS} was the only a
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{figs/5620cam.PNG}
-    \caption{\textbf{Scene 4 Video Still}}
+    \caption{\textbf{Scene 4 Video Still.}}
     \label{fig:5620}
 \end{figure}
 %----------------------------------------------------

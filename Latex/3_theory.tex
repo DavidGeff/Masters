@@ -21,22 +21,22 @@ All \ac{LiDAR} sensors suffer from beam divergence due to their use of lasers as
 %----------------------------------------------------
 \begin{figure}[H]
     \centering
+    \includegraphics[width=\textwidth]{figs/shadowing.png}
+    \caption{\textbf{Self-shadowing.} Taken from \cite{landyNumericalExperimentalEvaluation2015}.}
+    \label{fig:shadow}
+\end{figure}
+%----------------------------------------------------
+
+%----------------------------------------------------
+\begin{figure}[H]
+    \centering
     \includegraphics[width=0.6\textwidth]{figs/Beam-divergence.jpg}
-    \caption{\textbf{Beam Divergence} taken from \cite{kukkoMobileLaserScanning2013}.}
+    \caption{\textbf{Beam Divergence.} Taken from \cite{kukkoMobileLaserScanning2013}.}
     \label{fig:divergence}
 \end{figure}
 %----------------------------------------------------
 
 Like any observation method that relies on line of sight, \ac{LiDAR} is susceptible to occlusion. If an object is blocking the line of sight between the sensor and the target, no data will be collected for that target. Self-shadowing is a phenomenon that occurs when parts of a target occlude other parts of the same target from the sensor's line of sight, see Figure \ref{fig:shadow}. This is common when the target under observation has a complex surface geometry with many protrusions and recesses or when the sensor is positioned at an oblique angle to the target. A combination of both complex target geometry and oblique sensor positioning can lead to significant portions of the target being unobserved, leading to incomplete point cloud data (\cite{landyNumericalExperimentalEvaluation2015}).
-
-%----------------------------------------------------
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=\textwidth]{figs/shadowing.png}
-    \caption{\textbf{Self-shadowing} taken from \cite{landyNumericalExperimentalEvaluation2015}.}
-    \label{fig:shadow}
-\end{figure}
-%----------------------------------------------------
 
 \ac{LiDAR} is frequently used in combination with other remote sensing methods to mitigate the disadvantages of each method and provide higher quality data. For example, \ac{LiDAR} point clouds are often complemented with optical sensor data to provide colour and texture information to the geometry data, allowing for a more wholistic representation of the target scene (\cite{wangEvolutionLiDARIts2020}).
 
@@ -46,7 +46,7 @@ Like any observation method that relies on line of sight, \ac{LiDAR} is suscepti
 
 A basic \ac{LiDAR} sensor consists of four main components, a laser source, a steering mechanism to direct the laser beam, a method of detecting the returning laser pulse and a controller or processor to manage the sensor's operation and process the collected data. Various different configurations of these components exist, leading to a wide variety of \ac{LiDAR} sensor types designed for different applications (\cite{rajSurveyLiDARScanning2020}). 
 
-Most commercial \ac{LiDAR} sensors make use of near-infrared lasers (approximately 800 - 2 500 nm) as this wavelength range is classified as eye-safe and many lasers in this range are available commercially (\cite{molebnyLaserRadarHistorical2016}). It is not uncommon for \ac{LiDAR} sensors to make use of many transceivers (laser source and detector pairs) to increase their point output rate and improve their spatial resolution.
+Most commercial \ac{LiDAR} sensors make use of near-infrared lasers (approximately 800 to 2 500 nm) as this wavelength range is classified as eye-safe and many lasers in this range are available commercially (\cite{molebnyLaserRadarHistorical2016}). It is not uncommon for \ac{LiDAR} sensors to make use of many transceivers (laser source and detector pairs) to increase their point output rate and improve their spatial resolution.
 In order to create a 3D point cloud, a \ac{LiDAR} sensor must be capable of steering the laser beam to cover the target area. The steering mechanism used determines the \ac{FOV}, angular resolution and may impact the measurement accuracy of the sensor. Early and low-cost sensors frequently make use of optical components such as actuated mirrors or prisms to direct the laser beam across the target area. More advanced sensors make use of solid-state components such as \ac{MEMS} mirrors or phased arrays (using beam steering) to direct the laser beam without any moving parts. \ac{LiDAR} sensors that contain multiple fixed transceivers often make use of rotating platforms to achieve 360-degree coverage (\cite{rajSurveyLiDARScanning2020}). 
 
 The most common scanning pattern created by a \ac{LiDAR} sensor is a rectangular grid pattern (N x M grid of points). Sensors that make use of rotating platforms often create circular or cylindrical scanning patterns with a set vertical resolution (usually determined by the number of transceivers) and 360-degree azimuth coverage. A less common scanning pattern is a non-repetitive rosette or flower-shaped pattern, which covers areas not scanned in previous frames. This scanning method results in a non-uniform distribution of points across its \ac{FOV}, with a high density of points in the centre of the \ac{FOV} and the number of points reducing outwards to the edges of the sensor's \ac{FOV}. To create this scanning pattern, a Risley prism is commonly used as the steering mechanism. A Risley prism consists of two sequential wedge-shaped prisms that rotate independently to steer the laser beam. By varying the speed of rotation and direction of each prism, various scanning patterns can be created (\cite{brazealRigorousObservationModel2021}).
@@ -149,6 +149,7 @@ The sensor has three return rate settings: single, double, or triple return.
 %----------------------------------------------------
 \begin{table}[H]
 \centering
+\caption{Livox Avia Specifications.}
 \begin{tabular}{|l|l|lll}
 \cline{1-2}
 \textbf{Parameter}              & \textbf{Value}                        &  &  &  \\ \cline{1-2}
@@ -166,7 +167,6 @@ Operating Temperature Range     & -20° to 65° C                         &  &  
 IP Rating                       & IP67                                  &  &  &  \\ \cline{1-2}
 Dimensions                      & 91 x 61.2 x 64.8 mm                   &  &  &  \\ \cline{1-2}
 \end{tabular}
-\caption{Livox Avia Specifications. The parameters}
 \label{tab:AVIA_spec}
 \end{table}
 %----------------------------------------------------

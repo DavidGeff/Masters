@@ -8,7 +8,7 @@
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.82\textwidth]{figs/pipeline.png}
-    \caption{\textbf{Processing Pipeline.} Overview of the \ac{LiDAR} data processing and feature extraction pipeline.}
+    \caption{\textbf{Processing Pipeline.} Overview of the \ac{LiDAR} data processing and feature extraction stages.}
     \label{fig:pipeline}
 \end{figure}
 %----------------------------------------------------
@@ -39,14 +39,13 @@ Once angle estimations have been obtained, they have to be time synchronised and
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.82\textwidth]{figs/motion_comp.png}
-    \caption{\textbf{Motion Compensation Pipeline}}
+    \caption{\textbf{Motion Compensation Pipeline.}}
     \label{fig:motion_compensation}
 \end{figure}
 %----------------------------------------------------
 
 Angle estimate residuals (the difference between the motion capture ground truth and the filter's estimates) were computed for the two test cases and used as the primary metric for comparing the filters relative performance. The residuals were also used in the tuning of both filters. To tune each filter's parameters, iterative adjustments were made to the parameters, and the angle estimates observed until the mean residuals reached a minimum, as recommended by \cite{grewalApplicationsKalmanFiltering2010}.
  
-
 %====================================================
 \section{De-noising}
 \label{sec:ch6.section3}
@@ -122,7 +121,7 @@ Once all estimations were converted to wave period, the mean period and amplitud
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{figs/wave_est.png}
-    \caption{\textbf{Wave Parameter Estimation Pipeline}}
+    \caption{\textbf{Wave Parameter Estimation Pipeline.}}
     \label{fig:wave_est}
 \end{figure}
 %----------------------------------------------------
