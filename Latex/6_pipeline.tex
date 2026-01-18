@@ -51,9 +51,7 @@ Angle estimate residuals (the difference between the motion capture ground truth
 \label{sec:ch6.section3}
 %----------------------------------------------------
 
-The return intensity of points can be used to remove or ignore unwanted points. A simple threshold filtering function can be constructed for de-noising data collected under snowy or other adverse conditions. To prevent valid points in the target scene with low return intensities from being discarded, a distance parameter was included in the threshold function.
-
-*this needs to be redone*
+The return intensity of points can be used to remove or ignore unwanted points. A simple threshold filtering function can be constructed for de-noising data collected under snowy or other adverse conditions. To prevent valid points in the target scene with low return intensities from being discarded, a distance parameter was included in the threshold function that sets a minimum distance from the point cloud origin (the sensor aperture) that points are retained regardless of their intensity value.
 
 %----------------------------------------------------
 \begin{figure}[H]
@@ -64,7 +62,7 @@ The return intensity of points can be used to remove or ignore unwanted points. 
 \end{figure}
 %----------------------------------------------------
 
-The return intensity threshold was set to 1 and the distance threshold to 15 m. These values were selected to remove the maximum amount of noise points while minimizing the number of valid points removed.
+The return intensity threshold was set to 1 out of 255 and the distance threshold to 15 m. The intensity threshold was selected to be the lowest possible value to retain the maximum number of valid points, while still removing points with minimal return intensity. The distance threshold was selected based on the location of the Avia during data collection, which was always greater than 15 m above the waterline of the vessel when in calm conditions.  
 
 %====================================================
 \section{Wave Parameter Estimation}

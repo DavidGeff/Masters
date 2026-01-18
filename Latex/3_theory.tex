@@ -9,12 +9,11 @@
 \label{sec:ch3:section1}
 %----------------------------------------------------
 
-\ac{LiDAR} is a relatively new remote sensing method, but its use across many fields has increased rapidly in recent years. \ac{LiDAR} offers several advantages over traditional remote sensing methods. As an active sensing system, it does not depend on external illumination, unlike visual methods such as telephoto or stereoscopic cameras. \ac{LiDAR} is also more robust to issues like poor focus, lens flare and overexposure that commonly affect optical cameras. Additionally, certain \ac{LiDAR} sensors can penetrate vegetation, enabling ground surface mapping beneath plant cover (\cite{wangChallengesOpportunitiesLidar2021}).
+\ac{LiDAR} is a relatively new remote sensing method, but its use across many fields has increased rapidly in recent years. \ac{LiDAR} offers several advantages over traditional remote sensing methods. As an active sensing system, it does not depend on external illumination, unlike visual methods such as telephoto or stereoscopic cameras. \ac{LiDAR} is also more robust to issues like poor focus, lens flare and overexposure that commonly affect optical cameras. This is due to \ac{LiDAR} sensors lacking components such as lenses and imaging sensors, which produce these effects, that optical cameras require. Additionally, certain \ac{LiDAR} sensors can penetrate vegetation, enabling ground surface mapping beneath plant cover (\cite{wangChallengesOpportunitiesLidar2021}).
 
-Compared to \ac{Radar}, \ac{LiDAR} typically has superior mapping precision and target resolution, allowing more accurate reproductions of the target and the surrounding environment. \ac{LiDAR} sensors are also typically smaller and lighter than \ac{Radar} systems, making them easier to integrate into mobile platforms. \ac{Radar} data also often requires more complex processing and skilled individuals to extract useful information, whereas \ac{LiDAR} data is usually more straightforward to interpret (\cite{agrawalCOMPARATIVEASSESSMENTREMOTE2019}).
+Compared to \ac{Radar}, \ac{LiDAR} typically has superior mapping precision and target resolution, allowing more accurate reproductions of the target and the surrounding environment. \ac{LiDAR} makes use of electrmagnetic radiation with shorter wavelengths than those typycally used ny \ac{Radar}, allowing for finer detail to be resolved in the collected \ac{LiDAR} data. \ac{Radar} data also often requires more complex processing and skilled individuals to extract useful information, whereas \ac{LiDAR} data is usually more straightforward to interpret (\cite{agrawalCOMPARATIVEASSESSMENTREMOTE2019}).
 
-Using \ac{LiDAR} is not without its disadvantages. \ac{LiDAR} sensors are often more expensive than other traditional remote sensing hardware and as it is a less well established method there are fewer options available. Unlike cameras, which can recover non-geometric details such as target colour and texture, \ac{LiDAR} is only able to recover the three-dimensional geometry of the target. \ac{Radar} outperforms \ac{LiDAR} in certain applications. It is capable of much larger detection ranges than \ac{LiDAR} and is also unaffected by adverse environmental conditions such as smoke, rain, and fog.
-
+Using \ac{LiDAR} is not without its disadvantages. \ac{LiDAR} sensors are often more expensive than other traditional remote sensing hardware and as it is a less well established method there are fewer hardware options available. Unlike cameras, which can recover non-geometric details such as target colour and texture, \ac{LiDAR} is only able to recover the three-dimensional geometry of the target. \ac{Radar} outperforms \ac{LiDAR} in various applications. It is capable of much larger detection ranges than \ac{LiDAR} and is also unaffected by adverse environmental conditions such as smoke, rain, and fog, due to its use of longer wavelength electromagnetic radiation being capable of penetrating these conditions.
 
 All \ac{LiDAR} sensors suffer from beam divergence due to their use of lasers as the sensor emitter. Beam divergence is a measure of the angle at which photons diverge from the axis of the emitter over distance as the beam exits the laser aperture (\cite{jelinkovaLaserCharacteristics2013}). The steering mechanism within \ac{LiDAR} sensors may also impact the total beam divergence of the system. Beam divergence results in the laser beam or pulse exiting the sensor not as a single stream of photons, but rather as a cone of photons as shown in Figure \ref{fig:divergence}. When the beam reaches a target, the footprint of the beam will be in the shape of an ellipse with a size different to that of the beam at the aperture (\cite{kukkoMobileLaserScanning2013}). Beam divergence leads to uncertainties and errors in the reported locations of targets and their associated points in the final point cloud.
 
@@ -80,7 +79,7 @@ Some \ac{LiDAR} sensors are capable of measuring multiple returns from a single 
 
 *move talking about individual settings to ch4*
 
-The sensor used to collect data for this investigation was the Livox Avia. The Avia is a low-cost \ac{LiDAR} sensor produced by Livox Technology, a subsidiary of DJI. The sensor is designed for use in various typical \ac{LiDAR} applications including surveying, mapping, and autonomous systems. The Avia is a solid-state laser and Risley prism-based \ac{LiDAR} sensor with a built-in inertial measurement unit (\ac{IMU}). The sensor makes use of a 905 nm near infrared laser. 
+The sensor used to collect data for this investigation was the Livox Avia. The Avia is a low-cost \ac{LiDAR} sensor produced by \href{https://www.livoxtech.com/}{Livox Technology}, a subsidiary of DJI. The sensor is designed for use in various typical \ac{LiDAR} applications including surveying, mapping, and autonomous systems. The Avia is a solid-state laser and Risley prism-based \ac{LiDAR} sensor with a built-in \ac{IMU}. The sensor makes use of a 905 nm near-infrared laser. 
 
 The Avia has the ability to detect each point's return intensity. It records each point's return intensity as an 8-bit value ranging from 0 to 255, with 0 being the least returned energy and 255 being the most returned energy. 
 
@@ -176,7 +175,7 @@ Dimensions                      & 91 x 61.2 x 64.8 mm                   &  &  & 
 \label{sec:ch3:section4}
 %----------------------------------------------------
 
-Historically, \ac{LiDAR} was predominantly used in airborne applications for environmental mapping and surveying. However, with the recent advancements in \ac{LiDAR} technology, it has seen increased use in urban settings and aboard mobile and autonomous platforms (\cite{brazealRigorousObservationModel2021}). This shift has led to an increased focus on point cloud processing methods developed for urban environments and autonomous navigation, with less attention paid to natural environments.
+Historically, \ac{LiDAR} was predominantly used in airborne applications for environmental mapping and surveying. However, with the recent advancements in \ac{LiDAR} technology, it has seen increased use in urban settings and aboard mobile and autonomous platforms (\cite{brazealRigorousObservationModel2021}). This shift has led to an increased focus on point cloud processing methods developed for urban environments and autonomous navigation, with fewer studies on improving pre-existing methods or the development of new methods for natural environments.
 
 Many common point cloud processing methods are built around the assumption that the point cloud being worked upon is in the format of a standard (M x N) grid layout. Methods such as point cloud registration (obtaining the transformation between two point clouds (\cite{huangComprehensiveSurveyPoint2021})), clustering and model fitting often use the assumption of a constant grid with a constant number of points per frame to achieve their outputs. To bypass this limitation it is common for point clouds to be downsampled through a grid filter to achieve the desired format \cite{3DPointCloud}.
 
@@ -190,7 +189,7 @@ Many processing methods are also based on the assumption that the environment da
 \subsection{Plane Fitting}
 \label{subsec:ch3.section3.subsec1}
 
-Plane fitting is a common method used in point cloud processing to identify and locate planar surfaces within a point cloud. Plane fitting is commonly used to identify features such as walls, roads, and building facades in urban settings. This assists in transforming raw point cloud data into useful real-world information (\cite{lohaniAirborneLiDARTechnology2017}).
+Plane fitting is a common method used in point cloud processing to identify and locate planar surfaces within a point cloud. Plane fitting is commonly used to identify features such as walls, roads, and building facades in urban settings. This assists in transforming raw point cloud data into useful real-world information about urban environments (\cite{lohaniAirborneLiDARTechnology2017}).
 
 One of the most common methods for plane fitting is through the application of the \ac{RANSAC} algorithm. \ac{RANSAC} is a robust statistical algorithm used to estimate the parameters of a mathematical model from a dataset that may contain noise and outliers (\cite{fischlerRandomSampleConsensus1981}). The algorithm iteratively selects random subsets of the data to fit a user-defined model and evaluates how well the model fits the entire dataset. Using a user-defined tolerance, the algorithm classifies data points as inliers or outliers based on their distance from the fitted model. The model with the highest number of inliers is selected as the best fit for the dataset.
 
@@ -277,8 +276,7 @@ On average, snow has the highest albedo out of the three mediums. The smaller th
 \end{figure}
 %----------------------------------------------------
 
-The above suggests that the Livox Avia is best suited to detecting low density snow, first year ice. It is potentially possible to detect ice floes of any ice type, given that they are covered with snow.
-
+The above suggests that the Livox Avia is best suited to detecting low density snow and first year ice, and it is unlikely to detect open water. Potentially, it may be possible for the sensor to detect ice floes of any ice type, given that they are covered with snow. It is likely that the return intensity values of points will vary significantly depending on the ice type and snow cover present  in the scene.
 
 %====================================================
 \section{Kalman Filters}

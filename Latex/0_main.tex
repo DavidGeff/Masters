@@ -109,7 +109,7 @@
 \usepackage{url}                     % URL formatting
 \usepackage{acronym}                 % Acronym management
 %\usepackage{natbib}                  % Author-year citation style
-\usepackage[backend=biber, style=authoryear]{biblatex}
+\usepackage[backend=biber, style=authoryear, uniquename=init]{biblatex}
 \addbibresource{report.bib}
 
 %---------------------------------------------------------------------
@@ -228,13 +228,13 @@
 %---------------------------------------------------------------------
 \include{4_data}
 %---------------------------------------------------------------------
-% Chapter 5: Sensor Characterisation
-%---------------------------------------------------------------------
-\include{5_characterisation}
-%---------------------------------------------------------------------
-% Chapter 6: Pipeline
+% Chapter 5: Pipeline
 %---------------------------------------------------------------------
 \include{6_pipeline}
+%---------------------------------------------------------------------
+% Chapter 6: Sensor Characterisation
+%---------------------------------------------------------------------
+\include{5_characterisation}
 %---------------------------------------------------------------------
 % Chapter 7: Results
 %---------------------------------------------------------------------

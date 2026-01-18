@@ -57,6 +57,123 @@
       \verb C:\Users\dseph\Zotero\storage\VH7XEHST\iwt.html
       \endverb
     \endentry
+    \entry{ackleySeaiceProductionAir2020}{article}{}{}
+      \name{author}{13}{}{%
+        {{un=0,uniquepart=base,hash=fa4ce5c78a2c23ba8f719bd651d9afa4}{%
+           family={Ackley},
+           familyi={A\bibinitperiod},
+           given={S.\bibnamedelimi F.},
+           giveni={S\bibinitperiod\bibinitdelim F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bb98c612dde8ef1d2ea045c1968db512}{%
+           family={Stammerjohn},
+           familyi={S\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=60c61b26f73b965a45f7b0d35423f3c8}{%
+           family={Maksym},
+           familyi={M\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e44f09a2d84db823a77079697cf1a851}{%
+           family={Smith},
+           familyi={S\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=050a29d3d12c258f3a4f00ad11386fad}{%
+           family={Cassano},
+           familyi={C\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=09af95d6659ae5d44d52ea049bbb5db1}{%
+           family={Guest},
+           familyi={G\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d1c15b77f8dcaabccfceeea3c36d80d6}{%
+           family={Tison},
+           familyi={T\bibinitperiod},
+           given={J.-L.},
+           giveni={J\bibinithyphendelim L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=23dddcf8818f5e4c1090261c0d833f91}{%
+           family={Delille},
+           familyi={D\bibinitperiod},
+           given={B.},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=270f2125debc2b2abae29cabfc1fc316}{%
+           family={Loose},
+           familyi={L\bibinitperiod},
+           given={B.},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=11b21604cedc9279ecac0a9a7bce1f91}{%
+           family={Sedwick},
+           familyi={S\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3e912a9594859e307dc70f8fb2301ca9}{%
+           family={DePace},
+           familyi={D\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=06b0bb3439954bed89610afd8391dbce}{%
+           family={Roach},
+           familyi={R\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b2118415d9137a4fd193744f16841d97}{%
+           family={Parno},
+           familyi={P\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{1560a7cc8ae16644fc7f4712e4ca5ab2}
+      \strng{fullhash}{3528a6d6fb4c9d1f59fc90545ad4e2ca}
+      \strng{fullhashraw}{3528a6d6fb4c9d1f59fc90545ad4e2ca}
+      \strng{bibnamehash}{1560a7cc8ae16644fc7f4712e4ca5ab2}
+      \strng{authorbibnamehash}{1560a7cc8ae16644fc7f4712e4ca5ab2}
+      \strng{authornamehash}{1560a7cc8ae16644fc7f4712e4ca5ab2}
+      \strng{authorfullhash}{3528a6d6fb4c9d1f59fc90545ad4e2ca}
+      \strng{authorfullhashraw}{3528a6d6fb4c9d1f59fc90545ad4e2ca}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Abstract The Ross Sea is known for showing the greatest sea-ice increase, as observed globally, particularly from 1979 to 2015. However, corresponding changes in sea-ice thickness and production in the Ross Sea are not known, nor how these changes have impacted water masses, carbon fluxes, biogeochemical processes and availability of micronutrients. The PIPERS project sought to address these questions during an autumn ship campaign in 2017 and two spring airborne campaigns in 2016 and 2017. PIPERS used a multidisciplinary approach of manned and autonomous platforms to study the coupled air/ice/ocean/biogeochemical interactions during autumn and related those to spring conditions. Unexpectedly, the Ross Sea experienced record low sea ice in spring 2016 and autumn 2017. The delayed ice advance in 2017 contributed to (1) increased ice production and export in coastal polynyas, (2) thinner snow and ice cover in the central pack, (3) lower sea-ice Chl- a burdens and differences in sympagic communities, (4) sustained ocean heat flux delaying ice thickening and (5) a melting, anomalously southward ice edge persisting into winter. Despite these impacts, airborne observations in spring 2017 suggest that winter ice production over the continental shelf was likely not anomalous.}
+      \field{issn}{0260-3055, 1727-5644}
+      \field{journaltitle}{Annals of Glaciology}
+      \field{langid}{english}
+      \field{month}{9}
+      \field{number}{82}
+      \field{title}{Sea-Ice Production and Air/Ice/Ocean/Biogeochemistry Interactions in the {{Ross Sea}} during the {{PIPERS}} 2017 Autumn Field Campaign}
+      \field{urlday}{18}
+      \field{urlmonth}{1}
+      \field{urlyear}{2026}
+      \field{volume}{61}
+      \field{year}{2020}
+      \field{urldateera}{ce}
+      \field{pages}{181\bibrangedash 195}
+      \range{pages}{15}
+      \verb{doi}
+      \verb 10.1017/aog.2020.31
+      \endverb
+      \verb{file}
+      \verb C:\Users\dseph\Zotero\storage\HNDTE9ZS\Ackley et al. - 2020 - Sea-ice production and airiceoceanbiogeochemistry interactions in the Ross Sea during the PIPERS.pdf
+      \endverb
+    \endentry
     \entry{agrawalCOMPARATIVEASSESSMENTREMOTE2019}{article}{}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=37e6545229ff0683e5ed5cd4a787ed0c}{%
@@ -502,12 +619,12 @@
            given={D.\bibnamedelimi J.},
            giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod},
            givenun=0}}%
-        {{un=2,uniquepart=given,hash=386e7904f92bf05609a8e7e124b3fbcc}{%
+        {{un=0,uniquepart=base,hash=386e7904f92bf05609a8e7e124b3fbcc}{%
            family={Parkinson},
            familyi={P\bibinitperiod},
            given={C.\bibnamedelimi L.},
            giveni={C\bibinitperiod\bibinitdelim L\bibinitperiod},
-           givenun=2}}%
+           givenun=0}}%
       }
       \strng{namehash}{018e9a0f47793ae84539e7cf24a4c625}
       \strng{fullhash}{018e9a0f47793ae84539e7cf24a4c625}
@@ -1707,6 +1824,66 @@
       \verb 10.1016/j.oneear.2019.08.014
       \endverb
     \endentry
+    \entry{kimIntroductionKalmanFilter2019}{incollection}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=e0fbaf66e5bb058a7b2161fe0faa2871}{%
+           family={Kim},
+           familyi={K\bibinitperiod},
+           given={Youngjoo},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=01f5cb1ac2762c1cf73c25a8ec0d7742}{%
+           family={Bang},
+           familyi={B\bibinitperiod},
+           given={Hyochoong},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=93c652eae1541f988673af68fa891562}{%
+           family={Govaers},
+           familyi={G\bibinitperiod},
+           given={Felix},
+           giveni={F\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IntechOpen}%
+      }
+      \strng{namehash}{a498e77405cb26618a2e13d1157ab1a5}
+      \strng{fullhash}{a498e77405cb26618a2e13d1157ab1a5}
+      \strng{fullhashraw}{a498e77405cb26618a2e13d1157ab1a5}
+      \strng{bibnamehash}{a498e77405cb26618a2e13d1157ab1a5}
+      \strng{authorbibnamehash}{a498e77405cb26618a2e13d1157ab1a5}
+      \strng{authornamehash}{a498e77405cb26618a2e13d1157ab1a5}
+      \strng{authorfullhash}{a498e77405cb26618a2e13d1157ab1a5}
+      \strng{authorfullhashraw}{a498e77405cb26618a2e13d1157ab1a5}
+      \strng{editorbibnamehash}{93c652eae1541f988673af68fa891562}
+      \strng{editornamehash}{93c652eae1541f988673af68fa891562}
+      \strng{editorfullhash}{93c652eae1541f988673af68fa891562}
+      \strng{editorfullhashraw}{93c652eae1541f988673af68fa891562}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Introduction and {{Implementations}} of the {{Kalman Filter}}}
+      \field{isbn}{978-1-83880-536-4 978-1-83880-537-1}
+      \field{langid}{english}
+      \field{month}{5}
+      \field{title}{Introduction to {{Kalman Filter}} and {{Its Applications}}}
+      \field{urlday}{14}
+      \field{urlmonth}{1}
+      \field{urlyear}{2026}
+      \field{year}{2019}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.5772/intechopen.80600
+      \endverb
+      \verb{file}
+      \verb C:\Users\dseph\Zotero\storage\C4J9AT8D\Kim and Bang - 2019 - Introduction to Kalman Filter and Its Applications.pdf
+      \endverb
+    \endentry
     \entry{kukkoMobileLaserScanning2013}{thesis}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=16abaaffeed28c3252e7dcd5d2ba9a09}{%
@@ -2285,12 +2462,12 @@
     \endentry
     \entry{parkinsonSouthernOceanSea2004}{article}{}{}
       \name{author}{1}{}{%
-        {{un=2,uniquepart=given,hash=b2e8aee542c7ef7e089fa56a4d13d5f3}{%
+        {{un=0,uniquepart=base,hash=b2e8aee542c7ef7e089fa56a4d13d5f3}{%
            family={Parkinson},
            familyi={P\bibinitperiod},
            given={Claire\bibnamedelima L.},
            giveni={C\bibinitperiod\bibinitdelim L\bibinitperiod},
-           givenun=2}}%
+           givenun=0}}%
       }
       \strng{namehash}{b2e8aee542c7ef7e089fa56a4d13d5f3}
       \strng{fullhash}{b2e8aee542c7ef7e089fa56a4d13d5f3}
@@ -2958,7 +3135,6 @@
       \strng{authornamehash}{89fba3e6e5969e08f095c08eed06948e}
       \strng{authorfullhash}{89fba3e6e5969e08f095c08eed06948e}
       \strng{authorfullhashraw}{89fba3e6e5969e08f095c08eed06948e}
-      \field{extraname}{1}
       \field{sortinit}{V}
       \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
       \field{extradatescope}{labelyear}
@@ -2983,44 +3159,6 @@
       \verb{doi}
       \verb 10.5194/tc-16-4087-2022
       \endverb
-    \endentry
-    \entry{vichiSCALEWIN22CruiseReport2023}{report}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=89fba3e6e5969e08f095c08eed06948e}{%
-           family={Vichi},
-           familyi={V\bibinitperiod},
-           given={Marcello},
-           giveni={M\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{89fba3e6e5969e08f095c08eed06948e}
-      \strng{fullhash}{89fba3e6e5969e08f095c08eed06948e}
-      \strng{fullhashraw}{89fba3e6e5969e08f095c08eed06948e}
-      \strng{bibnamehash}{89fba3e6e5969e08f095c08eed06948e}
-      \strng{authorbibnamehash}{89fba3e6e5969e08f095c08eed06948e}
-      \strng{authornamehash}{89fba3e6e5969e08f095c08eed06948e}
-      \strng{authorfullhash}{89fba3e6e5969e08f095c08eed06948e}
-      \strng{authorfullhashraw}{89fba3e6e5969e08f095c08eed06948e}
-      \field{extraname}{2}
-      \field{sortinit}{V}
-      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{The SCALE winter 2022 (SCALE-WIN22) cruise was the final component of the SCALE programme (2019-2022), which was run in the framework of the South African National Antarctic Program (SANAP). The SA Agulhas II departed and returned to the Port of Cape Town on 11\textsuperscript{th} -- 31\textsuperscript{st} July 2022, following the Good Hope monitoring line. This report is composed of two documents: Cruise report Appendix (sailing document templates, SCALE code of conduct, and technical notes on the instrumentation) Please use the following guidelines when citing this report:{$<$}br{$>$} {$\bullet$} Expedition, cruise track and overall activities: Vichi M., {$<$}em{$>$}SCALE-WIN22 Cruise Report,{$<$}/em{$>$} 2023, DOI: 10.5281/zenodo.7901530{$<$}br{$>$} {$\bullet$} Specific chapters: [Authors], [Chapter title], Chapter [\#] {$<$}em{$>$}in Vichi M., SCALE-WIN22 Cruise Report, {$<$}/em{$>$}2023, DOI: 10.5281/zenodo.7901530}
-      \field{month}{4}
-      \field{title}{{{SCALE-WIN22 Cruise Report}}}
-      \field{type}{techreport}
-      \field{urlday}{11}
-      \field{urlmonth}{4}
-      \field{urlyear}{2024}
-      \field{year}{2023}
-      \field{urldateera}{ce}
-      \verb{doi}
-      \verb 10.5281/ZENODO.7901530
-      \endverb
-      \keyw{SA Agulhas II,Southern Ocean}
     \endentry
     \entry{vitaliRobustErrorStateKalman2021}{article}{}{}
       \name{author}{3}{}{%
@@ -3072,6 +3210,78 @@
       \range{pages}{9}
       \verb{doi}
       \verb 10.1109/JSEN.2020.3026895
+      \endverb
+    \endentry
+    \entry{voermansFinelyresolvedAlongtrackWave2024}{misc}{}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=708e0182ab0ca9fcfc45faf2a9c8a9b0}{%
+           family={Voermans},
+           familyi={V\bibinitperiod},
+           given={Joey\bibnamedelima J.},
+           giveni={J\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6175b960113c103ae190e139ee4d8fb0}{%
+           family={Fraser},
+           familyi={F\bibinitperiod},
+           given={Alexander\bibnamedelima D.},
+           giveni={A\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e3d88062d4bd7cb0c128580b79bd0d5f}{%
+           family={Brouwer},
+           familyi={B\bibinitperiod},
+           given={Jill},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a1a8c3721095338b63f242afc0850498}{%
+           family={Meylan},
+           familyi={M\bibinitperiod},
+           given={Michael\bibnamedelima H.},
+           giveni={M\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=28c7193ad4b319e3532c3da6bc7cafdb}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Qingxiang},
+           giveni={Q\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=59f8ac661340195c7b0b8dd358d3f3d2}{%
+           family={Babanin},
+           familyi={B\bibinitperiod},
+           given={Alexander\bibnamedelima V.},
+           giveni={A\bibinitperiod\bibinitdelim V\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Sea ice/Ocean Interactions}%
+      }
+      \strng{namehash}{65a0b97c91b224d79081e9735f168b2c}
+      \strng{fullhash}{c3c7414172eb52e089bb66a5b8fdddec}
+      \strng{fullhashraw}{c3c7414172eb52e089bb66a5b8fdddec}
+      \strng{bibnamehash}{65a0b97c91b224d79081e9735f168b2c}
+      \strng{authorbibnamehash}{65a0b97c91b224d79081e9735f168b2c}
+      \strng{authornamehash}{65a0b97c91b224d79081e9735f168b2c}
+      \strng{authorfullhash}{c3c7414172eb52e089bb66a5b8fdddec}
+      \strng{authorfullhashraw}{c3c7414172eb52e089bb66a5b8fdddec}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Abstract. Advances in our modeling capacity of wave-ice interactions are hindered by the limited availability of wave observations in sea ice and, specifically, under a broad range of wave and sea ice conditions. Satellite remote sensing provides opportunities to vastly expand the observational dataset of waves in sea ice and the study of wave-ice interactions. Specifically, Brouwer et al. (2022) demonstrated a clear reduction of observed wave energy into the Antarctic Marginal Ice Zone (MIZ) as derived from ICESat-2 observations. Here, we build upon the work of Brouwer et al. (2022) to estimate the wave attenuation rate in the Antarctic MIZ under a wide variety of sea ice conditions. Overall statistics of the observations reveal a linear increase in the wave attenuation rate with relative distance into the MIZ, implying that the wave energy in the MIZ scales as \textasciitilde exp({$\beta$}x2 ...), where {$\beta$} is a frequency-dependent attenuation coefficient. Attenuation rates are well-sorted with wave frequency, where highest attenuation rates are observed for the shortest waves. We find that both the magnitude and frequency dependence of the ICESat-2 estimated wave attenuation rates are consistent with in situ observations. We further highlight that the misalignment between the incident wave direction and the measurement transect, and the inhomogeneity of the ice pack may lead to significant local fluctuations and negative values in the estimated wave attenuation rate when evaluating individual transects. The strong dependence of the overall statistics of the wave attenuation rate on the wave frequency and the relative distance into the MIZ alone provides significant opportunities in modelling wave-ice interactions in the Antarctic environment at global and climate scales, as it does not depend on system variables that are not straightforward to measure, retrieve or simulate at such large scales.}
+      \field{eprinttype}{Sea ice/Ocean Interactions}
+      \field{month}{8}
+      \field{title}{Finely-Resolved along-Track Wave Attenuation Estimates in the {{Antarctic}} Marginal Ice Zone from {{ICESat-2}}}
+      \field{urlday}{18}
+      \field{urlmonth}{1}
+      \field{urlyear}{2026}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.5194/egusphere-2024-2104
+      \endverb
+      \verb{file}
+      \verb C:\Users\dseph\Zotero\storage\RLFXMVUJ\Voermans et al. - 2024 - Finely-resolved along-track wave attenuation estimates in the Antarctic marginal ice zone from ICESa.pdf
       \endverb
     \endentry
     \entry{walshAnalysisArcticSea1979}{article}{}{}
@@ -3275,43 +3485,6 @@
       \verb{doi}
       \verb 10.1098/rsta.2018.0161
       \endverb
-    \endentry
-    \entry{welch1995introduction}{article}{}{}
-      \true{moreauthor}
-      \true{morelabelname}
-      \name{author}{2}{}{%
-        {{un=0,uniquepart=base,hash=19eb8ef0f1cf49ad4375a0a4acc3a385}{%
-           family={Welch},
-           familyi={W\bibinitperiod},
-           given={Greg},
-           giveni={G\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=e4f38e96180c309ad00c07afe4fbac50}{%
-           family={Bishop},
-           familyi={B\bibinitperiod},
-           given={Gary},
-           giveni={G\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{publisher}{1}{%
-        {Chapel Hill, NC, USA}%
-      }
-      \strng{namehash}{fe3c6ebaf76b23d9b8700cefbbeac101}
-      \strng{fullhash}{fe3c6ebaf76b23d9b8700cefbbeac101}
-      \strng{fullhashraw}{fe3c6ebaf76b23d9b8700cefbbeac101}
-      \strng{bibnamehash}{fe3c6ebaf76b23d9b8700cefbbeac101}
-      \strng{authorbibnamehash}{fe3c6ebaf76b23d9b8700cefbbeac101}
-      \strng{authornamehash}{fe3c6ebaf76b23d9b8700cefbbeac101}
-      \strng{authorfullhash}{fe3c6ebaf76b23d9b8700cefbbeac101}
-      \strng{authorfullhashraw}{fe3c6ebaf76b23d9b8700cefbbeac101}
-      \field{sortinit}{W}
-      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{An Introduction to the {{Kalman}} Filter}
-      \field{year}{1995}
     \endentry
     \entry{williamsWaveIceInteractions2013}{article}{}{}
       \name{author}{5}{}{%
