@@ -9,21 +9,27 @@
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.82\textwidth]{figs/pipeline.png}
-    \caption{\textbf{Processing Pipeline.} Overview of the LiDAR data processing and feature extraction stages.}
+    \caption{\textbf{Proposed Processing Pipeline.} Overview of the LiDAR data processing and feature extraction stages.}
     \label{fig:pipeline}
 \end{figure}
 %----------------------------------------------------
 
 %====================================================
 \section{Pipeline Design}
-\label{sec:ch6.section1}
+\label{sec:ch4.section1}
 %----------------------------------------------------
 
-Based on the nature of the data collected, the \ac{LiDAR} processing tools available in MATLAB, and the objectives of this investigation, the following processing steps were selected to be evaluated as part of the proposed data processing pipeline: motion compensation, de-noising, wave parameter estimation, and pancake identification. 
+Based on the nature of the data collected (see Chapter \ref{ch:data_collection}), the \ac{LiDAR} processing tools available in MATLAB, and the objectives of this investigation, the following processing steps were selected to be evaluated as part of the proposed data processing pipeline:
+\begin{itemize}
+    \item Motion Compensation
+    \item De-noising
+    \item Wave Parameter Estimation
+    \item Pancake Identification
+\end{itemize}
 
 %----------------------------------------------------
 \subsection{Motion Compensation}
-\label{subsec:ch6.section1.subsec1}
+\label{subsec:ch4.section1.subsec1}
 
 Observing a moving target scene (sea ice in the \ac{MIZ}) from a moving platform (\textit{S.A. Agulhas II}) introduces motion distortion into the captured point cloud data and increases the level of complexity required in the data processing pipeline. The motion of the observation platform causes the sensor to change position and orientation between capturing frames, reducing the accuracy of concatenated frames and making it more difficult to identify and track features in the scene, such was individual ice floes and wave parameters.
 
@@ -31,15 +37,17 @@ A solution to this complication is to apply motion compensation to the point clo
 
 %----------------------------------------------------
 \subsection{De-noising}
-\label{subsec:ch6.section1.subsec2}
+\label{subsec:ch4.section1.subsec2}
 
 When the Avia collects data in adverse environmental conditions (such as rain, snow, and fog), the beam emitted by the sensor may interact with these weather conditions, leading to poor quality and/or noisy data. Points created by interactions with adverse weather conditions almost always have a very low return intensity (less than 4 out of 255) as the targets they interact with (snow or rain) are incredibly small and far less reflective than the intended target scene. In the case of data collected from the \ac{SCALE} Winter 2022 Cruise, snowy conditions resulted in unwanted returns caused by snowflakes in the area immediately in front of the sensor's minimum detection range. These unwanted returns create difficulties when trying to process the data further as well as reducing the number of usable points per frame.
 
 %----------------------------------------------------
 \subsection{Wave Parameter Estimation}
-\label{subsec:ch6.section1.subsec3}
+\label{subsec:ch4.section1.subsec3}
 
 \ac{RANSAC} has been applied with great success in identifying and reconstructing buildings in urban environments from airborne \ac{LiDAR} data (\cite{forlaniBuildingReconstructionVisualization2003}), but has seen limited use in natural environments. Because \ac{RANSAC} fits a user-defined model to data, a sufficiently complex wave model could allow for the identification of features in the \ac{MIZ}, such as surface waves propagating through an ice field. This would require a suitable wave model to be developed, but if successful could allow for the extraction of wave parameters such as amplitude and wave period directly from point cloud data.
+
+*say how knowing wave parameters are useful*
 
 For the Aalto University data, a simple sinusoidal wave model should be sufficient, as the wave makers generated relatively uniform waves and constrained their complexity. In contrast, data from the \ac{SCALE} Cruise will require a more complex model to account for the increased dynamics and irregular wave behaviour in the \ac{MIZ}, which is driven by multiple environmental factors and interaction with the vessel itself.
 
@@ -47,7 +55,7 @@ Due to the complexity of wave behaviour in the \ac{MIZ}, and modelling challenge
 
 %----------------------------------------------------
 \subsection{Pancake Identification}
-\label{subsec:ch6.section1.subsec4}
+\label{subsec:ch4.section1.subsec4}
 
 To identify the size and shape of individual pancakes, a method to associate individual points with individual pancakes is required. This can be achieved using a suitable clustering algorithm. The choice of clustering algorithm will be determined by the characteristics of the data to be clustered and the desired output.
 
@@ -104,7 +112,7 @@ Three density-based clustering algorithms were considered for this application: 
 
 %====================================================
 \section{Data Extraction}
-\label{sec:ch6.section2}
+\label{sec:ch4.section2}
 %----------------------------------------------------
 
 The starting point for the pipeline is the raw Avia point cloud data. All data used in this investigation was captured as rosbag (\emph{.bag}) or the proprietary Livox file type (\emph{.lvx}). The raw data has to first be extracted from these file types before it can be processed or used in analysis. The Livox \ac{ROS} driver includes functionality to convert \emph{.lvx} files to \emph{.bag} files. MATLAB's \ac{ROS} Toolbox contains functions and tools for extracting data fields from a \emph{.bag} file for storage and use in standard MATLAB matrices or structures.
@@ -115,12 +123,12 @@ MATLAB's \ac{LiDAR} Toolbox has provision for a \emph{pointCloud} object which w
 
 %====================================================
 \section{Proposed Pipeline}
-\label{sec:ch6.section3}
+\label{sec:ch4.section3}
 %----------------------------------------------------
 
 %----------------------------------------------------
 \subsection{Motion Compensation}
-\label{sec:ch6.section3.subsec1}
+\label{sec:ch4.section3.subsec1}
 
 Two Kalman filters were implemented to estimate the attitude of the Avia during data collection. The filters output estimates of the sensor's roll and pitch (yaw cannot be reliably estimated from \ac{IMU} data). Using these angle estimates an inverse transform can be applied to the point cloud to 'stabilise' the data and compensate for the motion of the observation platform. As these Kalman filters only estimate changes in roll and pitch attitude, and not position, there will still be motion artefacts in the data due to translation and yaw of the observation platform. 
 
@@ -141,7 +149,7 @@ Angle estimate residuals (the difference between the motion capture ground truth
  
 %----------------------------------------------------
 \subsection{De-noising}
-\label{sec:ch6.section3.subsec2}
+\label{sec:ch4.section3.subsec2}
 
 
 The return intensity of points can be used to remove or ignore unwanted points. A simple threshold filtering function can be constructed for de-noising data collected under snowy or other adverse conditions. To prevent valid points in the target scene with low return intensities from being discarded, a distance parameter was included in the threshold function that sets a minimum distance from the point cloud origin (the sensor aperture) that points are retained regardless of their intensity value.
@@ -160,7 +168,7 @@ The return intensity threshold was set to 1 out of 255 and the distance threshol
 
 %----------------------------------------------------
 \subsection{Wave Parameter Estimation}
-\label{subsec:ch6.section3.subsec3}
+\label{subsec:ch4.section3.subsec3}
 
 The Aalto University wave and ice tank probe data can be used as ground truth for wave parameter estimates. Wave models were fitted to the two datasets (wave probe and Avia) and magnitude and period estimates derived from the Avia data were compared to those from the wave probe.
 
@@ -217,7 +225,7 @@ Once all estimations were converted to wave period, the mean period and amplitud
 
 %----------------------------------------------------
 \subsection{Pancake Identification}
-\label{subsec:ch6.section3.subsec4}
+\label{subsec:ch4.section3.subsec4}
 
 To identify the shape and size of individual pancakes in the point cloud data, three density-based clustering algorithms were investigated; \ac{DBScan}, \ac{VDBScan} and \ac{OPTICS}. 
 
@@ -229,13 +237,13 @@ To tune the parameters of each algorithm, multiple clustering runs were performe
 
 %----------------------------------------------------
 \subsubsection{DBScan}
-\label{subsec:ch6.section3.subsec4.subsubsec1}
+\label{subsec:ch4.section3.subsec4.subsubsec1}
 
 The \ac{DBScan} algorithm was implemented using MATLAB's built-in \emph{dbscan} function, and is an unmodified version of the original algorithm.
 
 %----------------------------------------------------
 \subsubsection{VDBScan}
-\label{subsec:ch6.section3.subsec4.subsubsec2}
+\label{subsec:ch4.section3.subsec4.subsubsec2}
 
 The \ac{VDBScan} algorithm implemented was adapted from MATLAB’s \emph{dbscan} function, with modifications to incorporate variable-density clustering as described by \cite{liuVDBSCANVariedDensity2007}. In contrast to the original \ac{VDBScan} approach, which assigns an individual \textbf{$\epsilon$} value to each point, this implementation estimates a set of candidate \textbf{$\epsilon$} values for the entire point cloud using the selected \textbf{k}-nearest neighbour distances. Traditional \ac{DBScan} clustering is then applied iteratively for each \textbf{$\epsilon$} value. The resulting cluster assignments from all runs are combined on a point-by-point basis, where the most frequently occurring cluster ID across all \textbf{$\epsilon$} values is chosen as the final label for that point.
 
@@ -243,7 +251,7 @@ The decision to use a modified \ac{VDBScan} implementation was made due to compu
 
 %----------------------------------------------------
 \subsubsection{OPTICS}
-\label{subsec:ch6.section3.subsec4.subsubsec3}
+\label{subsec:ch4.section3.subsec4.subsubsec3}
 
 The \ac{OPTICS} algorithm used was provided by \cite{daszykowskiMatlabCodeOPTICS2002}, and is an implementation with minor modifications for use in MATLAB.
 

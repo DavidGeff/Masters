@@ -16,20 +16,20 @@
 
 %====================================================
 \section{Data Pre-Processing}
-\label{sec:ch5.section1}
+\label{sec:ch6.section1}
 %----------------------------------------------------
 
 Before any point cloud processing can take place, the raw Avia data must be pre-processed to ensure it is in a suitable format and condition before being fed into the main processing pipeline. This pre-processing varies depending on the source of the data, but generally involves synchronising and aligning the Avia data with any ground truth data, as well as cropping and filtering the data to focus on the areas of interest and remove unwanted points produced during experimental setup.
 
 %----------------------------------------------------
 \subsection{Stationary Characterisation Data}
-\label{subsec:ch5.section1.subsec1}
+\label{subsec:ch6.section1.subsec1}
 
 For the data collected during the stationary characterisation experiments, a minimal amount of pre-processing was required. The Avia was stationary during data collection, so no motion compensation was necessary. The point cloud data was rotated around the sensor's x-axis to align the data with the world frame, as the sensor was mounted at an angle of declination of approximately 16° to the horizontal during data collection. For this dataset there were no additional sensors, so no time synchronisation was required. Finally, the point cloud frames were cropped to focus on the region containing the targets, with dimensions of 3 m (length) x 2 m (width).
 
 %----------------------------------------------------
 \subsection{Simulated Motion Data}
-\label{subsec:ch5.section1.subsec2}
+\label{subsec:ch6.section1.subsec2}
 
 The simulated motion data collected using the Stewart platform and motion capture system required more extensive pre-processing to ensure the Avia point cloud data was aligned and synchronised with the motion capture ground truth data. During both tests, the Stewart platform was not aligned perfectly with the motion capture system's world frame. As the Avia and motion capture system were operated independently, there was no time synchronisation between the two systems. To align the two datasets, an offset was applied to the Avia timestamps to align the start of the motion capture data with the start of the Avia data. The offsets were determined manually by inspecting the data, and identifying the point at which motion began in both datasets. For the first test (10° sweeps) the offset was determined to be -938.01 seconds, and for the second test (5° sweeps) the offset was determined to -2068.20 seconds.
 
@@ -39,7 +39,7 @@ For this experiment, the point cloud data was not used and thus no pre-processin
 
 %----------------------------------------------------
 \subsection{Aalto Data}
-\label{subsec:ch5.section1.subsec3}
+\label{subsec:ch6.section1.subsec3}
 
 The data collected from the Aalto University wave and ice tank was the only point cloud data used in this investigation that was not collected using \ac{ROS}. The data was instead collected using the Livox SDK, which stores the point cloud data in the proprietary Livox \emph{.lvx} format. Livox provides tools to convert \emph{.lvx} files into \emph{.bag} files (\cite{livoxLivoxSDKLivox_ros_driver2025}), allowing the data to be processed using the same tools developed for the other datasets. Once the point cloud data was imported into MATLAB, it was rotated about the sensor's x-axis, similarly to the stationary characterisation data, as the sensor was mounted at an angle of declination of approximately 30° to the horizontal during data collection. Next, the point cloud data was cropped to remove unwanted points created during experimental setup, such as those from the tank walls and wave makers.
 
@@ -49,13 +49,13 @@ The wave probe and Avia were not time synchronised during this experiment and du
 
 %----------------------------------------------------
 \subsection{SCALE Data}
-\label{subsec:ch5.section1.subsec4}
+\label{subsec:ch6.section1.subsec4}
 
 Almost all the data collected during the \ac{SCALE} Winter 2022 Cruise required no pre-processing before being fed into the main processing pipeline. There were no additional sensors used during data collection, so no time synchronisation was required. Minimal unwanted points were created during experimental setup, so no cropping was necessary. The noise and motion artefacts present in the data were dealt with during the main processing pipeline, thus the only pre-processing required was to trim the data to only include the periods when the Avia was actively collecting data and exclude idle and setup periods.
 
 %====================================================
 \section{Sensor Characterisation}
-\label{sec:ch5.section2}
+\label{sec:ch6.section2}
 %----------------------------------------------------
 
 Before analysing the outputs of the main processing pipeline, it is important to understand the characteristics and limitations of the Livox Avia sensor. This section details the investigations carried out to determine the strengths and weaknesses of the Avia in the context of observing sea ice in the \ac{MIZ} from a moving platform.
@@ -66,7 +66,7 @@ The primary areas of investigation were the accuracy of the captured scene when 
 
 %----------------------------------------------------
 \subsection{Target Scene Reconstruction}
-\label{subsec:ch5.section2.subsec1}
+\label{subsec:ch6.section2.subsec1}
 
 To evaluate the Avia's ability to accurately reconstruct a target scene, the data collected during the stationary characterisation experiments was analysed. The point cloud data collected from the four board configurations were compared to the known geometry of the boards to determine the accuracy of the reconstructed scene and identify the impact of the sensor's angle of incidence, shadowing effects, beam divergence, and point density on the quality of the reconstructed scene.
 
@@ -74,7 +74,7 @@ This was achieved by comparing a single frame of point cloud data to the known g
 
 %----------------------------------------------------
 \subsection{Target Normals Estimation}
-\label{subsec:ch5.section2.subsec2}
+\label{subsec:ch6.section2.subsec2}
 
 To further evaluate weather valuable information about the target scene can be extracted from the Avia point cloud data, the quality of estimated point normals was investigated. MATLAB's \emph{pcnormals} function was used to estimate the point normals from the final concatenated point clouds created during the target scene reconstruction investigation. The \emph{pcnormals} function estimates point normals by fitting a plane to the \emph{k} nearest neighbours of each point in the point cloud, and using the normal vector of the fitted plane as the estimated normal vector for the point (\cite{PcnormalsEstimateNormals}). \emph{k} was set to 5 for this investigation, as it is expected that there will be a low density of points in the final point cloud frame, and a small \emph{k} value will allow for more accurate normal estimations, while a larger \emph{k} value may lead to over-smoothing of the normals.
 
