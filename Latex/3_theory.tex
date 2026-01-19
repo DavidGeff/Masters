@@ -1,7 +1,7 @@
 %****************************************************
 %	CHAPTER 3 - THEORETICAL DEVELOPMENT
 %****************************************************
-\chapter{Development of Relevant Theory}
+\chapter{Introduction to LiDAR and Point Cloud Processing}
 \label{ch:theory}
 
 %====================================================
@@ -77,11 +77,9 @@ Some \ac{LiDAR} sensors are capable of measuring multiple returns from a single 
 \label{sec:ch3:section2}
 %----------------------------------------------------
 
-*move talking about individual settings to ch4*
-
 The sensor used to collect data for this investigation was the Livox Avia. The Avia is a low-cost \ac{LiDAR} sensor produced by \href{https://www.livoxtech.com/}{Livox Technology}, a subsidiary of DJI. The sensor is designed for use in various typical \ac{LiDAR} applications including surveying, mapping, and autonomous systems. The Avia is a solid-state laser and Risley prism-based \ac{LiDAR} sensor with a built-in \ac{IMU}. The sensor makes use of a 905 nm near-infrared laser. 
 
-The Avia has the ability to detect each point's return intensity. It records each point's return intensity as an 8-bit value ranging from 0 to 255, with 0 being the least returned energy and 255 being the most returned energy. 
+The Avia has the ability to detect each point's return intensity. It records each point's return intensity as an 8-bit value ranging from 0 to 255, with 0 being the least returned energy and 255 being the most returned energy. The sensor has the ability to record multiple returns from a single output pulse. It can record up to three returns per pulse.
 
 %----------------------------------------------------
 \begin{figure}[H]
@@ -92,9 +90,8 @@ The Avia has the ability to detect each point's return intensity. It records eac
 \end{figure}
 %----------------------------------------------------
 
-The Livox Avia has a listed beam divergence of 0.28° x 0.03° along its vertical and horizontal planes. This results in the emitted beam, if falling on a target perfectly perpendicular to the axis of propagation at a distance of 50 meters, having the form of an ellipse with the approximate dimensions of 244.35 x 26.18 mm.
+The Livox Avia has a listed beam divergence of 0.28° x 0.03° along its vertical and horizontal planes. This results in the emitted beam, if falling on a target perfectly perpendicular to the axis of propagation at a distance of 50 meters, having the form of an ellipse with the approximate dimensions of 244.35 mm in height and 26.18 mm in width.
 
-*edit this a bit*
 The Avia has two built-in scanning patterns, a repetitive and a non-repetitive pattern. The repetitive scanning pattern scans the target area in a narrow horizontal band, providing a more uniform point density per frame when compared to the non-repetitive mode, see Figure \ref{fig:rep}. The non-repetitive scanning pattern scans the target with a rosette-shaped pattern which rotates as it scans, covering areas not scanned in previous frames, see Figure \ref{fig:non_rep}. This scanning method results in a non-uniform distribution of points across its \ac{FOV}. There is a high density of points in the centre of the \ac{FOV}, with the number of points reducing outwards to the edges of the sensor's \ac{FOV}.
 
 %----------------------------------------------------
@@ -143,8 +140,6 @@ The Avia has two built-in scanning patterns, a repetitive and a non-repetitive p
 \end{figure}
 %----------------------------------------------------
 
-The sensor has three return rate settings: single, double, or triple return. 
-
 %----------------------------------------------------
 \begin{table}[H]
 \centering
@@ -177,13 +172,11 @@ Dimensions                      & 91 x 61.2 x 64.8 mm                   &  &  & 
 
 Historically, \ac{LiDAR} was predominantly used in airborne applications for environmental mapping and surveying. However, with the recent advancements in \ac{LiDAR} technology, it has seen increased use in urban settings and aboard mobile and autonomous platforms (\cite{brazealRigorousObservationModel2021}). This shift has led to an increased focus on point cloud processing methods developed for urban environments and autonomous navigation, with fewer studies on improving pre-existing methods or the development of new methods for natural environments.
 
-Many common point cloud processing methods are built around the assumption that the point cloud being worked upon is in the format of a standard (M x N) grid layout. Methods such as point cloud registration (obtaining the transformation between two point clouds (\cite{huangComprehensiveSurveyPoint2021})), clustering and model fitting often use the assumption of a constant grid with a constant number of points per frame to achieve their outputs. To bypass this limitation it is common for point clouds to be downsampled through a grid filter to achieve the desired format \cite{3DPointCloud}.
+Many common point cloud processing methods are built around the assumption that the point cloud being worked upon is in the format of a standard (M x N) grid layout. Methods such as point cloud registration (obtaining the transformation between two point clouds (\cite{huangComprehensiveSurveyPoint2021})), clustering and model fitting often use the assumption of a constant grid with a constant number of points per frame to achieve their outputs. To bypass this limitation it is common for point clouds to be downsampled through a grid filter to achieve the desired format (\cite{3DPointCloud}).
 
-In the Avia's repetitive scanning pattern (see Figure \ref{fig:rep}), the sensor produces a point cloud with a roughly rectangular \ac{FOV} and consistent point density, which is suitable for downsampling and grid filtering. Point clouds produced by the non-repetitive scanning pattern (see Figure \ref{fig:non_rep}) are circular and do not have uniform point density and are thus not ideal for downsampling and grid filtering.
+In the Avia's repetitive scanning pattern (see Figure \ref{fig:rep}), the sensor produces a point cloud with a roughly rectangular \ac{FOV} and consistent point density, which is suitable for downsampling and grid filtering. Point clouds produced by the non-repetitive scanning pattern (see Figure \ref{fig:non_rep}) are circular and do not have uniform point density and do not have fixed locations for each point in the \ac{FOV}. These point clouds are thus not ideal for downsampling and grid filtering.
 
 Many processing methods are also based on the assumption that the environment data is collected from will contain predominantly objects made of simple geometries. For example, a scene in an urban environment will contain many objects consisting of planar surfaces and cuboid shapes such as roads, buildings and vehicles. The environment that data for this investigation was captured contains none of these simple shapes, with the geometry of the pancake floes being irregular and superimposed upon complex ocean surface waves.
-
-*fix this section up a bit*
 
 %----------------------------------------------------
 \subsection{Plane Fitting}
