@@ -33,20 +33,19 @@ To simulate conditions similar to those that may be experienced when observing t
 
 The Avia was mounted on a tripod and placed on a terrace above the rugby field at a height of 9.1 metres above the ground, angled downwards at an angle of 16° from the horizontal, as seen in Figure \ref{fig:field_setup}. These dimensions and angles were selected to simulate the expected observation geometry when mounted on a research vessel, as informed by the data collection setup detailed in Section \ref{subsec:ch4.section3.subsec2}.
 
-
 %----------------------------------------------------
 \begin{figure}[H]
 \centering
 \begin{minipage}{.5\textwidth}
   \centering
-  \includegraphics[width=0.9\linewidth]{figs/Field_setup.JPG}
-  \caption{\textbf{Field Setup.}}
+  \includegraphics[width=0.95\linewidth]{figs/field_setup.png}
+  \caption{\textbf{Data collection Apparatus}}
   \label{fig:field_setup}
 \end{minipage}%
 \begin{minipage}{.5\textwidth}
   \centering
-  \includegraphics[width=0.9\linewidth]{figs/edited_level.png}
-  \caption{\textbf{angle.}}
+  \includegraphics[width=0.95\linewidth]{figs/edited_level.png}
+  \caption{\textbf{Avia Angle of Depression.}}
   \label{fig:angle}
 \end{minipage}
 \end{figure}
@@ -57,8 +56,8 @@ Two sheets of hardboard, 1220 x 1220 mm each, a similar in size to a small panca
 %----------------------------------------------------
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.9\textwidth]{figs/field_boards.JPG}
-    \caption{\textbf{Boards.} Target A on the left, target B on the right.}
+    \includegraphics[width=0.95\textwidth]{figs/field_boards.JPG}
+    \caption{\textbf{Target Boards.} Target A on the left, target B on the right.}
     \label{fig:boards}
 \end{figure}
 %----------------------------------------------------
@@ -68,13 +67,13 @@ Two sheets of hardboard, 1220 x 1220 mm each, a similar in size to a small panca
 \centering
 \begin{minipage}{.5\textwidth}
   \centering
-  \includegraphics[width=0.9\linewidth]{figs/board_c.jpg}
+  \includegraphics[width=0.95\linewidth]{figs/board_c.jpg}
   \caption{\textbf{Target C.}}
   \label{fig:target_c}
 \end{minipage}%
 \begin{minipage}{.5\textwidth}
   \centering
-  \includegraphics[width=0.9\linewidth]{figs/board_d.jpg}
+  \includegraphics[width=0.95\linewidth]{figs/board_d.jpg}
   \caption{\textbf{Target D.}}
   \label{fig:target_d}
 \end{minipage}
@@ -89,27 +88,29 @@ The Avia collected a minimum of 75 point cloud frames of each target.
 
 To investigate the feasibility of using the Avia's \ac{IMU} data to compensate for the motion of a moving observation platform, an experiment was conducted to collect \ac{IMU} data from the Avia while it was subjected to known motion.
 
-To apply known motion to the Avia, a Stewart platform was used to manipulate the sensor. A Stewart platform is a device that has the ability to manipulate its target platform in 6 degrees, namely linear translations along its X, Y and Z axes and rotation around its the X, Y, and Z axes \cite{stewartPlatformSixDegrees1965}. The Stewart platform used for this experiment was designed and built by Liam Clark, a former student from the University of Cape Town (cite here?). The platform had been used sporadically since its construction in 2018, and had undergone many repairs and part replacements, resulting in irregular performance that did not meet the original design specifications. To overcome this limitation, a motion capture system was employed to record ground-truth motion data for comparison and validation.
+To apply known motion to the Avia, a Stewart platform was used to manipulate the sensor. A Stewart platform is a device that has the ability to manipulate its target platform in 6 degrees, namely linear translations along its X, Y and Z axes and rotation around its the X, Y, and Z axes (\cite{stewartPlatformSixDegrees1965}). The Stewart platform used for this experiment was designed and built a former student from the University of Cape Town (\cite{clarkStewart2018}). The platform had been used sporadically since its construction in 2018, and had undergone many repairs and part replacements, resulting in irregular performance that did not meet the original design specifications. To overcome this limitation, a motion capture system was employed to record ground-truth motion data for comparison and validation.
 
-The motion capture system used in this experiment was manufactured by OptiTrack, who provided all sensors, software and supporting equipment. The system consists of 4 OptiTrack Prime 13 cameras and 3 OptiTrack Prime 13W (wide angle) cameras, all managed by a PC running OptiTrack's Motive software. Both camera types record data at a rate of 240 Hz, with the Prime 13 having a listed 3D accuracy of +/- 0.02 mm, and the Prime 13W having a listed 3D accuracy of +/- 0.03 mm (cite here?). The system makes use of passive infrared-reflective markers to track the position of the target over time. The data collected by the motion capture system was not time-synchronised with the Avia's \ac{IMU} data.
+The motion capture system used in this experiment was manufactured by \href{https://optitrack.com}{OptiTrack}, who provided all sensors, software and supporting equipment. The system consists of 4 OptiTrack PrimeX 13 cameras and 3 OptiTrack PrimeX 13W (wide angle) cameras, all managed by a PC running OptiTrack's Motive software. Both camera types record data at a rate of 240 Hz, with the PrimeX 13 having a listed 3D accuracy of +/- 0.02 mm (\cite{PrimeX13Depth}), and the PrimeX 13W having a listed 3D accuracy of +/- 0.03 mm (\cite{PrimeX13WDepth}). The system makes use of passive infrared reflective markers to track the position of the target over time. The data collected by the motion capture system was not time-synchronised with the Avia's \ac{IMU} data.
 
-As this experiment is intended to be a preliminary investigation into the feasibility of using \ac{IMU} data for motion compensation, only rotational motion, and no translational motion was applied to the Avia. The Avia had six motion capture markers attached to it, (see Figures \ref{fig:markers_0}, \ref{fig:markers_1}, and \ref{fig:markers_2}) and was mounted to the Stewart platform using a custom 3D-printed mount.
+As this experiment is intended to be a preliminary investigation into the feasibility of using \ac{IMU} data for motion compensation, only rotational motion, and no translational motion was applied to the Avia. The Avia had six motion capture markers attached to it, (see Figure \ref{fig:markers}) and was mounted to the Stewart platform using a custom 3D-printed mount, as seen in Figure \ref{fig:motion_setup}.
 
 %----------------------------------------------------
 \begin{figure}[H]
 \centering
-\begin{minipage}{.5\textwidth}
-  \centering
-  \includegraphics[width=0.95\linewidth]{figs/stewart_setup.jpg}
-  \caption{\textbf{Motion setup.}}
+  \begin{minipage}{.5\textwidth}
+    \centering
+    \includegraphics[width=0.95\linewidth]{figs/stewart_setup.jpg}
+    %\caption{\textbf{Motion setup.}}
+    %\label{fig:motion_setup}
+  \end{minipage}%
+  \begin{minipage}{.5\textwidth}
+    \centering
+    \includegraphics[width=0.95\linewidth]{figs/markers_1.png}
+    %\caption{\textbf{Markers.}}
+    %\label{fig:markers_1}
+  \end{minipage}
+  \caption{\textbf{Simulated Motion Experimental Setup.}}
   \label{fig:motion_setup}
-\end{minipage}%
-\begin{minipage}{.5\textwidth}
-  \centering
-  \includegraphics[width=0.95\linewidth]{figs/markers_1.png}
-  \caption{\textbf{Markers.}}
-  \label{fig:markers_1}
-\end{minipage}
 \end{figure}
 %----------------------------------------------------
 
@@ -117,17 +118,19 @@ As this experiment is intended to be a preliminary investigation into the feasib
 \begin{figure}[H]
 \centering
 \begin{minipage}{.5\textwidth}
-  \centering
-  \includegraphics[width=0.95\linewidth]{figs//markers_0.png}
-  \caption{\textbf{Markers.}}
-  \label{fig:markers_0}
-\end{minipage}%
-\begin{minipage}{.5\textwidth}
-  \centering
-  \includegraphics[width=0.95\linewidth]{figs/markers_2.png}
-  \caption{\textbf{Markers.}}
-  \label{fig:markers_2}
-\end{minipage}
+    \centering
+    \includegraphics[width=0.95\linewidth]{figs//markers_0.png}
+    %\caption{\textbf{Markers.}}
+    %\label{fig:markers_0}
+  \end{minipage}%
+  \begin{minipage}{.5\textwidth}
+    \centering
+    \includegraphics[width=0.95\linewidth]{figs/markers_2.png}
+    %\caption{\textbf{Markers.}}
+    %\label{fig:markers_2}
+  \end{minipage}
+  \caption{\textbf{Motion Capture Markers on Livox Avia.}}
+  \label{fig:markers}
 \end{figure}
 %----------------------------------------------------
 
@@ -142,7 +145,7 @@ The Stewart platform was set to carry out two pre-defined motion routines of dif
 
 The frequency of each rotation was set to vary over time, following a chirp function, beginning at a frequency of 0.005 Hz and ending at a frequency of 0.05 Hz over a duration of 60 seconds. The first routine was carried out with a rotation amplitude of 10°, while the second routine was carried out with a rotation amplitude of 5°.
 
-The amplitude and frequency parameters for the motion routines were selected to simulate the expected motion of a research vessel at sea. The \ac{IMU} data collected during the \ac{SCALE} Winter 2022 Cruise, detailed in Section \ref{subsec:ch4.section3.subsec2}, was inspected and informed the selection of these parameters. During the cruise, the Avia was mounted on the port side of the vessel several decks above the waterline, several meters from the stern. The vessel experienced moderate sea conditions during data collection, as no data was collected during poor weather. The resulting motion of the Avia during data collection was expected to be predominatly low amplitude and frequency pitch and roll motion, with a limited amount of yaw and translational motion.
+The amplitude and frequency parameters for the motion routines were selected to simulate the expected motion of a research vessel at sea. The \ac{IMU} data collected during the \ac{SCALE} Winter 2022 Cruise, detailed in Section \ref{subsec:ch4.section3.subsec2}, was inspected and informed the selection of these parameters. During the cruise, the Avia was mounted on the port side of the vessel several decks above the waterline, several meters from the stern. The vessel experienced moderate sea conditions during data collection, as no data was collected during poor weather. The resulting motion of the Avia during data collection was expected to be predominantly low amplitude and frequency pitch and roll motion, with a limited amount of yaw and translational motion.
 
 \newpage
 %====================================================
@@ -167,7 +170,7 @@ Aalto University operates a wave and ice tank 40 m x 40 m and 2.8 m deep. The ta
 \end{figure}
 %----------------------------------------------------
 
-In November 2023, a fellow Masters student (Anand Nair cite?) ran experiments in the tank to simulate the motion of an individual pancake ice floe using a scale model. In addition to the sensors selected by Anand for his experiments, point cloud data from these tests were collected using the Avia.
+In November 2023, a fellow Masters student (\cite{nairThreeDimensionalComputational2024}) ran experiments in the tank to simulate the motion of an individual pancake ice floe using a scale model. In addition to the sensors selected by Nair for his experiments, point cloud data from these tests were collected using the Avia.
 The Avia was mounted on a mobile gantry above the tank, angled to face down towards the ice and water, in the direction of the wave generators. Waves were generated and briefly propagated through open water before reaching the ice.  A capacitive probe in the tank recorded the wave height over time, and was placed 5 meters in front of the wave generators. The wave data was sampled at a rate of 300 Hz.
 
 A uniform sheet of ice was created in the tank before the tests (any idea of ice thickness?). Throughout the experiment, the ice sheet progressively broke up into individual ice floes due to the generated wave action. No addition ice was created during the experiment.
