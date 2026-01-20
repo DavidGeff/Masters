@@ -145,7 +145,7 @@ Once angle estimations have been obtained, they have to be time synchronised and
 \end{figure}
 %----------------------------------------------------
 
-Angle estimate residuals (the difference between the motion capture ground truth and the filter's estimates) were computed for the two test cases and used as the primary metric for comparing the filters relative performance. The residuals were also used in the tuning of both filters. To tune each filter's parameters, iterative adjustments were made to the parameters, and the angle estimates observed until the mean residuals reached a minimum, as recommended by \cite{grewalApplicationsKalmanFiltering2010}.
+Angle estimate residuals (the difference between the motion capture ground truth and the filter's estimates) were computed for the two test cases and used as the primary metric for comparing the filters relative performance. The residuals were also used in the tuning of both filters. To tune each filter's parameters, iterative adjustments were made to the parameters, and the angle estimates observed until the mean residuals reached a minimum, as recommended by \textcite{grewalApplicationsKalmanFiltering2010}.
  
 %----------------------------------------------------
 \subsection{De-noising}
@@ -194,7 +194,7 @@ To model the waves from point cloud data, a spatial sinusoidal plane model (equa
 \end{equation}
 %----------------------------------------------------
 
-\textit{x}, \textit{y} and \textit{z} are co-ordinates of the wave relative to the Avia's origin. \textit{A} is the amplitude, \textit{B} is the wave number, \textit{C} is the phase shift and \textit{D} and \textit{E} are plane slopes and \textit{F} is an offset. For this investigation only amplitude and wave number (\textit{A} and \textit{B}) are of interest.
+\textit{x}, \textit{y} and \textit{z} are coordinates of the wave relative to the Avia's origin. \textit{A} is the amplitude, \textit{B} is the wave number, \textit{C} is the phase shift and \textit{D} and \textit{E} are plane slopes and \textit{F} is an offset. For this investigation only amplitude and wave number (\textit{A} and \textit{B}) are of interest.
 
 As the waves generated in the wave tank were waves in deep water, (water depth greater than half the wavelength), wave number (\textit{k}) is related to angular velocity (\textit{$\omega$}) through the dispersion relation (\cite{dingemansWaterWavePropagation1997}) given in equation \ref{eqn:dispersion}.
 
@@ -245,7 +245,7 @@ The \ac{DBScan} algorithm was implemented using MATLAB's built-in \emph{dbscan} 
 \subsubsection{VDBScan}
 \label{subsec:ch4.section3.subsec4.subsubsec2}
 
-The \ac{VDBScan} algorithm implemented was adapted from MATLAB’s \emph{dbscan} function, with modifications to incorporate variable-density clustering as described by \cite{liuVDBSCANVariedDensity2007}. In contrast to the original \ac{VDBScan} approach, which assigns an individual \textbf{$\epsilon$} value to each point, this implementation estimates a set of candidate \textbf{$\epsilon$} values for the entire point cloud using the selected \textbf{k}-nearest neighbour distances. Traditional \ac{DBScan} clustering is then applied iteratively for each \textbf{$\epsilon$} value. The resulting cluster assignments from all runs are combined on a point-by-point basis, where the most frequently occurring cluster ID across all \textbf{$\epsilon$} values is chosen as the final label for that point.
+The \ac{VDBScan} algorithm implemented was adapted from MATLAB’s \emph{dbscan} function, with modifications to incorporate variable-density clustering as described by \textcite{liuVDBSCANVariedDensity2007}. In contrast to the original \ac{VDBScan} approach, which assigns an individual \textbf{$\epsilon$} value to each point, this implementation estimates a set of candidate \textbf{$\epsilon$} values for the entire point cloud using the selected \textbf{k}-nearest neighbour distances. Traditional \ac{DBScan} clustering is then applied iteratively for each \textbf{$\epsilon$} value. The resulting cluster assignments from all runs are combined on a point-by-point basis, where the most frequently occurring cluster ID across all \textbf{$\epsilon$} values is chosen as the final label for that point.
 
 The decision to use a modified \ac{VDBScan} implementation was made due to computational restraints. The original \ac{VDBScan} algorithm requires the calculation and storage of an individual \textbf{$\epsilon$} value for each point in the point cloud, which requires significant memory resources for large point clouds. Every attempt to run the original \ac{VDBScan} algorithm on the PC used for this investigation (equipped with 32 GB of RAM) resulted in out-of-memory errors. 
 
@@ -253,7 +253,7 @@ The decision to use a modified \ac{VDBScan} implementation was made due to compu
 \subsubsection{OPTICS}
 \label{subsec:ch4.section3.subsec4.subsubsec3}
 
-The \ac{OPTICS} algorithm used was provided by \cite{daszykowskiMatlabCodeOPTICS2002}, and is an implementation with minor modifications for use in MATLAB.
+The \ac{OPTICS} algorithm used was provided by \textcite{daszykowskiMatlabCodeOPTICS2002}, and is an implementation with minor modifications for use in MATLAB.
 
 %****************************************************
 % END
