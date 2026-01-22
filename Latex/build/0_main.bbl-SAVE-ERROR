@@ -170,9 +170,6 @@
       \verb{doi}
       \verb 10.1017/aog.2020.31
       \endverb
-      \verb{file}
-      \verb C:\Users\dseph\Zotero\storage\HNDTE9ZS\Ackley et al. - 2020 - Sea-ice production and airiceoceanbiogeochemistry interactions in the Ross Sea during the PIPERS.pdf
-      \endverb
     \endentry
     \entry{agrawalCOMPARATIVEASSESSMENTREMOTE2019}{article}{}{}
       \name{author}{2}{}{%
@@ -611,53 +608,49 @@
       \endverb
       \keyw{calibration,drones,laser scanning,lidar,Risley prism,UAS}
     \endentry
-    \entry{cavalieriAntarcticSeaIce2008}{article}{}{}
-      \name{author}{2}{}{%
-        {{un=0,uniquepart=base,hash=8a29f103f31e76603ee056a3db044305}{%
-           family={Cavalieri},
+    \entry{BrowseImageSubset}{misc}{}{}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{https://nsidc.org/data/bist}
+      \field{title}{Browse {{Image Subset Tool}} ({{BIST}}) |{} {{National Snow}} and {{Ice Data Center}}}
+      \field{urlday}{19}
+      \field{urlmonth}{1}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+    \endentry
+    \entry{clarkStewart2018}{thesis}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=43b3df89233db0724bdcf4d9a8dc25e8}{%
+           family={Clark},
            familyi={C\bibinitperiod},
-           given={D.\bibnamedelimi J.},
-           giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=386e7904f92bf05609a8e7e124b3fbcc}{%
-           family={Parkinson},
-           familyi={P\bibinitperiod},
-           given={C.\bibnamedelimi L.},
-           giveni={C\bibinitperiod\bibinitdelim L\bibinitperiod},
+           given={Liam\bibnamedelima James},
+           giveni={L\bibinitperiod\bibinitdelim J\bibinitperiod},
            givenun=0}}%
       }
-      \strng{namehash}{018e9a0f47793ae84539e7cf24a4c625}
-      \strng{fullhash}{018e9a0f47793ae84539e7cf24a4c625}
-      \strng{fullhashraw}{018e9a0f47793ae84539e7cf24a4c625}
-      \strng{bibnamehash}{018e9a0f47793ae84539e7cf24a4c625}
-      \strng{authorbibnamehash}{018e9a0f47793ae84539e7cf24a4c625}
-      \strng{authornamehash}{018e9a0f47793ae84539e7cf24a4c625}
-      \strng{authorfullhash}{018e9a0f47793ae84539e7cf24a4c625}
-      \strng{authorfullhashraw}{018e9a0f47793ae84539e7cf24a4c625}
+      \list{institution}{1}{%
+        {University of Cape Town / Department of Electrical Engineering), University of Cape Town}%
+      }
+      \strng{namehash}{43b3df89233db0724bdcf4d9a8dc25e8}
+      \strng{fullhash}{43b3df89233db0724bdcf4d9a8dc25e8}
+      \strng{fullhashraw}{43b3df89233db0724bdcf4d9a8dc25e8}
+      \strng{bibnamehash}{43b3df89233db0724bdcf4d9a8dc25e8}
+      \strng{authorbibnamehash}{43b3df89233db0724bdcf4d9a8dc25e8}
+      \strng{authornamehash}{43b3df89233db0724bdcf4d9a8dc25e8}
+      \strng{authorfullhash}{43b3df89233db0724bdcf4d9a8dc25e8}
+      \strng{authorfullhashraw}{43b3df89233db0724bdcf4d9a8dc25e8}
       \field{sortinit}{C}
       \field{sortinithash}{4d103a86280481745c9c897c925753c0}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{Analyses of 28 years (1979--2006) of Antarctic sea ice extents and areas derived from satellite passive microwave radiometers are presented and placed in the context of results obtained previously for the 20-year period 1979--1998. We present monthly averaged sea ice extents and areas, monthly deviations, yearly and seasonal averages, and their trends for the Southern Hemisphere as a whole and for each of five sectors: the Weddell Sea, the Indian Ocean, the western Pacific Ocean, the Ross Sea, and the Bellingshausen/Amundsen seas. The total Antarctic sea ice extent trend increased slightly, from 0.96 \textpm{} 0.61\% decade -1 to 1.0 \textpm{} 0.4\% decade -1 , from the 20- to 28-year period, reflecting contrasting changes in the sector trends. The eight additional years resulted in smaller positive yearly trends in sea ice extent for the Weddell Sea (0.80 \textpm{} 1.4\% decade -1 ), the western Pacific Ocean (1.4 \textpm{} 1.9\% decade -1 ), and the Ross Sea (4.4 \textpm{} 1.7\% decade -1 ) sectors, a lessening of the negative trend for the Bellingshausen/Amundsen seas (-5.4 \textpm{} 1.9\% decade -1 ) sector, and a shift from a negative trend to a positive trend for the Indian Ocean (1.9 \textpm{} 1.4\% decade -1 ) sector. The trends for the Southern Hemisphere as a whole and for the Ross Sea sector are significant at the 95\% level, whereas the trend for the Bellingshausen/Amundsen seas sector is significant at the 99\% level. A similar pattern of yearly trend changes for the two periods is also apparent in the sea ice area time series.}
-      \field{issn}{0148-0227}
-      \field{journaltitle}{Journal of Geophysical Research: Oceans}
-      \field{langid}{english}
-      \field{month}{7}
-      \field{number}{C7}
-      \field{title}{Antarctic Sea Ice Variability and Trends, 1979--2006}
-      \field{urlday}{27}
-      \field{urlmonth}{11}
-      \field{urlyear}{2025}
-      \field{volume}{113}
-      \field{year}{2008}
-      \field{urldateera}{ce}
-      \field{pages}{2007JC004564}
-      \range{pages}{-1}
-      \verb{doi}
-      \verb 10.1029/2007JC004564
-      \endverb
+      \field{month}{10}
+      \field{title}{The {{Stewart Platform}}. {{A Proposed Ocean Surface Simulation Platform}}}
+      \field{type}{{{BSc}}({{Eng}}) Final Year Project}
+      \field{year}{2018}
     \endentry
     \entry{comisoSatelliteRemoteSensing1991}{article}{}{}
       \name{author}{1}{}{%
@@ -698,6 +691,69 @@
       \range{pages}{40}
       \verb{doi}
       \verb 10.1016/0924-7963(91)90044-U
+      \endverb
+    \endentry
+    \entry{daiWaveRaftingEquilibrium2004}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=b03cd0730abd445e2f6b743272c48f1d}{%
+           family={Dai},
+           familyi={D\bibinitperiod},
+           given={Mingrui},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b3fe7a24db0e244a881e73b8c85ebd26}{%
+           family={Shen},
+           familyi={S\bibinitperiod},
+           given={Hayley\bibnamedelima H.},
+           giveni={H\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c038ebccf34fda5b76b23b9b4d6dc638}{%
+           family={Hopkins},
+           familyi={H\bibinitperiod},
+           given={Mark\bibnamedelima A.},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=79e22fcb11f45c70c75d75c8150337e1}{%
+           family={Ackley},
+           familyi={A\bibinitperiod},
+           given={Stephen\bibnamedelima F.},
+           giveni={S\bibinitperiod\bibinitdelim F\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{de39dbad05d3b162ba25b8ca81c20e1c}
+      \strng{fullhash}{f8b74338017e14f662bfc705fdc0df25}
+      \strng{fullhashraw}{f8b74338017e14f662bfc705fdc0df25}
+      \strng{bibnamehash}{de39dbad05d3b162ba25b8ca81c20e1c}
+      \strng{authorbibnamehash}{de39dbad05d3b162ba25b8ca81c20e1c}
+      \strng{authornamehash}{de39dbad05d3b162ba25b8ca81c20e1c}
+      \strng{authorfullhash}{f8b74338017e14f662bfc705fdc0df25}
+      \strng{authorfullhashraw}{f8b74338017e14f662bfc705fdc0df25}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Pancake ice, the circular floes formed during ice growth in a wave field, forms in many polar and subpolar seas. Vertical thin sections of cores taken from the ice cover in these regions show distinct layering structure. These observations suggest wave rafting could play a significant role in defining the ice cover thickness, much more so than thermodynamic growth. Although wave rafting is intuitively apparent, no previous study relating the resulting ice cover to wave characteristics has been conducted. In this study we utilize both laboratory experiments and numerical simulations to determine the rafting process. We propose a theory that predicts a final equilibrium thickness, provided that the incoming wave is kept constant. The equilibrium thickness from the theory is proportional to the square of the wave amplitude and the square of the floe diameter and is inversely proportional to the cube of the wavelength. This theory relates the final ice cover thickness to the wave characteristics and the size and surface properties of the pancake ice floes. This theory also provides a way to calculate the speed with which the boundary between the single-layer pancake ice floes and the equilibrium rafted ice cover propagates. We conduct laboratory experiments with plastic model pancake ice to create rafting. We perform computer simulations with a three-dimensional discrete element model that simulates the movement of disc-shaped floes in the wave field. We compare the theoretical result with the laboratory experiments and a numerically simulated rafting process. Both the laboratory and the computer simulation results compare favorably with the theory.}
+      \field{issn}{0148-0227}
+      \field{journaltitle}{Journal of Geophysical Research: Oceans}
+      \field{langid}{english}
+      \field{month}{7}
+      \field{number}{C7}
+      \field{title}{Wave Rafting and the Equilibrium Pancake Ice Cover Thickness}
+      \field{urlday}{4}
+      \field{urlmonth}{3}
+      \field{urlyear}{2025}
+      \field{volume}{109}
+      \field{year}{2004}
+      \field{urldateera}{ce}
+      \field{pages}{2003JC002192}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1029/2003JC002192
+      \endverb
+      \verb{file}
+      \verb C:\Users\dseph\Zotero\storage\IZVKRNP6\Dai et al. - 2004 - Wave rafting and the equilibrium pancake ice cover thickness.pdf
       \endverb
     \endentry
     \entry{daszykowskiMatlabCodeOPTICS2002}{misc}{}{}
@@ -1880,9 +1936,6 @@
       \verb{doi}
       \verb 10.5772/intechopen.80600
       \endverb
-      \verb{file}
-      \verb C:\Users\dseph\Zotero\storage\C4J9AT8D\Kim and Bang - 2019 - Introduction to Kalman Filter and Its Applications.pdf
-      \endverb
     \endentry
     \entry{kukkoMobileLaserScanning2013}{thesis}{}{}
       \name{author}{1}{}{%
@@ -2334,6 +2387,52 @@
       \verb 10.1117/1.OE.56.3.031220
       \endverb
     \endentry
+    \entry{nairThreeDimensionalComputational2024}{inproceedings}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=3697a675c22ed89986c3ba583bb42dd4}{%
+           family={Nair},
+           familyi={N\bibinitperiod},
+           given={Anand},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ef9cc1e77054fe688a462015ed76a700}{%
+           family={Boje},
+           familyi={B\bibinitperiod},
+           given={Edward\bibnamedelima Sidney},
+           giveni={E\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c0d599c7db81b41e88885d2c081cb62e}{%
+           family={Verrinder},
+           familyi={V\bibinitperiod},
+           given={Robyn},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Stellenbosch}%
+      }
+      \list{publisher}{1}{%
+        {South African Association of Theoretical and Applied Mechanics (SAAM)}%
+      }
+      \strng{namehash}{55a7577445b3fb6da3731f3b220cb038}
+      \strng{fullhash}{55a7577445b3fb6da3731f3b220cb038}
+      \strng{fullhashraw}{55a7577445b3fb6da3731f3b220cb038}
+      \strng{bibnamehash}{55a7577445b3fb6da3731f3b220cb038}
+      \strng{authorbibnamehash}{55a7577445b3fb6da3731f3b220cb038}
+      \strng{authornamehash}{55a7577445b3fb6da3731f3b220cb038}
+      \strng{authorfullhash}{55a7577445b3fb6da3731f3b220cb038}
+      \strng{authorfullhashraw}{55a7577445b3fb6da3731f3b220cb038}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceeding of the 13th {{South African Conference}} on {{Computational}} and {{Applied Mechanics}}}
+      \field{isbn}{978-0-7972-1914-4}
+      \field{title}{Three Dimensional Computational Fluid Dynamics Modelling of Pancake Sea Ice on Waves}
+      \field{year}{2024}
+    \endentry
     \entry{nelsonHowDidWe2013}{article}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=d2cadb145bd2bdeb238ff5150373227b}{%
@@ -2517,9 +2616,6 @@
       \field{urlmonth}{12}
       \field{urlyear}{2025}
       \field{urldateera}{ce}
-      \verb{file}
-      \verb C:\Users\dseph\Zotero\storage\XVZ3KKR9\pcnormals.html
-      \endverb
     \endentry
     \entry{pettorelliSatelliteRemoteSensing2014}{article}{}{}
       \name{author}{6}{}{%
@@ -2605,6 +2701,38 @@
       \verb 10.1111/1365-2664.12261
       \endverb
     \endentry
+    \entry{PrimeX13Depth}{misc}{}{}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labeltitlesource}{title}
+      \field{abstract}{High speed, precise tracking.}
+      \field{howpublished}{http://optitrack.com/cameras/primex-13/index.html}
+      \field{journaltitle}{OptiTrack}
+      \field{langid}{english}
+      \field{title}{{{PrimeX}} 13 - {{In Depth}}}
+      \field{urlday}{19}
+      \field{urlmonth}{1}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+    \endentry
+    \entry{PrimeX13WDepth}{misc}{}{}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labeltitlesource}{title}
+      \field{abstract}{High speed, wall-to-wall tracking.}
+      \field{howpublished}{http://optitrack.com/cameras/primex-13w/index.html}
+      \field{journaltitle}{OptiTrack}
+      \field{langid}{english}
+      \field{title}{{{PrimeX 13W}} - {{In Depth}}}
+      \field{urlday}{19}
+      \field{urlmonth}{1}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+    \endentry
     \entry{rajSurveyLiDARScanning2020}{article}{}{}
       \name{author}{5}{}{%
         {{un=0,uniquepart=base,hash=2d743fc1c9fabbdc8ab2497840632b76}{%
@@ -2672,6 +2800,66 @@
       \endverb
       \verb{file}
       \verb C:\Users\dseph\Zotero\storage\NISAYDQS\Raj et al. - 2020 - A Survey on LiDAR Scanning Mechanisms.pdf
+      \endverb
+    \endentry
+    \entry{roachPhysicsSeasonalSea2025}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=1be0acb5969ffe61b3d07fef2b703f7d}{%
+           family={Roach},
+           familyi={R\bibinitperiod},
+           given={Lettie\bibnamedelima A.},
+           giveni={L\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=48289c5b6d5fc71ffe3976f3219e21ec}{%
+           family={Smith},
+           familyi={S\bibinitperiod},
+           given={Madison\bibnamedelima M.},
+           giveni={M\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ee6feee74d027c1b0d267046ff955373}{%
+           family={Herman},
+           familyi={H\bibinitperiod},
+           given={Agnieszka},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c8ba00d0af70bdc3e75302c8739dd248}{%
+           family={Ringeisen},
+           familyi={R\bibinitperiod},
+           given={Damien},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{59bdb0802b8853fb033d3cbab9d0b935}
+      \strng{fullhash}{b275162884bdadb9f785ba50549d5110}
+      \strng{fullhashraw}{b275162884bdadb9f785ba50549d5110}
+      \strng{bibnamehash}{59bdb0802b8853fb033d3cbab9d0b935}
+      \strng{authorbibnamehash}{59bdb0802b8853fb033d3cbab9d0b935}
+      \strng{authornamehash}{59bdb0802b8853fb033d3cbab9d0b935}
+      \strng{authorfullhash}{b275162884bdadb9f785ba50549d5110}
+      \strng{authorfullhashraw}{b275162884bdadb9f785ba50549d5110}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The seasonal sea ice zone encompasses the region between the winter maximum and summer minimum sea ice extent. In both the Arctic and Antarctic, the majority of the ice cover can now be classified as seasonal. Here, we review the sea ice physics that governs the evolution of seasonal sea ice in the Arctic and Antarctic, spanning sea ice growth, melt, and dynamics and including interactions with ocean surface waves as well as other coupled processes. The advent of coupled wave--ice modeling and discrete-element modeling, together with improved and expanded satellite observations and field campaigns, has yielded advances in process understanding. Many topics remain in need of further investigation, including rheologies appropriate for seasonal sea ice, wave-induced sea ice fracture, welding for sea ice freeze-up, and the distribution of snow on seasonal sea ice. Future research should aim to redress biases (such as disparities in focus between the Arctic and Antarctic and between summer and winter processes) and connect observations to modeling across spatial scales.}
+      \field{issn}{1941-1405, 1941-0611}
+      \field{journaltitle}{Annual Review of Marine Science}
+      \field{langid}{english}
+      \field{month}{1}
+      \field{number}{1}
+      \field{title}{Physics of the {{Seasonal Sea Ice Zone}}}
+      \field{urlday}{19}
+      \field{urlmonth}{1}
+      \field{urlyear}{2026}
+      \field{volume}{17}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+      \field{pages}{355\bibrangedash 379}
+      \range{pages}{25}
+      \verb{doi}
+      \verb 10.1146/annurev-marine-121422-015323
       \endverb
     \endentry
     \entry{rodriguezClusteringAlgorithmsComparative2019}{article}{}{}
@@ -3030,6 +3218,51 @@
       \verb 10.1109/JSEN.2022.3203346
       \endverb
     \endentry
+    \entry{squireMarginalIceZone2022}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=90c9971b2160576314b2530bef37eaf7}{%
+           family={Squire},
+           familyi={S\bibinitperiod},
+           given={Vernon\bibnamedelima A.},
+           giveni={V\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{90c9971b2160576314b2530bef37eaf7}
+      \strng{fullhash}{90c9971b2160576314b2530bef37eaf7}
+      \strng{fullhashraw}{90c9971b2160576314b2530bef37eaf7}
+      \strng{bibnamehash}{90c9971b2160576314b2530bef37eaf7}
+      \strng{authorbibnamehash}{90c9971b2160576314b2530bef37eaf7}
+      \strng{authornamehash}{90c9971b2160576314b2530bef37eaf7}
+      \strng{authorfullhash}{90c9971b2160576314b2530bef37eaf7}
+      \strng{authorfullhashraw}{90c9971b2160576314b2530bef37eaf7}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{For the best part of my entire career, I have focused on the marginal ice zone, abbreviated to MIZ by most sea ice scientists. Defined perfunctorily by the National Snow \& Ice Data Center as the part of the seasonal ice zone where waves, swells and other open ocean processes affect the sea ice, the MIZ habitually extends from the ice edge some 100--200\,km into the ice pack with morphology that varies dramatically spatially and with time. In general, the Antarctic MIZ is wider than MIZs in the Arctic, recognizing that increases in the ferocity and incidence of storms and the durability of ice due to global climate change are already affecting the physical attributes of each MIZ. I provide here a somewhat historically tailored preamble to a unique compilation of up-to-the-minute MIZ research in this theme issue that includes the nexus between contemporary theoretical, modelling and experimental projects. A prognosticative synopsis of these projects is also included later in the volume, framed in the context of the ongoing ontogenesis of the research field. This article is part of the theme issue `Theory, modelling and observations of marginal ice zone dynamics: multidisciplinary perspectives and outlooks'.}
+      \field{issn}{1364-503X, 1471-2962}
+      \field{journaltitle}{Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences}
+      \field{langid}{english}
+      \field{month}{10}
+      \field{number}{2235}
+      \field{title}{Marginal Ice Zone Dynamics}
+      \field{urlday}{20}
+      \field{urlmonth}{1}
+      \field{urlyear}{2026}
+      \field{volume}{380}
+      \field{year}{2022}
+      \field{urldateera}{ce}
+      \field{pages}{20210266}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1098/rsta.2021.0266
+      \endverb
+      \verb{file}
+      \verb C:\Users\dseph\Zotero\storage\XXQFHSN8\Squire - 2022 - Marginal ice zone dynamics.pdf
+      \endverb
+    \endentry
     \entry{stewartPlatformSixDegrees1965}{article}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=63c56b8a0bc713f6203ad1a1893f7204}{%
@@ -3280,8 +3513,47 @@
       \verb{doi}
       \verb 10.5194/egusphere-2024-2104
       \endverb
-      \verb{file}
-      \verb C:\Users\dseph\Zotero\storage\RLFXMVUJ\Voermans et al. - 2024 - Finely-resolved along-track wave attenuation estimates in the Antarctic marginal ice zone from ICESa.pdf
+    \endentry
+    \entry{wadhamsMechanismFormationIce1983}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=41c2a21337a6a6c59c1f5f57e471c2e9}{%
+           family={Wadhams},
+           familyi={W\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{41c2a21337a6a6c59c1f5f57e471c2e9}
+      \strng{fullhash}{41c2a21337a6a6c59c1f5f57e471c2e9}
+      \strng{fullhashraw}{41c2a21337a6a6c59c1f5f57e471c2e9}
+      \strng{bibnamehash}{41c2a21337a6a6c59c1f5f57e471c2e9}
+      \strng{authorbibnamehash}{41c2a21337a6a6c59c1f5f57e471c2e9}
+      \strng{authornamehash}{41c2a21337a6a6c59c1f5f57e471c2e9}
+      \strng{authorfullhash}{41c2a21337a6a6c59c1f5f57e471c2e9}
+      \strng{authorfullhashraw}{41c2a21337a6a6c59c1f5f57e471c2e9}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We propose a mechanism for the formation of multiple bands at an ice edge that is subjected to an off-ice wind. The wind moves the outermost floes seaward faster than the interior ice, dilating the marginal ice zone and opening up random polynyas. In the largest of the polynyas, the off-ice wind generates a significant fetch-limited wave spectrum, which produces a wave radiation pressure on floes at the downwind end of the polynya, increasing their velocity. They are herded against their downwind neighbors, creating a band of high ice concentration. The band is stabilized by an internal compacting stress due to the exponential decay of the wind-wave spectrum across the band and to a slower decay of swell incident from seaward. The band's growth terminates when it encounters a second downwind polynya of sufficiently large size. We show how an array of `immature' bands generated in this way `matures' by selective mergers into larger, regularly spaced bands of approximately equal width.}
+      \field{issn}{0148-0227}
+      \field{journaltitle}{Journal of Geophysical Research: Oceans}
+      \field{langid}{english}
+      \field{month}{3}
+      \field{number}{C5}
+      \field{title}{A Mechanism for the Formation of Ice Edge Bands}
+      \field{urlday}{20}
+      \field{urlmonth}{1}
+      \field{urlyear}{2026}
+      \field{volume}{88}
+      \field{year}{1983}
+      \field{urldateera}{ce}
+      \field{pages}{2813\bibrangedash 2818}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1029/JC088iC05p02813
       \endverb
     \endentry
     \entry{walshAnalysisArcticSea1979}{article}{}{}
