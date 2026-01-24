@@ -190,7 +190,7 @@ Dimensions                      & 91 x 61.2 x 64.8 mm                   &  &  & 
 
 %====================================================
 \section{Point Cloud Processing}
-\label{sec:ch3:section4}
+\label{sec:ch3:section3}
 %----------------------------------------------------
 
 Historically, \ac{LiDAR} was predominantly used in airborne applications for environmental mapping and surveying. However, with the recent advancements in \ac{LiDAR} technology, it has seen increased use in urban settings and aboard mobile and autonomous platforms (\cite{brazealRigorousObservationModel2021}). This shift has led to an increased focus on point cloud processing methods developed for urban environments and autonomous navigation, with fewer studies on improving pre-existing methods or the development of new methods for natural environments.
@@ -198,6 +198,15 @@ Historically, \ac{LiDAR} was predominantly used in airborne applications for env
 Many common point cloud processing methods are built around the assumption that the point cloud being worked upon is in the format of a standard (M x N) grid layout. Methods such as point cloud registration (obtaining the transformation between two point clouds (\cite{huangComprehensiveSurveyPoint2021})), clustering and model fitting often use the assumption of a constant grid with a constant number of points per frame to achieve their outputs. To bypass this limitation it is common for point clouds to be downsampled through a grid filter to achieve the desired format (\cite{3DPointCloud}).
 
 In the Avia's repetitive scanning pattern (see Figure \ref{fig:rep}), the sensor produces a point cloud with a roughly rectangular \ac{FOV} and consistent point density, which is suitable for downsampling and grid filtering. Point clouds produced by the non-repetitive scanning pattern (see Figure \ref{fig:non_rep}) are circular and do not have uniform point density and do not have fixed locations for each point in the \ac{FOV}. These point clouds are thus not ideal for downsampling and grid filtering.
+
+%----------------------------------------------------
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{figs/grid.png}
+    \caption{\textbf{Irregular Density Point Cloud and Filtering Grid.} Visualisation of an irregular density point cloud overlaid with a filtering grid. The irregular point density makes it challenging to apply uniform filtering techniques.}
+    \label{fig:grid}
+\end{figure}
+%----------------------------------------------------
 
 Many processing methods are also based on the assumption that the environment data is collected from will contain predominantly objects made of simple geometries. For example, a scene in an urban environment will contain many objects consisting of planar surfaces and cuboid shapes such as roads, buildings and vehicles. The environment that data for this investigation was captured contains none of these simple shapes, with the geometry of the pancake floes being irregular and superimposed upon complex ocean surface waves.
 
@@ -251,10 +260,29 @@ Point normals cannot be directly measured by \ac{LiDAR} sensors and must be esti
 \subsection{Point Cloud Concatenation}
 
 When creating an accurate 3D model of a target using point clouds, a common method to increase the density and coverage of the final model is to concatenate multiple point clouds together. This is especially useful when the target is large or complex, and a single point cloud does not provide sufficient detail or coverage (\cite{kedzierskiMethodsLaserScanning2015}). This method requires that the individual point clouds to be concatenated are captured from the same location or that the relative positions and orientations of the sensors used to capture the point clouds are known. Additionally, the target must remain static during the data collection process to ensure correct alignment of the individual point cloud frames.
+
+A common method for determining the orientation of two point clouds is through the processing of \ac{IMU} data collected during the point cloud capture process. Not all \ac{LiDAR} sensors have a built-in \ac{IMU}, but its inclusion is becoming more common in modern sensors. \ac{IMU} data can be fed into attitude estimation algorithms such as Kalman filters (discussed in the Section below) to determine the orientation of the sensor during data collection. This orientation data can then be used to align point clouds captured from different orientations to allow for the concatenation of multiple point clouds into a single, more detailed point cloud.
  
 %====================================================
+\section{Kalman Filters}
+\label{sec:ch3:section4}
+%----------------------------------------------------
+
+The Kalman Filter has become the most widely used method for state estimation in various fields including navigation, control systems, and signal processing. It is a recursive algorithm that estimates the state of a dynamic system from a series of noisy measurements. Once it has been initialised, the Kalman Filter operates in two main steps: prediction and update. In the prediction step, the filter uses a mathematical model of the system to predict the next state based on the current state estimate and control inputs. In the update step, the filter makes use of new measurements to correct the predicted state, accounting for the uncertainties in both the model and the measurements (\cite{kimIntroductionKalmanFilter2019}). The method is named after Rudolph E. Kálmán, the engineer and mathematician who first described it in his now famous paper, \textcite{kalmanNewApproachLinear1960}.
+
+One of the most common applications of the Kalman filter is in navigation systems, where it can be used to estimate an object's position, velocity, or orientation based on the sensor measurements available. For example, in an inertial navigation system, a Kalman filter can combine accelerometer and gyroscope measurements to estimate the position, orientation, and velocity of a vehicle. The more sensor measurements available to the filter, the more accurate the state estimations will be. The addition of \ac{GPS} measurements to an inertial navigation system will greatly improve the accuracy of the state estimates (\cite{grewalApplicationsKalmanFiltering2010}).
+
+%----------------------------------------------------
+\subsection{Attitude Estimation using Kalman Filters}
+\label{subsec:ch3.section4.subsec1}
+
+Attitude estimation is the process of determining an object's orientation in three-dimensional space. This typically involves estimating the roll, pitch, and yaw angles of the object relative to a reference frame and then representing the angles using Euler angles or quaternions. A Kalman filter is the ideal tool to achieve this due to its ability to fuse data from various sensors.
+
+The \ac{IMU} integrated into the Livox Avia contains two individual sensors, an accelerometer (which measures linear acceleration in the X, Y and Z axes) and a gyroscope (which measures angular velocity around the X, Y and Z axes). With an \ac{IMU} such as this, a Kalman filter can be used to estimate the roll and pitch angles of the sensor by fusing the accelerometer and gyroscope measurements, however yaw cannot be reliably estimated using only \ac{IMU} data. This is due to the fact that the accelerometer cannot provide any information about rotation around the Z-axis (yaw) as it is perpendicular to the direction of gravity. Gyroscopes are prone to drift over time, and so cannot be solely relied upon for accurate angle estimates without correction from additional sensors. This shortcoming can be mitigated through the addition of a sensor such as a magnetometer, which can provide reliable yaw measurements to account for gyroscope drift (\cite{songEstimatingRelativeAngles2022}).
+
+%====================================================
 \section{Optical Properties of Ocean Water, Ice and Snow}
-\label{sec:ch3:section3}
+\label{sec:ch3:section5}
 %----------------------------------------------------
 
 Water, ice and snow have more complex interactions with electromagnetic radiation produced by the sun, when compared to other mediums typically observed by sensors capable of detecting electromagnetic radiation. Not only do these mediums reflect and absorb radiation like other observation targets, but they are capable of transmitting, scattering and refracting radiation. This section will focus on the response of these mediums to radiation of the same wavelength emitted by the Livox Avia (near infrared).
@@ -294,29 +322,13 @@ On average, snow has the highest albedo out of the three mediums. The smaller th
 
 The above suggests that the Livox Avia is best suited to detecting low density snow and first year ice, and it is unlikely to detect open water. Potentially, it may be possible for the sensor to detect ice floes of any ice type, given that they are covered with snow. It is likely that the return intensity values of points will vary significantly depending on the ice type and snow cover present  in the scene.
 
-%====================================================
-\section{Kalman Filters}
-\label{sec:ch3:section5}
-%----------------------------------------------------
-
-The Kalman Filter has become the most widely used method for state estimation in various fields including navigation, control systems, and signal processing. It is a recursive algorithm that estimates the state of a dynamic system from a series of noisy measurements. Once it has been initialised, the Kalman Filter operates in two main steps: prediction and update. In the prediction step, the filter uses a mathematical model of the system to predict the next state based on the current state estimate and control inputs. In the update step, the filter makes use of new measurements to correct the predicted state, accounting for the uncertainties in both the model and the measurements (\cite{kimIntroductionKalmanFilter2019}). The method is named after Rudolph E. Kálmán, the engineer and mathematician who first described it in his now famous paper, \textcite{kalmanNewApproachLinear1960}.
-
-One of the most common applications of the Kalman filter is in navigation systems, where it can be used to estimate an object's position, velocity, or orientation based on the sensor measurements available. For example, in an inertial navigation system, a Kalman filter can combine accelerometer and gyroscope measurements to estimate the position, orientation, and velocity of a vehicle. The more sensor measurements available to the filter, the more accurate the state estimations will be. The addition of \ac{GPS} measurements to an inertial navigation system will greatly improve the accuracy of the state estimates (\cite{grewalApplicationsKalmanFiltering2010}).
-
-%----------------------------------------------------
-\subsection{Attitude Estimation using Kalman Filters}
-\label{subsec:ch3.section5.subsec1}
-
-Attitude estimation is the process of determining an object's orientation in three-dimensional space. This typically involves estimating the roll, pitch, and yaw angles of the object relative to a reference frame and then representing the angles using Euler angles or quaternions. A Kalman filter is the ideal tool to achieve this due to its ability to fuse data from various sensors.
-
-The \ac{IMU} integrated into the Livox Avia contains two individual sensors, an accelerometer (which measures linear acceleration in the X, Y and Z axes) and a gyroscope (which measures angular velocity around the X, Y and Z axes). With an \ac{IMU} such as this, a Kalman filter can be used to estimate the roll and pitch angles of the sensor by fusing the accelerometer and gyroscope measurements, however yaw cannot be reliably estimated using only \ac{IMU} data. This is due to the fact that the accelerometer cannot provide any information about rotation around the Z-axis (yaw) as it is perpendicular to the direction of gravity. Gyroscopes are prone to drift over time, and so cannot be solely relied upon for accurate angle estimates without correction from additional sensors. This shortcoming can be mitigated through the addition of a sensor such as a magnetometer, which can provide reliable yaw measurements to account for gyroscope drift (\cite{songEstimatingRelativeAngles2022}).
 
 %====================================================
 \section{Summary}
 \label{sec:ch3:section6}
 %----------------------------------------------------
 
-*need to do this*
+\ac{LiDAR} sensors are becoming an increasingly popular method of remote sensing due to their ability to produce high-resolution 3D point clouds of their environment. Like any remote sensing method, \ac{LiDAR} has its unique advantages and disadvantages that must be considered when selecting a sensor for the desired application. The Livox Avia is a low-cost solid-state \ac{LiDAR} sensor with a unique non-repetitive scanning pattern that produces point clouds with a high number of points per frame with a non-uniform point distribution. Many common point cloud processing methods are built around the assumption that the input point cloud is in a standard grid format and that the target environment is likely to be an urban setting or one with simple geometries. These assumptions do not hold true for the data collected for this investigation, and will inform the methods selected for processing the collected point cloud data. The environmental features of interest in this investigation (sea ice and snow) has many complex interactions with electromagnetic radiation but is likely to reflect near-infrared radiation (the wavelength the Avia makes use of), while seawater is likely to absorb most of the emitted radiation. This suggests that the Avia is well suited for detecting sea ice and snow, but unlikely to detect open water.
 
 %****************************************************
 % END
