@@ -47,7 +47,7 @@ When the Avia collects data in adverse environmental conditions (such as rain, s
 
 \ac{RANSAC} has been applied with great success in identifying and reconstructing buildings in urban environments from airborne \ac{LiDAR} data (\cite{forlaniBuildingReconstructionVisualization2003}), but has seen limited use in natural environments. Because \ac{RANSAC} fits a user-defined model to data, a sufficiently complex wave model could allow for the identification of features in the \ac{MIZ}, such as surface waves propagating through an ice field. This would require a suitable wave model to be developed, but if successful could allow for the extraction of wave parameters such as amplitude and wave period directly from point cloud data.
 
-*say how knowing wave parameters are useful*
+The estimated wave parameters could be used to improve understanding of wave-ice interactions in the \ac{MIZ}, as well as providing in-situ data for the improvement of current models of wave propagation, attenuation and interactions with sea ice. This data could also be used in the validation of estimates from other remote sensing methods used to observe the \ac{MIZ}, such as \ac{SAR}.
 
 For the Aalto University data, a simple sinusoidal wave model should be sufficient, as the wave makers generated relatively uniform waves and constrained their complexity. In contrast, data from the \ac{SCALE} Cruise will require a more complex model to account for the increased dynamics and irregular wave behaviour in the \ac{MIZ}, which is driven by multiple environmental factors and interaction with the vessel itself.
 
@@ -63,7 +63,7 @@ The input data for the clustering algorithm will be the point cloud data's three
 
 Frames to be clustered were selected by visual inspection of the raw point cloud data and video footage from the camera mounted several decks above the Avia, to identify frames with clear pancake formations, high point densities and minimal motion artefacts. Scenes with consolidated ice floes were avoided as the clustering algorithms are designed to identify discrete clusters of points, and scenes with consolidated ice floes do not contain clear boundaries between individual pancake floes. Once a frame was selected, the clustering algorithms were applied to it as well as a frame composed of a concatenation of the initial frame and the following frame. This was done to investigate if increasing point density improved clustering performance. No more than two frames were concatenated as the target scenes were dynamic, and concatenating more frames risked introducing motion artefacts, which could lead to erroneous clustering results.
 
-After inspecting both the point cloud and video data, four scenes from three datasets were selected for clustering analysis, see Table \ref{tab:clust_scene}.
+After inspecting both the point cloud and video data, four scenes from three datasets were selected for clustering analysis, see Table \ref{tab:clust_scene} and Figures \ref{fig:scenes} and \ref{fig:map}.
 
 %----------------------------------------------------
 \begin{table}[H]
@@ -80,8 +80,6 @@ After inspecting both the point cloud and video data, four scenes from three dat
 \label{tab:clust_scene}
 \end{table}
 %----------------------------------------------------
-
-*fix this fig*
 
 %----------------------------------------------------
 \begin{figure}[H]
