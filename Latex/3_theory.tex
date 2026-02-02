@@ -68,8 +68,7 @@ Like any observation method that relies on line of sight, \ac{LiDAR} is suscepti
 
 A basic \ac{LiDAR} sensor consists of four main components, a laser source, a steering mechanism to direct the laser beam, a method of detecting the returning laser pulse and a controller or processor to manage the sensor's operation and process the collected data. Various different configurations of these components exist, leading to a wide variety of \ac{LiDAR} sensor types designed for different applications (\cite{rajSurveyLiDARScanning2020}). 
 
-Most commercial \ac{LiDAR} sensors make use of near-infrared lasers (approximately 800 to 2 500 nm) as this wavelength range is classified as eye-safe and many lasers in this range are available commercially (\cite{molebnyLaserRadarHistorical2016}). It is not uncommon for \ac{LiDAR} sensors to make use of many transceivers (laser source and detector pairs) to increase their point output rate and improve their spatial resolution.
-In order to create a 3D point cloud, a \ac{LiDAR} sensor must be capable of steering the laser beam to cover the target area. The steering mechanism used determines the \ac{FOV}, angular resolution and may impact the measurement accuracy of the sensor. Early and low-cost sensors frequently make use of optical components such as actuated mirrors or prisms to direct the laser beam across the target area. More advanced sensors make use of solid-state components such as \ac{MEMS} mirrors or phased arrays (using beam steering) to direct the laser beam without any moving parts. \ac{LiDAR} sensors that contain multiple fixed transceivers often make use of rotating platforms to achieve 360-degree coverage (\cite{rajSurveyLiDARScanning2020}). 
+Most commercial \ac{LiDAR} sensors make use of near-infrared lasers (approximately 800 to 2 500 nm) as this wavelength range is classified as eye-safe and many lasers in this range are available commercially (\cite{molebnyLaserRadarHistorical2016}). It is not uncommon for \ac{LiDAR} sensors to make use of many transceivers (laser source and detector pairs) to increase their point output rate and improve their spatial resolution. To create a 3D point cloud, a \ac{LiDAR} sensor must be capable of steering the laser beam to cover the target area. The steering mechanism used determines the \ac{FOV}, angular resolution and may impact the measurement accuracy of the sensor. Early and low-cost sensors frequently make use of optical components such as actuated mirrors or prisms to direct the laser beam across the target area. More advanced sensors make use of solid-state components such as \ac{MEMS} mirrors or phased arrays (using beam steering) to direct the laser beam without any moving parts. \ac{LiDAR} sensors that contain multiple fixed transceivers often make use of rotating platforms to achieve 360-degree coverage (\cite{rajSurveyLiDARScanning2020}). 
 
 The most common scanning pattern created by a \ac{LiDAR} sensor is a rectangular grid pattern (N x M grid of points). Sensors that make use of rotating platforms often create circular or cylindrical scanning patterns with a set vertical resolution (usually determined by the number of transceivers) and 360-degree azimuth coverage. A less common scanning pattern is a non-repetitive rosette or flower-shaped pattern, which covers areas not scanned in previous frames. This scanning method results in a non-uniform distribution of points across its \ac{FOV}, with a high density of points in the centre of the \ac{FOV} and the number of points reducing outwards to the edges of the sensor's \ac{FOV}. To create this scanning pattern, a Risley prism is commonly used as the steering mechanism. A Risley prism consists of two sequential wedge-shaped prisms that rotate independently to steer the laser beam. By varying the speed of rotation and direction of each prism, various scanning patterns can be created (\cite{brazealRigorousObservationModel2021}).
 
@@ -208,7 +207,7 @@ In the Avia's repetitive scanning pattern (see Figure \ref{fig:rep}), the sensor
 \end{figure}
 %----------------------------------------------------
 
-Many processing methods are also based on the assumption that the environment data is collected from will contain predominantly objects made of simple geometries. For example, a scene in an urban environment will contain many objects consisting of planar surfaces and cuboid shapes such as roads, buildings and vehicles. The environment that data for this investigation was captured contains none of these simple shapes, with the geometry of the pancake floes being irregular and superimposed upon complex ocean surface waves.
+Many processing methods are also based on the assumption that the environment data are collected from will contain predominantly objects made of simple geometries. For example, a scene in an urban environment will contain many objects consisting of planar surfaces and cuboid shapes such as roads, buildings and vehicles. The environment that data for this investigation was captured from contains none of these simple shapes, with the geometry of the pancake floes being irregular and superimposed upon complex ocean surface waves.
 
 %----------------------------------------------------
 \subsection{Plane Fitting}
@@ -228,25 +227,29 @@ Clustering algorithms can be categorised based on their underlying structure, so
 
 \begin{description}
 
-    \item[Partitional]
-    \emph{Partitional} methods divide the data into a set number of clusters, optimising a cost function to achieve this (usually a distance or reachability measure). The most common partitional clustering algorithm is K-means clustering, which iteratively assigns data points to the nearest cluster centroid and updates the centroids based on the assigned points until the algorithm converges. 
+    \item[Partitional] methods divide the data into a set number of clusters, optimising a cost function to achieve this (usually a distance or reachability measure). The most common partitional clustering algorithm is K-means clustering, which iteratively assigns data points to the nearest cluster centroid and updates the centroids based on the assigned points until the algorithm converges. 
 
-    \item[Hierarchical]
-    \emph{Hierarchical} methods attempt to group data points into a tree-like structure of clusters, analogous to a dendogram. This method measures the similarity between data points and merges or splits clusters based on this similarity. An example of a hierarchical clustering algorithm is Agglomerative Clustering, a popular bottom-up approach (each data point starts as its own cluster, and clusters are merged as the algorithm progresses) and is commonly used in the biological sciences.
+    \item[Hierarchical] methods attempt to group data points into a tree-like structure of clusters, analogous to a dendogram. This method measures the similarity between data points and merges or splits clusters based on this similarity. An example of a hierarchical clustering algorithm is Agglomerative Clustering, a popular bottom-up approach (each data point starts as its own cluster, and clusters are merged as the algorithm progresses) and is commonly used in the biological sciences.
 
-    \item[Density-based]
-    \emph{Density-based} methods group data points based on the density of points in a given region. Areas with high point density are classified as individual clusters, while areas with low point density are classified as noise or outliers. One of the most common density-based clustering algorithms is \ac{DBScan}.
+    \item[Density-based] methods group data points based on the density of points in a given region. Areas with high point density are classified as individual clusters, while areas with low point density are classified as noise or outliers. One of the most common density-based clustering algorithms is \ac{DBScan}.
 
-    \item[Spectral]
-    \emph{Spectral} methods attempt to cluster data points by converting high-dimensional data into a lower-dimensional through the use of graph theory and linear algebra. After dimensionality reduction, simpler clustering methods such as K-means can be applied to the processed data.
+    \item[Spectral] methods attempt to cluster data points by converting high-dimensional data into a lower-dimensional space through the use of graph theory and linear algebra. After dimensionality reduction, simpler clustering methods such as K-means can be applied to the processed data.
 
-    \item[Subspace-based]
-    \emph{Subspace-based} methods are designed to identify clusters in high-dimensional data by finding subsets of dimensions where the data points are more closely related. These algorithms are particularly useful when attempting to cluster data with many dimensions and limited computational resources.
+    \item[Subspace-based] methods are designed to identify clusters in high-dimensional data by finding subsets of dimensions where the data points are more closely related. These algorithms are particularly useful when attempting to cluster data with many dimensions and limited computational resources.
 
-    \item[Model-based]
-    \emph{Model-based} methods find the best fit of a pre-selected model to the data. These algorithms are based on the assumption that the data is generated from a mixture of underlying probability distributions. A common model-based clustering algorithm is the expectation-maximization algorithm.
+    \item[Model-based] methods find the best fit of a pre-selected model to the data. These algorithms are based on the assumption that the data are generated from a mixture of underlying probability distributions. A common model-based clustering algorithm is the expectation-maximization algorithm.
     
 \end{description}
+
+Partitional clustering methods were not considered for this application, as they require the number of clusters to be specified beforehand. As the number of pancakes present in the scene is unknown and variable, partitional clustering methods such as K-means or K-medoids are not suitable for this application.
+
+Hierarchical clustering methods were also not considered as their tree-like structure of clusters does not make sense in the context of identifying individual pancakes. Each pancake is a distinct entity, and there is no inherent hierarchy or relationship between pancakes that would be captured by a hierarchical clustering algorithm.
+
+Spectral and subspace-based clustering methods were not considered as they are designed to handle high-dimensional data, whereas the point cloud data in this application is three-dimensional. The additional complexity of these methods adds little benefit in this context and is likely to increase computational requirements unnecessarily.
+
+Model-based clustering methods were not considered as they require the model to be fit to the data be selected beforehand. As the characteristics of the pancakes are not fully understood, selecting a model beforehand may introduce bias and limit the ability of the algorithm to accurately identify pancakes.
+
+Density-based clustering methods were selected as the most suitable for this application. Density-based methods do not require the number of clusters to be specified beforehand, making them suitable for the variable conditions of the \ac{MIZ}. These methods are robust to noise and outliers, and are capable of identifying clusters of arbitrary shape and size, which are desirable characteristics for this application. The variable density of points inherent to the Avia's scanning pattern may lead to challenges in clustering, but this could potentially be mitigated through careful selection of algorithm parameters and concatenating point cloud frames to increase point density.
 
 %----------------------------------------------------
 \subsection{Point Normals}
@@ -261,7 +264,7 @@ Point normals cannot be directly measured by \ac{LiDAR} sensors and must be esti
 
 When creating an accurate 3D model of a target using point clouds, a common method to increase the density and coverage of the final model is to concatenate multiple point clouds together. This is especially useful when the target is large or complex, and a single point cloud does not provide sufficient detail or coverage (\cite{kedzierskiMethodsLaserScanning2015}). This method requires that the individual point clouds to be concatenated are captured from the same location or that the relative positions and orientations of the sensors used to capture the point clouds are known. Additionally, the target must remain static during the data collection process to ensure correct alignment of the individual point cloud frames.
 
-A common method for determining the orientation of two point clouds is through the processing of \ac{IMU} data collected during the point cloud capture process. Not all \ac{LiDAR} sensors have a built-in \ac{IMU}, but its inclusion is becoming more common in modern sensors. \ac{IMU} data can be fed into attitude estimation algorithms such as Kalman filters (discussed in the Section below) to determine the orientation of the sensor during data collection. This orientation data can then be used to align point clouds captured from different orientations to allow for the concatenation of multiple point clouds into a single, more detailed point cloud.
+A common method for determining the orientation of two point clouds is through the processing of \ac{IMU} data collected during the point cloud capture process. Not all \ac{LiDAR} sensors have a built-in \ac{IMU}, but its inclusion is becoming more common in modern sensors. \ac{IMU} data can be fed into attitude estimation algorithms such as Kalman filters (discussed in Section \ref{sec:ch3:section4}) to determine the orientation of the sensor during data collection. This orientation data can then be used to align point clouds captured from different orientations to allow for the concatenation of multiple point clouds into a single, more detailed point cloud.
  
 %====================================================
 \section{Kalman Filters}
@@ -296,7 +299,7 @@ Water, ice and snow have more complex interactions with electromagnetic radiatio
 \end{figure}
 %----------------------------------------------------
 
-Water is most transparent to radiation within the visible region (roughly 400 - 700 nm), outside this region radiation absorption increases rapidly. Near infrared radiation cannot penetrate far into water and is almost entirely absorbed. As seen in Figure \ref{fig:water}, water and ordinary hexagonal ice broadly have similar absorption characteristics across the visual and near infrared regions of the electromagnetic spectrum (\cite{warrenOpticalPropertiesIce2019}).
+Water is most transparent to radiation within the visible region (roughly 400 to 700 nm), outside this region radiation absorption increases rapidly. Near infrared radiation cannot penetrate far into water and is almost entirely absorbed. As seen in Figure \ref{fig:water}, water and ordinary hexagonal ice broadly have similar absorption characteristics across the visual and near infrared regions of the electromagnetic spectrum (\cite{warrenOpticalPropertiesIce2019}).
 
 As the physical structure and composition of sea ice varies greatly, so do its optical properties. When seawater freezes and forms ice crystals, bubbles of gas and pockets of brine form between the crystals, leading to increased scattering across all wavelengths and thus a lower albedo. An increase in the thickness of ice leads to increased albedo. 
 

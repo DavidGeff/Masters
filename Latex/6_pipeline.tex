@@ -90,16 +90,6 @@ After inspecting both the point cloud and video data, four scenes from three dat
 \end{figure}
 %----------------------------------------------------
 
-Partitional clustering methods were not considered for this application, as they require the number of clusters to be specified beforehand. As the number of pancakes present in the scene is unknown and variable, partitional clustering methods such as K-means or K-medoids are not suitable for this application.
-
-Hierarchical clustering methods were also not considered as their tree-like structure of clusters does not make sense in the context of identifying individual pancakes. Each pancake is a distinct entity, and there is no inherent hierarchy or relationship between pancakes that would be captured by a hierarchical clustering algorithm.
-
-Spectral and subspace-based clustering methods were not considered as they are designed to handle high-dimensional data, whereas the point cloud data in this application is three-dimensional. The additional complexity of these methods adds little benefit in this context and is likely to increase computational requirements unnecessarily.
-
-Model-based clustering methods were not considered as they require the model to be fit to the data be selected beforehand. As the characteristics of the pancakes are not fully understood, selecting a model beforehand may introduce bias and limit the ability of the algorithm to accurately identify pancakes.
-
-Density-based clustering methods were selected as the most suitable for this application. Density-based methods do not require the number of clusters to be specified beforehand, making them suitable for the variable conditions of the \ac{MIZ}. These methods are robust to noise and outliers, and are capable of identifying clusters of arbitrary shape and size, which are desirable characteristics for this application. The variable density of points inherent to the Avia's scanning pattern may lead to challenges in clustering, but this could potentially be mitigated through careful selection of algorithm parameters and concatenating point cloud frames to increase point density.
-
 Three density-based clustering algorithms were considered for this application: \ac{DBScan}, \ac{VDBScan}, and \ac{OPTICS}.
 
 \ac{DBScan} is one of the oldest and most widely used density-based clustering algorithms. It makes use of two key parameters set by the user: \textbf{$\epsilon$} (the radius of the neighbourhood around a point) and \textbf{MinPts} (the minimum number of points required to form a dense region). Using the \textbf{$\epsilon$} and \textbf{MinPts} parameters, \ac{DBScan} classifies points into three categories: core points (points with at least \textbf{MinPts} points within their \textbf{$\epsilon$} neighbourhood), border points (points that are not core points but are within the \textbf{$\epsilon$} neighbourhood of a core point), and noise points (points that are neither core nor border points) (\cite{esterDensityBasedAlgorithmDiscovering1996}). The algorithm is relatively efficient and easy to implement. However, \ac{DBScan} relies on the assumption of constant density within clusters, which may not hold true for the variable density of points in the point cloud data collected by the Avia.
