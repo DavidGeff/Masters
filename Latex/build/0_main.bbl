@@ -171,7 +171,7 @@
       \verb 10.1017/aog.2020.31
       \endverb
     \endentry
-    \entry{agrawalCOMPARATIVEASSESSMENTREMOTE2019}{article}{}{}
+    \entry{agrawalComparativeAssesmentRemote2019}{article}{}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=37e6545229ff0683e5ed5cd4a787ed0c}{%
            family={Agrawal},
@@ -206,7 +206,7 @@
       \field{langid}{english}
       \field{month}{12}
       \field{shorttitle}{A {{COMPARATIVE ASSESSMENT OF REMOTE SENSING IMAGING TECHNIQUES}}}
-      \field{title}{A {{COMPARATIVE ASSESSMENT OF REMOTE SENSING IMAGING TECHNIQUES}}: {{OPTICAL}}, {{SAR AND LIDAR}}}
+      \field{title}{A {{Comparative Assesment}} of {{Remote Sensing Imaging Techniques}}: {{Optical}}, {{SAR}} and {{LiDAR}}}
       \field{urlday}{24}
       \field{urlmonth}{11}
       \field{urlyear}{2025}
@@ -3038,6 +3038,51 @@
       \verb 10.1371/journal.pone.0210236
       \endverb
     \endentry
+    \entry{ryan-keoghSCALEWIN19SCALESPR19Cruise2022}{report}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=6a5aad4ab6e2766f567bb17ec4a131e7}{%
+           family={{Ryan-Keogh}},
+           familyi={R\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=89fba3e6e5969e08f095c08eed06948e}{%
+           family={Vichi},
+           familyi={V\bibinitperiod},
+           given={Marcello},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{1}{%
+        {Zenodo}%
+      }
+      \strng{namehash}{885f43646b193f8643eae71eff3529d3}
+      \strng{fullhash}{885f43646b193f8643eae71eff3529d3}
+      \strng{fullhashraw}{885f43646b193f8643eae71eff3529d3}
+      \strng{bibnamehash}{885f43646b193f8643eae71eff3529d3}
+      \strng{authorbibnamehash}{885f43646b193f8643eae71eff3529d3}
+      \strng{authornamehash}{885f43646b193f8643eae71eff3529d3}
+      \strng{authorfullhash}{885f43646b193f8643eae71eff3529d3}
+      \strng{authorfullhashraw}{885f43646b193f8643eae71eff3529d3}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The combined SCALE cruise report for both the winter and spring cruises.}
+      \field{month}{1}
+      \field{title}{{{SCALE-WIN19}} \& {{SCALE-SPR19 Cruise Report}}}
+      \field{type}{techreport}
+      \field{urlday}{3}
+      \field{urlmonth}{2}
+      \field{urlyear}{2026}
+      \field{year}{2022}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.5281/zenodo.5906324
+      \endverb
+    \endentry
     \entry{salmonyPms67AttitudeEstimation2025}{misc}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=497c9f89206cecd0d8bcafd2064ae874}{%
@@ -3438,6 +3483,50 @@
       \verb C:\Users\dseph\Zotero\storage\BN7ZZ73Y\Thomson - 2022 - Wave propagation in the marginal ice zone connections and feedback mechanisms within the air–ice–oc.pdf
       \endverb
     \endentry
+    \entry{vichiCruiseReportTrack2018}{report}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=89fba3e6e5969e08f095c08eed06948e}{%
+           family={Vichi},
+           familyi={V\bibinitperiod},
+           given={Marcello},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{1}{%
+        {Zenodo}%
+      }
+      \strng{namehash}{89fba3e6e5969e08f095c08eed06948e}
+      \strng{fullhash}{89fba3e6e5969e08f095c08eed06948e}
+      \strng{fullhashraw}{89fba3e6e5969e08f095c08eed06948e}
+      \strng{bibnamehash}{89fba3e6e5969e08f095c08eed06948e}
+      \strng{authorbibnamehash}{89fba3e6e5969e08f095c08eed06948e}
+      \strng{authornamehash}{89fba3e6e5969e08f095c08eed06948e}
+      \strng{authorfullhash}{89fba3e6e5969e08f095c08eed06948e}
+      \strng{authorfullhashraw}{89fba3e6e5969e08f095c08eed06948e}
+      \field{extraname}{1}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The Winter 2017 cruise (Voyage 25) of the S.A. Agulhas II was funded by the South African National Research Foundation, and took place from 28 June to 13 July 2017 in the Atlantic-Indian Ocean sector of the Southern Ocean to the marginal sea ice zone. The cruise consisted of 3 legs with several national and international participants~and an intense interdisciplinary program. This cruise was a prototype for the research done during the SCALE cruises in 2019-2022. This document also contains the list of stations and the cruise track with underway meteorological and oceanographic data.}
+      \field{langid}{english}
+      \field{month}{9}
+      \field{title}{Cruise Report and Track Data of the {{SA Agulhas II Winter}} 2017 Expedition (Voyage 25)}
+      \field{type}{techreport}
+      \field{urlday}{3}
+      \field{urlmonth}{2}
+      \field{urlyear}{2026}
+      \field{year}{2018}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.5281/zenodo.7038073
+      \endverb
+      \verb{file}
+      \verb C:\Users\dseph\Zotero\storage\WCLIGK9D\Vichi - 2018 - Cruise report and track data of the SA Agulhas II Winter 2017 expedition (voyage 25).pdf
+      \endverb
+    \endentry
     \entry{vichiIndicatorSeaIce2022}{article}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=89fba3e6e5969e08f095c08eed06948e}{%
@@ -3455,7 +3544,7 @@
       \strng{authornamehash}{89fba3e6e5969e08f095c08eed06948e}
       \strng{authorfullhash}{89fba3e6e5969e08f095c08eed06948e}
       \strng{authorfullhashraw}{89fba3e6e5969e08f095c08eed06948e}
-      \field{extraname}{1}
+      \field{extraname}{2}
       \field{sortinit}{V}
       \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
       \field{extradatescope}{labelyear}
@@ -3498,7 +3587,7 @@
       \strng{authornamehash}{89fba3e6e5969e08f095c08eed06948e}
       \strng{authorfullhash}{89fba3e6e5969e08f095c08eed06948e}
       \strng{authorfullhashraw}{89fba3e6e5969e08f095c08eed06948e}
-      \field{extraname}{2}
+      \field{extraname}{3}
       \field{sortinit}{V}
       \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
       \field{extradatescope}{labelyear}
@@ -3573,17 +3662,17 @@
     \endentry
     \entry{voermansFinelyresolvedAlongtrackWave2024}{misc}{}{}
       \name{author}{6}{}{%
-        {{un=0,uniquepart=base,hash=708e0182ab0ca9fcfc45faf2a9c8a9b0}{%
+        {{un=0,uniquepart=base,hash=e1afc93ecf73c2592f0d14c4143a5e92}{%
            family={Voermans},
            familyi={V\bibinitperiod},
-           given={Joey\bibnamedelima J.},
-           giveni={J\bibinitperiod\bibinitdelim J\bibinitperiod},
+           given={Joey},
+           giveni={J\bibinitperiod},
            givenun=0}}%
-        {{un=0,uniquepart=base,hash=6175b960113c103ae190e139ee4d8fb0}{%
+        {{un=0,uniquepart=base,hash=a0bb0b8ef470c04a9241b1c343ab1a83}{%
            family={Fraser},
            familyi={F\bibinitperiod},
-           given={Alexander\bibnamedelima D.},
-           giveni={A\bibinitperiod\bibinitdelim D\bibinitperiod},
+           given={Alexander},
+           giveni={A\bibinitperiod},
            givenun=0}}%
         {{un=0,uniquepart=base,hash=e3d88062d4bd7cb0c128580b79bd0d5f}{%
            family={Brouwer},
@@ -3613,14 +3702,14 @@
       \list{publisher}{1}{%
         {Sea ice/Ocean Interactions}%
       }
-      \strng{namehash}{65a0b97c91b224d79081e9735f168b2c}
-      \strng{fullhash}{c3c7414172eb52e089bb66a5b8fdddec}
-      \strng{fullhashraw}{c3c7414172eb52e089bb66a5b8fdddec}
-      \strng{bibnamehash}{65a0b97c91b224d79081e9735f168b2c}
-      \strng{authorbibnamehash}{65a0b97c91b224d79081e9735f168b2c}
-      \strng{authornamehash}{65a0b97c91b224d79081e9735f168b2c}
-      \strng{authorfullhash}{c3c7414172eb52e089bb66a5b8fdddec}
-      \strng{authorfullhashraw}{c3c7414172eb52e089bb66a5b8fdddec}
+      \strng{namehash}{6b0d166f6914be83445e5e2329e55808}
+      \strng{fullhash}{bd373450c08f41bfd800683a8316a72d}
+      \strng{fullhashraw}{bd373450c08f41bfd800683a8316a72d}
+      \strng{bibnamehash}{6b0d166f6914be83445e5e2329e55808}
+      \strng{authorbibnamehash}{6b0d166f6914be83445e5e2329e55808}
+      \strng{authornamehash}{6b0d166f6914be83445e5e2329e55808}
+      \strng{authorfullhash}{bd373450c08f41bfd800683a8316a72d}
+      \strng{authorfullhashraw}{bd373450c08f41bfd800683a8316a72d}
       \field{sortinit}{V}
       \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
       \field{extradatescope}{labelyear}
