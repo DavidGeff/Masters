@@ -19,7 +19,7 @@ In each case, the Avia's non-repetitive scanning pattern was used for data captu
 \label{sec:ch4.section2}
 %----------------------------------------------------
 
-The following sections detail experiments conducted to characterise the Livox Avia sensor's behaviours under controlled conditions that simulate some conditions expected during in-situ data collection.
+The following sections detail experiments conducted to characterise the Livox Avia sensor's behaviours under controlled conditions that simulate some conditions expected during in-situ data collection. While collecting data aboard a research vessel in the \ac{MIZ}, the sensor will be subjected to motion from the vessel, taking the form of low amplitude and frequency pitch and roll motion, with limited yaw and translational motion. It is possible that the vessel may be steaming (moving forward) during data collection, but this is not guaranteed. During data collection, the sensor will not be observing the target scene perpendicularly, but rather at an angle of depression from a height above the waterline. This uncommon observation geometry is likely to have a negative impact on the quality of the point cloud data collected, as the laser beams will strike the target surface at a shallow angle, increasing the likelihood of shadowing and reducing the effective point density in the sarget scene.
 
 The first experiment detailed in Section \ref{subsec:ch4.section2.subsec1} investigates the sensor's ability to resolve known geometric shapes at known distances and angles, from a stationary platform. 
 
@@ -29,7 +29,7 @@ The second experiment detailed in Section \ref{subsec:ch4.section2.subsec2} was 
 \subsection{Stationary Characterisation Experiment}
 \label{subsec:ch4.section2.subsec1}
 
-To simulate conditions similar to those that may be experienced when observing the ocean surface from a research vessel, such as the \textit{S.A. Agulhas II}, a field experiment was conducted using the Livox Avia. The experiment took place on the University of Cape Town's rugby field, using two large sheets of hardboard as target surfaces.
+To simulate rotational motion conditions similar to those that may be experienced when observing the ocean surface from a research vessel, such as the \textit{S.A. Agulhas II}, a field experiment was conducted using the Livox Avia. The experiment took place on the University of Cape Town's rugby field, using two large sheets of hardboard as target surfaces.
 
 The Avia was mounted on a tripod and placed on a terrace above the rugby field at a height of 9.1 metres above the ground, angled downwards at an angle of 16° from the horizontal, as seen in Figure \ref{fig:field_setup}. These dimensions and angles were selected to simulate the expected observation geometry when mounted on a research vessel, as informed by the data collection setup detailed in Section \ref{subsec:ch4.section3.subsec2}.
 
@@ -231,6 +231,13 @@ Data were collected from the port side 7th floor deck, at a height of approximat
     \label{fig:map}
 \end{figure}
 %----------------------------------------------------
+
+%====================================================
+\section{Summary}
+\label{sec:ch4.section4}
+%----------------------------------------------------
+
+The data collected for this investigation includes data from controlled experiments designed to characterise the performance of the Avia sensor under conditions that simulate those expected during ship-based data collection, as well as data collected from simulated and in-situ ice fields. The controlled experiments included a stationary experiment to investigate the sensor's ability to resolve known geometric shapes at known distances and angles, and a simulated motion experiment to investigate the feasibility of using the Avia's on-board \ac{IMU} to compensate for the motion of a moving observation platform. The ice field data collection included data from a simulated ice field in a wave tank, and data from an in-situ ice field in the \ac{MIZ} collected during a research cruise.
 
 %****************************************************
 % END

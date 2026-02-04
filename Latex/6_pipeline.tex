@@ -105,7 +105,7 @@ Three density-based clustering algorithms were considered for this application: 
 
 The starting point for the pipeline is the raw Avia point cloud data. All data used in this investigation was captured as rosbag (\emph{.bag}) or the proprietary Livox file type (\emph{.lvx}). The raw data has to first be extracted from these file types before it can be processed or used in analysis. The Livox \ac{ROS} driver includes functionality to convert \emph{.lvx} files to \emph{.bag} files. MATLAB's \ac{ROS} Toolbox contains functions and tools for extracting data fields from a \emph{.bag} file for storage and use in standard MATLAB matrices or structures.
 
-\ac{IMU} data (linear \& rotational accelerations and timestamps) captured by the Avia is extracted from the .bag files and then stored in matrices for further processing.
+\ac{IMU} data (linear \& rotational accelerations and timestamps) captured by the Avia is extracted from the \emph{.bag} files and then stored in matrices for further processing.
 
 MATLAB's \ac{LiDAR} Toolbox has provision for a \emph{pointCloud} object which was used to store all \ac{LiDAR} data for processing and analysis. This object contains fields for the point cloud's x, y and z co-ordinate data, total number of points, as well as point colours, normals and intensities. The Avia is only capable of directly measuring point intensity, so this was the only additional data field extracted from the .bag files into the \emph{pointCloud} object. Frame timestamps are not stored in the pointCloud object, but in a standalone array.
 
@@ -242,6 +242,13 @@ The decision to use a modified \ac{VDBScan} implementation was made due to compu
 \label{subsec:ch6.section3.subsec4.subsubsec3}
 
 The \ac{OPTICS} algorithm used was provided by \textcite{daszykowskiMatlabCodeOPTICS2002}, and is an implementation with minor modifications for use in MATLAB.
+
+%====================================================
+\section{Summary}
+\label{sec:ch6.section4}
+%----------------------------------------------------
+
+This chapter detailed the proposed data processing pipeline for data coleected using the Avia sensor. The pipeline consists of three main stages: motion compensation and de-noising, wave parameter estimation and pancake identification. The motion compensation stage makes use of Kalman filters to estimate the attitude of the observation platform during data collection, and applies an inverse transform to the point cloud data to compensate for motion-induced artefacts. The de-noising stage makes use of a simple thresholding function to remove points with low return intensity, which are likely to be caused by interactions with adverse weather conditions. The wave parameter estimation stage makes use of \ac{RANSAC} to fit a sinusoidal wave model to the point cloud data, allowing for the estimation of wave amplitude and period. Finally, the pancake identification stage makes use of three density-based clustering algorithms (\ac{DBScan}, \ac{VDBScan} and \ac{OPTICS}) to identify individual pancakes in the point cloud data and estimate their size and shape.
 
 %****************************************************
 % END
