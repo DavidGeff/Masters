@@ -250,63 +250,63 @@
     \endentry
     \entry{alberelloDriftPancakeIce2020}{article}{}{}
       \name{author}{8}{ul=2}{%
-        {{un=0,uniquepart=base,hash=1f41128a44870dcaeeca940433b42242}{%
+        {{un=0,uniquepart=base,hash=d21bbd34bed665229bee716eb353e24e}{%
            family={Alberello},
            familyi={A\bibinitperiod},
-           given={Alberto},
+           given={A.},
            giveni={A\bibinitperiod},
            givenun=0}}%
-        {{un=0,uniquepart=base,hash=1c95e1d235b74cac279f73f562925dc5}{%
+        {{un=0,uniquepart=base,hash=de3b4d6cf719c493e3b6e2d0d65ecd30}{%
            family={Bennetts},
            familyi={B\bibinitperiod},
-           given={Luke},
+           given={L.},
            giveni={L\bibinitperiod},
            givenun=0}}%
-        {{un=0,uniquepart=base,hash=2c120a86b83aa0a5b08e1dffd95d26d7}{%
+        {{un=0,uniquepart=base,hash=bfc00e3ebfc55dcab2b522545959a865}{%
            family={Heil},
            familyi={H\bibinitperiod},
-           given={Petra},
+           given={P.},
            giveni={P\bibinitperiod},
            givenun=0}}%
-        {{un=0,uniquepart=base,hash=f215ec29de971cdb397e736c4428ebfd}{%
+        {{un=0,uniquepart=base,hash=7d5dd57eb47b8daddaa07a16db50c3cc}{%
            family={Eayrs},
            familyi={E\bibinitperiod},
-           given={Clare},
+           given={C.},
            giveni={C\bibinitperiod},
            givenun=0}}%
-        {{un=0,uniquepart=base,hash=89fba3e6e5969e08f095c08eed06948e}{%
+        {{un=0,uniquepart=base,hash=2e27358c42310902278aa7ae5fecbbf6}{%
            family={Vichi},
            familyi={V\bibinitperiod},
-           given={Marcello},
+           given={M.},
            giveni={M\bibinitperiod},
            givenun=0}}%
-        {{un=0,uniquepart=base,hash=a4d83fa2974ca27268d2f25c0cfadc18}{%
+        {{un=0,uniquepart=base,hash=96f00c9d5787d239aafb2455d2aac2bc}{%
            family={MacHutchon},
            familyi={M\bibinitperiod},
-           given={Keith},
+           given={K.},
            giveni={K\bibinitperiod},
            givenun=0}}%
-        {{un=0,uniquepart=base,hash=bb58da8275193ce8f4e08d9bfe86ab1d}{%
+        {{un=0,uniquepart=base,hash=b96d6a601bdac86386e862e04fee0907}{%
            family={Onorato},
            familyi={O\bibinitperiod},
-           given={Miguel},
+           given={M.},
            giveni={M\bibinitperiod},
            givenun=0}}%
-        {{un=0,uniquepart=base,hash=101bef366904fae9e18a4a5532356f13}{%
+        {{un=0,uniquepart=base,hash=ce50e487c8de6557b94ceb5412a63f0c}{%
            family={Toffoli},
            familyi={T\bibinitperiod},
-           given={Alessandro},
+           given={A.},
            giveni={A\bibinitperiod},
            givenun=0}}%
       }
-      \strng{namehash}{0c4a8eee9d303279ad6854546b74b2d1}
-      \strng{fullhash}{03d9e90e5f888d88d85acece96f742bd}
-      \strng{fullhashraw}{03d9e90e5f888d88d85acece96f742bd}
-      \strng{bibnamehash}{0c4a8eee9d303279ad6854546b74b2d1}
-      \strng{authorbibnamehash}{0c4a8eee9d303279ad6854546b74b2d1}
-      \strng{authornamehash}{0c4a8eee9d303279ad6854546b74b2d1}
-      \strng{authorfullhash}{03d9e90e5f888d88d85acece96f742bd}
-      \strng{authorfullhashraw}{03d9e90e5f888d88d85acece96f742bd}
+      \strng{namehash}{63fd4e1fb12f45781697a7ba6a57d1cf}
+      \strng{fullhash}{55595262759887404240d48087fb3e91}
+      \strng{fullhashraw}{55595262759887404240d48087fb3e91}
+      \strng{bibnamehash}{63fd4e1fb12f45781697a7ba6a57d1cf}
+      \strng{authorbibnamehash}{63fd4e1fb12f45781697a7ba6a57d1cf}
+      \strng{authornamehash}{63fd4e1fb12f45781697a7ba6a57d1cf}
+      \strng{authorfullhash}{55595262759887404240d48087fb3e91}
+      \strng{authorfullhashraw}{55595262759887404240d48087fb3e91}
       \field{sortinit}{A}
       \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
       \field{extradatescope}{labelyear}
@@ -585,6 +585,92 @@
       \verb https://www.mdpi.com/2072-4292/10/9/1445
       \endverb
     \endentry
+    \entry{benitzSimulatingHydrodynamicsOffshore}{thesis}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=bec74d64e7dbcaef8b7ae92faeabc06c}{%
+           family={Benitz},
+           familyi={B\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{1}{%
+        {University of Massachusetts Amherst}%
+      }
+      \strng{namehash}{bec74d64e7dbcaef8b7ae92faeabc06c}
+      \strng{fullhash}{bec74d64e7dbcaef8b7ae92faeabc06c}
+      \strng{fullhashraw}{bec74d64e7dbcaef8b7ae92faeabc06c}
+      \strng{bibnamehash}{bec74d64e7dbcaef8b7ae92faeabc06c}
+      \strng{authorbibnamehash}{bec74d64e7dbcaef8b7ae92faeabc06c}
+      \strng{authornamehash}{bec74d64e7dbcaef8b7ae92faeabc06c}
+      \strng{authorfullhash}{bec74d64e7dbcaef8b7ae92faeabc06c}
+      \strng{authorfullhashraw}{bec74d64e7dbcaef8b7ae92faeabc06c}
+      \field{extraname}{1}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The problem of efficiently finding near-optimal decisions in multi-agent systems has become increasingly important because of the growing number of multi-agent applications with large numbers of agents operating in real-world environments. In these systems, agents are often subject to tight resource constraints and agents have only local views. When agents have non-global constraints, each of which is independent, the problem can be formalized as a distributed constraint optimization problem (DCOP). The DCOP is closely associated with the problem of inference on graphical models. Many approaches from inference literature have been adopted to solve DCOPs. We focus on the Max-Sum algorithm and the Action-GDL algorithm that are DCOP variants of the popular inference algorithm called the Max-Product algorithm and the Belief Propagation algorithm respectively. The Max-Sum algorithm and the Action-GDL algorithm are well-suited for multi-agent systems because it is distributed by nature and requires less communication than most DCOP algorithms. However, the resource requirements of these algorithms are still high for some multi-agent domains and various aspects of the algorithms have not been well studied for use in general multi-agent settings. This thesis is concerned with a variety of issues of applying the Max-Sum algorithms and the Action-GDL algorithm to general multi-agent settings. We develop a hybrid algorithm of ADOPT and Action-GDL in order to overcome the communication complexity of DCOPs. Secondly, we extend the Max-Sum algorithm to operate more efficiently in more general multi-agent settings in which computational complexity is high. We provide an algorithm that has a lower expected computational complexity for DCOPs even with n-ary constraints. Finally, In most DCOP literature, a one-to-one mapping between a variable and an agent is assumed. However, in real applications, many-to-one mappings are prevalent and can also be beneficial in terms of communication and hardware cost in situations where agents are acting as independent computing units. We consider how to exploit such mapping in order to increase efficiency.}
+      \field{title}{Simulating the {{Hydrodynamics}} of {{Offshore Floating Wind Turbine Platforms}} in a {{Finite Volume Framework}}}
+      \field{urlday}{6}
+      \field{urlmonth}{2}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.7275/8419828.0
+      \endverb
+      \verb{urlraw}
+      \verb https://scholarworks.umass.edu/entities/publication/614a4c6f-172f-491f-bb6b-b80d6c09d97c
+      \endverb
+      \verb{url}
+      \verb https://scholarworks.umass.edu/entities/publication/614a4c6f-172f-491f-bb6b-b80d6c09d97c
+      \endverb
+    \endentry
+    \entry{benitzOceanHydrodynamicsEngineers}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=a8625b0c885148144dd509817c432a6a}{%
+           family={Benitz},
+           familyi={B\bibinitperiod},
+           given={Maija},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{a8625b0c885148144dd509817c432a6a}
+      \strng{fullhash}{a8625b0c885148144dd509817c432a6a}
+      \strng{fullhashraw}{a8625b0c885148144dd509817c432a6a}
+      \strng{bibnamehash}{a8625b0c885148144dd509817c432a6a}
+      \strng{authorbibnamehash}{a8625b0c885148144dd509817c432a6a}
+      \strng{authornamehash}{a8625b0c885148144dd509817c432a6a}
+      \strng{authorfullhash}{a8625b0c885148144dd509817c432a6a}
+      \strng{authorfullhashraw}{a8625b0c885148144dd509817c432a6a}
+      \field{extraname}{2}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Ocean Hydrodynamics for Engineers}
+      \field{langid}{english}
+      \field{title}{Ocean {{Hydrodynamics}} for {{Engineers}}}
+      \field{urlday}{6}
+      \field{urlmonth}{2}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb /home/dspoultney/Zotero/storage/SLVYAFWV/oceanhydro.html
+      \endverb
+      \verb{urlraw}
+      \verb https://rwu.pressbooks.pub/oceanhydro/
+      \endverb
+      \verb{url}
+      \verb https://rwu.pressbooks.pub/oceanhydro/
+      \endverb
+    \endentry
     \entry{bogoslavskyiFastRobustNormal2024}{online}{}{}
       \name{author}{3}{}{%
         {{un=0,uniquepart=base,hash=1472525a7ae4346d60c0f0369b320a1a}{%
@@ -804,24 +890,24 @@
     \endentry
     \entry{clarkStewart2018}{thesis}{}{}
       \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=43b3df89233db0724bdcf4d9a8dc25e8}{%
+        {{un=0,uniquepart=base,hash=49bec3fe170329880bb1825c3b258b47}{%
            family={Clark},
            familyi={C\bibinitperiod},
-           given={Liam\bibnamedelima James},
+           given={L.\bibnamedelimi J.},
            giveni={L\bibinitperiod\bibinitdelim J\bibinitperiod},
            givenun=0}}%
       }
       \list{institution}{1}{%
         {University of Cape Town / Department of Electrical Engineering), University of Cape Town}%
       }
-      \strng{namehash}{43b3df89233db0724bdcf4d9a8dc25e8}
-      \strng{fullhash}{43b3df89233db0724bdcf4d9a8dc25e8}
-      \strng{fullhashraw}{43b3df89233db0724bdcf4d9a8dc25e8}
-      \strng{bibnamehash}{43b3df89233db0724bdcf4d9a8dc25e8}
-      \strng{authorbibnamehash}{43b3df89233db0724bdcf4d9a8dc25e8}
-      \strng{authornamehash}{43b3df89233db0724bdcf4d9a8dc25e8}
-      \strng{authorfullhash}{43b3df89233db0724bdcf4d9a8dc25e8}
-      \strng{authorfullhashraw}{43b3df89233db0724bdcf4d9a8dc25e8}
+      \strng{namehash}{49bec3fe170329880bb1825c3b258b47}
+      \strng{fullhash}{49bec3fe170329880bb1825c3b258b47}
+      \strng{fullhashraw}{49bec3fe170329880bb1825c3b258b47}
+      \strng{bibnamehash}{49bec3fe170329880bb1825c3b258b47}
+      \strng{authorbibnamehash}{49bec3fe170329880bb1825c3b258b47}
+      \strng{authornamehash}{49bec3fe170329880bb1825c3b258b47}
+      \strng{authorfullhash}{49bec3fe170329880bb1825c3b258b47}
+      \strng{authorfullhashraw}{49bec3fe170329880bb1825c3b258b47}
       \field{sortinit}{C}
       \field{sortinithash}{4d103a86280481745c9c897c925753c0}
       \field{extradatescope}{labelyear}
@@ -2814,22 +2900,22 @@
     \endentry
     \entry{nairThreeDimensionalComputational2024}{inproceedings}{}{}
       \name{author}{3}{}{%
-        {{un=0,uniquepart=base,hash=3697a675c22ed89986c3ba583bb42dd4}{%
+        {{un=0,uniquepart=base,hash=35109146070a26e73ea1ce3413fad5ee}{%
            family={Nair},
            familyi={N\bibinitperiod},
-           given={Anand},
+           given={A.},
            giveni={A\bibinitperiod},
            givenun=0}}%
-        {{un=0,uniquepart=base,hash=ef9cc1e77054fe688a462015ed76a700}{%
+        {{un=0,uniquepart=base,hash=7085923585835a3c0a6d7c01203f16e2}{%
            family={Boje},
            familyi={B\bibinitperiod},
-           given={Edward\bibnamedelima Sidney},
+           given={E.\bibnamedelimi S.},
            giveni={E\bibinitperiod\bibinitdelim S\bibinitperiod},
            givenun=0}}%
-        {{un=0,uniquepart=base,hash=c0d599c7db81b41e88885d2c081cb62e}{%
+        {{un=0,uniquepart=base,hash=361ca6649ef3f3dde3919c4474448248}{%
            family={Verrinder},
            familyi={V\bibinitperiod},
-           given={Robyn},
+           given={R.},
            giveni={R\bibinitperiod},
            givenun=0}}%
       }
@@ -2839,14 +2925,14 @@
       \list{publisher}{1}{%
         {South African Association of Theoretical and Applied Mechanics (SAAM)}%
       }
-      \strng{namehash}{55a7577445b3fb6da3731f3b220cb038}
-      \strng{fullhash}{55a7577445b3fb6da3731f3b220cb038}
-      \strng{fullhashraw}{55a7577445b3fb6da3731f3b220cb038}
-      \strng{bibnamehash}{55a7577445b3fb6da3731f3b220cb038}
-      \strng{authorbibnamehash}{55a7577445b3fb6da3731f3b220cb038}
-      \strng{authornamehash}{55a7577445b3fb6da3731f3b220cb038}
-      \strng{authorfullhash}{55a7577445b3fb6da3731f3b220cb038}
-      \strng{authorfullhashraw}{55a7577445b3fb6da3731f3b220cb038}
+      \strng{namehash}{96df623a6e5fced8494f34408222ec38}
+      \strng{fullhash}{96df623a6e5fced8494f34408222ec38}
+      \strng{fullhashraw}{96df623a6e5fced8494f34408222ec38}
+      \strng{bibnamehash}{96df623a6e5fced8494f34408222ec38}
+      \strng{authorbibnamehash}{96df623a6e5fced8494f34408222ec38}
+      \strng{authornamehash}{96df623a6e5fced8494f34408222ec38}
+      \strng{authorfullhash}{96df623a6e5fced8494f34408222ec38}
+      \strng{authorfullhashraw}{96df623a6e5fced8494f34408222ec38}
       \field{sortinit}{N}
       \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
       \field{extradatescope}{labelyear}
@@ -3060,6 +3146,126 @@
       \verb https://www.cambridge.org/core/product/identifier/S0954102004002214/type/journal_article
       \endverb
     \endentry
+    \entry{passerottiSCALEWIN22SAAgulhasb}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=8f779e437c2ef4675985284a0dff970e}{%
+           family={Passerotti},
+           familyi={P\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{8f779e437c2ef4675985284a0dff970e}
+      \strng{fullhash}{8f779e437c2ef4675985284a0dff970e}
+      \strng{fullhashraw}{8f779e437c2ef4675985284a0dff970e}
+      \strng{bibnamehash}{8f779e437c2ef4675985284a0dff970e}
+      \strng{authorbibnamehash}{8f779e437c2ef4675985284a0dff970e}
+      \strng{authornamehash}{8f779e437c2ef4675985284a0dff970e}
+      \strng{authorfullhash}{8f779e437c2ef4675985284a0dff970e}
+      \strng{authorfullhashraw}{8f779e437c2ef4675985284a0dff970e}
+      \field{extraname}{1}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{{SCALE-WIN22 S}}.{{A}}. {{Agulhas II}}: 22-07-19 - {{YouTube}}}
+      \field{urlday}{6}
+      \field{urlmonth}{2}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb /home/dspoultney/Zotero/storage/3VZDURF6/watch.html
+      \endverb
+      \verb{urlraw}
+      \verb https://www.youtube.com/watch?v=By7bqU9kLj0&t=160s
+      \endverb
+      \verb{url}
+      \verb https://www.youtube.com/watch?v=By7bqU9kLj0&t=160s
+      \endverb
+    \endentry
+    \entry{passerottiSCALEWIN22SAAgulhasa}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=8f779e437c2ef4675985284a0dff970e}{%
+           family={Passerotti},
+           familyi={P\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{8f779e437c2ef4675985284a0dff970e}
+      \strng{fullhash}{8f779e437c2ef4675985284a0dff970e}
+      \strng{fullhashraw}{8f779e437c2ef4675985284a0dff970e}
+      \strng{bibnamehash}{8f779e437c2ef4675985284a0dff970e}
+      \strng{authorbibnamehash}{8f779e437c2ef4675985284a0dff970e}
+      \strng{authornamehash}{8f779e437c2ef4675985284a0dff970e}
+      \strng{authorfullhash}{8f779e437c2ef4675985284a0dff970e}
+      \strng{authorfullhashraw}{8f779e437c2ef4675985284a0dff970e}
+      \field{extraname}{2}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{{SCALE-WIN22 S}}.{{A}}. {{Agulhas II}}: 22-07-23 - {{YouTube}}}
+      \field{urlday}{6}
+      \field{urlmonth}{2}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb /home/dspoultney/Zotero/storage/M46RPA7X/watch.html
+      \endverb
+      \verb{urlraw}
+      \verb https://www.youtube.com/watch?v=jG5n_TukoN8&t=1024s
+      \endverb
+      \verb{url}
+      \verb https://www.youtube.com/watch?v=jG5n_TukoN8&t=1024s
+      \endverb
+    \endentry
+    \entry{passerottiSCALEWIN22SAAgulhas}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=8f779e437c2ef4675985284a0dff970e}{%
+           family={Passerotti},
+           familyi={P\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{8f779e437c2ef4675985284a0dff970e}
+      \strng{fullhash}{8f779e437c2ef4675985284a0dff970e}
+      \strng{fullhashraw}{8f779e437c2ef4675985284a0dff970e}
+      \strng{bibnamehash}{8f779e437c2ef4675985284a0dff970e}
+      \strng{authorbibnamehash}{8f779e437c2ef4675985284a0dff970e}
+      \strng{authornamehash}{8f779e437c2ef4675985284a0dff970e}
+      \strng{authorfullhash}{8f779e437c2ef4675985284a0dff970e}
+      \strng{authorfullhashraw}{8f779e437c2ef4675985284a0dff970e}
+      \field{extraname}{3}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradate}{3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{{SCALE-WIN22 S}}.{{A}}. {{Agulhas II}}: 22-07-24 - {{YouTube}}}
+      \field{urlday}{6}
+      \field{urlmonth}{2}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb /home/dspoultney/Zotero/storage/GD9853JM/watch.html
+      \endverb
+      \verb{urlraw}
+      \verb https://www.youtube.com/watch?v=yIUkXXzrxRA&t=1171s
+      \endverb
+      \verb{url}
+      \verb https://www.youtube.com/watch?v=yIUkXXzrxRA&t=1171s
+      \endverb
+    \endentry
     \entry{PcnormalsEstimateNormals}{online}{}{}
       \field{sortinit}{P}
       \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
@@ -3078,6 +3284,63 @@
       \endverb
       \verb{url}
       \verb https://www.mathworks.com/help/releases/R2024b/vision/ref/pcnormals.html
+      \endverb
+    \endentry
+    \entry{perezKinematicModelsManoeuvring2007}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=16a99033f6b1de6e70ac7efed9103fe0}{%
+           family={Perez},
+           familyi={P\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ac3028d7ed5e147de0990932a8d676c4}{%
+           family={Fossen},
+           familyi={F\bibinitperiod},
+           given={T.\bibnamedelimi I.},
+           giveni={T\bibinitperiod\bibinitdelim I\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{e2ca5b6770096f947f1c5548d97025bd}
+      \strng{fullhash}{e2ca5b6770096f947f1c5548d97025bd}
+      \strng{fullhashraw}{e2ca5b6770096f947f1c5548d97025bd}
+      \strng{bibnamehash}{e2ca5b6770096f947f1c5548d97025bd}
+      \strng{authorbibnamehash}{e2ca5b6770096f947f1c5548d97025bd}
+      \strng{authornamehash}{e2ca5b6770096f947f1c5548d97025bd}
+      \strng{authorfullhash}{e2ca5b6770096f947f1c5548d97025bd}
+      \strng{authorfullhashraw}{e2ca5b6770096f947f1c5548d97025bd}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0332-7353, 1890-1328}
+      \field{journaltitle}{Modeling, Identification and Control: A Norwegian Research Bulletin}
+      \field{langid}{english}
+      \field{number}{1}
+      \field{shortjournal}{MIC}
+      \field{title}{Kinematic {{Models}} for {{Manoeuvring}} and {{Seakeeping}} of {{Marine Vessels}}}
+      \field{urlday}{6}
+      \field{urlmonth}{2}
+      \field{urlyear}{2026}
+      \field{volume}{28}
+      \field{year}{2007}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{19\bibrangedash 30}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.4173/mic.2007.1.3
+      \endverb
+      \verb{file}
+      \verb /home/dspoultney/Zotero/storage/ZA2UHCNZ/Perez and Fossen - 2007 - Kinematic Models for Manoeuvring and Seakeeping of Marine Vessels.pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://www.mic-journal.no/ABS/MIC-2007-1-3.asp
+      \endverb
+      \verb{url}
+      \verb http://www.mic-journal.no/ABS/MIC-2007-1-3.asp
       \endverb
     \endentry
     \entry{pettorelliSatelliteRemoteSensing2014}{article}{}{}
@@ -3464,30 +3727,30 @@
     \endentry
     \entry{ryan-keoghSCALEWIN19SCALESPR19Cruise2022}{report}{}{}
       \name{author}{2}{}{%
-        {{un=0,uniquepart=base,hash=6a5aad4ab6e2766f567bb17ec4a131e7}{%
+        {{un=0,uniquepart=base,hash=43f9b3b9c70f1a852c78d799d49b0172}{%
            family={Ryan-Keogh},
            familyi={R\bibinithyphendelim K\bibinitperiod},
-           given={Thomas},
+           given={T.},
            giveni={T\bibinitperiod},
            givenun=0}}%
-        {{un=0,uniquepart=base,hash=89fba3e6e5969e08f095c08eed06948e}{%
+        {{un=0,uniquepart=base,hash=2e27358c42310902278aa7ae5fecbbf6}{%
            family={Vichi},
            familyi={V\bibinitperiod},
-           given={Marcello},
+           given={M.},
            giveni={M\bibinitperiod},
            givenun=0}}%
       }
       \list{institution}{1}{%
         {Zenodo}%
       }
-      \strng{namehash}{885f43646b193f8643eae71eff3529d3}
-      \strng{fullhash}{885f43646b193f8643eae71eff3529d3}
-      \strng{fullhashraw}{885f43646b193f8643eae71eff3529d3}
-      \strng{bibnamehash}{885f43646b193f8643eae71eff3529d3}
-      \strng{authorbibnamehash}{885f43646b193f8643eae71eff3529d3}
-      \strng{authornamehash}{885f43646b193f8643eae71eff3529d3}
-      \strng{authorfullhash}{885f43646b193f8643eae71eff3529d3}
-      \strng{authorfullhashraw}{885f43646b193f8643eae71eff3529d3}
+      \strng{namehash}{aa44e3d208ba67e589348402c8cdd0cd}
+      \strng{fullhash}{aa44e3d208ba67e589348402c8cdd0cd}
+      \strng{fullhashraw}{aa44e3d208ba67e589348402c8cdd0cd}
+      \strng{bibnamehash}{aa44e3d208ba67e589348402c8cdd0cd}
+      \strng{authorbibnamehash}{aa44e3d208ba67e589348402c8cdd0cd}
+      \strng{authornamehash}{aa44e3d208ba67e589348402c8cdd0cd}
+      \strng{authorfullhash}{aa44e3d208ba67e589348402c8cdd0cd}
+      \strng{authorfullhashraw}{aa44e3d208ba67e589348402c8cdd0cd}
       \field{sortinit}{R}
       \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
       \field{extradatescope}{labelyear}
@@ -3995,24 +4258,24 @@
     \endentry
     \entry{vichiCruiseReportTrack2018}{report}{}{}
       \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=89fba3e6e5969e08f095c08eed06948e}{%
+        {{un=0,uniquepart=base,hash=2e27358c42310902278aa7ae5fecbbf6}{%
            family={Vichi},
            familyi={V\bibinitperiod},
-           given={Marcello},
+           given={M.},
            giveni={M\bibinitperiod},
            givenun=0}}%
       }
       \list{institution}{1}{%
         {Zenodo}%
       }
-      \strng{namehash}{89fba3e6e5969e08f095c08eed06948e}
-      \strng{fullhash}{89fba3e6e5969e08f095c08eed06948e}
-      \strng{fullhashraw}{89fba3e6e5969e08f095c08eed06948e}
-      \strng{bibnamehash}{89fba3e6e5969e08f095c08eed06948e}
-      \strng{authorbibnamehash}{89fba3e6e5969e08f095c08eed06948e}
-      \strng{authornamehash}{89fba3e6e5969e08f095c08eed06948e}
-      \strng{authorfullhash}{89fba3e6e5969e08f095c08eed06948e}
-      \strng{authorfullhashraw}{89fba3e6e5969e08f095c08eed06948e}
+      \strng{namehash}{2e27358c42310902278aa7ae5fecbbf6}
+      \strng{fullhash}{2e27358c42310902278aa7ae5fecbbf6}
+      \strng{fullhashraw}{2e27358c42310902278aa7ae5fecbbf6}
+      \strng{bibnamehash}{2e27358c42310902278aa7ae5fecbbf6}
+      \strng{authorbibnamehash}{2e27358c42310902278aa7ae5fecbbf6}
+      \strng{authornamehash}{2e27358c42310902278aa7ae5fecbbf6}
+      \strng{authorfullhash}{2e27358c42310902278aa7ae5fecbbf6}
+      \strng{authorfullhashraw}{2e27358c42310902278aa7ae5fecbbf6}
       \field{extraname}{1}
       \field{sortinit}{V}
       \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
@@ -4204,34 +4467,34 @@
     \endentry
     \entry{voermansFinelyresolvedAlongtrackWave2024}{online}{}{}
       \name{author}{6}{}{%
-        {{un=0,uniquepart=base,hash=e1afc93ecf73c2592f0d14c4143a5e92}{%
+        {{un=0,uniquepart=base,hash=4b2a6002669026dee0fe358a440f4faf}{%
            family={Voermans},
            familyi={V\bibinitperiod},
-           given={Joey},
+           given={J.},
            giveni={J\bibinitperiod},
            givenun=0}}%
-        {{un=0,uniquepart=base,hash=a0bb0b8ef470c04a9241b1c343ab1a83}{%
+        {{un=0,uniquepart=base,hash=1d7c5ebbc2e4c5d7a05bb3e1efa0b1c7}{%
            family={Fraser},
            familyi={F\bibinitperiod},
-           given={Alexander},
+           given={A.},
            giveni={A\bibinitperiod},
            givenun=0}}%
-        {{un=0,uniquepart=base,hash=e3d88062d4bd7cb0c128580b79bd0d5f}{%
+        {{un=0,uniquepart=base,hash=97351eb39877866e9d48e4edecc644e4}{%
            family={Brouwer},
            familyi={B\bibinitperiod},
-           given={Jill},
+           given={J.},
            giveni={J\bibinitperiod},
            givenun=0}}%
-        {{un=0,uniquepart=base,hash=a1a8c3721095338b63f242afc0850498}{%
+        {{un=0,uniquepart=base,hash=8cfe69cb3b81f4d7943868f0d31dcd99}{%
            family={Meylan},
            familyi={M\bibinitperiod},
-           given={Michael\bibnamedelima H.},
+           given={M.\bibnamedelimi H.},
            giveni={M\bibinitperiod\bibinitdelim H\bibinitperiod},
            givenun=0}}%
-        {{un=0,uniquepart=base,hash=28c7193ad4b319e3532c3da6bc7cafdb}{%
+        {{un=0,uniquepart=base,hash=c47eb4bdf7506788ca8df6c79ad68a37}{%
            family={Liu},
            familyi={L\bibinitperiod},
-           given={Qingxiang},
+           given={Q.},
            giveni={Q\bibinitperiod},
            givenun=0}}%
         {{un=0,uniquepart=base,hash=59f8ac661340195c7b0b8dd358d3f3d2}{%
@@ -4241,14 +4504,14 @@
            giveni={A\bibinitperiod\bibinitdelim V\bibinitperiod},
            givenun=0}}%
       }
-      \strng{namehash}{6b0d166f6914be83445e5e2329e55808}
-      \strng{fullhash}{bd373450c08f41bfd800683a8316a72d}
-      \strng{fullhashraw}{bd373450c08f41bfd800683a8316a72d}
-      \strng{bibnamehash}{6b0d166f6914be83445e5e2329e55808}
-      \strng{authorbibnamehash}{6b0d166f6914be83445e5e2329e55808}
-      \strng{authornamehash}{6b0d166f6914be83445e5e2329e55808}
-      \strng{authorfullhash}{bd373450c08f41bfd800683a8316a72d}
-      \strng{authorfullhashraw}{bd373450c08f41bfd800683a8316a72d}
+      \strng{namehash}{00503ea349106a79ba239711887b7e0b}
+      \strng{fullhash}{96d92628bd13f6af1570b42f6a8a579b}
+      \strng{fullhashraw}{96d92628bd13f6af1570b42f6a8a579b}
+      \strng{bibnamehash}{00503ea349106a79ba239711887b7e0b}
+      \strng{authorbibnamehash}{00503ea349106a79ba239711887b7e0b}
+      \strng{authornamehash}{00503ea349106a79ba239711887b7e0b}
+      \strng{authorfullhash}{96d92628bd13f6af1570b42f6a8a579b}
+      \strng{authorfullhashraw}{96d92628bd13f6af1570b42f6a8a579b}
       \field{sortinit}{V}
       \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
       \field{extradatescope}{labelyear}
