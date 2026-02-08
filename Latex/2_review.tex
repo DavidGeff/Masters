@@ -25,11 +25,11 @@ The Antarctic seasonal ice cycle is one of the largest environmental cycles on E
 \centering
 \begin{minipage}{.5\textwidth}
     \centering
-    \includegraphics[width=0.95\linewidth]{figs/sic_feb.png}
+    \includegraphics[width=0.95\linewidth]{figs/ch2/sic_feb.png}
   \end{minipage}%
   \begin{minipage}{.5\textwidth}
     \centering
-    \includegraphics[width=0.95\linewidth]{figs/sic_sept.png}
+    \includegraphics[width=0.95\linewidth]{figs/ch2/sic_sept.png}
   \end{minipage}
   \caption{\textbf{Sea Ice Extent.}}{Average sea ice concentration for February (left) and September (right) 2024, the annual minimum and maximum respectively. Taken from \textcite{BrowseImageSubset}.}
   \label{fig:ice_exten}
@@ -53,7 +53,7 @@ During the summer months the \ac{MIZ} predominantly consists of large floes, cap
 %----------------------------------------------------
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.6\textwidth]{figs/miz.png}
+    \includegraphics[width=0.6\textwidth]{figs/ch2/miz.png}
     \caption{\textbf{2016 Monthly MIZ.}}{Yellow region represents MIZ as determined by the alternative indicator proposed by \textcite{vichiIndicatorSeaIce2022}, the purple lines represent MIZ extent as determined by the traditional SIC threshold. Taken from \textcite{vichiIndicatorSeaIce2022}.}
     \label{fig:miz}
 \end{figure}
@@ -70,7 +70,7 @@ Pancake ice is the name given to roughly circular, consolidated ice floes, seen 
 %----------------------------------------------------
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.6\textwidth]{figs/pancake_floes.jpg}
+    \includegraphics[width=0.5\textwidth]{figs/ch2/pancake_floes.jpg}
     \caption{\textbf{Pancake Ice Floes in the MIZ.}}{Small pancake floes in the early stages of formation. Captured during the SCALE Winter 2019 cruise aboard the \textit{S.A. Agulhas II}. Image credits: R.A. Verrinder.}
     \label{fig:pancake_floes}
 \end{figure}
@@ -92,12 +92,21 @@ Wave activity and, to a lesser degree, wind activity are necessary for the forma
 
 In the grease-ice stage, the ocean is supercooled, leading to the formation of frazil crystals. Wind and/or wave agitation causes these frazil crystals to collide and adhere to each other, forming miniature disc-like frazils. These newly formed frazils are driven together by the high-frequency components of the wave spectrum to form grease ice, which absorbs the energy of the high-frequency components.
 
+%----------------------------------------------------
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{figs/ch2/grease.jpeg}
+    \caption{\textbf{Grease Ice in the MIZ.}}{Grease ice can be seen floating in the bottom right of the frame. Captured during the SCALE Winter 2019 cruise aboard the \textit{S.A. Agulhas II}. Image credits: R.A. Verrinder.}
+    \label{fig:grease}
+\end{figure}
+%----------------------------------------------------
+
 Frazils continue to form and adhere to each other beneath the grease ice layer in the pancake formation stage, leading to an increase in the buoyancy of the accumulated crystals. This increased buoyancy causes the disk-like frazils to rise, exposing them to cold air above the surface of the ocean, resulting in the formation of an ice sheet. Throughout this, the wave motion limits the pancake footprint size and floe-floe collisions result in the formation of ridged edges. The high frequency components of the wave spectrum initially dictate the size of the pancake floes, as the energy from these frequencies is consumed by interactions such as collisions and rafting, lower frequencies begin to drive floe creation and interaction. These lower frequencies result in larger pancake floes being able to form, like the floes seen in Figure \ref{fig:pancake_floes}.
 
 %----------------------------------------------------
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.6\textwidth]{figs/pancake_sheet.jpeg}
+    \includegraphics[width=0.5\textwidth]{figs/ch2/pancake_sheet.jpeg}
     \caption{\textbf{Pancake Floe Sheet.}}{Pancake floes fused together to create a consolidated ice sheet. Captured during the SCALE Winter 2019 cruise aboard the \textit{S.A. Agulhas II}. Image credits: R.A. Verrinder.}
     \label{fig:pancake_sheet}
 \end{figure}
@@ -108,7 +117,7 @@ In the composite pancake stage, pancakes are driven together by the higher frequ
 %----------------------------------------------------
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.6\textwidth]{figs/comp_pancake.jpeg}
+    \includegraphics[width=0.5\textwidth]{figs/ch2/comp_pancake.jpeg}
     \caption{\textbf{Complex Ice Field.}}{Ice field likely created by a pancake floe sheet breaking apart. Captured during the SCALE Winter 2019 cruise aboard the \textit{S.A. Agulhas II}. Image credits: R.A. Verrinder.}
     \label{fig:comp_pancake}
 \end{figure}
@@ -193,6 +202,22 @@ Currently, remote sensing falls short when attempting to identify the types of i
 The development of modern \ac{LiDAR} began with the invention of lasers, which initially led to the development of simple laser rangefinders in the 1960s. These early rangefinders were capable of measuring the distance to a single target less than 5 km away to an accuracy of 2 to 3 m and were primarily used for military applications (\cite{molebnyLaserRadarHistorical2016}). Beginning in the 1970s and through to the 1980s, airborne laser rangefinders were first used for Earth observation, with applications ranging from sea ice surface roughness, bathymetric and topographical measurements (\cite{nelsonHowDidWe2013}).
 
 Once again, military applications led the development of \ac{LiDAR} technology, with the first true \ac{LiDAR} systems capable of producing full three-dimensional point clouds being developed in the 1980s. These systems were initially heavy, large and required significant power to operate, leading to their deployment being limited to large, vehicle-mounted platforms (\cite{molebnyLaserRadarHistorical2016}).  
+
+%----------------------------------------------------
+\begin{figure}[H]
+\centering
+\begin{minipage}{.5\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{figs/ch2/image.png}
+  \end{minipage}%
+  \begin{minipage}{.5\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{figs/ch2/pointcloud.png}
+  \end{minipage}
+  \caption{\textbf{Image and Point Cloud Comparison.}}{Left: Image of a target scene. Right: Point cloud of the same scene (colours represent point density) created by Livox MID-40, a similar sensor to the Livox Avia used in this investigation. Images are capable of capturing details such as colour and texture, while point clouds capture the geometry of the scene. Taken from \textcite{ortizarteagaInitialInvestigationLowCost2019}.}
+  \label{fig:cam_vs_lidar}
+\end{figure}
+%----------------------------------------------------
 
 Commercial \ac{LiDAR} systems first became available in the early 2000s, with advancements laser, processing and power delivery systems leading to smaller, lighter and more power efficient sensors at lower costs. This has resulted in \ac{LiDAR} becoming more accessible to a wider range of applications and has opened up new possibilities and potential applications (\cite{wangEvolutionLiDARIts2020}). \ac{LiDAR} has seen limited deployment in Antarctica, with \textcite{sandruShipborneSeaiceField2021} being potentially the first instance of making use of \ac{LiDAR} for the mapping of sea ice from aboard the \textit{S.A. Agulhas II}. They were able to successfully create a point cloud reconstruction of the sea ice field surrounding the vessel to assist in the potential autonomous navigation of vessels through ice-covered waters. This investigation demonstrated that ship-based \ac{LiDAR} is capable of producing point cloud reconstructions of sea ice fields, and thus has the potential to be used as an observational tool in Antarctica. With further development and investigation, it may be possible to determine parameters such as individual pancake ice floe size and distribution, as well as wave-in-ice parameters such as wave amplitude and period.
 

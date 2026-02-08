@@ -8,7 +8,7 @@
 %----------------------------------------------------
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.82\textwidth]{figs/pipeline.png}
+    \includegraphics[width=0.82\textwidth]{figs/ch6/pipeline.png}
     \caption{\textbf{Proposed Processing Pipeline.}}{Overview of the LiDAR data processing and feature extraction stages.}
     \label{fig:pipeline}
 \end{figure}
@@ -38,8 +38,8 @@ A solution to this complication is to apply motion compensation to the point clo
 %----------------------------------------------------
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.82\textwidth]{figs/scene_frames.png}
-    \caption{\textbf{Reference Frames and Coordinate Systems.}}
+    \includegraphics[width=0.82\textwidth]{figs/ch6/scene_frames.png}
+    \caption{\textbf{Reference Frames and Coordinate Systems.}}{The World and vessel frames are based on the NED convention, while the Avia and point cloud frames are based on the sensor's local coordinate system as defined by the manufacturer. Sea ice observed in the target scenes does not have a native coordinate system, so for the purposes of this investigation, the sea ice coordinate system is defined as being the same orientation as the Avia's local coordinate system.}
     \label{fig:scene_frames}
 \end{figure}
 %----------------------------------------------------
@@ -69,13 +69,14 @@ Due to the complexity of wave behaviour in the \ac{MIZ}, and modelling challenge
 %----------------------------------------------------
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.82\textwidth]{figs/WaterWave_Stokes1st2nd.png}
-    \caption{\textbf{First Order (Linear) and Second Order Stokes Waves.}}{Taken from \textcite{benitzSimulatingHydrodynamicsOffshore}}
+    \includegraphics[width=0.82\textwidth]{figs/ch6/WaterWave_Stokes1st2nd.png}
+    \caption{\textbf{First Order (Linear) and Second Order Stokes Waves.}}{First order waves are a simple sinusoidal function of wave height over time, while second order Stokes waves include greater complexity. Stokes
+        Taken from \textcite{benitzSimulatingHydrodynamicsOffshore}}
     \label{fig:stokes}
 \end{figure}
 %----------------------------------------------------
 
-As seen in Figure \ref{fig:stokes} above, a first order (linear) wave model is a simple sinusoidal function of wave height over time, and is the most basic wave model. A second order Stokes wave model includes additional terms to account for non-linear effects and better represent the behaviour of gravity waves. \textcite{benitzOceanHydrodynamicsEngineers} gives the Equations for first and second order Stokes waves as shown in Equations \ref{eqn:first_ord} and \ref{eqn:second_ord} respectively. It can be clearly seen that the second order Stokes wave model includes many more terms than the first order model, which allows it to better represent the behaviour of real waves, but also makes it for more complex to fit to data. 
+As seen in Figure \ref{fig:stokes} above, a first order (linear) wave model is a simple sinusoidal function of wave height over time, and is the most basic wave model. A second order Stokes wave model includes additional terms to account for non-linear effects and better represent the behaviour of gravity waves. These second order waves display a characteristic asymmetry between the wave crest and trough, with the crest being sharper and higher than their first order counterparts, and the trough being broader and shallower. \textcite{benitzOceanHydrodynamicsEngineers} gives the Equations for first and second order Stokes waves as shown in Equations \ref{eqn:first_ord} and \ref{eqn:second_ord} respectively. It can be clearly seen that the second order Stokes wave model includes many more terms than the first order model, which allows it to better represent the behaviour of real waves, but also makes it for more complex to fit to data. 
 
 %----------------------------------------------------
 \begin{equation} \label{eqn:first_ord}
@@ -120,8 +121,8 @@ After inspecting both the point cloud and video data, four scenes from three dat
 %----------------------------------------------------
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.9\textwidth]{figs/scenes_label.png}
-    \caption{\textbf{Selected Scene Locations.}}{Scene 1 is indicated by marker OD-1, Scene 2 by marker SB06 and Scenes 3 and 4 by marker SB05. Taken from \textcite{vichiSCALEWIN22CruiseTrack2023} and \textcite{passerottiSCALEWIN22SAAgulhas,passerottiSCALEWIN22SAAgulhasa,passerottiSCALEWIN22SAAgulhasb}.}
+    \includegraphics[width=0.9\textwidth]{figs/ch6/scenes_label.png}
+    \caption{\textbf{Selected Scene Locations.}}{Extract from the \textit{S.A. Agulhas II} cruise track during the \ac{SCALE} Winter 2022 Cruise. Scene 1 was captured at station OD-1 (open water wave buoy deployment), Scene 2 was captured at station SB06 (ice-tethered SHARC wave buoy deployment) and Scenes 3 and 4 were captured at station SB05 (ice-tethered SHARC wave buoy deployment). Taken from \textcite{vichiSCALEWIN22CruiseTrack2023} and \textcite{passerottiSCALEWIN22SAAgulhas,passerottiSCALEWIN22SAAgulhasa,passerottiSCALEWIN22SAAgulhasb}.}
     \label{fig:scenes}
 \end{figure}
 %----------------------------------------------------
@@ -159,7 +160,7 @@ Two Kalman filters were implemented to estimate the attitude of the Avia during 
 %----------------------------------------------------
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.82\textwidth]{figs/motion_comp.png}
+    \includegraphics[width=0.82\textwidth]{figs/ch6/motion_comp.png}
     \caption{\textbf{Motion Compensation Pipeline.}}
     \label{fig:motion_compensation}
 \end{figure}
@@ -245,7 +246,7 @@ The return intensity of points can be used to remove or ignore unwanted points. 
 %----------------------------------------------------
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{figs/threshold_pipe.png}
+    \includegraphics[width=0.8\textwidth]{figs/ch6/threshold_pipe.png}
     \caption{\textbf{De-noising Pipeline.}}
     \label{fig:threshold_pipe}
 \end{figure}
@@ -261,19 +262,17 @@ The return intensity threshold was set to 1 out of 255 and the distance threshol
 %----------------------------------------------------
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\textwidth]{figs/wave_est.png}
+    \includegraphics[width=\textwidth]{figs/ch6/wave_est.png}
     \caption{\textbf{Wave Parameter Estimation Pipeline.}}
     \label{fig:wave_est}
 \end{figure}
 %----------------------------------------------------
 
-The Aalto University wave and ice tank probe data can be used as ground truth for wave parameter estimates. Wave models were fitted to the two datasets (wave probe and Avia) and magnitude and period estimates derived from the Avia data were compared to those from the wave probe.
-
-As there was no time synchronisation between the Avia and wave probe, instantaneous wave parameters could not be compared. Instead, overall wave parameters (amplitude and frequency) for the duration of the tests were modelled and compared. 
+The Aalto University wave and ice tank probe data can be used as ground truth for wave parameter estimates. Wave models were fitted to the two datasets (wave probe and Avia) and magnitude and period estimates derived from the Avia data were compared to those from the wave probe. As there was no time synchronisation between the Avia and wave probe, instantaneous wave parameters could not be compared. Instead, overall wave parameters (amplitude and frequency) for the duration of the tests were modelled and compared. The wave probe data consists of a list of wave height measurements over time, which can be modelled as a simple sinusoidal function. The point cloud data from the Avia is a spatial representation of the wave surface at a given time, which will require a more complex spatial sinusoidal plane model to be fitted to it.
 
 The strict constraints on the wave behaviours allows for the wave models used to be greatly simplified. It can be assumed the waves will propagate uniformly across the tank with minimal change in direction and velocity.
 
-Using the MATLAB \emph{curveFitter} tool, a sinusoidal model (equation \ref{eqn:probe_sin}) of wave height over time was fitted to the Aalto wave probe data from each test, producing a single amplitude and period value per test.
+Using the MATLAB \emph{curveFitter} tool, a sinusoidal model (equation \ref{eqn:probe_sin}) of wave height over time was fitted to the Aalto wave probe data from each test, and a single amplitude (\textit{A}) and period (\textit{t}) value was extracted per test.
 
 %----------------------------------------------------
 \begin{equation} \label{eqn:probe_sin}
@@ -281,9 +280,9 @@ Using the MATLAB \emph{curveFitter} tool, a sinusoidal model (equation \ref{eqn:
 \end{equation}
 %----------------------------------------------------
 
-\textit{y} is the wave height at time \textit{t}, \textit{A} is  amplitude, \textit{$\omega$} is the  angular frequency and \textit{c} is the phase shift. For this investigation, only amplitude and angular frequency (\textit{A} and \textit{$\omega$}) are of interest.
+\textit{y} is the wave height at time \textit{t}, \textit{A} is  amplitude, \textit{$\omega$} is the  angular frequency and \textit{c} is the phase shift. For this investigation, only amplitude and angular frequency (\textit{A} and \textit{$\omega$}) are of interest. Phase shift is not of interest as it merely represents the starting point of the wave and does not affect the overall wave behaviour.
 
-To model the waves from point cloud data, a spatial sinusoidal plane model (equation \ref{eqn:avia_sin}) was fitted to each frame in the point cloud using \ac{RANSAC}. Each frame fit was run for 300 iterations at an inlier tolerance of 0.02 m (2 cm). The iteration count was selected based on compute time constraints (compute time for one frame at 300 iterations was approximately 1 minute and 30 seconds, a test consisting of 3000 frames would take over 20 minutes), while the inlier tolerance was selected based on a combination of the expected wave amplitudes and the sensor's range accuracy. The model (Equation \ref{eqn:avia_sin}) was fit to the data by first declaring the model as a custom function in MATLAB, then using the \emph{lsqcurvefit} function to fit the model to six randomly selected points (six points were selected as the model has six parameters) from the point cloud frame. The number of inliers for the model fit was then calculated by determining how many points in the point cloud frame were within the inlier tolerance of the model. The model with the highest number of inliers after the set number of iterations was selected as the best fit for that frame. This process was repeated for every frame in the test dataset.
+To model the waves from point cloud data, a spatial sinusoidal plane model (equation \ref{eqn:avia_sin}) was fitted to each frame in the point cloud using \ac{RANSAC}. Each frame fit was run for 300 iterations at an inlier tolerance of 0.02 m (2 cm). The iteration count was selected based on compute time constraints (compute time for one frame at 300 iterations was approximately 1 minute and 30 seconds, a test consisting of 3000 frames would take over 20 minutes), while the inlier tolerance was selected based on a combination of the expected wave amplitudes and the sensor's range accuracy. The model (Equation \ref{eqn:avia_sin}) was fit to the data by first declaring the model as a custom function in MATLAB, then using the \emph{lsqcurvefit} function to fit the model to six randomly selected points (six points were selected as the model has six parameters) from the point cloud frame. The number of inliers for the model fit was then calculated by determining how many points in the point cloud frame were within the inlier tolerance of the model. The model with the highest number of inliers after the set number of iterations was selected as the best fit for that frame. This process was repeated for every frame in the test dataset. This produced an array containing the best fit model parameters (A through F) for each frame, which were then converted to wave amplitude and period estimates for comparison against the wave probe data.
 
 %----------------------------------------------------
 \begin{equation} \label{eqn:avia_sin}
@@ -333,7 +332,9 @@ The \ac{DBScan} algorithm was implemented using MATLAB's built-in \emph{dbscan} 
 \subsubsection{VDBScan}
 \label{subsec:ch6.section3.subsec4.subsubsec2}
 
-The \ac{VDBScan} algorithm implemented was adapted from MATLAB’s \emph{dbscan} function, with modifications to incorporate variable-density clustering as described by \textcite{liuVDBSCANVariedDensity2007}. In contrast to the original \ac{VDBScan} approach, which assigns an individual \textbf{$\epsilon$} value to each point, this implementation estimates a set of candidate \textbf{$\epsilon$} values for the entire point cloud using the selected \textbf{k}-nearest neighbour distances. Traditional \ac{DBScan} clustering is then applied iteratively for each \textbf{$\epsilon$} value. The resulting cluster assignments from all runs are combined on a point-by-point basis, where the most frequently occurring cluster ID across all \textbf{$\epsilon$} values is chosen as the final label for that point.
+The \ac{VDBScan} algorithm implemented was adapted from MATLAB's \emph{dbscan} function, with modifications to introduce variable density behaviour as described by \textcite{liuVDBSCANVariedDensity2007}. In the original \ac{VDBScan} formulation, each point is assigned its own \textbf{$\epsilon$} value derived from the local density estimated from its neighbourhood variance. Implementing this directly requires computing and storing a unique \textbf{$\epsilon$} for every point, which becomes computationally expensive and memory intensive for large point sets. To avoid this, the implementation used in this investigation replaces the per-point \textbf{$\epsilon$} values with a small set of global potential \textbf{$\epsilon$} values estimated from the distribution of the \textbf{k}-nearest neighbour distances across the full point cloud. These values act as representative density scales, allowing the algorithm to approximate variable density clustering without computing a full \textbf{$\epsilon$} profile for every individual point.
+
+Traditional \ac{DBScan} clustering is then applied iteratively for each potential \textbf{$\epsilon$} value, producing a series of cluster label assignments over the same point cloud. To obtain a single final clustering, the labels from all runs are merged using a point-wise consensus approach, where each point is assigned the cluster ID it most frequently received across the \textbf{$\epsilon$} set. This merging allows for the most frequently detected clusters across multiple density scales to be retained, while reducing sensitivity to any single \textbf{$\epsilon$} choice.
 
 The decision to use a modified \ac{VDBScan} implementation was made due to computational restraints. The original \ac{VDBScan} algorithm requires the calculation and storage of an individual \textbf{$\epsilon$} value for each point in the point cloud, which requires significant memory resources for large point clouds. Every attempt to run the original \ac{VDBScan} algorithm on the PC used for this investigation (equipped with 32 GB of RAM) resulted in out-of-memory errors. 
 

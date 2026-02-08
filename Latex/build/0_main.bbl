@@ -2628,6 +2628,62 @@
       \verb 10.5589/m13-011
       \endverb
     \endentry
+    \entry{ortizarteagaInitialInvestigationLowCost2019}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=d2fb85b703eaf12781265a5e7b13f032}{%
+           family={Ortiz\bibnamedelima Arteaga},
+           familyi={O\bibinitperiod\bibinitdelim A\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=77f651526aca5f3b7aac7975bba70828}{%
+           family={Scott},
+           familyi={S\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c16969a5dc98e43a4b160221b40a5f98}{%
+           family={Boehm},
+           familyi={B\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{e431c92db4f54f47262ed3618f518b11}
+      \strng{fullhash}{e431c92db4f54f47262ed3618f518b11}
+      \strng{fullhashraw}{e431c92db4f54f47262ed3618f518b11}
+      \strng{bibnamehash}{e431c92db4f54f47262ed3618f518b11}
+      \strng{authorbibnamehash}{e431c92db4f54f47262ed3618f518b11}
+      \strng{authornamehash}{e431c92db4f54f47262ed3618f518b11}
+      \strng{authorfullhash}{e431c92db4f54f47262ed3618f518b11}
+      \strng{authorfullhashraw}{e431c92db4f54f47262ed3618f518b11}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Abstract. This investigation focuses on the performance assessment of a low-cost automotive LIDAR, the Livox Mid-40 series. The work aims to examine the qualities of the sensor in terms of ranging, repeatability and accuracy. Towards these aims a series of experiments were carried out based on previous research of low-cost sensor accuracy, LIDAR accuracy investigation and TLS calibration experiments. The Livox Mid-40 series offers the advantage of a long-range detection beyond 200\,m at a remarkably low cost. The preliminary results of the tests for this sensor indicate that it can be used for reality capture purposes such as to obtain coarse as-built plans and volume calculations to mention a few. Close-range experiments were conducted in an indoor laboratory setting. Long-range experiments were performed outdoors towards a building façade. Reference values in both setups were provided with a Leica RTC 360 terrestrial LIDAR system. In the close-range experiments a cross section of the point cloud shows a significant level of noise in the acquired data. At a stand-off distance of 5 m the length measurement tests reveal deviations of up to 11 mm to the reference values. Range measurement was tested up to 130 meters and shows ranging deviations of up to 25 millimetres. The authors recommend further investigation of the issues in radiometric behaviour and material reflectivity. Also, more knowledge about the internal components is needed to understand the causes of the concentric ripple effect observed at close ranges. Another aspect that should be considered is the use of targets and their design as the non-standard scan pattern prevents automated detection with standard commercial software.}
+      \field{issn}{2194-9034}
+      \field{journaltitle}{The International Archives of the Photogrammetry, Remote Sensing and Spatial Information Sciences}
+      \field{langid}{english}
+      \field{month}{11}
+      \field{title}{Initial {{Investigation}} of a {{Low-Cost Automotive Lidar System}}}
+      \field{urlday}{20}
+      \field{urlmonth}{12}
+      \field{urlyear}{2025}
+      \field{volume}{XLII-2/W17}
+      \field{year}{2019}
+      \field{urldateera}{ce}
+      \field{pages}{233\bibrangedash 240}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.5194/isprs-archives-XLII-2-W17-233-2019
+      \endverb
+      \verb{file}
+      \verb C:\Users\dseph\Zotero\storage\V3TCINED\Ortiz Arteaga et al. - 2019 - INITIAL INVESTIGATION OF A LOW-COST AUTOMOTIVE LIDAR SYSTEM.pdf
+      \endverb
+    \endentry
     \entry{palmICESat2AtmosphericChannel2021}{article}{}{}
       \name{author}{8}{}{%
         {{un=0,uniquepart=base,hash=bf1feb3d18b1b8f3c0cd6eab728db5f5}{%

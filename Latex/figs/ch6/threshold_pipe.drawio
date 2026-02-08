@@ -1,0 +1,31 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Linux x86_64; rv:145.0) Gecko/20100101 Firefox/145.0" version="28.2.5">
+  <diagram name="Page-1" id="Dc-n8iORdiYTkAQ7-EzO">
+    <mxGraphModel dx="1678" dy="972" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="wkFcRYS3I2yoP2MLR504-85" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="wkFcRYS3I2yoP2MLR504-81" target="wkFcRYS3I2yoP2MLR504-82">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wkFcRYS3I2yoP2MLR504-81" value="Raw LiDAR Data" style="ellipse;rounded=0;fontFamily=Helvetica;fontSize=12;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="100" y="570" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wkFcRYS3I2yoP2MLR504-86" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="wkFcRYS3I2yoP2MLR504-82" target="wkFcRYS3I2yoP2MLR504-83">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wkFcRYS3I2yoP2MLR504-82" value="Check Point Intensity &amp;amp; Distance" style="rounded=0;fontFamily=Helvetica;fontSize=12;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="240" y="575" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="wkFcRYS3I2yoP2MLR504-87" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="wkFcRYS3I2yoP2MLR504-83" target="wkFcRYS3I2yoP2MLR504-84">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wkFcRYS3I2yoP2MLR504-83" value="Remove Invalid Points" style="rounded=0;fontFamily=Helvetica;fontSize=12;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="380" y="575" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="wkFcRYS3I2yoP2MLR504-84" value="Filtered LiDAR Data" style="ellipse;rounded=0;fontFamily=Helvetica;fontSize=12;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="520" y="570" width="100" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

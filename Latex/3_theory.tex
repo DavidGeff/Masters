@@ -1,7 +1,7 @@
 %****************************************************
 %	CHAPTER 3 - THEORETICAL DEVELOPMENT
 %****************************************************
-\chapter{Introduction to LiDAR and Point Cloud Processing}
+\chapter{Introduction to LiDAR \& Point Cloud Processing}
 \label{ch:theory}
 
 %====================================================
@@ -22,18 +22,15 @@ All \ac{LiDAR} sensors suffer from beam divergence due to their use of lasers as
     \centering
     \begin{minipage}{0.28\textwidth}
         \centering
-        \includegraphics[width=1\linewidth]{figs/camera.png} % first figure itself
-        %\caption{first figure}
+        \includegraphics[width=1\linewidth]{figs/ch3/camera.png} % first figure itself
     \end{minipage}\hfill
     \begin{minipage}{0.28\textwidth}
         \centering
-        \includegraphics[width=1\linewidth]{figs/radar.png} % second figure itself
-        %\caption{second figure}
+        \includegraphics[width=1\linewidth]{figs/ch3/radar.png} % second figure itself
     \end{minipage}
     \begin{minipage}{0.28\textwidth}
         \centering
-        \includegraphics[width=1\linewidth]{figs/lidar.png} % first figure itself
-        %\caption{first figure}
+        \includegraphics[width=1\linewidth]{figs/ch3/lidar.png} % first figure itself
     \end{minipage}\hfill
     \caption{\textbf{Remote Sensing Methods Comparison.}}{Cameras capture visible light and no depth information, radar uses radio waves to detect objects and measure their distance, and LiDAR uses lasers to create detailed 3D models.}
     \label{fig:methods}
@@ -43,7 +40,7 @@ All \ac{LiDAR} sensors suffer from beam divergence due to their use of lasers as
 %----------------------------------------------------
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\textwidth]{figs/Beam-divergence.jpg}
+    \includegraphics[width=0.5\textwidth]{figs/ch3/Beam-divergence.jpg}
     \caption{\textbf{Beam Divergence.}}{LiDAR beam divergence occurs when the emitted laser beam spreads out as it travels away from the sensor, resulting in uncertainties in the location of the target and its associated points in the final point cloud. Taken from \textcite{kukkoMobileLaserScanning2013}.}
     \label{fig:divergence}
 \end{figure}
@@ -54,7 +51,7 @@ Like any observation method that relies on line of sight, \ac{LiDAR} is suscepti
 %----------------------------------------------------
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\textwidth]{figs/shadowing.png}
+    \includegraphics[width=\textwidth]{figs/ch3/shadowing.png}
     \caption{\textbf{Self-shadowing.}}{The geometry of the target and the position of the sensor can lead to parts of the target occluding itself from the sensor's line of sight, resulting in incomplete point cloud data and lost details of the target's geometry. Taken from \textcite{landyNumericalExperimentalEvaluation2015}.}
     \label{fig:shadow}
 \end{figure}
@@ -75,7 +72,7 @@ The most common scanning pattern created by a \ac{LiDAR} sensor is a rectangular
 %----------------------------------------------------
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\textwidth]{figs/risley.png}
+    \includegraphics[width=0.5\textwidth]{figs/ch3/risley.png}
     \caption{\textbf{Risley Prism.}}{The Livox Avia makes use of a Risley prism as its steering mechanism to create its distinctive scanning patterns. The speed and direction of the prisms' rotation determine the scanning pattern produced. Taken from \textcite{brazealRigorousObservationModel2021}.}
     \label{fig:risley}
 \end{figure}
@@ -88,7 +85,7 @@ Some \ac{LiDAR} sensors are capable of measuring multiple returns from a single 
 %----------------------------------------------------
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\textwidth]{figs/multi_return.png}
+    \includegraphics[width=0.5\textwidth]{figs/ch3/multi_return.png}
     \caption{\textbf{Multiple Returns from a Single Pulse.}}{A single laser pulse emitted from a sensor can produce multiple returns if the pulse hits semi-transparent objects. Taken from \textcite{lefskyLidarRemoteSensing2002}.}
     \label{fig:multi_return}
 \end{figure}
@@ -106,7 +103,7 @@ The Avia has the ability to detect each point's return intensity. It records eac
 %----------------------------------------------------
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\textwidth]{figs/avia1.png}
+    \includegraphics[width=0.5\textwidth]{figs/ch3/avia1.png}
     \caption{\textbf{Livox Avia.}}{Taken from \textcite{AviaLiDARSensor}.}
     \label{fig:avia}
 \end{figure}
@@ -121,18 +118,15 @@ The Avia has two built-in scanning patterns, a repetitive and a non-repetitive p
     \centering
     \begin{minipage}{0.33\textwidth}
         \centering
-        \includegraphics[width=1\linewidth]{figs/rep0.jpg} % first figure itself
-        %\caption{first figure}
+        \includegraphics[width=1\linewidth]{figs/ch3/rep0.jpg} % first figure itself
     \end{minipage}\hfill
     \begin{minipage}{0.33\textwidth}
         \centering
-        \includegraphics[width=1\linewidth]{figs/rep1.jpg} % second figure itself
-        %\caption{second figure}
+        \includegraphics[width=1\linewidth]{figs/ch3/rep1.jpg} % second figure itself
     \end{minipage}
     \begin{minipage}{0.33\textwidth}
         \centering
-        \includegraphics[width=1\linewidth]{figs/rep2.jpg} % first figure itself
-        %\caption{first figure}
+        \includegraphics[width=1\linewidth]{figs/ch3/rep2.jpg} % first figure itself
     \end{minipage}\hfill
     \caption{\textbf{Livox Avia Repetitive Scanning Pattern.}}{The Avia's non-repetitive scanning pattern produces a point cloud with a roughly rectangular \ac{FOV} and consistent point density. Taken from \textcite{AviaLiDARSensor}.}
     \label{fig:rep}
@@ -144,18 +138,15 @@ The Avia has two built-in scanning patterns, a repetitive and a non-repetitive p
     \centering
     \begin{minipage}{0.33\textwidth}
         \centering
-        \includegraphics[width=1\linewidth]{figs/norep0.jpg} % first figure itself
-        %\caption{first figure}
+        \includegraphics[width=1\linewidth]{figs/ch3/norep0.jpg} % first figure itself
     \end{minipage}\hfill
     \begin{minipage}{0.33\textwidth}
         \centering
-        \includegraphics[width=1\linewidth]{figs/norep1.jpg} % second figure itself
-        %\caption{second figure}
+        \includegraphics[width=1\linewidth]{figs/ch3/norep1.jpg} % second figure itself
     \end{minipage}
     \begin{minipage}{0.33\textwidth}
         \centering
-        \includegraphics[width=1\linewidth]{figs/norep2.jpg} % first figure itself
-        %\caption{first figure}
+        \includegraphics[width=1\linewidth]{figs/ch3/norep2.jpg} % first figure itself
     \end{minipage}\hfill
     \caption{\textbf{Livox Avia Non-Repetitive Scanning Pattern.}}{the Avia's non-repetitive scanning pattern produces a point cloud with a circular \ac{FOV} and non-uniform point density, with a high density of points in the centre of the \ac{FOV} and the number of points reducing outwards to the edges of the sensor's \ac{FOV}. Taken from \textcite{AviaLiDARSensor}.}
     \label{fig:non_rep}
@@ -201,7 +192,7 @@ In the Avia's repetitive scanning pattern (see Figure \ref{fig:rep}), the sensor
 %----------------------------------------------------
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\textwidth]{figs/grid.png}
+    \includegraphics[width=0.5\textwidth]{figs/ch3/grid.png}
     \caption{\textbf{Irregular Density Point Cloud and Filtering Grid.}}{Visualisation of an irregular density point cloud overlaid with a filtering grid. The irregular point density makes it challenging to apply uniform filtering techniques.}
     \label{fig:grid}
 \end{figure}
@@ -293,8 +284,8 @@ Water, ice and snow have more complex interactions with electromagnetic radiatio
 %----------------------------------------------------
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\textwidth]{figs/water_abs.png}
-    \caption{\textbf{Water and Ice Absorption Spectra.}}{Absorption as the imaginary part of refraction (extinction coefficient). Taken from \textcite{dozierEstimationPropertiesAlpine1989}.}
+    \includegraphics[width=0.5\textwidth]{figs/ch3/water_abs.png}
+    \caption{\textbf{Water and Ice Absorption Spectra.}}{Absorption as the imaginary part of refraction (extinction coefficient), which is a measure of how much light is absorbed by a medium. The higher the extinction coefficient, the more light is absorbed by the medium. Taken from \textcite{dozierEstimationPropertiesAlpine1989}.}
     \label{fig:water}
 \end{figure}
 %----------------------------------------------------
@@ -306,8 +297,8 @@ As the physical structure and composition of sea ice varies greatly, so do its o
 %----------------------------------------------------
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.65\textwidth]{figs/ice.png}
-    \caption{\textbf{Various Ice Spectral Albedo.}}{Taken from \textcite{brandtSurfaceAlbedoAntarctic2005}.}
+    \includegraphics[width=0.65\textwidth]{figs/ch3/ice.png}
+    \caption{\textbf{Various Ice Spectral Albedo.}}{Younger, less dense ice types such as first year ice have a higher albedo than older, denser ice types such as multi-year ice, this is due to the structure and composition of the different ice types. Taken from \textcite{brandtSurfaceAlbedoAntarctic2005}.}
     \label{fig:ice}
 \end{figure}
 %----------------------------------------------------
@@ -317,8 +308,8 @@ On average, snow has the highest albedo out of the three mediums. The smaller th
 %----------------------------------------------------
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.65\textwidth]{figs/snow.png}
-    \caption{\textbf{Snow Spectral Albedo.}}{Taken from \textcite{brandtSurfaceAlbedoAntarctic2005}.}
+    \includegraphics[width=0.65\textwidth]{figs/ch3/snow.png}
+    \caption{\textbf{Snow Spectral Albedo.}}{Snow has a high albedo across the visual and near infrared regions of the electromagnetic spectrum, with the albedo increasing as the snow becomes less dense. Taken from \textcite{brandtSurfaceAlbedoAntarctic2005}.}
     \label{fig:snow}
 \end{figure}
 %----------------------------------------------------

@@ -38,13 +38,13 @@ The Avia was mounted on a tripod and placed on a terrace above the rugby field a
 \centering
 \begin{minipage}{.5\textwidth}
   \centering
-  \includegraphics[width=0.95\linewidth]{figs/field_setup.png}
+  \includegraphics[width=0.95\linewidth]{figs/ch4/field_setup.png}
   \caption{\textbf{Data collection Apparatus}}
   \label{fig:field_setup}
 \end{minipage}%
 \begin{minipage}{.5\textwidth}
   \centering
-  \includegraphics[width=0.95\linewidth]{figs/edited_level.png}
+  \includegraphics[width=0.95\linewidth]{figs/ch4/edited_level.png}
   \caption{\textbf{Avia Angle of Depression.}}
   \label{fig:angle}
 \end{minipage}
@@ -56,7 +56,7 @@ Two sheets of hardboard, 1220 x 1220 mm each, a similar in size to a small panca
 %----------------------------------------------------
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.95\textwidth]{figs/field_boards.JPG}
+    \includegraphics[width=0.95\textwidth]{figs/ch4/field_boards.JPG}
     \caption{\textbf{Target Boards.}}{Target A on the left, target B on the right.}
     \label{fig:boards}
 \end{figure}
@@ -67,13 +67,13 @@ Two sheets of hardboard, 1220 x 1220 mm each, a similar in size to a small panca
 \centering
 \begin{minipage}{.5\textwidth}
   \centering
-  \includegraphics[width=0.95\linewidth]{figs/board_c.jpg}
+  \includegraphics[width=0.95\linewidth]{figs/ch4/board_c.jpg}
   \caption{\textbf{Target C.}}
   \label{fig:target_c}
 \end{minipage}%
 \begin{minipage}{.5\textwidth}
   \centering
-  \includegraphics[width=0.95\linewidth]{figs/board_d.jpg}
+  \includegraphics[width=0.95\linewidth]{figs/ch4/board_d.jpg}
   \caption{\textbf{Target D.}}
   \label{fig:target_d}
 \end{minipage}
@@ -90,26 +90,18 @@ To investigate the feasibility of using the Avia's \ac{IMU} data to compensate f
 
 To apply known motion to the Avia, a Stewart platform was used to manipulate the sensor. A Stewart platform is a device that has the ability to manipulate its target platform in 6 degrees, namely linear translations along its x, y and z axes and rotation around its the x, y, and z axes (\cite{stewartPlatformSixDegrees1965}). The Stewart platform used for this experiment was designed and built by a former student from the University of Cape Town (\cite{clarkStewart2018}). The platform had been used sporadically since its construction in 2018, and had undergone many repairs and part replacements, resulting in irregular performance that did not meet the original design specifications. To overcome this limitation, a motion capture system was employed to record ground-truth motion data for comparison and validation.
 
-The motion capture system used in this experiment was manufactured by \href{https://optitrack.com}{OptiTrack}, who provided all sensors, software and supporting equipment. The system consists of 4 OptiTrack PrimeX 13 cameras and 3 OptiTrack PrimeX 13W (wide angle) cameras, all managed by a PC running OptiTrack's Motive software. Both camera types record data at a rate of 240 Hz, with the PrimeX 13 having a listed 3D accuracy of +/- 0.02 mm (\cite{PrimeX13Depth}), and the PrimeX 13W having a listed 3D accuracy of +/- 0.03 mm (\cite{PrimeX13WDepth}). The system makes use of passive infrared reflective markers to track the position of the target over time. The data collected by the motion capture system was not time-synchronised with the Avia's \ac{IMU} data.
-
-As this experiment is intended to be a preliminary investigation into the feasibility of using \ac{IMU} data for motion compensation, only rotational motion, and no translational motion was applied to the Avia. The Avia had six motion capture markers attached to it, (see Figure \ref{fig:markers}) and was mounted to the Stewart platform using a custom 3D-printed mount, as seen in Figure \ref{fig:motion_setup}.
-
 %----------------------------------------------------
 \begin{figure}[H]
 \centering
   \begin{minipage}{.5\textwidth}
     \centering
-    \includegraphics[width=0.95\linewidth]{figs/stewart_setup.jpg}
-    %\caption{\textbf{Motion setup.}}
-    %\label{fig:motion_setup}
+    \includegraphics[width=0.95\linewidth]{figs/ch4/stewart_setup.png}
   \end{minipage}%
   \begin{minipage}{.5\textwidth}
     \centering
-    \includegraphics[width=0.95\linewidth]{figs/markers_1.png}
-    %\caption{\textbf{Markers.}}
-    %\label{fig:markers_1}
+    \includegraphics[width=0.95\linewidth]{figs/ch4/sp.png}
   \end{minipage}
-  \caption{\textbf{Simulated Motion Experimental Setup.}}
+  \caption{\textbf{Simulated Motion Experimental Setup.}}{The Avia was mounted to the Stewart Platform using a custom 3D-printed mount, and a seconday laptop was used to run the Platform's motion routines.}
   \label{fig:motion_setup}
 \end{figure}
 %----------------------------------------------------
@@ -119,20 +111,20 @@ As this experiment is intended to be a preliminary investigation into the feasib
 \centering
 \begin{minipage}{.5\textwidth}
     \centering
-    \includegraphics[width=0.95\linewidth]{figs/markers_0.png}
-    %\caption{\textbf{Markers.}}
-    %\label{fig:markers_0}
+    \includegraphics[width=0.95\linewidth]{figs/ch4/markers0.png}
   \end{minipage}%
   \begin{minipage}{.5\textwidth}
     \centering
-    \includegraphics[width=0.95\linewidth]{figs/markers_2.png}
-    %\caption{\textbf{Markers.}}
-    %\label{fig:markers_2}
+    \includegraphics[width=0.95\linewidth]{figs/ch4/markers2.png}
   \end{minipage}
-  \caption{\textbf{Motion Capture Markers on Livox Avia.}}
+  \caption{\textbf{Motion Capture Markers on Livox Avia.}}{Six motion capture markers were attached to the Avia, with two markers on the top of the sensor, two on the left side of the sensor, one on the right side of the sensor, and one on the back of the sensor.}
   \label{fig:markers}
 \end{figure}
 %----------------------------------------------------
+
+The motion capture system used in this experiment was manufactured by \href{https://optitrack.com}{OptiTrack}, who provided all sensors, software and supporting equipment. The system consists of 4 OptiTrack PrimeX 13 cameras and 3 OptiTrack PrimeX 13W (wide angle) cameras, all managed by a PC running OptiTrack's Motive software. Both camera types record data at a rate of 240 Hz, with the PrimeX 13 having a listed 3D accuracy of +/- 0.02 mm (\cite{PrimeX13Depth}), and the PrimeX 13W having a listed 3D accuracy of +/- 0.03 mm (\cite{PrimeX13WDepth}). The system makes use of passive infrared reflective markers to track the position of the target over time. The data collected by the motion capture system was not time-synchronised with the Avia's \ac{IMU} data.
+
+As this experiment is intended to be a preliminary investigation into the feasibility of using \ac{IMU} data for motion compensation, only rotational motion, and no translational motion was applied to the Avia. The Avia had six motion capture markers attached to it, (see Figure \ref{fig:markers}) and was mounted to the Stewart platform using a custom 3D-printed mount, as seen in Figure \ref{fig:motion_setup}.
 
 The Stewart platform was set to carry out two pre-defined motion routines of different amplitudes, while both the Avia's \ac{IMU} motion capture system recorded data. The routine consisted of:
 
@@ -164,7 +156,7 @@ Aalto University operates a wave and ice tank 40 m x 40 m and 2.8 m deep. The ta
 %----------------------------------------------------
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.9\textwidth]{figs/Aalto_Livox.jpeg}
+    \includegraphics[width=0.9\textwidth]{figs/ch4/Aalto_Livox.jpeg}
     \caption{\textbf{Livox Avia at Aalto University Ice and Wave Tank.}}{Image credits: R.A. Verrinder.}
     \label{fig:aalto}
 \end{figure}
@@ -206,7 +198,7 @@ The \ac{SCALE} Winter 2022 Cruise was a research cruise aboard then Research Ves
 %----------------------------------------------------
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.9\textwidth]{figs/lidar.jpg}
+    \includegraphics[width=0.8\textwidth]{figs/ch4/lidar.jpg}
     \caption{\textbf{Livox Avia above Pancake Ice.}}{Image credits: A. Spirakis.}
     \label{fig:lidar}
 \end{figure}
@@ -217,8 +209,8 @@ Data were collected from the port side 7th floor deck, at a height of approximat
 %----------------------------------------------------
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.9\textwidth]{figs/setup.jpg}
-    \caption{\textbf{Data Collection Setup.}}{Image credits: A. Spirakis.}
+    \includegraphics[width=0.75\textwidth]{figs/ch4/setup.png}
+    \caption{\textbf{Data Collection Setup.}}{The Livox Avia was mounted on the port side 7th floor deck of the \textit{S.A. Agulhas II}, approximately 16-17 m above the waterline, angled downwards to observe the ocean surface. Image credits: A. Spirakis.}
     \label{fig:setup}
 \end{figure}
 %----------------------------------------------------
@@ -226,7 +218,7 @@ Data were collected from the port side 7th floor deck, at a height of approximat
 %----------------------------------------------------
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.9\textwidth]{figs/map.png}
+    \includegraphics[width=0.75\textwidth]{figs/ch4/map.png}
     \caption{\textbf{SCALE Winter 2022 Cruise Track.}}{Taken from \textcite{vichiSCALEWIN22CruiseTrack2023}}
     \label{fig:map}
 \end{figure}
