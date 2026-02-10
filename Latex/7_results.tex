@@ -42,7 +42,7 @@ For each target, a single frame was inspected and the dimensions of the target w
 \end{table}
 %----------------------------------------------------
 
-In the single frame reconstruction, it was difficult to identify the curved shape of the target facing the sensor due to the low point density present. The high level of self-shadowing on the far side of the target also made it impossible to estimate the width of the target. As more frames were concatenated, the point density increased, allowing for a better identification of the curved shape facing the sensor and an improved length estimation. However, the width remained unmeasurable due to persistent shadowing effects. The estimated height of the target remained relatively consistent, only increasing by 3 mm from the single frame to the ten frame reconstruction, with the length estimation improving, from 101 mm lower than the actual length in the single frame reconstruction, to a final estimation from ten frames only 14 mm lower than the actual length. Four concatenated frames allowed for the general geometry to be identified, while ten frames provided a moderate point density that marginally improved shape and dimension identification. In all cases, a combination of shadowing and beam divergence effects created a distortion on the far side of the target, resulting in a long 'tail' of points extending away from the target, as seen in Figure \ref{fig:A10Mesh}.
+In the single frame reconstruction, it was difficult to identify the curved shape of the target facing the sensor due to the low point density present. The high level of self-shadowing on the far side of the target also made it impossible to estimate the width of the target. As more frames were concatenated, the point density increased, allowing for a better identification of the curved shape facing the sensor and an improved length estimation. However, the width remained unmeasurable due to persistent shadowing effects. The estimated height of the target remained relatively consistent, only increasing by 3 mm from the single frame to the ten frame reconstruction, with the length estimation improving, from 101 mm lower than the actual length in the single frame reconstruction, to a final estimation from ten frames only 14 mm lower than the actual length. Four concatenated frames allowed for the general geometry to be identified, while ten frames provided a moderate point density that marginally improved shape and dimension identification. In all cases, a combination of shadowing and beam divergence effects created a distortion on the far side of the target, resulting in a long 'tail' of points extending away from the target, as seen in Figure \ref{fig:A15Mesh}.
 
 %----------------------------------------------------
 \begin{table}[H]
@@ -101,20 +101,20 @@ In the single frame reconstruction of Target C, only the height was estimable, 1
 \end{table}
 %----------------------------------------------------
 
-Target D's single frame reconstruction allowed for estimations of its height and width, 26 mm and 45 mm lower than their respective actual values, with length remaining unmeasurable throughout all reconstructions, due to the front and rear edges of the target not being clearly resolvable. Concatenating four frames allowed for the straight edges along the length of the target to be identified, improving the width estimation marginally, to a value 25 mm lower than the actual width but leaving the height estimation unchanged. Increasing to ten concatenated frames further improved the point density, allowing for a slight improvement in the estimations of height, to 20 mm below the actual value, and width, 18 mm lower than the actual value, as well as the identification of the target's trough-like shape. The reconstruction in Figure \ref{fig:D10Mesh} clearly shows the trough-like geometry and the lack of distinct front and rear edges in the target.
+Target D's single frame reconstruction allowed for estimations of its height and width, 26 mm and 45 mm lower than their respective actual values, with length remaining unmeasurable throughout all reconstructions, due to the front and rear edges of the target not being clearly resolvable. Concatenating four frames allowed for the straight edges along the length of the target to be identified, improving the width estimation marginally, to a value 25 mm lower than the actual width but leaving the height estimation unchanged. Increasing to ten concatenated frames further improved the point density, allowing for a slight improvement in the estimations of height, to 20 mm below the actual value, and width, 18 mm lower than the actual value, as well as the identification of the target's trough-like shape. The reconstruction in Figure \ref{fig:D15Mesh} clearly shows the trough-like geometry and the lack of distinct front and rear edges in the target.
 
 %----------------------------------------------------
 \begin{figure}[H]
 \centering
 \begin{minipage}{.5\textwidth}
   \centering
-  \includegraphics[width=\linewidth]{figs/ch7/a15.png}
-  \caption{\textbf{Target A Reconstruction, 10 Frames.}}
-  \label{fig:A10Mesh}
+  \includegraphics[width=\linewidth]{figs/ch7/a_15.png}
+  \caption{\textbf{Target A Reconstruction, 15 Frames.}}
+  \label{fig:A15Mesh}
 \end{minipage}%
 \begin{minipage}{.5\textwidth}
   \centering
-  \includegraphics[width=\linewidth]{figs/ch7/b15.png}
+  \includegraphics[width=\linewidth]{figs/ch7/b_15.png}
   \caption{\textbf{Target B Reconstruction, 15 Frames.}}
   \label{fig:B15Mesh}
 \end{minipage}
@@ -126,15 +126,15 @@ Target D's single frame reconstruction allowed for estimations of its height and
 \centering
 \begin{minipage}{.5\textwidth}
   \centering
-  \includegraphics[width=\linewidth]{figs/ch7/c15.png}
+  \includegraphics[width=\linewidth]{figs/ch7/c_15.png}
   \caption{\textbf{Target C Reconstruction, 15 Frames.}}
   \label{fig:C15Mesh}
 \end{minipage}%
 \begin{minipage}{.5\textwidth}
   \centering
-  \includegraphics[width=\linewidth]{figs/ch7/d15.png}
-  \caption{\textbf{Target D Reconstruction, 10 Frames.}}
-  \label{fig:D10Mesh}
+  \includegraphics[width=\linewidth]{figs/ch7/d_15.png}
+  \caption{\textbf{Target D Reconstruction, 15 Frames.}}
+  \label{fig:D15Mesh}
 \end{minipage}
 \end{figure}
 %----------------------------------------------------
@@ -154,13 +154,13 @@ The normals estimation process successfully calculated normal vectors for each p
 \centering
 \begin{minipage}{.5\textwidth}
   \centering
-  \includegraphics[width=0.95\linewidth]{figs/ch7/ANorm.png}
+  \includegraphics[width=0.95\linewidth]{figs/ch7/A_Norm.png}
   \caption{\textbf{Target A Estimated Normals.}}
-  \label{fig:A10Norm}
+  \label{fig:A15Norm}
 \end{minipage}%
 \begin{minipage}{.5\textwidth}
   \centering
-  \includegraphics[width=0.95\linewidth]{figs/ch7/BNorm.png}
+  \includegraphics[width=0.95\linewidth]{figs/ch7/B_Norm.png}
   \caption{\textbf{Target B Estimated Normals.}}
   \label{fig:B15Norm}
 \end{minipage}
@@ -172,15 +172,15 @@ The normals estimation process successfully calculated normal vectors for each p
 \centering
 \begin{minipage}{.5\textwidth}
   \centering
-  \includegraphics[width=0.95\linewidth]{figs/ch7/CNorm.png}
+  \includegraphics[width=0.95\linewidth]{figs/ch7/C_Norm.png}
   \caption{\textbf{Target C Estimated Normals.}}
   \label{fig:C15Norm}
 \end{minipage}%
 \begin{minipage}{.5\textwidth}
   \centering
-  \includegraphics[width=0.95\linewidth]{figs/ch7/DNorm.png}
+  \includegraphics[width=0.95\linewidth]{figs/ch7/D_Norm.png}
   \caption{\textbf{Target D Estimated Normals.}}
-  \label{fig:D10Norm}
+  \label{fig:D15Norm}
 \end{minipage}
 \end{figure}
 %----------------------------------------------------
