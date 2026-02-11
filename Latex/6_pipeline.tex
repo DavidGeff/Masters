@@ -107,6 +107,15 @@ To identify the size and shape of individual pancakes, a method to associate ind
 
 The input data for the clustering algorithm will be the point cloud data's three-dimensional coordinates (x, y, z). The return intensity of each point was not considered as an input feature for clustering, not enough is known about how the return intensity varies across individual pancakes, and it is hypothesised that the return intensity values obtained are influenced by environmental factors such as angle of incidence rather than physical characteristics of the pancakes themselves. The desired output of the clustering algorithm is a set of clusters, where each cluster represents an individual pancake. Each point in the point cloud data should be assigned to a cluster, with points that do not belong to any pancake being classified as noise or outliers.
 
+%----------------------------------------------------
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{figs/ch6/scenes_label.png}
+    \caption{\textbf{Selected Scene Locations.}}{Extract from the \textit{S.A. Agulhas II} cruise track during the \ac{SCALE} Winter 2022 Cruise. Scene 1 was captured at station OD-1 (open water wave buoy deployment), Scene 2 was captured at station SB06 (ice-tethered SHARC wave buoy deployment) and Scenes 3 and 4 were captured at station SB05 (ice-tethered SHARC wave buoy deployment). Taken from \textcite{vichiSCALEWIN22CruiseTrack2023} and \textcite{passerottiSCALEWIN22SAAgulhas,passerottiSCALEWIN22SAAgulhasa,passerottiSCALEWIN22SAAgulhasb}.}
+    \label{fig:scenes}
+\end{figure}
+%----------------------------------------------------
+
 Frames to be clustered were selected by visual inspection of the raw point cloud data and video footage from the camera mounted several decks above the Avia (\cite{passerottiSCALEWIN22SAAgulhas,passerottiSCALEWIN22SAAgulhasa,passerottiSCALEWIN22SAAgulhasb}), to identify frames with clear pancake formations, high point densities and minimal motion artefacts. Scenes with consolidated ice floes were avoided as the clustering algorithms are designed to identify discrete clusters of points, and scenes with consolidated ice floes do not contain clear boundaries between individual pancake floes. Once a frame was selected, the clustering algorithms were applied to it as well as a frame composed of a concatenation of the initial frame and the following frame. This was done to investigate if increasing point density improved clustering performance. No more than two frames were concatenated as the target scenes were dynamic, and concatenating more frames risked introducing motion artefacts, which could lead to erroneous clustering results.
 
 After inspecting both the point cloud and video data, four scenes from three datasets were selected for clustering analysis, see Table \ref{tab:clust_scene} and Figures \ref{fig:scenes} and \ref{fig:map}.
@@ -125,15 +134,6 @@ After inspecting both the point cloud and video data, four scenes from three dat
 \end{tabular}
 \label{tab:clust_scene}
 \end{table}
-%----------------------------------------------------
-
-%----------------------------------------------------
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.9\textwidth]{figs/ch6/scenes_label.png}
-    \caption{\textbf{Selected Scene Locations.}}{Extract from the \textit{S.A. Agulhas II} cruise track during the \ac{SCALE} Winter 2022 Cruise. Scene 1 was captured at station OD-1 (open water wave buoy deployment), Scene 2 was captured at station SB06 (ice-tethered SHARC wave buoy deployment) and Scenes 3 and 4 were captured at station SB05 (ice-tethered SHARC wave buoy deployment). Taken from \textcite{vichiSCALEWIN22CruiseTrack2023} and \textcite{passerottiSCALEWIN22SAAgulhas,passerottiSCALEWIN22SAAgulhasa,passerottiSCALEWIN22SAAgulhasb}.}
-    \label{fig:scenes}
-\end{figure}
 %----------------------------------------------------
 
 Three density-based clustering algorithms were considered for this application: \ac{DBScan}, \ac{VDBScan}, and \ac{OPTICS}.
