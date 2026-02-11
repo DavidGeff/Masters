@@ -52,7 +52,16 @@ With the data available from the Avia, it is only possible to estimate changes i
 \subsection{De-noising}
 \label{subsec:ch6.section1.subsec2}
 
-When the Avia collects data in adverse environmental conditions (such as rain, snow, and fog), the beam emitted by the sensor may interact with these weather conditions, leading to poor quality and/or noisy data. Points created by interactions with adverse weather conditions almost always have a very low return intensity (less than 4 out of 255) as the targets they interact with (snow or rain) are incredibly small and far less reflective than the intended target scene. In the case of data collected from the \ac{SCALE} Winter 2022 Cruise, snowy conditions resulted in unwanted returns caused by snowflakes in the area immediately in front of the sensor's minimum detection range. These unwanted returns create difficulties when trying to process the data further as well as reducing the number of usable points per frame.
+%----------------------------------------------------
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{figs/ch6/noise_eg.png}
+    \caption{\textbf{Example of Environmental Noise in Point Cloud Data.}}{The sea ice field can be seen in the foreground of the scene, while the noise caused by environmental conditions can be seen as the cone of points in the background. The straight line of points to the left of the noise cone is part of the ship's deck and railings.}
+    \label{fig:noise_eg}
+\end{figure}
+%----------------------------------------------------
+
+When the Avia collects data in adverse environmental conditions (such as rain, snow, and fog), the beam emitted by the sensor may interact with these weather conditions, leading to poor quality and/or noisy data. Points created by interactions with adverse weather conditions almost always have a very low return intensity (less than 4 out of 255) as the targets they interact with (snow or rain) are incredibly small and far less reflective than the intended target scene. In the case of data collected from the \ac{SCALE} Winter 2022 Cruise, snowy conditions resulted in unwanted returns caused by snowflakes in the area immediately in front of the sensor's minimum detection range, as seen in Figure \ref{fig:noise_eg}. These unwanted returns create difficulties when trying to process the data further as well as reducing the number of usable points per frame.
 
 %----------------------------------------------------
 \subsection{Wave Parameter Estimation}
