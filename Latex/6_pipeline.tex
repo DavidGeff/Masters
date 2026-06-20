@@ -61,7 +61,7 @@ With the data available from the Avia, it is only possible to estimate changes i
 \end{figure}
 %----------------------------------------------------
 
-When the Avia collects data in adverse environmental conditions (such as rain, snow, and fog), the beam emitted by the sensor may interact with these weather conditions, leading to poor quality and/or noisy data. Points created by interactions with adverse weather conditions almost always have a very low return intensity (less than 4 out of 255) as the targets they interact with (snow or rain) are incredibly small and far less reflective than the intended target scene. In the case of data collected from the \ac{SCALE} Winter 2022 Cruise, snowy conditions resulted in unwanted returns caused by snowflakes in the area immediately in front of the sensor's minimum detection range, as seen in Figure \ref{fig:noise_eg}. These unwanted returns create difficulties when trying to process the data further as well as reducing the number of usable points per frame.
+When the Avia collects data in adverse environmental conditions (such as rain, snow, and fog), the beam emitted by the sensor may interact with these weather conditions, leading to poor quality and/or noisy data. Points created by interactions with adverse weather conditions (in the \ac{SCALE} datasets these conditions were usually snow, rain or ocean spray) almost always have a very low return intensity (less than 4 out of 255) as the targets they interact with (water droplets in the atmosphere) are incredibly small and far less reflective than the intended target scene. In the case of data collected from the \ac{SCALE} Winter 2022 Cruise, snowy conditions resulted in unwanted returns caused by snowflakes in the area immediately in front of the sensor's minimum detection range, as seen in Figure \ref{fig:noise_eg}. These unwanted returns create difficulties when trying to process the data further as well as reducing the number of usable points per frame.
 
 %----------------------------------------------------
 \subsection{Wave Parameter Estimation}
@@ -289,7 +289,7 @@ Using the MATLAB \emph{curveFitter} tool, a sinusoidal model (equation \ref{eqn:
 \end{equation}
 %----------------------------------------------------
 
-\textit{y} is the wave height at time \textit{t}, \textit{A} is  amplitude, \textit{$\omega$} is the  angular frequency and \textit{c} is the phase shift. For this investigation, only amplitude and angular frequency (\textit{A} and \textit{$\omega$}) are of interest. Phase shift is not of interest as it merely represents the starting point of the wave and does not affect the overall wave behaviour.
+\textit{y} is the wave height at time \textit{t}, \textit{A} is  amplitude, \textit{2A} is  wave height, \textit{$\omega$} is the  angular frequency and \textit{c} is the phase shift. For this investigation, only amplitude and angular frequency (\textit{A} and \textit{$\omega$}) are of interest. Phase shift is not of interest as it merely represents the starting point of the wave and does not affect the overall wave behaviour.
 
 To model the waves from point cloud data, a spatial sinusoidal plane model (equation \ref{eqn:avia_sin}) was fitted to each frame in the point cloud using \ac{RANSAC}. Each frame fit was run for 300 iterations at an inlier tolerance of 0.02 m (2 cm). The iteration count was selected based on compute time constraints (compute time for one frame at 300 iterations was approximately 1 minute and 30 seconds, a test consisting of 3000 frames would take over 20 minutes), while the inlier tolerance was selected based on a combination of the expected wave amplitudes and the sensor's range accuracy. A function was created that accepted a point cloud frame, the number of iterations and the inlier tolerance as inputs. Six random points from the point cloud frame were selected and the sinusoidal plane model (Equation \ref{eqn:avia_sin}) was fitted to these points, using the MATLAB \emph{lsqcurvefit} function. The distance from each point in the point cloud frame to the model was calculated, and compared to the inlier tolerance to determine if the point was an inlier or outlier. The number of inliers was counted and stored, and this process was repeated for the set number of iterations. If a model fit produced more inliers than the previous best fit, then it was stored as the new best fit for that frame. After all iterations were completed, the best fit model parameters (A through F) for that frame were returned and stored in an array along with the indexes of the inliers for that fit and total number of inliers. This process was repeated for every frame in the test dataset, producing an array containing the best fit model parameters (A through F) for each frame, which were then used to calculate wave amplitude and period estimates for each frame.
 
@@ -299,13 +299,13 @@ To model the waves from point cloud data, a spatial sinusoidal plane model (equa
 \end{equation}
 %----------------------------------------------------
 
-\textit{x}, \textit{y} and \textit{z} are coordinates of the wave relative to the Avia's origin. \textit{A} is the amplitude, \textit{B} is the wave number, \textit{C} is the phase shift and \textit{D} and \textit{E} are plane slopes and \textit{F} is an offset. For this investigation only amplitude and wave number (\textit{A} and \textit{B}) are of interest.
+\textit{x}, \textit{y} and \textit{z} are coordinates of the wave relative to the Avia's origin. \textit{A} is the amplitude, \textit{2A} is  wave height, \textit{B} is the wave number, \textit{C} is the phase shift and \textit{D} and \textit{E} are plane slopes and \textit{F} is an offset. For this investigation only amplitude and wave number (\textit{A} and \textit{B}) are of interest.
 
-As the waves generated in the wave tank were waves in deep water, (water depth greater than half the wavelength), wave number (\textit{k}) is related to angular velocity (\textit{$\omega$}) through the dispersion relation (\cite{dingemansWaterWavePropagation1997}) given in equation \ref{eqn:dispersion}.
+As the waves generated in the wave tank were waves in intermediate depthwater, (water depth greater than a twentieth of the largest generated wavelength, but less than half that of the largest generated wavelength), wave number (\textit{k}) is related to angular velocity (\textit{$\omega$}) through the dispersion relation (\cite{dingemansWaterWavePropagation1997}) given in equation \ref{eqn:dispersion}, where \textit{g} is the acceleration due to gravity and \textit{h} is the water depth.
 
 %----------------------------------------------------
 \begin{equation} \label{eqn:dispersion}
-    \omega = \sqrt{gk}
+    \omega = \sqrt{gk*tanh(kh)}
 \end{equation}
 %----------------------------------------------------
 

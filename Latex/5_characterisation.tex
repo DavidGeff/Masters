@@ -1,7 +1,7 @@
 %****************************************************
 %	CHAPTER 5 - SENSOR CHARACTERISATION
 %****************************************************
-\chapter{Sensor Characterisation}
+\chapter{Pre-processing and Sensor Characterisation}
 \label{ch:characterisation}
 %====================================================
 
@@ -35,6 +35,8 @@ The simulated motion data collected using the Stewart platform and motion captur
 
 During the tests, the Stewart platform was rotated around the vertical axis (Avia z-axis) relative to the motion capture system. As this test was focused on attitude estimation and was not concerned with translational motion, the Stewart platform's offset from the motion capture system's origin was inconsequential. This misalignment was corrected by applying an Euler angle rotation to the motion capture data to align it with the Avia's \ac{IMU} data. The rotation angles were determined by manually inspecting the motion capture data, and identifying the angle of rotation required to minimize the off-axis motion (motion in the roll axis when the Stewart platform was pitching and vice versa). This process was carried out for both tests, and for the first test (10° sweeps) the rotation was determined to be -42° and for the second test (5° sweeps) the rotation was determined to be -39°.
 
+This pre-processing could be automated in future work by initially aligning the Avia and motion capture system's coordinate frames before data collection, and by using a common trigger signal to start data collection on both systems simultaneously, thus eliminating the need for manual time synchronisation and frame alignment.
+
 For this experiment, the point cloud data was not used and thus no pre-processing was required.
 
 %----------------------------------------------------
@@ -60,9 +62,9 @@ Almost all the data collected during the \ac{SCALE} Winter 2022 Cruise required 
 
 Before analysing the outputs of the main processing pipeline, it is important to understand the characteristics and limitations of the Livox Avia sensor. This section details the investigations carried out to determine the strengths and weaknesses of the Avia in the context of observing sea ice in the \ac{MIZ} from a moving platform.
 
-The Avia was designed primarily for use in urban environments for mapping, navigation and surveying applications (\cite{AviaLiDARSensor}). This means that the sensor has been optimised for capturing static scenes from a stable observation platform, aimed perpendicular to the target scene. This is almost the exact opposite of the observation conditions in the \ac{MIZ}, where the target scene (sea ice field) is highly dynamic, the observation platform is never fully stable, and the sensor is mounted at an angle to the target scene. Therefore, it is important to understand how these differences in observation conditions affect the quality of the captured data.
-
 The primary areas of investigation were the accuracy of the captured scene when the sensor is not perpendicular to the target scene, leading to shadowing and decreased point density, the minimum number of frames required to obtain accurate recreations of the target scene and the impact of the sensor's beam divergence. The outcomes of these investigations informed the final design of the data processing pipeline.
+
+The Avia was designed primarily for use in urban environments for mapping, navigation and surveying applications (\cite{AviaLiDARSensor}). This means that the sensor has been optimised for capturing static scenes from a stable observation platform, aimed perpendicular to the target scene. This is almost the exact opposite of the observation conditions in the \ac{MIZ}, where the target scene (sea ice field) is highly dynamic, the observation platform is never fully stable, and the sensor is mounted at an angle to the target scene. Therefore, it is important to understand how these differences in observation conditions affect the quality of the captured data.
 
 %----------------------------------------------------
 \subsection{Target Scene Reconstruction}

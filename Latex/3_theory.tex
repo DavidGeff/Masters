@@ -9,7 +9,7 @@
 \label{sec:ch3:section1}
 %----------------------------------------------------
 
-\ac{LiDAR} is a relatively new remote sensing method, but its use across many fields has increased rapidly in recent years. \ac{LiDAR} offers several advantages over traditional remote sensing methods. As an active sensing system, it does not depend on external illumination, unlike visual methods such as telephoto or stereoscopic cameras. \ac{LiDAR} is also more robust to issues like poor focus, lens flare and overexposure that commonly affect optical cameras. This is due to \ac{LiDAR} sensors lacking components such as lenses and imaging sensors, which produce these effects, that optical cameras require. Additionally, certain \ac{LiDAR} sensors can penetrate vegetation, enabling ground surface mapping beneath plant cover (\cite{wangChallengesOpportunitiesLidar2021}).
+\ac{LiDAR} is one of the youngest remote sensing methods, and in recent years the technology has matured greatly, increasing accessibility and allowing for its use in a wider range of applications. \ac{LiDAR} offers several advantages over traditional remote sensing methods. As an active sensing system, it does not depend on external illumination, unlike visual methods such as telephoto or stereoscopic cameras. \ac{LiDAR} is also more robust to issues like poor focus, lens flare and overexposure that commonly affect optical cameras. This is due to \ac{LiDAR} sensors lacking components such as lenses and imaging sensors, which produce these effects, that optical cameras require. Additionally, certain \ac{LiDAR} sensors can penetrate vegetation, enabling ground surface mapping beneath plant cover (\cite{wangChallengesOpportunitiesLidar2021}).
 
 Compared to \ac{Radar}, \ac{LiDAR} typically has superior mapping precision and target resolution, allowing more accurate reproductions of the target and the surrounding environment. \ac{LiDAR} makes use of electromagnetic radiation with shorter wavelengths than those typically used in \ac{Radar}, allowing for finer detail to be resolved in the collected \ac{LiDAR} data. \ac{Radar} data also often requires more complex processing and skilled individuals to extract useful information, whereas \ac{LiDAR} data is usually more straightforward to interpret (\cite{agrawalComparativeAssesmentRemote2019}).
 
@@ -85,7 +85,7 @@ Some \ac{LiDAR} sensors are capable of measuring multiple returns from a single 
 %----------------------------------------------------
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\textwidth]{figs/ch3/multi_return.png}
+    \includegraphics[width=0.45\textwidth]{figs/ch3/multi_return.png}
     \caption{\textbf{Multiple Returns from a Single Pulse.}}{A single laser pulse emitted from a sensor can produce multiple returns if the pulse hits semi-transparent objects. Taken from \textcite{lefskyLidarRemoteSensing2002}.}
     \label{fig:multi_return}
 \end{figure}
@@ -103,7 +103,7 @@ The Avia has the ability to detect each point's return intensity. It records eac
 %----------------------------------------------------
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\textwidth]{figs/ch3/avia1.png}
+    \includegraphics[width=0.45\textwidth]{figs/ch3/avia1.png}
     \caption{\textbf{Livox Avia.}}{Taken from \textcite{AviaLiDARSensor}.}
     \label{fig:avia}
 \end{figure}
@@ -111,7 +111,7 @@ The Avia has the ability to detect each point's return intensity. It records eac
 
 The Livox Avia has a listed beam divergence of 0.28° x 0.03° along its vertical and horizontal planes. This results in the emitted beam, if falling on a target perfectly perpendicular to the axis of propagation at a distance of 50 meters, having the form of an ellipse with the approximate dimensions of 244.35 mm in height and 26.18 mm in width.
 
-The Avia has two built-in scanning patterns, a repetitive and a non-repetitive pattern. The repetitive scanning pattern scans the target area in a narrow horizontal band, providing a more uniform point density per frame when compared to the non-repetitive mode, see Figure \ref{fig:rep}. The non-repetitive scanning pattern scans the target with a rosette-shaped pattern which rotates as it scans, covering areas not scanned in previous frames, see Figure \ref{fig:non_rep}. This scanning method results in a non-uniform distribution of points across its \ac{FOV}. There is a high density of points in the centre of the \ac{FOV}, with the number of points reducing outwards to the edges of the sensor's \ac{FOV}.
+The Avia has two built-in scanning patterns, a repetitive and a non-repetitive pattern. The repetitive scanning pattern scans the target area in a narrow horizontal band, providing a more uniform point density per frame when compared to the non-repetitive mode, see Figure \ref{fig:rep}. The non-repetitive scanning pattern scans the target with a rosette-shaped pattern which rotates as it scans, covering areas not scanned in previous frames, see Figure \ref{fig:non_rep}. This scanning method results in a non-uniform distribution of points across its \ac{FOV}. There is a high density of points in the centre of the \ac{FOV}, with the number of points reducing outwards to the edges of the sensor's \ac{FOV}. Each scanning pattern produces point cloud frames at a rate of 10 Hz, with each frame containing 24,000 points in single return mode. A complete frame of the repetitive scanning pattern resembles the third frame of Figure \ref{fig:rep}, while a complete frame of the non-repetitive scanning pattern resembles the second frame of Figure \ref{fig:non_rep}. 
 
 %----------------------------------------------------
 \begin{figure}[H]
@@ -148,7 +148,7 @@ The Avia has two built-in scanning patterns, a repetitive and a non-repetitive p
         \centering
         \includegraphics[width=1\linewidth]{figs/ch3/norep2.jpg} % first figure itself
     \end{minipage}\hfill
-    \caption{\textbf{Livox Avia Non-Repetitive Scanning Pattern.}}{the Avia's non-repetitive scanning pattern produces a point cloud with a circular \ac{FOV} and non-uniform point density, with a high density of points in the centre of the \ac{FOV} and the number of points reducing outwards to the edges of the sensor's \ac{FOV}. Taken from \textcite{AviaLiDARSensor}.}
+    \caption{\textbf{Livox Avia Non-Repetitive Scanning Pattern.}}{The Avia's non-repetitive scanning pattern produces a point cloud with a circular \ac{FOV} and non-uniform point density, with a high density of points in the centre of the \ac{FOV} and the number of points reducing outwards to the edges of the sensor's \ac{FOV}. Taken from \textcite{AviaLiDARSensor}.}
     \label{fig:non_rep}
 \end{figure}
 %----------------------------------------------------
@@ -212,7 +212,7 @@ One of the most common methods for plane fitting is through the application of t
 \subsection{Point Clustering}
 \label{subsec:ch3.section3.subsec2}
 
-As a human, organising and sorting large amounts of objects or data into groups is often a trivial task that requires minimal mental exertion but significant time to complete. Automating this process can greatly reduce the time required to process a dataset, if implemented well. Selecting an algorithm or method will determine the accuracy, time and computing costs of automating the clustering process. Different methods are suited for use depending on properties of the data to be clustered (properties such as data dimensions, number of data points and the relationship between individual data points), knowledge of the final classes the data will be clustered into and computational restraints (\cite{xuComprehensiveSurveyClustering2015}).
+As a human, organising and sorting large amounts of objects or data into groups is often a trivial task that requires minimal mental exertion but significant time to complete. Automating this process can greatly reduce the time required to process a dataset, if implemented well. In the context of this investigation, clustering will be used to group points beloning to individual sea ice floes.  Selecting an algorithm or method will determine the accuracy, time and computing costs of automating the clustering process. Different methods are suited for use depending on properties of the data to be clustered (properties such as data dimensions, number of data points and the relationship between individual data points), knowledge of the final classes the data will be clustered into and computational restraints (\cite{xuComprehensiveSurveyClustering2015}).
 
 Clustering algorithms can be categorised based on their underlying structure, some of the most common categories are \emph{Partitional}, \emph{Hierarchical}, \emph{Density-based}, \emph{Spectral}, \emph{Subspace-based} and \emph{Model-based} (\cite{rodriguezClusteringAlgorithmsComparative2019}).
 
@@ -264,7 +264,7 @@ A common method for determining the orientation of two point clouds is through t
 
 The Kalman Filter has become the most widely used method for state estimation in various fields including navigation, control systems, and signal processing. It is a recursive algorithm that estimates the state of a dynamic system from a series of noisy measurements. Once it has been initialised, the Kalman Filter operates in two main steps: prediction and update. In the prediction step, the filter uses a mathematical model of the system to predict the next state based on the current state estimate and control inputs. In the update step, the filter makes use of new measurements to correct the predicted state, accounting for the uncertainties in both the model and the measurements (\cite{kimIntroductionKalmanFilter2019}). The method is named after Rudolph E. Kálmán, the engineer and mathematician who first described it in his now famous paper, \textcite{kalmanNewApproachLinear1960}.
 
-One of the most common applications of the Kalman filter is in navigation systems, where it can be used to estimate an object's position, velocity, or orientation based on the sensor measurements available. For example, in an inertial navigation system, a Kalman filter can combine accelerometer and gyroscope measurements to estimate the position, orientation, and velocity of a vehicle. The more sensor measurements available to the filter, the more accurate the state estimations will be. The addition of \ac{GPS} measurements to an inertial navigation system will greatly improve the accuracy of the state estimates (\cite{grewalApplicationsKalmanFiltering2010}).
+One of the most common applications of the Kalman filter is in navigation systems, where it can be used to estimate an object's position, velocity, or orientation based on the sensor measurements available. For example, in an inertial navigation system, a Kalman filter can combine accelerometer and gyroscope measurements to estimate the position, orientation, and velocity of a vehicle. The more sensor measurements available to the filter, the more accurate the state estimations will be. The addition of \ac{GPS} measurements to an inertial navigation system will greatly improve the accuracy of the state estimates (\cite{grewalApplicationsKalmanFiltering2010}). A Kalman filter may be useful in this investigation in the pre-processing of data collected in the \ac{MIZ}, as the observation platform was a mobile vessel. 
 
 %----------------------------------------------------
 \subsection{Attitude Estimation using Kalman Filters}

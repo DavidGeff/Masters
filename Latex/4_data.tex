@@ -15,23 +15,109 @@ All \ac{LiDAR} data collected for this investigation used one of two apparatus. 
 In each case, the Avia's non-repetitive scanning pattern was used for data capture as it provides a wider \ac{FOV} than the non-repetitive scanning pattern and captures more unique data points. The sensor was configured to operate exclusively in single return mode, as the target environment is not expected to produce useful multiple returns. Data was captured at the sensor's default rate of 10 Hz for the point cloud frames and 200 Hz for the \ac{IMU} data.
 
 %====================================================
-\section{Characterisation and Experimental Data Collection}
+\section{Ice Field Data Collection}
 \label{sec:ch4.section2}
+%----------------------------------------------------
+
+Two sets of ice field data, one simulated and one in-situ, were collected using the Livox Avia sensor. The simulated ice field data was collected at the Aalto University Ice and Wave Tank in Finland, while the in-situ ice field data was collected during the \ac{SCALE} Winter 2022 Cruise aboard the \textit{S.A. Agulhas II}. 
+
+%----------------------------------------------------
+\subsection{Aalto University Ice and Wave Tank}
+\label{subsec:ch4.section2.subsec1}
+
+Aalto University operates a wave and ice tank 40 m x 40 m and 2.8 m deep. The tank is equipped with 16 wedge-type plunger wave generators capable of producing regular and irregular waves (\cite{AaltoIceWave2024}). In addition to wave generators, the tank is equipped with a cooling system and sprayers for producing model-scale ice. The tank is used for a variety of research activities, including investigations into wave-ice interactions, ice mechanics, and coastal engineering.
+
+%----------------------------------------------------
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.65\textwidth]{figs/ch4/Aalto_Livox.jpeg}
+    \caption{\textbf{Livox Avia at Aalto University Ice and Wave Tank.}}{Image credits: R.A. Verrinder.}
+    \label{fig:aalto}
+\end{figure}
+%----------------------------------------------------
+
+In November 2023, a fellow Masters student (\cite{nairThreeDimensionalComputational2024}) ran experiments in the tank to simulate the motion of an individual pancake ice floe using a scale model. In addition to the sensors selected by Nair for his experiments, point cloud data from these tests were collected using the Livox Avia.
+The Avia was mounted on a mobile gantry above the tank, angled to face down towards the ice and water, in the direction of the wave generators, and recorded point cloud reconstructions of each of the tests described below. Waves were generated and briefly propagated through open water before reaching the ice.  A capacitive probe in the tank recorded the wave height over time, and was placed 5 meters in front of the wave generators. The wave data was sampled at a rate of 300 Hz.
+
+A uniform sheet of ice, approximately 40 mm thick, was created in the tank before the tests. Throughout the experiment, the ice sheet progressively broke up into individual ice floes due to the generated wave action. No additional ice was created during the experiment.
+
+Six individual tests were carried out during the experiment, with varying wave heights and periods. For all tests, sinusoidal waves were generated at two periods, with three wave heights per period, see Table \ref{tab:tank_tests}. During these tests there was no time synchronisation between the wave probe logging and Livox Avia.
+
+%----------------------------------------------------
+\begin{table}[H]
+\centering
+\caption{Wave Tank Test Parameters.}
+\begin{tabular}{|l|r|r|r|}
+\hline
+\textbf{Test} & \multicolumn{1}{l|}{\textbf{Amplitude (mm)}} & \multicolumn{1}{l|}{\textbf{Period (s)}} & \multicolumn{1}{l|}{\textbf{Wavelength (m)}} \\ \hline
+1 & 25   & 1.6 & 3   \\ \hline
+2 & 37.5 & 1.6 & 3   \\ \hline
+3 & 50   & 1.6 & 3   \\ \hline
+4 & 25   & 2   & 6.2 \\ \hline
+5 & 37.5 & 2   & 6.2 \\ \hline
+6 & 50   & 2   & 6.2 \\ \hline
+\end{tabular}
+\label{tab:tank_tests}
+\end{table}
+%----------------------------------------------------
+
+During the tests, strict constraints were placed on the waves generated and their behaviours. The generated waves were all sine waves in intermediate depthwater, as per the definition given by \textcite{benitzOceanHydrodynamicsEngineers} (the water depth is greater than a twentieth of the largest generated wavelength, but less than half that of the largest generated wavelength. 0.31 m $<$ 2.8 m $<$ 3.1 m). The wave parameters were held constant during individual tests, and the waves were propagated straight down the tank, towards the Avia. 
+
+%----------------------------------------------------
+\subsection{SCALE Winter 2022 Cruise}
+\label{subsec:ch4.section2.subsec2}
+
+The \ac{SCALE} Winter 2022 Cruise was a research cruise aboard then Research Vessel \textit{S.A. Agulhas II} that took place from the 11th to the 31st of July 2022 (\cite{vichiSCALEWIN22CruiseReport2023}). Amongst other data collection and research activities taking place on the vessel, 31 \ac{LiDAR} scans of the open ocean and ice fields in the \ac{MIZ} were taken, between the 15th and the 27th of July. Of these 31 scans, 12 were of scenes containing ice fields or pancake ice floes. The remaining 19 scans were either setup scans or of scenes of open water without ice. All scans of ice were taken between 58° and 59°35' South.
+
+%----------------------------------------------------
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\textwidth]{figs/ch4/lidar.jpg}
+    \caption{\textbf{Livox Avia above Pancake Ice.}}{Image credits: A. Spirakis.}
+    \label{fig:lidar}
+\end{figure}
+%----------------------------------------------------
+
+Data were collected from the port side 7th floor deck, at a height of approximately 16-17 m above the waterline, with the sensor angled downwards towards the ocean at an angle of approximately 20° from the horizontal, see Figure \ref{fig:setup}. A video camera was mounted several decks above the Avia, facing down towards the ocean, captured video footage continuously throughout the voyage (\cite{passerottiSCALEWIN22SAAgulhas,passerottiSCALEWIN22SAAgulhasa,passerottiSCALEWIN22SAAgulhasb}). Although the camera was primarily used for a separate research activity and did not have the same \ac{FOV} as the Avia, the footage provided useful visual context for the \ac{LiDAR} data collected.
+
+%----------------------------------------------------
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\textwidth]{figs/ch4/setup.png}
+    \caption{\textbf{Data Collection Setup.}}{The Livox Avia was mounted on the port side 7th floor deck of the \textit{S.A. Agulhas II}, approximately 16-17 m above the waterline, angled downwards to observe the ocean surface. Image credits: A. Spirakis.}
+    \label{fig:setup}
+\end{figure}
+%----------------------------------------------------
+
+%----------------------------------------------------
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\textwidth]{figs/ch4/map.png}
+    \caption{\textbf{SCALE Winter 2022 Cruise Track.}}{Taken from \textcite{vichiSCALEWIN22CruiseTrack2023}}
+    \label{fig:map}
+\end{figure}
+%----------------------------------------------------
+
+\newpage
+
+%====================================================
+\section{Characterisation and Experimental Data Collection}
+\label{sec:ch4.section3}
 %----------------------------------------------------
 
 The following sections detail experiments conducted to characterise the Livox Avia sensor's behaviours under controlled conditions that simulate some conditions expected during in-situ data collection. While collecting data aboard a research vessel in the \ac{MIZ}, the sensor will be subjected to motion from the vessel, taking the form of low amplitude and frequency pitch and roll motion, with limited yaw and translational motion. It is possible that the vessel may be steaming (moving forward) during data collection, but this is not guaranteed. During data collection, the sensor will not be observing the target scene perpendicularly, but rather at an angle of depression from a height above the waterline. This uncommon observation geometry is likely to have a negative impact on the quality of the point cloud data collected, as the laser beams will strike the target surface at a shallow angle, increasing the likelihood of shadowing and reducing the effective point density in the target scene.
 
-The first experiment detailed in Section \ref{subsec:ch4.section2.subsec1} investigates the sensor's ability to resolve known geometric shapes at known distances and angles, from a stationary platform. 
+The first experiment detailed in Section \ref{subsec:ch4.section3.subsec1} investigates the sensor's ability to resolve known geometric shapes at known distances and angles, from a stationary platform. 
 
-The second experiment detailed in Section \ref{subsec:ch4.section2.subsec2} was conducted to collect data from the Avia's \ac{IMU} while the sensor was subjected to known motion. These data were used to investigate the feasibility of compensating for the motion of a moving observation platform.
+The second experiment detailed in Section \ref{subsec:ch4.section3.subsec2} was conducted to collect data from the Avia's \ac{IMU} while the sensor was subjected to known motion. These data were used to investigate the feasibility of compensating for the motion of a moving observation platform.
 
 %----------------------------------------------------
 \subsection{Stationary Characterisation Experiment}
-\label{subsec:ch4.section2.subsec1}
+\label{subsec:ch4.section3.subsec1}
 
-To simulate target scene location, sensor position and point of view conditions similar to those that may be experienced when observing the ocean surface from a research vessel, such as the \textit{S.A. Agulhas II}, a field experiment was conducted using the Livox Avia. The experiment took place on the University of Cape Town's rugby field, using two large sheets of hardboard as target surfaces. These conditions were informed by the data collection conditions experienced during the \ac{SCALE} Winter 2022 cruise, detailed in Section \ref{subsec:ch4.section3.subsec2}.
+To simulate target scene location, sensor position and point of view conditions similar to those that may be experienced when observing the ocean surface from a research vessel, such as the \textit{S.A. Agulhas II}, a field experiment was conducted using the Livox Avia. The experiment took place on the University of Cape Town's rugby field, using two large sheets of hardboard as target surfaces. These conditions were informed by the data collection conditions experienced during the \ac{SCALE} Winter 2022 cruise, detailed in Section \ref{subsec:ch4.section2.subsec2}.
 
-The Avia was mounted on a tripod and placed on a terrace above the rugby field at a height of 9.1 metres above the ground, angled downwards at an angle of 16° from the horizontal, as seen in Figure \ref{fig:field_setup}. These dimensions and angles were selected to simulate the expected observation geometry when mounted on a research vessel, as informed by the data collection setup detailed in Section \ref{subsec:ch4.section3.subsec2}.
+The Avia was mounted on a tripod and placed on a terrace above the rugby field at a height of 9.1 metres above the ground, angled downwards at an angle of 16° from the horizontal, as seen in Figure \ref{fig:field_setup}. These dimensions and angles were selected to simulate the expected observation geometry when mounted on a research vessel, as informed by the data collection setup detailed in Section \ref{subsec:ch4.section2.subsec2}.
 
 %----------------------------------------------------
 \begin{figure}[H]
@@ -56,7 +142,7 @@ Two sheets of hardboard, 1220 x 1220 mm each, a similar in size to a small panca
 %----------------------------------------------------
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.95\textwidth]{figs/ch4/field_boards.JPG}
+    \includegraphics[width=0.92\textwidth]{figs/ch4/field_boards.JPG}
     \caption{\textbf{Target Boards.}}{Target A on the left, target B on the right.}
     \label{fig:boards}
 \end{figure}
@@ -67,13 +153,13 @@ Two sheets of hardboard, 1220 x 1220 mm each, a similar in size to a small panca
 \centering
 \begin{minipage}{.5\textwidth}
   \centering
-  \includegraphics[width=0.95\linewidth]{figs/ch4/board_c.jpg}
+  \includegraphics[width=0.85\linewidth]{figs/ch4/board_c.jpg}
   \caption{\textbf{Target C.}}
   \label{fig:target_c}
 \end{minipage}%
 \begin{minipage}{.5\textwidth}
   \centering
-  \includegraphics[width=0.95\linewidth]{figs/ch4/board_d.jpg}
+  \includegraphics[width=0.85\linewidth]{figs/ch4/board_d.jpg}
   \caption{\textbf{Target D.}}
   \label{fig:target_d}
 \end{minipage}
@@ -84,9 +170,9 @@ The Avia collected a minimum of 75 point cloud frames of each target.
 
 %----------------------------------------------------
 \subsection{Simulated Motion Experiment}
-\label{subsec:ch4.section2.subsec2}
+\label{subsec:ch4.section3.subsec2}
 
-To investigate the feasibility of using the Avia's \ac{IMU} data to compensate for the motion of a moving observation platform, an experiment was conducted to collect \ac{IMU} data from the Avia while it was subjected to known motion.
+To investigate the feasibility of using the Avia's \ac{IMU} data to compensate for the motion of a moving observation platform, an experiment was conducted to collect \ac{IMU} data from the Avia while it was subjected to known motion routines. This experiment subjected the Avia to a series of pre-defined motion routines, while both the Avia's \ac{IMU} data and the ground-truth motion data were recorded. A reconstrcution of the motion routines derived from the Avia's \ac{IMU} data can then be compared to the ground-truth motion data to determine the feasibility of using this reconstruction to compensate for the motion of a moving observation platform. 
 
 To apply known motion to the Avia, a Stewart platform was used to manipulate the sensor. A Stewart platform is a device that has the ability to manipulate its target platform in 6 degrees, namely linear translations along its x, y and z axes and rotation around its the x, y, and z axes (\cite{stewartPlatformSixDegrees1965}). The Stewart platform used for this experiment was designed and built by a former student from the University of Cape Town (\cite{clarkStewart2018}). The platform had been used sporadically since its construction in 2018, and had undergone many repairs and part replacements, resulting in irregular performance that did not meet the original design specifications. To overcome this limitation, a motion capture system was employed to record ground-truth motion data for comparison and validation.
 
@@ -137,92 +223,7 @@ The Stewart platform was set to carry out two pre-defined motion routines of dif
 
 The frequency of each rotation was set to vary over time, following a chirp function, beginning at a frequency of 0.005 Hz and ending at a frequency of 0.05 Hz over a duration of 60 seconds. The first routine was carried out with a rotation amplitude of 10°, while the second routine was carried out with a rotation amplitude of 5°.
 
-The amplitude and frequency parameters for the motion routines were selected to simulate the expected rotational motion of a research vessel at sea. The \ac{IMU} data collected during the \ac{SCALE} Winter 2022 Cruise, detailed in Section \ref{subsec:ch4.section3.subsec2}, was inspected and informed the selection of these parameters. During the cruise, the Avia was mounted on the port side of the vessel several decks above the waterline, several meters from the stern. The vessel experienced moderate sea conditions during data collection, as no data was collected during poor weather. The resulting motion of the Avia during data collection was expected to be predominantly low amplitude and frequency pitch and roll motion, with a limited amount of yaw and translational motion.
-
-\newpage
-%====================================================
-\section{Ice Field Data Collection}
-\label{sec:ch4.section3}
-%----------------------------------------------------
-
-Two sets of ice field data, one simulated and one in-situ, were collected using the Livox Avia sensor. The simulated ice field data was collected at the Aalto University Ice and Wave Tank in Finland, while the in-situ ice field data was collected during the \ac{SCALE} Winter 2022 Cruise aboard the \textit{S.A. Agulhas II}. 
-
-%----------------------------------------------------
-\subsection{Aalto University Ice and Wave Tank}
-\label{subsec:ch4.section3.subsec1}
-
-Aalto University operates a wave and ice tank 40 m x 40 m and 2.8 m deep. The tank is equipped with 16 wedge-type plunger wave generators capable of producing regular and irregular waves (\cite{AaltoIceWave2024}). In addition to wave generators, the tank is equipped with a cooling system and sprayers for producing model-scale ice. The tank is used for a variety of research activities, including investigations into wave-ice interactions, ice mechanics, and coastal engineering.
-
-%----------------------------------------------------
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.9\textwidth]{figs/ch4/Aalto_Livox.jpeg}
-    \caption{\textbf{Livox Avia at Aalto University Ice and Wave Tank.}}{Image credits: R.A. Verrinder.}
-    \label{fig:aalto}
-\end{figure}
-%----------------------------------------------------
-
-In November 2023, a fellow Masters student (\cite{nairThreeDimensionalComputational2024}) ran experiments in the tank to simulate the motion of an individual pancake ice floe using a scale model. In addition to the sensors selected by Nair for his experiments, point cloud data from these tests were collected using the Avia.
-The Avia was mounted on a mobile gantry above the tank, angled to face down towards the ice and water, in the direction of the wave generators. Waves were generated and briefly propagated through open water before reaching the ice.  A capacitive probe in the tank recorded the wave height over time, and was placed 5 meters in front of the wave generators. The wave data was sampled at a rate of 300 Hz.
-
-A uniform sheet of ice, approximately 40 mm thick, was created in the tank before the tests. Throughout the experiment, the ice sheet progressively broke up into individual ice floes due to the generated wave action. No additional ice was created during the experiment.
-
-Six individual tests were carried out during the experiment, with varying wave heights and periods. For all tests, sinusoidal waves were generated at two periods, with three wave heights per period, see Table \ref{tab:tank_tests}. During these tests there was no time synchronisation between the wave probe logging and Livox Avia.
-
-%----------------------------------------------------
-\begin{table}[H]
-\centering
-\caption{Wave Tank Test Parameters.}
-\begin{tabular}{|l|r|r|}
-\hline
-\textbf{Test} & \multicolumn{1}{l|}{\textbf{Amplitude (mm)}} & \multicolumn{1}{l|}{\textbf{Period (s)}} \\ \hline
-1 & 25   & 1.6 \\ \hline
-2 & 37.5 & 1.6 \\ \hline
-3 & 50   & 1.6 \\ \hline
-4 & 25   & 2   \\ \hline
-5 & 37.5 & 2   \\ \hline
-6 & 50   & 2   \\ \hline
-\end{tabular}
-\label{tab:tank_tests}
-\end{table}
-%----------------------------------------------------
-
-During the tests, strict constraints were placed on the waves generated and their behaviours. The generated waves were all sine waves in deep water (the water depth is greater than half the largest generated wavelength, 2.8 m $>$ 2 m). The wave parameters were held constant during individual tests, and the waves were propagated straight down the tank, towards the Avia. 
-
-%----------------------------------------------------
-\subsection{SCALE Winter 2022 Cruise}
-\label{subsec:ch4.section3.subsec2}
-
-The \ac{SCALE} Winter 2022 Cruise was a research cruise aboard then Research Vessel \textit{S.A. Agulhas II} that took place from the 11th to the 31st of July 2022 (\cite{vichiSCALEWIN22CruiseReport2023}). Amongst other data collection and research activities taking place on the vessel, 31 \ac{LiDAR} scans of the open ocean and ice fields in the \ac{MIZ} were taken, between the 15th and the 27th of July. Of these 31 scans, 12 were of scenes containing ice fields or pancake ice floes. The remaining 19 scans were either setup scans or of scenes of open water without ice. All scans of ice were taken between 58° and 59°35' South.
-
-%----------------------------------------------------
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.8\textwidth]{figs/ch4/lidar.jpg}
-    \caption{\textbf{Livox Avia above Pancake Ice.}}{Image credits: A. Spirakis.}
-    \label{fig:lidar}
-\end{figure}
-%----------------------------------------------------
-
-Data were collected from the port side 7th floor deck, at a height of approximately 16-17 m above the waterline, with the sensor angled downwards towards the ocean at an angle of approximately 20° from the horizontal, see Figure \ref{fig:setup}. A video camera was mounted several decks above the Avia, facing down towards the ocean, captured video footage continuously throughout the voyage (\cite{passerottiSCALEWIN22SAAgulhas,passerottiSCALEWIN22SAAgulhasa,passerottiSCALEWIN22SAAgulhasb}). Although the camera was primarily used for a separate research activity and did not have the same \ac{FOV} as the Avia, the footage provided useful visual context for the \ac{LiDAR} data collected.
-
-%----------------------------------------------------
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.75\textwidth]{figs/ch4/setup.png}
-    \caption{\textbf{Data Collection Setup.}}{The Livox Avia was mounted on the port side 7th floor deck of the \textit{S.A. Agulhas II}, approximately 16-17 m above the waterline, angled downwards to observe the ocean surface. Image credits: A. Spirakis.}
-    \label{fig:setup}
-\end{figure}
-%----------------------------------------------------
-
-%----------------------------------------------------
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.75\textwidth]{figs/ch4/map.png}
-    \caption{\textbf{SCALE Winter 2022 Cruise Track.}}{Taken from \textcite{vichiSCALEWIN22CruiseTrack2023}}
-    \label{fig:map}
-\end{figure}
-%----------------------------------------------------
+The amplitude and frequency parameters for the motion routines were selected to simulate the expected rotational motion of a research vessel at sea. The \ac{IMU} data collected during the \ac{SCALE} Winter 2022 Cruise, detailed in Section \ref{subsec:ch4.section2.subsec2}, was inspected and informed the selection of these parameters. During the cruise, the Avia was mounted on the port side of the vessel several decks above the waterline, several meters from the stern. The vessel experienced moderate sea conditions during data collection, as no data was collected during poor weather. The resulting motion of the Avia during data collection was expected to be predominantly low amplitude and frequency pitch and roll motion, with a limited amount of yaw and translational motion.
 
 %====================================================
 \section{Summary}

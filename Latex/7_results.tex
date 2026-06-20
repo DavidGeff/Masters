@@ -4,7 +4,7 @@
 \chapter{Results}
 \label{ch:results}
 %====================================================
-\section{Sensor Characterisation}
+\section{Sensor Characterisation Results}
 \label{sec:ch7.section1}
 %----------------------------------------------------
 
@@ -12,7 +12,7 @@
 \subsection{Target Scene Reconstruction}
 \label{subsec:ch7.section1.subsec1}
 
-For each target, a single frame was inspected and the dimensions of the target were estimated where possible. This was achieved by visually identifying individual points that represented the extremities of the target in each axis, and measuring the distances between these points. The number of points in the frame, the overall accuracy of the target reconstruction and presence of undesirable artefacts such as shadowing and beam divergence effects were also noted. Subsequently, multiple frames were concatenated to create a denser point cloud of the target, and the dimensions were re-estimated. This process was repeated for a higher number of concatenated frames to observe the effect of increasing point density on the accuracy of the target reconstruction. The results for each target are detailed below. The target dimensions, as shown in Figure \ref{fig:target_dim}, were Height (H) = 180 mm, Length (L) = 1220 mm and Width (W) = 1130 mm. 
+For each target, (Target A and B having their axis of curvature perpendicular to the sensor's line of site, with taget A being convex and taget B being concave. Targets C and D's axis of curvature was parallel to the sensor's line of site, with target C being convex and target D being concave.) a single frame was inspected and the dimensions of the target were estimated where possible. This was achieved by visually identifying individual points that represented the extremities of the target in each axis, and measuring the distances between these points. The number of points in the frame, the overall accuracy of the target reconstruction and presence of undesirable artefacts such as shadowing and beam divergence effects were also noted. Subsequently, multiple frames were concatenated to create a denser point cloud of the target, and the dimensions were re-estimated. This process was repeated for a higher number of concatenated frames to observe the effect of increasing point density on the accuracy of the target reconstruction. The results for each target are detailed below. The target dimensions, as shown in Figure \ref{fig:target_dim}, were Height (H) = 180 mm, Length (L) = 1220 mm and Width (W) = 1130 mm. 
 
 %----------------------------------------------------
 \begin{figure}[H]
@@ -367,12 +367,12 @@ The mean wave magnitude and period were able to be determined with a high degree
   \multicolumn{1}{l|}{\textbf{Mean Wave Number (rad/m)}} &
   \multicolumn{1}{l|}{\textbf{Calculated Mean Period (s)}} &
   \multicolumn{1}{l|}{\textbf{Mean Inliers}} \\ \hline
-1 & 26.0053 & 1.5404 & 1.6185 & 80.79 \%  \\ \hline
-2 & 37.3767 & 1.5566 & 1.6093 & 75.81 \%  \\ \hline
-3 & 47.8268 & 1.5518 & 1.6119 & 72.28 \%  \\ \hline
-4 & 55.3504 & 1.0039 & 2.0037 & 67.33 \%  \\ \hline
-5 & 43.2641 & 1.0079 & 2.0001 & 69.15 \%  \\ \hline
-6 & 29.3343 & 1.0137 & 1.9944 & 72.06 \% \\ \hline
+1 & 26.0053 & 1.5404 & 1.6189 & 80.79 \%  \\ \hline
+2 & 37.3767 & 1.5566 & 1.6096 & 75.81 \%  \\ \hline
+3 & 47.8268 & 1.5518 & 1.6122 & 72.28 \%  \\ \hline
+4 & 55.3504 & 1.0039 & 2.0112 & 67.33 \%  \\ \hline
+5 & 43.2641 & 1.0079 & 2.0075 & 69.15 \%  \\ \hline
+6 & 29.3343 & 1.0137 & 2.0016 & 72.06 \% \\ \hline
 \end{tabular}%
 }
 \label{tab:RANSAC}
@@ -390,14 +390,14 @@ The mean wave magnitude and period were able to be determined with a high degree
 \end{minipage}%
 \begin{minipage}{.5\textwidth}
   \centering
-  \includegraphics[width=0.95\linewidth]{figs/ch7/ransac_period_truth.png}
+  \includegraphics[width=0.95\linewidth]{figs/ch7/ransac_period_truth0.png}
   \caption{\textbf{Estimated Period.}}
   \label{fig:period}
 \end{minipage}
 \end{figure}
 %----------------------------------------------------
 
-The wave parameters estimated from the \ac{LiDAR} point cloud data using the \ac{RANSAC} method, seen in Table \ref{tab:RANSAC}, provided mixed, but mostly positive results. All fitted \ac{RANSAC} models had over 65\% mean inliers and only two tests (four and five) has less than 72\% mean inliers. The calculated mean periods very closely matched the wave probe data (see Figure \ref{fig:period}), with the greatest difference being 0.0181 s in the first test. In all cases the estimated mean periods were greater than the probe data values.
+The wave parameters estimated from the \ac{LiDAR} point cloud data using the \ac{RANSAC} method, seen in Table \ref{tab:RANSAC}, provided mixed, but mostly positive results. All fitted \ac{RANSAC} models had over 65\% mean inliers and only two tests (four and five) has less than 72\% mean inliers. The calculated mean periods very closely matched the wave probe data (see Figure \ref{fig:period}), with the greatest difference being 0.0185 s in the first test. In all cases the estimated mean periods were greater than the probe data values.
 The estimated mean amplitudes matched the probe data results fairly well in the first three and last tests, with the greatest difference being 2.2406 mm in the second test. However, for the last fourth and fifth tests, the estimated mean amplitudes were significantly higher than the probe data values, with the fourth test value 14.4302 mm and fifth test value 9.0951 mm greater than their respective probe data values (see Figure \ref{fig:amp}).
 
 In every test, the higher the percentage of mean inliers in the model estimation, the closer the match between the estimated \ac{RANSAC} wave parameters and the probe data wave parameters.
