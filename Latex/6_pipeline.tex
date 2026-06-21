@@ -19,7 +19,7 @@
 \label{sec:ch6.section1}
 %----------------------------------------------------
 
-Based on the nature of the data collected (see Chapter \ref{ch:data_collection}), the \ac{LiDAR} processing tools available in MATLAB, and the objectives of this investigation, the following processing steps were selected to be evaluated as part of the proposed data processing pipeline:
+Based on the nature of the data collected (see Chapter \ref{ch:data_collection}), the \ac{LiDAR} processing tools available in MATLAB, and the objectives of this investigation, the following processing steps were selected to be evaluated as part of the proposed data processing pipeline (Figure \ref{fig:pipeline}):
 \begin{itemize}
     \item Motion Compensation
     \item De-noising
@@ -164,7 +164,7 @@ MATLAB's \ac{LiDAR} Toolbox has provision for a \emph{pointCloud} object which w
 \subsection{Motion Compensation}
 \label{sec:ch6.section3.subsec1}
 
-Two Kalman filters were implemented to estimate the attitude of the Avia during data collection. The filters output estimates of the sensor's roll and pitch (yaw cannot be reliably estimated from \ac{IMU} data). Using these angle estimates an inverse transform can be applied to the point cloud to 'stabilise' the data and compensate for the motion of the observation platform. As these Kalman filters only estimate changes in roll and pitch attitude, and not position, there will still be motion artefacts in the data due to translation and yaw of the observation platform. 
+Two Kalman filters were implemented to estimate the attitude of the Avia during data collection. The filters output estimates of the sensor's roll and pitch (yaw cannot be reliably estimated from \ac{IMU} data). Using these angle estimates an inverse transform can be applied to the point cloud to 'stabilise' the data and compensate for the motion of the observation platform, an overview of the process is shown in Figure \ref{fig:motion_compensation}. As these Kalman filters only estimate changes in roll and pitch attitude, and not position, there will still be motion artefacts in the data due to translation and yaw of the observation platform. 
 
 %----------------------------------------------------
 \begin{figure}[H]
@@ -250,7 +250,7 @@ Angle estimate residuals (the difference between the motion capture ground truth
 \subsection{De-noising}
 \label{sec:ch6.section3.subsec2}
 
-The return intensity of points can be used to remove or ignore unwanted points. A simple threshold filtering function can be constructed for de-noising data collected under snowy or other adverse conditions. To prevent valid points in the target scene with low return intensities from being discarded, a distance parameter was included in the threshold function that sets a minimum distance from the point cloud origin (the sensor aperture) that points are retained regardless of their intensity value.
+The return intensity of points can be used to remove or ignore unwanted points. A simple threshold filtering function can be constructed for de-noising data collected under snowy or other adverse conditions, the structure of which is shown in Figure \ref{fig:threshold_pipe}. To prevent valid points in the target scene with low return intensities from being discarded, a distance parameter was included in the threshold function that sets a minimum distance from the point cloud origin (the sensor aperture) that points are retained regardless of their intensity value.
 
 %----------------------------------------------------
 \begin{figure}[H]
@@ -277,7 +277,7 @@ The return intensity threshold was set to 1 out of 255 and the distance threshol
 \end{figure}
 %----------------------------------------------------
 
-The Aalto University wave and ice tank probe data can be used as ground truth for wave parameter estimates. Wave models were fitted to the two datasets (wave probe and Avia) and magnitude and period estimates derived from the Avia data were compared to those from the wave probe. As there was no time synchronisation between the Avia and wave probe, instantaneous wave parameters could not be compared. Instead, overall wave parameters (amplitude and frequency) for the duration of the tests were modelled and compared. The wave probe data consists of a list of wave height measurements over time, which can be modelled as a simple sinusoidal function. The point cloud data from the Avia is a spatial representation of the wave surface at a given time, which will require a more complex spatial sinusoidal plane model to be fitted to it.
+The Aalto University wave and ice tank probe data can be used as ground truth for wave parameter estimates. Wave models were fitted to the two datasets (wave probe and Avia) and magnitude and period estimates derived from the Avia data were compared to those from the wave probe, as represented in Figure \ref{fig:wave_est}. As there was no time synchronisation between the Avia and wave probe, instantaneous wave parameters could not be compared. Instead, overall wave parameters (amplitude and frequency) for the duration of the tests were modelled and compared. The wave probe data consists of a list of wave height measurements over time, which can be modelled as a simple sinusoidal function. The point cloud data from the Avia is a spatial representation of the wave surface at a given time, which will require a more complex spatial sinusoidal plane model to be fitted to it.
 
 The strict constraints on the wave behaviours allows for the wave models used to be greatly simplified. It can be assumed the waves will propagate uniformly across the tank with minimal change in direction and velocity.
 

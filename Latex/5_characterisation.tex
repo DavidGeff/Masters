@@ -8,7 +8,7 @@
 %----------------------------------------------------
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.65\textwidth]{figs/ch5/avia_axes.png}
+    \includegraphics[width=0.5\textwidth]{figs/ch5/avia_axes.png}
     \caption{\textbf{Avia Coordinate System.}}{Taken from \textcite{AviaLiDARSensor}.}
     \label{fig:avia_axes}
 \end{figure}
@@ -19,7 +19,7 @@
 \label{sec:ch5.section1}
 %----------------------------------------------------
 
-Before any point cloud processing can take place, the raw Avia data must be pre-processed to ensure it is in a suitable format and condition before being fed into the main processing pipeline. This pre-processing varies depending on the source of the data, but generally involves synchronising and aligning the Avia data with any ground truth data, as well as cropping and filtering the data to focus on the areas of interest and remove unwanted points produced during experimental setup.
+Before any point cloud processing can take place, the raw Avia data must be pre-processed to ensure it is in a suitable format and condition before being fed into the main processing pipeline. This pre-processing varies depending on the source of the data, but generally involves synchronising and aligning the Avia data with any ground truth data (the Avia's co-ordinate system is shown in Figure \ref{fig:avia_axes}), as well as cropping and filtering the data to focus on the areas of interest and remove unwanted points produced during experimental setup.
 
 %----------------------------------------------------
 \subsection{Stationary Characterisation Data}
