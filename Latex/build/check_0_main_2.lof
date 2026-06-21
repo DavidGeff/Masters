@@ -1,0 +1,116 @@
+\babel@toc {british}{}\relax 
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces \textbf {Remote Sensing Methods Comparison.}}}{12}{figure.caption.25}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces \textbf {Beam Divergence.}}}{13}{figure.caption.26}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces \textbf {Self-shadowing.}}}{13}{figure.caption.27}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces \textbf {Risley Prism.}}}{14}{figure.caption.30}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces \textbf {Multiple Returns from a Single Pulse.}}}{15}{figure.caption.31}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces \textbf {Livox Avia.}}}{15}{figure.caption.33}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces \textbf {Livox Avia Repetitive Scanning Pattern.}}}{16}{figure.caption.34}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces \textbf {Livox Avia Non-Repetitive Scanning Pattern.}}}{16}{figure.caption.35}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces \textbf {Irregular Density Point Cloud and Filtering Grid.}}}{18}{figure.caption.37}%
+\contentsline {figure}{\numberline {3.10}{\ignorespaces \textbf {Water and Ice Absorption Spectra.}}}{21}{figure.caption.41}%
+\contentsline {figure}{\numberline {3.11}{\ignorespaces \textbf {Various Ice Spectral Albedo.}}}{22}{figure.caption.42}%
+\contentsline {figure}{\numberline {3.12}{\ignorespaces \textbf {Snow Spectral Albedo.}}}{22}{figure.caption.43}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces \textbf {Livox Avia at Aalto University Ice and Wave Tank.}}}{24}{figure.caption.45}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces \textbf {Livox Avia above Pancake Ice.}}}{25}{figure.caption.47}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces \textbf {Data Collection Setup.}}}{26}{figure.caption.48}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces \textbf {SCALE Winter 2022 Cruise Track.}}}{26}{figure.caption.49}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces \textbf {Data collection Apparatus}}}{27}{figure.caption.50}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces \textbf {Avia Angle of Depression.}}}{27}{figure.caption.50}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces \textbf {Target Boards.}}}{28}{figure.caption.51}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces \textbf {Target C.}}}{28}{figure.caption.52}%
+\contentsline {figure}{\numberline {4.9}{\ignorespaces \textbf {Target D.}}}{28}{figure.caption.52}%
+\contentsline {figure}{\numberline {4.10}{\ignorespaces \textbf {Simulated Motion Experimental Setup.}}}{29}{figure.caption.53}%
+\contentsline {figure}{\numberline {4.11}{\ignorespaces \textbf {Motion Capture Markers on Livox Avia.}}}{29}{figure.caption.54}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces \textbf {Avia Coordinate System.}}}{31}{figure.caption.55}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {6.1}{\ignorespaces \textbf {Proposed Processing Pipeline.}}}{34}{figure.caption.56}%
+\contentsline {figure}{\numberline {6.2}{\ignorespaces \textbf {Reference Frames and Coordinate Systems.}}}{35}{figure.caption.57}%
+\contentsline {figure}{\numberline {6.3}{\ignorespaces \textbf {Example of Environmental Noise in Point Cloud Data.}}}{36}{figure.caption.59}%
+\contentsline {figure}{\numberline {6.4}{\ignorespaces \textbf {First Order (Linear) and Second Order Stokes Waves.}}}{37}{figure.caption.60}%
+\contentsline {figure}{\numberline {6.5}{\ignorespaces \textbf {Selected Scene Locations.}}}{38}{figure.caption.61}%
+\contentsline {figure}{\numberline {6.6}{\ignorespaces \textbf {Motion Compensation Pipeline.}}}{40}{figure.caption.65}%
+\contentsline {figure}{\numberline {6.7}{\ignorespaces \textbf {De-noising Pipeline.}}}{41}{figure.caption.68}%
+\contentsline {figure}{\numberline {6.8}{\ignorespaces \textbf {Wave Parameter Estimation Pipeline.}}}{41}{figure.caption.69}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {7.1}{\ignorespaces \textbf {Target Dimensions.}}}{45}{figure.caption.73}%
+\contentsline {figure}{\numberline {7.2}{\ignorespaces \textbf {Target A Reconstruction, 15 Frames.}}}{47}{figure.caption.78}%
+\contentsline {figure}{\numberline {7.3}{\ignorespaces \textbf {Target B Reconstruction, 15 Frames.}}}{47}{figure.caption.78}%
+\contentsline {figure}{\numberline {7.4}{\ignorespaces \textbf {Target C Reconstruction, 15 Frames.}}}{47}{figure.caption.79}%
+\contentsline {figure}{\numberline {7.5}{\ignorespaces \textbf {Target D Reconstruction, 15 Frames.}}}{47}{figure.caption.79}%
+\contentsline {figure}{\numberline {7.6}{\ignorespaces \textbf {Target A Estimated Normals.}}}{48}{figure.caption.80}%
+\contentsline {figure}{\numberline {7.7}{\ignorespaces \textbf {Target B Estimated Normals.}}}{48}{figure.caption.80}%
+\contentsline {figure}{\numberline {7.8}{\ignorespaces \textbf {Target C Estimated Normals.}}}{48}{figure.caption.81}%
+\contentsline {figure}{\numberline {7.9}{\ignorespaces \textbf {Target D Estimated Normals.}}}{48}{figure.caption.81}%
+\contentsline {figure}{\numberline {7.10}{\ignorespaces \textbf {KF residuals.}}}{49}{figure.caption.83}%
+\contentsline {figure}{\numberline {7.11}{\ignorespaces \textbf {ESKF residuals.}}}{50}{figure.caption.84}%
+\contentsline {figure}{\numberline {7.12}{\ignorespaces \textbf {Residuals.}}}{50}{figure.caption.85}%
+\contentsline {figure}{\numberline {7.13}{\ignorespaces \textbf {KF residuals.}}}{51}{figure.caption.87}%
+\contentsline {figure}{\numberline {7.14}{\ignorespaces \textbf {ESKF residuals.}}}{51}{figure.caption.88}%
+\contentsline {figure}{\numberline {7.15}{\ignorespaces \textbf {Residuals.}}}{52}{figure.caption.89}%
+\contentsline {figure}{\numberline {7.16}{\ignorespaces \textbf {Attitude Estimation.}}}{52}{figure.caption.90}%
+\contentsline {figure}{\numberline {7.17}{\ignorespaces \textbf {Noisy Frame.}}}{53}{figure.caption.91}%
+\contentsline {figure}{\numberline {7.18}{\ignorespaces \textbf {De-noised Frame.}}}{53}{figure.caption.92}%
+\contentsline {figure}{\numberline {7.19}{\ignorespaces \textbf {Fitted Wave Model.}}}{54}{figure.caption.93}%
+\contentsline {figure}{\numberline {7.20}{\ignorespaces \textbf {Fitted Wave Model.}}}{54}{figure.caption.94}%
+\contentsline {figure}{\numberline {7.21}{\ignorespaces \textbf {Estimated Amplitude.}}}{55}{figure.caption.97}%
+\contentsline {figure}{\numberline {7.22}{\ignorespaces \textbf {Estimated Period.}}}{55}{figure.caption.97}%
+\contentsline {figure}{\numberline {7.23}{\ignorespaces \textbf {Estimated Amplitude, 5 Samples.}}}{55}{figure.caption.98}%
+\contentsline {figure}{\numberline {7.24}{\ignorespaces \textbf {Estimated Period, 5 Samples.}}}{55}{figure.caption.98}%
+\contentsline {figure}{\numberline {7.25}{\ignorespaces \textbf {Scene 1, 1 Frame.}}}{56}{figure.caption.99}%
+\contentsline {figure}{\numberline {7.26}{\ignorespaces \textbf {Scene 1, 2 Frames.}}}{56}{figure.caption.99}%
+\contentsline {figure}{\numberline {7.27}{\ignorespaces \textbf {Scene 1 Video Still.}}}{56}{figure.caption.100}%
+\contentsline {figure}{\numberline {7.28}{\ignorespaces \textbf {Scene 2, 1 Frame.}}}{57}{figure.caption.102}%
+\contentsline {figure}{\numberline {7.29}{\ignorespaces \textbf {DBScan.}}}{57}{figure.caption.102}%
+\contentsline {figure}{\numberline {7.30}{\ignorespaces \textbf {VDBScan.}}}{57}{figure.caption.103}%
+\contentsline {figure}{\numberline {7.31}{\ignorespaces \textbf {OPTICS.}}}{57}{figure.caption.103}%
+\contentsline {figure}{\numberline {7.32}{\ignorespaces \textbf {Scene 2, 2 Frames.}}}{58}{figure.caption.104}%
+\contentsline {figure}{\numberline {7.33}{\ignorespaces \textbf {DBScan.}}}{58}{figure.caption.104}%
+\contentsline {figure}{\numberline {7.34}{\ignorespaces \textbf {VDBScan.}}}{58}{figure.caption.105}%
+\contentsline {figure}{\numberline {7.35}{\ignorespaces \textbf {OPTICS.}}}{58}{figure.caption.105}%
+\contentsline {figure}{\numberline {7.36}{\ignorespaces \textbf {Scene 2 Video Still.}}}{59}{figure.caption.106}%
+\contentsline {figure}{\numberline {7.37}{\ignorespaces \textbf {Scene 3, 1 Frame.}}}{59}{figure.caption.108}%
+\contentsline {figure}{\numberline {7.38}{\ignorespaces \textbf {DBScan.}}}{59}{figure.caption.108}%
+\contentsline {figure}{\numberline {7.39}{\ignorespaces \textbf {VDBScan.}}}{60}{figure.caption.109}%
+\contentsline {figure}{\numberline {7.40}{\ignorespaces \textbf {OPTICS.}}}{60}{figure.caption.109}%
+\contentsline {figure}{\numberline {7.41}{\ignorespaces \textbf {Scene 3, 2 Frames.}}}{60}{figure.caption.110}%
+\contentsline {figure}{\numberline {7.42}{\ignorespaces \textbf {DBScan.}}}{60}{figure.caption.110}%
+\contentsline {figure}{\numberline {7.43}{\ignorespaces \textbf {VDBScan.}}}{61}{figure.caption.111}%
+\contentsline {figure}{\numberline {7.44}{\ignorespaces \textbf {OPTICS.}}}{61}{figure.caption.111}%
+\contentsline {figure}{\numberline {7.45}{\ignorespaces \textbf {Scene 3 Video Still.}}}{61}{figure.caption.112}%
+\contentsline {figure}{\numberline {7.46}{\ignorespaces \textbf {Scene 4, 1 Frame.}}}{62}{figure.caption.114}%
+\contentsline {figure}{\numberline {7.47}{\ignorespaces \textbf {DBScan.}}}{62}{figure.caption.114}%
+\contentsline {figure}{\numberline {7.48}{\ignorespaces \textbf {VDBScan.}}}{62}{figure.caption.115}%
+\contentsline {figure}{\numberline {7.49}{\ignorespaces \textbf {OPTICS.}}}{62}{figure.caption.115}%
+\contentsline {figure}{\numberline {7.50}{\ignorespaces \textbf {Scene 4, 2 Frames.}}}{63}{figure.caption.116}%
+\contentsline {figure}{\numberline {7.51}{\ignorespaces \textbf {DBScan.}}}{63}{figure.caption.116}%
+\contentsline {figure}{\numberline {7.52}{\ignorespaces \textbf {VDBScan.}}}{63}{figure.caption.117}%
+\contentsline {figure}{\numberline {7.53}{\ignorespaces \textbf {OPTICS.}}}{63}{figure.caption.117}%
+\contentsline {figure}{\numberline {7.54}{\ignorespaces \textbf {Scene 4 Video Still.}}}{64}{figure.caption.118}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {A.1}{\ignorespaces \textbf {Target A Reconstruction, 1 Frame.}}}{72}{figure.caption.119}%
+\contentsline {figure}{\numberline {A.2}{\ignorespaces \textbf {Target B Reconstruction, 1 Frame.}}}{72}{figure.caption.119}%
+\contentsline {figure}{\numberline {A.3}{\ignorespaces \textbf {Target C Reconstruction, 1 Frame.}}}{72}{figure.caption.120}%
+\contentsline {figure}{\numberline {A.4}{\ignorespaces \textbf {Target D Reconstruction, 1 Frame.}}}{72}{figure.caption.120}%
+\contentsline {figure}{\numberline {A.5}{\ignorespaces \textbf {KF Roll.}}}{73}{figure.caption.121}%
+\contentsline {figure}{\numberline {A.6}{\ignorespaces \textbf {KF Pitch.}}}{73}{figure.caption.121}%
+\contentsline {figure}{\numberline {A.7}{\ignorespaces \textbf {ESKF Roll.}}}{73}{figure.caption.122}%
+\contentsline {figure}{\numberline {A.8}{\ignorespaces \textbf {ESKF Pitch.}}}{73}{figure.caption.122}%
+\contentsline {figure}{\numberline {A.9}{\ignorespaces \textbf {KF vs ESKF Roll.}}}{74}{figure.caption.123}%
+\contentsline {figure}{\numberline {A.10}{\ignorespaces \textbf {KF vs ESKF Pitch.}}}{74}{figure.caption.123}%
+\contentsline {figure}{\numberline {A.11}{\ignorespaces \textbf {KF Roll.}}}{74}{figure.caption.124}%
+\contentsline {figure}{\numberline {A.12}{\ignorespaces \textbf {KF Pitch.}}}{74}{figure.caption.124}%
+\contentsline {figure}{\numberline {A.13}{\ignorespaces \textbf {ESKF Roll.}}}{75}{figure.caption.125}%
+\contentsline {figure}{\numberline {A.14}{\ignorespaces \textbf {ESKF Pitch.}}}{75}{figure.caption.125}%
+\contentsline {figure}{\numberline {A.15}{\ignorespaces \textbf {KF vs ESKF Roll.}}}{75}{figure.caption.126}%
+\contentsline {figure}{\numberline {A.16}{\ignorespaces \textbf {KF vs ESKF Pitch.}}}{75}{figure.caption.126}%
+\addvspace {10\p@ }

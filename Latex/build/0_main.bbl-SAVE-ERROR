@@ -463,10 +463,8 @@
       \strng{authornamehash}{bec74d64e7dbcaef8b7ae92faeabc06c}
       \strng{authorfullhash}{bec74d64e7dbcaef8b7ae92faeabc06c}
       \strng{authorfullhashraw}{bec74d64e7dbcaef8b7ae92faeabc06c}
-      \field{extraname}{1}
       \field{sortinit}{B}
       \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
-      \field{extradate}{1}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{url}
       \field{labelnamesource}{author}
@@ -478,45 +476,6 @@
       \field{urlmonth}{2}
       \field{urlyear}{2026}
       \field{urldateera}{ce}
-    \endentry
-    \entry{benitzSimulatingHydrodynamicsOffshore}{thesis}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=bec74d64e7dbcaef8b7ae92faeabc06c}{%
-           family={Benitz},
-           familyi={B\bibinitperiod},
-           given={M.},
-           giveni={M\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{institution}{1}{%
-        {University of Massachusetts Amherst}%
-      }
-      \strng{namehash}{bec74d64e7dbcaef8b7ae92faeabc06c}
-      \strng{fullhash}{bec74d64e7dbcaef8b7ae92faeabc06c}
-      \strng{fullhashraw}{bec74d64e7dbcaef8b7ae92faeabc06c}
-      \strng{bibnamehash}{bec74d64e7dbcaef8b7ae92faeabc06c}
-      \strng{authorbibnamehash}{bec74d64e7dbcaef8b7ae92faeabc06c}
-      \strng{authornamehash}{bec74d64e7dbcaef8b7ae92faeabc06c}
-      \strng{authorfullhash}{bec74d64e7dbcaef8b7ae92faeabc06c}
-      \strng{authorfullhashraw}{bec74d64e7dbcaef8b7ae92faeabc06c}
-      \field{extraname}{2}
-      \field{sortinit}{B}
-      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
-      \field{extradate}{2}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{url}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{The problem of efficiently finding near-optimal decisions in multi-agent systems has become increasingly important because of the growing number of multi-agent applications with large numbers of agents operating in real-world environments. In these systems, agents are often subject to tight resource constraints and agents have only local views. When agents have non-global constraints, each of which is independent, the problem can be formalized as a distributed constraint optimization problem (DCOP). The DCOP is closely associated with the problem of inference on graphical models. Many approaches from inference literature have been adopted to solve DCOPs. We focus on the Max-Sum algorithm and the Action-GDL algorithm that are DCOP variants of the popular inference algorithm called the Max-Product algorithm and the Belief Propagation algorithm respectively. The Max-Sum algorithm and the Action-GDL algorithm are well-suited for multi-agent systems because it is distributed by nature and requires less communication than most DCOP algorithms. However, the resource requirements of these algorithms are still high for some multi-agent domains and various aspects of the algorithms have not been well studied for use in general multi-agent settings. This thesis is concerned with a variety of issues of applying the Max-Sum algorithms and the Action-GDL algorithm to general multi-agent settings. We develop a hybrid algorithm of ADOPT and Action-GDL in order to overcome the communication complexity of DCOPs. Secondly, we extend the Max-Sum algorithm to operate more efficiently in more general multi-agent settings in which computational complexity is high. We provide an algorithm that has a lower expected computational complexity for DCOPs even with n-ary constraints. Finally, In most DCOP literature, a one-to-one mapping between a variable and an agent is assumed. However, in real applications, many-to-one mappings are prevalent and can also be beneficial in terms of communication and hardware cost in situations where agents are acting as independent computing units. We consider how to exploit such mapping in order to increase efficiency.}
-      \field{title}{Simulating the {{Hydrodynamics}} of {{Offshore Floating Wind Turbine Platforms}} in a {{Finite Volume Framework}}}
-      \field{type}{phdthesis}
-      \field{urlday}{6}
-      \field{urlmonth}{2}
-      \field{urlyear}{2026}
-      \field{urldateera}{ce}
-      \verb{doi}
-      \verb 10.7275/8419828.0
-      \endverb
     \endentry
     \entry{bogoslavskyiFastRobustNormal2024}{misc}{}{}
       \name{author}{3}{}{%
