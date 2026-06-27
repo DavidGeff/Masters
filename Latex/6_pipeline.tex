@@ -19,7 +19,7 @@
 \label{sec:ch6.section1}
 %----------------------------------------------------
 
-Based on the nature of the data collected (see Chapter \ref{ch:data_collection}), the \ac{LiDAR} processing tools available in MATLAB, and the objectives of this investigation, the following processing steps were selected to be evaluated as part of the proposed data processing pipeline (Figure \ref{fig:pipeline}):
+Based on the nature of the data collected, both from in-situ measurements (\ac{SCALE} cruise data) and simulated environments (Aalto Wave and Ice tank and Stewart platform experiments) detailed in Chapter \ref{ch:data_collection}, the \ac{LiDAR} processing tools available in MATLAB, and the objectives of this investigation, the following processing steps were selected to be evaluated as part of the proposed data processing pipeline (Figure \ref{fig:pipeline}):
 \begin{itemize}
     \item Motion Compensation
     \item De-noising
@@ -84,17 +84,17 @@ Due to the complexity of wave behaviour in the \ac{MIZ}, and modelling challenge
 \end{figure}
 %----------------------------------------------------
 
-As seen in Figure \ref{fig:stokes} above, a first order (linear) wave model is a simple sinusoidal function of wave height over time, and is the most basic wave model. A second order Stokes wave model includes additional terms to account for non-linear effects and better represent the behaviour of gravity waves. These second order waves display a characteristic asymmetry between the wave crest and trough, with the crest being sharper and higher than their first order counterparts, and the trough being broader and shallower. \textcite{benitzOceanHydrodynamicsEngineers} gives the Equations for first and second order Stokes waves as shown in Equations \ref{eqn:first_ord} and \ref{eqn:second_ord} respectively. It can be clearly seen that the second order Stokes wave model includes many more terms than the first order model, which allows it to better represent the behaviour of real waves, but also makes it for more complex to fit to data. 
+As seen in Figure \ref{fig:stokes} above, a first order (linear) wave model is a simple sinusoidal function of wave height over time, and is the most basic wave model. A second order Stokes wave model includes additional terms to account for non-linear effects and better represent the behaviour of gravity waves. These second order waves display a characteristic asymmetry between the wave crest and trough, with the crest being sharper and higher than their first order counterparts, and the trough being broader and shallower. \textcite{benitzOceanHydrodynamicsEngineers} gives the Equations for first and second order Stokes waves as shown in Equations \ref{eqn:first_ord} and \ref{eqn:second_ord} respectively, where $\eta$ is surface elevation, \textit{H} is wave height, \textit{k} is wavenumber, $\omega$ is angular frequency, $\theta$ is phase angle, \textit{h} is water depth. It can be clearly seen that the second order Stokes wave model includes many more terms than the first order model, which allows it to better represent the behaviour of real waves, but also makes it for more complex to fit to data. 
 
 %----------------------------------------------------
 \begin{equation} \label{eqn:first_ord}
-    \eta = Asin(kx - \omega t +\theta)
+    \eta = \frac{H}{2}sin(kx - \omega t +\theta)
 \end{equation}
 %----------------------------------------------------
 
 %----------------------------------------------------
 \begin{equation} \label{eqn:second_ord}
-    \eta = Asin(kx - \omega t +\theta) + \frac{H^2}{2L}\frac{cosh(kh)(2+cosh(2kh))}{sinh^3(kh)}cos(kx - \omega t +\theta)
+    \eta = \frac{H}{2}sin(kx - \omega t +\theta) + \frac{H^2}{2L}\frac{cosh(kh)(2+cosh(2kh))}{sinh^3(kh)}cos(kx - \omega t +\theta)
 \end{equation}
 %----------------------------------------------------
 
@@ -280,7 +280,7 @@ The Aalto University wave and ice tank probe data can be used as ground truth fo
 
 The strict constraints on the wave behaviours allows for the wave models used to be greatly simplified. It can be assumed the waves will propagate uniformly across the tank with minimal change in direction and velocity.
 
-Using the MATLAB \emph{curveFitter} tool, a sinusoidal model (equation \ref{eqn:probe_sin}) of wave height over time was fitted to the Aalto wave probe data from each test, and a single amplitude (\textit{A}) and period (\textit{t}) value was extracted per test.
+Using the MATLAB \emph{curveFitter} tool, a sinusoidal model (equation \ref{eqn:probe_sin}) of wave height over time was fitted to the Aalto wave probe data from each test, and a single amplitude (\textit{A}) and period (\textit{t}) value was extracted per test. Thi swave model was selected,as the wave probe data is a simple time series of wave height measurements, and the waves generated in the tank were first order (linear) waves.
 
 %----------------------------------------------------
 \begin{equation} \label{eqn:probe_sin}
@@ -290,7 +290,7 @@ Using the MATLAB \emph{curveFitter} tool, a sinusoidal model (equation \ref{eqn:
 
 \textit{y} is the wave height at time \textit{t}, \textit{A} is  amplitude, \textit{2A} is  wave height, \textit{$\omega$} is the  angular frequency and \textit{c} is the phase shift. For this investigation, only amplitude and angular frequency (\textit{A} and \textit{$\omega$}) are of interest. Phase shift is not of interest as it merely represents the starting point of the wave and does not affect the overall wave behaviour.
 
-To model the waves from point cloud data, a spatial sinusoidal plane model (equation \ref{eqn:avia_sin}) was fitted to each frame in the point cloud using \ac{RANSAC}. Each frame fit was run for 300 iterations at an inlier tolerance of 0.02 m (2 cm). The iteration count was selected based on compute time constraints (compute time for one frame at 300 iterations was approximately 1 minute and 30 seconds, a test consisting of 3000 frames would take over 20 minutes), while the inlier tolerance was selected based on a combination of the expected wave amplitudes and the sensor's range accuracy. A function was created that accepted a point cloud frame, the number of iterations and the inlier tolerance as inputs. Six random points from the point cloud frame were selected and the sinusoidal plane model (Equation \ref{eqn:avia_sin}) was fitted to these points, using the MATLAB \emph{lsqcurvefit} function. The distance from each point in the point cloud frame to the model was calculated, and compared to the inlier tolerance to determine if the point was an inlier or outlier. The number of inliers was counted and stored, and this process was repeated for the set number of iterations. If a model fit produced more inliers than the previous best fit, then it was stored as the new best fit for that frame. After all iterations were completed, the best fit model parameters (A through F) for that frame were returned and stored in an array along with the indexes of the inliers for that fit and total number of inliers. This process was repeated for every frame in the test dataset, producing an array containing the best fit model parameters (A through F) for each frame, which were then used to calculate wave amplitude and period estimates for each frame.
+To model the waves from point cloud data, a spatial sinusoidal plane model (equation \ref{eqn:avia_sin}) was fitted to each frame in the point cloud using \ac{RANSAC}. This wave model was selected as it is a simple sinusoidal function of wave height over space, and each individual frame of point cloud data is a spatial representation of the wave surface at a single point in time. Each frame fit was run for 300 iterations at an inlier tolerance of 0.02 m (2 cm). The iteration count was selected based on compute time constraints (compute time for one frame at 300 iterations was approximately 1 minute and 30 seconds, a test consisting of 3000 frames would take over 20 minutes), while the inlier tolerance was selected based on a combination of the expected wave amplitudes and the sensor's range accuracy. A function was created that accepted a point cloud frame, the number of iterations and the inlier tolerance as inputs. Six random points from the point cloud frame were selected and the sinusoidal plane model (Equation \ref{eqn:avia_sin}) was fitted to these points, using the MATLAB \emph{lsqcurvefit} function. The distance from each point in the point cloud frame to the model was calculated, and compared to the inlier tolerance to determine if the point was an inlier or outlier. The number of inliers was counted and stored, and this process was repeated for the set number of iterations. If a model fit produced more inliers than the previous best fit, then it was stored as the new best fit for that frame. After all iterations were completed, the best fit model parameters (A through F) for that frame were returned and stored in an array along with the indexes of the inliers for that fit and total number of inliers. This process was repeated for every frame in the test dataset, producing an array containing the best fit model parameters (A through F) for each frame, which were then used to calculate wave amplitude and period estimates for each frame.
 
 %----------------------------------------------------
 \begin{equation} \label{eqn:avia_sin}
