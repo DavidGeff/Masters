@@ -84,7 +84,7 @@ Due to the complexity of wave behaviour in the \ac{MIZ}, and modelling challenge
 \end{figure}
 %----------------------------------------------------
 
-As seen in Figure \ref{fig:stokes} above, a first order (linear) wave model is a simple sinusoidal function of wave height over time, and is the most basic wave model. A second order Stokes wave model includes additional terms to account for non-linear effects and better represent the behaviour of gravity waves. These second order waves display a characteristic asymmetry between the wave crest and trough, with the crest being sharper and higher than their first order counterparts, and the trough being broader and shallower. \textcite{benitzOceanHydrodynamicsEngineers} gives the Equations for first and second order Stokes waves as shown in Equations \ref{eqn:first_ord} and \ref{eqn:second_ord} respectively, where $\eta$ is surface elevation, \textit{H} is wave height, \textit{k} is wavenumber, $\omega$ is angular frequency, $\theta$ is phase angle, \textit{h} is water depth. It can be clearly seen that the second order Stokes wave model includes many more terms than the first order model, which allows it to better represent the behaviour of real waves, but also makes it for more complex to fit to data. 
+As seen in Figure \ref{fig:stokes} above, a first order (linear) wave model is a simple sinusoidal function of wave height over time, and is the most basic wave model. A second order Stokes wave model includes additional terms to account for non-linear effects and better represent the behaviour of gravity waves. These second order waves display a characteristic asymmetry between the wave crest and trough, with the crest being sharper and higher than their first order counterparts, and the trough being broader and shallower. \textcite{benitzOceanHydrodynamicsEngineers} gives the Equations for first and second order Stokes waves as shown in Equations \ref{eqn:first_ord} and \ref{eqn:second_ord} respectively, where $\eta$ is surface elevation, \textit{H} is wave height, \textit{k} is wave number, $\omega$ is angular frequency, $\theta$ is phase angle, \textit{h} is water depth. It can be clearly seen that the second order Stokes wave model includes many more terms than the first order model, which allows it to better represent the behaviour of real waves, but also makes it for more complex to fit to data. 
 
 %----------------------------------------------------
 \begin{equation} \label{eqn:first_ord}
@@ -152,7 +152,7 @@ The starting point for the pipeline is the raw Avia point cloud data. All data u
 
 \ac{IMU} data (linear \& rotational accelerations and timestamps) captured by the Avia is extracted from the \emph{.bag} files and then stored in matrices for further processing.
 
-MATLAB's \ac{LiDAR} Toolbox has provision for a \emph{pointCloud} object which was used to store all \ac{LiDAR} data for processing and analysis. This object contains fields for the point cloud's x, y and z coordinate data, total number of points, as well as point colours, normals and intensities. The Avia is only capable of directly measuring point intensity, so this was the only additional data field extracted from the .bag files into the \emph{pointCloud} object. Frame timestamps are not stored in the pointCloud object, but in a standalone array.
+MATLAB's \ac{LiDAR} Toolbox has provision for a \emph{pointCloud} object which was used to store all \ac{LiDAR} data for processing and analysis. This object contains fields for the point cloud's x, y and z coordinate data, total number of points, as well as point colours, normals and intensities. The Avia is only capable of directly measuring point intensity, so this was the only additional data field extracted from the .bag files into the \emph{pointCloud} object. Frame timestamps are not stored in the pointCloud object, but in a stand-alone array.
 
 %====================================================
 \section{Proposed Pipeline}
@@ -280,7 +280,7 @@ The Aalto University wave and ice tank probe data can be used as ground truth fo
 
 The strict constraints on the wave behaviours allows for the wave models used to be greatly simplified. It can be assumed the waves will propagate uniformly across the tank with minimal change in direction and velocity.
 
-Using the MATLAB \emph{curveFitter} tool, a sinusoidal model (equation \ref{eqn:probe_sin}) of wave height over time was fitted to the Aalto wave probe data from each test, and a single amplitude (\textit{A}) and period (\textit{t}) value was extracted per test. Thi swave model was selected,as the wave probe data is a simple time series of wave height measurements, and the waves generated in the tank were first order (linear) waves.
+Using the MATLAB \emph{curveFitter} tool, a sinusoidal model (equation \ref{eqn:probe_sin}) of wave height over time was fitted to the Aalto wave probe data from each test, and a single amplitude (\textit{A}) and period (\textit{t}) value was extracted per test. This wave model was selected, as the wave probe data is a simple time series of wave height measurements, and the waves generated in the tank were first order (linear) waves.
 
 %----------------------------------------------------
 \begin{equation} \label{eqn:probe_sin}
@@ -300,7 +300,7 @@ To model the waves from point cloud data, a spatial sinusoidal plane model (equa
 
 \textit{x}, \textit{y} and \textit{z} are coordinates of the wave relative to the Avia's origin. \textit{A} is the amplitude, \textit{2A} is  wave height, \textit{B} is the wave number, \textit{C} is the phase shift and \textit{D} and \textit{E} are plane slopes and \textit{F} is an offset. For this investigation only amplitude and wave number (\textit{A} and \textit{B}) are of interest.
 
-As the waves generated in the wave tank were waves in intermediate depthwater, (water depth greater than a twentieth of the largest generated wavelength, but less than half that of the largest generated wavelength), wave number (\textit{k}) is related to angular velocity (\textit{$\omega$}) through the dispersion relation (\cite{dingemansWaterWavePropagation1997}) given in equation \ref{eqn:dispersion}, where \textit{g} is the acceleration due to gravity and \textit{h} is the water depth.
+As the waves generated in the wave tank were waves in intermediate depth water, (water depth greater than a twentieth of the largest generated wavelength, but less than half that of the largest generated wavelength), wave number (\textit{k}) is related to angular velocity (\textit{$\omega$}) through the dispersion relation (\cite{dingemansWaterWavePropagation1997}) given in equation \ref{eqn:dispersion}, where \textit{g} is the acceleration due to gravity and \textit{h} is the water depth.
 
 %----------------------------------------------------
 \begin{equation} \label{eqn:dispersion}
