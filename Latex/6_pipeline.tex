@@ -27,6 +27,8 @@ Based on the nature of the data collected, both from in-situ measurements (\ac{S
     \item Pancake Identification
 \end{itemize}
 
+The goal was to begin the development of a final processing pipeline that could be used to extract useful information from point cloud data collected by the Avia in the \ac{MIZ}. The proposed pipeline is designed to be modular, with each processing step being independent of the others. This allows for flexibility in the pipeline, as individual steps can be modified or replaced without affecting the overall functionality of the pipeline. The pipeline was developed using data from both simulated and real-world environments, with the simulated data being used to test and validate the processing steps before applying them to the more complex real-world data when possible. The pipeline is intended for use with data collected in-situ, but can also be applied to data collected in simulated environments.
+
 %----------------------------------------------------
 \subsection{Motion Compensation}
 \label{subsec:ch6.section1.subsec1}
@@ -38,8 +40,8 @@ A solution to this complication is to apply motion compensation to the point clo
 %----------------------------------------------------
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.82\textwidth]{figs/ch6/scene_frames.png}
-    \caption{\textbf{Reference Frames and Coordinate Systems.}}{The World and vessel frames are based on the NED convention, while the Avia and point cloud frames are based on the sensor's local coordinate system as defined by the manufacturer. Sea ice observed in the target scenes does not have a native coordinate system, so for the purposes of this investigation, the sea ice coordinate system is defined as being the same orientation as the Avia's local coordinate system.}
+    \includegraphics[width=0.7\textwidth]{figs/ch6/scene_frames.png}
+    \caption{\textbf{Reference Frames and Coordinate Systems.}}{The World \& vessel frames use the NED convention, while the Avia \& point cloud frames use the sensor's local coordinate system, defined by the manufacturer. Sea ice under observation does not have a native coordinate system, so for the purposes of this investigation, its coordinate system is defined as being the same orientation as the Avia's local coordinate system.}
     \label{fig:scene_frames}
 \end{figure}
 %----------------------------------------------------
@@ -55,8 +57,8 @@ With the data available from the Avia, it is only possible to estimate changes i
 %----------------------------------------------------
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.6\textwidth]{figs/ch6/noise_eg.png}
-    \caption{\textbf{Example of Environmental Noise in Point Cloud Data.}}{The sea ice field can be seen in the foreground of the scene, while the noise caused by environmental conditions can be seen as the cone of points in the background. The straight line of points to the left of the noise cone is part of the ship's deck and railings.}
+    \includegraphics[width=0.52\textwidth]{figs/ch6/noise_eg.png}
+    \caption{\textbf{Example of Environmental Noise in Point Cloud Data.}}{The sea ice field can be seen in the foreground of the scene, while noise caused by environmental conditions can be seen as the cone of points in the background. The straight line of points left of the noise cone is part of the ship's deck \& railings.}
     \label{fig:noise_eg}
 \end{figure}
 %----------------------------------------------------
@@ -73,16 +75,16 @@ The estimated wave parameters could be used to improve understanding of wave-ice
 
 For the Aalto University data, a simple linear sinusoidal wave model should be sufficient, as the wave makers generated relatively uniform waves and constrained their complexity. In contrast, data from the \ac{SCALE} Cruise will require a more complex model to account for the increased dynamics and irregular wave behaviour in the \ac{MIZ}, which is driven by multiple environmental factors and interaction with the vessel itself.
 
-Due to the complexity of wave behaviour in the \ac{MIZ}, and modelling challenges associated with it, as well as the lack of ground truth data, this investigation will focus primarily on the Aalto University data for wave parameter estimation.
-
 %----------------------------------------------------
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.82\textwidth]{figs/ch6/stokes.png}
+    \includegraphics[width=0.7\textwidth]{figs/ch6/stokes.png}
     \caption{\textbf{First Order (Linear) and Second Order Stokes Waves.}}{First order waves are a simple sinusoidal function of wave height over time, while second order Stokes waves include greater complexity.}
     \label{fig:stokes}
 \end{figure}
 %----------------------------------------------------
+
+Due to the complexity of wave behaviour in the \ac{MIZ}, and modelling challenges associated with it, as well as the lack of ground truth data, this investigation will focus primarily on the Aalto University data for wave parameter estimation.
 
 As seen in Figure \ref{fig:stokes} above, a first order (linear) wave model is a simple sinusoidal function of wave height over time, and is the most basic wave model. A second order Stokes wave model includes additional terms to account for non-linear effects and better represent the behaviour of gravity waves. These second order waves display a characteristic asymmetry between the wave crest and trough, with the crest being sharper and higher than their first order counterparts, and the trough being broader and shallower. \textcite{benitzOceanHydrodynamicsEngineers} gives the Equations for first and second order Stokes waves as shown in Equations \ref{eqn:first_ord} and \ref{eqn:second_ord} respectively, where $\eta$ is surface elevation, \textit{H} is wave height, \textit{k} is wave number, $\omega$ is angular frequency, $\theta$ is phase angle, \textit{h} is water depth. It can be clearly seen that the second order Stokes wave model includes many more terms than the first order model, which allows it to better represent the behaviour of real waves, but also makes it for more complex to fit to data. 
 

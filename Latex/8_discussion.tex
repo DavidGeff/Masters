@@ -4,13 +4,17 @@
 \chapter{Discussion}
 \label{ch:discussion}
 %====================================================
-\section{Sensor Characterisation Discussion}
+\section{Experimental Data Discussion}
 \label{sec:ch8.section1}
 %----------------------------------------------------
 
 %----------------------------------------------------
-\subsection{Target Scene Reconstruction}
+\subsection{Sensor Characterisation Discussion}
 \label{subsec:ch8.section1.subsec1}
+
+%----------------------------------------------------
+\subsubsection{Target Scene Reconstruction}
+\label{subsubsec:ch8.section1.subsec1.subsubsection1}
 
 The Avia consistently struggled to produce accurate representations of the calibration targets. The large angle of incidence between the Avia and the targets led to low point densities on the target surfaces, as well as exacerbating the sensor's large beam divergence and increasing target self-shadowing. These factors combined led to distorted reconstructions of the targets. For each target, a reasonable estimation of at least two dimensions was possible (see Tables \ref{tab:target_a} to \ref{tab:target_d}) and the overall rough shape of the targets could be inferred.
 
@@ -25,39 +29,23 @@ The rough geometry of target D was able to be resolved reasonably well, as seen 
 The Avia alone is not well suited to accurately capturing detailed geometries of objects at oblique angles and longer ranges from a limited number of point cloud frames. All targets required ten or more concatenated frames to produce a rough estimation of their geometry, which is not viable in dynamic scenes where the sensor or targets are in motion. The low point densities and distorted geometries produced by the Avia under these conditions limit its effectiveness for detailed scene reconstruction. However, the overall rough shapes and some dimensions of the targets could be inferred, indicating that while the Avia may not be suitable for high-precision geometric capture in these scenarios, it can still provide useful large-scale environmental geometry information. Despite this, in all cases despite target B, the single frame reconstructions were able to provide some insight into the target dimensions and geometry, indicating that even in dynamic scenes, some useful information can still be extracted from the Avia's point cloud data.
 
 %----------------------------------------------------
-\subsection{Normals Estimation}
-\label{subsec:ch8.section1.subsec2}
+\subsubsection{Normals Estimation}
+\label{subsubsec:ch8section1.subsec1.subsubsection2}
 
 In all cases, the point normals estimation produced poor results. The estimated normals (Figures \ref{fig:A15Norm} to \ref{fig:D15Norm}) closely matched the geometry of the reconstructed targets, see Figures \ref{fig:A15Mesh}, to \ref{fig:D15Mesh}, but this did not add any additional useful information about the targets. The low point density and distorted geometry of the target point clouds meant that the estimated normals provided no more insight than what could already be visually observed from the target reconstructions. As the estimations were based on the local geometry of the point clouds, any inaccuracies in the point cloud reconstructions directly translated to inaccuracies in the normal estimations. Thus, this method is not well suited to improving the understanding of scenes captured by the Avia under the conditions tested in this investigation and is not recommended for use in future work in this application.
 
-%----------------------------------------------------
-\subsection{Characterisation Summary}
-\label{subsec:ch8.section1.subsec3}
-
-The Livox Avia was designed for deployment on stable platforms to directly observe static scenes or merely detect the presence of a moving object. Therefore, its performance in capturing detailed geometries of objects at oblique angles and longer ranges from a limited number of point cloud frames is suboptimal, as demonstrated by the target reconstructions in this investigation. These results are not unexpected, given the sensor's specifications and intended use cases. The Avia's large beam divergence, large amount of induced self-shadowing and limited point density under these conditions lead to distorted reconstructions that do not accurately represent the target geometries. These limitations have the further implication of rendering any attempts to estimate point normals from the point cloud data ineffective, as the inaccuracies and lack of detail in the point cloud reconstructions directly translate to inaccuracies in the point normal estimations. Additionally, the non-repetitive scanning pattern employed is specifically designed to maximise point coverage over time, rather than capturing high-density point clouds in single frames. This further limits the sensor's ability to capture detailed geometries in dynamic scenes. Despite these limitations, the Avia was still able to provide useful medium-scale environmental geometry information, such as rough target shapes and some dimensions. This indicates that while the Avia may not be suitable for high-precision geometric capture in these scenarios, it can still serve as a valuable tool for capturing broader environmental features. The limitations imposed by the scanning pattern and low point density in a single frame can be somewhat mitigated by ensuring the scene target is captured in the centre of the sensor's \ac{FOV}, where point density is highest. Concatenating multiple frames can also improve the point density and coverage of the scene, but this must be undertaken with caution in dynamic scenes to avoid motion-induced distortions.
-
 %====================================================
-\section{Motion Compensation and De-noising}
-\label{sec:ch8.section2}
-%----------------------------------------------------
-
-%----------------------------------------------------
 \subsection{Motion Compensation}
-\label{subsec:ch8.section2.subsec1}
+\label{sec:ch8.section1.subsection2}
+%----------------------------------------------------
 
 Overall, the motion compensation process effectively reduced motion-induced distortions in the \ac{LiDAR} point cloud data. Both the \ac{ESKF} and \ac{KF} produced similar roll and pitch angle estimates, which when applied to the motion compensation process, resulted in comparable improvements in point cloud quality. The inability to estimate yaw angles from the Avia's \ac{IMU} data is a limiting factor in the motion compensation process. However, due to the nature of ship motion, yaw is generally less significant than roll and pitch, meaning that its omission does not drastically impact the overall effectiveness of the motion compensation. The roll and pitch angles account for the majority of the ship's rotational motion, and thus compensating for these angles significantly improves the quality of the point cloud data. A larger source of error in the motion compensation process is its inability to account for translational motion of the ship. This can lead to distortion in the reconstructed point cloud scenes and produce the illusion of drifting floes or motion in the scene when in fact, the observation platform is moving, not the scene itself. Disturbances caused by high-frequency vibrations of the ship are also not accounted for in the motion compensation process, which can lead to small-scale distortions in the point cloud data. However, these effects are generally minor compared to the overall motion of the ship and can be compensated for through other means, such as mounting the sensor on vibration isolating platforms.
 
-Despite both filters producing similar results, the \ac{ESKF} is recommended for future use in motion compensation of \ac{LiDAR} point cloud data. The \ac{ESKF} is a more advanced filtering technique that can better handle non-linearities in the system dynamics than the standard \ac{KF}. The \ac{ESKF} is also far more tunable than the \ac{KF}, allowing for better optimisation of filter performance over time as more data is collected and the specific characteristics of the motion being compensated for are better understood. Future work could additionally focus on integrating additional sensors or data sources to estimate and compensate for translational motion, further improving the accuracy of the motion compensation process.
-
-%----------------------------------------------------
-\subsection{De-noising}
-\label{subsec:ch8.section2.subsec2}
-
-The de-noising process effectively removed a significant portion of the noise present in the raw point cloud data, resulting in cleaner and more coherent representations of the target scenes. The filter was observed removing points corresponding to ice floes near the edges of the frame, close to the sensor. This is due to the points' proximity to the sensor aperture, however as these points are at the edges of the frame, in areas of low point density, their removal does not significantly impact the overall scene representation. Despite this, care must be taken when making use of the de-noising filter, as overly aggressive filtering parameters can lead to the removal of valid scene points, potentially distorting the scene representation. Thus, it is recommended to only make use of this de-noising process in scenarios where the point cloud data is particularly noisy to prevent the unintended loss of valid scene information.
+Despite both filters producing similar results, the \ac{ESKF} is recommended for future use in motion compensation of \ac{LiDAR} point cloud data. The \ac{ESKF} is a more advanced filtering technique that can better handle non-linearities in the system dynamics than the standard \ac{KF}. The \ac{ESKF} is also far more tuneable than the \ac{KF}, allowing for better optimisation of filter performance over time as more data is collected and the specific characteristics of the motion being compensated for are better understood. Future work could additionally focus on integrating additional sensors or data sources to estimate and compensate for translational motion, further improving the accuracy of the motion compensation process.
 
 %====================================================
-\section{Wave Parameter Estimation}
-\label{sec:ch8.section3}
+\subsection{Wave Parameter Estimation}
+\label{sec:ch8.section1.subsec3}
 %----------------------------------------------------
 
 The wave parameter estimation process produced mostly accurate results. The wave period estimations closely matched the wave probe ground truth data, with all tests producing period estimations within 0.02 s of the probe ground truth values. The amplitude estimations were less consistently accurate, with 4 of the 6 estimations closely matching the probe ground truth values, while 2 tests (tests 4 and 5) produced amplitude estimations greater than the probe ground truth values. The discrepancies in the wave probe amplitude fittings and the set wave maker parameters are likely due to the complex interactions of the generated waves with the ice in the tank and the tank boundaries, leading to deviations from the ideal wave profiles set by the wave makers. However, the wave probe data is still considered the ground truth for this investigation, as it directly measures the water surface elevation at a fixed point in the tank. The inconsistencies in the amplitude estimations are likely due to a combination of the Avia's poor beam divergence and the profile of the created ice floes. The beam divergence can lead to inaccuracies in the reported point locations, which can distort the wave profile. Additionally, the observed surface ice floes created in the wave tank does not correspond perfectly to the underlying water surface profile, leading to discrepancies between the actual wave amplitude recorded by the probe and the wave amplitude inferred from the point cloud data.
@@ -66,9 +54,26 @@ The results shown in Figures \ref{fig:rand_amp} and \ref{fig:rand_period} demons
 
 These results indicate that while the wave period can be accurately estimated from the Avia point cloud data, the amplitude estimations are more susceptible to errors due to sensor limitations and environmental factors, but can still provide reasonable approximations of the wave amplitude in most cases. Additionally, this indicates that despite the Avia's limitations in accurately capturing detailed geometries at oblique angles and longer ranges, it is still capable of extracting useful large-scale environmental geometry, such as wave parameters from the point cloud data. It is important to note that these tests were conducted in a controlled wave tank environment, with relatively simple wave profiles. The trend of increasing wave parameter estimation accuracy with increasing percentage of inliers in the fitted model demonstrates the importance of selecting an appropriate model for fitting to the point cloud data. Higher percentages of inliers indicate that a larger portion of the point cloud data conforms to the assumed wave model, leading to more accurate parameter estimations. In real-world ocean environments, the presence of additional factors such as wind, currents, and complex wave interactions will likely introduce further challenges in accurately estimating wave parameters from point cloud data, as a sufficiently accurate wave model will be more difficult to define. Future work could focus on testing the wave parameter estimation process in more complex and realistic ocean environments to further validate its effectiveness.
 
+%----------------------------------------------------
+\subsection{Characterisation Summary}
+\label{subsec:ch8.section1.subsec4}
+
+The Livox Avia was designed for deployment on stable platforms to directly observe static scenes or merely detect the presence of a moving object. Therefore, its performance in capturing detailed geometries of objects at oblique angles and longer ranges from a limited number of point cloud frames is suboptimal, as demonstrated by the target reconstructions in this investigation. These results are not unexpected, given the sensor's specifications and intended use cases. The Avia's large beam divergence, large amount of induced self-shadowing and limited point density under these conditions lead to distorted reconstructions that do not accurately represent the target geometries. These limitations have the further implication of rendering any attempts to estimate point normals from the point cloud data ineffective, as the inaccuracies and lack of detail in the point cloud reconstructions directly translate to inaccuracies in the point normal estimations. Additionally, the non-repetitive scanning pattern employed is specifically designed to maximise point coverage over time, rather than capturing high-density point clouds in single frames. This further limits the sensor's ability to capture detailed geometries in dynamic scenes. Despite these limitations, the Avia was still able to provide useful medium-scale environmental geometry information, such as rough target shapes and some dimensions. This indicates that while the Avia may not be suitable for high-precision geometric capture in these scenarios, it can still serve as a valuable tool for capturing broader environmental features. The limitations imposed by the scanning pattern and low point density in a single frame can be somewhat mitigated by ensuring the scene target is captured in the centre of the sensor's \ac{FOV}, where point density is highest. Concatenating multiple frames can also improve the point density and coverage of the scene, but this must be undertaken with caution in dynamic scenes to avoid motion-induced distortions.
+
 %====================================================
-\section{Pancake Identification \& Clustering}
-\label{sec:ch8.section4}
+\section{Field Data Discussion}
+\label{sec:ch8.section2}
+%----------------------------------------------------
+
+%----------------------------------------------------
+\subsection{De-noising}
+\label{subsec:ch8.section2.subsec1}
+
+The de-noising process effectively removed a significant portion of the noise present in the raw point cloud data, resulting in cleaner and more coherent representations of the target scenes. The filter was observed removing points corresponding to ice floes near the edges of the frame, close to the sensor. This is due to the points' proximity to the sensor aperture, however as these points are at the edges of the frame, in areas of low point density, their removal does not significantly impact the overall scene representation. Despite this, care must be taken when making use of the de-noising filter, as overly aggressive filtering parameters can lead to the removal of valid scene points, potentially distorting the scene representation. Thus, it is recommended to only make use of this de-noising process in scenarios where the point cloud data is particularly noisy to prevent the unintended loss of valid scene information.
+
+%====================================================
+\subsection{Pancake Identification \& Clustering}
+\label{sec:ch8.section2.subsec2}
 %----------------------------------------------------
 
 Attempts to cluster points and identify pancake floes in scene 1 were unsuccessful. Despite the visible pancake floes in the video footage and relatively consistent point density in the point cloud data, all three algorithms failed to produce meaningful clustering results. This was due to the point density in the scene being too low to clearly resolve individual pancakes, leading to the algorithms being unable to distinguish between separate pancake floes. Additionally, the pancake floes in this scene were closely packed together, creating a lack of clear boundaries between individual floes for the algorithms to identify. This result demonstrates a limitation of the approach taken in this investigation, as the success of the clustering algorithms is heavily dependent on the quality and density of the point cloud data as well as the conditions of the observed scene.
@@ -86,7 +91,7 @@ The point intensities, visible in Figures \ref{fig:660Frame}, \ref{fig:661Frame}
 
 %====================================================
 \section{Pipeline Recommendations}
-\label{sec:ch8.section5}
+\label{sec:ch8.section3}
 %----------------------------------------------------
 
 All stages of the processing pipeline developed in this investigation are recommended for future use and development. The motion compensation process effectively reduced large amounts of motion-induced distortions in the \ac{LiDAR} point cloud data, significantly improving the quality of the data for subsequent processing stages. The de-noising process further enhanced the point cloud data by removing noise points, resulting in cleaner and more coherent scene representations. This stage is not recommended for use in all scenarios, as overly aggressive filtering can lead to the removal of valid scene points. The wave parameter estimation process successfully extracted useful wave information from the point cloud data, demonstrating the potential of \ac{LiDAR} sensors for oceanographic applications. However, further validation in more complex and realistic ocean environments is recommended before deployment in real-world scenarios. The pancake identification and clustering stage showed promise, particularly with the \ac{OPTICS} algorithm. However, further refinement and testing are needed to improve the consistency and accuracy of pancake floe identification.

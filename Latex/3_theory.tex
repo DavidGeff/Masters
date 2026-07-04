@@ -220,7 +220,7 @@ Clustering algorithms can be categorised based on their underlying structure, so
 
     \item[Partitional] methods divide the data into a set number of clusters, optimising a cost function to achieve this (usually a distance or reachability measure). The most common partitional clustering algorithm is K-means clustering, which iteratively assigns data points to the nearest cluster centroid and updates the centroids based on the assigned points until the algorithm converges. 
 
-    \item[Hierarchical] methods attempt to group data points into a tree-like structure of clusters, analogous to a dendogram. This method measures the similarity between data points and merges or splits clusters based on this similarity. An example of a hierarchical clustering algorithm is Agglomerative Clustering, a popular bottom-up approach (each data point starts as its own cluster, and clusters are merged as the algorithm progresses) and is commonly used in the biological sciences.
+    \item[Hierarchical] methods attempt to group data points into a tree-like structure of clusters, analogous to a dendrogram. This method measures the similarity between data points and merges or splits clusters based on this similarity. An example of a hierarchical clustering algorithm is Agglomerative Clustering, a popular bottom-up approach (each data point starts as its own cluster, and clusters are merged as the algorithm progresses) and is commonly used in the biological sciences.
 
     \item[Density-based] methods group data points based on the density of points in a given region. Areas with high point density are classified as individual clusters, while areas with low point density are classified as noise or outliers. One of the most common density-based clustering algorithms is \ac{DBScan}.
 
@@ -232,7 +232,7 @@ Clustering algorithms can be categorised based on their underlying structure, so
     
 \end{description}
 
-Partitional clustering methods were not considered for this application, as they require the number of clusters to be specified beforehand. As the number of pancakes present in the scene is unknown and variable, partitional clustering methods such as K-means or K-meloids are not suitable for this application.
+Partitional clustering methods were not considered for this application, as they require the number of clusters to be specified beforehand. As the number of pancakes present in the scene is unknown and variable, partitional clustering methods such as K-means or K-medoids are not suitable for this application.
 
 Hierarchical clustering methods were also not considered as their tree-like structure of clusters does not make sense in the context of identifying individual pancakes. Each pancake is a distinct entity, and there is no inherent hierarchy or relationship between pancakes that would be captured by a hierarchical clustering algorithm.
 

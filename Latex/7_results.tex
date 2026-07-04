@@ -4,13 +4,17 @@
 \chapter{Results}
 \label{ch:results}
 %====================================================
-\section{Sensor Characterisation Results}
+\section{Experimental Data Results}
 \label{sec:ch7.section1}
 %----------------------------------------------------
 
 %----------------------------------------------------
-\subsection{Target Scene Reconstruction}
+\subsection{Sensor Characterisation Results}
 \label{subsec:ch7.section1.subsec1}
+
+%----------------------------------------------------
+\subsubsection{Target Scene Reconstruction}
+\label{subsubsec:ch7.section1.subsec1.subsubsection1}
 
 For each target, (Target A and B having their axis of curvature perpendicular to the sensor's line of site, with target A being convex and target B being concave. Targets C and D's axis of curvature was parallel to the sensor's line of site, with target C being convex and target D being concave.) a single frame was inspected and the dimensions of the target were estimated where possible. This was achieved by visually identifying individual points that represented the extremities of the target in each axis, and measuring the distances between these points. The number of points in the frame, the overall accuracy of the target reconstruction and presence of undesirable artefacts such as shadowing and beam divergence effects were also noted. Subsequently, multiple frames were concatenated to create a denser point cloud of the target, and the dimensions were re-estimated. This process was repeated for a higher number of concatenated frames to observe the effect of increasing point density on the accuracy of the target reconstruction. The results for each target are detailed below. The target dimensions, as shown in Figure \ref{fig:target_dim}, were Height (H) = 180 mm, Length (L) = 1220 mm and Width (W) = 1130 mm. 
 
@@ -142,8 +146,8 @@ Target D's single frame reconstruction allowed for estimations of its height and
 The sensor and point cloud data were in the same reference frame as the targets, as displayed by the axes in the preceding figures.
 
 %----------------------------------------------------
-\subsection{Normals Estimation}
-\label{subsec:ch7.section1.subsec2}
+\subsubsection{Normals Estimation}
+\label{subsubsec:ch7.section1.subsec1.subsubsection2}
 
 The normals estimation process made use of the reconstructed targets from the previous section with the highest point density available to allow for the most accurate normals estimation possible. For ease of visualisation, every fifth point's normal vector is displayed in the following figures.
 
@@ -187,15 +191,10 @@ In the region encircled in green in Figure \ref{fig:A15Norm}, the curved face of
 \end{figure}
 %----------------------------------------------------
 
-\newpage
 %====================================================
-\section{Motion Compensation and de-noising}
-\label{sec:ch7.section2}
-%----------------------------------------------------
-
-%----------------------------------------------------
 \subsection{Motion Compensation}
-\label{subsec:ch7.section2.subsec1}
+\label{sec:ch7.section1.subsection2}
+%----------------------------------------------------
 
 The motion capture system provided attitude data starting from initial angles of (0, 0, 0) for roll, pitch and yaw respectively, not taking into account the initial orientation of the Stewart platform and the Avia mounted to it. However, the Avia's \ac{IMU} provided data relative to its initial orientation at the start of data collection. This results in an offset between the two datasets, but does not impact the results and analysis of the experiment, as the relative motion is the focus of the experiment. To account for this offset, the initial roll and pitch angle offsets were removed from the angle estimations produced by both Kalman filters. For the first test (10° sweeps, Figures \ref{fig:kf_resid_10}, \ref{fig:eskf_resid_10} and \ref{fig:resid_10}), the initial roll and pitch offsets were determined to be -1.6° and -2.075° respectively for both filters. For the second test (5° sweeps, Figures \ref{fig:kf_resid_5}, \ref{fig:eskf_resid_5} and \ref{fig:resid_5}), the initial roll and pitch offsets were determined to be -1.625° and -1.95° for the Kalman filter and -1.585° and -2.175° for the \ac{ESKF}. 
 
@@ -205,7 +204,7 @@ When the angle estimates from both filters were used to motion compensate the \a
 
 %----------------------------------------------------
 \subsubsection{10° Sweep Test}
-\label{subsec:ch7.section2.subsec1.subsubsec1}
+\label{subsec:ch7.section1.subsec2.subsubsec1}
 
 %----------------------------------------------------
 \begin{figure}[H]
@@ -238,7 +237,7 @@ When the angle estimates from both filters were used to motion compensate the \a
 
 %----------------------------------------------------
 \subsubsection{5° Sweep Test}
-\label{subsec:ch7.section2.subsec1.subsubsec2}
+\label{subsec:ch7.section1.subsec2.subsubsec2}
 
 %----------------------------------------------------
 \begin{figure}[H]
@@ -278,37 +277,9 @@ When the angle estimates from both filters were used to motion compensate the \a
 
 \newpage
 
-%----------------------------------------------------
-\subsection{De-noising}
-\label{subsec:ch7.section2.subsec2}
-
-The de-noising function performed as expected. It removes unwanted returns produced by adverse environmental conditions without removing many valid points from the target scene.
-
-%----------------------------------------------------
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.9\textwidth]{figs/ch7/no_threshold.png}
-    \caption{\textbf{Noisy Frame.}}{The ocean surface is clearly visible in the lower left of the frame, with the cone of noise in front of the sensor's aperture extending outwards from the origin. Point return intensity is represented by the colour of the points.}
-    \label{fig:no_thresh}
-\end{figure}
-%----------------------------------------------------
-
-%----------------------------------------------------
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.9\textwidth]{figs/ch7/threshold.png}
-    \caption{\textbf{De-noised Frame.}}{The ocean surface is still clearly visible in the lower left of the frame, with the cone of noise in front of the sensor's aperture removed. The horizontal feature that remains, running along z = -7 m, is a part of the railing on the 7th floor deck where the data was collected. Point return intensity is represented by the colour of the points.}
-    \label{fig:thresh}
-\end{figure}
-%----------------------------------------------------
-
-As seen in Figures \ref{fig:no_thresh} and \ref{fig:thresh} above, the cone of noisy data in front of the sensor's aperture has been removed, with minimal invalid points remaining in the region. The horizontal feature that remains is a part of the ship's deck from where the data was collected. A few points from the ice field have been removed by the process, as seen around z = -20 m, x = 10 m in Figure \ref{fig:thresh}, but the vast majority of the ice field points have been preserved.
-
-\newpage
-
 %====================================================
-\section{Wave Parameter Estimation}
-\label{sec:ch7.section3}
+\subsection{Wave Parameter Estimation}
+\label{sec:ch7.section1.subsec3}
 %----------------------------------------------------
 
 The mean wave magnitude and period were able to be determined with a high degree of confidence from the wave probe data using the MATLAB \emph{curveFitter} tool, one of these estimates is shown overlaid the raw point cloud data in Figures \ref{fig:fit_view} and \ref{fig:fit_profile}. All tests produced R-square scores above 0.93, indicating a strong correlation between the fitted model and the raw probe data, as seen in Table \ref{tab:curveFitter}. The wave periods all closely matched the parameters set to the wave makers (1.6 s and 2 s). However, the amplitudes did not match the set values as closely. The first, second and fifth tests tracked the set values fairly well, while the third, fourth and sixth tests did not. The third and fourth tests fitted amplitudes were significantly lower than the set value of 50 mm, while the sixth test fitted amplitude was marginally higher than the set value of 27.5 mm.
@@ -423,16 +394,50 @@ In every test, the higher the percentage of mean inliers in the model estimation
 To investigate the accuracy of the \ac{RANSAC} wave parameter estimations from limited data samples, five random samples of the estimated amplitude and period from each test were taken, as seen in Figures \ref{fig:rand_amp} and \ref{fig:rand_period}. The results show that even with a limited number of samples, the estimated wave parameters closely match the overall estimated values from Table \ref{tab:RANSAC}.
 
 \newpage
+
 %====================================================
-\section{Pancake Identification \& Clustering}
-\label{sec:ch7.section4}
+\section{Field Data Results}
+\label{sec:ch7.section2}
+%----------------------------------------------------
+
+%----------------------------------------------------
+\subsection{De-noising}
+\label{subsec:ch7.section2.subsec1}
+
+The de-noising function performed as expected. It removes unwanted returns produced by adverse environmental conditions without removing many valid points from the target scene.
+
+%----------------------------------------------------
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{figs/ch7/no_threshold.png}
+    \caption{\textbf{Noisy Frame.}}{The ocean surface is clearly visible in the lower left of the frame, with the cone of noise in front of the sensor's aperture extending outwards from the origin. Point return intensity is represented by the colour of the points.}
+    \label{fig:no_thresh}
+\end{figure}
+%----------------------------------------------------
+
+%----------------------------------------------------
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{figs/ch7/threshold.png}
+    \caption{\textbf{De-noised Frame.}}{The ocean surface is still clearly visible in the lower left of the frame, with the cone of noise in front of the sensor's aperture removed. The horizontal feature that remains, running along z = -7 m, is a part of the railing on the 7th floor deck where the data was collected. Point return intensity is represented by the colour of the points.}
+    \label{fig:thresh}
+\end{figure}
+%----------------------------------------------------
+
+As seen in Figures \ref{fig:no_thresh} and \ref{fig:thresh} above, the cone of noisy data in front of the sensor's aperture has been removed, with minimal invalid points remaining in the region. The horizontal feature that remains is a part of the ship's deck from where the data was collected. A few points from the ice field have been removed by the process, as seen around z = -20 m, x = 10 m in Figure \ref{fig:thresh}, but the vast majority of the ice field points have been preserved.
+
+
+\newpage
+%====================================================
+\subsection{Pancake Identification \& Clustering}
+\label{sec:ch7.section2.subsec2}
 %----------------------------------------------------
 
 In each scene, the three clustering algorithms were applied to both the single frame and two frames concatenated point cloud targets. The results were then visually inspected to determine if any distinct pancake clusters were identified by each algorithm. The number of points in the two largest or most distinct clusters identified by each algorithm in each scene were recorded for comparison. Any major differences in cluster shapes or distributions were also noted.
 
 %----------------------------------------------------
-\subsection{Scene 1 - 19 July 2022}
-\label{subsec:ch7.section4.subsec1}
+\subsubsection{Scene 1 - 19 July 2022}
+\label{subsec:ch7.section2.subsec2.subsubsec1}
 
 When visually inspecting the point cloud data and video data from this scene (Figure \ref{fig:2290}), it was hypothesised that it would be an ideal candidate for clustering due to the visible pancake floes in the video footage and relatively consistent point density in the point cloud data. However, all three algorithms failed to identify distinct pancake clusters in either the single frame or two frame concatenated targets , as seen in Figures \ref{fig:2290Frame} and \ref{fig:2291Frame}.
 
@@ -464,8 +469,8 @@ When visually inspecting the point cloud data and video data from this scene (Fi
 %----------------------------------------------------
 
 %----------------------------------------------------
-\subsection{Scene 2 - 23 July 2022}
-\label{subsec:ch7.section4.subsec2}
+\subsubsection{Scene 2 - 23 July 2022}
+\label{subsec:ch7.section2.subsec2.subsubsec2}
 
 Cluster A is the teal group located at x = 52, y = 0 m, and cluster B is the orange group below group A, located at x = 48 m, y = 0 m, in Figure \ref{fig:clust660DB}. These two clusters were identified by \ac{DBScan} and \ac{OPTICS} in both single frame and two frame concatenated targets (Figures \ref{fig:clust660DB}, \ref{fig:clust660OPT}, \ref{fig:clust661DB} and \ref{fig:clust661OPT}). \ac{VDBScan} (Figures \ref{fig:clust660VDB} and \ref{fig:clust661VDB}) failed to identify any clusters in either target, as shown in Table \ref{tab:660Clust}.
 
@@ -571,8 +576,8 @@ In the two frame target (Figure \ref{fig:661Frame}), \ac{DBScan} and \ac{OPTICS}
 %----------------------------------------------------
 
 %----------------------------------------------------
-\subsection{Scene 3 - 24 July 2022}
-\label{subsec:ch7.section4.subsec3}
+\subsubsection{Scene 3 - 24 July 2022}
+\label{subsec:ch7.section2.subsec2.subsubsec3}
 
 Cluster A is the central orange group located at x = 40 m, y = 0 m, and cluster B is the lime green group below group A, located at x = 39 m, y = 0 m, in Figure \ref{fig:clust980DB}. These two clusters were identified by all three algorithms in both single frame and two frame concatenated targets, as represented in Table \ref{tab:980Clust}.
 
@@ -678,8 +683,8 @@ In the two frame target (Figure \ref{fig:981Frame}), \ac{DBScan} (Figure \ref{fi
 %----------------------------------------------------
 
 %----------------------------------------------------
-\subsection{Scene 4 - 24 July 2022}
-\label{subsec:ch7.section4.subsec4}
+\subsubsection{Scene 4 - 24 July 2022}
+\label{subsec:ch7.section2.subsec2.subsubsec4}
 
 Cluster A is the central maroon group located at x = 39 m, y = 0 m, and cluster B is the dark blue group below cluster A, located at x = 35 m, y =  0 m, in Figure \ref{fig:clust5620DB}. These two clusters were identified by all three algorithms in both single frame (Figures \ref{fig:clust5620DB}, \ref{fig:clust5620VDB}, and \ref{fig:clust5620OPT}) and two frame concatenated targets (Figures \ref{fig:clust5621DB}, \ref{fig:clust5621VDB}, and \ref{fig:clust5621OPT}), as represented in table \ref{tab:5620Clust}. \ac{OPTICS} separated cluster B into two sub-clusters in the single frame target (Figure \ref{fig:clust5620OPT}), and all algorithms separated cluster B into multiple sub-clusters in the two frame concatenated target, with \ac{VDBScan} separating it into three sub-clusters (Figure \ref{fig:clust5621VDB}).
 
